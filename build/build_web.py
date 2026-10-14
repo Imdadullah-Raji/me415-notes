@@ -189,6 +189,7 @@ def strip_md(s):
 
 
 FIGS = {}
+IMG = r"(!\[(?:[^\[\]]|\[[^\[\]]*\])*\]\()([^)\s]+)"     # ![caption, which may cite [Arif p.40]](path
 
 
 def fix_images(md, src_dir):
@@ -200,7 +201,7 @@ def fix_images(md, src_dir):
         name = f"m{parts[parts.index('modules') + 1][:2]}_{p.name}" if "modules" in parts else p.name
         FIGS[name] = p
         return f"{m.group(1)}figures/{name}"
-    return re.sub(r"(!\[[^\]]*\]\()([^)\s]+)", sub, md)
+    return re.sub(IMG, sub, md)
 
 
 def pandoc(md, databook=False):
@@ -414,16 +415,15 @@ def main():
 
 def check_links(tables):
     """Every local href must reach an existing file and, if it has one, an existing anchor."""
-    files = {p.name for p in OUT.iterdir()}
     ids = {p.name: set(re.findall(r'id="([^"]+)"', p.read_text())) for p in OUT.glob("*.html")}
-    hrefs = [(f, h) for f in ids for h in re.findall(r'href="([^"]+)"', (OUT / f).read_text())]
+    hrefs = [(f, h) for f in ids for h in re.findall(r'(?:href|src)="([^"]+)"', (OUT / f).read_text())]
     hrefs += [("tables.json", t["page"]) for t in tables.values() if t["page"]]
     for f, h in hrefs:
         if h.startswith("http") or h == "#":
             continue
         page, _, anc = h.partition("#")
         page = page or f
-        if page not in files or (anc and anc not in ids.get(page, ())):
+        if not (OUT / page).is_file() or (anc and anc not in ids.get(page, ())):
             fail(f"{f}: broken link {h}")
 
 
