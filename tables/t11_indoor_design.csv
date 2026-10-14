@@ -1,0 +1,9 @@
+type_of_premise,dry_bulb_C,min_relative_humidity
+Offices,25.5,55%
+Cafetarias,24.0,55%
+Auditoriums,25.5,50%
+Computer rooms,24.0,As needed
+Department stores,26.5,55%
+Supermarkets,25.5,55%
+Factory,22,50%
+Residence,25.5,55%

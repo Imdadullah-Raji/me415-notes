@@ -1,0 +1,8 @@
+condition,position_of_surface,direction_of_heat_flow,coef_symbol,nonreflective_e0.90_h_W_m2C,nonreflective_e0.90_R_m2C_W,reflective_e0.20_h_W_m2C,reflective_e0.20_R_m2C_W,reflective_e0.05_h_W_m2C,reflective_e0.05_R_m2C_W
+Still air,Horizontal,Upward,hi,9.26,0.11,5.17,0.19,4.32,0.23
+Still air,Sloping-45°,Upward,hi,9.09,0.11,5.00,0.20,4.15,0.24
+Still air,Vertical,Horizontal,hi,8.29,0.12,4.20,0.24,3.35,0.30
+Still air,Sloping-45°,Downward,hi,7.50,0.13,3.41,0.29,2.56,0.39
+Still air,Horizontal,Downward,hi,6.13,0.16,2.10,0.48,1.25,0.80
+Moving air (any position),Wind (for winter) 6.7 m/s (24 km/h),Any,ho,34.0,0.030,-,-,-,-
+Moving air (any position),Wind (for summer) 3.4 m/s (12 km/h),Any,ho,22.7,0.044,-,-,-,-

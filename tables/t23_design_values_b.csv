@@ -1,0 +1,6 @@
+room_envelope_construction,floor_mass_kg_m2,b_class_Low,b_class_Medium,b_class_High,b_class_Very_High
+50 mm Wood Floor,50,B,A,A,A
+75 mm Concrete Floor,200,B,B,B,A
+150 mm Concrete Floor,370,C,C,C,B
+200 mm Concrete Floor,590,D,D,C,C
+300 mm Concrete Floor,780,D,D,D,D

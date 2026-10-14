@@ -1,0 +1,8 @@
+degree_of_activity,typical_application,total_heat_gain_W,total_heat_adjusted_W,sensible_heat_W,latent_heat_W,flag
+Moderately active office work,"Office, Hotels, Apartments",140,130,75,55,
+"Standing, Light work; Walking","Departmental store, Retail store",160,130,75,55,
+"Walking, Standing","Drug store, Bank",160,145,75,70,
+Light bench work,Factory,235,220,80,140,
+Walking 3 mph; light machine work,Factory,295,295,110,185,
+Heavy work,Factory,440,425,170,255,
+Athletics,Gymnasium,585,525,210,315,
