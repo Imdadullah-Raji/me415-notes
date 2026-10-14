@@ -6,7 +6,7 @@
 | **Where it appears** | All 11 papers, 2011-12 to 2023-24: one full question of Section A (Q3 or Q4) in 2011-12 and 2013-14 to 2022-23, Q8 of Section B in 2012-13, and Q5(c), Q5(d) and all of Q7 in 2023-24 |
 | **Share of all marks** | 13.1% (400 of 3055 weighted marks, 30 parts). Normally one 35-mark question a year; 55 marks in 2023-24. Lift design numerical (LI1) 155 marks, lift theory (LI2) 205, escalators (LI3) 40. |
 | **Time** | core 3 h (§2.3–2.10, Solution 2.1, Solution 2.6, Solution 2.25), full 5 h (all thirty solutions) |
-| **Sources** | Note pp.164–197; Grondzik Ch. 31 (§31.1–31.39) and Ch. 33 (§33.1–33.10); exam attachments T1–T6, C1, C2; 2023-24 equation sheet |
+| **Sources** | Kanak pp.164–197; Grondzik Ch. 31 (§31.1–31.39) and Ch. 33 (§33.1–33.10); exam attachments T1–T6, C1, C2; 2023-24 equation sheet |
 
 **How it has been asked:**
 
@@ -32,13 +32,13 @@
 
 ## 2.1 Vertical transportation and the classes of elevator ★
 
-**Vertical transportation** is the equipment that moves people and goods between the levels of a building: lifts (elevators), escalators, hydraulic hoists, passenger conveyors (moving walks) and so on. In a high-rise building it is the most important building service [Note p.164]. In a 25-storey office building the lifts can cost about 10% of the construction cost, and the quality of lift service affects which building tenants choose [Grondzik §31.1].
+**Vertical transportation** is the equipment that moves people and goods between the levels of a building: lifts (elevators), escalators, hydraulic hoists, passenger conveyors (moving walks) and so on. In a high-rise building it is the most important building service [Kanak p.164]. In a 25-storey office building the lifts can cost about 10% of the construction cost, and the quality of lift service affects which building tenants choose [Grondzik §31.1].
 
-A **lift** (elevator) is a transport device that moves goods or people vertically. **BNBC 2020 (Part 8, Ch. 4): lifts shall be provided in buildings of more than six storeys or more than 20 m height**, and must be installed according to the Lift Act and its rules [Note p.164].
+A **lift** (elevator) is a transport device that moves goods or people vertically. **BNBC 2020 (Part 8, Ch. 4): lifts shall be provided in buildings of more than six storeys or more than 20 m height**, and must be installed according to the Lift Act and its rules [Kanak p.164].
 
 ### Classification
 
-Elevators are classified in four ways [Note pp.165–168; Grondzik §31.2–31.11]:
+Elevators are classified in four ways [Kanak pp.165–168; Grondzik §31.2–31.11]:
 
 | Basis | Classes |
 |---|---|
@@ -47,9 +47,9 @@ Elevators are classified in four ways [Note pp.165–168; Grondzik §31.2–31.1
 | **Machine location** | penthouse (overhead) machine room; basement machine room (underslung roping); machine-room-less (disc motor on the guide rail) |
 | **Control** | single automatic push-button; collective; selective collective; group supervisory (computer) control |
 
-![Fig. 1: Usage classification of elevators: a tree with "Usage" at the top and five branches, Passenger, Goods, Vehicle, Dumbwaiter and Scissor [Note p.165]](figures/001.png "w=0.6")
+![Fig. 1: Usage classification of elevators: a tree with "Usage" at the top and five branches, Passenger, Goods, Vehicle, Dumbwaiter and Scissor [Kanak p.165]](figures/001.png "w=0.6")
 
-**The usage classes** [Note pp.165–167]:
+**The usage classes** [Kanak pp.165–167]:
 
 - **Passenger lift:** moves people between floors. Its capacity and speed depend on the available floor space, the building height and the number of people to be moved. Sub-types: hospital, residential, hotel, office, institution.
 - **Goods (freight, service) lift:** carries goods, with an attendant or the people needed to load and unload them. Used in shopping complexes, airports, hotels and warehouses.
@@ -63,15 +63,15 @@ Elevators are classified in four ways [Note pp.165–168; Grondzik §31.2–31.1
 | | Passenger | Freight (goods, service) | Hospital |
 |---|---|---|---|
 | Design objective | short waiting and trip time, comfort, frequent stops | carry heavy, bulky loads; ruggedness | carry a bed or stretcher with attendants; smooth ride |
-| Car | 2500–3500 lb (1250–1600 kg) in offices (T6), shallow, decorated | 4000–5000 lb (1800–2300 kg) or more; no dropped ceiling, wall pads; heavy platform | 3500–4000 lb (1600–2000 kg), **deep**: 2300–2500 mm deep cars [Note p.166] |
+| Car | 2500–3500 lb (1250–1600 kg) in offices (T6), shallow, decorated | 4000–5000 lb (1800–2300 kg) or more; no dropped ceiling, wall pads; heavy platform | 3500–4000 lb (1600–2000 kg), **deep**: 2300–2500 mm deep cars [Kanak p.166] |
 | Door | 1.07 m centre-opening | wide two-speed or two-speed centre-opening, 1.2–1.5 m | 1.2–1.5 m centre-opening |
 | Speed, control | high speed, group supervisory control | low speed, often attendant-operated | moderate speed, self-service collective control, ride smooth and level |
 | Rope safety factor | 7.6–12.0 | 6.6–11.0 | as passenger |
 | Rules | interval and handling capacity (T1, T2) | load capacity | BNBC: at least one hospital lift in a multi-storey hospital; operable in fire; firemen take over |
 
-Sources: [Grondzik §31.4, §31.12, §31.38; Note pp.166–167].
+Sources: [Grondzik §31.4, §31.12, §31.38; Kanak pp.166–167].
 
-**Hospital lifts, BNBC 2020 Part 8 Ch. 4** [Note p.166]: a hospital lift takes **one bed or stretcher along its depth**, with room for **at least three attendants plus the operator**. Every multi-storey hospital needs **at least one hospital lift with a stretcher facility**, and all stretcher and hospital lifts must be **operable during a fire**, with provision for firemen to take over the control (fire mode, §2.8). BNBC Table 8.4.5 gives car sizes:
+**Hospital lifts, BNBC 2020 Part 8 Ch. 4** [Kanak p.166]: a hospital lift takes **one bed or stretcher along its depth**, with room for **at least three attendants plus the operator**. Every multi-storey hospital needs **at least one hospital lift with a stretcher facility**, and all stretcher and hospital lifts must be **operable during a fire**, with provision for firemen to take over the control (fire mode, §2.8). BNBC Table 8.4.5 gives car sizes:
 
 | Persons | kg | Car width × depth (mm) | Well width × depth (mm) | Entrance (mm) |
 |---|---|---|---|---|
@@ -79,7 +79,7 @@ Sources: [Grondzik §31.4, §31.12, §31.38; Note pp.166–167].
 | 20 | 1360 | 1300 × 2400 | 2200 × 3000 | 1200 |
 | 26 | 1768 | 1600 × 2400 | 2400 × 3000 | 1200 |
 
-![Fig. 2: Hospital lift car plans: left, a car 2300 mm deep and 1100 mm wide holding a 620 × 1880 mm stretcher; right, a car 2500 mm deep and 1200 mm wide holding a 720 × 2040 mm bed and a 550 × 550 mm anaesthesia dolly; doors on the front wall [Note p.166]](figures/002.png "w=0.5")
+![Fig. 2: Hospital lift car plans: left, a car 2300 mm deep and 1100 mm wide holding a 620 × 1880 mm stretcher; right, a car 2500 mm deep and 1200 mm wide holding a 720 × 2040 mm bed and a 550 × 550 mm anaesthesia dolly; doors on the front wall [Kanak p.166]](figures/002.png "w=0.5")
 
 Grondzik adds that hospital cars, being deep, hold more than 20 people if used as passenger cars and so give slow service; large hospitals add ordinary passenger cars. A carrying capacity of 45 passengers in 5 minutes, counting each vehicle (bed, cart) as 9 passengers, and an interval of at most 1 minute are adequate [Grondzik §31.38].
 
@@ -87,13 +87,13 @@ Grondzik adds that hospital cars, being deep, hold more than 20 people if used a
 
 ### Working principle
 
-A hydraulic lift is pushed up from below by a **plunger (ram)** in a **cylinder**. A pump forces oil from a tank through a valve into the cylinder, and the oil pressure raises the plunger and the car on it. To go down, the valve opens and the weight of the car pushes the oil back to the tank at a controlled rate; closing the valve stops the car. The pump runs only on the way up [Note p.169; Grondzik §31.9].
+A hydraulic lift is pushed up from below by a **plunger (ram)** in a **cylinder**. A pump forces oil from a tank through a valve into the cylinder, and the oil pressure raises the plunger and the car on it. To go down, the valve opens and the weight of the car pushes the oil back to the tank at a controlled rate; closing the valve stops the car. The pump runs only on the way up [Kanak p.169; Grondzik §31.9].
 
-It works on **Pascal's principle**: pressure applied to a confined fluid is transmitted equally, $P_1=F_1/A_1=P_2=F_2/A_2$, so a small force on a small area produces a large force on a large area. With $A_2=10A_1$, $F_2=10F_1$ [Note p.170].
+It works on **Pascal's principle**: pressure applied to a confined fluid is transmitted equally, $P_1=F_1/A_1=P_2=F_2/A_2$, so a small force on a small area produces a large force on a large area. With $A_2=10A_1$, $F_2=10F_1$ [Kanak p.170].
 
-![Fig. 3: Hydraulic elevator schematic: the car sits on a piston (plunger) that slides in a cylinder; an oil line runs from the bottom of the cylinder through a valve to a pump, which draws oil from a tank [Note p.169]](figures/003.png "w=0.5")
+![Fig. 3: Hydraulic elevator schematic: the car sits on a piston (plunger) that slides in a cylinder; an oil line runs from the bottom of the cylinder through a valve to a pump, which draws oil from a tank [Kanak p.169]](figures/003.png "w=0.5")
 
-**Main components** [Note p.170]:
+**Main components** [Kanak p.170]:
 
 - **Tank:** holds the oil. Oil is used because it is nearly incompressible and self-lubricating.
 - **Pump and motor:** force oil from the tank into the cylinder.
@@ -109,9 +109,9 @@ It works on **Pascal's principle**: pressure applied to a confined fluid is tran
 | **Hole-less** | one or two **telescopic** jacks above ground beside the car | no drilled hole; a single jack loads the building sideways (cantilevered car), so twin jacks are usual; short rise |
 | **Roped hydraulic (indirect-acting)** | a jack carries a sheave; ropes over it lift the car by **2:1 roping**, so the car travels twice the plunger stroke | most common low-rise hydraulic type; needs a slack-rope safety device |
 
-Sources: [Note p.168; Grondzik §31.9–31.11].
+Sources: [Kanak p.168; Grondzik §31.9–31.11].
 
-![Fig. 4: Two hydraulic elevators in 3-D cutaway. Left, conventional in-ground type: the car is pushed by one central piston running into an in-ground cylinder below the pit, with two car buffers in the pit and the fluid tank and controller beside the hoistway. Right, hole-less type: two plungers in above-ground cylinders beside the car, one car buffer [Note p.168]](figures/004.jpg "w=0.55")
+![Fig. 4: Two hydraulic elevators in 3-D cutaway. Left, conventional in-ground type: the car is pushed by one central piston running into an in-ground cylinder below the pit, with two car buffers in the pit and the fluid tank and controller beside the hoistway. Right, hole-less type: two plungers in above-ground cylinders beside the car, one car buffer [Kanak p.168]](figures/004.jpg "w=0.55")
 
 ### Advantages and disadvantages
 
@@ -124,19 +124,19 @@ Sources: [Note p.168; Grondzik §31.9–31.11].
 | Almost no limit on load: best for freight and vehicle lifts | Inherently heat-producing; high inrush current at each start; pump noise |
 | Car can be lowered by hand through the valve in a power failure | Buried cylinder can leak oil into the ground water |
 
-Sources: [Note p.171; Grondzik §31.9].
+Sources: [Kanak p.171; Grondzik §31.9].
 
-**Applications:** low-rise offices and residences (two to five floors), low-rise stores and malls, parking shuttles, stage lifts, heavy freight, access for the disabled [Note p.169; Grondzik §31.9].
+**Applications:** low-rise offices and residences (two to five floors), low-rise stores and malls, parking shuttles, stage lifts, heavy freight, access for the disabled [Kanak p.169; Grondzik §31.9].
 
 ## 2.3 The electric traction lift and its components ★
 
-In a **traction lift** the car hangs from steel ropes that pass over a grooved, motor-driven **drive sheave** to a **counterweight** on the other side. The car is moved by the **friction (traction)** between the ropes and the sheave grooves. Because the counterweight balances the car and part of the load, the motor only supplies the unbalanced load and the friction [Note pp.172–173; Grondzik §31.4].
+In a **traction lift** the car hangs from steel ropes that pass over a grooved, motor-driven **drive sheave** to a **counterweight** on the other side. The car is moved by the **friction (traction)** between the ropes and the sheave grooves. Because the counterweight balances the car and part of the load, the motor only supplies the unbalanced load and the friction [Kanak pp.172–173; Grondzik §31.4].
 
-![Fig. 5: Electric traction passenger lift, labelled cutaway. Machine room at the top: controller, drive motor, brake, drive sheave and overspeed governor. In the shaft: suspension ropes from the drive sheave to the car and the counterweight, the door operator on the car, car doors, apron, car guide rails, safety gear on the car frame, travelling cables hanging from the car, landing doors with landing indicator and push-button, counterweight and its guide rails, limit switches. In the pit: car buffer, counterweight buffer and the governor tension sheave [Note p.172]](figures/005.jpg "w=0.55")
+![Fig. 5: Electric traction passenger lift, labelled cutaway. Machine room at the top: controller, drive motor, brake, drive sheave and overspeed governor. In the shaft: suspension ropes from the drive sheave to the car and the counterweight, the door operator on the car, car doors, apron, car guide rails, safety gear on the car frame, travelling cables hanging from the car, landing doors with landing indicator and push-button, counterweight and its guide rails, limit switches. In the pit: car buffer, counterweight buffer and the governor tension sheave [Kanak p.172]](figures/005.jpg "w=0.55")
 
 **How to draw it in the exam (2 minutes).** Draw a tall rectangle (the hoistway) with a box on top (machine room). In the machine room draw the motor, the brake, the drive sheave and the controller. From the sheave, drop ropes to the car on one side and to the counterweight (a box with horizontal lines) on the other. Draw two vertical lines beside the car (car guide rails) and two beside the counterweight. Mark the governor beside the sheave with its rope running down to the car safety gear. In the pit draw two spring buffers, one under the car and one under the counterweight. Label every item.
 
-**The principal parts** [Note pp.172–173; Grondzik §31.4, §31.8]:
+**The principal parts** [Kanak pp.172–173; Grondzik §31.4, §31.8]:
 
 | Component | What it is and what it does |
 |---|---|
@@ -162,13 +162,13 @@ About 75% of the energy spent lifting a traction car is regenerated when it come
 
 ## 2.4 Traction machines: gearless and geared ★
 
-**Gearless machine** [Note p.173; Grondzik §31.5]. A d.c. or a.c. motor whose shaft is **directly connected to the brake wheel and the drive sheave**. With no gear the motor must turn as slowly as the sheave, so it is a large, low-speed motor (15–300 kW). Used for **high-speed lifts, 2.5 m/s (500 fpm) and above, up to 10 m/s**, and for rises above about 76 m.
+**Gearless machine** [Kanak p.173; Grondzik §31.5]. A d.c. or a.c. motor whose shaft is **directly connected to the brake wheel and the drive sheave**. With no gear the motor must turn as slowly as the sheave, so it is a large, low-speed motor (15–300 kW). Used for **high-speed lifts, 2.5 m/s (500 fpm) and above, up to 10 m/s**, and for rises above about 76 m.
 
-![Fig. 7: Gearless traction machine: a drive motor directly coupled to the brake drum and the drive sheave on one bedplate, with a double-wrap sheave below; a line sketch shows the ropes wrapping the drive sheave and the double-wrap sheave, one end going to the counterweight and the other to the car [Note p.173]](figures/007.png "w=0.35")
+![Fig. 7: Gearless traction machine: a drive motor directly coupled to the brake drum and the drive sheave on one bedplate, with a double-wrap sheave below; a line sketch shows the ropes wrapping the drive sheave and the double-wrap sheave, one end going to the counterweight and the other to the car [Kanak p.173]](figures/007.png "w=0.35")
 
-**Geared machine** [Note p.174; Grondzik §31.6]. A **worm and gear** sits between the motor and the sheave. The motor can therefore be a **smaller, cheaper, high-speed** motor. Used for car speeds **up to 2.3 m/s (450 fpm)** and rises up to about **90 m**. With a good drive it rides almost as well as a gearless machine.
+**Geared machine** [Kanak p.174; Grondzik §31.6]. A **worm and gear** sits between the motor and the sheave. The motor can therefore be a **smaller, cheaper, high-speed** motor. Used for car speeds **up to 2.3 m/s (450 fpm)** and rises up to about **90 m**. With a good drive it rides almost as well as a gearless machine.
 
-![Fig. 8: Geared traction machine on a steel bedplate: the drive motor turns the drive sheave through a worm-gear box; the brake is on the motor shaft; a deflector sheave sits below and a sound-isolation pad under the bedplate [Note p.174]](figures/008.jpg "w=0.35")
+![Fig. 8: Geared traction machine on a steel bedplate: the drive motor turns the drive sheave through a worm-gear box; the brake is on the motor shaft; a deflector sheave sits below and a sound-isolation pad under the bedplate [Kanak p.174]](figures/008.jpg "w=0.35")
 
 | | Gearless | Geared |
 |---|---|---|
@@ -183,11 +183,11 @@ About 75% of the energy spent lifting a traction car is regenerated when it come
 
 Between 2.0 and 2.5 m/s and 46–76 m rise, both types are available and the choice is economic [Grondzik §31.5, §31.18, §31.43].
 
-**Advantages of gearless drives** (2011-12): more efficient, quieter, less maintenance, longer life, smoother high-speed ride, suits unlimited rise and speeds above 2.5 m/s [Note p.173].
+**Advantages of gearless drives** (2011-12): more efficient, quieter, less maintenance, longer life, smoother high-speed ride, suits unlimited rise and speeds above 2.5 m/s [Kanak p.173].
 
 ## 2.5 Roping arrangements ★
 
-The rope runs from the car, over the drive sheave, to the counterweight. Four arrangements are used [Note p.175; Grondzik §31.7]:
+The rope runs from the car, over the drive sheave, to the counterweight. Four arrangements are used [Kanak p.175; Grondzik §31.7]:
 
 1. **1:1 roping, single wrap.** The ropes pass once over the drive sheave T (half a turn) and go down to the car on one side and, over a deflector sheave S, to the counterweight on the other. The deflector only spaces the counterweight away from the car. The car moves at the rope speed (no mechanical advantage). This is the simplest arrangement and the scheme of most high-speed passenger lifts.
 2. **1:1 roping, double wrap.** The rope passes over T, round the secondary sheave S, back over T a second time, and then to the counterweight. The rope wraps the drive sheave twice, so the contact (wrap) angle and therefore the **traction are greater**; used in high-speed gearless lifts.
@@ -196,7 +196,7 @@ The rope runs from the car, over the drive sheave, to the counterweight. Four ar
 
 Arrangements 1–3 have the machine in a **penthouse machine room** above the shaft. All can be used with any car capacity.
 
-![Fig. 9: Hand sketches of four roping arrangements. Each shows the drive sheave (large circle), the secondary or deflector sheave (small circle), the car (plain box) and the counterweight (box with horizontal lines). (1) 1:1 roping, single wrap: rope once over the drive sheave, one end to the car, the other over the deflector to the counterweight. (2) 1:1 roping, double wrap: rope wraps the drive and secondary sheaves twice before going to car and counterweight. (3) 2:1 roping, double wrap: rope ends anchored to the overhead structure, rope passes under a sheave on the car and under a sheave on the counterweight. Arrangements 1 to 3 are grouped as "penthouse machine room". (4) 1:1 roping with the drive at the bottom, labelled "basement": two idler sheaves at the top, car on one side and counterweight on the other [Note p.175]](figures/009.jpg "w=0.75")
+![Fig. 9: Hand sketches of four roping arrangements. Each shows the drive sheave (large circle), the secondary or deflector sheave (small circle), the car (plain box) and the counterweight (box with horizontal lines). (1) 1:1 roping, single wrap: rope once over the drive sheave, one end to the car, the other over the deflector to the counterweight. (2) 1:1 roping, double wrap: rope wraps the drive and secondary sheaves twice before going to car and counterweight. (3) 2:1 roping, double wrap: rope ends anchored to the overhead structure, rope passes under a sheave on the car and under a sheave on the counterweight. Arrangements 1 to 3 are grouped as "penthouse machine room". (4) 1:1 roping with the drive at the bottom, labelled "basement": two idler sheaves at the top, car on one side and counterweight on the other [Kanak p.175]](figures/009.jpg "w=0.75")
 
 ![Fig. 10: Grondzik Fig. 31.3, elevator roping and sheave arrangements: (a) single-wrap 1:1, (b) double-wrap 1:1, (c) 2:1 roping, (d) basement machine roping; T is the traction (drive) sheave, S the deflector or secondary sheave, CW the counterweight [Grondzik §31.7]](figures/010.jpg "w=0.75")
 
@@ -206,7 +206,7 @@ Arrangements 1–3 have the machine in a **penthouse machine room** above the sh
 
 ## 2.6 Safety devices ★
 
-A traction lift has several independent protections [Note p.176; Grondzik §31.8, §31.12]:
+A traction lift has several independent protections [Kanak p.176; Grondzik §31.8, §31.12]:
 
 1. **Main brake.** Mounted directly on the machine shaft. The car is first slowed by **dynamic braking** of the motor; the brake then clamps the brake drum and holds the car still at the floor. It is spring-applied and electrically released, so it sets on a power failure.
 2. **Overspeed governor, first stage.** A **centrifugal governor** (or electronic speed sensor) cuts the power to the traction motor and sets the brake at a limited overspeed. This usually stops the car.
@@ -218,7 +218,7 @@ A traction lift has several independent protections [Note p.176; Grondzik §31.8
 
 ![Fig. 11: Grondzik Fig. 31.4, elevator safety devices: the overspeed governor in the machine room with its governor (safety trip) rope running to the car, and the safety jaws (rail clamps) under the car acting on the guide rails [Grondzik §31.8]](figures/011.jpg "w=0.6")
 
-![Fig. 12: Lift door safety devices, front view of a two-panel centre-opening door hung from a door track: inside the leading edge of the door panel is a reversal switch behind the mechanical safety edge; two photocells low on the left panel send beams across the opening to reflectors on the right panel [Note p.177]](figures/012.png "w=0.4")
+![Fig. 12: Lift door safety devices, front view of a two-panel centre-opening door hung from a door track: inside the leading edge of the door panel is a reversal switch behind the mechanical safety edge; two photocells low on the left panel send beams across the opening to reflectors on the right panel [Kanak p.177]](figures/012.png "w=0.4")
 
 ## 2.7 Lift doors and their arrangements ★
 
@@ -237,7 +237,7 @@ Passenger lift doors are **power-operated** and synchronised with the levelling 
 
 **How to draw them.** In plan, draw the car as a rectangle with the opening in the front wall. Draw each door panel as a thick bar in front of the opening, in its closed position, and a dashed copy in its open (stacked) position, with an arrow showing the travel. A single-slide has one bar moving fully to one side; centre-opening two bars moving apart; two-speed two bars on two parallel tracks, both ending on the same side (mark the faster panel "2v"); two-speed centre-opening two such pairs.
 
-**Door safety** [Note p.177; Grondzik §31.12]: ANSI requires a **safety edge** on the car door of every automatic lift that reopens the car and landing doors on touching an obstruction; **photocells** or a **multi-beam infrared sensor** along the whole door edge reverse the door without contact; an electronic sensor can watch a wide area of the landing (children, wheelchairs, beds). Some doors "nudge" closed slowly after a set time.
+**Door safety** [Kanak p.177; Grondzik §31.12]: ANSI requires a **safety edge** on the car door of every automatic lift that reopens the car and landing doors on touching an obstruction; **photocells** or a **multi-beam infrared sensor** along the whole door edge reverse the door without contact; an electronic sensor can watch a wide area of the landing (children, wheelchairs, beds). Some doors "nudge" closed slowly after a set time.
 
 ## 2.8 Control of lifts
 
@@ -264,7 +264,7 @@ Passenger lift doors are **power-operated** and synchronised with the levelling 
 
 ## 2.9 Elevator terminology and the service criteria ★
 
-**Definitions** [Note pp.178–180; Grondzik §31.29]:
+**Definitions** [Kanak pp.178–180; Grondzik §31.29]:
 
 - **Interval (I), or lobby dispatch time:** the average time between departures of cars from the lobby. With $N$ cars of round-trip time $RT$, $I=RT/N$. The shorter, the better.
 - **Average lobby waiting time:** the average time a person spends between arriving in the lobby and leaving it in a car. Passengers arrive at random, so it would be half the interval; field data give **0.6 × I**.
@@ -275,11 +275,11 @@ Passenger lift doors are **power-operated** and synchronised with the levelling 
 - **Round-trip time (RT):** the average time for a car to leave the lower terminal and return to it, including a statistical number of stops on the way up and the express return. It is made of **(1) acceleration and deceleration, (2) door opening and closing at every stop, (3) passenger loading and unloading, (4) running time at rated speed**. Read from chart C2. Acceleration is kept ≤ 1.2 m/s² for comfort.
 - **Zone:** a group of floors served as a unit by one bank of cars.
 
-![Fig. 14: Sketch of the shape of chart C1: average trip time (y) against number of local floors (x); three straight lines rise to the right, one per car speed in fpm, the slowest speed highest [Note p.180]](figures/014.png "w=0.5")
+![Fig. 14: Sketch of the shape of chart C1: average trip time (y) against number of local floors (x); three straight lines rise to the right, one per car speed in fpm, the slowest speed highest [Kanak p.180]](figures/014.png "w=0.5")
 
 > **TRAP: The interval is not the time from floor to floor**
 >
-> The class note glosses the interval as "the time to go from one floor to another" [Note p.178]. It is the time between successive car departures from the lobby, $I=RT/N$. The note's p.179 heading also says "Percent Handling Time"; it is Percent Handling **Capacity**. And the note's "PHC 6–8% recommended" is the residential "Other" row of T2; for a diversified office the minimum is 12% [Note p.179].
+> Kanak vai's note glosses the interval as "the time to go from one floor to another" [Kanak p.178]. It is the time between successive car departures from the lobby, $I=RT/N$. Kanak vai's note's p.179 heading also says "Percent Handling Time"; it is Percent Handling **Capacity**. And Kanak vai's note's "PHC 6–8% recommended" is the residential "Other" row of T2; for a diversified office the minimum is 12% [Kanak p.179].
 
 **Why the five-minute handling capacity.** The heaviest traffic in an office is the morning up-peak, when most of the population arrives within a short time. The busiest 5 minutes have historically been taken as the measure of a system's peak capacity: short enough to capture the intensity of the peak, long enough to average out the random arrivals and the cycles of the cars. A system sized for the peak 5 minutes handles every other period easily [Grondzik §31.29, §31.31]. HC is expressed in **persons per 5 minutes**, and as PHC in **% of the population per 5 minutes**.
 
@@ -305,7 +305,7 @@ A design must satisfy both: enough capacity for the peak, with acceptable waitin
 
 ### Ideal performance of passenger elevators
 
-An ideal installation provides [Note p.177; Grondzik §31.2]:
+An ideal installation provides [Kanak p.177; Grondzik §31.2]:
 
 1. minimum waiting time for a car at any floor;
 2. comfortable acceleration and rapid transportation;
@@ -320,7 +320,7 @@ An ideal installation provides [Note p.177; Grondzik §31.2]:
 
 ### Factors in the design of elevators
 
-The designer considers [Grondzik §31.2, §31.28, §31.34–31.39; Note p.165]:
+The designer considers [Grondzik §31.2, §31.28, §31.34–31.39; Kanak p.165]:
 
 - **Traffic:** building type and population (T4, T5), peak arrival rate (PHC, T2), interfloor traffic.
 - **Service quality:** interval and waiting time (T1), trip time (C1), round-trip time (C2).
@@ -331,7 +331,7 @@ The designer considers [Grondzik §31.2, §31.28, §31.34–31.39; Note p.165]:
 
 ## 2.10 The lift-design method ★
 
-Every design numerical is solved with the same nine steps, using the attached tables T1–T6 and charts C1, C2 (all at the end of this module) [Note pp.185–189; Grondzik §31.34–31.36]. Learn them as a fixed procedure.
+Every design numerical is solved with the same nine steps, using the attached tables T1–T6 and charts C1, C2 (all at the end of this module) [Kanak pp.185–189; Grondzik §31.34–31.36]. Learn them as a fixed procedure.
 
 ![Fig. 15: The nine-step lift-design procedure as a flow: (1) building type gives the interval from T1 and the PHC from T2; (2) population = net area divided by m² per person from T4, net area from T5 if gross is given; (3) required HC = PHC × population; (4) rise = floors × floor height; (5) car speed from the rise, T6; (6) car size from T6 and its normal load p from T3; (7) read RT from C2 and AVRTP from C1, choosing the panel by car size, the curve by speed and the x value by the number of floors; (8) N = RT / I_req with I_req = 300p / HC_req, rounded to whole cars; (9) check I = RT/N against T1 and PHC = (300p/I)/population against T2, and iterate (change car size, speed, or zone) if a check fails](figures/015.png "w=0.65")
 
@@ -426,9 +426,9 @@ Here the **interval** decides it: **5 cars**. (In Solution 2.1 it is the handlin
 
 These agree with Grondzik's own readings where he gives them (3000 lb, 500 fpm, 14 floors: RT 143 s, AVRTP 76 s; 3500 lb: RT 155 s, AVRTP 82 s) [Grondzik §31.36].
 
-> **EXAMPLE 2.1** `[Note pp.185–188; Grondzik Ex. 31.1]` Office building, downtown, diversified use, 14 rentable floors above the lobby, each 1115 m² net. Floor-to-floor height = 3.7 m. Determine a workable elevator system arrangement.
+> **EXAMPLE 2.1** `[Kanak pp.185–188; Grondzik Ex. 31.1]` Office building, downtown, diversified use, 14 rentable floors above the lobby, each 1115 m² net. Floor-to-floor height = 3.7 m. Determine a workable elevator system arrangement.
 >
-> **[FROM SOURCE: Note pp.185–188, Grondzik §31.36]**, with the note's arithmetic corrected.
+> **[FROM SOURCE: Kanak pp.185–188, Grondzik §31.36]**, with Kanak vai's note's arithmetic corrected.
 >
 > 1. T2, office, centre city: 12–14%, take **PHC = 13%**. T1, office, good service: **25–29 s**.
 > 2. T4, diversified, normal: 10–12 m²/person, take 11. Population $=14\times1115/11=1419.1$, say **1419 persons**.
@@ -446,11 +446,11 @@ These agree with Grondzik's own readings where he gives them (3000 lb, 500 fpm, 
 > | 6 × 3000 lb | $143/6=23.8$ (excellent) | 201.4 | 14.2% | passes both; above the band, costly |
 > | 5 × 3500 lb ($p=19$, RT 155, AVRTP 82; $I_{req}=30.9$ s, $N=5.02$) | $155/5=31.0$ (fair) | 183.9 | 13.0% | PHC good; interval just fair |
 >
-> **Answer:** **5 cars of 3000 lb (1360 kg) at 2.5 m/s** (I = 28.6 s, PHC = 11.8%, AVRTP = 76 s) is the economical, workable choice, as in the note and Grondzik: the PHC shortfall (0.2 percentage point) is far inside the ±15% accuracy of the charts. If the 12% minimum must be met strictly, use **6 such cars** (I = 23.8 s, PHC = 14.2%). With 5 cars, AVRTP = 76 s is about "acceptable" (75 s).
+> **Answer:** **5 cars of 3000 lb (1360 kg) at 2.5 m/s** (I = 28.6 s, PHC = 11.8%, AVRTP = 76 s) is the economical, workable choice, as in Kanak vai's note and Grondzik: the PHC shortfall (0.2 percentage point) is far inside the ±15% accuracy of the charts. If the 12% minimum must be met strictly, use **6 such cars** (I = 23.8 s, PHC = 14.2%). With 5 cars, AVRTP = 76 s is about "acceptable" (75 s).
 
-> **TRAP: The note's arithmetic in the 14-floor example**
+> **TRAP: Kanak vai's note's arithmetic in the 14-floor example**
 >
-> The class note rounds the population to 1400 (it is $14\times1115/11=1419$) and prints $I=143/5=28.4$ s (it is **28.6 s**); Grondzik's book has the same 28.4 slip [Note pp.185–187; Grondzik §31.36]. With 1400 persons the 5-car PHC comes out exactly 12%; with the correct 1419 it is 11.8%. The note also writes the rise as 51 m (it is 51.8 m) and the density as "person/m²" (it is m²/person). None of this changes the speed band or the choice of 5 cars, but write the correct numbers.
+> Kanak vai's note rounds the population to 1400 (it is $14\times1115/11=1419$) and prints $I=143/5=28.4$ s (it is **28.6 s**); Grondzik's book has the same 28.4 slip [Kanak pp.185–187; Grondzik §31.36]. With 1400 persons the 5-car PHC comes out exactly 12%; with the correct 1419 it is 11.8%. Kanak vai's note also writes the rise as 51 m (it is 51.8 m) and the density as "person/m²" (it is m²/person). None of this changes the speed band or the choice of 5 cars, but write the correct numbers.
 
 > **EXAMPLE 2.2** `[TUTOR-GENERATED; T4, T5]` An office building, diversified use, normal occupancy, has 20 floors above the lobby, each of **2000 m² gross**. Find the population and the required 5-minute handling capacity.
 >
@@ -537,9 +537,9 @@ $$t_f=\frac{d_f}{v}+\frac{v}{a}+\frac{a}{j}$$
 
 ### What an escalator is
 
-An **escalator** is a power-driven, inclined, continuous moving stairway that carries people between floors. Grooved steps (treads and risers) are attached to a continuous **step chain** driven by a motor through sprockets, and supported on a steel **truss** spanning between the two floors. A **handrail** on each side moves at the same speed as the steps. At the top and bottom the steps flatten into a level platform, so that people can step on and off easily [Note p.193; Grondzik §33.1].
+An **escalator** is a power-driven, inclined, continuous moving stairway that carries people between floors. Grooved steps (treads and risers) are attached to a continuous **step chain** driven by a motor through sprockets, and supported on a steel **truss** spanning between the two floors. A **handrail** on each side moves at the same speed as the steps. At the top and bottom the steps flatten into a level platform, so that people can step on and off easily [Kanak p.193; Grondzik §33.1].
 
-**Features** [Note p.193; Grondzik §33.1–33.4]:
+**Features** [Kanak p.193; Grondzik §33.1–33.4]:
 
 - power-driven, inclined, continuous stairway; moves large numbers of people **continuously**, with no waiting at the boarding level;
 - used in low- to medium-rise buildings: airports, metro stations, department stores, malls;
@@ -548,7 +548,7 @@ An **escalator** is a power-driven, inclined, continuous moving stairway that ca
 - standard incline **30°**; standard speed **0.5 m/s (100 fpm)**, maximum 0.64 m/s (125 fpm); tread widths 0.61 m (one person per step) and 1.02 m (two persons per step);
 - cannot trap passengers on a power failure; if stopped it can be walked like a stair.
 
-![Fig. 19: Escalator cutaway: inclined truss carrying the steps on step chains, running over a top sprocket assembly driven by the electric motor and round a bottom sprocket assembly; step rollers run on rail guides; the handrail loop is driven by the handrail drive assembly. Labels: handrail drive assembly, handrail, steps, electric motor, top sprocket assembly, rail guide, step rollers, step chains, bottom sprocket assembly [Note p.193]](figures/019.jpg "w=0.4")
+![Fig. 19: Escalator cutaway: inclined truss carrying the steps on step chains, running over a top sprocket assembly driven by the electric motor and round a bottom sprocket assembly; step rollers run on rail guides; the handrail loop is driven by the handrail drive assembly. Labels: handrail drive assembly, handrail, steps, electric motor, top sprocket assembly, rail guide, step rollers, step chains, bottom sprocket assembly [Kanak p.193]](figures/019.jpg "w=0.4")
 
 **Components** [Grondzik §33.5]:
 
@@ -567,7 +567,7 @@ An **escalator** is a power-driven, inclined, continuous moving stairway that ca
 
 ### Arrangements: parallel and crisscross
 
-Escalators between more than two floors are arranged in one of two basic ways [Note pp.196–197; Grondzik §33.2]:
+Escalators between more than two floors are arranged in one of two basic ways [Kanak pp.196–197; Grondzik §33.2]:
 
 **Crisscross arrangement.** The up and down escalators of each storey cross each other, like an X in side elevation, and the escalators of successive storeys nest into one another. The entrance and exit of the up and down units are separated by the horizontal length of one escalator.
 
@@ -579,11 +579,11 @@ Escalators between more than two floors are arranged in one of two basic ways [N
 - *Parallel spiral (multiple parallel):* units in each storey are side by side; the rider turns and continues in the same direction. Banks of 3–4 parallel units in terminals can run all but one in the direction of heaviest traffic.
 - *Stacked parallel (walk-around):* the units are stacked vertically one storey above another; the rider walks the whole length of the escalator at each floor.
 
-![Fig. 20: Hand sketches of escalator arrangements in side view (thick lines are escalator runs between landings A, B, C ...). (1) Parallel: two runs from a middle landing B to landings A and C, forming a "<" shape. (2) Multiple parallel: several escalators side by side between A and B, three up and one down. (3) Crisscross: runs A–E and B–F crossed by runs C–E and B–D. (4) Walkaround: two parallel inclined runs, A to C and B to D, with curved arrows for the walk around at each landing [Note p.196]](figures/020.jpg "w=0.5")
+![Fig. 20: Hand sketches of escalator arrangements in side view (thick lines are escalator runs between landings A, B, C ...). (1) Parallel: two runs from a middle landing B to landings A and C, forming a "<" shape. (2) Multiple parallel: several escalators side by side between A and B, three up and one down. (3) Crisscross: runs A–E and B–F crossed by runs C–E and B–D. (4) Walkaround: two parallel inclined runs, A to C and B to D, with curved arrows for the walk around at each landing [Kanak p.196]](figures/020.jpg "w=0.5")
 
-![Fig. 21: The crisscross arrangement of escalators. Side elevation: three levels, lower (LL), intermediate (IL) and upper (UL); the up escalator from LL to IL is followed, after a turn, by the up escalator from IL to UL, and the down escalators cross them, UL to IL and IL to LL. End elevation "adjacent": the two escalators of a storey stacked in one well; plan with a turn at IL. End elevation "separated": the units side by side, separated by a distance D, with "turn and walk" [Note p.197]](figures/021.jpg "w=0.8")
+![Fig. 21: The crisscross arrangement of escalators. Side elevation: three levels, lower (LL), intermediate (IL) and upper (UL); the up escalator from LL to IL is followed, after a turn, by the up escalator from IL to UL, and the down escalators cross them, UL to IL and IL to LL. End elevation "adjacent": the two escalators of a storey stacked in one well; plan with a turn at IL. End elevation "separated": the units side by side, separated by a distance D, with "turn and walk" [Kanak p.197]](figures/021.jpg "w=0.8")
 
-![Fig. 22: Parallel escalators. Side elevation: escalators parallel to each other between successive floors, all rising in the same direction, with the down escalator behind; the rider walks round at each floor. End elevation "adjacent": the up and down units side by side in each storey; "separated": the units offset into two wells, separated by D [Note p.197]](figures/022.jpg "w=0.8")
+![Fig. 22: Parallel escalators. Side elevation: escalators parallel to each other between successive floors, all rising in the same direction, with the down escalator behind; the rider walks round at each floor. End elevation "adjacent": the up and down units side by side in each storey; "separated": the units offset into two wells, separated by D [Kanak p.197]](figures/022.jpg "w=0.8")
 
 **How to draw them in the exam.** Draw three horizontal lines (floors). *Crisscross:* in each storey draw two crossing diagonals (one up, one down); in the next storey repeat, so that the top of one up run is next to the foot of the next up run; mark arrows. *Parallel:* in each storey draw two parallel diagonals rising the same way (one marked up, one down); in a stacked parallel the next storey's units start at the far end, so draw the walk-around path with a curved arrow.
 
@@ -596,11 +596,11 @@ Escalators between more than two floors are arranged in one of two basic ways [N
 | Appearance | ordinary | impressive, attracts people |
 | Used in | most multi-floor stores and offices | terminals and public buildings (often 2 floors only), malls |
 
-Sources: [Grondzik §33.2; Note p.197].
+Sources: [Grondzik §33.2; Kanak p.197].
 
 ### Capacity ★ {#escalator-capacity}
 
-Steps pass the landing at a steady rate, and each carries $P$ persons. Let $V$ be the speed **along the incline**, $\theta$ the incline, and $L$ the **tread (step) length measured horizontally**. The steps form a staircase whose horizontal pitch is $L$, and the staircase moves horizontally at $V\cos\theta$. So [Note p.195]:
+Steps pass the landing at a steady rate, and each carries $P$ persons. Let $V$ be the speed **along the incline**, $\theta$ the incline, and $L$ the **tread (step) length measured horizontally**. The steps form a staircase whose horizontal pitch is $L$, and the staircase moves horizontally at $V\cos\theta$. So [Kanak p.195]:
 
 $$\text{steps per second}=\frac{V\cos\theta}{L},\qquad \boxed{N=\frac{3600\,P\,V\cos\theta}{L}\ \text{persons/h}}$$
 
@@ -615,7 +615,7 @@ Equivalently, along the incline the step pitch is $L/\cos\theta$, and $N=3600\,P
 | Note: $3600PV\cos\theta/L$ | horizontally (tread depth) | **5898 persons/h** |
 | Grondzik / CIBSE: $3600PV/s$ | along the travel (step pitch) | 7200 persons/h |
 
-The papers give the incline and call $L$ the "tread or step length", so the incline is meant to be used: **use the note's formula** and say that $L$ is the horizontal tread length. These are theoretical maxima; in practice nominal capacity is about 75% and observed about 45–50% of them (Table 33.1 ratios), because people leave steps empty.
+The papers give the incline and call $L$ the "tread or step length", so the incline is meant to be used: **use Kanak vai's note's formula** and say that $L$ is the horizontal tread length. These are theoretical maxima; in practice nominal capacity is about 75% and observed about 45–50% of them (Table 33.1 ratios), because people leave steps empty.
 
 > **TRAP: Do not drop the cosine, and do not use degrees as radians**
 >
@@ -625,9 +625,9 @@ The papers give the incline and call $L$ the "tread or step length", so the incl
 >
 > Standard escalators are 30° (US practice, Grondzik). The European standard EN 115 allows 35° only for rises up to 6 m and speeds up to 0.5 m/s, so the "35°, 0.6 m/s" of the papers is an exam combination, not a real product. Use the data as given.
 
-> **EXAMPLE 2.3** `[Note p.195]` An escalator of 30° incline carries one passenger per step at a speed of 0.5 m/s, with 400 mm tread or step length. Find the number of persons moved per hour.
+> **EXAMPLE 2.3** `[Kanak p.195]` An escalator of 30° incline carries one passenger per step at a speed of 0.5 m/s, with 400 mm tread or step length. Find the number of persons moved per hour.
 >
-> **[FROM SOURCE: Note p.195]** $\theta=30°$, $P=1$, $V=0.5$ m/s, $L=0.4$ m:
+> **[FROM SOURCE: Kanak p.195]** $\theta=30°$, $P=1$, $V=0.5$ m/s, $L=0.4$ m:
 > $$N=\frac{3600\times1\times0.5\times\cos30°}{0.4}=\frac{3600\times0.5\times0.8660}{0.4}=\mathbf{3897\ persons/h}$$
 
 ### Elevators and escalators compared
@@ -645,9 +645,9 @@ The papers give the incline and call $L$ the "tread or step length", so the incl
 | Goods, wheelchairs | yes | no (use lifts or ramps) |
 | Location | can be set apart in a lobby | must be in the main line of traffic |
 
-Sources: [Note p.194; Grondzik §33.10].
+Sources: [Kanak p.194; Grondzik §33.10].
 
-Typical division of traffic by number of floors travelled [Note p.194]: 1 floor, 90% escalator / 10% lift; 2 floors, 75/25; 3 floors, 50/50; 4 floors, 25/75; 5 floors, 10/90. A four-storey escalator trip takes about 75 s against at most 60 s by lift [Grondzik §33.10].
+Typical division of traffic by number of floors travelled [Kanak p.194]: 1 floor, 90% escalator / 10% lift; 2 floors, 75/25; 3 floors, 50/50; 4 floors, 25/75; 5 floors, 10/90. A four-storey escalator trip takes about 75 s against at most 60 s by lift [Grondzik §33.10].
 
 <!-- pagebreak -->
 
@@ -674,7 +674,7 @@ Standing assumptions for every design numerical (Family A), unless the solution 
 
 > **TRY 2.1** `[PP 16-17 Q4(b), 15]` For an office building, downtown, diversified use, 12 rentable floors above the lobby, each $2000\ \mathrm{m^2}$ net. Floor-to-floor height = 3.7 m, determine a workable elevator system arrangement.
 
-**Solution 2.1** **[TUTOR-GENERATED]** (method of Note pp.185–189 and Grondzik §31.36). This is the model answer for every single-zone design.
+**Solution 2.1** **[TUTOR-GENERATED]** (method of Kanak pp.185–189 and Grondzik §31.36). This is the model answer for every single-zone design.
 
 ::: {.problem #sol-2-1}
 
@@ -1003,7 +1003,7 @@ For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval 
 
 ::: {.answer label="Show answer: (i) classification and (ii) the schematic"}
 
-*(i) Classification* (5 marks) [Note pp.165–168]:
+*(i) Classification* (5 marks) [Kanak pp.165–168]:
 
 - **By usage:** passenger (office, hotel, residential, institution), goods/freight, hospital (bed and stretcher), dumbwaiter (small goods, food), vehicle (car park), scissor lift (movable work platform).
 - **By drive:** hydraulic (conventional plunger, hole-less telescopic, roped 2:1) and electric traction (geared up to 2.3 m/s, gearless 2.5–10 m/s).
@@ -1096,7 +1096,7 @@ For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval 
 
 > **TRY 2.6** `[PP 17-18 Q4(b), 25]` Define Interval (I) time, Handling capacity (HC) and Round Trip (RT) time for elevator. For an office building, downtown, diversified use, 18 rentable floors above the lobby, each $3000\ \mathrm{m^2}$ net, floor-to-floor height = 3.7 m, determine a working elevator system arrangement.
 
-**Solution 2.6** **[TUTOR-GENERATED]** (the zoning answer; see the TRAP after it for the class note's approach).
+**Solution 2.6** **[TUTOR-GENERATED]** (the zoning answer; see the TRAP after it for Kanak vai's note's approach).
 
 ::: {.answer label="Show answer: the definitions (6 marks)"}
 *Definitions* (6 marks) [Grondzik §31.29]:
@@ -1182,9 +1182,9 @@ Take **8 cars**: the shortfall of 0.1 percentage point is far inside the chart a
 The two banks together carry $297.8+293.1=590.9$ persons per 5 min, **12.0%** of the 4909 people. Each bank has its own lobby (3 + 4 and 4 + 4 opposing); the high-rise cars run in blind shafts through floors 1–9.
 :::
 
-> **TRAP: The class note's answer to this question**
+> **TRAP: Kanak vai's note's answer to this question**
 >
-> The note first found $I_{req}=7.54$ s and called it impossible ("?? (25–29)"), then **changed the occupancy to "prestige" (20 m²/person) and the service to "excellent"**, which cut the population from 4909 to 2700 and gave 10 cars of 3500 lb with $I=17$ s [Note pp.190–192]. That is not a design decision: the question says diversified use, normal occupancy, and the population of the building does not change because the numbers are inconvenient. A small interval such as 7.54 s is not a contradiction: it is the *system* interval the population demands, and $N=RT/I_{req}$ then shows that one bank would need about 20 cars, so the building must be **zoned**. Even the note's 10-car single group exceeds the 8-car limit. (The note's own arithmetic also slips: with 10 cars the PHC is $13\times10/10.47=12.4\%$, not 12.12%, and C2 panel (c) at 18 floors reads about 174 s on the 500-fpm curve; 170 s is nearer the 700-fpm curve.)
+> Kanak vai's note first found $I_{req}=7.54$ s and called it impossible ("?? (25–29)"), then **changed the occupancy to "prestige" (20 m²/person) and the service to "excellent"**, which cut the population from 4909 to 2700 and gave 10 cars of 3500 lb with $I=17$ s [Kanak pp.190–192]. That is not a design decision: the question says diversified use, normal occupancy, and the population of the building does not change because the numbers are inconvenient. A small interval such as 7.54 s is not a contradiction: it is the *system* interval the population demands, and $N=RT/I_{req}$ then shows that one bank would need about 20 cars, so the building must be **zoned**. Even Kanak vai's note's 10-car single group exceeds the 8-car limit. (Kanak vai's note's own arithmetic also slips: with 10 cars the PHC is $13\times10/10.47=12.4\%$, not 12.12%, and C2 panel (c) at 18 floors reads about 174 s on the 500-fpm curve; 170 s is nearer the 700-fpm curve.)
 
 > **TRY 2.7** `[PP 18-19 Q4(b), 20]` Define Interval (I) time, Percent Handling Capacity (PHC) and Average Trip Time for elevator. For an office building, downtown, diversified use, 16 rentable floors above the lobby, each $3500\ \mathrm{m^2}$. net. Floor-to-floor height = 37 m, determine a workable elevator system arrangement.
 
@@ -1314,7 +1314,7 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 > **TRY 2.9** `[PP 21-22 Q4(a), 20]` Describe different components of traction elevator system with schematic diagram.
 
 ::: {.answer label="Show answer"}
-**Solution 2.9** **[FROM SOURCE: Note pp.172–176; Grondzik §31.4–31.8]**
+**Solution 2.9** **[FROM SOURCE: Kanak pp.172–176; Grondzik §31.4–31.8]**
 
 *Schematic* (6 marks). Draw the labelled sketch of §2.3 (Fig. 5): hoistway with machine room above; in the machine room the motor, brake, drive sheave (and deflector sheave), overspeed governor and controller; hoist ropes from the sheave to the car and to the counterweight; car guide rails and counterweight guide rails; safety gear under the car tied to the governor rope; car and landing doors; limit switches near the top and bottom; car buffer and counterweight buffer in the pit; travelling cable hanging from the car.
 
@@ -1339,13 +1339,13 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 > **TRY 2.10** `[PP 16-17 Q4(a), 15]` Draw a schematic diagram of electric traction lift and show its different components.
 
 ::: {.answer label="Show answer"}
-**Solution 2.10** **[FROM SOURCE: Note p.172]** As Solution 2.9: the sketch carries most of the marks. Label at least these 15 parts and add a few words to each: (1) machine room, (2) drive motor, (3) brake, (4) drive sheave, (5) overspeed governor, (6) controller, (7) suspension (hoist) ropes, (8) car with car doors and door operator, (9) landing doors with landing push-buttons and indicator, (10) car guide rails, (11) counterweight and (12) its guide rails, (13) safety gear on the car frame, (14) travelling cable, (15) car and counterweight buffers in the pit, with the governor tension sheave and limit switches.
+**Solution 2.10** **[FROM SOURCE: Kanak p.172]** As Solution 2.9: the sketch carries most of the marks. Label at least these 15 parts and add a few words to each: (1) machine room, (2) drive motor, (3) brake, (4) drive sheave, (5) overspeed governor, (6) controller, (7) suspension (hoist) ropes, (8) car with car doors and door operator, (9) landing doors with landing push-buttons and indicator, (10) car guide rails, (11) counterweight and (12) its guide rails, (13) safety gear on the car frame, (14) travelling cable, (15) car and counterweight buffers in the pit, with the governor tension sheave and limit switches.
 :::
 
 > **TRY 2.11** `[PP 18-19 Q4(a), 10]` Draw the schematic diagram of a electric traction lift and show its different components. Draw the schematic diagram of different arrangements of elevator doors.
 
 ::: {.answer label="Show answer"}
-**Solution 2.11** **[FROM SOURCE: Note p.172; Grondzik §31.12]**
+**Solution 2.11** **[FROM SOURCE: Kanak p.172; Grondzik §31.12]**
 
 *Traction lift* (5 marks): the labelled sketch of Solution 2.10 (machine room with motor, brake, sheave, governor, controller; ropes; car; counterweight; guide rails; safety gear; buffers in the pit).
 
@@ -1360,7 +1360,7 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 > **TRY 2.12** `[PP 20-21 Q4(a), 25]` Classify elevators. Draw the schematic diagram of an electric traction lift and show its different components. What are the typical factors to be considered in the design of elevators?
 
 ::: {.answer label="Show answer"}
-**Solution 2.12** **[FROM SOURCE: Note pp.165–172; Grondzik §31.2, §31.28–31.39]**
+**Solution 2.12** **[FROM SOURCE: Kanak pp.165–172; Grondzik §31.2, §31.28–31.39]**
 
 *(i) Classification* (7 marks): by **usage**: passenger (office, residential, hotel, hospital, institution), goods/freight, hospital, dumbwaiter, vehicle, scissor lift; by **drive**: hydraulic (conventional, hole-less, roped) and traction (geared, gearless); by **machine location**: penthouse, basement, machine-room-less; by **control**: single automatic push-button, collective, selective collective, group supervisory. Add one line on each usage class (Solution 2.5 (i) and §2.1).
 
@@ -1383,7 +1383,7 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 > **TRY 2.13** `[PP 23-24 Q7(b), 10]` Describe the essential features and functions of the following components of a traction elevator system – Counterweight, Guide rails, Buffer, and Sheave.
 
 ::: {.answer label="Show answer"}
-**Solution 2.13** **[FROM SOURCE: Note pp.172–176; Grondzik §31.4, §31.7, §31.8]**
+**Solution 2.13** **[FROM SOURCE: Kanak pp.172–176; Grondzik §31.4, §31.7, §31.8]**
 
 - **Counterweight** (2.5 marks). *Features:* cut steel plates stacked in a steel frame, hung on the opposite end of the hoist ropes from the car, running on its own pair of guide rails at the back of the shaft, with its own buffer. Its weight is the **empty car plus about 40% of the rated load**. *Functions:* it balances the car, so the motor lifts only the unbalanced load; it keeps the ropes pressed into the sheave grooves, giving the **traction** needed to move the car; it reduces the machine size, the power demand and the energy cost. *Cost:* the machine-room floor and structure must carry its weight.
 - **Guide rails** (2.5 marks). *Features:* machined steel T-section rails bolted to the hoistway walls with brackets, two for the car and two for the counterweight, running the full height of the shaft. *Functions:* they guide the car (through its guide shoes or rollers) and the counterweight in straight vertical travel, prevent sway and contact with the shaft, and provide the surface that the **safety gear grips** to stop an overspeeding car; they carry the braking load during a safety stop.
@@ -1396,7 +1396,7 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 > **TRY 2.14** `[PP 15-16 Q3(a), 10]` Make a brief comparison between gearless and geared traction machine for lift.
 
 ::: {.answer label="Show answer"}
-**Solution 2.14** **[FROM SOURCE: Note pp.173–174; Grondzik §31.5–31.6]**
+**Solution 2.14** **[FROM SOURCE: Kanak pp.173–174; Grondzik §31.5–31.6]**
 
 | Point | Gearless traction machine | Geared traction machine |
 |---|---|---|
@@ -1410,13 +1410,13 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 | Cost | higher first cost | lower first cost |
 | Typical use | high-speed passenger lifts in tall buildings | low- and medium-rise passenger and freight lifts |
 
-Conclusion: the gearless machine is superior (efficient, quiet, low maintenance, long life) but dearer; it is chosen where speed exceeds about 2.5 m/s [Note p.173].
+Conclusion: the gearless machine is superior (efficient, quiet, low maintenance, long life) but dearer; it is chosen where speed exceeds about 2.5 m/s [Kanak p.173].
 :::
 
 > **TRY 2.15** `[PP 12-13 Q8(a), 5]` Draw the different arrangement of elevator machines, sheaves and ropes.
 
 ::: {.answer label="Show answer"}
-**Solution 2.15** **[FROM SOURCE: Note p.175; Grondzik §31.7]** Draw the four sketches of §2.5, Figs. 9 and 10 (drive sheave = large circle, deflector = small circle, car = plain box, counterweight = hatched box), each with one line:
+**Solution 2.15** **[FROM SOURCE: Kanak p.175; Grondzik §31.7]** Draw the four sketches of §2.5, Figs. 9 and 10 (drive sheave = large circle, deflector = small circle, car = plain box, counterweight = hatched box), each with one line:
 
 1. **1:1 single wrap, penthouse machine:** rope once over the drive sheave, down to the car, and over the deflector sheave to the counterweight; car speed = rope speed.
 2. **1:1 double wrap:** the rope passes twice round the drive and secondary sheaves; more traction, for high-speed gearless lifts.
@@ -1427,7 +1427,7 @@ Conclusion: the gearless machine is superior (efficient, quiet, low maintenance,
 > **TRY 2.16** `[PP 13-14 Q4(a), 5]` What are the common safety used in a lift?
 
 ::: {.answer label="Show answer"}
-**Solution 2.16** **[FROM SOURCE: Note pp.176–177; Grondzik §31.8]**
+**Solution 2.16** **[FROM SOURCE: Kanak pp.176–177; Grondzik §31.8]**
 
 1. **Main brake** on the machine shaft: holds the car at the floor after dynamic braking; sets on power failure.
 2. **Overspeed governor:** at a limited overspeed it cuts the motor power and applies the brake.
@@ -1439,7 +1439,7 @@ Conclusion: the gearless machine is superior (efficient, quiet, low maintenance,
 > **TRY 2.17** `[PP 13-14 Q4(b), 10]` Draw the schematic diagram of different arrangements of elevator doors.
 
 ::: {.answer label="Show answer"}
-**Solution 2.17** **[FROM SOURCE: Grondzik §31.12]** (The class note covers only door safety; Grondzik Fig. 31.12 is the source.) Draw the four plan views of §2.7 (Fig. 13), each showing the car, the hoistway opening, the panels closed (solid) and open (dashed), and the direction of travel:
+**Solution 2.17** **[FROM SOURCE: Grondzik §31.12]** (Kanak vai's note covers only door safety; Grondzik Fig. 31.12 is the source.) Draw the four plan views of §2.7 (Fig. 13), each showing the car, the hoistway opening, the panels closed (solid) and open (dashed), and the direction of travel:
 
 | Sketch | Description | Width, use |
 |---|---|---|
@@ -1455,7 +1455,7 @@ Add one line on safety: all automatic doors carry a safety edge or an infrared l
 > (i) Hydraulic lift (ii) Roping of traction lift (iii) Safety devices used in conventional lifts (iv) Modes of fire extinguishments (v) Types of fire extinguishers (vi) Fire extinguisher marking as per NFPA (vii) Advantages of gearless lift drives
 
 ::: {.answer label="Show answer"}
-**Solution 2.18** **[FROM SOURCE: Note pp.168–176; Grondzik §31.5–31.11]** Seven marks per note. The four lift notes are below, with (iv) as the fifth; (v) and (vi) belong to fire protection (Module 3).
+**Solution 2.18** **[FROM SOURCE: Kanak pp.168–176; Grondzik §31.5–31.11]** Seven marks per note. The four lift notes are below, with (iv) as the fifth; (v) and (vi) belong to fire protection (Module 3).
 
 **(i) Hydraulic lift.** The car sits on a plunger (ram) in an oil cylinder. A pump forces oil from a tank through a solenoid valve into the cylinder, raising the car (Pascal's principle); to descend, the valve opens and the car's weight returns the oil. Types: conventional (in-ground cylinder), hole-less (telescopic jacks above ground) and roped (2:1, the car moves twice the plunger stroke). *Advantages:* low first cost, no overhead machine room, no load on the building structure, smaller hoistway, very high load capacity (freight, vehicles). *Disadvantages:* low rise (about 20 m) and slow (≤ 1 m/s), high energy use and heat (no counterweight), ride varies with oil temperature, risk of oil leaks. Used in buildings of 2–5 floors.
 
@@ -1473,19 +1473,19 @@ Add one line on safety: all automatic doors carry a safety edge or an infrared l
 > **TRY 2.19** `[PP 12-13 Q8(b), 5]` What are the requirements for the ideal performance of passenger elevators?
 
 ::: {.answer label="Show answer"}
-**Solution 2.19** **[FROM SOURCE: Note p.177; Grondzik §31.2]** An ideal installation provides: (1) minimum waiting time for a car at any floor; (2) comfortable acceleration and rapid transportation; (3) smooth, rapid braking and accurate automatic levelling; (4) quick, quiet door operation and rapid loading and unloading; (5) good floor and direction indication, easy call buttons, smooth, quiet and safe operation of all equipment, comfortable lighting and reliable emergency and security equipment.
+**Solution 2.19** **[FROM SOURCE: Kanak p.177; Grondzik §31.2]** An ideal installation provides: (1) minimum waiting time for a car at any floor; (2) comfortable acceleration and rapid transportation; (3) smooth, rapid braking and accurate automatic levelling; (4) quick, quiet door operation and rapid loading and unloading; (5) good floor and direction indication, easy call buttons, smooth, quiet and safe operation of all equipment, comfortable lighting and reliable emergency and security equipment.
 :::
 
 > **TRY 2.20** `[PP 17-18 Q4(a), 10]` What are the requirements for the ideal performance of passenger elevators?
 
 ::: {.answer label="Show answer"}
-**Solution 2.20** **[FROM SOURCE: Note p.177; Grondzik §31.2]** A verbatim repeat of TRY 2.19, now for 10 marks: give the full list of §2.9, one point per mark: minimum waiting time at every floor; comfortable acceleration; rapid transportation; smooth and rapid braking; accurate automatic levelling at landings; rapid loading and unloading at all stops; quick, quiet operation of doors; good floor-status and travel-direction indication in the car and at landings; easily operated car and landing call buttons; smooth, quiet, safe operation of all equipment under all loads, with comfortable lighting, reliable emergency and security equipment and a pleasant car.
+**Solution 2.20** **[FROM SOURCE: Kanak p.177; Grondzik §31.2]** A verbatim repeat of TRY 2.19, now for 10 marks: give the full list of §2.9, one point per mark: minimum waiting time at every floor; comfortable acceleration; rapid transportation; smooth and rapid braking; accurate automatic levelling at landings; rapid loading and unloading at all stops; quick, quiet operation of doors; good floor-status and travel-direction indication in the car and at landings; easily operated car and landing call buttons; smooth, quiet, safe operation of all equipment under all loads, with comfortable lighting, reliable emergency and security equipment and a pleasant car.
 :::
 
 > **TRY 2.21** `[PP 23-24 Q5(d), 13]` Define "Passenger handling capacity" of an elevator system. How is it typically expressed? Why is the "Five-Minute Handling Capacity" a particularly important metric use in elevator traffic design?
 
 ::: {.answer label="Show answer"}
-**Solution 2.21** **[FROM SOURCE: Grondzik §31.29, §31.31; Note pp.178–179]**
+**Solution 2.21** **[FROM SOURCE: Grondzik §31.29, §31.31; Kanak pp.178–179]**
 
 *Definition* (4 marks). The passenger handling capacity (HC) of an elevator system is the maximum number of passengers it can carry in a given period, usually 5 minutes, during peak traffic. One door opening every interval $I$ and letting out $p$ passengers gives
 $$HC=\frac{300\,p}{I}=N\,\frac{300\,p}{RT}$$
@@ -1508,7 +1508,7 @@ with $p$ the normal load per trip (about 80% of the maximum, T3). It depends on 
 > **TRY 2.23** `[PP 23-24 Q5(c), 12]` How do passenger elevators differ in their design objectives and typical features from freight elevators? What unique design requirements and features distinguish hospital elevators from standard passenger elevators?
 
 ::: {.answer label="Show answer"}
-**Solution 2.23** **[FROM SOURCE: Note pp.165–167; Grondzik §31.4, §31.12, §31.38; BNBC 2020 Part 8 Ch. 4]**
+**Solution 2.23** **[FROM SOURCE: Kanak pp.165–167; Grondzik §31.4, §31.12, §31.38; BNBC 2020 Part 8 Ch. 4]**
 
 *Passenger vs freight* (6 marks):
 
@@ -1534,7 +1534,7 @@ with $p$ the normal load per trip (about 80% of the maximum, T3). It depends on 
 > **TRY 2.24** `[PP 21-22 Q4(b), 15]` Write short notes about zoning of elevators and grouping of elevators. Compare elevator and escalator systems.
 
 ::: {.answer label="Show answer"}
-**Solution 2.24** **[FROM SOURCE: Grondzik §31.37, §31.39, §33.10; Note p.194]**
+**Solution 2.24** **[FROM SOURCE: Grondzik §31.37, §31.39, §33.10; Kanak p.194]**
 
 *Zoning* (5 marks). A zone is a group of floors served as a unit by one bank of lifts. In a tall building, one bank serving every floor would need too many cars with too many stops, so the floors are split into a low-rise zone served by one bank and a high-rise zone served by another bank that runs express, in blind shafts, through the low-rise floors. Single zone below about 15 storeys; two or more zones above 20; either between 16 and 19 storeys, depending on population and the interval. Zoning shortens the round trip and trip time and allows faster cars only where needed; the upper-zone round trip adds twice the express run time; the low-rise shafts stop at their top floor, freeing space above. Modern group control can also zone dynamically.
 
@@ -1547,7 +1547,7 @@ with $p$ the normal load per trip (about 80% of the maximum, T3). It depends on 
 
 > **TRY 2.25** `[PP 12-13 Q8(d), 5]` For an escalator of 35° incline, two passengers per step, speed of 0.5 m/s and 500 mm tread or step length, determine the number of persons moved per hour.
 
-**Solution 2.25** **[FROM SOURCE: Note p.195]** (formula of §2.13, $L$ = horizontal tread length) Work it in three steps.
+**Solution 2.25** **[FROM SOURCE: Kanak p.195]** (formula of §2.13, $L$ = horizontal tread length) Work it in three steps.
 
 ::: {.problem #sol-2-25}
 
@@ -1575,7 +1575,7 @@ $$N=\frac{3600\times2\times0.5\times\cos35°}{0.5}=\mathbf{5898\ persons/h}$$
 :::
 
 ::: answer
-**Solution 2.25** **[FROM SOURCE: Note p.195]** (formula of §2.13, $L$ = horizontal tread length). $\theta=35°$, $P=2$, $V=0.5$ m/s, $L=0.5$ m. The steps pass at $V\cos\theta/L=0.5\times0.8192/0.5=0.8192$ steps/s, so
+**Solution 2.25** **[FROM SOURCE: Kanak p.195]** (formula of §2.13, $L$ = horizontal tread length). $\theta=35°$, $P=2$, $V=0.5$ m/s, $L=0.5$ m. The steps pass at $V\cos\theta/L=0.5\times0.8192/0.5=0.8192$ steps/s, so
 $$N=\frac{3600\,P\,V\cos\theta}{L}=\frac{3600\times2\times0.5\times\cos35°}{0.5}=7200\times0.8192=\mathbf{5898\ persons/h}$$
 This is the theoretical maximum. (If the 500 mm were the step pitch along the incline, the result would be $3600\times2\times0.5/0.5=7200$ persons/h; say which you assume.)
 
@@ -1583,7 +1583,7 @@ This is the theoretical maximum. (If the 500 mm were the step pitch along the in
 
 > **TRY 2.26** `[PP 16-17 Q4(c), 5]` For an escalator of $35^\circ$ incline, two passenger per step, speed of 0.5 m/s and 500 mm tread or step length, determine the number of persons moved per hour.
 
-**Solution 2.26** **[FROM SOURCE: Note p.195]** Work it in three steps.
+**Solution 2.26** **[FROM SOURCE: Kanak p.195]** Work it in three steps.
 
 ::: {.problem #sol-2-26}
 
@@ -1611,13 +1611,13 @@ $$N=\frac{3600\times2\times0.5\times\cos35°}{0.5}=\mathbf{5898\ persons/h}$$
 :::
 
 ::: answer
-**Solution 2.26** **[FROM SOURCE: Note p.195]** A verbatim repeat of TRY 2.25: $N=3600\times2\times0.5\times\cos35°/0.5=$ **5898 persons/h**.
+**Solution 2.26** **[FROM SOURCE: Kanak p.195]** A verbatim repeat of TRY 2.25: $N=3600\times2\times0.5\times\cos35°/0.5=$ **5898 persons/h**.
 
 :::
 
 > **TRY 2.27** `[PP 18-19 Q4(c), 5]` For an escalator of $35^\circ$incline, two passengers per step, speed of 0.6 m/s and 600 mm step length, determine the maximum number persons moved per hour.
 
-**Solution 2.27** **[FROM SOURCE: Note p.195]** Work it in three steps.
+**Solution 2.27** **[FROM SOURCE: Kanak p.195]** Work it in three steps.
 
 ::: {.problem #sol-2-27}
 
@@ -1645,7 +1645,7 @@ $$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}$$
 :::
 
 ::: answer
-**Solution 2.27** **[FROM SOURCE: Note p.195]** As Solution 2.25 with $V=0.6$ m/s, $L=0.6$ m: $V/L$ is again 1 s⁻¹, so
+**Solution 2.27** **[FROM SOURCE: Kanak p.195]** As Solution 2.25 with $V=0.6$ m/s, $L=0.6$ m: $V/L$ is again 1 s⁻¹, so
 $$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}\ (\text{maximum})$$
 
 :::
@@ -1653,7 +1653,7 @@ $$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}\ (\t
 > **TRY 2.28** `[PP 15-16 Q3(c), 10]` Draw the schematic diagram of different arrangements of escalator.
 
 ::: {.answer label="Show answer"}
-**Solution 2.28** **[FROM SOURCE: Note pp.196–197; Grondzik §33.2]** Draw side elevations over three floor levels (LL, IL, UL), with arrows for the direction (§2.13, Figs. 20–22):
+**Solution 2.28** **[FROM SOURCE: Kanak pp.196–197; Grondzik §33.2]** Draw side elevations over three floor levels (LL, IL, UL), with arrows for the direction (§2.13, Figs. 20–22):
 
 1. **Crisscross, spiral (continuous):** in each storey an up unit and a down unit cross like an X; the up unit of the next storey starts where the last one ends, after a 180° turn. Least floor space and structure, lowest cost, continuous travel; the commonest arrangement.
 2. **Crisscross, walk-around:** the same structure with the upper-storey directions reversed; the rider walks round the length of the escalator at each floor (stores use it to show goods).
@@ -1666,13 +1666,13 @@ Finish with the comparison: crisscross needs less space, structure and money and
 > **TRY 2.29** `[PP 20-21 Q4(b), 10]` Draw the schematic diagram of different arrangements of escalator. For an escalator of $35^\circ$ incline, two passengers per step, speed of 0.6 m/s and 600 mm step length, determine the number of persons moved per hour.
 
 ::: {.answer label="Show answer"}
-**Solution 2.29** **[FROM SOURCE: Note pp.195–197]** *Arrangements* (6 marks): the four sketches of Solution 2.28 (crisscross spiral, crisscross walk-around, parallel, stacked parallel) with one line each and the crisscross vs parallel comparison. *Capacity* (4 marks): as Solution 2.27, $N=3600\times2\times0.6\times\cos35°/0.6=$ **5898 persons/h**.
+**Solution 2.29** **[FROM SOURCE: Kanak pp.195–197]** *Arrangements* (6 marks): the four sketches of Solution 2.28 (crisscross spiral, crisscross walk-around, parallel, stacked parallel) with one line each and the crisscross vs parallel comparison. *Capacity* (4 marks): as Solution 2.27, $N=3600\times2\times0.6\times\cos35°/0.6=$ **5898 persons/h**.
 :::
 
 > **TRY 2.30** `[PP 22-23 Q4(b), 5]` Draw the schematic diagram of different arrangements of escalator. For an escalator of $35^\circ$ incline, two passengers per step, speed of 0.6 m/s and 600 mm step length, determine the number of persons moved per hour.
 
 ::: {.answer label="Show answer"}
-**Solution 2.30** **[FROM SOURCE: Note pp.195–197]** A verbatim repeat of TRY 2.29, for 5 marks: two quick sketches (crisscross and parallel, side elevation with arrows) and the capacity $N=3600\times2\times0.6\times\cos35°/0.6=$ **5898 persons/h**.
+**Solution 2.30** **[FROM SOURCE: Kanak pp.195–197]** A verbatim repeat of TRY 2.29, for 5 marks: two quick sketches (crisscross and parallel, side elevation with arrows) and the capacity $N=3600\times2\times0.6\times\cos35°/0.6=$ **5898 persons/h**.
 :::
 
 <!-- pagebreak -->

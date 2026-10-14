@@ -32,13 +32,13 @@
 
 ## 10.1 Refrigeration, the refrigeration system and the refrigerant
 
-**Refrigeration** "is a process of reducing and maintaining low temperature of a space or material below the temperature of the surroundings" [Arif p.2b; Note p.70]. The longer definition: "the process of removing heat from an enclosed space, or from a substance, and rejecting it elsewhere for the purpose of lowering the temperature of the enclosed space or substance and then maintaining that lower temperature."
+**Refrigeration** "is a process of reducing and maintaining low temperature of a space or material below the temperature of the surroundings" [Arif p.2b; Kanak p.70]. The longer definition: "the process of removing heat from an enclosed space, or from a substance, and rejecting it elsewhere for the purpose of lowering the temperature of the enclosed space or substance and then maintaining that lower temperature."
 
 Heat does not flow by itself from cold to hot (second law). So refrigeration needs a **device** (pump or compressor) and a **working substance**, the **refrigerant**, "which absorbs heat from low temperature (objects/space) and releases heat to elsewhere at high temperature" [Arif p.3a]. The refrigerant usually works in two phases: it **boils** at a low pressure (and low temperature) to absorb heat, and **condenses** at a high pressure (and high temperature) to reject it.
 
 A **refrigeration system** is the set of components that carries the refrigerant round this cycle continuously. The vapour-compression (VCR) system holds about **80% of the market** [Arif p.3b]. It has four key components (Fig. 1):
 
-![Fig. 1: VCR system schematic. A compressor (work in, shaft at right) sends high-pressure vapour up to the condenser at the top, which rejects heat to ambient air or cooling water. High-pressure liquid flows down the left side to the expansion valve; a low-pressure liquid–vapour mixture enters the evaporator at the bottom, which takes heat from the refrigerated space; low-pressure vapour returns to the compressor. [Arif p.3b; Note p.70]](figures/001.jpg "w=0.6")
+![Fig. 1: VCR system schematic. A compressor (work in, shaft at right) sends high-pressure vapour up to the condenser at the top, which rejects heat to ambient air or cooling water. High-pressure liquid flows down the left side to the expansion valve; a low-pressure liquid–vapour mixture enters the evaporator at the bottom, which takes heat from the refrigerated space; low-pressure vapour returns to the compressor. [Arif p.3b; Kanak p.70]](figures/001.jpg "w=0.6")
 
 | Component | State in → out | Function |
 |---|---|---|
@@ -327,7 +327,7 @@ A secondary refrigerant carries cooling from a central plant to many loads witho
 
 ## 10.10 Applications of refrigeration ★
 
-Modern refrigeration is mostly applied in four general fields: **ice making, preservation and transportation of perishables, special industrial processes, and air conditioning** [Ameen §1.2]. The course groups them in six [Arif pp.6b–13b; Note pp.74–76; Rifat pp.2–3]:
+Modern refrigeration is mostly applied in four general fields: **ice making, preservation and transportation of perishables, special industrial processes, and air conditioning** [Ameen §1.2]. The course groups them in six [Arif pp.6b–13b; Kanak pp.74–76; Rifat pp.2–3]:
 
 1. **Domestic refrigeration**: household refrigerators and freezers (fresh food at about 3 °C, freezer at −18 °C) [Arif p.6b]; the last link of the cold chain [Ameen §1.2].
 2. **Commercial refrigeration**: supermarket display cases, reach-in cabinets, bottle coolers, ice-cream cabinets; "meats, poultry and fish all must be kept in climate-controlled environments before being sold" [Arif p.7b]; restaurants and hotels.
@@ -342,8 +342,8 @@ Modern refrigeration is mostly applied in four general fields: **ice making, pre
    - **civil engineering**: freezing wet soil to prevent cave-ins, cooling concrete mixes with ice and chilled water [Ameen §7.1];
    - breweries, beverages, pharmaceuticals.
 4. **Marine and transport refrigeration**: "transportation of temperature-sensitive foodstuffs and other materials by trucks, trains, airplanes and sea-going vessels" [Arif p.13a]; refrigerated trucks at 1.5–4 °C (chilled) or −18 °C (frozen); reefer ships and containers at −23.5 to 12.5 °C; cooled by water ice, dry ice, liquid nitrogen, eutectic plates or engine-driven mechanical units [Ameen §7.3].
-5. **Comfort air conditioning**: "for human comfort … control of space temperature (cooling/heating), humidity, ventilation, air-motion and cleaning/filtering of air", and noise [Note p.76]: window, split, packaged and central systems.
-6. **Industrial air conditioning**: conditions for processes and products: textile weaving mills (humidity and dust removal), printing, electronics clean rooms, pharmaceutical and laboratory spaces, data centres [Note p.76; Ameen §1.6].
+5. **Comfort air conditioning**: "for human comfort … control of space temperature (cooling/heating), humidity, ventilation, air-motion and cleaning/filtering of air", and noise [Kanak p.76]: window, split, packaged and central systems.
+6. **Industrial air conditioning**: conditions for processes and products: textile weaving mills (humidity and dust removal), printing, electronics clean rooms, pharmaceutical and laboratory spaces, data centres [Kanak p.76; Ameen §1.6].
 
 Further applications: **medical** (blood banks and vaccines at 2–8 °C, plasma and tissue at −30 °C or below, cryosurgery, MRI magnet cooling); **cryogenics** (LNG, rocket propellants, superconductivity); **desalination** by freezing; **sports** (ice rinks); **agriculture** (controlled-atmosphere storage of fruit with 3–5% O$_2$ and 3–10% CO$_2$) [Ameen §7.4].
 
@@ -351,7 +351,7 @@ Why refrigeration preserves food: low temperature slows **microbial growth**, **
 
 ## 10.11 Slow freezing and quick freezing ★
 
-**Slow freezing** "is accomplished by placing the product in a low temperature room and allowing it to freeze slowly, usually in still air" [Arif p.9b]. It is used for small amounts [Note p.71].
+**Slow freezing** "is accomplished by placing the product in a low temperature room and allowing it to freeze slowly, usually in still air" [Arif p.9b]. It is used for small amounts [Kanak p.71].
 
 **Quick freezing** freezes the product rapidly, usually in a few minutes to about half an hour, by a cold fluid moving fast over the product, or by contact with cold metal or a cold liquid. 'Quick frozen' produce is generally frozen in 5–10 min in an air blast, quicker if immersed [Hundy §14.5].
 
@@ -361,13 +361,13 @@ Cells of animal and vegetable products contain a water solution of salts and sug
 
 ![Fig. 9: Product centre temperature (°C) against time (min, schematic). Both curves start at +10 °C. The quick-freezing curve (blue) falls to −1 °C within a few minutes, crosses the shaded zone of maximum ice-crystal formation (−1 to −5 °C) in under 30 min, then sub-cools quickly to the storage temperature of −25 °C. The slow-freezing curve (red, still air in a cold room) takes about an hour to reach −1 °C and stays in the shaded zone for several hours, during which large ice crystals grow and cells rupture, before cooling on toward −20 °C.](figures/009.png "w=0.75")
 
-### Basic characteristics of quick freezing [Arif p.10a; Note p.71]
+### Basic characteristics of quick freezing [Arif p.10a; Kanak p.71]
 
 1. **Smaller ice crystals are formed and there is less damage to the cells.**
 2. **The freezing period is short, so less time is allowed for diffusion of salts and separation of water** (less dehydration of cells and concentration of solutes).
 3. **The temperature is reduced quickly, so the growth of bacteria and yeasts is retarded**, preventing decomposition during freezing.
 4. Hence better texture, colour, flavour and nutritive value after thawing, less drip and weight loss, and a longer storage life.
-5. High throughput (continuous belts, IQF, bulk quantities) [Note p.71]; but higher capital cost and lower evaporating temperatures (−35 to −40 °C air, or cryogenic liquids).
+5. High throughput (continuous belts, IQF, bulk quantities) [Kanak p.71]; but higher capital cost and lower evaporating temperatures (−35 to −40 °C air, or cryogenic liquids).
 
 | Aspect | Slow freezing | Quick freezing |
 |---|---|---|
@@ -380,13 +380,13 @@ Cells of animal and vegetable products contain a water solution of salts and sug
 | Product quality | texture and appearance degraded | texture and appearance kept |
 | Cost | low | higher (plant, power, cryogen) |
 
-[Note p.73; Hundy §14.4]
+[Kanak p.73; Hundy §14.4]
 
 As a rule, products eaten raw or only briefly cooked (green peas, strawberries, beans) must be quick-frozen; meat, whose texture changes in cooking anyway, may be frozen more slowly [Hundy §14.4]. Very fast freezing in liquid nitrogen can crack large products mechanically [Ameen §7.6].
 
 ## 10.12 Classification of quick-freezing methods ★
 
-The course lists **three** types of quick freezing system [Arif p.10a; Note p.71; Rifat p.3]:
+The course lists **three** types of quick freezing system [Arif p.10a; Kanak p.71; Rifat p.3]:
 
 1. **Air blast freezing**: cold air blown at high velocity over the product.
 2. **Immersion freezing**: the product immersed in, or sprayed with, a cold liquid that stays liquid (brine, glycol) or boils (cryogen); gives **IQF** (individually quick frozen) product.
@@ -409,7 +409,7 @@ Cold air is blown over the product at high speed. In a batch cold room the produ
 
 ### Immersion freezing
 
-"Liquid immersion freezing is accomplished when a food product, either packaged or unpackaged, is frozen by **immersion in or by spraying with a refrigerant that remains liquid throughout the process**" [Arif p.11b; Note p.73]. Liquids used: aqueous solutions of **propylene glycol, glycerol, sodium chloride, and mixtures of salt and sugar**, and (as a cryogenic spray) **liquid nitrogen** [Arif p.11b].
+"Liquid immersion freezing is accomplished when a food product, either packaged or unpackaged, is frozen by **immersion in or by spraying with a refrigerant that remains liquid throughout the process**" [Arif p.11b; Kanak p.73]. Liquids used: aqueous solutions of **propylene glycol, glycerol, sodium chloride, and mixtures of salt and sugar**, and (as a cryogenic spray) **liquid nitrogen** [Arif p.11b].
 
 **Process** (Fig. 11, Fig. 12):
 
@@ -426,9 +426,9 @@ Cold air is blown over the product at high speed. In a batch cold room the produ
 
 ### Plate (indirect contact) freezing
 
-"Plate freezing refrigeration systems work by placing food products in **direct contact with large metal plates that are cooled by a circulating refrigerant**. The plates are arranged in a stack, with the food sandwiched between them to maximise surface contact and ensure uniform freezing" [Note p.74]. The first contact freezer was patented by Clarence Birdseye in 1929 [Hundy §14.6].
+"Plate freezing refrigeration systems work by placing food products in **direct contact with large metal plates that are cooled by a circulating refrigerant**. The plates are arranged in a stack, with the food sandwiched between them to maximise surface contact and ensure uniform freezing" [Kanak p.74]. The first contact freezer was patented by Clarence Birdseye in 1929 [Hundy §14.6].
 
-**Construction and process** (Fig. 13, Fig. 14) [Hundy §7.4, §14.6; Note p.74]:
+**Construction and process** (Fig. 13, Fig. 14) [Hundy §7.4, §14.6; Kanak p.74]:
 
 1. A stack of **hollow, flat aluminium or steel plates** inside an insulated cabinet. Liquid refrigerant (usually ammonia, or R404A/R507A) evaporates inside channels in each plate at about −35 to −40 °C; it is pumped through at **5–12 times the evaporation rate** to keep the inner surface wetted [Hundy §7.4].
 2. Each plate is connected to the supply and return headers by **flexible hoses**, so the plates can move.
@@ -440,7 +440,7 @@ Cold air is blown over the product at high speed. In a batch cold room the produ
 
 ![Fig. 13: Horizontal plate freezer, schematic. An insulated cabinet (door at front) holds a stack of five hollow freezing plates (refrigerant boils inside). Product packs (three per layer) are sandwiched between the plates with contact on both faces. A hydraulic ram on top presses the plates together. Each plate is connected by flexible hoses to a liquid supply header on the right (pumped NH3 or R404A at −35 to −40 °C) and to a wet return header on the left that leads to the separator and compressor.](figures/013.jpg "w=0.75")
 
-![Fig. 14: Plate freezer as on the slide: a cabinet with horizontal freezing plates and blocks of product resting on them, moved by a hydraulic ram on top; left, separated plates (open for loading); right, closed plates pressing the product blocks between them. [Arif p.12b; Note p.74]](figures/014.png "w=0.6")
+![Fig. 14: Plate freezer as on the slide: a cabinet with horizontal freezing plates and blocks of product resting on them, moved by a hydraulic ram on top; left, separated plates (open for loading); right, closed plates pressing the product blocks between them. [Arif p.12b; Kanak p.74]](figures/014.png "w=0.6")
 
 ### Cryogenic freezing
 
@@ -575,7 +575,7 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 
 > **TRY 10.5** `[PP 12-13 Q5(a), 5]` What are the basic characteristics of quick freezing process? Classify quick freezing process.
 
-**Solution 10.5** **[FROM SOURCE: Arif p.10a; Note pp.71, 73; Hundy §14.4–14.6]** This is the model answer for the quick-freezing family.
+**Solution 10.5** **[FROM SOURCE: Arif p.10a; Kanak pp.71, 73; Hundy §14.4–14.6]** This is the model answer for the quick-freezing family.
 
 **Quick freezing** freezes the product in minutes (up to about 30 min), so that it passes rapidly through the zone of maximum ice-crystal formation (−1 to −5 °C). **Characteristics** (3 marks):
 
@@ -587,11 +587,11 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 
 > **TRY 10.6** `[PP 15-16 Q1(a), 5]` What are the basic characteristics of quick freezing process? Classify quick freezing process.
 
-**Solution 10.6** **[FROM SOURCE: Arif p.10a; Note p.71]** Word for word TRY 10.5 (2012-13). Write Solution 10.5: small ice crystals and little cell damage; short freezing period, little salt diffusion and water separation; bacteria and yeast retarded. Classes: **air blast, immersion, indirect contact (plate)**, plus cryogenic.
+**Solution 10.6** **[FROM SOURCE: Arif p.10a; Kanak p.71]** Word for word TRY 10.5 (2012-13). Write Solution 10.5: small ice crystals and little cell damage; short freezing period, little salt diffusion and water separation; bacteria and yeast retarded. Classes: **air blast, immersion, indirect contact (plate)**, plus cryogenic.
 
 > **TRY 10.7** `[PP 21-22 Q1(a), 15]` What are the basic characteristics of quick freezing process? Classify quick freezing process. Briefly describe the Plate Freezing process with schematic diagram.
 
-**Solution 10.7** **[FROM SOURCE: Arif pp.10a, 12b; Note pp.71, 74; Hundy §7.4, §14.6]** Characteristics and classification as Solution 10.5 (5 marks), with the slow vs quick comparison (large vs small crystals, hours vs minutes) and the freezing-curve sketch of Fig. 9 if time allows.
+**Solution 10.7** **[FROM SOURCE: Arif pp.10a, 12b; Kanak pp.71, 74; Hundy §7.4, §14.6]** Characteristics and classification as Solution 10.5 (5 marks), with the slow vs quick comparison (large vs small crystals, hours vs minutes) and the freezing-curve sketch of Fig. 9 if time allows.
 
 **Plate freezing** (10 marks). Sketch Fig. 13 (or the slide sketch, Fig. 14): insulated cabinet, stack of hollow freezing plates, product packs between them, hydraulic ram on top, flexible hoses to the refrigerant supply and return headers; draw "separated plates" and "closed plates".
 
@@ -607,7 +607,7 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 
 > **TRY 10.8** `[PP 13-14 Q1(a), 5]` What are the major applications of refrigeration system?
 
-**Solution 10.8** **[FROM SOURCE: Arif pp.6b–13b; Note pp.74–76; Ameen §1.2]** This is the model answer for the applications family.
+**Solution 10.8** **[FROM SOURCE: Arif pp.6b–13b; Kanak pp.74–76; Ameen §1.2]** This is the model answer for the applications family.
 
 1. **Domestic refrigeration**: household refrigerators and freezers (fresh food ≈ 3 °C, freezer −18 °C).
 2. **Commercial refrigeration**: supermarket display cases, reach-in cabinets, bottle coolers; meat, poultry and fish kept chilled before sale.
@@ -617,7 +617,7 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 
 > **TRY 10.9** `[PP 17-18 Q1(a), 15]` Define refrigeration system. With a schematic diagram show the key components of a refrigeration system. What are the applications of refrigeration system?
 
-**Solution 10.9** **[FROM SOURCE: Arif pp.2b–6a, 6b–13b; Note pp.70–76]**
+**Solution 10.9** **[FROM SOURCE: Arif pp.2b–6a, 6b–13b; Kanak pp.70–76]**
 
 **Definition** (3 marks). **Refrigeration** is the process of removing heat from an enclosed space or a substance and rejecting it elsewhere, to lower its temperature below that of the surroundings and then maintain that lower temperature. A **refrigeration system** is the set of components (with a mechanical device such as a compressor) that does this continuously by circulating a **refrigerant**, which absorbs heat at low temperature by evaporating at low pressure and releases it at high temperature by condensing at high pressure. The vapour-compression system holds about 80% of the market.
 
@@ -633,7 +633,7 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 
 > **TRY 10.10** `[PP 22-23 Q1(a), 10]` What are the major applications of refrigeration system? Briefly describe the Immersion Freezing process with schematic diagram.
 
-**Solution 10.10** **[FROM SOURCE: Arif pp.11b–12a; Note p.73; Hundy §14.6; Ameen §7.6]**
+**Solution 10.10** **[FROM SOURCE: Arif pp.11b–12a; Kanak p.73; Hundy §14.6; Ameen §7.6]**
 
 **Applications** (4 marks): as Solution 10.8: domestic, commercial, industrial (cold storage, food freezing, ice, dairy, gas liquefaction, chemical and refinery processes), marine and transport, comfort and industrial air conditioning.
 

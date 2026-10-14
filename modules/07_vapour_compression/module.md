@@ -6,7 +6,7 @@
 | **Where it appears** | Every paper, 2011-12 to 2023-24. The multistage numerical is Q1(b) of Section A from 2013-14 to 2022-23 (Q5(c)/Q6(b) of Section B in 2011-12 and 2012-13), asked in 10 of 11 papers; cycle theory is Q1(a), Q2(a) or Q5(a)/(b); 2023-24 asks only the 5-mark multi-evaporator question (Q8(a)) |
 | **Share of all marks** | 10.9% (332 of 3055 weighted marks): 22 parts. The multistage R134a numerical alone is 200 marks (6.5%), 20 marks a year, with verbatim repeats |
 | **Time** | core 3 h (§7.1–7.3, §7.6–7.8 and Solutions 4.1 and 4.7), full 6 h (all 22 solutions) |
-| **Sources** | Arif pp.18–31; Note pp.77–96; Rifat pp.4–14; Aloke pp.1–3; Ameen §3.2–3.5; Data Book Tables 1 and 3, superheated tables pp.9–10 and 13–16, Charts 2 and 3 |
+| **Sources** | Arif pp.18–31; Kanak pp.77–96; Rifat pp.4–14; Aloke pp.1–3; Ameen §3.2–3.5; Data Book Tables 1 and 3, superheated tables pp.9–10 and 13–16, Charts 2 and 3 |
 
 **How it has been asked:**
 
@@ -45,7 +45,7 @@ A **refrigerator** moves heat $Q_L$ from a cold space at $T_L$ to warm surroundi
 | 12.0 | 3.516 | 1.0 |
 | 24.0 | 7.032 | 0.5 |
 
-(Arif p.31; Note p.92.)
+(Arif p.31; Kanak p.92.)
 
 ## 7.2 From the reversed Carnot cycle to the ideal vapour compression cycle ★
 
@@ -102,7 +102,7 @@ $$COP=\frac{h_1-h_4}{h_2-h_1}$$
 >
 > R134a has superheated blocks only at 0.101325, 0.2 and 0.4 MPa in the low range. The intermediate pressures of the exam problems (132.7, 234.3, 292.8, 349.8 kPa) fall between them, and the isentropes curve, so linear interpolation in $p$ comes out about 1 kJ/kg below the true value (e.g. 401.41 instead of 402.5 kJ/kg at 292.8 kPa, $s=1.7413$). This guide uses the table route throughout, as the examiner can follow it from the tables, and states the chart/EOS value next to it where the difference is more than 0.5 kJ/kg. Either is accepted; use one consistently within an answer.
 
-> **EXAMPLE 7.1** `[Arif pp.19–21; Note pp.79–81; Rifat pp.4–5; Ameen Ex. 3.4]` A simple vapour compression refrigeration cycle using R134a operates on the ideal cycle between 0.12 and 0.7 MPa. The mass flow rate is 0.06 kg/s. Determine (1) the rate of heat removal from the refrigerated space and the compressor power, (2) the rate of heat rejection, (3) the COP.
+> **EXAMPLE 7.1** `[Arif pp.19–21; Kanak pp.79–81; Rifat pp.4–5; Ameen Ex. 3.4]` A simple vapour compression refrigeration cycle using R134a operates on the ideal cycle between 0.12 and 0.7 MPa. The mass flow rate is 0.06 kg/s. Determine (1) the rate of heat removal from the refrigerated space and the compressor power, (2) the rate of heat rejection, (3) the COP.
 >
 > **[FROM SOURCE: Arif pp.19–21, corrected]** Numbering of Fig. 3 (1 = compressor inlet). The sources number the compressor inlet "2"; the physics is the same.
 >
@@ -118,7 +118,7 @@ $$COP=\frac{h_1-h_4}{h_2-h_1}$$
 
 > **TRAP: h = 428 kJ/kg in the slides, Rifat vai and the Note**
 >
-> All three read the compressor outlet as $h=428$ kJ/kg off the chart and get $\dot Q_L=0.06(385.43-236)=8.96$ kW, $\dot W=2.55$ kW, $\dot Q_H=11.51$ kW and **COP = 3.51** (Arif p.21b, Rifat p.5, also Ameen Ex. 3.4), or COP = **3.43** (Note p.81). 428 kJ/kg lies on the $s\approx1.764$ isentrope, not on $s=1.7435$; the table and the EOS both give ≈ 421.5 kJ/kg, so the true COP is about **4.08**. The Note also takes $h_f=238.84$ kJ/kg for 0.7 MPa: that is the 28 °C row (0.727 MPa); at 0.7 MPa the table gives 236.98. When you read a chart, follow the isentrope from state 1 carefully, and check the answer: for −22 °C / 27 °C the ideal R134a COP must be close to 4.
+> All three read the compressor outlet as $h=428$ kJ/kg off the chart and get $\dot Q_L=0.06(385.43-236)=8.96$ kW, $\dot W=2.55$ kW, $\dot Q_H=11.51$ kW and **COP = 3.51** (Arif p.21b, Rifat p.5, also Ameen Ex. 3.4), or COP = **3.43** (Kanak p.81). 428 kJ/kg lies on the $s\approx1.764$ isentrope, not on $s=1.7435$; the table and the EOS both give ≈ 421.5 kJ/kg, so the true COP is about **4.08**. The Note also takes $h_f=238.84$ kJ/kg for 0.7 MPa: that is the 28 °C row (0.727 MPa); at 0.7 MPa the table gives 236.98. When you read a chart, follow the isentrope from state 1 carefully, and check the answer: for −22 °C / 27 °C the ideal R134a COP must be close to 4.
 
 ## 7.4 The actual cycle: deviations, subcooling and superheating ★
 
@@ -215,7 +215,7 @@ The flash fraction at the tank is the quality after throttling: $x=\dfrac{h_{con
 
 **Intercooling** between two stages of compression reduces the compression work [Arif p.23b]. Isentropes on p-h become flatter (lean further right) as the vapour gets more superheated, so compressing a cooled vapour from the intermediate pressure takes less work than continuing the hot compression (Fig. 7(b)): on the p-V diagram the area between the uncooled and the cooled high-stage compression is the work saved. It also lowers the discharge temperature, protecting the oil and the valves.
 
-Methods [Arif p.23b–24a; Note p.84]:
+Methods [Arif p.23b–24a; Kanak p.84]:
 
 1. **Water intercooler:** a water-cooled heat exchanger between the stages. It can only cool the gas to a few degrees above the cooling-water temperature (e.g. 35 °C), which is usually above the intermediate saturation temperature. So it removes only part of the superheat. It is often used before a flash intercooler.
 2. **Flash (liquid, refrigerant) intercooler:** the low-stage discharge is bubbled through liquid refrigerant held at the intermediate pressure by a float valve. The gas is cooled to saturated vapour at the intermediate pressure by evaporating some of the liquid. It cools completely, but the evaporated refrigerant must be compressed by the high stage.
@@ -249,11 +249,11 @@ Steps 2 and 4 can be done in one states table. Draw the schematic and the p-h di
 
 ### Type A: two compressors, one evaporator, flash intercooler (flash-gas removal)
 
-The liquid from the condenser (5) is throttled to the intermediate pressure into the intercooler and flash tank (6). Saturated liquid (7) from the tank is throttled (8) to the evaporator. The low-stage discharge (2) is bubbled through the liquid in the tank and leaves, with the flash gas, as saturated vapour (3) to the high-stage compressor (Fig. 8) [Arif pp.23–26; Note pp.83–89; Rifat pp.6–8].
+The liquid from the condenser (5) is throttled to the intermediate pressure into the intercooler and flash tank (6). Saturated liquid (7) from the tank is throttled (8) to the evaporator. The low-stage discharge (2) is bubbled through the liquid in the tank and leaves, with the flash gas, as saturated vapour (3) to the high-stage compressor (Fig. 8) [Arif pp.23–26; Kanak pp.83–89; Rifat pp.6–8].
 
 ![Fig. 8: Two compressors and one evaporator with a flash intercooler (Example 7.2). (a) Schematic: evaporator −20 °C, 50 kW → 1 → low-stage compressor → 2, bubbled into the intercooler and flash tank at 0 °C; saturated vapour 3 from the top of the tank → high-stage compressor → 4 → condenser 30 °C → 5 → expansion valve → 6 into the tank; saturated liquid 7 from the bottom of the tank → expansion valve → 8 → evaporator. (b) p-h diagram on R134a coordinates with the three pressure levels −20 °C (132.7 kPa), 0 °C (292.8 kPa) and 30 °C (770.2 kPa): 1-2 and 3-4 isentropic compressions, 2→3 desuperheating in the tank, 4-5 condensation, 5-6 and 7-8 throttling, 8-1 evaporation.](figures/008.png "w=1.0")
 
-> **EXAMPLE 7.2** `[Arif pp.25b–29a; Note pp.86–89; Rifat pp.6–9]` Determine the COP of a two-stage refrigeration system with flash-gas removal. The system uses R134a to produce 50 kW of refrigeration. $T_{cond}=30$ °C, $T_{evap}=-20$ °C, and the intercooler temperature is 0 °C. Repeat for a one-stage system.
+> **EXAMPLE 7.2** `[Arif pp.25b–29a; Kanak pp.86–89; Rifat pp.6–9]` Determine the COP of a two-stage refrigeration system with flash-gas removal. The system uses R134a to produce 50 kW of refrigeration. $T_{cond}=30$ °C, $T_{evap}=-20$ °C, and the intercooler temperature is 0 °C. Repeat for a one-stage system.
 >
 > **[FROM SOURCE: Arif pp.26–29, corrected]** States as in Fig. 8.
 >
@@ -277,7 +277,7 @@ The liquid from the condenser (5) is throttled to the intermediate pressure into
 
 ### Type B: two evaporators at different temperatures
 
-**One compressor with a back-pressure valve** (Fig. 9(a), (b)) [Arif p.22b; Note p.82]: the condenser liquid (3) splits between two expansion valves feeding the high-temperature evaporator (4 → 5) and the low-temperature evaporator (7 → 8). A **pressure-reducing (back-pressure) valve** after the warm evaporator throttles its vapour (5 → 6) down to the suction pressure, because both streams must enter the single compressor at the same pressure. The mixed suction state 1 lies between 8 and 6: $\dot m_1h_1=\dot m_5h_6+\dot m_7h_8$. The vapour of the warm evaporator is compressed from the lowest pressure, which wastes work: the throttling 5 → 6 is pure loss.
+**One compressor with a back-pressure valve** (Fig. 9(a), (b)) [Arif p.22b; Kanak p.82]: the condenser liquid (3) splits between two expansion valves feeding the high-temperature evaporator (4 → 5) and the low-temperature evaporator (7 → 8). A **pressure-reducing (back-pressure) valve** after the warm evaporator throttles its vapour (5 → 6) down to the suction pressure, because both streams must enter the single compressor at the same pressure. The mixed suction state 1 lies between 8 and 6: $\dot m_1h_1=\dot m_5h_6+\dot m_7h_8$. The vapour of the warm evaporator is compressed from the lowest pressure, which wastes work: the throttling 5 → 6 is pure loss.
 
 **Individual compressors** (Fig. 9(c)): each evaporator has its own compressor discharging to the common condenser. Each compressor works only over its own pressure ratio, so the warm load is handled cheaply, but every kilogram of liquid for the cold evaporator still flashes all the way from the condenser pressure.
 
@@ -285,7 +285,7 @@ The liquid from the condenser (5) is throttled to the intermediate pressure into
 
 ### Type C: two compressors, two evaporators, flash intercooler (the exam template)
 
-This is the arrangement of the exam figure (Fig. 10) [Arif pp.25a, 29b–30b; Note pp.85, 89–91; Rifat pp.10–12]. The high-temperature evaporator works at the intermediate pressure, fed directly from the condenser through its own valve; its vapour joins the tank vapour at the high-stage suction (3). The **control volume** for Step 3 encloses the high-temperature evaporator **and** the flash tank (the hand-drawn loop on Arif p.30a):
+This is the arrangement of the exam figure (Fig. 10) [Arif pp.25a, 29b–30b; Kanak pp.85, 89–91; Rifat pp.10–12]. The high-temperature evaporator works at the intermediate pressure, fed directly from the condenser through its own valve; its vapour joins the tank vapour at the high-stage suction (3). The **control volume** for Step 3 encloses the high-temperature evaporator **and** the flash tank (the hand-drawn loop on Arif p.30a):
 
 $$\underbrace{\dot m_3h_5}_{\text{liquid in (both valves)}}+\dot Q_{high}+\underbrace{\dot m_1h_2}_{\text{low-stage gas in}}=\underbrace{\dot m_3h_3}_{\text{vapour out}}+\underbrace{\dot m_1h_7}_{\text{liquid out}}$$
 
@@ -295,9 +295,9 @@ $$\dot m_1=\frac{\dot Q_{low}}{h_1-h_8},\qquad \dot m_3=\frac{\dot Q_{high}+\dot
 
 ![Fig. 10: The exam template: two compressors, two evaporators, intercooler and flash tank. (a) Schematic as in the 2012-13, 2013-14 and 2015-16 papers: condenser 30 °C → 5; one branch through an expansion valve (6) to the evaporator at −10 °C, 60 TR, whose vapour joins line 3; the other through a float-controlled valve (6) into the intercooler and flash tank at −10 °C; vapour from the tank joins line 3 → high-stage compressor → 4 → condenser; liquid 7 from the tank → expansion valve → 8 → evaporator at −40 °C, 50 TR → 1 → low-stage compressor → 2, piped below the liquid level in the tank. (b) p-h diagram on R134a coordinates for Solution 7.1: levels −40 °C (51 kPa), −10 °C (201 kPa) and 30 °C (770 kPa); 1-2 and 3-4 isentropic compressions; 2→3 desuperheating; 4-5 condensation; 5-6 and 7-8 throttling; 6→3 is the −10 °C evaporator plus the flash vapour; 8-1 the −40 °C evaporator.](figures/010.png "w=1.0")
 
-> **EXAMPLE 7.3** `[Arif pp.25a, 29b–30b; Note pp.89–91; Rifat pp.10–12]` An R134a system has one evaporator of 180 kW at −30 °C and another of 200 kW at 5 °C, two compressors, and an intercooler and flash tank at 5 °C, arranged as in Fig. 10; the condensing temperature is 40 °C. Find the compressor power and the COP. Repeat with a single-stage compressor for each evaporator.
+> **EXAMPLE 7.3** `[Arif pp.25a, 29b–30b; Kanak pp.89–91; Rifat pp.10–12]` An R134a system has one evaporator of 180 kW at −30 °C and another of 200 kW at 5 °C, two compressors, and an intercooler and flash tank at 5 °C, arranged as in Fig. 10; the condensing temperature is 40 °C. Find the compressor power and the COP. Repeat with a single-stage compressor for each evaporator.
 >
-> **[FROM SOURCE: Note pp.89–91, corrected]** Steps 1–4 (Table 1; the 5 °C row is interpolated between 4 °C and 6 °C):
+> **[FROM SOURCE: Kanak pp.89–91, corrected]** Steps 1–4 (Table 1; the 5 °C row is interpolated between 4 °C and 6 °C):
 >
 >
 > | State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
@@ -331,7 +331,7 @@ $$\dot m_1=\frac{\dot Q_{low}}{h_1-h_8},\qquad \dot m_3=\frac{\dot Q_{high}+\dot
 
 ### Type D: three stages, three evaporators, two flash tanks
 
-The fish-freezing plant of 2018-19, 2020-21 and 2022-23 (Fig. 11) [Note pp.93–96]. Condenser liquid 7 feeds the −10 °C evaporator and the −10 °C tank (both at $h_8=h_7$). Liquid 9 from the −10 °C tank feeds the −20 °C evaporator and the −20 °C tank ($h_{10}=h_9$). Liquid 11 from the −20 °C tank feeds the −30 °C evaporator ($h_{12}=h_{11}$). Compressor 1-2 discharges into the −20 °C tank, compressor 3-4 into the −10 °C tank, compressor 5-6 into the condenser. Two control volumes, each "evaporator + its tank":
+The fish-freezing plant of 2018-19, 2020-21 and 2022-23 (Fig. 11) [Kanak pp.93–96]. Condenser liquid 7 feeds the −10 °C evaporator and the −10 °C tank (both at $h_8=h_7$). Liquid 9 from the −10 °C tank feeds the −20 °C evaporator and the −20 °C tank ($h_{10}=h_9$). Liquid 11 from the −20 °C tank feeds the −30 °C evaporator ($h_{12}=h_{11}$). Compressor 1-2 discharges into the −20 °C tank, compressor 3-4 into the −10 °C tank, compressor 5-6 into the condenser. Two control volumes, each "evaporator + its tank":
 
 $$\text{CV}_{-20}:\ \dot m_3h_9+\dot Q_{-20}+\dot m_1h_2=\dot m_3h_3+\dot m_1h_{11}$$
 $$\text{CV}_{-10}:\ \dot m_5h_7+\dot Q_{-10}+\dot m_3h_4=\dot m_5h_5+\dot m_3h_9$$
@@ -376,7 +376,7 @@ Standing assumptions for every numerical, unless the solution says otherwise:
 
 > **TRY 7.1** `[PP 12-13 Q5(c), 20]` Calculate the power required by the two compressors in a R134a system which serves a 50 TR evaporator at −40 °C and 60 TR evaporator at −10 °C. The system uses two stage compression with inter-cooling and is arranged as in Fig. for Q. No. 5(d) (Fig. 10(a)). The condensing temperature is 30 °C. Also calculate the COP of the system.
 
-**Solution 7.1** **[TUTOR-GENERATED]** (method of Arif pp.29b–30b and Note pp.89–91, with the five steps of §7.8). This is the model answer for the whole family.
+**Solution 7.1** **[TUTOR-GENERATED]** (method of Arif pp.29b–30b and Kanak pp.89–91, with the five steps of §7.8). This is the model answer for the whole family.
 
 *Step 1. States and sketch.* As in Fig. 10: 1 low-temperature evaporator exit (−40 °C), 2 low-stage discharge, 3 high-stage suction (−10 °C), 4 high-stage discharge, 5 condenser exit (30 °C), 6 after the valves (into the −10 °C evaporator and the tank), 7 tank liquid, 8 low-temperature evaporator inlet. Loads: $\dot Q_{-40}=50\times3.517=175.85$ kW, $\dot Q_{-10}=60\times3.517=211.02$ kW.
 
@@ -507,7 +507,7 @@ total 43.02 kW; COP $=130.00/43.02=3.02$. EOS: 392.5, 425.5, W 43.5, COP 2.99.
 
 > **TRY 7.7** `[PP 20-21 Q1(b), 20]` A fish freezing plant uses three stage compression refrigeration system with inter-cooling and removal of flash gas. Calculate the power required by the three compressors in a R134a system which serves a 60 TR evaporator at −30 °C, 50 TR evaporator at −20 °C and 40 TR evaporator at −10 °C. The condensing temperature is 30 °C and the intercooler temperature is −20 °C and −10 °C. Draw the schematic diagram and P-h diagram of the system. Also calculate the COP of the system.
 
-**Solution 7.7** **[FROM SOURCE: Note pp.93–96, completed]** The Note sets up this problem (loads 211, 175.8 and 140.64 kW with 3.516 kW/TR, $\dot m_{11}=1.02$ kg/s, the two loop balances) and stops. Completed here with the five steps.
+**Solution 7.7** **[FROM SOURCE: Kanak pp.93–96, completed]** The Note sets up this problem (loads 211, 175.8 and 140.64 kW with 3.516 kW/TR, $\dot m_{11}=1.02$ kg/s, the two loop balances) and stops. Completed here with the five steps.
 
 *Step 1.* Schematic and p-h diagram: Fig. 11. Loads: $\dot Q_{-30}=60\times3.517=211.02$ kW, $\dot Q_{-20}=50\times3.517=175.85$ kW, $\dot Q_{-10}=40\times3.517=140.68$ kW; total 527.55 kW.
 
@@ -755,7 +755,7 @@ The work per kg rises from 15.7 to 59.4 kJ/kg as $T_e$ falls from 10 to −40 °
 
 > **TRY 7.19** `[PP 16-17 Q2(a), 7]` Define EER, SEER, kW/ton. Show the variation of COP with the evaporator and condenser temperature.
 
-**Solution 7.19** **[FROM SOURCE: Arif p.31; Note p.92]**
+**Solution 7.19** **[FROM SOURCE: Arif p.31; Kanak p.92]**
 
 - **EER** (energy efficiency ratio) = refrigerating effect in Btu/h ÷ power input in W. Because 1 W = 3.412 Btu/h, $EER=3.412\times COP$.
 - **SEER** (seasonal energy efficiency ratio) = total cooling delivered over a typical cooling season (Btu) ÷ total electrical energy used over that season (W·h). It accounts for part-load operation and changing outdoor temperature.

@@ -43,7 +43,7 @@ The original book numbers its tables inconsistently (two different tables are bo
 | Where | What | Use |
 |---|---|---|
 | Table 16, code B7 (25 mm wood) | $R$ printed 1.760 m²·°C/W; $L/k=0.025/0.121=0.207$ | 0.207. With 1.760 a built-up roof $U$ comes out about 2.4 times too low; or take $U$ straight from Table 12(b) |
-| Table 7, SD5-10 and ED5-3 tees | the columns are headed $\dot V_b/\dot V_c$ (flow-rate ratio, as in ASHRAE); the course (Ameen Table 15.5, slides, class note) reads them as the velocity ratio $V_b/V_c$ | state which you use; the course reading is the velocity ratio |
+| Table 7, SD5-10 and ED5-3 tees | the columns are headed $\dot V_b/\dot V_c$ (flow-rate ratio, as in ASHRAE); the course (Ameen Table 15.5, slides, Kanak vai's note) reads them as the velocity ratio $V_b/V_c$ | state which you use; the course reading is the velocity ratio |
 | Table 7, ED5-3 (p.21) | about 8 digits are broken in the scan | the doubtful cells carry a dagger |
 | Chart 8 (psychrometric) | drawn for 101.325 kPa | at any other pressure use the equations $\omega=0.622P_v/(P-P_v)$, $v=0.287T/(P-P_v)$, not the chart |
 | Chart 3 (ammonia p-h) | its reference state differs from the ammonia tables (D6, D7) | use only differences from the chart; never mix chart and table enthalpies |

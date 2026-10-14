@@ -45,11 +45,11 @@ Questions in this module ask you to classify each component, draw one type and e
 
 ## 4.2 Compressors: classification and capacity ranges ★
 
-The compressor "compresses the low-pressure dry gas from the evaporator and raises its pressure to that of the condenser" [Aloke p.24; Note p.13].
+The compressor "compresses the low-pressure dry gas from the evaporator and raises its pressure to that of the condenser" [Aloke p.24; Kanak p.13].
 
 ### Classification by working principle
 
-**Positive-displacement** compressors trap discrete volumes of low-pressure vapour and **physically reduce the volume**, which raises the pressure. **Dynamic** compressors **raise the velocity** of the gas and then slow it down in a way that raises the pressure [Aloke p.29; Note p.15].
+**Positive-displacement** compressors trap discrete volumes of low-pressure vapour and **physically reduce the volume**, which raises the pressure. **Dynamic** compressors **raise the velocity** of the gas and then slow it down in a way that raises the pressure [Aloke p.29; Kanak p.15].
 
 ![Fig. 1: Classification tree of refrigeration compressors. COMPRESSORS divide into POSITIVE DISPLACEMENT and DYNAMIC. Positive displacement → RECIPROCATING and ROTARY; rotary → VANE, SCROLL, ROLLING PISTON, SCREW. Dynamic → TURBO and EJECTOR (JET); turbo → CENTRIFUGAL and AXIAL. [Aloke p.28]](figures/001.jpg "w=0.6")
 
@@ -68,7 +68,7 @@ A second, independent classification is **by motor arrangement**: hermetic, semi
 
 ![Fig. 2: Approximate range of refrigeration capacity covered by each compressor type, drawn as vertical bars on a logarithmic capacity axis from 0.1 kW to 100 000 kW: rolling piston 0.25–22 kW; scroll 6.5–100 kW; rotary vane 7–300 kW; reciprocating 0.25–1000 kW; screw 75–6000 kW; turbo (centrifugal) 270–36 000 kW. [Aloke p.29, from Hundy Fig. 4.2]](figures/002.png "w=0.6")
 
-| Type | Capacity (kW) | Typical use [Note p.16; Hundy Ch. 4] |
+| Type | Capacity (kW) | Typical use [Kanak p.16; Hundy Ch. 4] |
 |---|---|---|
 | Rolling piston | 0.25–22 | lowest capacity: domestic refrigerators, window and split AC |
 | Scroll | 6.5–100 | split and packaged AC, heat pumps, small chillers |
@@ -79,7 +79,7 @@ A second, independent classification is **by motor arrangement**: hermetic, semi
 
 ### Why so many types and capacities are used in HVAC
 
-One mechanism cannot serve every duty efficiently [Note p.16; Hundy §4.1, §4.15]:
+One mechanism cannot serve every duty efficiently [Kanak p.16; Hundy §4.1, §4.15]:
 
 1. **Loads span five orders of magnitude**: a domestic refrigerator needs ≈ 0.1 kW, a large district-cooling chiller ≈ 36 000 kW.
 2. **Volume flow decides the mechanism.** Small flows suit pistons, rollers and scrolls; large flows of low-density gas need screws and centrifugals. A centrifugal cannot be built small (high tip speed), and a piston machine becomes huge and heavy at large flows.
@@ -99,7 +99,7 @@ One mechanism cannot serve every duty efficiently [Note p.16; Hundy §4.1, §4.1
 | Drive | electric motor at line speed (2900 rpm, 50 Hz) | electric motor (usually 1450 rpm) | electric motor, engine or turbine; belt or coupling, any speed |
 | Size and use | small: domestic refrigerators, room AC, up to tens of kW | commercial and industrial, wide range | large and ammonia plants |
 
-[Aloke pp.24–27; Note pp.13–14; Hundy §4.6–4.7]
+[Aloke pp.24–27; Kanak pp.13–14; Hundy §4.6–4.7]
 
 ![Fig. 3: Cut-away of a hermetic reciprocating compressor inside a welded steel shell. Labels: internal pressure relief valve, muffler, piston, crankcase heater, oil sight glass (left); suction inlet, motor winding at the top, terminal box, discharge connection (right). Suction gas enters the shell and cools the motor winding before it reaches the cylinder. [Aloke p.25]](figures/003.jpg "w=0.5")
 
@@ -120,7 +120,7 @@ So large centrifugals are **open** or **semi-hermetic** (accessible, bolted; up 
 
 ### Working principle
 
-The reciprocating compressor is "discontinuous": it takes in a little gas, then compresses it [Note p.17]. A piston moves in a cylinder that has automatic, pressure-operated suction and discharge valves (Fig. 5) [Hundy §4.2]:
+The reciprocating compressor is "discontinuous": it takes in a little gas, then compresses it [Kanak p.17]. A piston moves in a cylinder that has automatic, pressure-operated suction and discharge valves (Fig. 5) [Hundy §4.2]:
 
 1. **Suction stroke** (piston moving down): the suction valve opens when cylinder pressure falls below suction pressure; vapour from the evaporator enters.
 2. **Compression**: at the bottom of the stroke the suction valve closes; the piston moves up and compresses the trapped vapour.
@@ -135,7 +135,7 @@ The reciprocating compressor is "discontinuous": it takes in a little gas, then 
 
 $$\eta_v=\frac{\text{actual volume flow at suction }(p_1,T_1)}{\text{compressor displacement}}$$
 
-The losses (Fig. 6) are [Aloke p.36; Note p.24; Hundy §4.10]:
+The losses (Fig. 6) are [Aloke p.36; Kanak p.24; Hundy §4.10]:
 
 1. **Re-expansion loss**: clearance gas re-expands and occupies part of the suction stroke.
 2. **Pressure drops** through the suction and discharge valves and ports: the cylinder fills at below suction pressure.
@@ -150,7 +150,7 @@ The losses (Fig. 6) are [Aloke p.36; Note p.24; Hundy §4.10]:
 $$\eta_{vc}=1+C-C\left(\frac{p_d}{p_s}\right)^{1/n}$$
 
 1. A higher $p_d/p_s$ makes the clearance gas re-expand to a **larger volume**, so the piston travels further before the suction valve opens; at a high enough ratio $\eta_{vc}=0$ and the compressor pumps nothing.
-2. A larger pressure difference drives **more leakage** past rings and valves [Note p.24: "pressure ratio ↑ → $\eta_v$ ↓; leakage ↑"].
+2. A larger pressure difference drives **more leakage** past rings and valves [Kanak p.24: "pressure ratio ↑ → $\eta_v$ ↓; leakage ↑"].
 3. Higher ratio → higher **discharge temperature** → hotter cylinder → more **heating of the suction gas**.
 4. A low suction pressure means low-density suction gas, so valve pressure drops are a larger fraction of $p_s$.
 
@@ -185,7 +185,7 @@ Loads vary, so the compressor capacity must follow [Hundy §4.5; Ameen §16.1]:
 
 ### Scroll compressor
 
-**Construction.** Two interleaved spiral (involute) **scrolls**: one **fixed** (stationary), the other **orbiting**. The orbiting scroll is driven by an eccentric (crank) on the motor shaft and kept from rotating by an anti-rotation (Oldham) coupling, so it **orbits without rotating** [Hundy §4.12; Note p.20]. The scrolls touch along several contact (sealing) lines, which divide the space between them into crescent-shaped pockets. Suction gas enters at the **rim**; the **discharge port is at the centre** of the fixed scroll. Almost all scrolls are hermetic.
+**Construction.** Two interleaved spiral (involute) **scrolls**: one **fixed** (stationary), the other **orbiting**. The orbiting scroll is driven by an eccentric (crank) on the motor shaft and kept from rotating by an anti-rotation (Oldham) coupling, so it **orbits without rotating** [Hundy §4.12; Kanak p.20]. The scrolls touch along several contact (sealing) lines, which divide the space between them into crescent-shaped pockets. Suction gas enters at the **rim**; the **discharge port is at the centre** of the fixed scroll. Almost all scrolls are hermetic.
 
 **Working principle** (Fig. 8 and Fig. 9) [Aloke p.33]:
 
@@ -215,7 +215,7 @@ Other advantages: quiet, very few moving parts, very reliable, tolerant of liqui
 
 Aloke sir's slide puts two different machines under one title, "Sliding and Rotary Vane Compressor" (Fig. 10) [Aloke p.34]; answer both.
 
-**(a) Multi-vane rotary (sliding-vane) compressor.** A cylindrical **casing** contains an **eccentrically mounted rotor** with radial **slots** in which several **vanes** (blades) slide freely. As the rotor turns, **centrifugal force** (helped by springs or oil pressure) throws the vanes outward so that their tips stay in contact with the casing wall. Each pair of vanes traps a pocket of gas [Note p.21; Hundy §4.13]:
+**(a) Multi-vane rotary (sliding-vane) compressor.** A cylindrical **casing** contains an **eccentrically mounted rotor** with radial **slots** in which several **vanes** (blades) slide freely. As the rotor turns, **centrifugal force** (helped by springs or oil pressure) throws the vanes outward so that their tips stay in contact with the casing wall. Each pair of vanes traps a pocket of gas [Kanak p.21; Hundy §4.13]:
 
 1. On the side where the rotor moves away from the casing, the pockets **grow**: gas is drawn in through the **suction port**.
 2. After the trailing vane passes the suction port the pocket is sealed.
@@ -224,7 +224,7 @@ Aloke sir's slide puts two different machines under one title, "Sliding and Rota
 
 Large rotary-vane machines (eight or more vanes) need no suction or discharge valves and have no clearance volume, but the vane-tip thrust limits them to low pressure ratios; they are used as booster (low-stage) compressors [Hundy §4.13].
 
-**(b) Rolling-piston (fixed-vane) compressor.** A **roller (rolling piston)** is mounted on the **eccentric** of the shaft inside a **cylindrical housing** and rolls round the cylinder wall, touching it along one line. One **stationary sliding vane (blade)**, held in a slot of the housing and pressed against the roller by a **spring**, divides the crescent space between roller and cylinder into a suction side and a compression side [Note p.21; Hundy §4.13]:
+**(b) Rolling-piston (fixed-vane) compressor.** A **roller (rolling piston)** is mounted on the **eccentric** of the shaft inside a **cylindrical housing** and rolls round the cylinder wall, touching it along one line. One **stationary sliding vane (blade)**, held in a slot of the housing and pressed against the roller by a **spring**, divides the crescent space between roller and cylinder into a suction side and a compression side [Kanak p.21; Hundy §4.13]:
 
 1. As the contact line moves away from the vane, the space behind it (suction side) grows and gas enters through the **suction port** beside the vane.
 2. The space ahead of the contact line (between it and the other side of the vane) shrinks and compresses the gas trapped from the previous revolution.
@@ -253,13 +253,13 @@ Compared with a hermetic reciprocating compressor of the same duty, a small rota
 
 **Working principle.** As the rotors turn, the space between two lobes comes opposite the **suction port** at one end and fills with gas. Further rotation seals this pocket from the suction port and carries it along the rotors; the meshing lobe of the male rotor moves progressively into the female flute and **reduces the pocket volume** ("progressive overlapping of the lobes") until the pocket reaches the **discharge port** at the other end [Aloke p.32]. Compression is **continuous** (no valves, no clearance volume). The volume reduction is fixed by the geometry (**built-in volume ratio**).
 
-**Capacity control.** A **slide valve** in the casing wall, moved toward the discharge end, opens a short-cut recirculating passage back to suction, so part of the trapped gas is returned before it is compressed. Control is **continuous and step-less**, from 100% down to ≈ 10% [Aloke p.32; Note p.19].
+**Capacity control.** A **slide valve** in the casing wall, moved toward the discharge end, opens a short-cut recirculating passage back to suction, so part of the trapped gas is returned before it is compressed. Control is **continuous and step-less**, from 100% down to ≈ 10% [Aloke p.32; Kanak p.19].
 
 ![Fig. 12: Twin-screw compressor structure. Left: section drawing with synchromesh (timing) gear at the left end, female rotor (top), male rotor (bottom), shaft seal at the drive end. Right: cut-away photograph of a twin-screw compressor showing the meshing helical rotors, bearings and casing. [Aloke p.32]](figures/012.jpg "w=0.7")
 
 ![Fig. 13: Exam sketch of a twin-screw compressor. (a) Plan view: casing containing the male rotor (4 convex lobes, top) and female rotor (6 concave flutes, bottom), drawn as helical lines; suction port at the top of the left end (blue arrow in, low pressure); discharge port at the bottom of the right end (red arrow out, high pressure); drive shaft with shaft seal on the left; timing (synchromesh) gears on the right. A row of coloured blocks between the rotors shows one trapped pocket moving axially from suction to discharge and shrinking (light blue, yellow, orange, red). A slide valve under the rotors, moved toward the discharge, opens a bypass to suction for capacity control. (b) End section: male rotor with four lobes meshing with the female rotor's six flutes; arrows show the rotors turning in opposite directions.](figures/013.jpg "w=0.95")
 
-Screw compressors are the workhorse of industry (the note says "most popular, 80% industry" [Note p.18]): high pressure ratio in one stage (up to ≈ 20–25), few wearing parts, tolerant of some liquid, good part-load control.
+Screw compressors are the workhorse of industry (Kanak vai's note says "most popular, 80% industry" [Kanak p.18]): high pressure ratio in one stage (up to ≈ 20–25), few wearing parts, tolerant of some liquid, good part-load control.
 
 ## 4.6 Centrifugal compressor ★
 
@@ -276,14 +276,14 @@ A centrifugal compressor is "a rotor located inside a special chamber" [Aloke p.
 ### Working principle
 
 1. The impeller does work on the gas: it raises the gas's **tangential velocity** (kinetic energy) and, through the centrifugal (radial) pressure gradient, also some of its static pressure.
-2. In the diffuser and volute the flow area grows, so the **velocity falls and the static pressure rises** (energy equation: pressure energy + kinetic energy ≈ constant, with no work input) [Note p.23: "volute casing → A↑ V↓ P↑"].
+2. In the diffuser and volute the flow area grows, so the **velocity falls and the static pressure rises** (energy equation: pressure energy + kinetic energy ≈ constant, with no work input) [Kanak p.23: "volute casing → A↑ V↓ P↑"].
 3. The pressure rise depends on the **tip speed** and gas density; with low-density refrigerant vapours one stage gives a pressure ratio of about 3–5, so two or more impellers in series are used for larger lifts.
 
 ![Fig. 14: Centrifugal compressor (course figure). Left: cut-away of an oil-free magnetic-bearing centrifugal compressor: volute, cooling ducts, permanent-magnet synchronous motor, auxiliary bearing, impeller, radial and axial active magnetic bearings, auxiliary (touchdown) bearing. Right: flow through one stage: refrigerant intake enters axially at the eye (green pipe), is flung outward by the impellers on the impeller wheel (purple arrows), collects in the spiral volute casing and leaves at the refrigerant exhaust. [Aloke p.35]](figures/014.jpg "w=0.6")
 
 ![Fig. 15: Exam sketch of a centrifugal stage. (a) Front section: refrigerant enters the EYE axially at the centre; the IMPELLER with twelve backward-curved blades rotates anticlockwise at about 10 000 rpm and flings the gas outward (purple arrows); the DIFFUSER ring (dashed circle) round the impeller, where area grows, velocity falls and pressure rises; the VOLUTE casing, a spiral passage whose area grows round the circumference, collects the gas and leads it through the volute tongue to the tangential DISCHARGE pipe (to the condenser, top right). Inlet guide vanes sit in the inlet pipe ahead of the eye. (b) Qualitative plot of static pressure p (solid red) and absolute velocity V (dashed blue) at five stations: suction pipe, inlet guide vanes/eye, impeller tip, diffuser exit, volute exit. In the impeller both p and V rise (work input); in the diffuser and volute V falls and p keeps rising (no work, kinetic energy converted to pressure).](figures/015.jpg "w=0.95")
 
-> **TRAP: where the pressure rises.** The slide says the gas "is forced through the narrow outlet opening, thus increasing its pressure" [Aloke p.35]. Pressure is not raised by a narrowing: a converging passage speeds the gas up and lowers its pressure. The static pressure rises in the **diverging diffuser and volute**, where the area increases and the velocity falls (the note has it right: "A↑ V↓ P↑", Note p.23).
+> **TRAP: where the pressure rises.** The slide says the gas "is forced through the narrow outlet opening, thus increasing its pressure" [Aloke p.35]. Pressure is not raised by a narrowing: a converging passage speeds the gas up and lowers its pressure. The static pressure rises in the **diverging diffuser and volute**, where the area increases and the velocity falls (Kanak vai's note has it right: "A↑ V↓ P↑", Kanak p.23).
 
 ### When a centrifugal compressor suits air conditioning
 
@@ -339,9 +339,9 @@ The slide's reasons: it is "suitable for variable loads, has few moving parts, a
 - **Shell-and-coil**: a welded shell with a continuous water coil inside; cheap and compact, but the coil is hard to clean or repair.
 - **Double-tube (tube-in-tube)**: water in the inner tube, refrigerant in the annulus, in **counter-flow** so the coldest water meets the leaving liquid and gives the most sub-cooling; small capacities [Aloke p.40].
 
-![Fig. 16: Water-cooled condenser (hand sketch in the note): a rectangular shell; hot refrigerant vapour enters through a nozzle at the top and liquid refrigerant leaves through a nozzle at the bottom; inside, a serpentine three-pass water coil with cold water in at the lower left and hot water out at the upper left. [Note p.27]](figures/016.png "w=0.45")
+![Fig. 16: Water-cooled condenser (hand sketch in Kanak vai's note): a rectangular shell; hot refrigerant vapour enters through a nozzle at the top and liquid refrigerant leaves through a nozzle at the bottom; inside, a serpentine three-pass water coil with cold water in at the lower left and hot water out at the upper left. [Kanak p.27]](figures/016.png "w=0.45")
 
-The choice of a water-cooled condenser depends on: quality and availability of water, space, water-treatment cost and noise [Aloke p.42]. Its advantages: easy to operate, needs less surface area, and low compressor energy (lower condensing temperature) [Aloke p.42]. Disadvantages: water treatment, a cooling tower and pumps, more parts and higher overall cost [Note p.27].
+The choice of a water-cooled condenser depends on: quality and availability of water, space, water-treatment cost and noise [Aloke p.42]. Its advantages: easy to operate, needs less surface area, and low compressor energy (lower condensing temperature) [Aloke p.42]. Disadvantages: water treatment, a cooling tower and pumps, more parts and higher overall cost [Kanak p.27].
 
 ## 4.8 Air-cooled condenser and the hot-day statement ★
 
@@ -357,7 +357,7 @@ An air-cooled condenser is a **finned coil** (copper tubes with aluminium plate 
 
 ![Fig. 17: Air-cooled condenser (course figure): ambient air enters from the left through the finned condensing coil (refrigerant in through the header at the top, liquid accumulator header and a separate sub-cooling coil at the bottom), passes through a propeller fan and a motorised damper, and leaves to the right. Refrigerant lines at the bottom left: hot vapour up into the top header, liquid down out of the sub-cooling coil. [Aloke p.43]](figures/017.jpg "w=0.6")
 
-![Fig. 18: Hand sketch of an air-cooled condenser (note): hot refrigerant vapour rises in a pipe and enters the top of a rectangular serpentine condensing coil, leaving at the bottom as cold refrigerant liquid; normal ambient air (four arrows) enters from the left, passes through the coil, then through a boxed propeller fan, and leaves on the right as hot air. [Note p.28]](figures/018.png "w=0.5")
+![Fig. 18: Hand sketch of an air-cooled condenser (note): hot refrigerant vapour rises in a pipe and enters the top of a rectangular serpentine condensing coil, leaving at the bottom as cold refrigerant liquid; normal ambient air (four arrows) enters from the left, passes through the coil, then through a boxed propeller fan, and leaves on the right as hot air. [Kanak p.28]](figures/018.png "w=0.5")
 
 In a split or window AC the condenser is the outdoor coil with a propeller fan; in large plant it is a roof-mounted "remote air-cooled condenser" with several fans and coil sections.
 
@@ -419,7 +419,7 @@ R134a saturation table (data book p.8): $p_{sat}(50\ °\mathrm{C})=1317.9$ kPa, 
 | Hot weather | **capacity least on the hottest days** | far less affected; water is cooler than air at peak load |
 | Life | shorter compressor life (high head) | longer |
 
-[Aloke pp.42–44; Note pp.27–28; Ameen §16.2; Hundy §6.3–6.4]
+[Aloke pp.42–44; Kanak pp.27–28; Ameen §16.2; Hundy §6.3–6.4]
 
 ## 4.9 Evaporative condenser and cooling tower ★
 
@@ -431,7 +431,7 @@ Terms [Aloke p.50]: **range** = water temperature entering − leaving the tower
 
 ### Evaporative condenser: construction and working
 
-An evaporative condenser puts the **refrigerant coil itself** inside a cooling-tower-like casing: it combines condenser and cooling tower in one unit [Note p.31; Ameen §16.2]. Components and functions (Fig. 20, Fig. 21):
+An evaporative condenser puts the **refrigerant coil itself** inside a cooling-tower-like casing: it combines condenser and cooling tower in one unit [Kanak p.31; Ameen §16.2]. Components and functions (Fig. 20, Fig. 21):
 
 | Component | Function |
 |---|---|
@@ -453,7 +453,7 @@ An evaporative condenser puts the **refrigerant coil itself** inside a cooling-t
 
 **Counter-flow forced draft**: the fan is at the **air inlet** (bottom side) and **pushes** air into the casing; the air then rises **against** the falling water (counter-flow), so the coldest water and driest air meet at the bottom and the driving difference is kept large throughout. (In an induced-draft unit the fan sits at the top outlet and pulls the air.)
 
-**Benefits of a forced-draft evaporative condenser** [Note p.31; Hundy §6.6; Ameen §16.2]:
+**Benefits of a forced-draft evaporative condenser** [Kanak p.31; Hundy §6.6; Ameen §16.2]:
 
 1. Heat rejection by evaporation gives **more cooling capacity** per unit surface and a **lower condensing temperature** (wet-bulb limited), so less compressor power.
 2. **Less fan power** than an air-cooled condenser of the same duty (much less air), and compared with a separate tower + condenser, no condenser-water pump head.
@@ -489,7 +489,7 @@ The liquid leaves as a low-pressure, low-temperature mixture (roughly 80% liquid
 
 ### Capillary tube
 
-A fixed length (1–6 m) of small-bore tube (0.5–2 mm) between condenser and evaporator [Ameen §16.4; Hundy §8.5]. Friction and acceleration of the flow drop the pressure from condensing to evaporating pressure ($h_L=f\,\dfrac{L}{D}\,\dfrac{V^2}{2g}$: a smaller $D$ or longer $L$ gives more pressure drop) [Note p.39]. Part of the liquid flashes to vapour along the tube. It is often soldered to the suction line to form a liquid–suction heat exchanger.
+A fixed length (1–6 m) of small-bore tube (0.5–2 mm) between condenser and evaporator [Ameen §16.4; Hundy §8.5]. Friction and acceleration of the flow drop the pressure from condensing to evaporating pressure ($h_L=f\,\dfrac{L}{D}\,\dfrac{V^2}{2g}$: a smaller $D$ or longer $L$ gives more pressure drop) [Kanak p.39]. Part of the liquid flashes to vapour along the tube. It is often soldered to the suction line to form a liquid–suction heat exchanger.
 
 ![Fig. 22: Capillary-tube refrigeration circuit divided diagonally into the high side (lower left: compressor discharging hot gas to the condenser, liquid leaving it) and the low side (upper right): the coiled cap tube is the restriction device between the condenser liquid outlet and the evaporator inlet; gas returns from the evaporator to the compressor. [Aloke p.59]](figures/022.jpg "w=0.45")
 
@@ -505,7 +505,7 @@ Limitations: not adjustable to load changes; clogs with dirt or moisture (needs 
 
 ### Automatic (constant-pressure) expansion valve, AXV
 
-**Construction** (Fig. 23) [Aloke p.55; Note p.36; Ameen §16.4]: a needle and seat in the valve body; a **bellows or diaphragm** attached to the needle stem; **evaporator pressure** acts on the **underside** of the diaphragm; an **adjustable spring** (set by the adjusting screw) acts on the **top**; a strainer at the liquid inlet.
+**Construction** (Fig. 23) [Aloke p.55; Kanak p.36; Ameen §16.4]: a needle and seat in the valve body; a **bellows or diaphragm** attached to the needle stem; **evaporator pressure** acts on the **underside** of the diaphragm; an **adjustable spring** (set by the adjusting screw) acts on the **top**; a strainer at the liquid inlet.
 
 **Equilibrium of the bellows.** With diaphragm area $A$, the valve is steady when
 
@@ -540,7 +540,7 @@ Since $p_s=p_{sat}(T_s)$ and $p_e=p_{sat}(T_e)$, the spring setting fixes $T_s-T
 
 ![Fig. 25: TXV on an evaporator coil (course figure). Top: liquid from the condenser enters the valve (needle on seat) below a spring and diaphragm; a capillary tube runs from the head above the diaphragm to the phial clamped on the suction line at the coil outlet; force-balance arrows on the left: p_s acting down on the diaphragm, p_e and the spring acting up. Bottom: cut-away of a commercial TXV: remote bulb on its capillary, thermostatic element (diaphragm), superheat setting spindle, valve body, interchangeable orifice assembly. [Aloke p.53, from Hundy Fig. 8.2]](figures/025.jpg "w=0.6")
 
-**How it keeps the superheat constant** [Aloke p.54; Note p.35; Hundy §8.2]:
+**How it keeps the superheat constant** [Aloke p.54; Kanak p.35; Hundy §8.2]:
 
 1. **Load rises**: the refrigerant boils off earlier in the coil, so more of the coil superheats and $T_s$ rises. The bulb pressure $p_s$ rises above $p_e+p_{spring}$, the diaphragm moves down and opens the valve: more liquid enters, the boiling region lengthens, and the superheat returns to the setting.
 2. **Load falls (or superheat falls for any reason)**: liquid reaches further along the coil, $T_s$ falls, $p_s$ falls, and the spring and $p_e$ push the diaphragm up and **close** the valve; this prevents liquid reaching the compressor.
@@ -557,7 +557,7 @@ Since $p_s=p_{sat}(T_s)$ and $p_e=p_{sat}(T_e)$, the spring setting fixes $T_s-T
 
 ### Thermo-electric expansion valve
 
-A **thermistor** at the evaporator outlet gives a signal that changes sharply depending on whether it senses dry vapour or traces of liquid. The signal controls the current through a **thermal (heater) actuator** that modulates the valve: liquid traces → less current → valve closes; too dry and hot → valve opens [Aloke p.56; Note p.37].
+A **thermistor** at the evaporator outlet gives a signal that changes sharply depending on whether it senses dry vapour or traces of liquid. The signal controls the current through a **thermal (heater) actuator** that modulates the valve: liquid traces → less current → valve closes; too dry and hot → valve opens [Aloke p.56; Kanak p.37].
 
 ![Fig. 26: Thermo-electric expansion valve: the liquid inlet enters the valve from below; a thermal actuator (heater element) on top of the valve moves it; the valve feeds a two-pass evaporator coil; a thermistor at the evaporator outlet is wired by low-voltage leads (dashed) to the actuator. [Aloke p.56]](figures/026.png "w=0.45")
 
@@ -565,10 +565,10 @@ A **thermistor** at the evaporator outlet gives a signal that changes sharply de
 
 **Description.** An EXV is an electrically driven metering valve: a needle or slide moved by a **stepper motor** (continuous, typically several hundred to a few thousand steps), or a solenoid valve opened and closed in a **pulse-width-modulated** cycle of a few seconds, or a heat-motor (thermal) actuator. It is always used with an **electronic controller** and **sensors** [Hundy §8.4].
 
-**Benefits** [Aloke p.57; Note p.38; Hundy §8.4]:
+**Benefits** [Aloke p.57; Kanak p.38; Hundy §8.4]:
 
 1. **Precise flow control over a wide range of capacities** (e.g. 10–100%, linear characteristic).
-2. **Rapid response to load changes** (the note's example: a cinema hall filling with an audience).
+2. **Rapid response to load changes** (Kanak vai's note's example: a cinema hall filling with an audience).
 3. **Better control at low superheat**, so less of the evaporator surface is used for superheating; more surface for boiling gives a **higher evaporating temperature and better efficiency**.
 4. Electrical connection between components gives **greater flexibility in system layout**, important for compact systems.
 5. **The valve can close when the system shuts down**, which **eliminates the separate shut-off solenoid valve**.
@@ -732,7 +732,7 @@ Theory answers are sized to the marks (about one point per mark). Draw a labelle
 
 > **TRY 4.1** `[PP 11-12 Q7(a), 10]` What are the advantages and disadvantages of centrifugal compressor over reciprocating compressors?
 
-**Solution 4.1** **[FROM SOURCE: Aloke p.35; Note pp.17, 23; Hundy §4.14; Ameen §16.1]**
+**Solution 4.1** **[FROM SOURCE: Aloke p.35; Kanak pp.17, 23; Hundy §4.14; Ameen §16.1]**
 
 A centrifugal compressor raises pressure by giving the gas kinetic energy in a high-speed impeller and converting it to pressure in a diffuser and volute; a reciprocating compressor traps a volume in a cylinder and reduces it with a piston.
 
@@ -763,7 +763,7 @@ A centrifugal compressor raises pressure by giving the gas kinetic energy in a h
 
 > **TRY 4.2** `[PP 12-13 Q6(a), 5]` Hermetically sealed compressors are not generally centrifugal compressor – why?
 
-**Solution 4.2** **[FROM SOURCE: Aloke p.25; Note pp.13, 23; Hundy §4.6, §4.14]**
+**Solution 4.2** **[FROM SOURCE: Aloke p.25; Kanak pp.13, 23; Hundy §4.6, §4.14]**
 
 1. A centrifugal needs a high **impeller tip speed** (≈ 300 m/s). At the 2900 rpm of a sealed two-pole motor the impeller would be ≈ 2 m in diameter, so real machines run at ≈ 10 000 rpm through step-up gears or special high-speed drives, which do not suit a small welded shell.
 2. A centrifugal **cannot be made small**: the smallest is ≈ 260–270 kW. Hermetic (welded-shell) construction is used for small units (refrigerators, room AC, up to tens of kW).
@@ -774,7 +774,7 @@ Hence centrifugals are **open** or **semi-hermetic** (bolted, accessible); fully
 
 > **TRY 4.3** `[PP 15-16 Q5(a), 18]` When centrifugal compressor is suitable for air-conditioning application? Describe a centrifugal compressor and its different components with neat sketch.
 
-**Solution 4.3** **[FROM SOURCE: Aloke p.35; Note p.23; Hundy §4.14; Ameen §16.1]**
+**Solution 4.3** **[FROM SOURCE: Aloke p.35; Kanak p.23; Hundy §4.14; Ameen §16.1]**
 
 **When it suits AC** (6 marks):
 
@@ -796,7 +796,7 @@ Hence centrifugals are **open** or **semi-hermetic** (bolted, accessible); fully
 
 > **TRY 4.4** `[PP 16-17 Q5(a), 17]` Classify different types of compressors used in refrigeration systems. Describe the working principle of a scroll compressor.
 
-**Solution 4.4** **[FROM SOURCE: Aloke pp.24, 28, 33; Note pp.15, 20; Hundy §4.12]** This is the model answer for the classification + scroll family.
+**Solution 4.4** **[FROM SOURCE: Aloke pp.24, 28, 33; Kanak pp.15, 20; Hundy §4.12]** This is the model answer for the classification + scroll family.
 
 **Classification** (6 marks). Draw the tree (Fig. 1):
 
@@ -816,11 +816,11 @@ Hence centrifugals are **open** or **semi-hermetic** (bolted, accessible); fully
 
 > **TRY 4.5** `[PP 20-21 Q5(a), 17]` Classify different types of compressors used in refrigeration systems. Describe the working principle of a scroll compressor with proper schematic diagram.
 
-**Solution 4.5** **[FROM SOURCE: Aloke pp.28, 33; Note pp.15, 20]** Word for word TRY 4.4 plus "with proper schematic diagram". Write Solution 4.4 and draw the schematic carefully: fixed scroll, orbiting scroll, crank/eccentric shaft, Oldham ring, suction at the rim, discharge port at the centre, and four numbered positions (Fig. 9) showing one pocket (1) open to suction, (2) sealed, (3) smaller, (4) at the discharge port.
+**Solution 4.5** **[FROM SOURCE: Aloke pp.28, 33; Kanak pp.15, 20]** Word for word TRY 4.4 plus "with proper schematic diagram". Write Solution 4.4 and draw the schematic carefully: fixed scroll, orbiting scroll, crank/eccentric shaft, Oldham ring, suction at the rim, discharge port at the centre, and four numbered positions (Fig. 9) showing one pocket (1) open to suction, (2) sealed, (3) smaller, (4) at the discharge port.
 
 > **TRY 4.6** `[PP 22-23 Q5(a), 15]` Why does volumetric efficiency decrease with pressure ratio for compressor? Find out the reasons due to which scroll compressor attains maximum volumetric efficiency. Hence, describe the working principle of a scroll compressor with necessary schematic diagram.
 
-**Solution 4.6** **[FROM SOURCE: Aloke pp.33, 36; Note pp.17, 24; Hundy §4.10, §4.12; Ameen §16.1]**
+**Solution 4.6** **[FROM SOURCE: Aloke pp.33, 36; Kanak pp.17, 24; Hundy §4.10, §4.12; Ameen §16.1]**
 
 **(i) Why $\eta_v$ falls with pressure ratio** (5 marks). $\eta_v$ = actual suction volume flow / displacement. Sketch the p–V diagram (Fig. 5) with clearance volume $V_c$.
 
@@ -843,7 +843,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.7** `[PP 17-18 Q5(a), 17]` What are the different types of compressors used in refrigeration systems? Describe the working principle of rotary sliding vane type compressor.
 
-**Solution 4.7** **[FROM SOURCE: Aloke pp.28, 34; Note pp.15, 21–22; Hundy §4.13]** This is the model answer for the classification + vane family.
+**Solution 4.7** **[FROM SOURCE: Aloke pp.28, 34; Kanak pp.15, 21–22; Hundy §4.13]** This is the model answer for the classification + vane family.
 
 **Types** (6 marks): as Solution 4.4, first part (positive displacement: reciprocating; rotary: vane, scroll, rolling piston, screw; dynamic: centrifugal, axial, ejector; and hermetic, semi-hermetic, open).
 
@@ -859,7 +859,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.8** `[PP 21-22 Q5(a), 17]` Classify different types of compressor used in refrigeration systems along with their capacity ranges. Describe the working principle of a sliding and rotary vane compressor with proper schematic diagram.
 
-**Solution 4.8** **[FROM SOURCE: Aloke pp.28–29, 34; Note pp.15–16, 21–22; Hundy §4.13]**
+**Solution 4.8** **[FROM SOURCE: Aloke pp.28–29, 34; Kanak pp.15–16, 21–22; Hundy §4.13]**
 
 **Classification with capacity ranges** (7 marks): the tree of Solution 4.4 and the table:
 
@@ -880,7 +880,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.9** `[PP 23-24 Q1(a), 15]` Why are a wide range of capacities and types for compressor used in HVAC application? Describe the working principle of a sliding and rotary vane compressor with proper schematic diagram.
 
-**Solution 4.9** **[FROM SOURCE: Aloke p.29, 34; Note pp.16, 21; Hundy §4.1, §4.15]**
+**Solution 4.9** **[FROM SOURCE: Aloke p.29, 34; Kanak pp.16, 21; Hundy §4.1, §4.15]**
 
 **Why a wide range** (6 marks):
 
@@ -897,7 +897,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.10** `[PP 11-12 Q7(b), 10]` Give the comparison of air-cooled condenser and water cooled condenser.
 
-**Solution 4.10** **[FROM SOURCE: Aloke pp.42–44; Note pp.27–28; Ameen §16.2]**
+**Solution 4.10** **[FROM SOURCE: Aloke pp.42–44; Kanak pp.27–28; Ameen §16.2]**
 
 | Point | Air-cooled | Water-cooled |
 |---|---|---|
@@ -916,7 +916,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.11** `[PP 15-16 Q6(a), 12]` Describe with neat sketches an air-cooled condenser used in an air-conditioning system.
 
-**Solution 4.11** **[FROM SOURCE: Aloke pp.43–44; Note p.28; Hundy §6.3]** This is the model answer for the air-cooled condenser family. Sketch Fig. 17 (or Fig. 18): coil with inlet header at the top, liquid accumulator and sub-cooling coil at the bottom, propeller fan, damper, air arrows.
+**Solution 4.11** **[FROM SOURCE: Aloke pp.43–44; Kanak p.28; Hundy §6.3]** This is the model answer for the air-cooled condenser family. Sketch Fig. 17 (or Fig. 18): coil with inlet header at the top, liquid accumulator and sub-cooling coil at the bottom, propeller fan, damper, air arrows.
 
 1. **Construction**: copper tubes with aluminium plate fins (outside/inside area 5:1–10:1) arranged in a coil; inlet header at the top, outlet at the bottom so the condensate drains by gravity; a sub-cooling section at the bottom; one or more **propeller (axial) fans**; dampers or fan-speed control; casing. In a split AC it is the outdoor unit; large plants use roof-mounted multi-fan units.
 2. Hot high-pressure vapour from the compressor enters the top header.
@@ -929,7 +929,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.12** `[PP 16-17 Q5(b), 18]` What are the characteristics of an air-cooled condenser? Describe with neat sketches an air-cooled condenser used in an air-conditioning system.
 
-**Solution 4.12** **[FROM SOURCE: Aloke pp.43–44; Note p.28; Ameen §16.2]**
+**Solution 4.12** **[FROM SOURCE: Aloke pp.43–44; Kanak p.28; Ameen §16.2]**
 
 **Characteristics** (7 marks):
 
@@ -945,7 +945,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.13** `[PP 22-23 Q6(b), 15]` Describe an air-cooled condenser used in air conditioning system with proper schematic diagram. Justify the statement "On days when maximum cooling is needed, the least is available" with the context of climate of Bangladesh.
 
-**Solution 4.13** **[FROM SOURCE: Aloke pp.43–44; Note p.28; Hundy §6.3]** This is the model answer for the justification.
+**Solution 4.13** **[FROM SOURCE: Aloke pp.43–44; Kanak p.28; Hundy §6.3]** This is the model answer for the justification.
 
 **Description with schematic** (8 marks): Solution 4.11, points 1–7, with Fig. 17.
 
@@ -961,11 +961,11 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.14** `[PP 23-24 Q2(b), 15]` Describe an air-cooled condenser used in air conditioning system with proper schematic diagram. Justify the statement "On days when maximum cooling is needed, the least is available" in the context for climate of Bangladesh.
 
-**Solution 4.14** **[FROM SOURCE: Aloke pp.43–44; Note p.28]** Word for word TRY 4.13 (repeated in 2023-24 Section A). Write Solution 4.13 in full: the schematic of Fig. 17 with labels (inlet header, condensing coil, liquid accumulator, sub-cooling coil, propeller fan, damper, air in/out, refrigerant in/out), the working points, and the seven justification points with the Example 4.2 numbers (50 → 56 °C, 1317.9 → 1528.2 kPa, ratio 3.77 → 4.37).
+**Solution 4.14** **[FROM SOURCE: Aloke pp.43–44; Kanak p.28]** Word for word TRY 4.13 (repeated in 2023-24 Section A). Write Solution 4.13 in full: the schematic of Fig. 17 with labels (inlet header, condensing coil, liquid accumulator, sub-cooling coil, propeller fan, damper, air in/out, refrigerant in/out), the working points, and the seven justification points with the Example 4.2 numbers (50 → 56 °C, 1317.9 → 1528.2 kPa, ratio 3.77 → 4.37).
 
 > **TRY 4.15** `[PP 17-18 Q5(b), 18]` Describe with neat sketches a counter-flow forced draft evaporative condenser. What are the benefits of using forced draft condenser?
 
-**Solution 4.15** **[FROM SOURCE: Aloke pp.45, 49; Note pp.29–31; Hundy §6.6; Ameen §16.2]** This is the model answer for the evaporative condenser family. Sketch Fig. 21.
+**Solution 4.15** **[FROM SOURCE: Aloke pp.45, 49; Kanak pp.29–31; Hundy §6.6; Ameen §16.2]** This is the model answer for the evaporative condenser family. Sketch Fig. 21.
 
 **Description** (12 marks):
 
@@ -987,7 +987,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.16** `[PP 20-21 Q5(b), 18]` Describe the working principle of an evaporative condenser with necessary diagram. Identify the major components of an evaporative condenser and mention their functions.
 
-**Solution 4.16** **[FROM SOURCE: Aloke p.45; Note pp.29–31; Hundy §6.6; Ameen §16.2]**
+**Solution 4.16** **[FROM SOURCE: Aloke p.45; Kanak pp.29–31; Hundy §6.6; Ameen §16.2]**
 
 **Working principle with diagram** (9 marks): Solution 4.15, points 4–7, with Fig. 20 or Fig. 21. Summary: water is sprayed on the outside of the refrigerant coil; air flowing over the wet coil evaporates a small part of it; the evaporation removes the condensing heat, so the refrigerant condenses at a temperature close to the air's wet bulb; the water recirculates.
 
@@ -1010,7 +1010,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.17** `[PP 11-12 Q7(c), 5]` Explain in brief as to why capillary tube is preferred to other throttling devices in household refrigerator.
 
-**Solution 4.17** **[FROM SOURCE: Aloke p.59; Note p.39; Ameen §16.4]**
+**Solution 4.17** **[FROM SOURCE: Aloke p.59; Kanak p.39; Ameen §16.4]**
 
 1. **Simplest and cheapest**: a fixed length of small-bore tube with no moving parts; nothing to wear, adjust or fail.
 2. **Pressures equalise in the off cycle**, so the compressor restarts unloaded and a cheap low-starting-torque motor suffices.
@@ -1022,7 +1022,7 @@ So the scroll's $\eta_v$ stays high and nearly flat with pressure ratio (Fig. 6)
 
 > **TRY 4.18** `[PP 12-13 Q6(b), 5]` What are the differences between solenoid valve and expansion valve?
 
-**Solution 4.18** **[FROM SOURCE: Note p.32; Ameen §16.4, §16.6; Hundy §9.6]**
+**Solution 4.18** **[FROM SOURCE: Kanak p.32; Ameen §16.4, §16.6; Hundy §9.6]**
 
 | | Solenoid valve | Expansion valve |
 |---|---|---|
@@ -1036,7 +1036,7 @@ A solenoid valve is usually fitted in the liquid line just ahead of the expansio
 
 > **TRY 4.19** `[PP 15-16 Q5(b), 17]` What are the benefits of electronics expansion valve (EXV) used in a refrigeration system? Also explain how its controller system works.
 
-**Solution 4.19** **[FROM SOURCE: Aloke pp.57–58; Note p.38; Hundy §8.4]** This is the model answer for the EXV family.
+**Solution 4.19** **[FROM SOURCE: Aloke pp.57–58; Kanak p.38; Hundy §8.4]** This is the model answer for the EXV family.
 
 **Benefits** (8 marks):
 
@@ -1059,11 +1059,11 @@ A solenoid valve is usually fitted in the liquid line just ahead of the expansio
 
 > **TRY 4.20** `[PP 17-18 Q6(a), 17]` What are the benefits of electronics expansion valve (EXV) used in a refrigeration system? Also explain how its control system works. Describe with necessary diagram.
 
-**Solution 4.20** **[FROM SOURCE: Aloke pp.57–58; Note p.38]** Same as TRY 4.19 with "describe with necessary diagram". Write Solution 4.19 and draw Fig. 28 in full: liquid line → EXV with stepper-motor actuator → evaporator coil → suction line with pressure transducer P and thermistor T → signal wires to the controller → output wire back to the valve actuator; add the box of other inputs (room, ambient temperature) and other outputs (compressor, condenser fan, defrost, display, MOP).
+**Solution 4.20** **[FROM SOURCE: Aloke pp.57–58; Kanak p.38]** Same as TRY 4.19 with "describe with necessary diagram". Write Solution 4.19 and draw Fig. 28 in full: liquid line → EXV with stepper-motor actuator → evaporator coil → suction line with pressure transducer P and thermistor T → signal wires to the controller → output wire back to the valve actuator; add the box of other inputs (room, ambient temperature) and other outputs (compressor, condenser fan, defrost, display, MOP).
 
 > **TRY 4.21** `[PP 20-21 Q6(b), 18]` Describe an electronic expansion valve (EXV). What are the benefits of an electronic expansion valve used in a refrigeration system? Also explain how its controller system works.
 
-**Solution 4.21** **[FROM SOURCE: Aloke pp.57–58; Note p.38; Hundy §8.4]** As Solution 4.19, adding a description of the valve (4 marks):
+**Solution 4.21** **[FROM SOURCE: Aloke pp.57–58; Kanak p.38; Hundy §8.4]** As Solution 4.19, adding a description of the valve (4 marks):
 
 - An EXV is an electrically actuated metering valve at the evaporator inlet. Types: (i) **stepper-motor** valve: a motor drives a needle or a ceramic slide over the orifice in small steps, giving continuous flow and a linear capacity characteristic; (ii) **pulse-width-modulated** valve: a solenoid valve opened and closed in a fixed cycle of a few seconds, the open fraction setting the flow; (iii) **thermal (heat-motor)** actuator, where a heater changes the pressure in a charged capsule.
 - It has no bulb or spring setting of its own: it is positioned by a controller from sensor signals (superheat), so it can also serve as suction-pressure, liquid-injection or hot-gas bypass valve.
@@ -1072,7 +1072,7 @@ Then the benefits (6 points) and the controller (7 points) of Solution 4.19, wit
 
 > **TRY 4.22** `[PP 21-22 Q5(b), 18]` Describe the working principle of a thermostatic expansion device with necessary schematic diagram and identify its major components. Hence, explain how does it maintain a constant degree of suction superheat at the evaporator outlet.
 
-**Solution 4.22** **[FROM SOURCE: Aloke pp.52–54; Note pp.33–35; Hundy §8.2–8.3; Ameen §16.4]** Sketch Fig. 25 (valve, diaphragm, spring, capillary, phial on the suction line, evaporator coil, force arrows) and the p–T curve of Fig. 24.
+**Solution 4.22** **[FROM SOURCE: Aloke pp.52–54; Kanak pp.33–35; Hundy §8.2–8.3; Ameen §16.4]** Sketch Fig. 25 (valve, diaphragm, spring, capillary, phial on the suction line, evaporator coil, force arrows) and the p–T curve of Fig. 24.
 
 **Major components** (5 marks): (1) **sensing bulb (phial)** on the suction line at the evaporator outlet, charged with the circuit refrigerant; (2) **capillary tube** to the valve head; (3) **diaphragm** (power element); (4) **push-pin, needle and seat** (orifice); (5) **superheat spring** with adjusting spindle; (6) **equaliser** (internal, or external line from the evaporator outlet); (7) body with inlet strainer.
 
@@ -1092,7 +1092,7 @@ Then the benefits (6 points) and the controller (7 points) of Solution 4.19, wit
 
 > **TRY 4.23** `[PP 23-24 Q2(a), 15]` How are the bellows in an automatic expansion valve remain in equilibrium? Describe with necessary diagram the controlling principle of refrigerant flow during the operation of an automatic expansion valve.
 
-**Solution 4.23** **[FROM SOURCE: Aloke p.55; Note p.36; Ameen §16.4]** Sketch Fig. 23: inlet with strainer, needle and seat, outlet to evaporator, bellows/diaphragm, spring, adjusting screw, arrows for spring force (down) and evaporator pressure (up).
+**Solution 4.23** **[FROM SOURCE: Aloke p.55; Kanak p.36; Ameen §16.4]** Sketch Fig. 23: inlet with strainer, needle and seat, outlet to evaporator, bellows/diaphragm, spring, adjusting screw, arrows for spring force (down) and evaporator pressure (up).
 
 **Equilibrium of the bellows** (5 marks):
 
@@ -1106,7 +1106,7 @@ Then the benefits (6 points) and the controller (7 points) of Solution 4.19, wit
 2. While the compressor runs it pulls vapour out of the evaporator; if $p_e$ falls below the setting, the spring force exceeds $p_eA$, the bellows moves down and the needle opens, admitting more liquid until $p_e$ rises back.
 3. If $p_e$ rises above the setting (more vapour than the compressor removes), the bellows is pushed up and the valve throttles down.
 4. So it floods more or less of the evaporator surface to keep $p_e$ constant.
-5. When the compressor **stops**, $p_e$ rises and the valve **closes tightly**; it stays shut until the compressor restarts and lowers $p_e$, so high-pressure liquid is held back ready for quick cooling at the next start [Note p.36].
+5. When the compressor **stops**, $p_e$ rises and the valve **closes tightly**; it stays shut until the compressor restarts and lowers $p_e$, so high-pressure liquid is held back ready for quick cooling at the next start [Kanak p.36].
 6. Characteristic: it responds **inversely to load**: on a load increase $p_e$ rises and the valve closes (evaporator starved); on a load decrease it opens (risk of flooding the compressor). It therefore suits small systems with nearly **constant load** (water coolers, small freezers), and a suction accumulator is advisable.
 
 ### CM4. Evaporators
@@ -1135,7 +1135,7 @@ Moisture from the air condenses on a coil colder than the dew point; below 0 °C
 
 > **TRY 4.26** `[PP 16-17 Q6(a), 17]` Why is liquid over feed evaporator suitable for multiple evaporator air-conditioning system? Describe this evaporator with necessary diagram.
 
-**Solution 4.26** **[FROM SOURCE: Aloke pp.64, 70; Note p.62; Hundy §7.4, §9.18]** This is the model answer for the family.
+**Solution 4.26** **[FROM SOURCE: Aloke pp.64, 70; Kanak p.62; Hundy §7.4, §9.18]** This is the model answer for the family.
 
 **Definition** (2 marks): a liquid overfeed evaporator is one in which the liquid refrigerant circulated through it is **considerably more than can be vaporised**; liquid is supplied by a mechanical pump or by gas pressure.
 
@@ -1160,7 +1160,7 @@ Moisture from the air condenses on a coil colder than the dew point; below 0 °C
 
 > **TRY 4.27** `[PP 18-19 Q5(a), 17]` Why is liquid overfeed cooler type evaporator economically employed in multiple evaporator system? Describe a liquid overfeed cooler evaporator with schematic diagram.
 
-**Solution 4.27** **[FROM SOURCE: Aloke p.70; Note p.62]** Same family as TRY 4.26 (2016-17), worded "economically employed" and "cooler". Write Solution 4.26: the reasons (one receiver, pump and level control for all coolers instead of a control per cooler; positive feed; fully wetted surface and smaller coolers; dry vapour to the compressor; central oil removal; stable automatic operation) and the description with Fig. 34, labelling the low-pressure receiver, float feed, pump, supply header, hand-operated expansion valves, three liquid-overfeed coolers, wet return and vapour to the compressor.
+**Solution 4.27** **[FROM SOURCE: Aloke p.70; Kanak p.62]** Same family as TRY 4.26 (2016-17), worded "economically employed" and "cooler". Write Solution 4.26: the reasons (one receiver, pump and level control for all coolers instead of a control per cooler; positive feed; fully wetted surface and smaller coolers; dry vapour to the compressor; central oil removal; stable automatic operation) and the description with Fig. 34, labelling the low-pressure receiver, float feed, pump, supply header, hand-operated expansion valves, three liquid-overfeed coolers, wet return and vapour to the compressor.
 
 ## 4.14 Summary sheet
 

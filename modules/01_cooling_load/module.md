@@ -6,7 +6,7 @@
 | **Where it appears** | Every paper, 2011-12 to 2023-24: Q1(a) of Section A (2011-12, 2012-13), Q8 of Section B (2013-14 to 2022-23), compulsory Q4 of Section A (2023-24) |
 | **Share of all marks** | 13.3% (405 of 3055 weighted marks): 35 marks a year, 45 in 2022-23 and 2023-24. The single most valuable question in the course. |
 | **Time** | core 3 h (§1.1–1.9 and Solution 1.1), full 5 h (all eleven solutions) |
-| **Sources** | Arif pp.32–59; Note pp.97–117; Rifat pp.15–28; Data Book Tables 9–28; Ameen §10.1 |
+| **Sources** | Arif pp.32–59; Kanak pp.97–117; Rifat pp.15–28; Data Book Tables 9–28; Ameen §10.1 |
 
 **How it has been asked:**
 
@@ -48,7 +48,7 @@ The CLTD/CLF method builds both effects into tabulated factors, so that the cool
 
 **Sensible and latent load.** Sensible heat raises the air dry bulb. Latent heat is the moisture added to the air (by people and by humid outdoor air), which the cooling coil must condense. The coil removes both, so both are added for the total. Their ratio, the sensible heat ratio $SHR=Q_S/Q_T$, is needed later to find the supply-air state (Module 6).
 
-**The components of the load** [Arif pp.36–58; Note pp.97–101]:
+**The components of the load** [Arif pp.36–58; Kanak pp.97–101]:
 
 | No. | Component | Formula | Kind |
 |---|---|---|---|
@@ -66,7 +66,7 @@ This is exactly the seven-row summary table of Arif sir's example [Arif p.58]; e
 
 ## 1.2 Design conditions (Tables 9 and 11) ★
 
-**Outdoors: Table 9** [Data Book Table 9; Note p.97]. Take the **2.5% summer design dry bulb** (exceeded only 2.5% of the summer hours), the **coincident 2.5% wet bulb** and the **mean daily range**. The only Bangladesh station printed is **Chittagong** (22°21′ N): 
+**Outdoors: Table 9** [Data Book Table 9; Kanak p.97]. Take the **2.5% summer design dry bulb** (exceeded only 2.5% of the summer hours), the **coincident 2.5% wet bulb** and the **mean daily range**. The only Bangladesh station printed is **Chittagong** (22°21′ N): 
 
 | Station | DB 1% | **DB 2.5%** | DB 5% | **Daily range** | WB 1% | **WB 2.5%** |
 |---|---|---|---|---|---|---|
@@ -74,7 +74,7 @@ This is exactly the seven-row summary table of Arif sir's example [Arif p.58]; e
 
 > **TIP: Dhaka is not in Table 9**
 >
-> The data book's Table 9 stops after Brazil and has no Dhaka row. For a Dhaka question (2011-12, 2012-13, 2020-21), write "Dhaka is not listed; Chittagong, the only Bangladesh station, is used: 33 °C DB, 27 °C WB, daily range 11 °C." Both cities are near 23° N and have similar summer design conditions, and this is what the class solutions do [Note p.106; Arif p.43].
+> The data book's Table 9 stops after Brazil and has no Dhaka row. For a Dhaka question (2011-12, 2012-13, 2020-21), write "Dhaka is not listed; Chittagong, the only Bangladesh station, is used: 33 °C DB, 27 °C WB, daily range 11 °C." Both cities are near 23° N and have similar summer design conditions, and this is what the class solutions do [Kanak p.106; Arif p.43].
 
 **Mean outdoor temperature** for the CLTD correction [Arif p.46]:
 
@@ -89,7 +89,7 @@ $$T_{o,av}=T_{o}-\frac{DR}{2}=33-\frac{11}{2}=27.5\ ^\circ\text{C}$$
 
 Arif sir's example uses 25.5 °C and 50% RH [Arif p.33]. With $T_i=25.5$ °C the term $(25.5-T_i)$ in the CLTD correction is zero.
 
-**Humidity ratios** from the psychrometric chart (end of this module) [Note p.109]:
+**Humidity ratios** from the psychrometric chart (end of this module) [Kanak p.109]:
 
 | State | Reading | $\omega$ (kg/kg dry air) |
 |---|---|---|
@@ -113,9 +113,9 @@ $$R_{th}=R_o+\sum\frac{L}{k}+R_i,\qquad U=\frac{1}{R_{th}}$$
 
 (for parallel paths the conductances add: $1/R_{th}=\sum 1/R_i$, area-weighted).
 
-![Fig. 1: Wall section: outside film, plaster, brick, plaster, inside film, in series [Note p.105]](figures/001.png "w=0.45")
+![Fig. 1: Wall section: outside film, plaster, brick, plaster, inside film, in series [Kanak p.105]](figures/001.png "w=0.45")
 
-**Film resistances.** The course uses the Table 16 codes **A0 = 0.059** (outside) and **E0 = 0.121** (inside) m²·K/W in every calculation [Arif pp.39–42; Note pp.104–112]. Table 10 gives the same films from first principles: inside still air, vertical wall, $R=0.12$; outside summer wind 3.4 m/s, $R=0.044$ (winter 0.030) [Arif p.37]. Use A0 and E0; they are what the roof and wall tables were built with.
+**Film resistances.** The course uses the Table 16 codes **A0 = 0.059** (outside) and **E0 = 0.121** (inside) m²·K/W in every calculation [Arif pp.39–42; Kanak pp.104–112]. Table 10 gives the same films from first principles: inside still air, vertical wall, $R=0.12$; outside summer wind 3.4 m/s, $R=0.044$ (winter 0.030) [Arif p.37]. Use A0 and E0; they are what the roof and wall tables were built with.
 
 **Two routes to U** [Arif p.38]:
 
@@ -124,9 +124,9 @@ $$R_{th}=R_o+\sum\frac{L}{k}+R_i,\qquad U=\frac{1}{R_{th}}$$
 
 **Rule for this guide:** when the roof or wall matches a listed construction, take $U$ **from Table 12(b) or Table 14**. Build from layers only when it does not (the 254 mm brick wall; a roof with 75 mm insulation). This sidesteps the B7 misprint below.
 
-> **EXAMPLE 1.2** `[Note pp.111–112; walls and roof of the template classroom]` (a) Find $U$ for a 254 mm brick wall with 12.5 mm plaster on both sides, and with 12.7 mm plaster. (b) Find $U$ for roof 2 of Table 12(a) (25 mm wood + 25 mm insulation) from its layers, and compare with Table 12(b).
+> **EXAMPLE 1.2** `[Kanak pp.111–112; walls and roof of the template classroom]` (a) Find $U$ for a 254 mm brick wall with 12.5 mm plaster on both sides, and with 12.7 mm plaster. (b) Find $U$ for roof 2 of Table 12(a) (25 mm wood + 25 mm insulation) from its layers, and compare with Table 12(b).
 >
-> **[TUTOR-GENERATED]** (method of Note p.112)
+> **[TUTOR-GENERATED]** (method of Kanak p.112)
 >
 > (a) Table 16: C4 common brick $k=0.727$; E1 plaster $k=0.7277$ W/m·K. Use the actual thicknesses.
 >
@@ -139,7 +139,7 @@ $$R_{th}=R_o+\sum\frac{L}{k}+R_i,\qquad U=\frac{1}{R_{th}}$$
 > | inside film | E0 | 0.121 |
 > | **total** | | **0.5638** |
 >
-> $U=1/0.5638=\mathbf{1.774}$ W/m²·K. With 12.7 mm plaster, $R=0.0127/0.7277=0.0175$ per side, $R_{th}=0.5644$ and $U=\mathbf{1.772}$ W/m²·K. (The class note rounds each layer first and gets 1.776; any of these earns full marks.)
+> $U=1/0.5638=\mathbf{1.774}$ W/m²·K. With 12.7 mm plaster, $R=0.0127/0.7277=0.0175$ per side, $R_{th}=0.5644$ and $U=\mathbf{1.772}$ W/m²·K. (Kanak vai's note rounds each layer first and gets 1.776; any of these earns full marks.)
 >
 > (b) Roof 2 layers (Table 12(a)): A0, E2, E3, B5, B7, E0. B7 is 25 mm wood with $k=0.121$, so $R_{B7}=0.025/0.121=0.207$:
 > $$R_{th}=0.059+0.099+0.050+0.587+0.207+0.121=1.123,\qquad U=0.890\ \text{W/m}^2\text{K}$$
@@ -147,11 +147,11 @@ $$R_{th}=R_o+\sum\frac{L}{k}+R_i,\qquad U=\frac{1}{R_{th}}$$
 
 > **TRAP: The B7 misprint in Table 16**
 >
-> Table 16 prints $R=1.760$ for B7 (25 mm wood), but $L/k=0.025/0.121=0.207$. The 1.760 belongs to the 75 mm insulation rows (B4, B12) just above and below. The class solution of 2021-22 used it and got roof $U=0.374$, so its roof load came out 2.6 times too small [Note p.111]. Take $U=0.965$ (roof 2) or 0.619 (roof 5) straight from Table 12(b); if you must build from layers, use 0.207.
+> Table 16 prints $R=1.760$ for B7 (25 mm wood), but $L/k=0.025/0.121=0.207$. The 1.760 belongs to the 75 mm insulation rows (B4, B12) just above and below. The class solution of 2021-22 used it and got roof $U=0.374$, so its roof load came out 2.6 times too small [Kanak p.111]. Take $U=0.965$ (roof 2) or 0.619 (roof 5) straight from Table 12(b); if you must build from layers, use 0.207.
 
 > **TRAP: Plaster thickness**
 >
-> Code E1 is 20 mm plaster ($R=0.026$). For 12.5 mm or 25 mm plaster do not copy 0.026: use $R=L/k$ with the real thickness ($k=0.7277$). The class note's room example used 0.026 for 25 mm plaster and got $U=2.46$ instead of 2.36 [Note p.105; Arif p.41].
+> Code E1 is 20 mm plaster ($R=0.026$). For 12.5 mm or 25 mm plaster do not copy 0.026: use $R=L/k$ with the real thickness ($k=0.7277$). Kanak vai's note's room example used 0.026 for 25 mm plaster and got $U=2.46$ instead of 2.36 [Kanak p.105; Arif p.41].
 
 ::: {.mini #m-mini-u}
 **Mini-example: U from layers.** The template wall, 254 mm brick with 12.5 mm plaster on both sides, is not listed in Table 14. Find $U$.
@@ -167,7 +167,7 @@ $U=1/0.5638=\mathbf{1.774}$ W/m²·K (with 12.7 mm plaster, **1.772**).
 
 ### What the tables assume
 
-ASHRAE computed the CLTD tables for one set of conditions [Arif p.44]: **July 21, 40° N latitude**, indoor 25.5 °C, mean outdoor 29.4 °C, dark surface, solar time. A Bangladesh room in April at 24° N differs on every count, so the table value is corrected [Arif p.45; Note p.98]:
+ASHRAE computed the CLTD tables for one set of conditions [Arif p.44]: **July 21, 40° N latitude**, indoor 25.5 °C, mean outdoor 29.4 °C, dark surface, solar time. A Bangladesh room in April at 24° N differs on every count, so the table value is corrected [Arif p.45; Kanak p.98]:
 
 $$\boxed{CLTD_c=\big[(CLTD+LM)K+(25.5-T_i)+(T_{o,av}-29.4)\big]f}$$
 
@@ -188,7 +188,7 @@ $$CLTD_c=CLTD+LM-1.9$$
 
 ### Reading Table 13
 
-- **Latitude.** Table 13 has blocks only for 0°, 8°, 16°, 24° and 32° N. Chattogram is at 22°21′ N and Dhaka at 23°43′ N; both are nearest the **24° N** block, so use it without interpolation [Note pp.98, 107]. (Interpolating to 22.35° between 16° and 24° changes $LM$ by at most 0.3 °C; it is not expected.)
+- **Latitude.** Table 13 has blocks only for 0°, 8°, 16°, 24° and 32° N. Chattogram is at 22°21′ N and Dhaka at 23°43′ N; both are nearest the **24° N** block, so use it without interpolation [Kanak pp.98, 107]. (Interpolating to 22.35° between 16° and 24° changes $LM$ by at most 0.3 °C; it is not expected.)
 - **Month.** Months are paired by the sun's declination: Apr/Aug, May/Jul, Jun on its own. "April 15" → Apr/Aug; "May 15, May 16, July 15" → May/Jul; "June 15" → Jun.
 - **Facing.** N for the north wall, E/W for the west wall, **HOR** for the roof.
 
@@ -219,7 +219,7 @@ Pick the row by **roof number** (Table 12(a) describes each) and by **with or wi
 >
 > Seven papers say "Roof: Type 5, without suspended, **25 mm wood, 25 mm insulation**". In Table 12(a), **roof 5 is 25 mm wood with 50 mm insulation**; 25 mm wood with **25 mm** insulation is **roof 2**. In the same way, "type 4, 100 mm concrete" (2011-12, 2012-13, 2017-18, 2018-19) describes **roof 9** (100 mm h.w. concrete); roof 4 has only 50 mm concrete.
 >
-> The description fixes the mass and the insulation, and those fix the CLTD and the $U$. So this guide uses the described construction: **roof 2** ($U=0.965$, CLTD 41/41/39 at 3/4/5 pm) for the template classroom, **roof 9** for the "100 mm concrete" roofs. The class solution of 2021-22 did the same [Note pp.111, 113]. Write one line in the exam: "The layers given (25 mm wood + 25 mm insulation) are roof 2 of Table 12(a); Table 12(b) row 2 is used." Each template solution also gives the total for the literal "roof 5" reading. Never mix them, e.g. the roof-5 CLTD with the roof-2 $U$.
+> The description fixes the mass and the insulation, and those fix the CLTD and the $U$. So this guide uses the described construction: **roof 2** ($U=0.965$, CLTD 41/41/39 at 3/4/5 pm) for the template classroom, **roof 9** for the "100 mm concrete" roofs. The class solution of 2021-22 did the same [Kanak pp.111, 113]. Write one line in the exam: "The layers given (25 mm wood + 25 mm insulation) are roof 2 of Table 12(a); Table 12(b) row 2 is used." Each template solution also gives the total for the literal "roof 5" reading. Never mix them, e.g. the roof-5 CLTD with the roof-2 $U$.
 
 ### Walls: Tables 14 and 15
 
@@ -236,7 +236,7 @@ Table 15 gives CLTD for **wall groups A (heaviest) to G (lightest)**; Table 14 t
 
 > **TRAP: Group G is a metal curtain wall, not brick**
 >
-> The class solution of 2021-22 "assumed Type-G" for the 254 mm brick wall [Note p.114]. Group G is the lightest group (steel siding): its west-wall CLTD at 5 pm is 40 °C, against 11 °C for group C. A heavy brick wall delays the afternoon sun until late evening (Table 15, group C west peaks at 22 h). Using G roughly quadruples the wall load.
+> The class solution of 2021-22 "assumed Type-G" for the 254 mm brick wall [Kanak p.114]. Group G is the lightest group (steel siding): its west-wall CLTD at 5 pm is 40 °C, against 11 °C for group C. A heavy brick wall delays the afternoon sun until late evening (Table 15, group C west peaks at 22 h). Using G roughly quadruples the wall load.
 
 ![Fig. 2: Uncorrected CLTD against solar time (Tables 12(b), 15, 20): the light roof and the metal wall peak in the afternoon; the heavy brick wall lags until night](figures/002.png "w=0.72")
 
@@ -262,14 +262,14 @@ Then $Q=UA\,CLTD_c$: a 54 m² roof gives $0.965\times54\times37.1=1933.3$ W.
 
 Glass gains heat two ways [Arif pp.50–51]:
 
-1. **Conduction** from the warm outdoor air: $Q=U\,A\,CLTD$, with $CLTD$ from **Table 20** (a single row by solar hour: 8 °C at 15–16 h, 7 °C at 17 h). The course applies **no correction** to it [Arif p.49; Note p.98].
+1. **Conduction** from the warm outdoor air: $Q=U\,A\,CLTD$, with $CLTD$ from **Table 20** (a single row by solar hour: 8 °C at 15–16 h, 7 °C at 17 h). The course applies **no correction** to it [Arif p.49; Kanak p.98].
 2. **Solar radiation** transmitted and absorbed:
 
 $$Q=A\cdot SC\cdot SHGF_{max}\cdot CLF$$
 
 | Factor | Table | How to read it |
 |---|---|---|
-| $SC$, shading coefficient | 21 | single clear glass by thickness, column $h_o=7.0$ (the course's "summer" column [Note p.99]): 6 mm 0.95, **10 mm 0.92**, **13 mm 0.88** |
+| $SC$, shading coefficient | 21 | single clear glass by thickness, column $h_o=7.0$ (the course's "summer" column [Kanak p.99]): 6 mm 0.95, **10 mm 0.92**, **13 mm 0.88** |
 | $SHGF_{max}$, W/m² | 18(a) | 24° N block, month row, facing column (N; E/W) |
 | $CLF$ | 19 | facing (north glass: the "N (Shaded)" row), room construction L/M/H, solar hour |
 
@@ -282,7 +282,7 @@ The 24° N values you need:
 | June | 174 | 669 |
 | July | 142 | 672 |
 
-**Room construction for Table 19.** L = light (frame wall, about 146 kg/m² of floor), M = medium (100 mm concrete wall and slab, 340 kg/m²), H = heavy (150 mm concrete, 630 kg/m²). Brick-walled classrooms are taken as **M** [Note p.115]; the metal-curtain-wall office as **L** [Arif p.52].
+**Room construction for Table 19.** L = light (frame wall, about 146 kg/m² of floor), M = medium (100 mm concrete wall and slab, 340 kg/m²), H = heavy (150 mm concrete, 630 kg/m²). Brick-walled classrooms are taken as **M** [Kanak p.115]; the metal-curtain-wall office as **L** [Arif p.52].
 
 | Table 19, M | 15 h | 16 h | 17 h |
 |---|---|---|---|
@@ -297,7 +297,7 @@ The 24° N values you need:
 
 > **TRAP: Gross wall area or net wall area**
 >
-> Glass is "x% of wall area". Compute the **gross** wall area (length × height), take x% of it as glass, and use the **net** area $=(1-x)\times$ gross for the opaque wall. The class solution of 2021-22 used the gross areas for the walls and then counted the glass again [Note p.114]. A door in a wall is subtracted the same way [Arif p.43].
+> Glass is "x% of wall area". Compute the **gross** wall area (length × height), take x% of it as glass, and use the **net** area $=(1-x)\times$ gross for the opaque wall. The class solution of 2021-22 used the gross areas for the walls and then counted the glass again [Kanak p.114]. A door in a wall is subtracted the same way [Arif p.43].
 
 > **TIP: North glass still gets sun**
 >
@@ -333,7 +333,7 @@ $Q=A\,SC\,SHGF_{max}\,CLF=2.7\times0.88\times719\times0.50=\mathbf{854.2}$ W. Fo
 
 ## 1.6 Partitions, doors and floors
 
-A wall, door or glass between the room and an **unconditioned** space or a **shaded** outdoor face receives no sun, so no CLTD is needed [Arif p.43; Note p.97]:
+A wall, door or glass between the room and an **unconditioned** space or a **shaded** outdoor face receives no sun, so no CLTD is needed [Arif p.43; Kanak p.97]:
 
 $$Q=U\,A\,TD,\qquad TD=\begin{cases}T_{un}-T_i&\text{next to an unconditioned room (e.g. }30-25.5=4.5\text{ °C)}\\T_o-T_i&\text{shaded outdoor face (e.g. }33-25.5=7.5\text{ °C)}\end{cases}$$
 
@@ -362,7 +362,7 @@ Table 28 [Data Book Table 28; Arif p.55]:
 | Light bench work | factory | 80 | 140 |
 | Heavy work | factory | 170 | 255 |
 
-Students in a classroom are seated and writing: use the **75 W / 55 W** row, as the slides and the class solutions do [Arif p.55; Note p.116].
+Students in a classroom are seated and writing: use the **75 W / 55 W** row, as the slides and the class solutions do [Arif p.55; Kanak p.116].
 
 **CLF for people (Table 27).** The sensible part is partly radiant, so Table 27 gives a CLF by hours in the space. But the table's own footnote says **CLF = 1.0 when the cooling system is shut down at night, and for high occupant densities** (theatres, auditoriums). A classroom is both, so $CLF=1$. Latent heat goes straight into the air: **no CLF**.
 
@@ -374,7 +374,7 @@ Table 28, moderately active office work: 75 W / 55 W; CLF = 1 (Table 27 footnote
 
 ### Lights (Tables 22–24)
 
-The general ASHRAE form is $Q=W\,F_u\,F_s\,CLF$: installed wattage, use factor (fraction switched on), special allowance factor (ballast losses) and CLF. The slides write the same thing as [Arif p.57; Note p.101]:
+The general ASHRAE form is $Q=W\,F_u\,F_s\,CLF$: installed wattage, use factor (fraction switched on), special allowance factor (ballast losses) and CLF. The slides write the same thing as [Arif p.57; Kanak p.101]:
 
 $$Q_S=(PL\times A_{floor})\times BF\times D\times CLF$$
 
@@ -396,7 +396,7 @@ $$Q_S=(PL\times A_{floor})\times BF\times D\times CLF$$
 
 > **TRAP: Do not multiply W/m² by a number of lamps**
 >
-> "Light: 22 W/m²" is already the total lighting power per square metre of floor. Multiply by the floor area and stop. The class solution of 2021-22 multiplied again by an assumed "10 lights" and got 15 708 W instead of 1570.8 W, which by itself almost doubled the answer [Note p.116].
+> "Light: 22 W/m²" is already the total lighting power per square metre of floor. Multiply by the floor area and stop. The class solution of 2021-22 multiplied again by an assumed "10 lights" and got 15 708 W instead of 1570.8 W, which by itself almost doubled the answer [Kanak p.116].
 
 ::: {.mini #m-mini-lights}
 **Mini-example: lights.** "Light: 15 W/m² fluorescent", floor 9 m × 6 m.
@@ -418,7 +418,7 @@ Write the assumption: one projector 300 W + two computers 2 × 200 W. $Q_S=(300+
 
 ## 1.8 Outdoor air: infiltration and ventilation ★
 
-Outdoor air entering the room at $T_o,\omega_o$ must be cooled and dried to $T_i,\omega_i$ [Arif p.53; Note p.100]:
+Outdoor air entering the room at $T_o,\omega_o$ must be cooled and dried to $T_i,\omega_i$ [Arif p.53; Kanak p.100]:
 
 $$Q_S=\rho c_p\,\dot V\,(T_o-T_i)=1200\,\dot V\,(T_o-T_i)\ \text{W}$$
 
@@ -433,7 +433,7 @@ with $\dot V$ in m³/s. The constants are $\rho c_p\approx1.2\times1005\approx12
 | Infiltration through cracks and doors | **1 air change per hour**: $\dot V=\dfrac{\text{room volume}}{3600}$ m³/s | Arif p.54 (the course default) |
 | Ventilation "as recommended in ASHRAE" | ASHRAE Standard 62-1989: about 15 cfm per person, i.e. **8 L/s per person in classrooms**, **10 L/s per person in offices** | Ameen §10.1 (Arif p.97b quotes ASHRAE 62-1992: 7 L/s per student; this guide uses Ameen's 8 L/s, and either is fine if stated) |
 
-**Rule for this guide.** When the question asks for ASHRAE fresh air or ventilation (2011-12, 2012-13, 2017-18), use the per-person rate, and take the room as slightly pressurized by it, so there is no separate infiltration. Otherwise (the template classroom), use **1 ACH**, exactly as Arif sir's example and the class solution of 2021-22 do [Note p.115]. Never add both for the same air.
+**Rule for this guide.** When the question asks for ASHRAE fresh air or ventilation (2011-12, 2012-13, 2017-18), use the per-person rate, and take the room as slightly pressurized by it, so there is no separate infiltration. Otherwise (the template classroom), use **1 ACH**, exactly as Arif sir's example and the class solution of 2021-22 do [Kanak p.115]. Never add both for the same air.
 
 > **TIP: State the air assumption in a box at the top**
 >
@@ -546,7 +546,7 @@ Standing assumptions, used in every solution unless the solution says otherwise:
 >
 > (i) Assume standard indoor conditions as recommended in ASHRAE. (ii) Assume no heat transfer through floor, south and east walls. (iii) Assume reasonable electrical appliances.
 
-**Solution 1.1** **[TUTOR-GENERATED]** (method of Arif pp.33–59 and Note pp.111–117, with the errata of §1.3–1.8 corrected). This is the model answer for every template paper. Work it step by step; open a hint if stuck, the step to check.
+**Solution 1.1** **[TUTOR-GENERATED]** (method of Arif pp.33–59 and Kanak pp.111–117, with the errata of §1.3–1.8 corrected). This is the model answer for every template paper. Work it step by step; open a hint if stuck, the step to check.
 
 ::: {.problem #sol-1-1}
 
@@ -885,7 +885,7 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
-(the class solution [Note pp.111–117] got 8.9 TR; see the corrections below). As Solution 1.1, with: 5 pm = 17 h; June. North wall $10\times3=30$ m² (glass 3.9, net 26.1), west wall $7\times3=21$ m² (glass 2.73, net 18.27); floor 70 m², volume 210 m³.
+(the class solution [Kanak pp.111–117] got 8.9 TR; see the corrections below). As Solution 1.1, with: 5 pm = 17 h; June. North wall $10\times3=30$ m² (glass 3.9, net 26.1), west wall $7\times3=21$ m² (glass 2.73, net 18.27); floor 70 m², volume 210 m³.
 :::
 
 ::: {.step title="Step 1. Geometry"}

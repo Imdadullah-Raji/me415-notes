@@ -6,7 +6,7 @@
 | **Where it appears** | Six papers: Section A Q2(c) 2011-12, Q3(c) 2012-13, Q3(a) 2013-14, Q2(a) 2020-21, Q2(a) 2021-22, Q2(b) 2022-23. Not set in 2015-16 to 2018-19 or in 2023-24. |
 | **Share of all marks** | 3.6% (110 of 3055 weighted marks, 6 parts), 15–20 marks when it is set (5.4–7.3% of that paper). One archetype only: equal-friction sizing of a small network plus the static (fan) pressure of the index run, with a layout figure given in the paper. |
 | **Time** | core 2 h (§9.2–9.4, §9.7 and Solutions 6.1 and 6.4), full 3.5 h (all six solutions and the theory) |
-| **Sources** | Arif pp.77a–93b; Note pp.129–143; Ameen §15.2–15.4 (Ex. 15.1–15.3); Data Book Chart 6 and Table 7 |
+| **Sources** | Arif pp.77a–93b; Kanak pp.129–143; Ameen §15.2–15.4 (Ex. 15.1–15.3); Data Book Chart 6 and Table 7 |
 
 **How it has been asked:**
 
@@ -29,7 +29,7 @@
 
 ## 9.1 The air-distribution system and duct system types ★
 
-The **air-distribution system** carries conditioned air from the air-handling unit (AHU) to the rooms and brings it back [Arif p.77b; Note p.129; Ameen §15.1]. It has:
+The **air-distribution system** carries conditioned air from the air-handling unit (AHU) to the rooms and brings it back [Arif p.77b; Kanak p.129; Ameen §15.1]. It has:
 
 - a **supply duct** from the AHU fan to the supply outlets (diffusers, grilles, registers) in each room;
 - a **return duct** from the return grilles back to the AHU;
@@ -38,7 +38,7 @@ The **air-distribution system** carries conditioned air from the air-handling un
 
 ![Fig. 1: Schematic layout of an air-duct system. Ventilation (outdoor) air enters at the left through a damper and mixes with recirculated return air; a further damper lets part of the return air go to exhaust. The mixture passes through the air handling unit: filter, supply fan, cooling coil. The supply air duct leaves the AHU and drops into the room through three branch outlets (arrows down into the room). Three return branches leave the room and join the return air duct, which runs back to the mixing point and to the exhaust damper. One duct is needed for the supply air and another for the return air.](figures/001.png "w=0.7")
 
-**Classification by velocity and pressure** [Arif p.78a; Note p.129]. The supply and return ducts are classed by the velocity and pressure of the air in them:
+**Classification by velocity and pressure** [Arif p.78a; Kanak p.129]. The supply and return ducts are classed by the velocity and pressure of the air in them:
 
 | | Conventional (low-velocity) system | High-velocity system |
 |---|---|---|
@@ -52,7 +52,7 @@ The **air-distribution system** carries conditioned air from the air-handling un
 
 High velocity gives smaller ducts but "not only greater pressure losses but also greater noise levels" [Arif p.78a]. That is why every past paper fixes a first-section velocity of 8 or 10 m/s: a low-velocity system.
 
-**Classification by arrangement** (Figs. 2–6) [Arif pp.78b–80b; Note p.130]:
+**Classification by arrangement** (Figs. 2–6) [Arif pp.78b–80b; Kanak p.130]:
 
 1. **Individual duct system.** The fan discharges into a **plenum**; a separate duct runs from the plenum to every outlet. Each run is short and can be balanced on its own, but it uses much duct. Used in small systems (residences).
 2. **Trunk-and-branch system.** One main **trunk** leaves the fan; **branches** are taken off it to the outlets, and the trunk is reduced in size after each take-off. It uses the least duct for a large building and is the most common arrangement. **Every past-paper layout is a trunk-and-branch system.**
@@ -89,7 +89,7 @@ High velocity gives smaller ducts but "not only greater pressure losses but also
 
 Along the flow the **total pressure always falls** (every metre of duct and every fitting loses some), except across the fan, which raises it. The static pressure can **rise** where the velocity falls (an enlargement, or the main after a branch take-off), because velocity pressure is converted back to static pressure. That rise is the **static regain** used in §9.6.
 
-**Losses in duct systems** [Arif pp.81b–82a; Note pp.131–132]. "Conditioned air supplied by the AHU … encounters pressure losses at every component of the air-conditioning system: duct length and duct fittings. Computing the losses is necessary for proper selection and sizing of the fan." The losses are of two kinds:
+**Losses in duct systems** [Arif pp.81b–82a; Kanak pp.131–132]. "Conditioned air supplied by the AHU … encounters pressure losses at every component of the air-conditioning system: duct length and duct fittings. Computing the losses is necessary for proper selection and sizing of the fan." The losses are of two kinds:
 
 | | Friction (major) loss | Dynamic (minor, fitting) loss |
 |---|---|---|
@@ -111,7 +111,7 @@ $$FTP=\sum\Delta p_{\text{index run}}=\sum(\Delta p_f+\Delta p_d)+\Delta p_{\tex
 - **Fan static pressure** = fan total pressure − velocity pressure at the fan outlet: $FSP=FTP-p_{v,out}$.
 - **Fan air power** = $\dot V\times FTP$ (W, with $\dot V$ in m³/s and $FTP$ in Pa); shaft power = air power / fan efficiency.
 
-In the past papers only the supply side is given. "The static pressure in the index run" and "the fan pressure required" are both answered by the **total loss of the index run**, including the outlet grille, which is what the course solutions do [Arif p.86a; Note p.136].
+In the past papers only the supply side is given. "The static pressure in the index run" and "the fan pressure required" are both answered by the **total loss of the index run**, including the outlet grille, which is what the course solutions do [Arif p.86a; Kanak p.136].
 
 > **TIP: "static pressure in the index run"**
 >
@@ -127,7 +127,7 @@ For standard air ($\rho=1.20$ kg/m³) $Re=66.4\,D\,V$ with $D$ in **mm** and $V$
 
 Example of the equation, at 1.5 m³/s and 8 m/s: $D=\sqrt{4(1.5)/(\pi\times8)}=0.489$ m; $Re=66.4\times489\times8=2.60\times10^5$; $f'=0.11(0.09/489+68/259\,500)^{0.25}=0.0160<0.018$, so $f=0.85(0.0160)+0.0028=0.0164$; $\Delta p/L=(0.0164/0.489)\times0.6\times8^2=1.29$ Pa/m.
 
-**The friction chart** (Data Book Chart 6, "Friction Chart for Round Duct (ρ = 1.20 kg/m³ and ε = 0.09 mm)", printed at the end of this module as Fig. 21) [Arif p.86b; Note p.136; Ameen §15.2]:
+**The friction chart** (Data Book Chart 6, "Friction Chart for Round Duct (ρ = 1.20 kg/m³ and ε = 0.09 mm)", printed at the end of this module as Fig. 21) [Arif p.86b; Kanak p.136; Ameen §15.2]:
 
 - log–log axes: **air quantity** 20–200 000 L/s horizontally, **friction loss** 0.1–100 Pa/m vertically;
 - two families of straight diagonal lines: **duct diameter** (50–4000 mm, rising to the right) and **velocity** (1.2–90 m/s, falling to the right);
@@ -186,7 +186,7 @@ where $C_o$ is the **dynamic loss coefficient**, found by experiment and compile
 | Diverging tee, round, conical branch tapered into the body (SD5-10) | branch: $A_b/A_c$ and the branch ratio; main: $A_s/A_c$ and the straight ratio | $C_b$ about 0.2–0.7 in the useful range; $C_s$ about 0.13–0.16 |
 | Converging tee, round, $D_c\ge$ 25 cm (ED5-3), for **return** ducts | $A_s/A_c$, $A_b/A_c$ and the flow ratio | can be **negative** at low branch flow (the fast stream drags the slow one) |
 
-*Table 15.6* (round segmented elbows, 3, 4 and 5 pieces, from Ameen and the slides; **not** in the data book) [Arif p.93b; Note p.141]. $C_o=K_\theta\,C_o'$:
+*Table 15.6* (round segmented elbows, 3, 4 and 5 pieces, from Ameen and the slides; **not** in the data book) [Arif p.93b; Kanak p.141]. $C_o=K_\theta\,C_o'$:
 
 | No. of pieces | $r/D=0.75$ | 1.0 | 1.5 | 2.0 |
 |---|---|---|---|---|
@@ -200,7 +200,7 @@ where $C_o$ is the **dynamic loss coefficient**, found by experiment and compile
 
 So a 5-piece 90° elbow with $r/D=1$ has $C_o=0.33\times1.00=0.33$; a 45° one, $0.33\times0.60=0.20$.
 
-**How the course uses the SD5-10 tee table** (Ameen Ex. 15.3, the slides and the Full note) [Note pp.138–139]:
+**How the course uses the SD5-10 tee table** (Ameen Ex. 15.3, the slides and the Full note) [Kanak pp.138–139]:
 
 - **Straight-through (main) path**, downstream section $s$, upstream (common) section $c$: enter Table $C_s$ with $A_s/A_c=(D_s/D_c)^2$ (row) and $V_s/V_c$ (column); loss $=C_s\,\rho V_s^2/2$.
 - **Branch path**, branch section $b$: enter Table $C_b$ with $A_b/A_c=(D_b/D_c)^2$ and $V_b/V_c$; loss $=C_b\,\rho V_b^2/2$.
@@ -242,7 +242,7 @@ $$d_e=\frac{1.55A^{0.625}}{P^{0.25}},\qquad A=\frac{\pi b^2}{4}+b(a-b),\qquad P=
 
 ## 9.6 Duct design methods ★
 
-"There are a number of duct design methods for air-conditioning systems": the **equal-friction** method, the **static-regain** method, the **T-method**, the **velocity-reduction** method and the **balanced-pressure** method. The first three are the ASHRAE-recommended methods [Arif p.83b; Note p.133; Ameen §15.4]. The aim of all of them is the same: duct sizes that deliver the design flow to every outlet, at a sensible balance between first cost (duct size, sheet metal, space) and running cost (fan power, which depends on the pressure loss), without noise.
+"There are a number of duct design methods for air-conditioning systems": the **equal-friction** method, the **static-regain** method, the **T-method**, the **velocity-reduction** method and the **balanced-pressure** method. The first three are the ASHRAE-recommended methods [Arif p.83b; Kanak p.133; Ameen §15.4]. The aim of all of them is the same: duct sizes that deliver the design flow to every outlet, at a sensible balance between first cost (duct size, sheet metal, space) and running cost (fan power, which depends on the pressure loss), without noise.
 
 | Method | Principle | Advantages | Disadvantages | Used for |
 |---|---|---|---|---|
@@ -264,7 +264,7 @@ where $R$ is the **static regain factor**, 0.5–0.95 (typically 0.75–0.9): pa
 
 ## 9.7 The equal-friction procedure ★
 
-Every past-paper duct question is answered with the same five steps and the same table [Arif pp.84a–90a; Note pp.133–143; Ameen Ex. 15.1–15.3].
+Every past-paper duct question is answered with the same five steps and the same table [Arif pp.84a–90a; Kanak pp.133–143; Ameen Ex. 15.1–15.3].
 
 > **KEY: Equal-friction sizing in five steps**
 >
@@ -285,15 +285,15 @@ one block of rows per run, each block ending with the run total.
 >
 > The slides and notes print the velocities read off the chart at the design friction rate (e.g. 5.75 m/s for 1 m³/s at 1.15 Pa/m). This module prints $V=\dot V/A$ of the **chosen** standard duct, which is exact and is what the tee coefficients need. Both are acceptable; the losses in the fixed-allowance questions do not depend on them.
 
-> **EXAMPLE 9.2** `[Arif pp.84b–86a; Note pp.134–136; Ameen Ex. 15.2]` An air conditioner supplies air to three rooms in a small office premises. The schematic layout of the duct system and the volume flow rate to each room are shown in the figure. Section lengths: A–B 2 m, B–C 5 m, C–D 7 m, D–E 9 m, D–H 2 m, C–F 8 m, F–G 6 m. (a) Size the duct system using the equal-friction method recommended for low-pressure duct network. The ducts shall be of standard round sections with diameters in increments of 25 mm. The air velocity in the first section is not to exceed 8 m/s. (b) Estimate the static pressure in the index run of the duct network and indicate the amount of dampering in the other branches to balance the flow. Consider a pressure drop of 25 Pa at each of the outlet grilles at D, E and F. In the calculation, consider the resistance due to the elbow and Tee as 10 Pa and 15 Pa respectively.
+> **EXAMPLE 9.2** `[Arif pp.84b–86a; Kanak pp.134–136; Ameen Ex. 15.2]` An air conditioner supplies air to three rooms in a small office premises. The schematic layout of the duct system and the volume flow rate to each room are shown in the figure. Section lengths: A–B 2 m, B–C 5 m, C–D 7 m, D–E 9 m, D–H 2 m, C–F 8 m, F–G 6 m. (a) Size the duct system using the equal-friction method recommended for low-pressure duct network. The ducts shall be of standard round sections with diameters in increments of 25 mm. The air velocity in the first section is not to exceed 8 m/s. (b) Estimate the static pressure in the index run of the duct network and indicate the amount of dampering in the other branches to balance the flow. Consider a pressure drop of 25 Pa at each of the outlet grilles at D, E and F. In the calculation, consider the resistance due to the elbow and Tee as 10 Pa and 15 Pa respectively.
 
 ![Fig. 13: Example 9.2 duct layout (Arif sir's Example 1, Ameen Ex. 15.2): the AHU at the upper left discharges at A; the duct drops 2 m from A to B (an elbow at B), then runs 5 m from B to C and 7 m from C to D, and 9 m from D to outlet E (0.7 m³/s). At C a branch rises 8 m to F (an elbow) and runs 6 m to outlet G (1 m³/s). At D a branch drops 2 m to outlet H (0.3 m³/s).](figures/013.png "w=0.6")
 
-**Solution.** **[FROM SOURCE: Arif pp.85b–86a; Note pp.135–136]**, velocities recomputed as $\dot V/A$.
+**Solution.** **[FROM SOURCE: Arif pp.85b–86a; Kanak pp.135–136]**, velocities recomputed as $\dot V/A$.
 
 > **TRAP: the grilles are at G, E and H, not D, E and F**
 >
-> The statement (slides, note and Ameen) puts the outlet grilles "at D, E and F", but in the figure D is a junction and F an elbow: the outlets are **G, E and H**. The slides' table puts the grilles at H, G and E [Arif p.85b]; the note labels them "Grille (D)" and "1G (F)", following the text [Note p.135]. Read the figure.
+> The statement (slides, note and Ameen) puts the outlet grilles "at D, E and F", but in the figure D is a junction and F an elbow: the outlets are **G, E and H**. The slides' table puts the grilles at H, G and E [Arif p.85b]; Kanak vai's note labels them "Grille (D)" and "1G (F)", following the text [Kanak p.135]. Read the figure.
 
 *Step 1. Flows.* A–B and B–C carry $1+0.7+0.3=2.0$ m³/s; C–D $0.7+0.3=1.0$; D–E 0.7; D–H 0.3; C–F and F–G 1.0.
 
@@ -323,11 +323,11 @@ one block of rows per run, each block ending with the run total.
 
 **Index run A-B-C-D-E: static pressure 91.45 Pa.** **Dampering: run C–F–G 91.45 − 84.15 = 7.30 Pa; branch D–H 91.45 − 83.40 = 8.05 Pa.** Total every run: the index run is the run with the largest **total** loss, which need not be the longest one (here A-B-C-D-H, 16 m, loses less than A-B-C-F-G, 21 m, by only 0.75 Pa, because two tees cost more than two elbows).
 
-> **EXAMPLE 9.3** `[Note pp.137–141; Ameen Ex. 15.3]` A package air conditioner serves three rooms in a residential home. Layout (Figure 15.18): fan at A; A–B 25 m; B–E 10 m (branch up to outlet E, 3 m³/s); B–C 10 m; C–F 10 m (branch down to outlet F, 2 m³/s); C–D 20 m + 8 m (to outlet D, 3 m³/s, with a 90° elbow, $r/D=1.0$). Use 8 m/s for the main duct velocity. (a) Size the system by the equal-friction method with standard round sections (take 25 mm steps). (b) Determine the total static pressure for the index run and the dampering in the other branches. Calculate the fitting losses with the ASHRAE fittings data (tees SD5-10 of Table 7, a 5-piece elbow of Table 15.6). 25 Pa at each outlet register.
+> **EXAMPLE 9.3** `[Kanak pp.137–141; Ameen Ex. 15.3]` A package air conditioner serves three rooms in a residential home. Layout (Figure 15.18): fan at A; A–B 25 m; B–E 10 m (branch up to outlet E, 3 m³/s); B–C 10 m; C–F 10 m (branch down to outlet F, 2 m³/s); C–D 20 m + 8 m (to outlet D, 3 m³/s, with a 90° elbow, $r/D=1.0$). Use 8 m/s for the main duct velocity. (a) Size the system by the equal-friction method with standard round sections (take 25 mm steps). (b) Determine the total static pressure for the index run and the dampering in the other branches. Calculate the fitting losses with the ASHRAE fittings data (tees SD5-10 of Table 7, a 5-piece elbow of Table 15.6). 25 Pa at each outlet register.
 
 ![Fig. 14: Example 15.3 layout (Ameen Figure 15.18): fan at the left discharging at A; main A–B 25 m; at B a branch rises 10 m to outlet E (3 m³/s); main B–C 10 m; at C a branch drops 10 m to outlet F (2 m³/s); main continues 20 m from C to a corner and then rises 8 m to outlet D (3 m³/s). Elbows have r/D = 1.00.](figures/014.png "w=0.6")
 
-**Solution.** **[TUTOR-GENERATED]** (method of Ameen Ex. 15.3 and Note pp.137–139, sized consistently with 25 mm steps and $V=\dot V/A$; the note's slips are in the TRAP below).
+**Solution.** **[TUTOR-GENERATED]** (method of Ameen Ex. 15.3 and Kanak pp.137–139, sized consistently with 25 mm steps and $V=\dot V/A$; Kanak vai's note's slips are in the TRAP below).
 
 *Steps 1–2.* A–B carries $3+3+2=8$ m³/s; $D_{min}=\sqrt{4(8)/(\pi\times8)}=1.128$ m = 1128 mm → **1150 mm**, $V=7.70$ m/s. Chart at 8000 L/s, 8 m/s: **0.48 Pa/m** (equation 0.47).
 
@@ -359,10 +359,10 @@ one block of rows per run, each block ending with the run total.
 
 **Index run A-B-C-D: total static pressure 69.46 Pa. Dampering: A-B-E 21.25 Pa, A-B-C-F 12.87 Pa.** (Ameen: 70.96 Pa, 23.21 Pa and 13 Pa, with 780/700 mm ducts and chart velocities.)
 
-> **TRAP: the Full note's Ex. 15.3 table [Note pp.138–139]**
+> **TRAP: the Full note's Ex. 15.3 table [Kanak pp.138–139]**
 >
-> - **C–F coefficient.** The note first took $V_b/V_c=5.75/8=0.72$ and $A_b/A_c=(650/1150)^2=0.32$ against the first duct, then corrected the common section to B–C. With the corrected ratios $V_b/V_c=5.75/7.2=0.80$ and $A_b/A_c=(650/950)^2=0.47$, Table 7 gives $C_b\approx0.28$, not the 0.36 written (0.36 belongs to a ratio of about 0.7). The same slip-free reading for B–E ($V_b/V_c=0.79$, $A_b/A_c=0.46$) gives 0.28, not 0.25.
-> - **Arithmetic.** The fitting total of A-B-C-F, 33.32 Pa, still adds the crossed-out 3.97 Pa ($0.2\times19.84$). With the note's corrected 7.14 Pa it is $4.35+7.14+25=36.49$ Pa, so the run is $21.6+36.49=58.09$ Pa and the dampering $70.9-58.09=12.81$ Pa, not 15.98 Pa.
+> - **C–F coefficient.** Kanak vai's note first took $V_b/V_c=5.75/8=0.72$ and $A_b/A_c=(650/1150)^2=0.32$ against the first duct, then corrected the common section to B–C. With the corrected ratios $V_b/V_c=5.75/7.2=0.80$ and $A_b/A_c=(650/950)^2=0.47$, Table 7 gives $C_b\approx0.28$, not the 0.36 written (0.36 belongs to a ratio of about 0.7). The same slip-free reading for B–E ($V_b/V_c=0.79$, $A_b/A_c=0.46$) gives 0.28, not 0.25.
+> - **Arithmetic.** The fitting total of A-B-C-F, 33.32 Pa, still adds the crossed-out 3.97 Pa ($0.2\times19.84$). With Kanak vai's note's corrected 7.14 Pa it is $4.35+7.14+25=36.49$ Pa, so the run is $21.6+36.49=58.09$ Pa and the dampering $70.9-58.09=12.81$ Pa, not 15.98 Pa.
 > - **The common section of a tee** is the section just upstream of that junction (B–C for the tees at C), never the fan duct.
 
 ## 9.8 Term-final questions with solutions
@@ -389,7 +389,7 @@ Standing conventions, used in every solution unless it says otherwise:
 
 ![Fig. 15: Fig. for Q. No. 2(a), 2021-22: AHU (filter and fan) at the left discharging at A; main A–C 6 m; at C a curved take-off turns up 3 m to outlet G (0.5 m³/s, arrow up); main continues C–D 4 m; at D a curved take-off drops 2 m to outlet F (0.5 m³/s, arrow down); main continues 6 m from D to a corner elbow and drops 2 m to outlet E (0.5 m³/s, arrow down).](figures/015.jpg "w=0.7")
 
-**Solution 9.1** **[TUTOR-GENERATED]** (method of Arif pp.84a–86a; the class solution [Note p.143] is corrected in the TRAP below).
+**Solution 9.1** **[TUTOR-GENERATED]** (method of Arif pp.84a–86a; the class solution [Kanak p.143] is corrected in the TRAP below).
 
 *Assumption.* The paper gives two fitting allowances; use **one**. The specific values, elbow 10 Pa and tee 15 Pa, are used here (as in 2020-21 and 2022-23); the one-fifth allowance is Solution 9.2.
 
@@ -427,11 +427,11 @@ Velocities fall from 7.64 m/s at the fan to 6.03 m/s at the outlets, all below 8
 
 **(i) Duct sizes: A–C 500 mm, C–D 425 mm, D–E, D–F and C–G 325 mm. (ii) Index run A-C-D-E; static pressure required = 88.40 Pa.** Dampering: **A-C-D-F 17.80 Pa, A-C-G 36.70 Pa.** (With the one-fifth allowance instead of 10/15 Pa: 53.08 Pa, Solution 9.2.)
 
-> **TRAP: the class solution of this paper [Note p.143]**
+> **TRAP: the class solution of this paper [Kanak p.143]**
 >
 > - **First duct 475 mm is too small.** $\sqrt{4(1.5)/(\pi\times8)}=489$ mm, so 475 mm gives $1.5/(\pi\times0.475^2/4)=8.46$ m/s, above the 8 m/s limit. Round up: **500 mm** (7.64 m/s).
-> - **Both fitting allowances were applied**: lengths × (1 + 1/5) **and** 10/15 Pa per fitting, although the note itself says "use either". That counts the fittings twice and gives $1.5\times18\times1.2+65=97.4$ Pa. Use one.
-> - The note's 1.5 Pa/m is high for this point: the chart (and the equation) give about 1.3 Pa/m at 1500 L/s and 8 m/s.
+> - **Both fitting allowances were applied**: lengths × (1 + 1/5) **and** 10/15 Pa per fitting, although Kanak vai's note itself says "use either". That counts the fittings twice and gives $1.5\times18\times1.2+65=97.4$ Pa. Use one.
+> - Kanak vai's note's 1.5 Pa/m is high for this point: the chart (and the equation) give about 1.3 Pa/m at 1500 L/s and 8 m/s.
 > - The printed figure labels the last outlet "B"; the text calls it E.
 
 > **TRY 9.2** `[PP 13-14 Q3(a), 20]` A packaged air conditioner serves three rooms in an apartment. The schematic layout of the duct system, together with the volume flow rate to each room, is shown in Fig. for Q. No. 3(a). (i) Size the duct system using the equal-friction method. The duct shall be of standard round sections with diameters in increments of 25 mm. The air velocity in the first section is not to exceed 8 m/s. (ii) Estimate the static pressure in the index run of the duct network. There is a pressure drop of 25 Pa at each of the outlet grilles at E, F and G. Assume the resistance due to the fittings as one-fifth that of the duct length.

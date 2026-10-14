@@ -6,7 +6,7 @@
 | **Where it appears** | 10 of 11 papers, 2011-12 to 2023-24 (not 2017-18). The LiBr–water numerical is Q4(b)–Q7(b) of Section A or B in 2012-13, 2013-14, 2015-16, 2016-17, 2018-19, 2020-21 and 2022-23; the aqua-ammonia description is asked in 2018-19, 2021-22 and 2023-24; comparisons in 2011-12 and 2012-13 |
 | **Share of all marks** | 7.2% (219 of 3055 weighted marks): 13 parts. Numericals (AB1) 144 marks in 8 parts; theory (AB2) 75 marks in 5 parts |
 | **Time** | core 2 h (§8.1–8.5 and Solutions 8.2, 8.6, 8.9), full 4 h (all 13 solutions) |
-| **Sources** | Aloke pp.4–7, 73–91; Note pp.3–5, 41–56; Ameen §5.1–5.6; Data Book Table 1 (R718) and the superheated steam table, Charts 4 and 5 (all at the end of this module) |
+| **Sources** | Aloke pp.4–7, 73–91; Kanak pp.3–5, 41–56; Ameen §5.1–5.6; Data Book Table 1 (R718) and the superheated steam table, Charts 4 and 5 (all at the end of this module) |
 
 **How it has been asked:**
 
@@ -32,11 +32,11 @@
 
 ## 8.1 The absorption principle ★
 
-**What it is.** The vapour absorption refrigeration system (VARS) was developed by Ferdinand Carré in France (patented in the US in 1860). It is a **heat-operated** cycle: it uses heat (steam, hot water, exhaust gas, a flame, solar or geothermal heat) instead of shaft work. It is economical where inexpensive heat is available in abundance: waste or process steam, geothermal energy, solar heat and cheap natural gas [Aloke p.73; Note p.41; Ameen §5.1].
+**What it is.** The vapour absorption refrigeration system (VARS) was developed by Ferdinand Carré in France (patented in the US in 1860). It is a **heat-operated** cycle: it uses heat (steam, hot water, exhaust gas, a flame, solar or geothermal heat) instead of shaft work. It is economical where inexpensive heat is available in abundance: waste or process steam, geothermal energy, solar heat and cheap natural gas [Aloke p.73; Kanak p.41; Ameen §5.1].
 
-**How it differs from vapour compression.** The condenser, expansion valve and evaporator are the same. Only the method of compressing the refrigerant differs: the **compressor is replaced by an absorber, a pump and a generator** (Fig. 1, Fig. 2) [Aloke pp.75–76; Note p.43]. A second fluid, the **absorbent**, is used besides the refrigerant.
+**How it differs from vapour compression.** The condenser, expansion valve and evaporator are the same. Only the method of compressing the refrigerant differs: the **compressor is replaced by an absorber, a pump and a generator** (Fig. 1, Fig. 2) [Aloke pp.75–76; Kanak p.43]. A second fluid, the **absorbent**, is used besides the refrigerant.
 
-The three steps that replace the compressor (Stoecker & Jones, Note p.43):
+The three steps that replace the compressor (Stoecker & Jones, Kanak p.43):
 
 1. **Absorb** the low-pressure refrigerant vapour in a liquid (the absorbent) while removing heat (absorber, cooled by water).
 2. **Raise the pressure of the liquid** solution with a pump.
@@ -55,9 +55,9 @@ The three steps that replace the compressor (Stoecker & Jones, Note p.43):
 
 ![Fig. 1: Comparison of the simple vapour compression and vapour absorption cycles [Aloke p.75]. Top: compressor → condenser → expansion valve (with sensing bulb) → evaporator → compressor. Bottom (vapour absorption cycle): generator → "High-pressure vapour" → condenser → T-X valve → evaporator → "Low-pressure vapour" → absorber; the pump draws solution from the absorber and delivers "Strong solution" to the generator; "Solution" returns from the generator through a throttle valve to the absorber. The generator, absorber and pump take the compressor's place.](figures/001.jpg "w=0.75")
 
-![Fig. 2: What replaces the compressor [Aloke p.76; Note p.43; Stoecker & Jones Fig. 17-1]. A dashed box sits between the low-pressure vapour from the evaporator and the high-pressure vapour to the condenser (with the expansion valve between condenser and evaporator). Inside the box: "Vapor compression: 1. Compressor. Absorption: 1. Absorb vapor in liquid while removing heat; 2. Elevate pressure of liquid with pump; 3. Release vapor by applying heat."](figures/002.jpg "w=0.6")
+![Fig. 2: What replaces the compressor [Aloke p.76; Kanak p.43; Stoecker & Jones Fig. 17-1]. A dashed box sits between the low-pressure vapour from the evaporator and the high-pressure vapour to the condenser (with the expansion valve between condenser and evaporator). Inside the box: "Vapor compression: 1. Compressor. Absorption: 1. Absorb vapor in liquid while removing heat; 2. Elevate pressure of liquid with pump; 3. Release vapor by applying heat."](figures/002.jpg "w=0.6")
 
-**Refrigerant–absorbent pairs** [Aloke pp.73–74; Note pp.41–42; Ameen §5.1]:
+**Refrigerant–absorbent pairs** [Aloke pp.73–74; Kanak pp.41–42; Ameen §5.1]:
 
 | Pair | Refrigerant | Absorbent | Use |
 |---|---|---|---|
@@ -83,13 +83,13 @@ The three steps that replace the compressor (Stoecker & Jones, Note p.43):
 
 ## 8.3 The practical aqua-ammonia system and its components ★
 
-In a practical system some auxiliaries are added to improve the efficiency. How many to add is a balance between first cost and running cost [Aloke p.77; Note p.44; Ameen §5.2]. Fig. 3 shows the complete aqua-ammonia system with all the auxiliaries and two heat exchangers; Fig. 4 is the same figure as printed in the course slides.
+In a practical system some auxiliaries are added to improve the efficiency. How many to add is a balance between first cost and running cost [Aloke p.77; Kanak p.44; Ameen §5.2]. Fig. 3 shows the complete aqua-ammonia system with all the auxiliaries and two heat exchangers; Fig. 4 is the same figure as printed in the course slides.
 
 ![Fig. 3: Aqua-ammonia absorption system with analyzer, rectifier and two heat exchangers (drawn for this guide after Aloke p.81 and Ameen Fig. 5.5). High-pressure side (above the dotted line): the strong solution (rich in NH$_3$) from the pump passes up through HX-1 (the solution heat exchanger), where it is preheated, and enters the top of the ANALYZER, a tray column sitting on the GENERATOR. Heat $Q_g$ (steam, hot water, exhaust gas or flame) boils NH$_3$ out of the solution in the generator. The vapour rising through the analyzer (NH$_3$ + some H$_2$O vapour) goes to the RECTIFIER (water-cooled, $Q_r$ out), whose condensate returns as reflux (dashed) to the analyzer; dry NH$_3$ vapour goes to the CONDENSER ($Q_c$ out), then to the RECEIVER, then as warm liquid NH$_3$ through HX-2 (the liquid–vapour heat exchanger), where it is subcooled, and on to the expansion valve. Low-pressure side: the EVAPORATOR takes $Q_e$ from the cold space; the cold NH$_3$ vapour passes back through HX-2 (where it is warmed) and on to the ABSORBER (cooling water, $Q_a$ out). The hot weak solution (poor in NH$_3$) leaves the bottom of the generator, gives its heat to the strong solution in HX-1, passes through the throttle valve and is sprayed into the absorber. The absorber's strong solution goes to the pump.](figures/003.jpg "w=1.0")
 
-![Fig. 4: The same system as printed in the slides, "Absorption cycle with auxiliaries and two heat exchangers" [Aloke p.81; Note p.47; Ameen Fig. 5.5]. Pump → strong solution up through the left "Heat exchanger" → top of the "Analyzer" on the "Generator" (heat $Q_g$); vapour → "Rectifier" (its return line goes back to the analyzer) → "High-pressure vapour" → "Condenser" (heat $Q_c$) → "Receiver" → right "Heat exchanger" (annotated "Subcools") → "Expansion valve" → "Evaporator" (heat $Q_e$); "Low-pressure vapour" from the evaporator through the right heat exchanger to the "Absorber" (heat $Q_a$); "Weak solution" from the generator through the left heat exchanger and the "Throttling valve" to the absorber.](figures/004.jpg "w=0.75")
+![Fig. 4: The same system as printed in the slides, "Absorption cycle with auxiliaries and two heat exchangers" [Aloke p.81; Kanak p.47; Ameen Fig. 5.5]. Pump → strong solution up through the left "Heat exchanger" → top of the "Analyzer" on the "Generator" (heat $Q_g$); vapour → "Rectifier" (its return line goes back to the analyzer) → "High-pressure vapour" → "Condenser" (heat $Q_c$) → "Receiver" → right "Heat exchanger" (annotated "Subcools") → "Expansion valve" → "Evaporator" (heat $Q_e$); "Low-pressure vapour" from the evaporator through the right heat exchanger to the "Absorber" (heat $Q_a$); "Weak solution" from the generator through the left heat exchanger and the "Throttling valve" to the absorber.](figures/004.jpg "w=0.75")
 
-**Working, step by step** (states of Fig. 3) [Aloke pp.4–6; Note pp.3–4]:
+**Working, step by step** (states of Fig. 3) [Aloke pp.4–6; Kanak pp.3–4]:
 
 1. NH$_3$ vapour is produced in the **generator** at high pressure from the strong solution by an external heat source. NH$_3$ boils off first, because its boiling point is far lower than that of water; but some water vapour goes with it.
 2. The water vapour carried with the ammonia is removed in the **analyzer** and the **rectifier**, so only dehydrated (dry) NH$_3$ gas enters the condenser.
@@ -100,7 +100,7 @@ In a practical system some auxiliaries are added to improve the efficiency. How 
 7. The **pump** raises the strong solution to the generator pressure and sends it through the **solution heat exchanger**, where it takes heat from the hot weak solution returning from the generator, and into the top of the analyzer.
 8. The solution in the generator becomes weak as NH$_3$ vapour leaves it. The hot weak solution passes through the solution heat exchanger and the **throttle valve**, which reduces its pressure to the absorber pressure, and returns to the absorber.
 
-**Functions of the components** [Aloke pp.77–80; Note pp.44–46; Ameen §5.2]:
+**Functions of the components** [Aloke pp.77–80; Kanak pp.44–46; Ameen §5.2]:
 
 | Component | Function |
 |---|---|
@@ -116,7 +116,7 @@ In a practical system some auxiliaries are added to improve the efficiency. How 
 
 **Why the analyzer and rectifier are needed** [Aloke p.83; Ameen §5.2]: water is volatile at the generator temperature (the boiling points of NH$_3$, −33 °C, and water, 100 °C, differ by only 133 °C), so the vapour leaving the generator carries water vapour. Water that reaches the expansion valve can freeze in it (the evaporator is below 0 °C), and water that reaches the evaporator stays there as liquid: it raises the boiling temperature of the evaporator mixture and reduces the refrigerating effect. The analyzer and rectifier send nearly pure NH$_3$ to the condenser and evaporator. A LiBr–water system needs neither, because LiBr does not evaporate.
 
-**The benefit of the two heat exchangers** [Aloke pp.78–79; Note p.46; Ameen §5.2]:
+**The benefit of the two heat exchangers** [Aloke pp.78–79; Kanak p.46; Ameen §5.2]:
 
 - **HX-1, after the pump (solution heat exchanger).** The strong solution leaves the absorber cold (≈ 30 °C) and must be heated to the generator temperature; the weak solution leaves the generator hot and must be cooled to the absorber temperature before it can absorb. HX-1 lets one stream do the other's job: it recovers heat that would otherwise be thrown away in the absorber. **Less heat is needed in the generator** ($Q_g$ falls), **less cooling is needed in the absorber** ($Q_a$ falls by the same amount), so the **COP rises** and the cooling-water and boiler sizes fall. Typical gain: COP 0.73 → 0.78 in the LiBr example of Solution 8.2.
 - **HX-2, before the expansion valve (liquid–vapour heat exchanger, subcooler).** The cold evaporator vapour subcools the warm condensed liquid. Subcooled liquid flashes less in the expansion valve, so **each kg of refrigerant gives a larger refrigerating effect**, and less refrigerant must be boiled off in the generator per kW of cooling (smaller $Q_g$ and pump flow, higher COP). It also superheats the suction vapour slightly so that no liquid droplets enter the absorber, and warmer vapour carries less un-evaporated liquid (water) out of the evaporator.
@@ -124,8 +124,8 @@ In a practical system some auxiliaries are added to improve the efficiency. How 
 
 > **TRAP: Two slips in the course material on this system**
 >
-> 1. **"The strong solution from the evaporator"** [Note p.44; Aloke p.78; also Ameen §5.2]: nothing but **refrigerant vapour** comes from the evaporator. Write: "the weak solution from the generator and the refrigerant vapour from the evaporator enter the absorber; the strong solution is drawn off". The same slip appears in the label "NH$_3$ vapor + solution" on the evaporator-to-absorber line of the aqua-ammonia figure [Aloke p.83; Note p.48].
-> 2. **Analyzer and rectifier labels swapped** [Note p.48; Aloke p.83]: in that printed figure the box stacked on the generator is labelled "Rectifier" and the one downstream "Analyzer". The analyzer sits **on the generator** (the incoming strong solution flows down through it), and the rectifier comes **after** it, just before the condenser, and is water-cooled (Fig. 3, and the slides' own Fig. 2 [Aloke p.81]). Draw them in that order.
+> 1. **"The strong solution from the evaporator"** [Kanak p.44; Aloke p.78; also Ameen §5.2]: nothing but **refrigerant vapour** comes from the evaporator. Write: "the weak solution from the generator and the refrigerant vapour from the evaporator enter the absorber; the strong solution is drawn off". The same slip appears in the label "NH$_3$ vapor + solution" on the evaporator-to-absorber line of the aqua-ammonia figure [Aloke p.83; Kanak p.48].
+> 2. **Analyzer and rectifier labels swapped** [Kanak p.48; Aloke p.83]: in that printed figure the box stacked on the generator is labelled "Rectifier" and the one downstream "Analyzer". The analyzer sits **on the generator** (the incoming strong solution flows down through it), and the rectifier comes **after** it, just before the condenser, and is water-cooled (Fig. 3, and the slides' own Fig. 2 [Aloke p.81]). Draw them in that order.
 
 ## 8.4 The maximum (Carnot) COP ★
 
@@ -134,7 +134,7 @@ $$COP=\frac{\text{refrigeration rate}}{\text{heat supplied to the generator}}=\f
 
 Real absorption COPs are below 1 (0.6–0.8 single effect), against 3 and above for vapour compression. But the input is low-grade heat that costs roughly a third as much per kJ as electric power, and absorption becomes economic when waste heat is available [Ameen §5.5].
 
-**The ideal system.** An absorption system exchanges heat with three reservoirs (Fig. 5) [Aloke p.82; Note p.47]: it takes $Q_G$ from the heating medium at $T_G$, takes $Q_E$ from the refrigerated space at $T_E$, and rejects $Q_0=Q_G+Q_E+W_p$ to the environment at $T_0$ (absorber and condenser). The best possible device is a **reversible heat engine** between $T_G$ and $T_0$ driving a **reversible refrigerator** between $T_E$ and $T_0$:
+**The ideal system.** An absorption system exchanges heat with three reservoirs (Fig. 5) [Aloke p.82; Kanak p.47]: it takes $Q_G$ from the heating medium at $T_G$, takes $Q_E$ from the refrigerated space at $T_E$, and rejects $Q_0=Q_G+Q_E+W_p$ to the environment at $T_0$ (absorber and condenser). The best possible device is a **reversible heat engine** between $T_G$ and $T_0$ driving a **reversible refrigerator** between $T_E$ and $T_0$:
 $$W=Q_G\,\frac{T_G-T_0}{T_G},\qquad Q_E=W\,\frac{T_E}{T_0-T_E}$$
 $$\boxed{COP_{max}=\frac{Q_E}{Q_G}=\frac{T_G-T_0}{T_G}\cdot\frac{T_E}{T_0-T_E}=\eta_{Carnot}\times COP_{Carnot,R}}$$
 
@@ -146,17 +146,17 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 
 > **TRAP: The COP$_{max}$ denominator in the Note**
 >
-> The Note's boxed formula [Note p.47] reads $COP_{max}=\frac{T_E}{T_G}\left(\frac{T_G-T_0}{T_1-T_E}\right)$. The "$T_1$" is a slip: it is $T_0-T_E$, the lift of the Carnot refrigerator from $T_E$ to the environment. The trends written under it, and every worked number in the sources, use $T_0$.
+> The Note's boxed formula [Kanak p.47] reads $COP_{max}=\frac{T_E}{T_G}\left(\frac{T_G-T_0}{T_1-T_E}\right)$. The "$T_1$" is a slip: it is $T_0-T_E$, the lift of the Carnot refrigerator from $T_E$ to the environment. The trends written under it, and every worked number in the sources, use $T_0$.
 
-> **EXAMPLE 8.1** `[Aloke p.88; Note p.50]` A LiBr system has $T_G=100$ °C, $T_E=10$ °C, $T_a=30$ °C and $T_C=40$ °C. Find the ideal (Carnot) COP.
+> **EXAMPLE 8.1** `[Aloke p.88; Kanak p.50]` A LiBr system has $T_G=100$ °C, $T_E=10$ °C, $T_a=30$ °C and $T_C=40$ °C. Find the ideal (Carnot) COP.
 >
-> **[FROM SOURCE: Aloke p.88; Note p.50]** Take $T_0=(T_a+T_C)/2=(30+40)/2=35$ °C. Temperature **differences** are the same in °C and K, but the ratio $T_E/T_G$ needs kelvin:
+> **[FROM SOURCE: Aloke p.88; Kanak p.50]** Take $T_0=(T_a+T_C)/2=(30+40)/2=35$ °C. Temperature **differences** are the same in °C and K, but the ratio $T_E/T_G$ needs kelvin:
 > $$COP_{max}=\frac{T_E}{T_G}\cdot\frac{T_G-T_0}{T_0-T_E}=\frac{283.15}{373.15}\cdot\frac{100-35}{35-10}=0.7588\times2.6=\mathbf{1.97}$$
 > The real cycle of the same plant reaches only about 0.73 (Solution 8.2): the irreversibilities of heat transfer through finite temperature differences, mixing in the absorber and throttling cost more than half the ideal COP.
 
 ## 8.5 The LiBr–water system and how to solve it ★
 
-**The system** (Fig. 6) [Aloke pp.86–87; Note pp.50, 54; Ameen §5.5]. Water is the refrigerant, a solution of LiBr in water the absorbent. Since LiBr is a salt with practically no vapour pressure, **only water vapour leaves the generator**: no analyzer or rectifier is needed. Because water boils at 5–10 °C only at about 1 kPa, the whole machine runs under a **deep vacuum**: about 1 kPa in the evaporator and absorber, 5–9 kPa in the generator and condenser. In commercial chillers the generator and condenser share one shell (same pressure) and the evaporator and absorber share another; cooling water from the cooling tower passes in series through the absorber and then the condenser [Ameen §5.5].
+**The system** (Fig. 6) [Aloke pp.86–87; Kanak pp.50, 54; Ameen §5.5]. Water is the refrigerant, a solution of LiBr in water the absorbent. Since LiBr is a salt with practically no vapour pressure, **only water vapour leaves the generator**: no analyzer or rectifier is needed. Because water boils at 5–10 °C only at about 1 kPa, the whole machine runs under a **deep vacuum**: about 1 kPa in the evaporator and absorber, 5–9 kPa in the generator and condenser. In commercial chillers the generator and condenser share one shell (same pressure) and the evaporator and absorber share another; cooling water from the cooling tower passes in series through the absorber and then the condenser [Ameen §5.5].
 
 ![Fig. 6: LiBr–water absorption system with a solution heat exchanger and the state numbers used in this guide (after the Q-paper figures and Aloke p.87). The pump takes dilute LiBr solution from the ABSORBER ($T_a$, heat $q_a$ out) and delivers it ($\dot m_1$, state 1) up through the solution heat exchanger (left coil) to the GENERATOR at state 2. Heat $q_g$ enters the generator ($T_G$). Water vapour (refrigerant) leaves the generator at state 5 for the CONDENSER ($T_C$, $q_c$ out); liquid water (state 6) passes through the expansion valve to the EVAPORATOR ($T_E$, $q_e$ in); water vapour leaves the evaporator at state 7 for the absorber. The concentrated solution leaves the generator at state 3, gives heat to the dilute solution in the heat exchanger (right coil), leaves it at state 4 and passes through the throttle valve into the absorber. A dotted line separates the high pressure $p_H=p_{sat}(T_C)$ (generator, condenser) from the low pressure $p_L=p_{sat}(T_E)$ (absorber, evaporator).](figures/006.jpg "w=0.85")
 
@@ -175,11 +175,11 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 
 > **TRAP: $h_5$ is not $h_g$ at 100 °C**
 >
-> The slides, the Note and Ameen take $h_5=h_g(100\ °\text{C})=2676$ kJ/kg [Aloke p.89; Note p.52; Ameen Ex. 5.1]. That is saturated vapour at 101.4 kPa. The vapour leaving a generator at 100 °C is at the condenser pressure (7.38 kPa for 40 °C), where water saturates at only 40 °C: it is superheated by 60 K, and $h\approx2688$ kJ/kg. The difference raises $q_g$ by about 12 kJ per kg of refrigerant (1.8 kW in Solution 8.2) and **lowers the COP by about 0.003**. Either value earns the marks if stated; this guide uses 2688.
+> The slides, the Note and Ameen take $h_5=h_g(100\ °\text{C})=2676$ kJ/kg [Aloke p.89; Kanak p.52; Ameen Ex. 5.1]. That is saturated vapour at 101.4 kPa. The vapour leaving a generator at 100 °C is at the condenser pressure (7.38 kPa for 40 °C), where water saturates at only 40 °C: it is superheated by 60 K, and $h\approx2688$ kJ/kg. The difference raises $q_g$ by about 12 kJ per kg of refrigerant (1.8 kW in Solution 8.2) and **lowers the COP by about 0.003**. Either value earns the marks if stated; this guide uses 2688.
 
-> **EXAMPLE 8.2** `[Aloke p.88; Note pp.51–52; Stoecker & Jones Ex. 17.1]` For $T_G=100$ °C, $T_C=40$ °C, $T_a=30$ °C, $T_E=10$ °C, read the concentrations and enthalpies of the solution at the absorber outlet (1) and generator outlet (3), and the enthalpy of the dilute solution heated to 52 °C (2).
+> **EXAMPLE 8.2** `[Aloke p.88; Kanak pp.51–52; Stoecker & Jones Ex. 17.1]` For $T_G=100$ °C, $T_C=40$ °C, $T_a=30$ °C, $T_E=10$ °C, read the concentrations and enthalpies of the solution at the absorber outlet (1) and generator outlet (3), and the enthalpy of the dilute solution heated to 52 °C (2).
 >
-> **[FROM SOURCE: Aloke pp.88–89; Note pp.51–52]**
+> **[FROM SOURCE: Aloke pp.88–89; Kanak pp.51–52]**
 >
 > - Pressures (Table 1): $p_H=p_{sat}(40\ °\text{C})=7.38$ kPa; $p_L=p_{sat}(10\ °\text{C})=1.23$ kPa.
 > - Chart 4, absorber: 10 °C line × 30 °C solution line → $x_1=$ **50 %**. Generator: 40 °C line × 100 °C solution line → $x_3=$ **66.4 %** (Fig. 7). The ASHRAE Dühring correlation gives 49.0 % and 66.1 %.
@@ -207,23 +207,23 @@ $$\dot m_1x_1=\dot m_3x_3\Rightarrow\dot m_3=\dot m_1\frac{x_1}{x_3},\qquad\dot 
 $$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2,\quad q_c=\dot m_5(h_5-h_6),\quad q_e=\dot m_5(h_7-h_6),\quad q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$$
 $$COP=\frac{q_e}{q_g},\qquad\text{check: }q_g+q_e=q_c+q_a$$
 
-**The solution heat exchanger** [Aloke pp.90–91; Note pp.54–56]. If the dilute solution enters the generator at a given temperature $T_2$, read $h_2$ at ($x_1$, $T_2$). Only $q_g$ changes (and $q_a$, by the same amount); $q_e$ does not. The heat exchanger balance gives the concentrated-solution enthalpy at its outlet:
+**The solution heat exchanger** [Aloke pp.90–91; Kanak pp.54–56]. If the dilute solution enters the generator at a given temperature $T_2$, read $h_2$ at ($x_1$, $T_2$). Only $q_g$ changes (and $q_a$, by the same amount); $q_e$ does not. The heat exchanger balance gives the concentrated-solution enthalpy at its outlet:
 $$\dot m_1(h_2-h_1)=\dot m_3(h_3-h_4)\Rightarrow h_4=h_3-\frac{\dot m_1}{\dot m_3}(h_2-h_1)$$
 
 ### Crystallization ★
 
 If the LiBr concentration is too high, or the solution too cold, for its concentration, the salt comes out of solution as crystals. They form a **slush** that blocks the pipes (usually the concentrated-solution line from the heat exchanger to the absorber) and stops the unit [Ameen §5.6; Aloke p.91].
 
-- **Where:** most likely where the solution **leaving the generator leaves the heat exchanger** (state 4): it has the highest concentration and has just been cooled [Aloke p.91; Note p.56].
+- **Where:** most likely where the solution **leaving the generator leaves the heat exchanger** (state 4): it has the highest concentration and has just been cooled [Aloke p.91; Kanak p.56].
 - **How to check:** plot ($x_3$, $h_4$) on Chart 5. If it lies beyond (to the right of / below) the crystallization line, the solution crystallizes.
-- **Why a low condensing temperature is dangerous:** a lower $T_C$ lowers $p_H$; at the same generator temperature more water boils off, so $x_3$ rises (66.4 → 69 % for 40 → 34 °C in Fig. 7), and the cooled solution at 4 falls past the line. **Modern systems keep the condensing pressure up** even when cold cooling water is available, to avoid crystallization [Aloke p.91; Note p.56]. Other causes: a generator that is too hot, air leakage (raises the absorber pressure), a power failure that lets the hot concentrated solution cool in the pipes. Remedies: controls that limit $T_G$ or the concentration, keeping $T_C$ up, a by-pass (anti-crystallization) line, and dilution cycles at shutdown.
+- **Why a low condensing temperature is dangerous:** a lower $T_C$ lowers $p_H$; at the same generator temperature more water boils off, so $x_3$ rises (66.4 → 69 % for 40 → 34 °C in Fig. 7), and the cooled solution at 4 falls past the line. **Modern systems keep the condensing pressure up** even when cold cooling water is available, to avoid crystallization [Aloke p.91; Kanak p.56]. Other causes: a generator that is too hot, air leakage (raises the absorber pressure), a power failure that lets the hot concentrated solution cool in the pipes. Remedies: controls that limit $T_G$ or the concentration, keeping $T_C$ up, a by-pass (anti-crystallization) line, and dilution cycles at shutdown.
 - **Freezing at part load:** at reduced load the refrigerant water can freeze; capacity is controlled by reducing the refrigerant water pump flow, reducing the generator temperature or raising the condensing temperature [Ameen §5.6].
 
 ## 8.6 Comparisons ★
 
 ### Vapour compression vs vapour absorption
 
-[Aloke pp.7, 85; Note p.5; Ameen §5.4]
+[Aloke pp.7, 85; Kanak p.5; Ameen §5.4]
 
 | Aspect | Vapour absorption | Vapour compression |
 |---|---|---|
@@ -244,7 +244,7 @@ If the LiBr concentration is too high, or the solution too cold, for its concent
 
 ### LiBr–water vs aqua-ammonia
 
-[Aloke p.84; Note p.48; Ameen §5.3]
+[Aloke p.84; Kanak p.48; Ameen §5.3]
 
 | Aspect | LiBr–water | NH$_3$–water (aqua-ammonia) |
 |---|---|---|
@@ -331,7 +331,7 @@ $$\dot m_{steam}=\frac{57.20}{1981.4}=0.02887\ \text{kg/s}=\mathbf{103.9\ kg/h}$
 
 > **TRY 8.2** `[PP 12-13 Q4(b), 15]` Estimate refrigerant flow rate and COP of the system shown in Fig. for Q. No. 4(b). [Fig. for Q. No. 4(b): LiBr–water system; generator 100 °C, condenser 40 °C, absorber 30 °C, evaporator 10 °C; solution pump $w$ = 0.6 kg/s; states 1–5.]
 
-**Solution 8.2** **[FROM SOURCE: Aloke pp.86–91; Note pp.49–56, corrected]** This is the slides' problem (Stoecker & Jones Ex. 17.1). The paper asks only the real cycle without heat exchanger (part ii below); parts (i), (iii) and (iv) are the slide version, which 2013-14, 2015-16 and 2020-21 ask. This is the model answer for the whole family. The paper's states 1–5 are this guide's 1 (= 2), 3 (= 4), 5, 6 and 7.
+**Solution 8.2** **[FROM SOURCE: Aloke pp.86–91; Kanak pp.49–56, corrected]** This is the slides' problem (Stoecker & Jones Ex. 17.1). The paper asks only the real cycle without heat exchanger (part ii below); parts (i), (iii) and (iv) are the slide version, which 2013-14, 2015-16 and 2020-21 ask. This is the model answer for the whole family. The paper's states 1–5 are this guide's 1 (= 2), 3 (= 4), 5, 6 and 7.
 
 *Sketch:* Fig. 6 without the heat exchanger, with $T_G=100$ °C, $T_C=40$ °C, $T_E=10$ °C, $T_a=30$ °C, $\dot m_1=0.6$ kg/s.
 
@@ -369,7 +369,7 @@ On Chart 5 the crystallization line at 69 % is at about −73 kJ/kg; the point (
 
 > **TRAP: The Note's and the slides' numbers for this problem**
 >
-> - **$x_3=0.667$ [Note pp.52–53; Aloke p.89]** should be **0.664**, the value the slides' own chart construction reads (Aloke p.88). With 0.667 the Note gets $\dot m_3=0.45$, $\dot m_5=0.15$ kg/s; the COP moves by only about 0.001.
+> - **$x_3=0.667$ [Kanak pp.52–53; Aloke p.89]** should be **0.664**, the value the slides' own chart construction reads (Aloke p.88). With 0.667 the Note gets $\dot m_3=0.45$, $\dot m_5=0.15$ kg/s; the COP moves by only about 0.001.
 > - **$h_5=2676$ kJ/kg** is $h_g$ at 100 °C; the vapour is superheated at 7.38 kPa, $h\approx2688$ kJ/kg (§8.5 TRAP). This lowers the COP by about 0.003.
 > - Printed results: Note COP **0.737** without and **0.784** with the heat exchanger; slides 0.735 (a misprint: their own $348.2/473.3=0.736$) and 0.783. With $x_3=0.664$ and 2676 the book-value route gives 0.735 and 0.783; the corrected values are **0.733 and 0.780**. Any of these, with the method shown, is a full-mark answer.
 > - **Part (iv):** the slides read $h_3=-57$ kJ/kg at 69 %, 100 °C and get $h_4=-123.2$ kJ/kg (rounded to −120 on the slide). The data-book chart's 100 °C curve is almost flat above 64 % and reads about −53 kJ/kg there, so $h_4\approx-119$ kJ/kg. The conclusion is the same: crystallization.
@@ -470,7 +470,7 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 
 > **TRY 8.9** `[PP 21-22 Q6(b), 18]` Describe an aqua-ammonia vapor absorption refrigeration system with necessary schematic diagram. Hence, analyze the benefit of using two heat exchangers; one after the pump and the another before the expansion valve.
 
-**Solution 8.9** **[FROM SOURCE: Aloke pp.4–6, 77–81; Note pp.3–4, 44–47; Ameen §5.2]** Draw Fig. 3 (about a third of the marks): generator with the analyzer on top, rectifier, condenser, receiver, liquid–vapour heat exchanger, expansion valve, evaporator, absorber, pump, solution heat exchanger, throttle valve; mark $Q_g$ in, $Q_c$, $Q_r$, $Q_a$ out, $Q_e$ in, the strong and weak solutions and the high/low pressure sides.
+**Solution 8.9** **[FROM SOURCE: Aloke pp.4–6, 77–81; Kanak pp.3–4, 44–47; Ameen §5.2]** Draw Fig. 3 (about a third of the marks): generator with the analyzer on top, rectifier, condenser, receiver, liquid–vapour heat exchanger, expansion valve, evaporator, absorber, pump, solution heat exchanger, throttle valve; mark $Q_g$ in, $Q_c$, $Q_r$, $Q_a$ out, $Q_e$ in, the strong and weak solutions and the high/low pressure sides.
 
 *Description.*
 
@@ -494,7 +494,7 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 
 > **TRY 8.11** `[PP 18-19 Q6(a), 17]` Describe a vapor absorption refrigeration system with proper schematic diagram. Hence, discuss the function of generator, absorber, heat exchangers, analyzer and rectifier.
 
-**Solution 8.11** **[FROM SOURCE: Aloke pp.77–81; Note pp.44–47; Ameen §5.2]** Draw Fig. 3 and describe it as in Solution 8.9 (points 1–7). Then the functions:
+**Solution 8.11** **[FROM SOURCE: Aloke pp.77–81; Kanak pp.44–47; Ameen §5.2]** Draw Fig. 3 and describe it as in Solution 8.9 (points 1–7). Then the functions:
 
 - **Generator:** a shell partly filled with strong solution, kept at a constant level over submerged steam, hot-gas or hot-water tubes; external heat (process or waste steam, solar-heated water) drives NH$_3$ vapour out of the solution at the high pressure.
 - **Absorber:** one or more shell-and-tube vessels with cooling-water tubes. The weak solution from the generator and the NH$_3$ vapour from the evaporator enter; the strong solution is drawn off. The cooling water removes the heat of condensation and heat of absorption; the lower the temperature, the richer the solution.
@@ -504,7 +504,7 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 
 > **TRY 8.12** `[PP 12-13 Q4(a), 20]` Make brief comparisons between (i) vapour compression vs. vapour absorption chillers (ii) LiBr vs. NH$_3$ absorption systems.
 
-**Solution 8.12** **[FROM SOURCE: Aloke pp.7, 84–85; Note pp.5, 48–49; Ameen §5.3–5.4]** About ten points each, as tables (the two tables of §8.6).
+**Solution 8.12** **[FROM SOURCE: Aloke pp.7, 84–85; Kanak pp.5, 48–49; Ameen §5.3–5.4]** About ten points each, as tables (the two tables of §8.6).
 
 *(i) Vapour compression vs vapour absorption chillers.*
 
@@ -558,7 +558,7 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 > - **LiBr method:** Chart 4: $x_1$ at ($T_E$ line, $T_a$), $x_3$ at ($T_C$ line, $T_G$). $\dot m_3=\dot m_1x_1/x_3$, $\dot m_5=\dot m_1-\dot m_3$. Chart 5: $h_1$, $h_3$, $h_2$. $h_5=2688$ (not 2676), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$. $q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$, $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; COP $=q_e/q_g$.
 > - **HX:** $h_4=h_3-(\dot m_1/\dot m_3)(h_2-h_1)$; plot ($x_3$, $h_4$) on Chart 5: beyond the crystallization line → crystallizes (at the HX outlet). Low $T_C$ → higher $x_3$ → crystallization.
 > - **Answers:** 100/40/30/10, 0.6 kg/s: $x$ 0.50/0.664, $\dot m_5=0.1482$ kg/s, **COP 0.733**, with HX (52 °C) **0.780**, Carnot 1.97, 34 °C → crystallizes (12-13) · 100/40/30/9, 0.75: 1.89, 0.728, 0.772, 35 °C crystallizes (13-14) · 100/38/31/8, 0.5: 1.86, 0.722, 0.760, 33 °C crystallizes (15-16) · 100/43/28/9, 0.5: 1.84, 0.721, 0.770 (20-21) · 100/34/7/28, 0.58: $q_g$ 486.1, $q_c$ 385.2, $q_a$ 459.7, $q_e$ 358.8 kW, COP 0.738 (16-17) · 100/36/6/28: 0.45 kg/s 359.2 / 280.8 kW, 0.42 kg/s 335.2 / 262.1 kW, COP 0.728 (18-19, 22-23) · NH$_3$, steam 2 bar, −5/30 °C, 20 TR: COP$_{max}$ 1.757, 103.9 kg/h (11-12).
-> - **Errata:** COP$_{max}$ denominator is $T_0-T_E$ (Note p.47 writes $T_1$); "strong solution from the evaporator" is refrigerant vapour (Note p.44); rectifier/analyzer labels swapped (Note p.48, Aloke p.83); $x_3=0.667$ → 0.664 and $h_5=2676$ → 2688 (Note pp.52–54).
+> - **Errata:** COP$_{max}$ denominator is $T_0-T_E$ (Kanak p.47 writes $T_1$); "strong solution from the evaporator" is refrigerant vapour (Kanak p.44); rectifier/analyzer labels swapped (Kanak p.48, Aloke p.83); $x_3=0.667$ → 0.664 and $h_5=2676$ → 2688 (Kanak pp.52–54).
 
 ## 8.10 Self-test
 
