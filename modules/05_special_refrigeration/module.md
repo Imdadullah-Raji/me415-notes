@@ -1,11 +1,11 @@
 <!-- pagebreak -->
-# Module 9: Special refrigeration systems and gas liquefaction
+# Module 5: Special refrigeration systems and gas liquefaction
 
 | | |
 |---|---|
 | **Where it appears** | 10 of 11 papers, 2012-13 to 2023-24 (not 2011-12), always Section B except 2023-24 (Section A). The Linde plant is asked in 7 papers; steam-jet refrigeration in 6; aircraft/air-cycle cooling in 4; cascade liquefaction of natural gas, the Joule–Thomson coefficient, magnetic and thermoelectric refrigeration once to three times each |
 | **Share of all marks** | 12.2% (372 of 3055 weighted marks): 23 parts, all theory. Gas liquefaction (SP2) 182 marks in 11 parts; steam jet (SP1) 91 marks in 6 parts; air cycle and aircraft (SP3) 67 marks in 4 parts; magnetic and thermoelectric (SP4) 32 marks in 2 parts |
-| **Time** | core 3 h (§9.1, §9.4, §9.5, §9.7 and Solutions 9.1, 9.5, 9.7, 9.9, 9.19), full 5 h (all 23 solutions and the worked examples) |
+| **Time** | core 3 h (§5.1, §5.4, §5.5, §5.7 and Solutions 9.1, 9.5, 9.7, 9.9, 9.19), full 5 h (all 23 solutions and the worked examples) |
 | **Sources** | Aloke pp.8–23, 92–103; Note pp.6–12, 64–69; Ameen §6.1–6.3, §8.2, §8.4; Hundy §2.7; Data Book Table 1 (R718, water, at the end of this module); nitrogen and air properties from CoolProp (values given in the text) |
 
 **How it has been asked:**
@@ -28,7 +28,7 @@
 > - **Thermoelectric:** Seebeck $E=\alpha(T_1-T_2)$; Peltier $Q=\pi I$, $\pi=\alpha T$; cooling of a couple $Q_c=\alpha IT_c-\tfrac12I^2R-K(T_h-T_c)$; input $W=\alpha I(T_h-T_c)+I^2R$; $COP=Q_c/W$.
 > - **Magnetic:** adiabatic magnetization heats, adiabatic demagnetization cools (magnetocaloric effect); paramagnetic salts (gadolinium sulphate) from ≈ 1 K reach ≈ 0.001 K.
 
-## 9.1 Steam-jet (water-vapour) refrigeration ★
+## 5.1 Steam-jet (water-vapour) refrigeration ★
 
 **What it is.** A refrigeration system in which **water is the refrigerant** and the compressor is replaced by a **steam ejector** (thermocompressor). Refrigeration is obtained by the direct evaporation and self-cooling of water: water sprayed into a vessel kept under a high vacuum boils at a low temperature, and the latent heat of the part that evaporates is taken from the rest, which is chilled [Aloke pp.8–10; Note pp.6–7; Ameen §6.3]. The chilled water is pumped to the air-conditioning plant or the process.
 
@@ -82,7 +82,7 @@ For a running plant, write the steady-flow energy balance on the flash chamber. 
 $$\dot m_r\,h_{f,r}=\dot m_v\,h_g+(\dot m_r-\dot m_v)\,h_{f,e}\qquad\Rightarrow\qquad x=\frac{\dot m_v}{\dot m_r}=\frac{h_{f,r}-h_{f,e}}{h_g-h_{f,e}}$$
 The **refrigerating effect** is the heat the chilled water takes from the load, $Q=\dot m_c\,(h_{f,r}-h_{f,e})\approx\dot m_c\,c_p\,(T_r-T_e)$, and it equals (with make-up water at $T_r$) $\dot m_v\,(h_g-h_{f,r})$: **every kg of vapour the ejector removes carries away about 2450 kJ**.
 
-> **EXAMPLE 9.1** `[Aloke p.9; Note p.6]` Check the source statement: 1 kg of water is flashed from 100 kg in a flash chamber. Find the fall in temperature of the remaining water, (a) with the source's $h_{fg}=2385$ kJ/kg and (b) with the latent heat at a chilled-water temperature of 10 °C from the water table.
+> **EXAMPLE 5.1** `[Aloke p.9; Note p.6]` Check the source statement: 1 kg of water is flashed from 100 kg in a flash chamber. Find the fall in temperature of the remaining water, (a) with the source's $h_{fg}=2385$ kJ/kg and (b) with the latent heat at a chilled-water temperature of 10 °C from the water table.
 >
 > **[FROM SOURCE: Aloke p.9; Note p.6]**
 >
@@ -90,7 +90,7 @@ The **refrigerating effect** is the heat the chilled water takes from the load, 
 >
 > (b) Table 1, 10 °C row: $h_f=42.02$, $h_g=2519.21$ kJ/kg, so $h_{fg}=2477.19$ kJ/kg. $\Delta T=\dfrac{2477.19}{99\times4.18}=$ **5.99 °C**. The value 2385 kJ/kg is $h_{fg}$ at about 49 °C, not at chilled-water temperatures; the difference is small (about 4 %). Either way: **1 % flashed ≈ 6 °C of cooling**.
 
-> **EXAMPLE 9.2** `[TUTOR-GENERATED]` A steam-jet chiller supplies chilled water at 5 °C to an air-conditioning load of 100 kW; the water returns at 15 °C and is sprayed into the flash chamber. Make-up water enters at 15 °C. Find (a) the flash-chamber pressure, (b) the fraction of sprayed water that flashes, (c) the chilled-water flow, (d) the vapour the ejector must remove, in kg/s and in m³/s. (e) If the condenser works at 38 °C, what compression ratio must the ejector produce?
+> **EXAMPLE 5.2** `[TUTOR-GENERATED]` A steam-jet chiller supplies chilled water at 5 °C to an air-conditioning load of 100 kW; the water returns at 15 °C and is sprayed into the flash chamber. Make-up water enters at 15 °C. Find (a) the flash-chamber pressure, (b) the fraction of sprayed water that flashes, (c) the chilled-water flow, (d) the vapour the ejector must remove, in kg/s and in m³/s. (e) If the condenser works at 38 °C, what compression ratio must the ejector produce?
 >
 > **Solution.** Table 1 (end of this module), rows 5 °C: $p=0.87$ kPa, $h_f=21.02$, $h_g=2510.06$ kJ/kg, $v_g=147.01$ m³/kg; 15 °C: $h_f=62.98$ kJ/kg.
 >
@@ -122,12 +122,12 @@ The **refrigerating effect** is the heat the chilled water takes from the load, 
 **Limitations (disadvantages)** [Aloke p.11; Note p.7; Ameen §6.3]:
 
 1. A **high vacuum** must be kept in the flash chamber (≈ 1 kPa): air leaks in and must be removed by a secondary ejector or vacuum pump.
-2. A **tremendous volume of vapour** must be handled (6 m³/s per 100 kW, Example 9.2), so direct evaporation is limited to large units with ejectors.
+2. A **tremendous volume of vapour** must be handled (6 m³/s per 100 kW, Example 5.2), so direct evaporation is limited to large units with ejectors.
 3. **Low efficiency (COP):** the ejector is a poor compressor. The condenser must remove **about twice as much heat per TR** as that of a vapour-compression system, so a large condenser and much cooling water are needed.
 4. **Temperature limit:** the refrigerant freezes at 0 °C, so it is not feasible for water below about **4 °C**: it **cannot make ice** and is limited to air conditioning and process chilled water (4–10 °C).
 5. It needs a supply of steam (a boiler) and of cheap condensing water; it has largely been superseded by more efficient vapour-compression and absorption chillers.
 
-## 9.2 Liquefaction of gases: the two routes ★
+## 5.2 Liquefaction of gases: the two routes ★
 
 **Where a gas must go.** A gas becomes liquid when its state point (p, T) is taken under the saturation dome, between the saturated-liquid and saturated-vapour lines: it becomes "wet" and the wetness condenses into liquid (Fig. 3) [Aloke p.92; Note p.64]. This is possible only **below the critical temperature**: above it no pressure, however high, gives a liquid. So heat (enthalpy) must be taken out of the gas until it is below its critical temperature and inside the dome.
 
@@ -135,10 +135,10 @@ The **refrigerating effect** is the heat the chilled water takes from the load, 
 
 **The two ways** [Aloke p.92; Note p.64; Ameen §8.4]:
 
-1. **Cooling by heat transfer to a cold reservoir (refrigeration).** The gas is cooled at constant pressure in the evaporator of a refrigeration plant, often several plants in series (a **cascade**, §9.3). Practical when the liquefaction temperature is **not very low**: hydrocarbons such as butane and propane (which are liquid at room temperature under moderate pressure), LPG and LNG.
+1. **Cooling by heat transfer to a cold reservoir (refrigeration).** The gas is cooled at constant pressure in the evaporator of a refrigeration plant, often several plants in series (a **cascade**, §5.3). Practical when the liquefaction temperature is **not very low**: hydrocarbons such as butane and propane (which are liquid at room temperature under moderate pressure), LPG and LNG.
 2. **Expansion.** The gas is compressed, cooled to near ambient, then expanded:
-   - **throttling** (an irreversible adiabatic expansion through a valve or porous plug, at constant enthalpy, with no work): the **Joule–Thomson** expansion (§9.4), used in the **Linde** process (§9.5);
-   - **expansion in an engine or turbine** that does work (reversible adiabatic, nearly isentropic): "if the gas does work against a device (e.g. a turbine) whilst expanding adiabatically then the internal energy will be reduced and liquefaction may ensue" [Aloke p.97]. This is used in the **Claude** process (§9.5).
+   - **throttling** (an irreversible adiabatic expansion through a valve or porous plug, at constant enthalpy, with no work): the **Joule–Thomson** expansion (§5.4), used in the **Linde** process (§5.5);
+   - **expansion in an engine or turbine** that does work (reversible adiabatic, nearly isentropic): "if the gas does work against a device (e.g. a turbine) whilst expanding adiabatically then the internal energy will be reduced and liquefaction may ensue" [Aloke p.97]. This is used in the **Claude** process (§5.5).
 
 **Why "liquefaction by cooling" cannot give oxygen (or air, nitrogen, hydrogen)** [Aloke p.93; Ameen §8.1–8.2]. Ordinary refrigeration and cascades reach about −100 to −157 °C at best (Ameen: R14 as the low stage reaches −157 °C). Oxygen has a critical temperature of −118.6 °C and a normal boiling point of −183 °C; nitrogen −147 °C and −196 °C (Table 9.1). To liquefy them by cooling, the evaporator of the last stage would have to be below about −183 °C, and the only fluids that boil there are the permanent gases themselves (N$_2$, Ne, H$_2$, He), which would first have to be liquefied. In addition, air is a mixture: oxygen is extracted by **liquefying air by expansion** (Linde or Claude plant) and then separating O$_2$ (bp −183 °C) from N$_2$ (−196 °C) by fractional distillation. Liquefaction by cooling suits only gases whose boiling points are close to ambient.
 
@@ -156,7 +156,7 @@ The **refrigerating effect** is the heat the chilled water takes from the load, 
 | Hydrogen | −252.8 °C | −240.0 °C | −73 °C = 200 K (CoolProp ≈ 201 K) |
 | Helium | −268.9 °C | −268.0 °C | −232 °C = 41 K (CoolProp ≈ 46 K) |
 
-## 9.3 Cascade refrigeration and the liquefaction of natural gas ★
+## 5.3 Cascade refrigeration and the liquefaction of natural gas ★
 
 **Why a cascade.** To reach a low temperature in one vapour-compression plant, the evaporator pressure must be very low. This raises the specific volume of the suction vapour (a larger compressor and evaporator), and the very large temperature lift lowers the COP and raises the discharge temperature [Aloke p.94]. No single refrigerant works well over the whole range: one that evaporates at −100 °C at a reasonable pressure has its critical point below ambient and cannot condense against cooling water. **The cascade splits the temperature drop between two (or more) working fluids**, each chosen for its own range, so the plant is more cost-effective [Aloke p.93; Note p.65].
 
@@ -182,7 +182,7 @@ Each compressor ($W_1$, $W_2$, $W_3$) works over a moderate range; the heat take
 
 ![Fig. 5: Plant for liquefaction of natural gas by a ternary cascade [Aloke p.96]. Three stacked vapour-compression loops, each with a compressor (W$_3$, W$_2$, W$_1$) and a throttle valve: propane (top), whose condenser rejects $Q_4$ to "cooling water or air"; ethane (middle), whose condenser rejects heat $Q_3$ to the propane evaporator; methane (bottom), whose condenser rejects $Q_2$ to the ethane evaporator. The natural-gas line (thick grey) enters at the right ("Natural gas"), passes the propane evaporator (giving up $Q_3'$) and leaves as "Gas at 237 K", passes the ethane evaporator (giving up $Q_2'$) and leaves as "Liquefied gas at 190 K", then passes the methane evaporator (giving up $Q_1'$) and leaves as "Stored gas at 120 K".](figures/005.jpg "w=0.7")
 
-## 9.4 The Joule–Thomson effect and the inversion temperature ★
+## 5.4 The Joule–Thomson effect and the inversion temperature ★
 
 **The porous-plug experiment** (Fig. 6) [Aloke pp.97–98; Note p.67]. Joule and Thomson forced a gas steadily through a porous plug in an insulated pipe, from a high pressure $p_1$ (temperature $T_1$) to a lower pressure $p_2$, and measured $T_2$. No heat crosses the insulated walls and no work is done except the flow work, so the steady-flow energy equation gives
 $$h_1=h_2\qquad\text{(throttling is isenthalpic)}$$
@@ -223,7 +223,7 @@ The inversion point is where the two balance. (With the van der Waals equation a
 
 **Isenthalpic versus isentropic expansion** [Ameen §8.2, §8.4]. A work-producing expansion (expander, turbine) follows nearly $s$ = constant and always cools, even an ideal gas: $T_2/T_1=(p_2/p_1)^{(\gamma-1)/\gamma}$; the cooling is large and the work can be recovered. Throttling (constant $h$) cools only a real gas below its inversion temperature, and much less; but a valve is simple, has no moving parts at very low temperature, and can handle a liquid–vapour mixture. On a T–s diagram the isentrope is vertical; the isenthalps are nearly horizontal at low pressure and high temperature (little cooling) and slope down more steeply at high pressure and low temperature [Ameen Fig. 8.2].
 
-> **EXAMPLE 9.3** `[TUTOR-GENERATED]` Nitrogen at 200 bar and 300 K is throttled to 1 bar. (a) Find the outlet temperature. (b) Is any liquid formed? (c) Find the mean Joule–Thomson coefficient and compare it with $\mu_{JT}$ at 300 K, 1 bar. Properties from CoolProp (the data book has no nitrogen tables).
+> **EXAMPLE 5.3** `[TUTOR-GENERATED]` Nitrogen at 200 bar and 300 K is throttled to 1 bar. (a) Find the outlet temperature. (b) Is any liquid formed? (c) Find the mean Joule–Thomson coefficient and compare it with $\mu_{JT}$ at 300 K, 1 bar. Properties from CoolProp (the data book has no nitrogen tables).
 >
 > **Solution.** (a) Throttling: $h_2=h_1=h(300\text{ K},200\text{ bar})=279.11$ kJ/kg (CoolProp). At 1 bar this enthalpy corresponds to $T_2=$ **269.2 K** (the orange arrow of Fig. 9). The drop is $\Delta T=300-269.2=$ **30.8 K**.
 >
@@ -231,7 +231,7 @@ The inversion point is where the two balance. (With the van der Waals equation a
 >
 > (c) Mean $\mu_{JT}=\Delta T/\Delta p=30.8/199=$ **0.155 K/bar**; at 300 K, 1 bar CoolProp gives **0.212 K/bar** (the isenthalp is flatter at high pressure, Fig. 9).
 >
-> This is why a liquefier must **compound** the cooling: the cold throttled gas is sent back through a counter-flow heat exchanger to pre-cool the next high-pressure gas, so each throttle starts colder, where $\mu_{JT}$ is larger, until the throttled gas enters the dome (§9.5).
+> This is why a liquefier must **compound** the cooling: the cold throttled gas is sent back through a counter-flow heat exchanger to pre-cool the next high-pressure gas, so each throttle starts colder, where $\mu_{JT}$ is larger, until the throttled gas enters the dome (§5.5).
 
 **Why $\mu_{JT}$ and the inversion temperature matter in a liquefier** [Aloke pp.99–101; Ameen §8.4]:
 
@@ -240,7 +240,7 @@ The inversion point is where the two balance. (With the van der Waals equation a
 3. **Best pressure:** for a given inlet temperature, the largest temperature drop is obtained by throttling from the pressure on the inversion curve (the top of the isenthalp, point B), since any pressure above it first heats the gas (A–B). Linde plants for air work at 100–200 bar, near the inversion pressure at room temperature.
 4. **Thermodynamics of the yield:** in the simple Linde cycle the liquid yield $y=(h_1-h_2)/(h_1-h_f)$ is positive only if $h(T_1,p_{low})>h(T_1,p_{high})$, i.e. if the gas has a positive J–T effect at the compressor-outlet temperature.
 
-## 9.5 The Linde liquefaction plant ★
+## 5.5 The Linde liquefaction plant ★
 
 ### The simple Linde–Hampson cycle
 
@@ -251,7 +251,7 @@ Carl von Linde (1895) liquefied air with a J–T valve and a **counter-flow rege
 3. It is **throttled** (J–T valve) from 3 to 4, at constant enthalpy, into the liquid–vapour region at 1 bar.
 4. In the **separator** the liquid $y$ (state f) is drawn off; the saturated vapour $1-y$ (state g) returns through the heat exchanger, cooling the incoming gas, and leaves warm at 1. **Make-up gas** $y$ is added to replace the liquid.
 
-**Start-up.** At first there is no cold gas: the throttled gas is only about 30 K colder (Example 9.3). It returns through the heat exchanger and pre-cools the next high-pressure gas, which is throttled from a lower temperature and gets colder still. The cooling **accumulates**, and after some time the gas leaving the valve is inside the dome and liquid starts to collect. Then the plant runs in steady state.
+**Start-up.** At first there is no cold gas: the throttled gas is only about 30 K colder (Example 5.3). It returns through the heat exchanger and pre-cools the next high-pressure gas, which is throttled from a lower temperature and gets colder still. The cooling **accumulates**, and after some time the gas leaving the valve is inside the dome and liquid starts to collect. Then the plant runs in steady state.
 
 ![Fig. 10: Simple Linde–Hampson plant and its T–s diagram, drawn for this guide (nitrogen, CoolProp). (a) Schematic: gas at 1 (blue) plus make-up gas y (green) enters the multi-stage compressor with intercoolers (work $W_{in}$), then the after-cooler (heat to water), leaving at 2 (ambient temperature, 200 bar); it flows down the hot side of the counter-flow regenerative heat exchanger to 3, through the J–T valve to 4 and into the separator; liquid y (state f) is drawn from the bottom; saturated vapour g (1 − y) rises through the cold side of the heat exchanger and returns to the compressor inlet 1. (b) T–s diagram, T 60–440 K against s in kJ/(kg·K): the green saturation dome (critical point 126 K); 1 bar (blue) and 200 bar (red) isobars; 1→2 compression with intercooling drawn as a zig-zag near 300 K (each stage heats the gas, each intercooler brings it back to 300 K); 2→3 cooling along the 200 bar isobar from 300 K to $T_3$ ≈ 164 K in the heat exchanger; 3→4 throttling (orange dashed isenthalp, h = const) into the dome at 1 bar (77 K); 4 splits into saturated liquid f and saturated vapour g on the 1-bar line; g→1 the return gas warmed along the 1-bar isobar back to 300 K. Title: $T_3$ ≈ 164 K, y = 0.074.](figures/010.jpg "w=1.0")
 
@@ -259,7 +259,7 @@ Carl von Linde (1895) liquefied air with a J–T valve and a **counter-flow rege
 $$h_2=y\,h_f+(1-y)\,h_1\qquad\Rightarrow\qquad\boxed{y=\frac{h_1-h_2}{h_1-h_f}}$$
 $h_1-h_2$ is the isothermal J–T effect at ambient temperature (positive only below the inversion temperature) and $h_1-h_f$ is the heat that must be removed from the gas at 1 to liquefy it. The heat-exchanger balance fixes state 3: $h_2-h_3=(1-y)(h_1-h_g)$. The ideal (reversible isothermal) compression work per kg compressed is $w=T_1(s_1-s_2)-(h_1-h_2)$, and per kg of liquid $w/y$.
 
-> **EXAMPLE 9.4** `[TUTOR-GENERATED]` A simple Linde plant liquefies nitrogen. The gas is compressed from 1 bar, 300 K to 200 bar and cooled back to 300 K; the heat exchanger is perfect and the plant is insulated. CoolProp gives: $h(300\text{ K},1\text{ bar})=311.20$ kJ/kg, $s=6.8457$ kJ/(kg·K); $h(300\text{ K},200\text{ bar})=279.11$ kJ/kg, $s=5.1630$ kJ/(kg·K); saturated liquid at 1 bar $h_f=-122.25$ kJ/kg, saturated vapour $h_g=77.07$ kJ/kg (77.2 K). Find (a) the liquid yield, (b) the state before the valve, (c) the ideal isothermal compression work per kg of gas and per kg of liquid.
+> **EXAMPLE 5.4** `[TUTOR-GENERATED]` A simple Linde plant liquefies nitrogen. The gas is compressed from 1 bar, 300 K to 200 bar and cooled back to 300 K; the heat exchanger is perfect and the plant is insulated. CoolProp gives: $h(300\text{ K},1\text{ bar})=311.20$ kJ/kg, $s=6.8457$ kJ/(kg·K); $h(300\text{ K},200\text{ bar})=279.11$ kJ/kg, $s=5.1630$ kJ/(kg·K); saturated liquid at 1 bar $h_f=-122.25$ kJ/kg, saturated vapour $h_g=77.07$ kJ/kg (77.2 K). Find (a) the liquid yield, (b) the state before the valve, (c) the ideal isothermal compression work per kg of gas and per kg of liquid.
 >
 > **Solution.** (a) $y=\dfrac{h_1-h_2}{h_1-h_f}=\dfrac{311.20-279.11}{311.20-(-122.25)}=\dfrac{32.09}{433.45}=$ **0.0740**: only **7.4 %** of the gas compressed is liquefied each pass; 92.6 % is recirculated.
 >
@@ -296,7 +296,7 @@ The course slides draw the **dual-pressure Linde plant** (Fig. 11, Fig. 12) [Alo
 
 **Why two heat exchangers (two return streams) before the first throttle** [Aloke pp.101–103; Note p.69]:
 
-1. **To pre-cool the high-pressure gas as much as possible before the first throttle.** A throttle from ambient temperature gives only about 30 K of cooling (Example 9.3) and no liquid. The gas must reach the valve at a low temperature (164 K for nitrogen in Example 9.4), well inside the inversion curve, where $\mu_{JT}$ is large, so that the isenthalpic expansion ends in the wet region and liquid forms. The cold available is the cold of the unliquefied gas leaving the receivers.
+1. **To pre-cool the high-pressure gas as much as possible before the first throttle.** A throttle from ambient temperature gives only about 30 K of cooling (Example 5.3) and no liquid. The gas must reach the valve at a low temperature (164 K for nitrogen in Example 5.4), well inside the inversion curve, where $\mu_{JT}$ is large, so that the isenthalpic expansion ends in the wet region and liquid forms. The cold available is the cold of the unliquefied gas leaving the receivers.
 2. **To recover the cold of both return streams.** There are two cold return streams at two different pressures: the intermediate-pressure vapour $1-y_B$ from the first receiver ($Q_B$) and the low-pressure flash vapour $y_B-y$ from the second ($Q_A$). They cannot be mixed, since they return to different compressor stages (8 and 1/11), so each needs its own heat-exchanger passage. Without exchangers this cold would be wasted (rejected to the surroundings), and no liquid would be produced.
 3. **To warm the return gas to ambient before compression**, so that the cold is used in the plant rather than taken into the compressor, and the compressor works between its design temperatures.
 4. **The second exchanger stream helps the gas before the second throttle enter the dome**: the colder the stream, the larger the liquid fraction after each throttle [Note p.69].
@@ -321,7 +321,7 @@ In the Claude process (Fig. 13) [Ameen §8.4, Fig. 8.5] part of the high-pressur
 | Yield, work per kg liquid | lower yield, more work | higher yield, less work |
 | Moving parts at low temperature | none (only a valve) | an expander (lubrication at low temperature is a difficulty) |
 
-## 9.6 Air-cycle (gas) refrigeration ★
+## 5.6 Air-cycle (gas) refrigeration ★
 
 **What it is.** Air-cycle refrigeration belongs to the **gas-cycle** refrigeration systems, in which a gas is the working fluid and **does not change phase**: all the heat transfers are **sensible** [Aloke p.21; Note p.11; Hundy §2.7.1]. It works on the **reversed Brayton (Joule) cycle**, called the **Bell–Coleman cycle** in its old reciprocating form. Its uses are aircraft cabin cooling and the liquefaction of gases (expander cycles).
 
@@ -340,7 +340,7 @@ which is below the Carnot COP between the same temperatures because the heat is 
 
 ![Fig. 14: Gas (reversed Brayton) refrigeration cycle [Aloke p.21; Note p.11]. Schematic: a compressor (1→2) and a turbine (3→4) on one shaft with net work input $W_{net,in}$; a heat exchanger rejects $Q_H$ to the WARM environment (2→3); a heat exchanger absorbs $Q_L$ from the COLD refrigerated space (4→1). T–s diagram: 1 at the cold-space temperature, vertical (isentropic) rise to 2, constant-pressure cooling to 3 with $Q_H$ out, vertical drop to 4 well below 1, constant-pressure heating 4→1 with $Q_L$ in.](figures/014.jpg "w=0.7")
 
-> **EXAMPLE 9.5** `[TUTOR-GENERATED]` A Bell–Coleman (air-cycle) refrigerator takes air from the cold room at 1 bar, −5 °C, compresses it isentropically to 5 bar, cools it at 5 bar to 30 °C and expands it isentropically to 1 bar. Air: $c_p=1.005$ kJ/(kg·K), $\gamma=1.4$. Find the refrigerating effect, the net work and the COP per kg of air.
+> **EXAMPLE 5.5** `[TUTOR-GENERATED]` A Bell–Coleman (air-cycle) refrigerator takes air from the cold room at 1 bar, −5 °C, compresses it isentropically to 5 bar, cools it at 5 bar to 30 °C and expands it isentropically to 1 bar. Air: $c_p=1.005$ kJ/(kg·K), $\gamma=1.4$. Find the refrigerating effect, the net work and the COP per kg of air.
 >
 > **Solution.** $r_p^{(\gamma-1)/\gamma}=5^{0.2857}=1.584$. Take $T_1=-5$ °C ≈ 268 K and $T_3=30$ °C ≈ 303 K.
 > $$T_2=268\times1.584=424.5\ \text{K},\qquad T_4=\frac{303}{1.584}=191.3\ \text{K}$$
@@ -363,13 +363,13 @@ which is below the Carnot COP between the same temperatures because the heat is 
 3. High-speed turbines and compressors are noisy.
 4. In an open system moisture in the air freezes or forms fog at the turbine exit: a water separator is needed.
 
-## 9.7 Aircraft cooling systems ★
+## 5.7 Aircraft cooling systems ★
 
 **Why an aircraft needs cooling although the air outside is cold** [Aloke pp.22–23; Note p.12]. The cabin must be kept at a comfortable temperature (about 25 °C). Even though the outside air is very cold at high altitude (about −50 °C at 10 000 m), cooling is required because of:
 
 1. **Large internal heat generation** by the occupants (a crowded cabin), the lights, the avionics and other equipment.
 2. **Heat generated by skin friction** of the fast-moving aircraft (aerodynamic heating of the skin).
-3. **Ram effect and cabin pressurization.** At high altitude the outside pressure is far below atmospheric. The air brought to rest in the intake (ram compression) and then compressed to cabin pressure, close to atmospheric, gets much hotter. For example, outside air at 0.2 bar and 223 K (10 000 m) compressed to 1 bar reaches about 353 K; to a cabin pressure of 0.8 bar, about 332 K (Example 9.6). This hot fresh air would heat the cabin and must be cooled.
+3. **Ram effect and cabin pressurization.** At high altitude the outside pressure is far below atmospheric. The air brought to rest in the intake (ram compression) and then compressed to cabin pressure, close to atmospheric, gets much hotter. For example, outside air at 0.2 bar and 223 K (10 000 m) compressed to 1 bar reaches about 353 K; to a cabin pressure of 0.8 bar, about 332 K (Example 5.6). This hot fresh air would heat the cabin and must be cooled.
 4. **Solar radiation** through the windows and on the fuselage.
 
 For low-speed aircraft at low altitude a cooling system may not be needed; for high-speed aircraft at high altitude it is a must.
@@ -381,7 +381,7 @@ For low-speed aircraft at low altitude a cooling system may not be needed; for h
 3. The aircraft engine already has a high-speed turbo-compressor, so no separate compressor is needed; the weight per kW of cooling is typically **less than 50 %** of an equivalent vapour-compression system.
 4. The design is simpler, since the pressures are low; maintenance is less.
 
-> **EXAMPLE 9.6** `[FROM SOURCE: Aloke p.22; Note p.12 (part a); TUTOR-GENERATED (part b)]` (a) Check the ram-effect temperatures of the source. (b) In a simple air-cycle system, air from the main compressor at 3 bar is cooled in the ram-air heat exchanger to 330 K and expanded in the cooling turbine to the cabin pressure of 1 bar. The cabin is held at 25 °C (298 K) and its cooling load is 30 kW. Find the air supply temperature and the mass flow of air, with an isentropic turbine and with a turbine efficiency of 0.85. Air: $c_p=1.005$ kJ/(kg·K), $\gamma=1.4$.
+> **EXAMPLE 5.6** `[FROM SOURCE: Aloke p.22; Note p.12 (part a); TUTOR-GENERATED (part b)]` (a) Check the ram-effect temperatures of the source. (b) In a simple air-cycle system, air from the main compressor at 3 bar is cooled in the ram-air heat exchanger to 330 K and expanded in the cooling turbine to the cabin pressure of 1 bar. The cabin is held at 25 °C (298 K) and its cooling load is 30 kW. Find the air supply temperature and the mass flow of air, with an isentropic turbine and with a turbine efficiency of 0.85. Air: $c_p=1.005$ kJ/(kg·K), $\gamma=1.4$.
 >
 > **Solution.** (a) Isentropic compression from 0.2 bar, 223 K: to 1 bar, $T=223\times5^{0.2857}=$ **353.2 K**; to 0.8 bar, $T=223\times4^{0.2857}=$ **331.4 K** (≈ 332 K), as the sources say.
 >
@@ -410,7 +410,7 @@ For low-speed aircraft at low altitude a cooling system may not be needed; for h
 | Regenerative | regenerative HX cooled by turbine exhaust | high speed where ram air is hot |
 | Reduced ambient | turbine on the ram-air (coolant) side | supersonic aircraft |
 
-## 9.8 Thermoelectric (Peltier) refrigeration
+## 5.8 Thermoelectric (Peltier) refrigeration
 
 **The five thermoelectric effects** [Aloke pp.12–14; Note p.8; Ameen §6.1]:
 
@@ -437,7 +437,7 @@ For low-speed aircraft at low altitude a cooling system may not be needed; for h
 - $COP=\dfrac{Q_c}{W}=\dfrac{\alpha IT_c-\tfrac12I^2R-K\,\Delta T}{\alpha I\,\Delta T+I^2R}$.
 - The current for maximum cooling is $I=\alpha T_c/R$; the material quality is the **figure of merit** $Z=\alpha^2/(RK)$, and the largest temperature difference a couple can hold is $\Delta T_{max}=\tfrac12ZT_c^2$. Good materials have low resistance and low thermal conductivity together, which is why semiconductors are used.
 
-> **EXAMPLE 9.7** `[TUTOR-GENERATED]` A Bi$_2$Te$_3$ couple has $\alpha=400\ \mu$V/K, $R=0.01\ \Omega$ and $K=0.005$ W/K. It runs at $I=5$ A between $T_c=273$ K and $T_h=303$ K. Find the cooling, the power and the COP; and the cooling of a module of 127 couples.
+> **EXAMPLE 5.7** `[TUTOR-GENERATED]` A Bi$_2$Te$_3$ couple has $\alpha=400\ \mu$V/K, $R=0.01\ \Omega$ and $K=0.005$ W/K. It runs at $I=5$ A between $T_c=273$ K and $T_h=303$ K. Find the cooling, the power and the COP; and the cooling of a module of 127 couples.
 >
 > **Solution.** $\Delta T=30$ K.
 > $Q_c=4\times10^{-4}\times5\times273-\tfrac12\times5^2\times0.01-0.005\times30=0.546-0.125-0.150=$ **0.271 W**.
@@ -446,7 +446,7 @@ For low-speed aircraft at low altitude a cooling system may not be needed; for h
 
 **Advantages and uses** [Ameen §6.1; Hundy §2.7.4]: no moving parts, no refrigerant (no liquid or gas), silent, compact, very long life, any orientation; the cooling rate is controlled simply by the current, with a fast response; reversing the current turns it into a heater (heat pump). Its COP stays almost constant as the capacity falls, so it is preferred for small duties: electronic components and instruments, medicines, picnic boxes, laboratory, military and aerospace equipment, nuclear submarines. **Limitations:** low COP and high cost per kW for large capacities, high DC currents.
 
-## 9.9 Magnetic (magnetocaloric) refrigeration
+## 5.9 Magnetic (magnetocaloric) refrigeration
 
 **Principle: the magnetocaloric effect** (Warburg, 1881) [Aloke pp.15–16; Note p.9; Ameen §8.4; Hundy §2.7.5]. Like a gas, which heats when compressed and cools when expanded adiabatically, some materials **heat up when adiabatically magnetised and cool when adiabatically demagnetised**. Each atom (ion) of a **paramagnetic salt** behaves as a tiny magnet. With no field the magnets are randomly oriented (high magnetic entropy, zero net magnetism). In a strong field they line up (low magnetic entropy): this needs work, and if no heat leaves, the temperature rises. When the field is removed, the atoms return to the random orientation; this requires work by the atoms, and with no heat from the surroundings their internal energy falls: the salt cools.
 
@@ -466,7 +466,7 @@ For low-speed aircraft at low altitude a cooling system may not be needed; for h
 
 ![Fig. 20: Adiabatic demagnetization apparatus [Aloke p.16; Note p.9]. A paramagnetic salt in a small tube connected "to high vacuum"; the tube sits in a bath of liquid helium ("to helium pump"), which is surrounded by a Dewar of liquid hydrogen ("to hydrogen pump"); the magnet poles N and S stand on either side.](figures/020.png "w=0.6")
 
-## 9.10 Vortex tube
+## 5.10 Vortex tube
 
 Not asked in 2011–2024 papers, but in the sources [Aloke pp.17–20; Note pp.10–11; Ameen §6.2]. Compressed air (7–10 bar) enters a tube **tangentially** through a nozzle, forming a vortex that spins at very high speed. The outer layer moves towards the hot end and leaves through a **valve** as hot air; part of the flow, restricted by the valve, reverses along the core and leaves through the central hole of a **diaphragm** at the other end as **cold air** (up to about 50 K below the inlet). Heat passes from the core stream to the outer stream. Opening the valve changes the amount and temperature of the cold air. **Advantages:** air as refrigerant (no leakage problem), simple, no moving parts, light, cheap where compressed air exists, little maintenance, instant start. **Disadvantages:** very low COP (0.1–0.2), limited capacity, only a small part of the compressed air becomes cold air. Uses: spot cooling of electronic cabinets, machining, small laboratory duties.
 
@@ -474,7 +474,7 @@ Not asked in 2011–2024 papers, but in the sources [Aloke pp.17–20; Note pp.1
 
 <!-- pagebreak -->
 
-## 9.11 Term-final questions with solutions
+## 5.11 Term-final questions with solutions
 
 All 23 parts are theory. They fall into four archetypes; the gas-liquefaction family carries half the marks.
 
@@ -482,8 +482,8 @@ All 23 parts are theory. They fall into four archetypes; the gas-liquefaction fa
 |---|---|---|
 | SP1. Steam-jet water-vapour refrigeration | 12-13, 13-14, 16-17, 18-19, 22-23, 23-24 | Solutions 9.2, 9.5 |
 | SP2-A. Joule–Thomson coefficient, inversion, liquefaction by expansion | 12-13, 18-19 | Solutions 9.7, 9.8 |
-| SP2-B. The Linde plant with its T–s diagram | 13-14, 15-16, 17-18, 20-21, 21-22, 22-23, 23-24 | Solution 9.9 |
-| SP2-C. Cascade liquefaction of natural gas | 18-19, 21-22 | Solution 9.16 |
+| SP2-B. The Linde plant with its T–s diagram | 13-14, 15-16, 17-18, 20-21, 21-22, 22-23, 23-24 | Solution 5.9 |
+| SP2-C. Cascade liquefaction of natural gas | 18-19, 21-22 | Solution 5.16 |
 | SP3. Gas refrigeration and aircraft cooling | 15-16, 17-18, 20-21, 21-22 | Solutions 9.18, 9.19 |
 | SP4. Magnetic and thermoelectric refrigeration | 17-18, 22-23 | Solutions 9.22, 9.23 |
 
@@ -491,9 +491,9 @@ How to size a theory answer: about one point (one sentence) per mark, plus the s
 
 ### SP1: steam-jet refrigeration
 
-> **TRY 9.1** `[PP 12-13 Q6(e), 10]` Briefly describe the working principle of a steam jet refrigeration system.
+> **TRY 5.1** `[PP 12-13 Q6(e), 10]` Briefly describe the working principle of a steam jet refrigeration system.
 
-**Solution 9.1** **[FROM SOURCE: Aloke pp.8–10; Note pp.6–7]** (ten points; a small sketch of Fig. 1 helps)
+**Solution 5.1** **[FROM SOURCE: Aloke pp.8–10; Note pp.6–7]** (ten points; a small sketch of Fig. 1 helps)
 
 1. Water is the refrigerant; the principle is that water boils at a low temperature when the pressure on its surface is reduced (about 5 °C at 0.87 kPa, 6.5 mm Hg).
 2. The low pressure (high vacuum) in the **flash chamber** is produced and kept by a **steam ejector** (thermocompressor), which replaces the compressor.
@@ -506,9 +506,9 @@ How to size a theory answer: about one point (one sentence) per mark, plus the s
 9. The **chilled water** is pumped to the cooling coils (load) and returns warm to the sprays.
 10. **Make-up water** replaces the evaporated and lost water. Practical chilled-water temperatures are 4–10 °C (air conditioning, process cooling).
 
-> **TRY 9.2** `[PP 13-14 Q6(b), 18]` Briefly describe the principle of operation of a steam jet water vapour refrigerating system. What are its advantages and limitations. Draw the necessary schematic diagram.
+> **TRY 5.2** `[PP 13-14 Q6(b), 18]` Briefly describe the principle of operation of a steam jet water vapour refrigerating system. What are its advantages and limitations. Draw the necessary schematic diagram.
 
-**Solution 9.2** **[FROM SOURCE: Aloke pp.8–11; Note pp.6–7; Ameen §6.3]** This is the model answer for the family.
+**Solution 5.2** **[FROM SOURCE: Aloke pp.8–11; Note pp.6–7; Ameen §6.3]** This is the model answer for the family.
 
 *Schematic (about 6 marks):* draw Fig. 1 with every label: steam boiler, control valve, steam nozzle, ejector/thermocompressor (nozzle, mixing chamber, diffuser), flash chamber with spray header and vapour outlet, chilled-water pump to the A/C plant, warm water returning, condenser with condensate pump, make-up water.
 
@@ -535,13 +535,13 @@ How to size a theory answer: about one point (one sentence) per mark, plus the s
 3. Low efficiency: about twice as much heat must be removed in the condenser per TR as in a vapour-compression system; a boiler and much cooling water are needed.
 4. Not feasible below about 4 °C (water freezes): cannot make ice; limited to air conditioning and process chilled water.
 
-> **TRY 9.3** `[PP 16-17 Q7(a), 15]` Briefly describe the principle of operation of a steam jet water vapour refrigeration system. What are its advantages and limitations? Draw a necessary schematic diagram.
+> **TRY 5.3** `[PP 16-17 Q7(a), 15]` Briefly describe the principle of operation of a steam jet water vapour refrigeration system. What are its advantages and limitations? Draw a necessary schematic diagram.
 
-**Solution 9.3** **[FROM SOURCE: Aloke pp.8–11]** A verbatim repeat of TRY 9.2 (15 marks instead of 18): give Solution 9.2 with Fig. 1, five principle points, four advantages and four limitations.
+**Solution 5.3** **[FROM SOURCE: Aloke pp.8–11]** A verbatim repeat of TRY 5.2 (15 marks instead of 18): give Solution 5.2 with Fig. 1, five principle points, four advantages and four limitations.
 
-> **TRY 9.4** `[PP 18-19 Q5(b), 18]` Why is steam jet refrigeration system safe for air-conditioning installation? Describe a steam jet refrigeration system with proper diagram and hence discuss its operation, advantages and disadvantages.
+> **TRY 5.4** `[PP 18-19 Q5(b), 18]` Why is steam jet refrigeration system safe for air-conditioning installation? Describe a steam jet refrigeration system with proper diagram and hence discuss its operation, advantages and disadvantages.
 
-**Solution 9.4** **[FROM SOURCE: Aloke pp.8–11; Note pp.6–7]** As Solution 9.2, with the lead-in answered first:
+**Solution 5.4** **[FROM SOURCE: Aloke pp.8–11; Note pp.6–7]** As Solution 5.2, with the lead-in answered first:
 
 *Why it is safe for air-conditioning installations (about 4 marks):*
 
@@ -550,11 +550,11 @@ How to size a theory answer: about one point (one sentence) per mark, plus the s
 3. There is **no high-pressure refrigerant circuit and no compressor** with moving parts; it is free from vibration.
 4. It adjusts quickly to load variations, which suits air-conditioning loads.
 
-Then the diagram (Fig. 1), the operation (points 2–5 of Solution 9.2), the advantages and the disadvantages as in Solution 9.2.
+Then the diagram (Fig. 1), the operation (points 2–5 of Solution 5.2), the advantages and the disadvantages as in Solution 5.2.
 
-> **TRY 9.5** `[PP 22-23 Q5(b), 15]` How is cooling produced in a steam jet refrigeration system? Describe a steam jet refrigeration system with neat sketches. Hence, explain the mathematical formula to show the amount of cooling produced.
+> **TRY 5.5** `[PP 22-23 Q5(b), 15]` How is cooling produced in a steam jet refrigeration system? Describe a steam jet refrigeration system with neat sketches. Hence, explain the mathematical formula to show the amount of cooling produced.
 
-**Solution 9.5** **[FROM SOURCE: Aloke pp.8–10; Note pp.6–7; worked check TUTOR-GENERATED]**
+**Solution 5.5** **[FROM SOURCE: Aloke pp.8–10; Note pp.6–7; worked check TUTOR-GENERATED]**
 
 *How cooling is produced (about 4 marks).* By **flash evaporation** of water under a high vacuum. Water boils at a low temperature at a low pressure (about 5 °C at 0.87 kPa). The steam ejector keeps the flash chamber at this pressure by continuously removing the vapour. When warm water is sprayed in, part of it evaporates; the latent heat needed for that evaporation is drawn from the remaining water, so it is cooled (self-cooling). The chilled water is the secondary refrigerant sent to the load.
 
@@ -566,17 +566,17 @@ With $m=100$ kg, $m_v=1$ kg, $h_{fg}\approx2385$ kJ/kg and $c_p=4.18$ kJ/(kg·K)
 
 For continuous operation (steady-flow energy balance on the flash chamber, water return at $T_r$, chamber at $T_e$), the fraction that flashes and the cooling are
 $$x=\frac{h_{f}(T_r)-h_f(T_e)}{h_g(T_e)-h_f(T_e)},\qquad Q=\dot m_c\,[h_f(T_r)-h_f(T_e)]\approx\dot m_c\,c_p\,(T_r-T_e)=\dot m_v\,[h_g(T_e)-h_f(T_r)]$$
-For 15 °C → 5 °C, $x=$ **0.01686** (Example 9.2): 1.7 % of the water flashes, and each kg of vapour removed by the ejector carries away 2447 kJ.
+For 15 °C → 5 °C, $x=$ **0.01686** (Example 5.2): 1.7 % of the water flashes, and each kg of vapour removed by the ejector carries away 2447 kJ.
 
-> **TRY 9.6** `[PP 23-24 Q1(b), 15]` How is cooling produced in a steam jet refrigeration system? Describe a steam jet refrigeration system with neat sketches. Hence, explain the mathematical formula to show the amount of cooling produced.
+> **TRY 5.6** `[PP 23-24 Q1(b), 15]` How is cooling produced in a steam jet refrigeration system? Describe a steam jet refrigeration system with neat sketches. Hence, explain the mathematical formula to show the amount of cooling produced.
 
-**Solution 9.6** **[FROM SOURCE: Aloke pp.8–10]** A verbatim repeat of TRY 9.5: give Solution 9.5 (cooling by flash evaporation under vacuum; Fig. 1 and the ejector; $m_vh_{fg}=(m-m_v)c_p\Delta T$, 1 kg from 100 kg → **5.76 °C**; steady flash fraction 0.01686 for 15 → 5 °C).
+**Solution 5.6** **[FROM SOURCE: Aloke pp.8–10]** A verbatim repeat of TRY 5.5: give Solution 5.5 (cooling by flash evaporation under vacuum; Fig. 1 and the ejector; $m_vh_{fg}=(m-m_v)c_p\Delta T$, 1 kg from 100 kg → **5.76 °C**; steady flash fraction 0.01686 for 15 → 5 °C).
 
 ### SP2-A: the Joule–Thomson effect and liquefaction by expansion
 
-> **TRY 9.7** `[PP 12-13 Q6(d), 10]` Explain the importance of Joule Thomson coefficient and inversion temperature when operating a system for liquefaction of gases.
+> **TRY 5.7** `[PP 12-13 Q6(d), 10]` Explain the importance of Joule Thomson coefficient and inversion temperature when operating a system for liquefaction of gases.
 
-**Solution 9.7** **[FROM SOURCE: Aloke pp.97–101; Note pp.67–68; Ameen §8.4]** (sketch Fig. 7 or Fig. 9)
+**Solution 5.7** **[FROM SOURCE: Aloke pp.97–101; Note pp.67–68; Ameen §8.4]** (sketch Fig. 7 or Fig. 9)
 
 1. Liquefiers such as the Linde plant cool the gas by **throttling** it (adiabatic, constant enthalpy). The change of temperature per unit pressure drop at constant enthalpy is the **Joule–Thomson coefficient** $\mu_{JT}=(\partial T/\partial p)_h$.
 2. $\mu_{JT}>0$: the gas cools on throttling; $\mu_{JT}=0$: no change; $\mu_{JT}<0$: the gas heats up. For an ideal gas $\mu_{JT}=0$, so only the real-gas behaviour gives cooling.
@@ -586,9 +586,9 @@ For 15 °C → 5 °C, $x=$ **0.01686** (Example 9.2): 1.7 % of the water flashes
 6. The starting pressure should be near the inversion pressure for the inlet temperature (the top of the isenthalp): starting higher first heats the gas. This fixes the operating pressure of the plant (100–200 bar for air).
 7. The liquid yield $y=(h_1-h_2)/(h_1-h_f)$ is positive only when the gas shows a positive J–T effect at the compressor-outlet temperature.
 
-> **TRY 9.8** `[PP 18-19 Q7(b), 18]` Describe the thermodynamic principle of liquefaction of gases by expansion. Hence, explain the Joule-Theorem coefficient and isenthalpic curve for flow through a porous plug.
+> **TRY 5.8** `[PP 18-19 Q7(b), 18]` Describe the thermodynamic principle of liquefaction of gases by expansion. Hence, explain the Joule-Theorem coefficient and isenthalpic curve for flow through a porous plug.
 
-**Solution 9.8** **[FROM SOURCE: Aloke pp.92, 97–100; Note pp.64, 67–68; Ameen §8.4]** ("Joule-Theorem" in the paper means Joule–Thomson.)
+**Solution 5.8** **[FROM SOURCE: Aloke pp.92, 97–100; Note pp.64, 67–68; Ameen §8.4]** ("Joule-Theorem" in the paper means Joule–Thomson.)
 
 *Principle of liquefaction by expansion (about 6 marks).*
 
@@ -612,9 +612,9 @@ It is the slope of the isenthalpic curve: negative on A–B (temperature increas
 
 ### SP2-B: the Linde plant (verbatim family)
 
-> **TRY 9.9** `[PP 13-14 Q6(a), 17]` Describe the Linde Liquefaction Plant for liquifying gas with neat sketch. Draw the necessary T-s diagram and explain.
+> **TRY 5.9** `[PP 13-14 Q6(a), 17]` Describe the Linde Liquefaction Plant for liquifying gas with neat sketch. Draw the necessary T-s diagram and explain.
 
-**Solution 9.9** **[FROM SOURCE: Aloke pp.101–103; Note pp.68–69; Ameen §8.4]** This is the model answer for the family; the later papers add a lead-in (Solutions 9.11–9.15).
+**Solution 5.9** **[FROM SOURCE: Aloke pp.101–103; Note pp.68–69; Ameen §8.4]** This is the model answer for the family; the later papers add a lead-in (Solutions 9.11–9.15).
 
 *Sketches (about 7 marks).* Draw the plant schematic (Fig. 11) and the T–s diagram (Fig. 12), with all state numbers 1–11, $m=1$, $y_B$, $1-y_B$, $y_B-y$, $y$, $Q_A$, $Q_B$ and the make-up gas. (If time is short, the simple Linde plant of Fig. 10 with states 1, 2, 3, 4, f, g earns most of the marks; label it "simple Linde–Hampson".)
 
@@ -629,15 +629,15 @@ It is the slope of the isenthalpic curve: negative on A–B (temperature increas
 
 *Explanation of the T–s diagram (about 4 marks).* 1/11 → 2: multi-stage compression with intercooling (zig-zag near ambient) to supercritical pressure; 2 → 3: cooling at constant high pressure in the heat exchanger ($Q_A+Q_B$); 3 → 4: isenthalpic throttling into the dome at the intermediate pressure; 4 → 5 (saturated liquid) and 7 (saturated vapour); 7 → 8: vapour warmed at the intermediate pressure; 5 → 6: isenthalpic throttling to the low pressure; 6 → 9 (liquid product $y$) and 10 (vapour); 10 → 11: vapour warmed at the low pressure to ambient. For the simple Linde plant, a first-law balance on the heat exchanger, valve and separator gives the yield
 $$h_2=y\,h_f+(1-y)\,h_1\quad\Rightarrow\quad y=\frac{h_1-h_2}{h_1-h_f}$$
-(nitrogen, 1 → 200 bar at 300 K: $y=0.0740$, Example 9.4).
+(nitrogen, 1 → 200 bar at 300 K: $y=0.0740$, Example 5.4).
 
-> **TRY 9.10** `[PP 15-16 Q7(b), 20]` Describe the Linde Liquefaction plant for liquifying gas with neat sketch. Draw the necessary T-s diagram and explain.
+> **TRY 5.10** `[PP 15-16 Q7(b), 20]` Describe the Linde Liquefaction plant for liquifying gas with neat sketch. Draw the necessary T-s diagram and explain.
 
-**Solution 9.10** **[FROM SOURCE: Aloke pp.101–103]** A verbatim repeat of TRY 9.9 (20 marks): give Solution 9.9 in full, and for the extra marks add the start-up (the cooling accumulates through the regenerative heat exchanger until the throttled gas enters the dome, §9.5) and the yield formula with its derivation.
+**Solution 5.10** **[FROM SOURCE: Aloke pp.101–103]** A verbatim repeat of TRY 5.9 (20 marks): give Solution 5.9 in full, and for the extra marks add the start-up (the cooling accumulates through the regenerative heat exchanger until the throttled gas enters the dome, §5.5) and the yield formula with its derivation.
 
-> **TRY 9.11** `[PP 17-18 Q6(b), 18]` Describe the Linde liquefaction plant for liquefying gas with neat sketch. Draw the necessary T-s diagram. Explain the necessity for using two heat exchangers in this process.
+> **TRY 5.11** `[PP 17-18 Q6(b), 18]` Describe the Linde liquefaction plant for liquefying gas with neat sketch. Draw the necessary T-s diagram. Explain the necessity for using two heat exchangers in this process.
 
-**Solution 9.11** **[FROM SOURCE: Aloke pp.101–103; Note p.69, corrected]** Solution 9.9 (sketches, description, T–s), then:
+**Solution 5.11** **[FROM SOURCE: Aloke pp.101–103; Note p.69, corrected]** Solution 5.9 (sketches, description, T–s), then:
 
 *Necessity of two heat exchangers (about 5 marks).*
 
@@ -647,17 +647,17 @@ $$h_2=y\,h_f+(1-y)\,h_1\quad\Rightarrow\quad y=\frac{h_1-h_2}{h_1-h_f}$$
 4. They also warm the return gas to about ambient before it re-enters the compressor, so the cold is not carried into the compressor.
 5. The colder the gas before each throttle, the larger the liquid fraction after it ($y_B$ and $y_A$), so the yield $y=y_By_A$ rises. (Warming the return gas does **not** reduce compressor work, as the Note says; the plant saves work by recirculating most of the gas at the intermediate pressure.)
 
-> **TRY 9.12** `[PP 20-21 Q7(a), 17]` Describe the Linde liquefaction plant for liquifying gas with neat sketch. Draw the necessary T-s diagram and explain.
+> **TRY 5.12** `[PP 20-21 Q7(a), 17]` Describe the Linde liquefaction plant for liquifying gas with neat sketch. Draw the necessary T-s diagram and explain.
 
-**Solution 9.12** **[FROM SOURCE: Aloke pp.101–103]** A verbatim repeat of TRY 9.9 (17 marks): give Solution 9.9 as written.
+**Solution 5.12** **[FROM SOURCE: Aloke pp.101–103]** A verbatim repeat of TRY 5.9 (17 marks): give Solution 5.9 as written.
 
-> **TRY 9.13** `[PP 21-22 Q7(a), 17]` Why are two heat exchangers necessary before the first throttling in a Linde Liquefaction plant? Hence, describe this liquefaction plant for liquefying gas with neat sketch. Draw the necessary T-s diagram and explain.
+> **TRY 5.13** `[PP 21-22 Q7(a), 17]` Why are two heat exchangers necessary before the first throttling in a Linde Liquefaction plant? Hence, describe this liquefaction plant for liquefying gas with neat sketch. Draw the necessary T-s diagram and explain.
 
-**Solution 9.13** **[FROM SOURCE: Aloke pp.101–103; Note p.69, corrected]** Answer the lead-in first with the five points of Solution 9.11 (pre-cool below the inversion temperature so the first throttle reaches the dome; recover the cold of the two return streams at two pressures, returning to two compressor stages; warm the return gas; raise $y_B$ and $y$), then give Solution 9.9 (sketches, description, T–s).
+**Solution 5.13** **[FROM SOURCE: Aloke pp.101–103; Note p.69, corrected]** Answer the lead-in first with the five points of Solution 5.11 (pre-cool below the inversion temperature so the first throttle reaches the dome; recover the cold of the two return streams at two pressures, returning to two compressor stages; warm the return gas; raise $y_B$ and $y$), then give Solution 5.9 (sketches, description, T–s).
 
-> **TRY 9.14** `[PP 22-23 Q7(b), 15]` Why is intercooling necessary for the compressor in a Linde liquefaction process? How is Joule-Thomson effect applicable for Linde liquefaction process? Hence, describe the Linde liquefaction process with neat sketches.
+> **TRY 5.14** `[PP 22-23 Q7(b), 15]` Why is intercooling necessary for the compressor in a Linde liquefaction process? How is Joule-Thomson effect applicable for Linde liquefaction process? Hence, describe the Linde liquefaction process with neat sketches.
 
-**Solution 9.14** **[FROM SOURCE: Aloke pp.99–103; Note pp.67–69; Ameen §8.4]** This part belongs to both the J–T family and the Linde family.
+**Solution 5.14** **[FROM SOURCE: Aloke pp.99–103; Note pp.67–69; Ameen §8.4]** This part belongs to both the J–T family and the Linde family.
 
 *Why intercooling (about 4 marks).*
 
@@ -673,11 +673,11 @@ $$h_2=y\,h_f+(1-y)\,h_1\quad\Rightarrow\quad y=\frac{h_1-h_2}{h_1-h_f}$$
 3. Because one throttle gives only a small drop, the throttled cold gas pre-cools the incoming high-pressure gas in the heat exchanger; the effect is compounded until the gas enters the dome and liquid forms.
 4. Hence the gas must be below its inversion temperature at the valve (air and N$_2$ at room temperature are; H$_2$ and He must be pre-cooled).
 
-*Description with sketches (about 7 marks):* Fig. 11 and Fig. 12 with the description of Solution 9.9 (points 1–6, $y=y_By_A$).
+*Description with sketches (about 7 marks):* Fig. 11 and Fig. 12 with the description of Solution 5.9 (points 1–6, $y=y_By_A$).
 
-> **TRY 9.15** `[PP 23-24 Q3(b), 15]` Why oxygen gas is not possible to extract from air by "liquefaction by cooling" method? Describe the Linde Liquefaction plant for liquifying gas with neat sketches. Draw the necessary T-s diagram and explain.
+> **TRY 5.15** `[PP 23-24 Q3(b), 15]` Why oxygen gas is not possible to extract from air by "liquefaction by cooling" method? Describe the Linde Liquefaction plant for liquifying gas with neat sketches. Draw the necessary T-s diagram and explain.
 
-**Solution 9.15** **[FROM SOURCE: Aloke pp.93, 101–103; Ameen §8.1–8.2]**
+**Solution 5.15** **[FROM SOURCE: Aloke pp.93, 101–103; Ameen §8.1–8.2]**
 
 *Why not by cooling (about 4 marks).*
 
@@ -686,13 +686,13 @@ $$h_2=y\,h_f+(1-y)\,h_1\quad\Rightarrow\quad y=\frac{h_1-h_2}{h_1-h_f}$$
 3. Vapour-compression refrigeration, even in cascade, reaches only about −100 to −157 °C; colder evaporators would need fluids that are themselves permanent gases (N$_2$, Ne, H$_2$, He), which would first have to be liquefied; and the COP would be impractically low.
 4. Air is a mixture: oxygen is separated by liquefying the whole air by **expansion** (Linde or Claude plant) and then distilling it (O$_2$ boils at −183 °C, N$_2$ at −196 °C).
 
-*Then the Linde plant:* Solution 9.9 (sketches Fig. 11 and Fig. 12, description, T–s explanation), trimmed to about 11 marks.
+*Then the Linde plant:* Solution 5.9 (sketches Fig. 11 and Fig. 12, description, T–s explanation), trimmed to about 11 marks.
 
 ### SP2-C: cascade liquefaction of natural gas
 
-> **TRY 9.16** `[PP 18-19 Q7(a), 17]` Explain the basic principle of cascade refrigeration cycle. Hence, describe with neat sketches the liquefaction of natural gas by cascade refrigeration method.
+> **TRY 5.16** `[PP 18-19 Q7(a), 17]` Explain the basic principle of cascade refrigeration cycle. Hence, describe with neat sketches the liquefaction of natural gas by cascade refrigeration method.
 
-**Solution 9.16** **[FROM SOURCE: Aloke pp.93–96; Note pp.65–66]** This is the model answer for the family.
+**Solution 5.16** **[FROM SOURCE: Aloke pp.93–96; Note pp.65–66]** This is the model answer for the family.
 
 *Basic principle of the cascade cycle (about 7 marks; sketch Fig. 4 with its T–s).*
 
@@ -710,9 +710,9 @@ $$h_2=y\,h_f+(1-y)\,h_1\quad\Rightarrow\quad y=\frac{h_1-h_2}{h_1-h_f}$$
 4. **Methane cycle:** compressor $W_1$; condenses in the ethane evaporator; its evaporator subcools the liquefied gas ($Q_1'$) to **120 K (−153 °C)**, near methane's boiling point, so it is **stored** at low pressure with little flashing.
 5. The heat taken from the gas passes up the cascade and is rejected to the cooling water by the propane cycle; each compressor works over a moderate range, so the whole plant has a reasonable COP. LNG has about 1/600 of the gas volume, for storage and shipping.
 
-> **TRY 9.17** `[PP 21-22 Q7(b), 18]` For the purpose of liquefaction of a gas by cooling cascade system is employed in refrigeration system. What are its special features due to which it can liquefy the gases? Hence, describe a ternary cascade refrigeration cycle for liquifying natural gas.
+> **TRY 5.17** `[PP 21-22 Q7(b), 18]` For the purpose of liquefaction of a gas by cooling cascade system is employed in refrigeration system. What are its special features due to which it can liquefy the gases? Hence, describe a ternary cascade refrigeration cycle for liquifying natural gas.
 
-**Solution 9.17** **[FROM SOURCE: Aloke pp.93–96; Note pp.65–66]** As Solution 9.16, with the features in place of the principle:
+**Solution 5.17** **[FROM SOURCE: Aloke pp.93–96; Note pp.65–66]** As Solution 5.16, with the features in place of the principle:
 
 *Special features (about 7 marks).*
 
@@ -722,13 +722,13 @@ $$h_2=y\,h_f+(1-y)\,h_1\quad\Rightarrow\quad y=\frac{h_1-h_2}{h_1-h_f}$$
 4. The gas to be liquefied is cooled step by step at constant pressure in successive evaporators, condensed and then subcooled, so it reaches temperatures no single plant could reach economically.
 5. The separate loops keep the fluids and their oils apart and can be controlled independently; the cascade is more cost-effective than one plant.
 
-Then the ternary LNG cycle: points 1–5 of Solution 9.16 with Fig. 5 (237 K, 190 K, 120 K).
+Then the ternary LNG cycle: points 1–5 of Solution 5.16 with Fig. 5 (237 K, 190 K, 120 K).
 
 ### SP3: gas refrigeration and aircraft cooling
 
-> **TRY 9.18** `[PP 15-16 Q7(a), 15]` Briefly describe the principle of operation of a gas refrigeration system. What are its advantages and limitations? Draw the necessary schematic diagram.
+> **TRY 5.18** `[PP 15-16 Q7(a), 15]` Briefly describe the principle of operation of a gas refrigeration system. What are its advantages and limitations? Draw the necessary schematic diagram.
 
-**Solution 9.18** **[FROM SOURCE: Aloke pp.21–23; Note pp.11–12; Hundy §2.7.1]**
+**Solution 5.18** **[FROM SOURCE: Aloke pp.21–23; Note pp.11–12; Hundy §2.7.1]**
 
 *Schematic (about 5 marks):* Fig. 14: compressor and turbine on one shaft, hot heat exchanger ($Q_H$ to the warm environment), cold heat exchanger ($Q_L$ from the cold space), states 1–4, with the T–s diagram.
 
@@ -738,15 +738,15 @@ Then the ternary LNG cycle: points 1–5 of Solution 9.16 with Fig. 5 (237 K, 19
 2. 1 → 2: the gas is compressed isentropically; its temperature rises above ambient.
 3. 2 → 3: it rejects heat $Q_H$ at constant pressure to the surroundings and is cooled to near ambient.
 4. 3 → 4: it expands in a **turbine**, doing work, and its temperature falls far below the cold-space temperature.
-5. 4 → 1: it absorbs $Q_L$ from the refrigerated space (closed cycle), or is supplied directly to it (open cycle). The turbine work reduces the compressor work: $COP=\dfrac{q_L}{w_{comp}-w_{turb}}=\dfrac{1}{r_p^{(\gamma-1)/\gamma}-1}$ (e.g. 1.71 for $r_p=5$, Example 9.5).
+5. 4 → 1: it absorbs $Q_L$ from the refrigerated space (closed cycle), or is supplied directly to it (open cycle). The turbine work reduces the compressor work: $COP=\dfrac{q_L}{w_{comp}-w_{turb}}=\dfrac{1}{r_p^{(\gamma-1)/\gamma}-1}$ (e.g. 1.71 for $r_p=5$, Example 5.5).
 
 *Advantages (about 3 marks):* air is free, safe, non-toxic, non-flammable, leakage harmless; open system needs no cold heat exchanger, so it is light (aircraft); low weight per kW with turbomachinery; can reach very low temperatures (gas liquefaction); simple low-pressure design.
 
 *Limitations (about 2 marks):* low COP (sensible heat at varying temperatures; strongly affected by machine efficiencies); small refrigerating effect per kg, so large flow rates and equipment; noisy high-speed machines; moisture freezing in open systems.
 
-> **TRY 9.19** `[PP 17-18 Q7(b), 18]` Describe air-craft cooling system. Justify the statement in regard to air-craft cooling "Though the outside temperature is very low at high altitude, still cooling of cabin is required for air-craft."
+> **TRY 5.19** `[PP 17-18 Q7(b), 18]` Describe air-craft cooling system. Justify the statement in regard to air-craft cooling "Though the outside temperature is very low at high altitude, still cooling of cabin is required for air-craft."
 
-**Solution 9.19** **[FROM SOURCE: Aloke pp.22–23; Note p.12; systems TUTOR-GENERATED after the standard texts]** This is the model answer for the family.
+**Solution 5.19** **[FROM SOURCE: Aloke pp.22–23; Note p.12; systems TUTOR-GENERATED after the standard texts]** This is the model answer for the family.
 
 *Justification (about 6 marks).* Cabin cooling is still required because:
 
@@ -761,25 +761,25 @@ For low-speed aircraft at low altitude cooling may not be needed; for high-speed
 
 1. Ambient air is ram-compressed in the intake (1 → 2) and compressed further by the **main (engine) compressor** (2 → 3); this bleed air is hot.
 2. It is cooled at constant pressure in a **ram-air heat exchanger** (3 → 4) by outside (ram) air.
-3. It is expanded in a **cooling turbine** (4 → 5) to slightly above cabin pressure; its temperature falls well below the cabin temperature (e.g. 330 K → 241 K from 3 to 1 bar, Example 9.6).
+3. It is expanded in a **cooling turbine** (4 → 5) to slightly above cabin pressure; its temperature falls well below the cabin temperature (e.g. 330 K → 241 K from 3 to 1 bar, Example 5.6).
 4. A **water separator** removes condensed moisture; the cold air is supplied to the **cabin** (5 → 6), where it absorbs the cabin heat load, then leaves overboard. The supply flow is $\dot m=Q/[c_p(T_{cabin}-T_5)]$.
 5. The turbine drives a **fan** that draws cooling air through the heat exchanger (so it works on the ground too).
 
 Then name the other systems in one line each: **bootstrap** (a secondary compressor driven by the turbine and a second heat exchanger give a higher turbine inlet pressure and colder air, Fig. 16); **regenerative** (part of the turbine exhaust cools the air before the turbine in a regenerative heat exchanger, for high-speed aircraft); **reduced ambient** (the ram coolant is itself expanded first, for supersonic aircraft). Finish with why air cycle is used: air is safe and free, cold air goes directly to the cabin (no cold coil), the engine compressor is already there, so the weight per kW is under half that of vapour compression, and the system is simple.
 
-> **TRY 9.20** `[PP 20-21 Q6(a), 17]` Though the temperature at high altitude is lower than the earth surface, aircraft needs cooling, why is this cooling necessary? Hence, describe an air cycle refrigeration system with proper schematic diagram.
+> **TRY 5.20** `[PP 20-21 Q6(a), 17]` Though the temperature at high altitude is lower than the earth surface, aircraft needs cooling, why is this cooling necessary? Hence, describe an air cycle refrigeration system with proper schematic diagram.
 
-**Solution 9.20** **[FROM SOURCE: Aloke pp.21–23; Note pp.11–12]** As Solution 9.19: the four reasons (internal heat, skin friction, ram effect with the 0.2 bar/223 K → 1 bar/353 K example, solar radiation), then the simple aircraft air-cycle system with Fig. 15 (points 1–5). Add the reversed Brayton cycle with its COP $q_L/(w_c-w_t)$ (Fig. 14) and the bootstrap variant (Fig. 16) if time allows.
+**Solution 5.20** **[FROM SOURCE: Aloke pp.21–23; Note pp.11–12]** As Solution 5.19: the four reasons (internal heat, skin friction, ram effect with the 0.2 bar/223 K → 1 bar/353 K example, solar radiation), then the simple aircraft air-cycle system with Fig. 15 (points 1–5). Add the reversed Brayton cycle with its COP $q_L/(w_c-w_t)$ (Fig. 14) and the bootstrap variant (Fig. 16) if time allows.
 
-> **TRY 9.21** `[PP 21-22 Q6(a), 17]` Though the temperature at high altitude is lower than the earth surface, aircraft needs cooling, why is this cooling necessary? Hence, describe an air cycle refrigeration system with proper schematic diagram.
+> **TRY 5.21** `[PP 21-22 Q6(a), 17]` Though the temperature at high altitude is lower than the earth surface, aircraft needs cooling, why is this cooling necessary? Hence, describe an air cycle refrigeration system with proper schematic diagram.
 
-**Solution 9.21** **[FROM SOURCE: Aloke pp.21–23]** A verbatim repeat of TRY 9.20: give Solution 9.20.
+**Solution 5.21** **[FROM SOURCE: Aloke pp.21–23]** A verbatim repeat of TRY 5.20: give Solution 5.20.
 
 ### SP4: magnetic and thermoelectric refrigeration
 
-> **TRY 9.22** `[PP 17-18 Q7(a), 17]` Describe with neat sketch the working principle of magnetic refrigeration. Explain how so low temperature like absolute zero can be achieved by this refrigeration process?
+> **TRY 5.22** `[PP 17-18 Q7(a), 17]` Describe with neat sketch the working principle of magnetic refrigeration. Explain how so low temperature like absolute zero can be achieved by this refrigeration process?
 
-**Solution 9.22** **[FROM SOURCE: Aloke pp.15–16; Note p.9; Ameen §8.4]**
+**Solution 5.22** **[FROM SOURCE: Aloke pp.15–16; Note p.9; Ameen §8.4]**
 
 *Sketch (about 5 marks):* the apparatus of Fig. 20 (paramagnetic salt in a tube to a high vacuum, liquid helium bath, liquid hydrogen Dewar, magnet poles N and S), and the T–s diagram of Fig. 19.
 
@@ -800,9 +800,9 @@ Then name the other systems in one line each: **bootstrap** (a secondary compres
 5. At such low temperatures the salt's entropy is almost all magnetic, so this entropy change gives a large fractional fall of temperature. The process can be repeated, and aligning nuclear spins gives even lower (spin) temperatures for an instant.
 6. The entropy curves with and without the field meet at 0 K (third law), so each step lowers the temperature by a factor: **absolute zero is approached but cannot be reached**.
 
-> **TRY 9.23** `[PP 22-23 Q6(a), 15]` Why is an electromotive force produced when the junctions of two dissimilar conductors are maintained at two different temperatures? Hence, describe the thermoelectric refrigeration system with relevant mathematical expression.
+> **TRY 5.23** `[PP 22-23 Q6(a), 15]` Why is an electromotive force produced when the junctions of two dissimilar conductors are maintained at two different temperatures? Hence, describe the thermoelectric refrigeration system with relevant mathematical expression.
 
-**Solution 9.23** **[FROM SOURCE: Aloke pp.12–14; Note p.8; Ameen §6.1]**
+**Solution 5.23** **[FROM SOURCE: Aloke pp.12–14; Note p.8; Ameen §6.1]**
 
 *Why an EMF is produced (Seebeck effect, about 5 marks).*
 
@@ -817,14 +817,14 @@ Then name the other systems in one line each: **bootstrap** (a secondary compres
 3. Peltier heat at a junction: $Q=\pi I$, with $\pi=\alpha T$.
 4. Two irreversible effects oppose the cooling: **Joule heating** $I^2R$ (half assumed to reach each junction) and **conduction** $K(T_h-T_c)$ from the hot to the cold junction.
 5. Net refrigeration: $Q_c=\alpha IT_c-\tfrac12I^2R-K(T_h-T_c)$; heat rejected $Q_h=\alpha IT_h+\tfrac12I^2R-K(T_h-T_c)$; power $W=Q_h-Q_c=\alpha I(T_h-T_c)+I^2R$; $COP=Q_c/W$.
-6. Best materials have a high figure of merit $Z=\alpha^2/(RK)$ (high Seebeck coefficient, low resistance, low thermal conductivity). Example 9.7: one couple at 5 A between 273 and 303 K gives 0.271 W with COP 0.874.
+6. Best materials have a high figure of merit $Z=\alpha^2/(RK)$ (high Seebeck coefficient, low resistance, low thermal conductivity). Example 5.7: one couple at 5 A between 273 and 303 K gives 0.271 W with COP 0.874.
 7. Advantages: no moving parts or refrigerant, silent, compact, long life, easy control by current, reversible to heating. Limitations: low COP and high cost for large capacities; used for electronics, instruments, medicines, small coolers.
 
 <!-- pagebreak -->
 
-## 9.12 Summary sheet
+## 5.12 Summary sheet
 
-> **KEY: Module 9 on one page**
+> **KEY: Module 5 on one page**
 >
 > - **Steam jet:** water refrigerant boils under vacuum (≈ 0.9 kPa → 5 °C) in a flash chamber; a steam ejector (nozzle → mixing → diffuser) keeps the vacuum and compresses the vapour to the condenser (≈ 6.7 kPa, 38 °C). Cooling: $m_vh_{fg}=(m-m_v)c_p\Delta T$ (1 kg from 100 kg: 5.76 °C); steady $x=\frac{h_{f,r}-h_{f,e}}{h_g-h_{f,e}}$ (15 → 5 °C: 0.01686). Advantages: safe water, no moving parts, flexible, outdoors, cheap with waste steam. Limits: vacuum, huge vapour volume (6 m³/s per 100 kW), condenser twice VC's, not below 4 °C. Erratum: 5 cm Hg ↔ 38 °C, 6.5 cm Hg ↔ 43 °C (not 60/100 °C).
 > - **Liquefaction:** state below the critical temperature, into the dome; by cooling (cascade; butane, propane, LNG) or by expansion (J–T throttle, isenthalpic; expander, isentropic). O$_2$ ($T_c$ −118.6 °C, bp −183 °C) cannot be made by cooling: liquefy air by expansion and distil.
@@ -836,7 +836,7 @@ Then name the other systems in one line each: **bootstrap** (a secondary compres
 > - **Magnetic:** magnetize at ≈ 1 K (heat to He), isolate, demagnetize adiabatically → ≈ 0.001 K; 0 K approached, never reached.
 > - **Errata:** steam-jet boiling points (Note p.6, Aloke p.8); "J–T = work-producing expansion" (Note p.67); "friction-dominant" and swapped $T_1$/$T_i$ labels (Note p.67); "preheating reduces compressor work" (Note p.69); "yield = quality of state 6" (Aloke p.103: it is the liquid fraction).
 
-## 9.13 Self-test
+## 5.13 Self-test
 
 1. At what pressure does water boil at 5 °C, and at what temperature does it boil at 5 cm Hg?
 2. Name the three sections of a steam ejector and say what each does to the pressure and velocity.
@@ -868,7 +868,7 @@ Then name the other systems in one line each: **bootstrap** (a secondary compres
 
 <!-- BEGIN DATA TABLES (generated by build/make_tables.py; do not edit) -->
 <!-- pagebreak -->
-## 9.T Tables for Module 9
+## 5.T Tables for Module 5
 
 **Data Book Table 1 (p.2). Refrigerant 718 (water/steam): saturated liquid and saturated vapour**
 

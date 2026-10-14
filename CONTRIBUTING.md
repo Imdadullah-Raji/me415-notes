@@ -7,10 +7,7 @@ Edit the markdown (GitHub's web editor is enough), open a pull request, and the 
 
 1. **The build must pass.** It fails if a looked-up value differs from the CSV, if a link or anchor is broken, or if a
    lookup span did not render. The failure message names the file and the value.
-2. **Every number in the Essentials must also be printed in its module** (`build/check_essentials.py`), except inside
-   mini-examples, whose numbers are made up. A legitimately new number can be whitelisted in the chapter with
-   `<!-- ok: 1.25 -->`.
-3. Plain, direct English; units on every number; final answers in **bold**. LaTeX maths: `$…$` inline, `$$…$$` display.
+2. Plain, direct English; units on every number; final answers in **bold**. LaTeX maths: `$…$` inline, `$$…$$` display.
 
 ## The markup
 

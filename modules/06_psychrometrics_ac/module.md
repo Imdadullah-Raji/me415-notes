@@ -1,11 +1,11 @@
 <!-- pagebreak -->
-# Module 5: Psychrometry, comfort and air-conditioning systems
+# Module 6: Psychrometry, comfort and air-conditioning systems
 
 | | |
 |---|---|
 | **Where it appears** | 10 of 11 papers, 2011-12 to 2023-24 (not 2021-22). Almost always Q2 (and Q3 in 2011-12, 2012-13) of Section A; Q1(a) in 2020-21; Q7(b) (2013-14) and Q8(b)/(c) (2023-24) of Section B |
 | **Share of all marks** | 11.3% (346 of 3055 weighted marks): 27 parts. AC system types (AC5) 125 marks; the window/split AC numerical (AC2) 75 marks; other psychrometric numericals (AC3) 60; processes and reheat/bypass systems (AC4) 49; comfort (AC1) 37. Up to 19% of a paper in 2011-12 to 2013-14, 5–12% since |
-| **Time** | core 3 h (§5.1–5.4, §5.7–5.8 and Solutions 5.1, 5.6, 5.19), full 6 h (all 27 solutions) |
+| **Time** | core 3 h (§6.1–6.4, §6.7–6.8 and Solutions 5.1, 5.6, 5.19), full 6 h (all 27 solutions) |
 | **Sources** | Arif pp.14–17, 60–76, 94–106; Note pp.29–31, 118–128, 153–163; Ameen §12.1–12.5 (SHR, supply air, mixing); Data Book Table 1 (water) and Chart 8 (psychrometric chart), both at the end of this module |
 
 **How it has been asked:**
@@ -31,7 +31,7 @@
 > - **Chart:** the psychrometric chart at the end of this module is drawn for **101.325 kPa** (sea level). At any other pressure use the equations.
 > - **Units.** 1 TR = 3.517 kW = 211 kJ/min; kJ/min ÷ 60 = kW.
 
-## 5.1 Comfort, air conditioning and refrigeration ★
+## 6.1 Comfort, air conditioning and refrigeration ★
 
 ### What air conditioning is
 
@@ -97,9 +97,9 @@ Outdoor air is required in an air-conditioning system [Arif p.97a; Note p.127]:
 4. to **make up the air that exfiltrates** when the space is kept at a slight positive pressure (which keeps dust and unconditioned air out);
 5. to **add or remove heat and moisture** (free cooling when the outdoor air is cool and dry).
 
-Minimum outdoor air (ASHRAE 62-1992) [Arif p.97b]: offices, dining and conference rooms, lounges 10 L/s per person; retail stores, waiting rooms, classrooms 7 L/s; hospital patient rooms and residences 15 L/s; smoking lounges 30 L/s. (Module 1 uses Ameen's 8 L/s per student for classrooms; state which you use.) Outdoor air is a large part of the cooling load in a hot humid climate (Solution 5.6), so it is never more than needed.
+Minimum outdoor air (ASHRAE 62-1992) [Arif p.97b]: offices, dining and conference rooms, lounges 10 L/s per person; retail stores, waiting rooms, classrooms 7 L/s; hospital patient rooms and residences 15 L/s; smoking lounges 30 L/s. (Module 1 uses Ameen's 8 L/s per student for classrooms; state which you use.) Outdoor air is a large part of the cooling load in a hot humid climate (Solution 6.6), so it is never more than needed.
 
-## 5.2 Moist air and its properties ★
+## 6.2 Moist air and its properties ★
 
 Atmospheric air is a mixture of **dry air** (N₂, O₂, Ar, CO₂, constant composition) and **water vapour**, whose amount varies. At air-conditioning temperatures (−10 to 50 °C) both behave as ideal gases. By **Dalton's law** the total pressure is the sum of the partial pressures: $P=P_a+P_v$ [Ameen §12.1]. Because the water content changes in AC processes while the dry air does not, every property is expressed **per kg of dry air**.
 
@@ -143,7 +143,7 @@ with $T_2=T_{wb}$. Given $T_{db}$ and $T_{wb}$ (sling psychrometer), this gives 
 
 **Degree of saturation** $\mu=\omega/\omega_s$ (the "percentage saturation" of British charts) is close to $\phi$ at room temperatures.
 
-> **EXAMPLE 5.1** `[Arif pp.101–102; Note p.159; state 1 of the window AC problem]` Air is at 1 atm, 30 °C and 80 % relative humidity. Find $\omega$, $h$, $v$, the dew point and the wet-bulb temperature.
+> **EXAMPLE 6.1** `[Arif pp.101–102; Note p.159; state 1 of the window AC problem]` Air is at 1 atm, 30 °C and 80 % relative humidity. Find $\omega$, $h$, $v$, the dew point and the wet-bulb temperature.
 >
 > **[TUTOR-GENERATED]** Table 1, row 30 °C: $P_g=0.00425$ MPa $=4.25$ kPa.
 >
@@ -162,7 +162,7 @@ with $T_2=T_{wb}$. Given $T_{db}$ and $T_{wb}$ (sling psychrometer), this gives 
 >
 > *Chart check* (sea-level chart, end of this module): $\omega\approx21.7$ g/kg, $h\approx85.5$ kJ/kg, $v\approx0.889$ m³/kg, $T_{wb}\approx27$ °C, $T_{dp}\approx26$ °C. CoolProp: 0.02168, 85.56 kJ/kg, 0.8884 m³/kg. The table route is within 0.4 % of the exact values; the small difference comes from interpolating $P_g$ linearly over 5 K.
 
-## 5.3 The psychrometric chart ★
+## 6.3 The psychrometric chart ★
 
 The **psychrometric chart** plots the properties of moist air at one total pressure, so that any state can be fixed by two properties and all the others read off, and every AC process can be seen as a path [Arif p.98b; Note p.153; Ameen §12.3]. Fig. 5 shows its anatomy:
 
@@ -177,17 +177,17 @@ The **psychrometric chart** plots the properties of moist air at one total press
 
 **Reading a state.** Locate the point from any two independent properties (e.g. $T_{db}$ and φ, or $T_{db}$ and $T_{wb}$). Then: go horizontally right for $\omega$; horizontally left to the saturation curve for $T_{dp}$; along the wet-bulb line up-left to the saturation curve for $T_{wb}$; along the enthalpy line to the $h$ scale; interpolate between the volume lines for $v$.
 
-![Fig. 5: Anatomy of the psychrometric chart at 101.325 kPa (T_db 0–45 °C horizontal, ω 0–0.030 kg/kg on the right): saturation curve φ = 100 % at the upper left; grey constant-φ curves 20, 40, 60, 80 %; green dashed constant-T_wb lines; orange dash-dot constant-h lines labelled h = 40, 60, 80; blue dotted constant-v lines 0.85 and 0.90. State 1 at 30 °C, φ = 80 % (Example 5.1): a red dashed vertical down to T_db = 30 °C, a red horizontal to the right axis at ω1 = 0.0216, the same horizontal to the left meets the saturation curve at the dew point 26.1 °C; a green line up-left along the wet-bulb line meets the saturation curve at T_wb = 27.0 °C](figures/005.jpg "w=0.85")
+![Fig. 5: Anatomy of the psychrometric chart at 101.325 kPa (T_db 0–45 °C horizontal, ω 0–0.030 kg/kg on the right): saturation curve φ = 100 % at the upper left; grey constant-φ curves 20, 40, 60, 80 %; green dashed constant-T_wb lines; orange dash-dot constant-h lines labelled h = 40, 60, 80; blue dotted constant-v lines 0.85 and 0.90. State 1 at 30 °C, φ = 80 % (Example 6.1): a red dashed vertical down to T_db = 30 °C, a red horizontal to the right axis at ω1 = 0.0216, the same horizontal to the left meets the saturation curve at the dew point 26.1 °C; a green line up-left along the wet-bulb line meets the saturation curve at T_wb = 27.0 °C](figures/005.jpg "w=0.85")
 
 **The chart at the end of this module** is ASHRAE chart No. 1 (Data Book Chart 8), normal temperature, **sea level, 101.325 kPa**, with a clean print of the same chart. The chart pasted in the slides and the Note (Arif p.99a, Note p.154) is ASHRAE chart **No. 5 for 750 m (92.634 kPa)**: do not read numbers from it. The UIG chart on Note p.155 is for 760 mm Hg (sea level) and agrees with Chart 8.
 
-**Equations or chart?** The equations of §5.2 with Table 1 are exact (to the interpolation in Table 1) at **any** pressure; the chart is quicker but good to about ±0.5 kJ/kg and ±0.0003 in $\omega$, and only at its own pressure. This guide solves every numerical with the equations and quotes the chart reading as a check. In the exam either route earns full marks if the steps are shown; draw the process on a sketch of the chart in both cases.
+**Equations or chart?** The equations of §6.2 with Table 1 are exact (to the interpolation in Table 1) at **any** pressure; the chart is quicker but good to about ±0.5 kJ/kg and ±0.0003 in $\omega$, and only at its own pressure. This guide solves every numerical with the equations and quotes the chart reading as a check. In the exam either route earns full marks if the steps are shown; draw the process on a sketch of the chart in both cases.
 
 > **TRAP: The chart is for one pressure only**
 >
-> At 1 atm the chart and the equations agree. At any other pressure the chart is wrong, and $\omega$ and $v$ must be computed: for the same $T$ and φ, $\omega$ and $v$ grow as $P$ falls ($\omega\propto P_v/(P-P_v)$, $v\propto1/(P-P_v)$). The Note's heating-with-humidification problem at **100 kPa** (pp.161–162) reads $v_1=0.80$ m³/kg off the sea-level chart; at 100 kPa it is 0.8157 (Example 5.3), so its heat input 703 kJ/min should be **668 kJ/min**. Whenever a problem states a pressure other than 1 atm (100 kPa, or a plant at altitude), use the equations.
+> At 1 atm the chart and the equations agree. At any other pressure the chart is wrong, and $\omega$ and $v$ must be computed: for the same $T$ and φ, $\omega$ and $v$ grow as $P$ falls ($\omega\propto P_v/(P-P_v)$, $v\propto1/(P-P_v)$). The Note's heating-with-humidification problem at **100 kPa** (pp.161–162) reads $v_1=0.80$ m³/kg off the sea-level chart; at 100 kPa it is 0.8157 (Example 6.3), so its heat input 703 kJ/min should be **668 kJ/min**. Whenever a problem states a pressure other than 1 atm (100 kPa, or a plant at altitude), use the equations.
 
-## 5.4 Air-conditioning processes ★
+## 6.4 Air-conditioning processes ★
 
 **Every AC process is a steady-flow process** analysed with three balances [Arif p.100a; Note p.156]:
 
@@ -221,7 +221,7 @@ Air passes over a heating coil (hot water, steam, electric resistance, hot gas) 
 
 $$\dot m_{a1}=\dot m_{a2}=\dot m_a,\qquad \omega_1=\omega_2,\qquad \dot Q=\dot m_a(h_2-h_1)=\dot m_a(1.005+1.82\,\omega)(T_2-T_1)$$
 
-During heating $\omega$ stays constant but $\phi$ falls ($P_v$ fixed, $P_g$ rises): winter heating alone gives uncomfortably dry air, so it is followed by humidification. During sensible cooling $\phi$ rises. Fig. 8 shows the heating case of Solution 5.5.
+During heating $\omega$ stays constant but $\phi$ falls ($P_v$ fixed, $P_g$ rises): winter heating alone gives uncomfortably dry air, so it is followed by humidification. During sensible cooling $\phi$ rises. Fig. 8 shows the heating case of Solution 6.5.
 
 ![Fig. 8: Simple heating. (a) Duct with a heating coil: state 1 at 14 °C, φ 80 %, 30 m³/min enters; heat $\dot Q_{in}$ is added; state 2 leaves at 25 °C with ω2 = ω1 and φ2 < φ1. (b) Chart: horizontal arrow from 1 (14 °C, 80 %) to 2 (25 °C, 41 %) at constant ω = 0.00803](figures/008.png "w=0.85")
 
@@ -236,11 +236,11 @@ with $h_w=h_f$ at the condensate temperature (Table 1). The condensate term is o
 
 ![Fig. 9: Cooling with dehumidification in a window or split AC. (a) Duct with the cooling coil (evaporator) inside a dashed control volume: state 1 at 35 °C, φ 70 %, 10 m³/min enters at the left; heat $\dot Q_{out}$ leaves to the refrigerant; condensate ṁw at 15 °C (h_w = h_f) drips into a drain pan; state 2 leaves at 15 °C saturated. (b) Chart: from 1 (35 °C, ω1) horizontally left to x, the dew point 28.6 °C on the saturation curve, then down along the saturation curve to 2 (15 °C, ω2); the vertical gap ω1 − ω2 is the water condensed per kg dry air](figures/009.png "w=0.95")
 
-> **EXAMPLE 5.2** `[Arif pp.101b–102a; Note pp.159–160; Çengel Ex. 14-8]` Air enters a window air conditioner at 1 atm, 30 °C and 80 percent relative humidity at a rate of 10 m³/min, and it leaves as saturated air at 14 °C. Part of the moisture in the air that condenses during the process is also removed at 14 °C. Determine the rates of heat and moisture removal from the air.
+> **EXAMPLE 6.2** `[Arif pp.101b–102a; Note pp.159–160; Çengel Ex. 14-8]` Air enters a window air conditioner at 1 atm, 30 °C and 80 percent relative humidity at a rate of 10 m³/min, and it leaves as saturated air at 14 °C. Part of the moisture in the air that condenses during the process is also removed at 14 °C. Determine the rates of heat and moisture removal from the air.
 >
 > **[FROM SOURCE: Arif pp.101–102, Note pp.159–160; equation route]** Sketch Fig. 9 with these numbers.
 >
-> *State 1* (Example 5.1): $\omega_1=0.0216$, $h_1=85.34$ kJ/kg, $v_1=0.8885$ m³/kg.
+> *State 1* (Example 6.1): $\omega_1=0.0216$, $h_1=85.34$ kJ/kg, $v_1=0.8885$ m³/kg.
 >
 > *State 2* (14 °C, saturated): Table 1 rows 10 °C (0.00123 MPa) and 15 °C (0.00171 MPa): $P_g=1.23+0.8(1.71-1.23)=1.614$ kPa $=P_{v2}$;
 > $\omega_2=\dfrac{0.622\times1.614}{101.325-1.614}=0.01007$; $h_2=1.005(14)+0.01007(2501+1.82\times14)=39.51$ kJ/kg.
@@ -268,7 +268,7 @@ Heating alone lowers φ (dry winter air). The heated air is then humidified by s
 
 With **steam** humidification the temperature rises a little (2 → 3 slopes up-right); with **water spray** it falls (the line follows a wet-bulb line up-left, evaporative cooling), so the air must be heated beyond the final temperature first.
 
-> **EXAMPLE 5.3** `[Arif p.103; Note pp.161–162; Çengel Ex. 14-9]` An air-conditioning system is to take in outdoor air at 10 °C and 30 % RH at a steady rate of 45 m³/min and to condition it to 25 °C and 60 percent relative humidity. The outdoor air is first heated to 22 °C in the heating section and then humidified by the injection of hot steam in the humidifying section. Assuming the entire process takes place at a pressure of 100 kPa, determine (a) the rate of heat supply in the heating section and (b) the mass flow rate of the steam required in the humidifying section.
+> **EXAMPLE 6.3** `[Arif p.103; Note pp.161–162; Çengel Ex. 14-9]` An air-conditioning system is to take in outdoor air at 10 °C and 30 % RH at a steady rate of 45 m³/min and to condition it to 25 °C and 60 percent relative humidity. The outdoor air is first heated to 22 °C in the heating section and then humidified by the injection of hot steam in the humidifying section. Assuming the entire process takes place at a pressure of 100 kPa, determine (a) the rate of heat supply in the heating section and (b) the mass flow rate of the steam required in the humidifying section.
 >
 > **[FROM SOURCE: Arif p.103, Note pp.161–162, corrected]** $P=100$ kPa, so use the equations, not the chart (Fig. 10).
 >
@@ -290,7 +290,7 @@ With **steam** humidification the temperature rises a little (2 → 3 slopes up-
 >
 > The Note takes $v_1=0.80$, $\omega_1=2.5\times10^{-3}$, $h_1=15.5$ from the 760 mm Hg chart and gets $\dot m_a=45/0.80=56.25$ kg/min, $\dot Q_{in}=56.25(28-15.5)=703.1$ kJ/min and $\dot m_w=0.534$ kg/min. At 1 atm the equations give $v_1=0.805$ (55.9 kg/min); at the stated **100 kPa** they give $v_1=0.8157$. The heat input is 5 % too high. The steam rate happens to be close only because the high $\dot m_a$ and the high $\omega_1$ partly cancel. Read the problem's pressure first.
 
-![Fig. 10: Heating with humidification at 100 kPa (Example 5.3). (a) Duct: state 1 (10 °C, 30 %, 45 m³/min) enters the heating section with heating coils; state 2 (22 °C, ω2 = ω1) enters the humidifying section with steam injection; state 3 (25 °C, 60 %) leaves. (b) Chart: horizontal arrow 1 → 2 at ω = 0.0023, then a steep arrow up and slightly right 2 → 3 to ω = 0.0121](figures/010.png "w=0.95")
+![Fig. 10: Heating with humidification at 100 kPa (Example 6.3). (a) Duct: state 1 (10 °C, 30 %, 45 m³/min) enters the heating section with heating coils; state 2 (22 °C, ω2 = ω1) enters the humidifying section with steam injection; state 3 (25 °C, 60 %) leaves. (b) Chart: horizontal arrow 1 → 2 at ω = 0.0023, then a steep arrow up and slightly right 2 → 3 to ω = 0.0121](figures/010.png "w=0.95")
 
 ### Evaporative cooling
 
@@ -302,9 +302,9 @@ $$T_{wb}\approx\text{constant},\qquad h\approx\text{constant}$$
 
 The state moves up-left along the wet-bulb line through the inlet state (Fig. 11): $T_{db}$ falls, $\omega$ and φ rise. The lowest possible temperature is the inlet wet-bulb temperature (point 2′ on the saturation curve), reached only with an infinitely long pad. The method works well when the air is dry (large $T_{db}-T_{wb}$, e.g. 40 °C/20 % has $T_{wb}=21.9$ °C) and poorly in a humid climate like Dhaka's monsoon, where $T_{wb}$ is close to $T_{db}$.
 
-*Example* (a desert cooler) **[TUTOR-GENERATED]**: air at 1 atm, 40 °C, 20 % leaves the pads at 90 %. $\omega_1=0.622(0.2\times7.38)/(101.325-1.476)=0.00919$, $h_1=63.87$ kJ/kg, $T_{wb}=21.9$ °C (trial, as in Example 5.1). Following the 21.9 °C wet-bulb line to φ = 90 % gives $T_2=\mathbf{23.1}$ °C, $\omega_2=0.01622$, so the air is cooled by 17 K and takes up $\omega_2-\omega_1=0.00703$ kg water per kg dry air. Check: $h_2=64.51$ kJ/kg $=h_1+(\omega_2-\omega_1)h_f(21.9\ °\text{C})=63.87+0.00703\times91.9$, so $h$ is constant to within 1 %.
+*Example* (a desert cooler) **[TUTOR-GENERATED]**: air at 1 atm, 40 °C, 20 % leaves the pads at 90 %. $\omega_1=0.622(0.2\times7.38)/(101.325-1.476)=0.00919$, $h_1=63.87$ kJ/kg, $T_{wb}=21.9$ °C (trial, as in Example 6.1). Following the 21.9 °C wet-bulb line to φ = 90 % gives $T_2=\mathbf{23.1}$ °C, $\omega_2=0.01622$, so the air is cooled by 17 K and takes up $\omega_2-\omega_1=0.00703$ kg water per kg dry air. Check: $h_2=64.51$ kJ/kg $=h_1+(\omega_2-\omega_1)h_f(21.9\ °\text{C})=63.87+0.00703\times91.9$, so $h$ is constant to within 1 %.
 
-Other applications: air washers in textile mills (which also need high humidity), pre-cooling of the condenser air, evaporative condensers and **cooling towers** (§5.6), which use the same process to cool water instead of air.
+Other applications: air washers in textile mills (which also need high humidity), pre-cooling of the condenser air, evaporative condensers and **cooling towers** (§6.6), which use the same process to cool water instead of air.
 
 ![Fig. 11: Evaporative cooling. (a) Evaporative (swamp) cooler: hot dry air 1 (40 °C, 20 %) passes through wetted pads or sprays with recirculated water and make-up water, leaving as cool moist air 2 (23.1 °C, 90 %). (b) Chart: arrow from 1 up-left along the green constant wet-bulb line T_wb = 21.9 °C (≈ constant h) to 2; continuing the line reaches 2′ on the saturation curve at 21.9 °C, the lowest attainable temperature](figures/011.jpg "w=0.95")
 
@@ -320,13 +320,13 @@ Eliminating the masses gives $\dfrac{\omega_2-\omega_3}{\omega_3-\omega_1}=\dfra
 
 Two points need care. (1) Volumes are given at different states: convert each stream with its own $v$ ($\dot m_a=\dot V/v$) before weighting; volume weighting is only approximate. (2) If the line 1–2 crosses the saturation curve (very cold and very humid air), the mixture is fogged and some vapour condenses.
 
-![Fig. 13: Adiabatic mixing. (a) Mixing box: recirculated air 1 (ṁa1, ω1, h1) enters horizontally, outdoor air 2 (ṁa2, ω2, h2) enters from above; mixed air 3 (ṁa3, ω3, h3) leaves. (b) Chart: the mixed state 3 lies on the straight line from 1 (room, 25 °C, 50 %) to 2 (outdoor, 33 °C, 80 %), with 1–3 : 3–2 = ṁa2 : ṁa1, here close to 1 because three times as much room air is used (Solution 5.8)](figures/013.png "w=0.95")
+![Fig. 13: Adiabatic mixing. (a) Mixing box: recirculated air 1 (ṁa1, ω1, h1) enters horizontally, outdoor air 2 (ṁa2, ω2, h2) enters from above; mixed air 3 (ṁa3, ω3, h3) leaves. (b) Chart: the mixed state 3 lies on the straight line from 1 (room, 25 °C, 50 %) to 2 (outdoor, 33 °C, 80 %), with 1–3 : 3–2 = ṁa2 : ṁa1, here close to 1 because three times as much room air is used (Solution 6.8)](figures/013.png "w=0.95")
 
 ### Chemical dehumidification
 
 Air passed over a **sorbent** (silica gel, activated alumina, or sprayed lithium-chloride solution) loses moisture to it. The latent heat of condensation (plus the heat of adsorption) is released into the air, so the air leaves drier and hotter at almost constant enthalpy, and slightly higher, since the heat of adsorption adds to it (process 8 in Fig. 6) [Ameen §12.4]. Used where very dry air is needed (pharmaceuticals, storage of hygroscopic goods, low-dew-point rooms); the sorbent is regenerated by heating.
 
-## 5.5 Room loads, SHR and summer air-conditioning systems ★
+## 6.5 Room loads, SHR and summer air-conditioning systems ★
 
 ### Sensible and latent loads, SHR and the supply-air state
 
@@ -360,7 +360,7 @@ $$\dot Q_{coil}=\dot m_a(h_m-h_s)-\dot m_w h_w=\underbrace{\dot m_a(h_r-h_s)}_{\
 
 It works if the coil line M–S can reach the room condition line, i.e. if the coil exit state demanded by the room SHR is attainable. With a high latent load (low SHR) the required S lies close to the saturation curve at a low temperature, and the ADP can become impossibly low: then bypass or reheat is used.
 
-![Fig. 14: Elementary summer air conditioning. (a) Schematic: outdoor air O enters at the lower left, return air R comes back from the room along the top duct, part is exhausted and the rest drops into the mixing point M; the mixture passes the cooling coil to C and the fan to S, then up into the room R (sensible load Qs, latent load Ql). (b) Chart for Solution 5.6: outdoor state O (35 °C, ω 0.0195), room R (24 °C, 50 %), the mix M (26.0 °C) on the line R–O; the coil process M → S = C (16 °C, ω 0.00823, blue); the room condition line S → R (red dashed) whose slope is set by the room SHR](figures/014.png "w=0.95")
+![Fig. 14: Elementary summer air conditioning. (a) Schematic: outdoor air O enters at the lower left, return air R comes back from the room along the top duct, part is exhausted and the rest drops into the mixing point M; the mixture passes the cooling coil to C and the fan to S, then up into the room R (sensible load Qs, latent load Ql). (b) Chart for Solution 6.6: outdoor state O (35 °C, ω 0.0195), room R (24 °C, 50 %), the mix M (26.0 °C) on the line R–O; the coil process M → S = C (16 °C, ω 0.00823, blue); the room condition line S → R (red dashed) whose slope is set by the room SHR](figures/014.png "w=0.95")
 
 ### Summer AC with bypass
 
@@ -397,7 +397,7 @@ When the latent load is large (low SHR: crowded halls, kitchens, humid outdoor a
 
 In winter the outdoor air is cold and dry. The mixture of outdoor and return air is **heated** (preheat coil), **humidified** (steam, or spray with its evaporative cooling), and if needed **reheated** to the supply state, which is warmer than the room (it carries the heat loss) [Arif p.102b]. Fig. 10 shows the heating and steam-humidification part.
 
-## 5.6 Cooling towers
+## 6.6 Cooling towers
 
 Power plants, large air-conditioning plants and industry reject large amounts of heat. Where river or lake water is limited, or thermal pollution must be avoided, the heat is rejected to the atmosphere, with the cooling water **recirculated** between the condenser and a **wet cooling tower** [Arif p.104b; Note p.163]. A wet cooling tower is **a semi-enclosed evaporative cooler**: warm condenser water (about 35 °C) is sprayed over a **fill** (packing of PVC sheets or splash bars that spreads the water into thin films and drops) while air flows through; a small part of the water (about 1 % for every 6–7 K of cooling) evaporates, and its latent heat cools the rest to about 30 °C. Water can be cooled **below the dry-bulb temperature** of the air, toward its **wet-bulb temperature**, which is why a water-cooled condenser runs at a lower condensing pressure and higher COP than an air-cooled one.
 
@@ -423,7 +423,7 @@ Power plants, large air-conditioning plants and industry reject large amounts of
 
 ![Fig. 19: Cooling tower cut-away of a round FRP tower: fan motor, fan guard, fan, turn-buckle sprinkler, drift eliminator, FRP casing, PVC filling, stand pipe, air intake mesh, FRP basin, inlet, suction tank, automatic filler, outlet [Arif p.71a]](figures/019.jpg "w=0.45")
 
-## 5.7 Air-conditioning systems: classification and unitary systems ★
+## 6.7 Air-conditioning systems: classification and unitary systems ★
 
 **The basic air-conditioning system** [Arif p.60b]: outside air through an outside-air damper and return air from the space meet in a **mixing chamber**; the mixture passes a **filter**, a **heating coil**, a **cooling coil**, a **humidifier** and a **fan**, and the conditioned supply air goes to the space. Every system type below is a way of packaging these parts and of carrying heat between the space and the refrigeration plant.
 
@@ -507,7 +507,7 @@ An **inverter air conditioner** uses a microprocessor and a variable-frequency d
 
 (Note p.118; Arif pp.64–66.)
 
-## 5.8 Central (chiller) systems ★
+## 6.8 Central (chiller) systems ★
 
 ### The central chilled-water system and its components
 
@@ -523,7 +523,7 @@ A **central air-conditioning system** produces cooling in a central plant and di
 **Functions of the four main components** [Arif pp.67–76; Note pp.121–128]:
 
 - **Chiller:** a packaged vapour-compression (or absorption) refrigeration machine (compressor: reciprocating, screw or centrifugal; shell-and-tube condenser and evaporator; expansion device; controls) that **cools water** from about 12 °C to 7 °C. It is the heart of the plant and produces the refrigerating effect for the whole building. Chillers are water-cooled (with a cooling tower) or air-cooled (finned condenser coils and fans on the roof, no tower).
-- **Cooling tower:** cools the **condenser water** that has picked up the heat rejected by the chiller condenser (about 35 → 30 °C), by evaporating part of it into the air (§5.6). It lets the water be reused and lets the condenser run near the outdoor wet-bulb temperature.
+- **Cooling tower:** cools the **condenser water** that has picked up the heat rejected by the chiller condenser (about 35 → 30 °C), by evaporating part of it into the air (§6.6). It lets the water be reused and lets the condenser run near the outdoor wet-bulb temperature.
 - **AHU (air handling unit):** a large central air unit in a plant room on each floor or on the roof: mixing box with outdoor-air, return-air and exhaust dampers, filters, chilled-water cooling coil, heating coil, humidifier, supply fan (and return fan), sound attenuators and controls. It **conditions (cools, dehumidifies, heats, humidifies, filters) and moves the air**, mixes in the required outdoor air, and pushes it through ducts to many rooms.
 - **FCU (fan coil unit):** a small terminal unit **in or next to each room**: a fan (blower), a chilled-water (or hot-water) coil, a filter and a drain pan, in a wall, floor-console or ceiling casing. It **recirculates and cools the room's own air**, controlled by a room thermostat (three-speed fan and a valve on the water).
 
@@ -595,7 +595,7 @@ In an **all-air system** the central plant (AHU) delivers **cooled or heated air
 
 **Primary functions of an air distribution system** (2023-24): to **deliver** the conditioned supply air from the AHU to each space in the right quantity (balanced, against the design load), to **distribute** it inside the space through diffusers and grilles with proper throw, velocity and mixing and without draughts or noise, to **return** room air to the AHU (and exhaust part of it), to bring in the **outdoor ventilation air**, and so to keep temperature, humidity, air quality and pressure in every zone, at minimum fan energy.
 
-**Main sources of pressure loss in a duct system** (detailed in Module 6): (1) **friction losses** in straight ducts, $\Delta p_f=f\dfrac{L}{D_h}\dfrac{\rho V^2}{2}$, proportional to length and to the square of velocity, larger for rough or flexible ducts; (2) **dynamic (fitting) losses** $\Delta p=C\,\dfrac{\rho V^2}{2}$ in elbows and bends, tees, branch take-offs and junctions, transitions (sudden or gradual enlargements and contractions), entrances and exits; (3) losses in **components**: dampers (volume, fire and smoke dampers), filters (rising as they load), coils, VAV boxes, sound attenuators, louvres, grilles, registers and diffusers; (4) leakage at joints. The fan must supply the total pressure of the longest (index) run.
+**Main sources of pressure loss in a duct system** (detailed in Module 9): (1) **friction losses** in straight ducts, $\Delta p_f=f\dfrac{L}{D_h}\dfrac{\rho V^2}{2}$, proportional to length and to the square of velocity, larger for rough or flexible ducts; (2) **dynamic (fitting) losses** $\Delta p=C\,\dfrac{\rho V^2}{2}$ in elbows and bends, tees, branch take-offs and junctions, transitions (sudden or gradual enlargements and contractions), entrances and exits; (3) losses in **components**: dampers (volume, fire and smoke dampers), filters (rising as they load), coils, VAV boxes, sound attenuators, louvres, grilles, registers and diffusers; (4) leakage at joints. The fan must supply the total pressure of the longest (index) run.
 
 ### All-water and air-water systems
 
@@ -622,29 +622,29 @@ In an **all-air system** the central plant (AHU) delivers **cooled or heated air
 
 (Note p.127; Arif pp.72–76.)
 
-## 5.9 Term-final questions with solutions
+## 6.9 Term-final questions with solutions
 
 The 27 parts fall into five archetypes. The numericals come first, because they carry the most marks per hour of study.
 
 | Group | Papers | Topic | Solved in full |
 |---|---|---|---|
-| AC2. Window/split AC, cooling with dehumidification | 13-14, 16-17, 17-18, 18-19 | §5.4 | Solution 5.1 |
-| AC3. Other psychrometric numericals | 15-16, 11-12, 12-13 (×3) | §5.2, §5.4, §5.5 | Solutions 5.5–5.9 |
-| AC1. Comfort, refrigeration vs AC | 11-12, 12-13, 13-14, 15-16, 23-24 | §5.1 | Solutions 5.10–5.14 |
-| AC4. Processes, bypass/reheat, evaporative cooling | 11-12, 13-14 (×2), 16-17 | §5.4–5.5, §5.8 | Solutions 5.15–5.18 |
-| AC5. AC system types | 11-12 (×2), 12-13, 15-16, 17-18, 18-19, 20-21, 22-23, 23-24 | §5.7–5.8 | Solutions 5.19–5.27 |
+| AC2. Window/split AC, cooling with dehumidification | 13-14, 16-17, 17-18, 18-19 | §6.4 | Solution 6.1 |
+| AC3. Other psychrometric numericals | 15-16, 11-12, 12-13 (×3) | §6.2, §6.4, §6.5 | Solutions 5.5–5.9 |
+| AC1. Comfort, refrigeration vs AC | 11-12, 12-13, 13-14, 15-16, 23-24 | §6.1 | Solutions 5.10–5.14 |
+| AC4. Processes, bypass/reheat, evaporative cooling | 11-12, 13-14 (×2), 16-17 | §6.4–6.5, §6.8 | Solutions 5.15–5.18 |
+| AC5. AC system types | 11-12 (×2), 12-13, 15-16, 17-18, 18-19, 20-21, 22-23, 23-24 | §6.7–6.8 | Solutions 5.19–5.27 |
 
 Standing assumptions for every numerical, unless the solution says otherwise:
 
 - Steady flow; fan work, kinetic and potential energy neglected; ideal-gas moist air.
-- $P=101.325$ kPa ("1 atm", "atmospheric pressure"). Properties by the equations of §5.2 with Table 1 (water) at the end of this module (the "table route"); the chart reading and the CoolProp value are quoted as checks.
+- $P=101.325$ kPa ("1 atm", "atmospheric pressure"). Properties by the equations of §6.2 with Table 1 (water) at the end of this module (the "table route"); the chart reading and the CoolProp value are quoted as checks.
 - "Saturated" exit air: φ = 100 %. Condensate leaves at the stated temperature with $h_w=h_f$ (Table 1).
 
 ### AC2: window/split AC, cooling with dehumidification
 
-> **TRY 5.1** `[PP 13-14 Q2(c), 20]` Air enters a window air conditioner at 1 atm., 35°C, and 70 percent relative humidity at a rate of 10 m³/min, and it leaves as saturated air at 15°C. Part of the moisture in the air that condenses during the process is also removed at 15°C. Determine the rates of heat and moisture removal from the air.
+> **TRY 6.1** `[PP 13-14 Q2(c), 20]` Air enters a window air conditioner at 1 atm., 35°C, and 70 percent relative humidity at a rate of 10 m³/min, and it leaves as saturated air at 15°C. Part of the moisture in the air that condenses during the process is also removed at 15°C. Determine the rates of heat and moisture removal from the air.
 
-**Solution 5.1** **[FROM SOURCE: Arif pp.101–102; Note pp.158–160, method; numbers tutor-generated]** This is the model answer for the whole family.
+**Solution 6.1** **[FROM SOURCE: Arif pp.101–102; Note pp.158–160, method; numbers tutor-generated]** This is the model answer for the whole family.
 
 *Sketch.* Draw the duct with the cooling coil and drain pan, and the chart path 1 → x → 2 (Fig. 9, which is drawn for exactly these numbers).
 
@@ -682,9 +682,9 @@ $$\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w=634.9-10.1=\mathbf{625\ kJ/min}\ (1
 
 *Chart route* (sea-level chart): state 1 ω ≈ 25.3 g/kg, h ≈ 100.0 kJ/kg, v ≈ 0.908 m³/kg; state 2 ω ≈ 10.7 g/kg, h ≈ 42.1 kJ/kg → 0.161 kg/min, 628 kJ/min. CoolProp gives the same 0.161 kg/min and 628 kJ/min.
 
-> **TRY 5.2** `[PP 16-17 Q2(c), 20]` Air enters a window air conditioner at 1 atm., 35 °C, and 80 percent relative humidity at a rate of 12 m³/min. The air leaves the cooling section as saturated air at 12 °C. Part of the moisture in the air that condenses during the process is also removed at 12 °C. Determine the rate of heat transfer and moisture removal from the air.
+> **TRY 6.2** `[PP 16-17 Q2(c), 20]` Air enters a window air conditioner at 1 atm., 35 °C, and 80 percent relative humidity at a rate of 12 m³/min. The air leaves the cooling section as saturated air at 12 °C. Part of the moisture in the air that condenses during the process is also removed at 12 °C. Determine the rate of heat transfer and moisture removal from the air.
 
-**Solution 5.2** **[TUTOR-GENERATED]** As Solution 5.1 with 80 %, 12 m³/min and 12 °C.
+**Solution 6.2** **[TUTOR-GENERATED]** As Solution 6.1 with 80 %, 12 m³/min and 12 °C.
 
 *State 1:* $P_{v1}=0.80\times5.63=4.504$ kPa; $\omega_1=0.02893$; $h_1=109.38$ kJ/kg; $v_1=0.9134$ m³/kg (dew point 30.92 °C, $T_{wb}=31.70$ °C).
 
@@ -695,24 +695,24 @@ $\dot Q_{out}=13.14(109.38-34.40)-0.264\times50.40=985.1-13.3=\mathbf{972\ kJ/mi
 
 (Chart/CoolProp: 0.267 kg/min, 979 kJ/min.)
 
-> **TRY 5.3** `[PP 17-18 Q2(b), 20]` Air enters a split air conditioner at 1 atm., 32 °C, and 80 percent relative humidity at a rate of 15 m³/min. The air leaves the cooling section as saturated air at 14 °C. Part of the moisture in the air that condenses during the process is also removed at 14 °C. Determine the rate of heat transfer and moisture removal from the air.
+> **TRY 6.3** `[PP 17-18 Q2(b), 20]` Air enters a split air conditioner at 1 atm., 32 °C, and 80 percent relative humidity at a rate of 15 m³/min. The air leaves the cooling section as saturated air at 14 °C. Part of the moisture in the air that condenses during the process is also removed at 14 °C. Determine the rate of heat transfer and moisture removal from the air.
 
-**Solution 5.3** **[TUTOR-GENERATED]** As Solution 5.1 with 32 °C, 80 %, 15 m³/min, 14 °C. (A split AC's indoor coil does exactly what the window AC's evaporator does.)
+**Solution 6.3** **[TUTOR-GENERATED]** As Solution 6.1 with 32 °C, 80 %, 15 m³/min, 14 °C. (A split AC's indoor coil does exactly what the window AC's evaporator does.)
 
 *State 1:* Table 1 between 30 and 35 °C: $P_g(32)=4.25+0.4(5.63-4.25)=4.802$ kPa; $P_{v1}=0.8\times4.802=3.842$ kPa; $\omega_1=0.02451$; $h_1=94.89$ kJ/kg; $v_1=0.8984$ m³/kg (dew point 28.11 °C, $T_{wb}=29.01$ °C).
 
-*State 2* (14 °C sat., as Example 5.2): $P_g=1.614$ kPa, $\omega_2=0.01007$, $h_2=39.51$ kJ/kg; $h_w=58.79$ kJ/kg.
+*State 2* (14 °C sat., as Example 6.2): $P_g=1.614$ kPa, $\omega_2=0.01007$, $h_2=39.51$ kJ/kg; $h_w=58.79$ kJ/kg.
 
 $\dot m_a=15/0.8984=16.70$ kg/min; $\dot m_w=16.70(0.02451-0.01007)=\mathbf{0.241\ kg/min}$;
 $\dot Q_{out}=16.70(94.89-39.51)-0.241\times58.79=924.7-14.2=\mathbf{911\ kJ/min}$ (15.2 kW).
 
 (Chart/CoolProp: 0.240 kg/min, 909 kJ/min.)
 
-> **TRY 5.4** `[PP 18-19 Q2(b), 15]` Make comparison between ducted split type, multiple split type and VRF system with schematic diagram. Air enters a split air conditioner at 1 atm., 35 °C, and 80 percent relative humidity at a rate of 15 m³/min. The air leaves the cooling section as saturated air at 12.5 °C. Part of the moisture in the air that condenses during the process is also removed at 12.5 °C. Determine the rate of the heat transfer and moisture from the air.
+> **TRY 6.4** `[PP 18-19 Q2(b), 15]` Make comparison between ducted split type, multiple split type and VRF system with schematic diagram. Air enters a split air conditioner at 1 atm., 35 °C, and 80 percent relative humidity at a rate of 15 m³/min. The air leaves the cooling section as saturated air at 12.5 °C. Part of the moisture in the air that condenses during the process is also removed at 12.5 °C. Determine the rate of the heat transfer and moisture from the air.
 
-**Solution 5.4** **[TUTOR-GENERATED]**
+**Solution 6.4** **[TUTOR-GENERATED]**
 
-*Comparison* (sketch the three schematics of §5.7: one ODU piped to one air handler with supply and return ducts; one ODU with separate pipe pairs to several IDUs; one modular inverter ODU on a single main pipe with branch joints to many IDUs):
+*Comparison* (sketch the three schematics of §6.7: one ODU piped to one air handler with supply and return ducts; one ODU with separate pipe pairs to several IDUs; one modular inverter ODU on a single main pipe with branch joints to many IDUs):
 
 | | Ducted split | Multi-split | VRF |
 |---|---|---|---|
@@ -722,7 +722,7 @@ $\dot Q_{out}=16.70(94.89-39.51)-0.241\times58.79=924.7-14.2=\mathbf{911\ kJ/min
 | Control | one thermostat, least flexible | per room, more flexible | per zone, most flexible; heat recovery possible |
 | Cost | low | medium | very high |
 
-*Numerical:* as Solution 5.2 (state 1 is the same 35 °C/80 %: $\omega_1=0.02893$, $h_1=109.38$, $v_1=0.9134$) with 15 m³/min and 12.5 °C.
+*Numerical:* as Solution 6.2 (state 1 is the same 35 °C/80 %: $\omega_1=0.02893$, $h_1=109.38$, $v_1=0.9134$) with 15 m³/min and 12.5 °C.
 
 *State 2* (12.5 °C sat.): $P_g=1.23+0.5(1.71-1.23)=1.47$ kPa; $\omega_2=0.00916$; $h_2=35.67$ kJ/kg; $h_w=h_f(12.5\ °\text{C})=52.50$ kJ/kg.
 
@@ -733,11 +733,11 @@ $\dot Q_{out}=16.42(109.38-35.67)-0.325\times52.50=1210.5-17.1=\mathbf{1193\ kJ/
 
 ### AC3: other psychrometric numericals
 
-> **TRY 5.5** `[PP 15-16 Q2(b), 10]` Air enters a heating section at atmospheric pressure, 14 °C, and 80 percent relative humidity at a rate of 30 m³/min, and it leaves at 25 °C. Show the process on a psychrometric chart and determine (i) the rate of heat transfer in the heating section and (ii) the relative humidity of the air at the exit.
+> **TRY 6.5** `[PP 15-16 Q2(b), 10]` Air enters a heating section at atmospheric pressure, 14 °C, and 80 percent relative humidity at a rate of 30 m³/min, and it leaves at 25 °C. Show the process on a psychrometric chart and determine (i) the rate of heat transfer in the heating section and (ii) the relative humidity of the air at the exit.
 
-**Solution 5.5** **[FROM SOURCE: Arif p.100b; Note p.157, method]** Simple heating: a horizontal line on the chart from 1 (14 °C, 80 %) to 2 (25 °C) at constant ω (Fig. 8).
+**Solution 6.5** **[FROM SOURCE: Arif p.100b; Note p.157, method]** Simple heating: a horizontal line on the chart from 1 (14 °C, 80 %) to 2 (25 °C) at constant ω (Fig. 8).
 
-*State 1:* $P_g(14)=1.614$ kPa (Table 1, as Example 5.2); $P_{v1}=0.8\times1.614=1.291$ kPa;
+*State 1:* $P_g(14)=1.614$ kPa (Table 1, as Example 6.2); $P_{v1}=0.8\times1.614=1.291$ kPa;
 $\omega_1=\dfrac{0.622\times1.291}{101.325-1.291}=0.00803$; $h_1=1.005(14)+0.00803(2501+25.48)=34.35$ kJ/kg; $v_1=\dfrac{0.287\times287.15}{101.325-1.291}=0.8238$ m³/kg.
 
 *State 2:* $\omega_2=\omega_1=0.00803$; $h_2=1.005(25)+0.00803(2501+45.5)=45.57$ kJ/kg.
@@ -750,9 +750,9 @@ $\dot m_a=30/0.8238=36.41$ kg/min
 
 (Chart: $h_1\approx34.3$, $h_2\approx45.5$ kJ/kg, $v_1\approx0.824$, φ₂ ≈ 40 %. CoolProp: 409.2 kJ/min, 40.3 %.) Heating alone dries the air relatively from 80 % to about 41 %, which is why winter systems add a humidifier.
 
-> **TRY 5.6** `[PP 11-12 Q3(c), 15]` A space is to be maintained at 50% relative humidity and 24 °C. The space has a sensible heat gain of 20 kW and moisture gain of 10 kg/hr. Moist air enters the space at 16 °C. Outside air at 35 °C dbt and 27 °C wbt is supplied at a rate of 400 litre/s. considering the system use is an elementary summer A/C system, estimate (i) wbt and dbt of air entering the space. (ii) required refrigeration load.
+> **TRY 6.6** `[PP 11-12 Q3(c), 15]` A space is to be maintained at 50% relative humidity and 24 °C. The space has a sensible heat gain of 20 kW and moisture gain of 10 kg/hr. Moist air enters the space at 16 °C. Outside air at 35 °C dbt and 27 °C wbt is supplied at a rate of 400 litre/s. considering the system use is an elementary summer A/C system, estimate (i) wbt and dbt of air entering the space. (ii) required refrigeration load.
 
-**Solution 5.6** **[TUTOR-GENERATED]** (method of Ameen §12.4–12.5). *Assumption:* the elementary summer system of §5.5 (Fig. 14): the 400 L/s of outdoor air O is mixed with recirculated room air R, the mixture M is cooled and dehumidified in the coil and supplied directly (no bypass, no reheat) at S = 16 °C. (400 L/s alone could not carry 20 kW with an 8 K difference, so the rest of the supply must be recirculated air.)
+**Solution 6.6** **[TUTOR-GENERATED]** (method of Ameen §12.4–12.5). *Assumption:* the elementary summer system of §6.5 (Fig. 14): the 400 L/s of outdoor air O is mixed with recirculated room air R, the mixture M is cooled and dehumidified in the coil and supplied directly (no bypass, no reheat) at S = 16 °C. (400 L/s alone could not carry 20 kW with an 8 K difference, so the rest of the supply must be recirculated air.)
 
 *Room R* (24 °C, 50 %): Table 1 between 20 and 25 °C, $P_g=2.34+0.8(3.17-2.34)=3.004$ kPa; $P_v=1.502$ kPa; $\omega_r=\dfrac{0.622\times1.502}{101.325-1.502}=0.009359$; $h_r=1.005(24)+0.009359(2501+43.68)=47.94$ kJ/kg.
 
@@ -779,9 +779,9 @@ $$\dot Q_{coil}=\dot m_a(h_m-h_s)-\dot m_wh_w=2.451(54.69-36.89)-0.00729\times67
 
 Check: room load $\dot m_a(h_r-h_s)=27.07$ kW plus outdoor-air load $\dot m_{a,o}(h_o-h_r)=16.56$ kW $=43.63$ kW. The outdoor air is only 18 % of the flow but 38 % of the load. (CoolProp: outdoor ω = 0.01937, h = 84.90 kJ/kg; 43.0 kW. On the chart, read O at the 35 °C / 27 °C wb intersection, mark M on the line R–O at $T\approx26$ °C, and S at 16 °C on the room condition line through R with SHR 0.74.)
 
-> **TRY 5.7** `[PP 12-13 Q2(b), 10]` A space is to be maintained at 25°C and 50% relative humidity. If the space has a sensible heat gain of 50 kW and moisture gain of 40 kg/hr, estimate: (i) conditions of supply air (ii) volume of supply air. You may assume a reasonable temperature of supply air.
+> **TRY 6.7** `[PP 12-13 Q2(b), 10]` A space is to be maintained at 25°C and 50% relative humidity. If the space has a sensible heat gain of 50 kW and moisture gain of 40 kg/hr, estimate: (i) conditions of supply air (ii) volume of supply air. You may assume a reasonable temperature of supply air.
 
-**Solution 5.7** **[TUTOR-GENERATED]** (method of Ameen §12.5, Example 12.11). *Assume* a supply temperature $T_s=15$ °C ($T_r-T_s=10$ K, within the usual 8–12 K).
+**Solution 6.7** **[TUTOR-GENERATED]** (method of Ameen §12.5, Example 12.11). *Assume* a supply temperature $T_s=15$ °C ($T_r-T_s=10$ K, within the usual 8–12 K).
 
 *Room:* Table 1, 25 °C: $P_g=3.17$ kPa; $P_v=1.585$ kPa; $\omega_r=\dfrac{0.622\times1.585}{101.325-1.585}=0.009884$; $h_r=50.30$ kJ/kg.
 
@@ -795,11 +795,11 @@ Check: room load $\dot m_a(h_r-h_s)=27.07$ kW plus outdoor-air load $\dot m_{a,o
 
 Check: latent load $4.907\times0.002264\times(2501+45.5)=28.3$ kW, SHR $=50/78.3=0.64$ (a humid room: lots of moisture); $\dot m_a(h_r-h_s)=78.3$ kW ✓. *Chart route:* draw the SHR 0.64 line through R (25 °C, 50 %) with the protractor; at 15 °C it gives the same S. Another assumed $T_s$ gives another answer (e.g. 14 °C: less air, drier supply); state the assumption clearly.
 
-> **TRY 5.8** `[PP 12-13 Q2(c), 15]` Air at 25°C and 50% RH is recirculated from a room and mixed with outdoor air at 33°C and 80% RH. If supply air to the room is 12°C and the volume of recirculated air is three times the volume of outdoor air, estimate the capacity of the cooling system.
+> **TRY 6.8** `[PP 12-13 Q2(c), 15]` Air at 25°C and 50% RH is recirculated from a room and mixed with outdoor air at 33°C and 80% RH. If supply air to the room is 12°C and the volume of recirculated air is three times the volume of outdoor air, estimate the capacity of the cooling system.
 
-**Solution 5.8** **[TUTOR-GENERATED]** (mixing method of Ameen §12.4, Example 12.3). *Assumptions:* the coil delivers the supply air saturated at 12 °C (as in the window AC problems); condensate leaves at 12 °C. **No flow rate is given**, so the capacity is found per kg/s of dry air supplied, and then for an assumed 1 m³/s of mixed air.
+**Solution 6.8** **[TUTOR-GENERATED]** (mixing method of Ameen §12.4, Example 12.3). *Assumptions:* the coil delivers the supply air saturated at 12 °C (as in the window AC problems); condensate leaves at 12 °C. **No flow rate is given**, so the capacity is found per kg/s of dry air supplied, and then for an assumed 1 m³/s of mixed air.
 
-*Room air R* (25 °C, 50 %): $\omega_r=0.009884$, $h_r=50.30$ kJ/kg, $v_r=0.8579$ m³/kg (Solution 5.7).
+*Room air R* (25 °C, 50 %): $\omega_r=0.009884$, $h_r=50.30$ kJ/kg, $v_r=0.8579$ m³/kg (Solution 6.7).
 
 *Outdoor air O* (33 °C, 80 %): Table 1, $P_g(33)=4.25+0.6(5.63-4.25)=5.078$ kPa; $P_v=4.062$ kPa; $\omega_o=0.02598$; $h_o=1.005(33)+0.02598(2501+60.1)=99.70$ kJ/kg; $v_o=0.9034$ m³/kg.
 
@@ -807,15 +807,15 @@ Check: latent load $4.907\times0.002264\times(2501+45.5)=28.3$ kW, SHR $=50/78.3
 
 *Mixed air M:* $\omega_m=0.7596\times0.009884+0.2404\times0.02598=0.01375$; $h_m=0.7596\times50.30+0.2404\times99.70=62.17$ kJ/kg; $T_m=\dfrac{62.17-2501\times0.01375}{1.005+1.82\times0.01375}=26.97$ °C (mass-weighted temperature 26.92 °C). On the chart M lies on the line R–O, a quarter of the way from R (Fig. 13).
 
-*Supply S* (12 °C sat.): $\omega_s=0.00885$, $h_s=34.40$ kJ/kg (Solution 5.2); condensate $\omega_m-\omega_s=0.00490$ kg/kg at $h_f=50.40$ kJ/kg.
+*Supply S* (12 °C sat.): $\omega_s=0.00885$, $h_s=34.40$ kJ/kg (Solution 6.2); condensate $\omega_m-\omega_s=0.00490$ kg/kg at $h_f=50.40$ kJ/kg.
 
 *Cooling capacity per kg dry air:*
 $$q=h_m-h_s-(\omega_m-\omega_s)h_w=62.17-34.40-0.00490\times50.40=\mathbf{27.53\ kJ/kg\ dry\ air}$$
-i.e. **27.5 kW (7.83 TR) for every kg/s of supply air**. For 1 m³/s of mixed air ($v_m=0.8689$ m³/kg, $\dot m_a=1.151$ kg/s): $\dot Q=\mathbf{31.7\ kW}\approx\mathbf{9.0\ TR}$. Multiply by the actual flow when it is known (from the room sensible load, as in Solution 5.7).
+i.e. **27.5 kW (7.83 TR) for every kg/s of supply air**. For 1 m³/s of mixed air ($v_m=0.8689$ m³/kg, $\dot m_a=1.151$ kg/s): $\dot Q=\mathbf{31.7\ kW}\approx\mathbf{9.0\ TR}$. Multiply by the actual flow when it is known (from the room sensible load, as in Solution 6.7).
 
-> **TRY 5.9** `[PP 12-13 Q2(a), 10]` Atmosphere air at 30°C and 50% relative humidity is compressed isothermally to a pressure of 10 bar. Estimate the psychometric condition of the compressed air.
+> **TRY 6.9** `[PP 12-13 Q2(a), 10]` Atmosphere air at 30°C and 50% relative humidity is compressed isothermally to a pressure of 10 bar. Estimate the psychometric condition of the compressed air.
 
-**Solution 5.9** **[TUTOR-GENERATED]** (thermodynamics of moist air, §5.2). Take the atmosphere at 101.325 kPa.
+**Solution 6.9** **[TUTOR-GENERATED]** (thermodynamics of moist air, §6.2). Take the atmosphere at 101.325 kPa.
 
 *Initial state:* $P_g(30)=4.25$ kPa; $P_{v1}=0.5\times4.25=2.125$ kPa; $\omega_1=\dfrac{0.622\times2.125}{101.325-2.125}=0.01332$ kg/kg; $h_1=64.20$ kJ/kg; $v_1=0.8771$ m³/kg.
 
@@ -831,9 +831,9 @@ Water condensed $=\omega_1-\omega_2=0.01332-0.002655=\mathbf{0.01067}$ kg per kg
 
 ### AC1: comfort, refrigeration vs air conditioning
 
-> **TRY 5.10** `[PP 11-12 Q2(a), 5]` Briefly explain the factors affecting human comfort.
+> **TRY 6.10** `[PP 11-12 Q2(a), 5]` Briefly explain the factors affecting human comfort.
 
-**Solution 5.10** **[FROM SOURCE: Arif pp.94–95; Note p.153]** The body is comfortable when it can freely reject its metabolic waste heat (by convection, radiation and evaporation) and no more. Seven factors decide this:
+**Solution 6.10** **[FROM SOURCE: Arif pp.94–95; Note p.153]** The body is comfortable when it can freely reject its metabolic waste heat (by convection, radiation and evaporation) and no more. Seven factors decide this:
 
 1. **Activity level:** the metabolic heat (about 115 W at office work, 440 W at heavy work); more activity needs a cooler room.
 2. **Clothing:** its insulation; more clothing, lower comfortable temperature (hence different summer and winter zones).
@@ -845,17 +845,17 @@ Water condensed $=\omega_1-\omega_2=0.01332-0.002655=\mathbf{0.01067}$ kg per kg
 
 (Air purity and noise also affect comfort.)
 
-> **TRY 5.11** `[PP 12-13 Q3(a), 5]` Briefly explain the factors affecting human comfort.
+> **TRY 6.11** `[PP 12-13 Q3(a), 5]` Briefly explain the factors affecting human comfort.
 
-**Solution 5.11** **[FROM SOURCE: Arif p.95b]** A verbatim repeat of TRY 5.10: give the same seven factors with one line each (activity, clothing, expectation, air temperature, radiant temperature, humidity, air speed).
+**Solution 6.11** **[FROM SOURCE: Arif p.95b]** A verbatim repeat of TRY 6.10: give the same seven factors with one line each (activity, clothing, expectation, air temperature, radiant temperature, humidity, air speed).
 
-> **TRY 5.12** `[PP 13-14 Q2(a), 7]` Give the name of the factors that influence the thermal comfort for human being.
+> **TRY 6.12** `[PP 13-14 Q2(a), 7]` Give the name of the factors that influence the thermal comfort for human being.
 
-**Solution 5.12** **[FROM SOURCE: Arif p.95b]** The seven factors influencing thermal comfort (1 mark each): (1) activity level, (2) clothing, (3) expectation, (4) air temperature, (5) radiant temperature, (6) humidity, (7) air speed. The first three are personal factors, the last four environmental. Add a sketch of the man with heat loss by convection, radiation and evaporation (Fig. 1) if time allows.
+**Solution 6.12** **[FROM SOURCE: Arif p.95b]** The seven factors influencing thermal comfort (1 mark each): (1) activity level, (2) clothing, (3) expectation, (4) air temperature, (5) radiant temperature, (6) humidity, (7) air speed. The first three are personal factors, the last four environmental. Add a sketch of the man with heat loss by convection, radiation and evaporation (Fig. 1) if time allows.
 
-> **TRY 5.13** `[PP 15-16 Q2(a), 10]` What are the differences between refrigeration and air-conditioning system? What are the factors that influence the thermal comfort of a human being?
+> **TRY 6.13** `[PP 15-16 Q2(a), 10]` What are the differences between refrigeration and air-conditioning system? What are the factors that influence the thermal comfort of a human being?
 
-**Solution 5.13** **[TUTOR-GENERATED]** *Differences* (5 marks):
+**Solution 6.13** **[TUTOR-GENERATED]** *Differences* (5 marks):
 
 | Refrigeration | Air conditioning |
 |---|---|
@@ -868,11 +868,11 @@ Water condensed $=\omega_1-\omega_2=0.01332-0.002655=\mathbf{0.01067}$ kg per kg
 
 Refrigeration is a part of summer air conditioning; air conditioning is the larger system.
 
-*Factors of thermal comfort* (5 marks): activity level, clothing, expectation, air temperature, radiant temperature, humidity and air speed, each explained in one line as in Solution 5.10.
+*Factors of thermal comfort* (5 marks): activity level, clothing, expectation, air temperature, radiant temperature, humidity and air speed, each explained in one line as in Solution 6.10.
 
-> **TRY 5.14** `[PP 23-24 Q8(b), 10]` Define "Thermal Comfort". Describe the concept of the "Comfort Zone" on the psychometric chart.
+> **TRY 6.14** `[PP 23-24 Q8(b), 10]` Define "Thermal Comfort". Describe the concept of the "Comfort Zone" on the psychometric chart.
 
-**Solution 5.14** **[FROM SOURCE: Arif pp.94–96; ASHRAE 55]** *Thermal comfort* is that condition of mind which expresses satisfaction with the thermal environment (ASHRAE 55). Physically, it is reached when the body can reject its metabolic heat at the rate it is produced, freely and without strain (no shivering, no visible sweating), with no local discomfort. It depends on activity, clothing, expectation, air temperature, radiant temperature, humidity and air speed.
+**Solution 6.14** **[FROM SOURCE: Arif pp.94–96; ASHRAE 55]** *Thermal comfort* is that condition of mind which expresses satisfaction with the thermal environment (ASHRAE 55). Physically, it is reached when the body can reject its metabolic heat at the rate it is produced, freely and without strain (no shivering, no visible sweating), with no local discomfort. It depends on activity, clothing, expectation, air temperature, radiant temperature, humidity and air speed.
 
 *Comfort zone.* Sketch a psychrometric chart (T_db horizontal, ω vertical, saturation curve and φ curves) and shade the zone (Fig. 2):
 
@@ -884,9 +884,9 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 
 ### AC4: processes on the chart, bypass and reheat systems, evaporative cooling
 
-> **TRY 5.15** `[PP 13-14 Q2(b), 8]` Show all the Air-conditioning processes on a typical psychrometric chart.
+> **TRY 6.15** `[PP 13-14 Q2(b), 8]` Show all the Air-conditioning processes on a typical psychrometric chart.
 
-**Solution 5.15** **[FROM SOURCE: Arif p.99b; Note p.154]** Draw the chart skeleton (T_db on the horizontal axis, ω on the right vertical axis, saturation curve at the upper left, two or three φ curves) and a state O in the middle, with arrows (Fig. 6):
+**Solution 6.15** **[FROM SOURCE: Arif p.99b; Note p.154]** Draw the chart skeleton (T_db on the horizontal axis, ω on the right vertical axis, saturation curve at the upper left, two or three φ curves) and a state O in the middle, with arrows (Fig. 6):
 
 1. **Sensible heating:** horizontal to the right (ω const., T ↑, φ ↓).
 2. **Sensible cooling:** horizontal to the left (ω const., T ↓, φ ↑), not beyond the dew point.
@@ -898,17 +898,17 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 8. **Chemical dehumidification:** down-right along a constant-enthalpy line (sorbent; T rises as ω falls).
 9. **Adiabatic mixing:** a straight line between two states, the mix on it.
 
-> **TRY 5.16** `[PP 11-12 Q3(b), 15]` Briefly explain, with schematic diagrams and processes on typical psychrometric charts, (i) Summer a/c system with bypass (ii) Summer a/c system with reheat
+> **TRY 6.16** `[PP 11-12 Q3(b), 15]` Briefly explain, with schematic diagrams and processes on typical psychrometric charts, (i) Summer a/c system with bypass (ii) Summer a/c system with reheat
 
-**Solution 5.16** **[TUTOR-GENERATED]** (Ameen §12.5; Arif pp.73–74). In both systems outdoor air O is mixed with return air R to M, and the mixture is cooled and dehumidified in a coil; the room loads move the supply state S to R along the room condition line, whose slope is fixed by the room SHR. The two systems differ in how they bring the cold, saturated coil air to the required S.
+**Solution 6.16** **[TUTOR-GENERATED]** (Ameen §12.5; Arif pp.73–74). In both systems outdoor air O is mixed with return air R to M, and the mixture is cooled and dehumidified in a coil; the room loads move the supply state S to R along the room condition line, whose slope is fixed by the room SHR. The two systems differ in how they bring the cold, saturated coil air to the required S.
 
 *(i) Summer AC with bypass* (Fig. 15). *Schematic:* mixing box → cooling coil → fan → room, with a bypass duct and damper that takes part of the return air (or of the mixed air) around the coil and joins the coil exit. *Chart:* M → C, cooling and dehumidification to C close to the apparatus dew point; then C mixes with the bypassed air R; S lies on the straight line C–R where it meets the room condition line. *Features:* no reheat energy, the supply temperature is raised by the room's own air; less air through the coil; smaller refrigeration load than reheat; the bypass damper gives easy part-load control and constant flow over a DX coil. But humidity control is weaker and the ADP must be lower.
 
 *(ii) Summer AC with reheat* (Fig. 16). *Schematic:* mixing box → cooling coil → reheating coil → fan → room. *Chart:* M → C, cooling and dehumidification down to the dew point that gives the required supply ω (below the needed supply temperature); C → S, sensible reheat at constant ω (horizontal) up to the supply temperature on the room condition line; S → R in the room. *Features:* used when the room SHR is low (large latent load) or at part load, when the coil alone cannot reach the room condition line; gives independent and precise control of humidity (coil) and temperature (reheater). But energy is wasted: the air is overcooled and then reheated, and the reheat adds to the refrigeration load (reduced by using condenser heat for reheat).
 
-> **TRY 5.17** `[PP 13-14 Q7(b), 18]` Describe an "All-Air system with Reheat" air-conditioning system. Mention its advantages and disadvantages.
+> **TRY 6.17** `[PP 13-14 Q7(b), 18]` Describe an "All-Air system with Reheat" air-conditioning system. Mention its advantages and disadvantages.
 
-**Solution 5.17** **[FROM SOURCE: Arif p.73a; Note pp.122–123]** *Description* (with the schematic of the all-air reheat system, and the chart of Fig. 16):
+**Solution 6.17** **[FROM SOURCE: Arif p.73a; Note pp.122–123]** *Description* (with the schematic of the all-air reheat system, and the chart of Fig. 16):
 
 - A central **AHU** (outdoor-air and return-air dampers, filter, chilled-water or DX cooling coil, supply fan, return fan) cools and dehumidifies all the supply air to one low, constant temperature, about 13 °C (55 °F), low enough for the zone with the largest load and for dehumidification.
 - The air is delivered at **constant volume** through a single supply duct to all zones.
@@ -931,17 +931,17 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 3. Hot-water piping, valves and coils above every zone: leaks and maintenance in the ceiling.
 4. Large ducts and fans for constant full flow; high fan energy.
 
-> **TRY 5.18** `[PP 16-17 Q2(b), 8]` Briefly describe the evaporative cooling psychrometric process with example.
+> **TRY 6.18** `[PP 16-17 Q2(b), 8]` Briefly describe the evaporative cooling psychrometric process with example.
 
-**Solution 5.18** **[FROM SOURCE: Arif p.104a; Note p.162]** In hot and dry climates air is cooled by evaporating water into it, in **evaporative (swamp, desert) coolers** and air washers. Air is passed through wetted pads or sprays; the latent heat of the evaporating water is taken from the air, so the air is cooled and humidified. No heat is exchanged with the surroundings, so it is essentially an **adiabatic saturation** process: $T_{wb}\approx$ const. and $h\approx$ const. On the chart (sketch Fig. 11) the state moves up and to the left along the wet-bulb line through the inlet state; the limit is the saturation point at the inlet wet-bulb temperature. It works well only when the air is dry ($T_{db}-T_{wb}$ large).
+**Solution 6.18** **[FROM SOURCE: Arif p.104a; Note p.162]** In hot and dry climates air is cooled by evaporating water into it, in **evaporative (swamp, desert) coolers** and air washers. Air is passed through wetted pads or sprays; the latent heat of the evaporating water is taken from the air, so the air is cooled and humidified. No heat is exchanged with the surroundings, so it is essentially an **adiabatic saturation** process: $T_{wb}\approx$ const. and $h\approx$ const. On the chart (sketch Fig. 11) the state moves up and to the left along the wet-bulb line through the inlet state; the limit is the saturation point at the inlet wet-bulb temperature. It works well only when the air is dry ($T_{db}-T_{wb}$ large).
 
 *Example:* air at 40 °C, 20 % RH ($T_{wb}=21.9$ °C) leaving a desert cooler at 90 % RH is at **23.1 °C**, cooled by 17 K, having taken up 0.00703 kg water per kg dry air, with $h$ ≈ 64 kJ/kg throughout. Other examples: water in a porous earthen jug, which stays cool as water seeping through evaporates; the wet cooling tower, which cools water the same way.
 
 ### AC5: AC system types
 
-> **TRY 5.19** `[PP 11-12 Q2(b), 15]` With schematic diagram, briefly explain the key components of a central air-conditioning system. Mention the functions of following 4 components (i) chiller (ii) cooling tower (iii) AHU (iv) FCU
+> **TRY 6.19** `[PP 11-12 Q2(b), 15]` With schematic diagram, briefly explain the key components of a central air-conditioning system. Mention the functions of following 4 components (i) chiller (ii) cooling tower (iii) AHU (iv) FCU
 
-**Solution 5.19** **[FROM SOURCE: Arif pp.67–76; Note pp.121–126]** *Schematic:* draw Fig. 31: cooling tower ↔ (condenser-water pump) ↔ chiller condenser; the chiller (compressor, condenser, expansion valve, evaporator); evaporator ↔ (chilled-water pump) ↔ AHU and FCU coils; AHU ↔ supply and return ducts ↔ rooms, with outdoor air into the AHU.
+**Solution 6.19** **[FROM SOURCE: Arif pp.67–76; Note pp.121–126]** *Schematic:* draw Fig. 31: cooling tower ↔ (condenser-water pump) ↔ chiller condenser; the chiller (compressor, condenser, expansion valve, evaporator); evaporator ↔ (chilled-water pump) ↔ AHU and FCU coils; AHU ↔ supply and return ducts ↔ rooms, with outdoor air into the AHU.
 
 *Key components:* chiller, cooling tower, condenser-water and chilled-water pumps and piping, expansion tank, AHUs, FCUs, ducts with dampers, diffusers and grilles, controls (thermostats, valves).
 
@@ -954,9 +954,9 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 - **(iii) AHU:** mixes outdoor and return air, filters, cools and dehumidifies (and heats and humidifies) it, and supplies it with its fan through ducts to many rooms; it also handles exhaust and ventilation.
 - **(iv) FCU:** a room terminal unit (fan + chilled-water coil + filter) that recirculates and cools the air of one room under a local thermostat.
 
-> **TRY 5.20** `[PP 11-12 Q3(a), 5]` Distinguish between split type and window type air conditioners.
+> **TRY 6.20** `[PP 11-12 Q3(a), 5]` Distinguish between split type and window type air conditioners.
 
-**Solution 5.20** **[FROM SOURCE: Note p.128; Arif pp.61–64]**
+**Solution 6.20** **[FROM SOURCE: Note p.128; Arif pp.61–64]**
 
 | Window type | Split type |
 |---|---|
@@ -967,9 +967,9 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Can take in fresh air | No fresh air |
 | Low capacity, cheap, easy to install | Higher capacity, costlier, needs a technician |
 
-> **TRY 5.21** `[PP 12-13 Q3(b), 10]` Briefly distinguish between (i) FCU and AHU (ii) split and window type a/c
+> **TRY 6.21** `[PP 12-13 Q3(b), 10]` Briefly distinguish between (i) FCU and AHU (ii) split and window type a/c
 
-**Solution 5.21** **[FROM SOURCE: Note p.128]** *(i) FCU vs AHU:*
+**Solution 6.21** **[FROM SOURCE: Note p.128]** *(i) FCU vs AHU:*
 
 | FCU | AHU |
 |---|---|
@@ -980,11 +980,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Noisier in the room | Quiet in the room |
 | Limited humidity and filter control | Full humidity and filtration control |
 
-*(ii) Split vs window:* the table of Solution 5.20 (one box vs indoor + outdoor units; noise; fans; wall opening; fresh air; capacity; cost and installation).
+*(ii) Split vs window:* the table of Solution 6.20 (one box vs indoor + outdoor units; noise; fans; wall opening; fresh air; capacity; cost and installation).
 
-> **TRY 5.22** `[PP 15-16 Q2(c), 15]` Make a comparison between ducted split type, multi-split type and VRF type air-conditioning system with respective schematic diagram.
+> **TRY 6.22** `[PP 15-16 Q2(c), 15]` Make a comparison between ducted split type, multi-split type and VRF type air-conditioning system with respective schematic diagram.
 
-**Solution 5.22** **[FROM SOURCE: Note pp.118–120; Arif pp.64–66]** *Schematics* (draw each in a few lines):
+**Solution 6.22** **[FROM SOURCE: Note pp.118–120; Arif pp.64–66]** *Schematics* (draw each in a few lines):
 
 - **Ducted split:** outdoor unit → refrigerant pipes → one indoor air handler (coil + blower + filter) in the ceiling → supply duct with diffusers to several rooms, return duct or plenum back.
 - **Multi-split:** one outdoor unit → branch box → separate pipe pairs to 2–8 indoor units (wall, cassette, ducted) in different rooms.
@@ -1002,11 +1002,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Flexibility of control | least (one thermostat) | more (rooms at different conditions) | most (individual zones, heat recovery) |
 | Heat carried by | air (ducts) | refrigerant | refrigerant |
 
-> **TRY 5.23** `[PP 17-18 Q2(a), 15]` What are the differences between refrigeration and air conditioning system? Why the outdoor air is required in air conditioning system? What are the basic differences between all air system and all water system?
+> **TRY 6.23** `[PP 17-18 Q2(a), 15]` What are the differences between refrigeration and air conditioning system? Why the outdoor air is required in air conditioning system? What are the basic differences between all air system and all water system?
 
-**Solution 5.23** **[FROM SOURCE: Arif p.97a; Note p.127]**
+**Solution 6.23** **[FROM SOURCE: Arif p.97a; Note p.127]**
 
-*Refrigeration vs AC* (5 marks): refrigeration removes heat to keep a product or space below ambient temperature (usually below 10 °C), with no control of humidity, ventilation or filtering and no heating; air conditioning controls temperature, humidity, cleanliness, air motion and distribution of the air of an occupied or process space (20–27 °C, 30–65 %), heats in winter, and needs fans, coils, filters, humidifiers, ducts and controls in addition to the refrigeration plant, which is only one part of it (table in Solution 5.13).
+*Refrigeration vs AC* (5 marks): refrigeration removes heat to keep a product or space below ambient temperature (usually below 10 °C), with no control of humidity, ventilation or filtering and no heating; air conditioning controls temperature, humidity, cleanliness, air motion and distribution of the air of an occupied or process space (20–27 °C, 30–65 %), heats in winter, and needs fans, coils, filters, humidifiers, ducts and controls in addition to the refrigeration plant, which is only one part of it (table in Solution 6.13).
 
 *Outdoor air is required* (5 marks): (1) to meet the metabolic (oxygen) requirements of the occupants; (2) to dilute indoor contaminants, odours and pollutants for acceptable air quality; (3) to support combustion or replace air exhausted from laboratories, kitchens, processes and toilets; (4) to make up the air exfiltrated when the space is kept at positive pressure; (5) to add or remove heat and moisture (free cooling). ASHRAE 62: about 10 L/s per person in offices, 7 L/s in classrooms.
 
@@ -1022,31 +1022,31 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Good humidity control and filtration; room temperature control difficult unless VAV/reheat | Local control by each FCU; poor humidity control |
 | Sub-types: single and multizone, CAV, VAV, terminal reheat, dual duct | Main type: FCUs (also radiators, convectors, valance units) |
 
-> **TRY 5.24** `[PP 18-19 Q2(a), 20]` Why the outdoor air is required in air conditioning system? Briefly describe the working principle of a central air conditioning system with schematic diagram. Compare all air and all water system with schematic diagram?
+> **TRY 6.24** `[PP 18-19 Q2(a), 20]` Why the outdoor air is required in air conditioning system? Briefly describe the working principle of a central air conditioning system with schematic diagram. Compare all air and all water system with schematic diagram?
 
-**Solution 5.24** **[FROM SOURCE: Arif pp.67–75, 97a; Note pp.121–127]**
+**Solution 6.24** **[FROM SOURCE: Arif pp.67–75, 97a; Note pp.121–127]**
 
-*Outdoor air:* the five reasons of Solution 5.23.
+*Outdoor air:* the five reasons of Solution 6.23.
 
-*Central AC working principle:* the schematic and the description of Solution 5.19: four loops (condenser water, refrigerant, chilled water, air); chiller produces 7 °C water, AHUs/FCUs cool the air with it, the cooling tower rejects the heat.
+*Central AC working principle:* the schematic and the description of Solution 6.19: four loops (condenser water, refrigerant, chilled water, air); chiller produces 7 °C water, AHUs/FCUs cool the air with it, the cooling tower rejects the heat.
 
-*All-air vs all-water with schematics:* sketch the all-air system (AHU with outdoor-air louvre, filter, cooling coil, heating coil, supply fan → supply ducts to the space → return grilles and return fan → exhaust and recirculation; Arif p.72a) and the all-water system (chiller → chilled-water pipes → an FCU in each room with fan, coil and filter, recirculating room air; Note p.125); then the table of Solution 5.23.
+*All-air vs all-water with schematics:* sketch the all-air system (AHU with outdoor-air louvre, filter, cooling coil, heating coil, supply fan → supply ducts to the space → return grilles and return fan → exhaust and recirculation; Arif p.72a) and the all-water system (chiller → chilled-water pipes → an FCU in each room with fan, coil and filter, recirculating room air; Note p.125); then the table of Solution 6.23.
 
-> **TRY 5.25** `[PP 20-21 Q1(a), 15]` Why the outdoor air is required in air conditioning system? Compare all air and all water system with schematic diagram. Make comparison between ducted split type, multiple split type and VRE type air-conditioning system with schematic diagram.
+> **TRY 6.25** `[PP 20-21 Q1(a), 15]` Why the outdoor air is required in air conditioning system? Compare all air and all water system with schematic diagram. Make comparison between ducted split type, multiple split type and VRE type air-conditioning system with schematic diagram.
 
-**Solution 5.25** **[FROM SOURCE: Arif pp.64–75, 97a; Note pp.118–127]** Three parts of about 5 marks each ("VRE" is a misprint for VRF):
+**Solution 6.25** **[FROM SOURCE: Arif pp.64–75, 97a; Note pp.118–127]** Three parts of about 5 marks each ("VRE" is a misprint for VRF):
 
-- *Outdoor air:* the five reasons of Solution 5.23.
-- *All-air vs all-water with schematics:* the two sketches of Solution 5.24 and the table of Solution 5.23.
-- *Ducted split vs multi-split vs VRF with schematics:* the three sketches and the table of Solution 5.22.
+- *Outdoor air:* the five reasons of Solution 6.23.
+- *All-air vs all-water with schematics:* the two sketches of Solution 6.24 and the table of Solution 6.23.
+- *Ducted split vs multi-split vs VRF with schematics:* the three sketches and the table of Solution 6.22.
 
-> **TRY 5.26** `[PP 22-23 Q2(a), 15]` Why the outdoor air is required in air conditioning system? Compare all air and all water system with schematic diagram? Make comparison between ducted split type, multiple split type and VRF system with schematic diagram.
+> **TRY 6.26** `[PP 22-23 Q2(a), 15]` Why the outdoor air is required in air conditioning system? Compare all air and all water system with schematic diagram? Make comparison between ducted split type, multiple split type and VRF system with schematic diagram.
 
-**Solution 5.26** **[FROM SOURCE: Arif pp.64–75, 97a; Note pp.118–127]** A verbatim repeat of TRY 5.25: same three answers (outdoor-air reasons; all-air vs all-water sketches and table; ducted split, multi-split and VRF sketches and table).
+**Solution 6.26** **[FROM SOURCE: Arif pp.64–75, 97a; Note pp.118–127]** A verbatim repeat of TRY 6.25: same three answers (outdoor-air reasons; all-air vs all-water sketches and table; ducted split, multi-split and VRF sketches and table).
 
-> **TRY 5.27** `[PP 23-24 Q8(c), 15]` What is the primary functions of an Air Distribution System in HVAC? Compare between Constant Air Volume (CAV) and Variable Air Volume (VAV) air distribution systems. Identify the main sources of pressure losses in duct systems.
+> **TRY 6.27** `[PP 23-24 Q8(c), 15]` What is the primary functions of an Air Distribution System in HVAC? Compare between Constant Air Volume (CAV) and Variable Air Volume (VAV) air distribution systems. Identify the main sources of pressure losses in duct systems.
 
-**Solution 5.27** **[FROM SOURCE: Arif pp.73–74; Note p.124; tutor-generated]**
+**Solution 6.27** **[FROM SOURCE: Arif pp.73–74; Note p.124; tutor-generated]**
 
 *Primary functions of the air distribution system:* (1) deliver conditioned supply air from the AHU to every space in the design quantity, balanced between branches; (2) distribute it within each space through diffusers and grilles with the right throw and velocity, good mixing and no draughts or noise; (3) return room air to the AHU and exhaust part of it; (4) bring in and distribute the outdoor ventilation air; (5) thereby maintain temperature, humidity, air quality and pressure relationships in every zone, with minimum fan energy.
 
@@ -1065,9 +1065,9 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 
 <!-- pagebreak -->
 
-## 5.10 Summary sheet
+## 6.10 Summary sheet
 
-> **KEY: Module 5 on one page**
+> **KEY: Module 6 on one page**
 >
 > - **Equations** (P in kPa, T in °C, per kg dry air): $\omega=0.622P_v/(P-P_v)$; $\phi=P_v/P_g$; $h=1.005T+\omega(2501+1.82T)$; $v=0.287(T+273.15)/(P-P_v)$; $T_{dp}=T_{sat}(P_v)$; wet bulb from $\omega_1=[1.005(T_{wb}-T_1)+\omega^*h_{fg}]/(2501+1.82T_1-h_f)$, by trial. $P_g$, $h_f$, $h_{fg}$ from Table 1, interpolated.
 > - **Chart** (end of module) is for 101.325 kPa only; at 100 kPa or altitude use the equations ($v_1=0.8157$, not 0.80).
@@ -1079,7 +1079,7 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 > - **Systems:** unitary (window; split → ducted, multi-split, VRF) vs chiller (all-air, all-water, air-water). Chiller makes 7 °C water; cooling tower cools condenser water toward the wet bulb (range, approach, make-up, blow-down); AHU conditions outdoor + return air for many rooms; FCU recirculates one room's air. All-air reheat: simple, precise, wasteful. CAV varies T, VAV varies flow. VRF: inverter + electronic valves, most flexible, costliest.
 > - **Errata:** Note p.160 ω₁ = 22 g/kg → 0.135 kg/min; correct 0.131 kg/min. Note pp.161–162 $v_1=0.80$ (sea-level chart) at 100 kPa → 703 kJ/min; correct 668 kJ/min.
 
-## 5.11 Self-test
+## 6.11 Self-test
 
 1. Write ω in terms of $P_v$ and $P$, and say where 0.622 comes from.
 2. Air at 30 °C has $P_v=2.125$ kPa. What is φ?
@@ -1111,7 +1111,7 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 
 <!-- BEGIN DATA TABLES (generated by build/make_tables.py; do not edit) -->
 <!-- pagebreak -->
-## 5.T Tables for Module 5
+## 6.T Tables for Module 6
 
 ![Fig. 42: Data Book Chart 8. ASHRAE psychrometric chart No. 1 (scan). Normal temperature, sea level (101.325 kPa). Clean print of the same chart on the next page.](figures/042.jpg)
 

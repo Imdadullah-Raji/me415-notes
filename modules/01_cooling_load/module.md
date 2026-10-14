@@ -46,7 +46,7 @@ The CLTD/CLF method builds both effects into tabulated factors, so that the cool
 - **CLTD** (cooling load temperature difference) is an equivalent temperature difference. Multiplied by $UA$, it gives the cooling load due to conduction through a sunlit roof or wall at that hour. It includes the sun on the outer surface and the time lag of the wall [Arif p.36].
 - **CLF** (cooling load factor) is the fraction of an instantaneous gain (solar through glass, people, lights, equipment) that appears as cooling load at the hour in question.
 
-**Sensible and latent load.** Sensible heat raises the air dry bulb. Latent heat is the moisture added to the air (by people and by humid outdoor air), which the cooling coil must condense. The coil removes both, so both are added for the total. Their ratio, the sensible heat ratio $SHR=Q_S/Q_T$, is needed later to find the supply-air state (Module 5).
+**Sensible and latent load.** Sensible heat raises the air dry bulb. Latent heat is the moisture added to the air (by people and by humid outdoor air), which the cooling coil must condense. The coil removes both, so both are added for the total. Their ratio, the sensible heat ratio $SHR=Q_S/Q_T$, is needed later to find the supply-air state (Module 6).
 
 **The components of the load** [Arif pp.36–58; Note pp.97–101]:
 

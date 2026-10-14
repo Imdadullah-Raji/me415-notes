@@ -1,0 +1,1251 @@
+{
+ "years": [
+  "2011-2012",
+  "2012-2013",
+  "2013-2014",
+  "2015-2016",
+  "2016-2017",
+  "2017-2018",
+  "2018-2019",
+  "2020-2021",
+  "2021-2022",
+  "2022-2023",
+  "2023-2024"
+ ],
+ "n_entries": 200,
+ "total_marks": 3055,
+ "theory_pct": 58.8,
+ "numerical_pct": 39.9,
+ "recycled_pct": 79.4,
+ "rep_by_year": {
+  "2011-2012": 0.0,
+  "2012-2013": 27.3,
+  "2013-2014": 56.1,
+  "2015-2016": 58.2,
+  "2016-2017": 59.3,
+  "2017-2018": 81.1,
+  "2018-2019": 87.9,
+  "2020-2021": 96.4,
+  "2021-2022": 76.4,
+  "2022-2023": 94.4,
+  "2023-2024": 60.0
+ },
+ "topics": [
+  {
+   "key": "CL",
+   "name": "Cooling load estimation",
+   "module": 1,
+   "pct": 13.3,
+   "marks": 405.0,
+   "count": 11,
+   "papers": 11,
+   "share_by_year": {
+    "2011-2012": 12.5,
+    "2012-2013": 12.7,
+    "2013-2014": 12.5,
+    "2015-2016": 12.5,
+    "2016-2017": 12.5,
+    "2017-2018": 12.5,
+    "2018-2019": 12.5,
+    "2020-2021": 12.5,
+    "2021-2022": 12.5,
+    "2022-2023": 16.7,
+    "2023-2024": 16.7
+   }
+  },
+  {
+   "key": "LI",
+   "name": "Lifts and escalators",
+   "module": 2,
+   "pct": 13.1,
+   "marks": 400.0,
+   "count": 30,
+   "papers": 11,
+   "share_by_year": {
+    "2011-2012": 12.5,
+    "2012-2013": 12.7,
+    "2013-2014": 12.5,
+    "2015-2016": 12.5,
+    "2016-2017": 12.5,
+    "2017-2018": 12.5,
+    "2018-2019": 12.5,
+    "2020-2021": 12.5,
+    "2021-2022": 12.5,
+    "2022-2023": 11.1,
+    "2023-2024": 20.4
+   }
+  },
+  {
+   "key": "FI",
+   "name": "Fire protection",
+   "module": 3,
+   "pct": 12.6,
+   "marks": 385.0,
+   "count": 31,
+   "papers": 10,
+   "share_by_year": {
+    "2011-2012": 0.0,
+    "2012-2013": 12.7,
+    "2013-2014": 5.4,
+    "2015-2016": 12.5,
+    "2016-2017": 12.5,
+    "2017-2018": 12.5,
+    "2018-2019": 12.5,
+    "2020-2021": 17.9,
+    "2021-2022": 17.9,
+    "2022-2023": 16.7,
+    "2023-2024": 18.5
+   }
+  },
+  {
+   "key": "CM",
+   "name": "Refrigeration components",
+   "module": 4,
+   "pct": 12.5,
+   "marks": 381.0,
+   "count": 27,
+   "papers": 10,
+   "share_by_year": {
+    "2011-2012": 12.5,
+    "2012-2013": 5.5,
+    "2013-2014": 0.0,
+    "2015-2016": 16.8,
+    "2016-2017": 18.6,
+    "2017-2018": 18.6,
+    "2018-2019": 6.1,
+    "2020-2021": 18.9,
+    "2021-2022": 12.5,
+    "2022-2023": 11.1,
+    "2023-2024": 16.7
+   }
+  },
+  {
+   "key": "SP",
+   "name": "Special refrigeration and gas liquefaction",
+   "module": 5,
+   "pct": 12.2,
+   "marks": 372.0,
+   "count": 23,
+   "papers": 10,
+   "share_by_year": {
+    "2011-2012": 0.0,
+    "2012-2013": 7.3,
+    "2013-2014": 12.5,
+    "2015-2016": 12.5,
+    "2016-2017": 5.4,
+    "2017-2018": 18.9,
+    "2018-2019": 18.9,
+    "2020-2021": 12.1,
+    "2021-2022": 18.6,
+    "2022-2023": 16.7,
+    "2023-2024": 11.1
+   }
+  },
+  {
+   "key": "AC",
+   "name": "Psychrometry and air-conditioning systems",
+   "module": 6,
+   "pct": 11.3,
+   "marks": 346.0,
+   "count": 27,
+   "papers": 10,
+   "share_by_year": {
+    "2011-2012": 19.6,
+    "2012-2013": 18.2,
+    "2013-2014": 18.9,
+    "2015-2016": 12.5,
+    "2016-2017": 10.0,
+    "2017-2018": 12.5,
+    "2018-2019": 12.5,
+    "2020-2021": 5.4,
+    "2021-2022": 0.0,
+    "2022-2023": 5.6,
+    "2023-2024": 9.3
+   }
+  },
+  {
+   "key": "VC",
+   "name": "Vapour-compression cycles and multistage systems",
+   "module": 7,
+   "pct": 10.9,
+   "marks": 332.0,
+   "count": 22,
+   "papers": 11,
+   "share_by_year": {
+    "2011-2012": 25.0,
+    "2012-2013": 9.1,
+    "2013-2014": 16.1,
+    "2015-2016": 10.7,
+    "2016-2017": 15.0,
+    "2017-2018": 7.1,
+    "2018-2019": 12.5,
+    "2020-2021": 7.1,
+    "2021-2022": 7.1,
+    "2022-2023": 7.4,
+    "2023-2024": 1.9
+   }
+  },
+  {
+   "key": "AB",
+   "name": "Absorption refrigeration",
+   "module": 8,
+   "pct": 7.2,
+   "marks": 219.0,
+   "count": 13,
+   "papers": 10,
+   "share_by_year": {
+    "2011-2012": 7.1,
+    "2012-2013": 12.7,
+    "2013-2014": 7.1,
+    "2015-2016": 8.2,
+    "2016-2017": 7.1,
+    "2017-2018": 0.0,
+    "2018-2019": 12.5,
+    "2020-2021": 6.4,
+    "2021-2022": 6.4,
+    "2022-2023": 5.6,
+    "2023-2024": 5.6
+   }
+  },
+  {
+   "key": "DU",
+   "name": "Duct design",
+   "module": 9,
+   "pct": 3.6,
+   "marks": 110.0,
+   "count": 6,
+   "papers": 6,
+   "share_by_year": {
+    "2011-2012": 5.4,
+    "2012-2013": 7.3,
+    "2013-2014": 7.1,
+    "2015-2016": 0.0,
+    "2016-2017": 0.0,
+    "2017-2018": 0.0,
+    "2018-2019": 0.0,
+    "2020-2021": 7.1,
+    "2021-2022": 7.1,
+    "2022-2023": 5.6,
+    "2023-2024": 0.0
+   }
+  },
+  {
+   "key": "RF",
+   "name": "Refrigerants and refrigeration applications",
+   "module": 10,
+   "pct": 3.4,
+   "marks": 105.0,
+   "count": 10,
+   "papers": 8,
+   "share_by_year": {
+    "2011-2012": 5.4,
+    "2012-2013": 1.8,
+    "2013-2014": 7.9,
+    "2015-2016": 1.8,
+    "2016-2017": 6.4,
+    "2017-2018": 5.4,
+    "2018-2019": 0.0,
+    "2020-2021": 0.0,
+    "2021-2022": 5.4,
+    "2022-2023": 3.7,
+    "2023-2024": 0.0
+   }
+  }
+ ],
+ "archetypes": [
+  {
+   "key": "CL1",
+   "name": "Cooling load of a classroom/office (CLTD method, data book): walls, roof, glass, people, lights, equipment, ventilation",
+   "topic": "CL",
+   "kind": "numerical",
+   "papers": 11,
+   "count": 11,
+   "pct": 13.3,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "LI2",
+   "name": "Elevator theory: traction lift components, classification, doors, roping, safety, gearless/geared, definitions (I, HC, RT, PHC), design factors",
+   "topic": "LI",
+   "kind": "theory",
+   "papers": 10,
+   "count": 16,
+   "pct": 6.7,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "VC2",
+   "name": "Two/three-stage R134a system with flash intercooling and multiple evaporators: compressor power and COP",
+   "topic": "VC",
+   "kind": "numerical",
+   "papers": 10,
+   "count": 10,
+   "pct": 6.5,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023"
+   ]
+  },
+  {
+   "key": "SP2",
+   "name": "Gas liquefaction: Linde plant, Joule–Thomson coefficient and inversion, cascade liquefaction of natural gas",
+   "topic": "SP",
+   "kind": "theory",
+   "papers": 9,
+   "count": 11,
+   "pct": 6.0,
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "LI1",
+   "name": "Elevator system design: office building, n floors × area → workable arrangement (or interval/HC check)",
+   "topic": "LI",
+   "kind": "numerical",
+   "papers": 8,
+   "count": 8,
+   "pct": 5.1,
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "AB1",
+   "name": "LiBr–water (or NH3) absorption numerical: Carnot COP, real COP with pump flow, heat exchanger, crystallization",
+   "topic": "AB",
+   "kind": "numerical",
+   "papers": 8,
+   "count": 8,
+   "pct": 4.7,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023"
+   ]
+  },
+  {
+   "key": "CM1",
+   "name": "Compressors: classification, scroll, rotary/sliding vane, centrifugal, hermetic, volumetric efficiency",
+   "topic": "CM",
+   "kind": "theory",
+   "papers": 9,
+   "count": 9,
+   "pct": 4.3,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "AC5",
+   "name": "AC system types: central AC components (chiller, cooling tower, AHU, FCU), all-air vs all-water, outdoor air, window/split/ducted split/multi-split/VRF, CAV vs VAV",
+   "topic": "AC",
+   "kind": "theory",
+   "papers": 8,
+   "count": 9,
+   "pct": 4.1,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2015-2016",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "FI2",
+   "name": "Fire classes (NFPA/BNBC) and extinguisher types, comparison, selection and placement",
+   "topic": "FI",
+   "kind": "theory",
+   "papers": 8,
+   "count": 9,
+   "pct": 4.1,
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "DU1",
+   "name": "Duct sizing by equal friction + fan/static pressure of the index run",
+   "topic": "DU",
+   "kind": "numerical",
+   "papers": 6,
+   "count": 6,
+   "pct": 3.6,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023"
+   ]
+  },
+  {
+   "key": "CM2",
+   "name": "Condensers: air-cooled (\"maximum cooling needed, least available\"), evaporative, air vs water cooled",
+   "topic": "CM",
+   "kind": "theory",
+   "papers": 7,
+   "count": 7,
+   "pct": 3.5,
+   "years": [
+    "2011-2012",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2020-2021",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "FI3",
+   "name": "Fire protection systems: sprinkler, standpipe and hose, detection and alarm, smoke detectors",
+   "topic": "FI",
+   "kind": "theory",
+   "papers": 5,
+   "count": 7,
+   "pct": 3.3,
+   "years": [
+    "2016-2017",
+    "2017-2018",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "VC1",
+   "name": "VCR cycle theory: reversed Carnot → VCR, real vs ideal cycle, subcooling and superheating, COP vs temperatures, EER/SEER",
+   "topic": "VC",
+   "kind": "theory",
+   "papers": 6,
+   "count": 9,
+   "pct": 3.2,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2018-2019"
+   ]
+  },
+  {
+   "key": "CM3",
+   "name": "Expansion devices: EXV, thermostatic, automatic, capillary tube, solenoid valve",
+   "topic": "CM",
+   "kind": "theory",
+   "papers": 7,
+   "count": 7,
+   "pct": 3.1,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2015-2016",
+    "2017-2018",
+    "2020-2021",
+    "2021-2022",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "SP1",
+   "name": "Steam-jet (water vapour) refrigeration: principle, advantages, cooling produced",
+   "topic": "SP",
+   "kind": "theory",
+   "papers": 6,
+   "count": 6,
+   "pct": 3.0,
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2016-2017",
+    "2018-2019",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "AB2",
+   "name": "Absorption theory: aqua-ammonia system with heat exchangers, components, LiBr vs NH3, absorption vs compression",
+   "topic": "AB",
+   "kind": "theory",
+   "papers": 5,
+   "count": 5,
+   "pct": 2.5,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2018-2019",
+    "2021-2022",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "AC2",
+   "name": "Window/split AC cooling and dehumidification: air in at T, RH, flow; out saturated → heat and moisture removal",
+   "topic": "AC",
+   "kind": "numerical",
+   "papers": 4,
+   "count": 4,
+   "pct": 2.5,
+   "years": [
+    "2013-2014",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019"
+   ]
+  },
+  {
+   "key": "FI1",
+   "name": "Fire fundamentals: fire triangle/tetrahedron, causes and sources (Bangladesh), fire safety concept, extinguishing modes",
+   "topic": "FI",
+   "kind": "theory",
+   "papers": 5,
+   "count": 6,
+   "pct": 2.3,
+   "years": [
+    "2012-2013",
+    "2015-2016",
+    "2020-2021",
+    "2021-2022",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "SP3",
+   "name": "Air-cycle / aircraft refrigeration; gas refrigeration",
+   "topic": "SP",
+   "kind": "theory",
+   "papers": 4,
+   "count": 4,
+   "pct": 2.2,
+   "years": [
+    "2015-2016",
+    "2017-2018",
+    "2020-2021",
+    "2021-2022"
+   ]
+  },
+  {
+   "key": "AC3",
+   "name": "Other psychrometric numericals: supply-air state and volume, mixing, elementary summer AC, heating, compressed air",
+   "topic": "AC",
+   "kind": "numerical",
+   "papers": 3,
+   "count": 5,
+   "pct": 2.0,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2015-2016"
+   ]
+  },
+  {
+   "key": "RF2",
+   "name": "Applications of refrigeration; quick freezing (plate, immersion)",
+   "topic": "RF",
+   "kind": "theory",
+   "papers": 6,
+   "count": 6,
+   "pct": 1.8,
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2017-2018",
+    "2021-2022",
+    "2022-2023"
+   ]
+  },
+  {
+   "key": "RF1",
+   "name": "Refrigerants: desirable properties, numbering (HC, zeotropes, azeotropes), saturation-curve slopes, why not water",
+   "topic": "RF",
+   "kind": "theory",
+   "papers": 3,
+   "count": 4,
+   "pct": 1.6,
+   "years": [
+    "2011-2012",
+    "2013-2014",
+    "2016-2017"
+   ]
+  },
+  {
+   "key": "FI4",
+   "name": "BNBC fire-water storage capacity (Table 4.4.1) for an n-floor building",
+   "topic": "FI",
+   "kind": "numerical",
+   "papers": 5,
+   "count": 5,
+   "pct": 1.6,
+   "years": [
+    "2012-2013",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019"
+   ]
+  },
+  {
+   "key": "AC4",
+   "name": "Psychrometric processes on the chart; summer AC with bypass/reheat; evaporative cooling; all-air with reheat",
+   "topic": "AC",
+   "kind": "theory",
+   "papers": 3,
+   "count": 4,
+   "pct": 1.6,
+   "years": [
+    "2011-2012",
+    "2013-2014",
+    "2016-2017"
+   ]
+  },
+  {
+   "key": "CM4",
+   "name": "Evaporators: liquid overfeed, frosting/defrosting, heat-transfer factors",
+   "topic": "CM",
+   "kind": "theory",
+   "papers": 4,
+   "count": 4,
+   "pct": 1.6,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2016-2017",
+    "2018-2019"
+   ]
+  },
+  {
+   "key": "FI5",
+   "name": "BNBC riser diagrams: automatic fire pump with supply zones; ground + gravity roof tank with domestic and fire reserve",
+   "topic": "FI",
+   "kind": "theory",
+   "papers": 4,
+   "count": 4,
+   "pct": 1.3,
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017"
+   ]
+  },
+  {
+   "key": "LI3",
+   "name": "Escalator: arrangements and persons moved per hour",
+   "topic": "LI",
+   "kind": "mixed",
+   "papers": 6,
+   "count": 6,
+   "pct": 1.3,
+   "years": [
+    "2012-2013",
+    "2015-2016",
+    "2016-2017",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023"
+   ]
+  },
+  {
+   "key": "AC1",
+   "name": "Thermal comfort factors, comfort zone; refrigeration vs air-conditioning",
+   "topic": "AC",
+   "kind": "theory",
+   "papers": 5,
+   "count": 5,
+   "pct": 1.2,
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2023-2024"
+   ]
+  },
+  {
+   "key": "SP4",
+   "name": "Magnetic and thermoelectric refrigeration",
+   "topic": "SP",
+   "kind": "theory",
+   "papers": 2,
+   "count": 2,
+   "pct": 1.0,
+   "years": [
+    "2017-2018",
+    "2022-2023"
+   ]
+  },
+  {
+   "key": "VC3",
+   "name": "Single-stage VCR numerical (ammonia, subcooled, wet suction)",
+   "topic": "VC",
+   "kind": "numerical",
+   "papers": 1,
+   "count": 1,
+   "pct": 0.7,
+   "years": [
+    "2011-2012"
+   ]
+  },
+  {
+   "key": "VC4",
+   "name": "Multistage/multi-evaporator system theory (intercoolers, flash chamber, why multi-evaporator)",
+   "topic": "VC",
+   "kind": "theory",
+   "papers": 2,
+   "count": 2,
+   "pct": 0.5,
+   "years": [
+    "2011-2012",
+    "2023-2024"
+   ]
+  }
+ ],
+ "families": [
+  {
+   "title": "Classroom/office cooling load, CLTD method (Chittagong/Dhaka, Type 5 roof 25 mm wood + 25 mm insulation, 254 mm brick)",
+   "kind": "template",
+   "arch": "CL1",
+   "marks": 405,
+   "note": "In all 11 papers, 35–45 marks. Since 2013-14 the room is almost always the same Type-5 roof / 254 mm brick classroom; only students, size, time, date, glass % and U change. 2012-13 ≈ 2018-19 (10×10×3 m, Type 4 roof, type C wall).",
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Two/three-stage R134a system with flash intercooling and multiple evaporators",
+   "kind": "template",
+   "arch": "VC2",
+   "marks": 200,
+   "note": "10 of 11 papers. 50 TR @ −40 °C + 60 TR @ −10 °C, 30 °C condensing: 2012-13 ≡ 2015-16 verbatim. Three-stage 60/50/40 TR @ −30/−20/−10 °C: 2020-21 ≡ 2022-23 verbatim (2018-19 with −40 °C).",
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Window/split AC: air in at 1 atm, T, RH, flow; leaves saturated → heat and moisture removal",
+   "kind": "near",
+   "arch": "AC2",
+   "marks": 75,
+   "note": "35/70%/10 m³/min/15 °C → 35/80%/12/12 → 32/80%/15/14 → 35/80%/15/12.5.",
+   "years": [
+    "2013-2014",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019"
+   ]
+  },
+  {
+   "title": "LiBr absorption: Carnot COP, real COP with pump flow, heat exchanger, crystallization",
+   "kind": "near",
+   "arch": "AB1",
+   "marks": 61,
+   "note": "T_G 100 °C each time; T_E/T_a/T_C and pump flow change (9/30/40, 0.75 → 8/31/38, 0.5 → 9/28/43, 0.5).",
+   "years": [
+    "2013-2014",
+    "2015-2016",
+    "2020-2021"
+   ]
+  },
+  {
+   "title": "LiBr absorption with given temperatures: generator heat, condenser heat, COP (aqua pump flow)",
+   "kind": "near",
+   "arch": "AB1",
+   "marks": 53,
+   "note": "100/34/7/28, 0.58 kg/s → 100/36/6/28, 0.45 → 100/36/6/28, 0.42 (2018-19 ≡ 2022-23 except flow).",
+   "years": [
+    "2016-2017",
+    "2018-2019",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Duct sizing by equal friction (AHU/packaged unit serving 3–4 rooms)",
+   "kind": "near",
+   "arch": "DU1",
+   "marks": 90,
+   "note": "3-room layout E/F/G at 0.5 m³/s (2011-12, 2013-14, 2021-22); 4-room E/F/G/H with elbow 10 Pa, tee 15 Pa (2020-21 ≡ 2022-23 verbatim). Same 8 m/s, 25 mm increments, 25 Pa grilles.",
+   "years": [
+    "2011-2012",
+    "2013-2014",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Workable elevator arrangement: office building, downtown, diversified use, n floors × area, 3.7 m floor height",
+   "kind": "template",
+   "arch": "LI1",
+   "marks": 140,
+   "note": "15×1500, 12×2000, 10×2000, 12×2000 (2013-14 ≡ 2016-17), 18×3000, 16×3500, 12×1500. 2023-24 Q7(c) switched to a CIBSE-style interval check.",
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Escalator persons per hour (35°, 2 per step)",
+   "kind": "near",
+   "arch": "LI3",
+   "marks": 30,
+   "note": "0.5 m/s, 500 mm (2012-13 ≡ 2016-17) → 0.6 m/s, 600 mm (2018-19 ≡ 2020-21 ≡ 2022-23).",
+   "years": [
+    "2012-2013",
+    "2016-2017",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "BNBC fire-water storage, light hazard building, n floors × area, 3.7 m",
+   "kind": "template",
+   "arch": "FI4",
+   "marks": 40,
+   "note": "15×500, 20×1500, 30×2500 (LH-I) → 25×3500 (LH-II). 2012-13 Q7(c) is an older flow/storage variant.",
+   "years": [
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019"
+   ]
+  },
+  {
+   "title": "BNBC riser diagrams: automatic fire pump with zones / ground + gravity roof tank",
+   "kind": "verbatim",
+   "arch": "FI5",
+   "marks": 60,
+   "note": "Drawing questions, word for word; 2017-18 Q3(b) and 2018-19 Q3(b) attach the same drawing to the storage numerical.",
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2016-2017",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Fire classes and extinguisher selection / comparison",
+   "kind": "near",
+   "arch": "FI2",
+   "marks": 100,
+   "note": "",
+   "years": [
+    "2012-2013",
+    "2015-2016",
+    "2016-2017",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Fire triangle/tetrahedron and causes or sources of fire",
+   "kind": "near",
+   "arch": "FI1",
+   "marks": 80,
+   "note": "2020-21 Q2(b) ≡ 2022-23 Q3(a) first half (\"main sources … devastating hazard in Bangladesh\").",
+   "years": [
+    "2012-2013",
+    "2015-2016",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Sprinkler / standpipe fire protection system",
+   "kind": "near",
+   "arch": "FI3",
+   "marks": 132,
+   "note": "",
+   "years": [
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Electric traction lift schematic and components",
+   "kind": "near",
+   "arch": "LI2",
+   "marks": 105,
+   "note": "",
+   "years": [
+    "2016-2017",
+    "2018-2019",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Requirements for ideal performance of passenger elevators",
+   "kind": "verbatim",
+   "arch": "LI2",
+   "marks": 15,
+   "note": "",
+   "years": [
+    "2012-2013",
+    "2017-2018"
+   ]
+  },
+  {
+   "title": "Elevator door arrangements",
+   "kind": "verbatim",
+   "arch": "LI2",
+   "marks": 20,
+   "note": "",
+   "years": [
+    "2013-2014",
+    "2018-2019"
+   ]
+  },
+  {
+   "title": "Escalator arrangements (schematic)",
+   "kind": "verbatim",
+   "arch": "LI3",
+   "marks": 25,
+   "note": "",
+   "years": [
+    "2015-2016",
+    "2020-2021",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Linde liquefaction plant with T-s diagram",
+   "kind": "verbatim",
+   "arch": "SP2",
+   "marks": 119,
+   "note": "7 of 11 papers; core wording identical, with a different lead-in question each time.",
+   "years": [
+    "2013-2014",
+    "2015-2016",
+    "2017-2018",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Cascade liquefaction of natural gas",
+   "kind": "near",
+   "arch": "SP2",
+   "marks": 35,
+   "note": "",
+   "years": [
+    "2018-2019",
+    "2021-2022"
+   ]
+  },
+  {
+   "title": "Steam-jet water-vapour refrigeration",
+   "kind": "near",
+   "arch": "SP1",
+   "marks": 91,
+   "note": "2013-14 ≡ 2016-17 verbatim; 2022-23 Q5(b) ≡ 2023-24 Q1(b) verbatim.",
+   "years": [
+    "2012-2013",
+    "2013-2014",
+    "2016-2017",
+    "2018-2019",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Aircraft cooling / air-cycle refrigeration",
+   "kind": "verbatim",
+   "arch": "SP3",
+   "marks": 52,
+   "note": "2020-21 ≡ 2021-22 word for word.",
+   "years": [
+    "2017-2018",
+    "2020-2021",
+    "2021-2022"
+   ]
+  },
+  {
+   "title": "Aqua-ammonia absorption with two heat exchangers",
+   "kind": "verbatim",
+   "arch": "AB2",
+   "marks": 33,
+   "note": "Word for word.",
+   "years": [
+    "2021-2022",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Air-cooled condenser (\"on days when maximum cooling is needed, the least is available\")",
+   "kind": "near",
+   "arch": "CM2",
+   "marks": 60,
+   "note": "2022-23 ≡ 2023-24 verbatim.",
+   "years": [
+    "2015-2016",
+    "2016-2017",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Evaporative condenser",
+   "kind": "near",
+   "arch": "CM2",
+   "marks": 36,
+   "note": "",
+   "years": [
+    "2017-2018",
+    "2020-2021"
+   ]
+  },
+  {
+   "title": "Electronic expansion valve: benefits and controller",
+   "kind": "verbatim",
+   "arch": "CM3",
+   "marks": 52,
+   "note": "",
+   "years": [
+    "2015-2016",
+    "2017-2018",
+    "2020-2021"
+   ]
+  },
+  {
+   "title": "Compressor classification + scroll / rotary-vane working principle",
+   "kind": "near",
+   "arch": "CM1",
+   "marks": 98,
+   "note": "Scroll: 2016-17, 2020-21, 2022-23. Vane: 2017-18, 2021-22, 2023-24.",
+   "years": [
+    "2016-2017",
+    "2017-2018",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Liquid-overfeed evaporator for multiple-evaporator systems",
+   "kind": "near",
+   "arch": "CM4",
+   "marks": 34,
+   "note": "",
+   "years": [
+    "2016-2017",
+    "2018-2019"
+   ]
+  },
+  {
+   "title": "Real vs ideal VCR cycle; subcooling and superheating on p-h",
+   "kind": "near",
+   "arch": "VC1",
+   "marks": 55,
+   "note": "2013-14 Q1(b) ≡ 2015-16 Q1(b) second half.",
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2018-2019"
+   ]
+  },
+  {
+   "title": "Quick freezing: characteristics, classification (plate/immersion)",
+   "kind": "near",
+   "arch": "RF2",
+   "marks": 35,
+   "note": "2012-13 ≡ 2015-16 verbatim.",
+   "years": [
+    "2012-2013",
+    "2015-2016",
+    "2021-2022",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Applications of refrigeration / refrigeration system components",
+   "kind": "near",
+   "arch": "RF2",
+   "marks": 30,
+   "note": "",
+   "years": [
+    "2013-2014",
+    "2017-2018",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Thermal comfort factors / refrigeration vs AC",
+   "kind": "near",
+   "arch": "AC1",
+   "marks": 37,
+   "note": "2011-12 ≡ 2012-13 verbatim.",
+   "years": [
+    "2011-2012",
+    "2012-2013",
+    "2013-2014",
+    "2015-2016",
+    "2023-2024"
+   ]
+  },
+  {
+   "title": "Outdoor air need, all-air vs all-water, ducted split vs multi-split vs VRF",
+   "kind": "near",
+   "arch": "AC5",
+   "marks": 80,
+   "note": "2020-21 Q1(a) ≡ 2022-23 Q2(a) word for word.",
+   "years": [
+    "2015-2016",
+    "2017-2018",
+    "2018-2019",
+    "2020-2021",
+    "2022-2023"
+   ]
+  },
+  {
+   "title": "Split vs window AC; FCU vs AHU; central AC components",
+   "kind": "near",
+   "arch": "AC5",
+   "marks": 30,
+   "note": "",
+   "years": [
+    "2011-2012",
+    "2012-2013"
+   ]
+  },
+  {
+   "title": "Refrigerant properties / numbering / saturation slopes",
+   "kind": "near",
+   "arch": "RF1",
+   "marks": 45,
+   "note": "",
+   "years": [
+    "2011-2012",
+    "2013-2014",
+    "2016-2017"
+   ]
+  },
+  {
+   "title": "Joule–Thomson coefficient, inversion temperature, isenthalpic expansion",
+   "kind": "near",
+   "arch": "SP2",
+   "marks": 43,
+   "note": "",
+   "years": [
+    "2012-2013",
+    "2018-2019",
+    "2022-2023"
+   ]
+  }
+ ]
+}

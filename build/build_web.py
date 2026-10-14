@@ -239,7 +239,7 @@ def render(title, body, menus, prev, nxt, crumb):
 <link rel="stylesheet" href="{KATEX}/katex.min.css">
 <link rel="stylesheet" href="book.css">
 </head><body>
-<header class="bar"><a class="home" href="index.html">{SITE}</a>{menus}<a class="dblink" href="db-index.html">Data book</a></header>
+<header class="bar"><a class="home" href="index.html">{SITE}</a>{menus}<a class="dblink" href="qb.html">QB analysis</a><a href="db-index.html">Data book</a></header>
 <main class="page">
 <div class="crumb">{crumb}</div>
 {body}
@@ -253,8 +253,10 @@ def render(title, body, menus, prev, nxt, crumb):
 
 # ---------------------------------------------------------------- books
 # The Essentials (first read) and the Full guide (the modules), as (key, name, chapter files).
-BOOKS = [("e", "Essentials", lambda: [f for f in sorted(ESS.glob("[0-9][0-9]_*.md")) if not f.name.startswith("00_")]),
-         ("m", "Full guide", lambda: sorted((GUIDE / "modules").glob("[0-9][0-9]_*/module.md")))]
+WITH_ESSENTIALS = False          # the Essentials are incomplete: off the site for now (the markdown stays)
+BOOKS = ([("e", "Essentials", lambda: [f for f in sorted(ESS.glob("[0-9][0-9]_*.md")) if not f.name.startswith("00_")])]
+         if WITH_ESSENTIALS and ESS.exists() else []) + \
+        [("m", "Modules", lambda: sorted((GUIDE / "modules").glob("[0-9][0-9]_*/module.md")))]
 
 
 def load_book(key, files):
@@ -275,6 +277,90 @@ def load_book(key, files):
 
 def subheads(body):
     return [(i, re.sub(r"<[^>]+>", "", h).strip()) for i, h in re.findall(r'<h3 id="([^"]+)"[^>]*>(.*?)</h3>', body, re.S)]
+
+
+# ---------------------------------------------------------------- question-bank analysis page
+SHORT = {"CL": "Cooling load", "LI": "Lifts", "FI": "Fire", "CM": "Components", "SP": "Special refrigeration",
+         "AC": "Psychrometry and AC", "VC": "Vapour compression", "AB": "Absorption", "DU": "Ducts", "RF": "Refrigerants"}
+
+
+def bars(rows, vmax, fmt, compact=False):
+    """Plain horizontal bars: rows of (label html, sub text, value, tooltip). One series: no legend, value at the end."""
+    out = []
+    for lab, sub, v, tip in rows:
+        out.append(f'<div class="brow" title="{html.escape(tip)}"><div class="blab">{lab}'
+                   + (f'<span class="bsub">{html.escape(sub)}</span>' if sub else "") + '</div>'
+                   f'<div class="btrack"><div class="bfill" style="width:{max(v, 0) / vmax * 100:.1f}%"></div></div>'
+                   f'<div class="bval">{fmt(v)}</div></div>')
+    return f'<div class="bars{" compact" if compact else ""}">' + "".join(out) + "</div>"
+
+
+def qb_page(qb, mods):
+    ys = lambda y: y[2:4] + "-" + y[7:9]
+    years, topics = qb["years"], qb["topics"]
+    href = lambda tp: mods[f"{tp['module']:02d}"]["pages"][0][0] if f"{tp['module']:02d}" in mods else "#"
+    tname = lambda tp: f"Module {tp['module']}. {tp['name']}"
+    every = [a for a in qb["archetypes"] if a["papers"] >= 10]
+    top3 = topics[:3]
+    peak = max(qb["rep_by_year"].items(), key=lambda kv: kv[1])
+    h = [f'<h1>Question bank analysis</h1>',
+         f'<p>Every part of the {len(years)} term-final papers from {ys(years[0])} to {ys(years[-1])}: {qb["n_entries"]} '
+         f'parts, {qb["total_marks"]:.0f} marks offered. Each part is tagged with its topic (one module each) and its '
+         f'<em>archetype</em>, the recurring question type it belongs to.</p>',
+         '<h2>Findings</h2><ul>',
+         f'<li><b>The topics carry nearly equal weight.</b> The top three, {", ".join(tp["name"].lower() for tp in top3)}, '
+         f'take {sum(tp["pct"] for tp in top3):.1f}% of the marks between them; the modules are ordered by this weight.</li>',
+         f'<li><b>{qb["theory_pct"]:.0f}% of the marks are theory</b> (short notes, comparisons, sketches) and '
+         f'{qb["numerical_pct"]:.0f}% numericals.</li>',
+         f'<li><b>{qb["recycled_pct"]:.0f}% of all marks went to questions asked more than once</b>, verbatim, nearly '
+         f'verbatim or as a template with new numbers. In {ys(peak[0])}, {peak[1]:.0f}% of the paper\'s marks repeated '
+         f'an earlier paper.</li>',
+         '<li><b>Asked in at least 10 of 11 papers:</b> ' + "; ".join(f'{html.escape(a["name"].split(":")[0].split("(")[0].strip())} '
+                                                                      f'({a["papers"]}/11)' for a in every) + ".</li>",
+         "</ul>",
+         '<h2>Where the marks go</h2><p>Share of all marks offered, by module.</p>',
+         bars([(f'<a href="{href(tp)}">{html.escape(tname(tp))}</a>', f'{tp["count"]} parts · in {tp["papers"]}/11 papers',
+                tp["pct"], f'{tp["name"]}: {tp["marks"]:.0f} marks, {tp["pct"]:.1f}%') for tp in topics],
+              max(tp["pct"] for tp in topics), lambda v: f"{v:.1f}%"),
+         '<h2>By paper</h2><p>Each module\'s share of a paper\'s marks, in %. A blank is a paper that did not ask it.</p>',
+         '<div class="tscroll"><table class="yt"><thead><tr><th>Module</th>' + "".join(f"<th>{ys(y)}</th>" for y in years)
+         + "</tr></thead><tbody>"
+         + "".join(f'<tr><th><a href="{href(tp)}" title="{html.escape(tp["name"])}">{tp["module"]}. '
+                   f'{SHORT.get(tp["key"], html.escape(tp["name"]))}</a></th>'
+                   + "".join(f'<td>{v:.0f}</td>' if v else "<td></td>" for v in (tp["share_by_year"][y] for y in years))
+                   + "</tr>" for tp in topics)
+         + "</tbody></table></div>",
+         '<h2>Repetition</h2><p>Share of each paper\'s marks that repeat a question set in an earlier paper.</p>',
+         bars([(ys(y), "", v, f"{y}: {v:.1f}% repeated") for y, v in qb["rep_by_year"].items()], 100, lambda v: f"{v:.0f}%",
+              compact=True),
+         '<h2>Recurring question types</h2><p>For each module, its archetypes and how many of the 11 papers asked each.</p>']
+    arch = {}
+    for a in qb["archetypes"]:
+        arch.setdefault(a["topic"], []).append(a)
+    for tp in topics:
+        rows = [(html.escape(a["name"].split(":")[0]), f'{a["kind"]} · {a["count"]} parts · {a["pct"]:.1f}% of marks',
+                 a["papers"], f'{a["name"]} — asked in {", ".join(ys(y) for y in a["years"])}')
+                for a in sorted(arch.get(tp["key"], []), key=lambda a: (-a["papers"], -a["pct"]))]
+        h.append(f'<h3><a href="{href(tp)}">{html.escape(tname(tp))}</a> <span class="share">{tp["pct"]:.1f}% of marks</span></h3>')
+        h.append(bars(rows, 11, lambda v: f"{v}/11"))
+    kind_of = {a["key"]: a["kind"] for a in qb["archetypes"]}
+    fams = sorted(qb["families"], key=lambda f: (-len(f["years"]), -f["marks"]))
+    for title, sel in (("Repeated numericals", lambda f: kind_of.get(f["arch"]) != "theory"),
+                       ("Repeated theory questions", lambda f: kind_of.get(f["arch"]) == "theory")):
+        fs = [f for f in fams if sel(f)]
+        h.append(f'<h2>{title}</h2><p>{len(fs)} families of questions asked again, verbatim, nearly verbatim, or as a '
+                 f'template with new numbers.</p><ul class="fams">')
+        for f in fs:
+            h.append(f'<li><details><summary>{html.escape(f["title"])} <span class="share">{f["kind"]} · '
+                     f'{len(f["years"])} papers · {f["marks"]:.0f} marks</span></summary>'
+                     f'<p>{html.escape(f["note"])}</p><p class="yrs">Asked in {", ".join(ys(y) for y in f["years"])}.</p>'
+                     f'</details></li>')
+        h.append("</ul>")
+    h.append('<h2>Method</h2><p>Each part of each paper was transcribed, given its printed marks, and tagged by hand with '
+             'a topic and an archetype. A paper offers 280 marks (275 in 2012-13, 270 since 2022-23) and the shares are of '
+             'the marks offered. A part counts as repeated when it belongs to a family of near-identical questions that an '
+             'earlier paper already asked; the first paper to ask it does not count.</p>')
+    return "\n".join(h)
 
 
 # ---------------------------------------------------------------- build
@@ -360,7 +446,7 @@ def main():
     for key, (name, chapters) in books.items():
         linear = [(t, f) for c in chapters for f, t, _ in c["pages"]]
         other_key = "m" if key == "e" else "e"
-        other = {c["num"]: c for c in books[other_key][1]}
+        other = {c["num"]: c for c in books[other_key][1]} if other_key in books else {}
         for ch in chapters:
             for fname, title, md in ch["pages"]:
                 i = next(k for k, (_, f) in enumerate(linear) if f == fname)
@@ -368,7 +454,7 @@ def main():
                 nxt = linear[i + 1] if i + 1 < len(linear) else None
                 crumb = f'{name} · <a href="{ch["pages"][0][0]}">{html.escape(ch["title"])}</a>'
                 if ch["num"] in other:
-                    label = "Full treatment in the Full guide" if key == "e" else "First read in the Essentials"
+                    label = "Full treatment in the module" if key == "e" else "First read in the Essentials"
                     crumb += f' <a class="xbook" href="{other[ch["num"]]["pages"][0][0]}">{label} →</a>'
                 (OUT / fname).write_text(render(title, bodies[fname], book_menus(key, ch, fname), prev, nxt, crumb))
                 n_pages += 1
@@ -386,17 +472,27 @@ def main():
                                         '<a href="db-index.html">Data book</a>'))
 
     # Index pages.
-    front = re.sub(r"^---\n.*?\n---\n", "", (ESS / "00_front.md").read_text(), flags=re.S)
+    qb = json.loads((GUIDE / "qb" / "qb.json").read_text()) if (GUIDE / "qb" / "qb.json").exists() else None
+    share = {f"{tp['module']:02d}": tp["pct"] for tp in qb["topics"]} if qb else {}
     def toc(chapters):
-        return "".join(f'<li><a href="{c["pages"][0][0]}">{html.escape(c["title"])}</a></li>' for c in chapters)
+        return "".join(f'<li><a href="{c["pages"][0][0]}">{html.escape(c["title"])}</a>'
+                       + (f' <span class="share">{share[c["num"]]:.1f}% of marks</span>' if c["num"] in share else "")
+                       + "</li>" for c in chapters)
     idx = (f'<h1 class="booktitle">{SITE}</h1><p class="subtitle">ME 415 term-final preparation, '
            f'with the data book one click away.</p>'
-           + (pandoc((GUIDE / "cover.md").read_text()) if (GUIDE / "cover.md").exists() else "") +
-           f'<h2>Essentials</h2><p>The first read: each topic\'s recurring questions, the theory to understand them, '
-           f'one worked example and one practice problem.</p><ul class="toc">{toc(books["e"][1])}</ul>'
-           f'<h2>Full guide</h2><p>One module per topic: the full theory and every past term-final question solved. '
-           f'Sections marked ★ are the first read.</p><ul class="toc">{toc(books["m"][1])}</ul>' + pandoc(front))
+           + (pandoc((GUIDE / "cover.md").read_text()) if (GUIDE / "cover.md").exists() else "")
+           + "".join(f'<h2>{name}</h2>'
+                     + ('<p>One module per topic, in order of exam weight: the full theory and every past term-final '
+                        'question solved. Sections marked ★ are the first read.</p>' if key == "m" else "")
+                     + f'<ul class="toc">{toc(chapters)}</ul>' for key, (name, chapters) in books.items())
+           + '<h2>Also</h2><ul class="toc"><li><a href="db-index.html">Data book</a></li>'
+           + ('<li><a href="qb.html">Question bank analysis</a>: where the marks of eleven papers went</li>' if qb else "")
+           + "</ul>")
     (OUT / "index.html").write_text(render("Contents", idx, book_menus(), None, None, ""))
+    if qb:
+        mods = {c["num"]: c for c in books["m"][1]}
+        (OUT / "qb.html").write_text(render("Question bank analysis", qb_page(qb, mods), book_menus(), None, None,
+                                            '<a href="index.html">Contents</a>'))
     dbtoc = "".join(f'<li><a href="{f}">{html.escape(strip_md(t))}</a></li>' for f, t, _ in db_pages)
     (OUT / "db-index.html").write_text(render("Data book", f'<h1>Data book</h1><ol class="toc plain">{dbtoc}</ol>',
                                               book_menus(), None, None, ""))

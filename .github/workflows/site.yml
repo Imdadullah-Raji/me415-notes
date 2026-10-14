@@ -23,8 +23,6 @@ jobs:
         run: |
           wget -q https://github.com/jgm/pandoc/releases/download/2.9.2.1/pandoc-2.9.2.1-1-amd64.deb
           sudo dpkg -i pandoc-2.9.2.1-1-amd64.deb
-      - name: Check the Essentials against the modules
-        run: python3 build/check_essentials.py
       - name: Build the site (fails on a wrong lookup, a broken span or a broken link)
         run: python3 build/build_web.py
       - uses: actions/upload-pages-artifact@v3
