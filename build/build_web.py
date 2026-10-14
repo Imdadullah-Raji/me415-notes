@@ -391,6 +391,7 @@ def main():
         return "".join(f'<li><a href="{c["pages"][0][0]}">{html.escape(c["title"])}</a></li>' for c in chapters)
     idx = (f'<h1 class="booktitle">{SITE}</h1><p class="subtitle">ME 415 term-final preparation, '
            f'with the data book one click away.</p>'
+           + (pandoc((GUIDE / "cover.md").read_text()) if (GUIDE / "cover.md").exists() else "") +
            f'<h2>Essentials</h2><p>The first read: each topic\'s recurring questions, the theory to understand them, '
            f'one worked example and one practice problem.</p><ul class="toc">{toc(books["e"][1])}</ul>'
            f'<h2>Full guide</h2><p>One module per topic: the full theory and every past term-final question solved. '
