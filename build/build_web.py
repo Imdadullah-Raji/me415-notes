@@ -23,6 +23,7 @@ DATABOOK = GUIDE / "databook" / "databook.md"
 TABLES = GUIDE / "tables"                                     # the public repo carries a copy of the CSVs
 if not TABLES.exists():
     TABLES = GUIDE.parent / "hvac_data" / "extracted" / "tables"
+PAPER_TABLES = GUIDE.parent.parent / "extracted_papers" / "tables" / "2022-2023" / "ME415"   # T1-T6, BNBC (attached to papers)
 ASSETS = BUILD / "web"
 OUT = GUIDE / "web"
 
@@ -38,7 +39,10 @@ KEYS = {"9": ["station"], "11": ["type_of_premise"], "12a": ["roof_no"], "12b": 
         "20": ["solar_time_h"], "21": ["section", "type_of_glass", "nominal_thickness"], "22": ["a"],
         "23": ["room_envelope_construction"], "24": ["hours_on_h", "a_coef", "b_class"],
         "25": ["total_operational_hours_h"], "26": ["total_operational_hours_h"], "27": ["total_hours_in_space_h"],
-        "28": ["degree_of_activity"]}
+        "28": ["degree_of_activity"],
+        "T1": ["facility_type"], "T2": ["facility"], "T3": ["elevator_capacity_lb"], "T4": ["building_type"],
+        "T5": ["building_height", "floors"], "T6": ["building_type", "rise_m"], "bnbc": ["building_type**"]}
+CHARTS = {"C1": "att_C1_average_trip_time.png", "C2": "att_C2_round_trip_time.png"}   # lift charts: shown as images
 
 
 def fail(msg):
@@ -48,6 +52,11 @@ def fail(msg):
 def table_id(stem):
     if stem in CSV_IDS:
         return CSV_IDS[stem]
+    m = re.match(r"att_(T[1-6])_", stem)
+    if m:
+        return m.group(1)
+    if stem.startswith("att_BNBC_table_4.4.1"):
+        return "bnbc"
     m = re.match(r"t(\d+)([a-z]?)_", stem)
     if not m or stem.startswith("t07"):          # Table 7 is six fitting tables; not linked yet
         return None
@@ -66,11 +75,12 @@ def slugify(s):
 # ---------------------------------------------------------------- tables
 def load_tables(captions):
     tables = {}
-    for f in sorted(TABLES.glob("*.csv")):
+    files = sorted(TABLES.glob("*.csv")) + (sorted(PAPER_TABLES.glob("att_*.csv")) if PAPER_TABLES.exists() else [])
+    for f in files:
         tid = table_id(f.stem)
         if tid is None:
             continue
-        rows = list(csv.reader(f.open(newline="")))
+        rows = list(csv.reader(f.open(newline="", encoding="utf-8")))
         head, body = rows[0], rows[1:]
         keys = [head.index(k) for k in KEYS.get(tid, [head[0]])]
         title, page = captions.get(tid, (f"Table {tid}", None))
@@ -123,14 +133,17 @@ def same(printed, cell):
     b = cell.strip()
     try:
         return float(a.rstrip("%")) == float(b.rstrip("%"))
-    except ValueError:
-        return a.lower() == b.lower()
+    except ValueError:                                # a text cell may hold more than is printed: "110–130 (10–12)^a"
+        a = a.rstrip("%").lower()
+        return a == b.lower() or bool(re.search(r"(?<![\w.–-])" + re.escape(a) + r"(?![\w.–-])", b.lower()))
 
 
 def resolve(tables, tid, row, col, printed, where):
     t = tables.get(tid)
     if t is None:
         fail(f"{where}: lookup to unknown table {tid!r}")
+    if not row and not col:                           # the whole table, or a chart: [RT = 145 s]{.lookup t="C2"}
+        return None, None
     hits = find_row(t, row)
     if len(hits) != 1:
         fail(f"{where}: table {tid} row {row!r} matches {len(hits)} rows (keys: {[t['cols'][k] for k in t['keys']]})")
@@ -208,7 +221,7 @@ def pandoc(md, databook=False):
     args = ["pandoc", "-f", "markdown", "-t", "html5", "--katex", "--lua-filter", str(BUILD / "web.lua")]
     if databook:
         args += ["-M", "databook=true"]
-    r = subprocess.run(args, input=md, capture_output=True, text=True)
+    r = subprocess.run(args, input=md, capture_output=True, text=True, encoding="utf-8")
     if r.returncode or r.stderr.strip():
         fail(f"pandoc: {r.stderr.strip()}")
     return re.sub(r"<colgroup>.*?</colgroup>", "", r.stdout, flags=re.S)   # pandoc's % widths squash wide tables
@@ -262,7 +275,7 @@ BOOKS = ([("e", "Essentials", lambda: [f for f in sorted(ESS.glob("[0-9][0-9]_*.
 def load_book(key, files):
     chapters = []
     for f in files():
-        md = f.read_text().replace("<!-- pagebreak -->", "")
+        md = f.read_text(encoding="utf-8").replace("<!-- pagebreak -->", "")
         md = re.sub(r"<!-- BEGIN DATA TABLES.*?<!-- END DATA TABLES -->", "", md, flags=re.S)  # the data book replaces it
         md = fix_images(md, f.parent)
         num = (f.name if key == "e" else f.parent.name)[:2]
@@ -370,7 +383,7 @@ def main():
     (OUT / "figures").mkdir(parents=True)
 
     # Data book: one page per ## section; captions give each table its title and page.
-    db_md = re.sub(r"^---\n.*?\n---\n", "", DATABOOK.read_text(), flags=re.S)
+    db_md = re.sub(r"^---\n.*?\n---\n", "", DATABOOK.read_text(encoding="utf-8"), flags=re.S)
     db_pages, captions = [], {}
     for chunk in re.split(r"(?m)^(?=## )", db_md):
         m = re.match(r"## (D\d+)\.", chunk)
@@ -380,11 +393,18 @@ def main():
         chunk = re.sub(r"(?m)^# .*$", "", chunk)          # part headings live in the index
         for cm in re.finditer(r"^\*\*Data Book Table (\d+(?:\([a-z]\))?)[ .(][^*]*?\.?\s*(.*?)\*\*", chunk, re.M):
             captions.setdefault(norm_id(cm.group(1)), (f"Table {cm.group(1)}. {cm.group(2)}".strip(), fname))
+        for cm in re.finditer(r"^\*\*(T[1-6])\. (.*?)\*\*", chunk, re.M):
+            captions.setdefault(cm.group(1), (f"{cm.group(1)}. {cm.group(2)}", fname))
+        for cm in re.finditer(r"^!\[(C[12])\. ([^\]]*?)\.? Panels", chunk, re.M):
+            captions.setdefault(cm.group(1), (f"{cm.group(1)}. {cm.group(2)}", fname))
         db_pages.append((fname, page_title(chunk), chunk))
     for stem, tid in CSV_IDS.items():                    # property tables have no "Table N" caption
         sec = {"water-sat": "d1", "water-sh": "d2", "r134a-sat": "d3", "r134a-sh": "d4", "nh3-sat": "d6", "nh3-sh": "d7"}[tid]
         captions.setdefault(tid, (next(t for f, t, _ in db_pages if f == f"db-{sec}.html"), f"db-{sec}.html"))
     tables = load_tables(captions)
+    for cid, img in CHARTS.items():
+        title, page = captions.get(cid, (cid, None))
+        tables[cid] = {"title": tex_plain(title), "page": page, "image": f"figures/{img}"}
 
     books = {key: (name, load_book(key, files)) for key, name, files in BOOKS}
 
@@ -418,6 +438,8 @@ def main():
                 def add_cell(m):
                     a = {k: html.unescape(v) for k, v in re.findall(r'(data-\w+)="([^"]*)"', m.group(0))}
                     t = tables[a["data-t"]]                  # already validated against the markdown above
+                    if not a.get("data-row"):
+                        return m.group(0)
                     r, c = find_row(t, a["data-row"])[0], find_col(t, a["data-col"])
                     return m.group(0)[:-1] + f' data-r="{r}" data-c="{c}">'
                 body = re.sub(r'<a href="#" class="lookup"[^>]*>', add_cell, body)
@@ -456,7 +478,7 @@ def main():
                 if ch["num"] in other:
                     label = "Full treatment in the module" if key == "e" else "First read in the Essentials"
                     crumb += f' <a class="xbook" href="{other[ch["num"]]["pages"][0][0]}">{label} →</a>'
-                (OUT / fname).write_text(render(title, bodies[fname], book_menus(key, ch, fname), prev, nxt, crumb))
+                (OUT / fname).write_text(render(title, bodies[fname], book_menus(key, ch, fname), prev, nxt, crumb), encoding="utf-8")
                 n_pages += 1
 
     # Data-book pages.
@@ -465,14 +487,15 @@ def main():
         body = pandoc(fix_images(md, DATABOOK.parent), databook=True)
         body = re.sub(r"<p><strong>Data Book Table (\d+(?:\([a-z]\))?)",
                       lambda m: f'<p class="tcap" id="t-{norm_id(m.group(1))}"><strong>Data Book Table {m.group(1)}', body)
+        body = re.sub(r"<p><strong>(T[1-6])\.", lambda m: f'<p class="tcap" id="t-{m.group(1)}"><strong>{m.group(1)}.', body)
         prev = db_pages[k - 1][:2][::-1] if k else None          # (title, file)
         nxt = db_pages[k + 1][:2][::-1] if k + 1 < len(db_pages) else None
         secs = menu("Sections", [(t, f, f == fname, 0) for t, f, _, _ in db_items], "secs")
         (OUT / fname).write_text(render(title, body, book_menus() + secs, prev, nxt,
-                                        '<a href="db-index.html">Data book</a>'))
+                                        '<a href="db-index.html">Data book</a>'), encoding="utf-8")
 
     # Index pages.
-    qb = json.loads((GUIDE / "qb" / "qb.json").read_text()) if (GUIDE / "qb" / "qb.json").exists() else None
+    qb = json.loads((GUIDE / "qb" / "qb.json").read_text(encoding="utf-8")) if (GUIDE / "qb" / "qb.json").exists() else None
     share = {f"{tp['module']:02d}": tp["pct"] for tp in qb["topics"]} if qb else {}
     def toc(chapters):
         return "".join(f'<li><a href="{c["pages"][0][0]}">{html.escape(c["title"])}</a>'
@@ -480,7 +503,7 @@ def main():
                        + "</li>" for c in chapters)
     idx = (f'<h1 class="booktitle">{SITE}</h1><p class="subtitle">ME 415 term-final preparation, '
            f'with the data book one click away.</p>'
-           + (pandoc((GUIDE / "cover.md").read_text()) if (GUIDE / "cover.md").exists() else "")
+           + (pandoc((GUIDE / "cover.md").read_text(encoding="utf-8")) if (GUIDE / "cover.md").exists() else "")
            + "".join(f'<h2>{name}</h2>'
                      + ('<p>One module per topic, in order of exam weight: the full theory and every past term-final '
                         'question solved. Sections marked ★ are the first read.</p>' if key == "m" else "")
@@ -488,22 +511,22 @@ def main():
            + '<h2>Also</h2><ul class="toc"><li><a href="db-index.html">Data book</a></li>'
            + ('<li><a href="qb.html">Question bank analysis</a>: where the marks of eleven papers went</li>' if qb else "")
            + "</ul>")
-    (OUT / "index.html").write_text(render("Contents", idx, book_menus(), None, None, ""))
+    (OUT / "index.html").write_text(render("Contents", idx, book_menus(), None, None, ""), encoding="utf-8")
     if qb:
         mods = {c["num"]: c for c in books["m"][1]}
         (OUT / "qb.html").write_text(render("Question bank analysis", qb_page(qb, mods), book_menus(), None, None,
-                                            '<a href="index.html">Contents</a>'))
+                                            '<a href="index.html">Contents</a>'), encoding="utf-8")
     dbtoc = "".join(f'<li><a href="{f}">{html.escape(strip_md(t))}</a></li>' for f, t, _ in db_pages)
     (OUT / "db-index.html").write_text(render("Data book", f'<h1>Data book</h1><ol class="toc plain">{dbtoc}</ol>',
-                                              book_menus(), None, None, ""))
+                                              book_menus(), None, None, ""), encoding="utf-8")
 
     # Assets.
     for name, p in FIGS.items():
         shutil.copy(p, OUT / "figures" / name)
     for f in ASSETS.iterdir():
         shutil.copy(f, OUT / f.name)
-    (OUT / "tables.json").write_text(json.dumps(tables, separators=(",", ":")))
-    (OUT / ".nojekyll").write_text("")
+    (OUT / "tables.json").write_text(json.dumps(tables, separators=(",", ":")), encoding="utf-8")
+    (OUT / ".nojekyll").write_text("", encoding="utf-8")
     check_links(tables)
     counts = ", ".join(f"{name} {sum(len(c['pages']) for c in chapters)}" for name, chapters in books.values())
     print(f"web: {n_pages} pages ({counts}), {len(db_pages)} data-book pages, {n_lookups} lookups resolved, "
@@ -512,8 +535,8 @@ def main():
 
 def check_links(tables):
     """Every local href must reach an existing file and, if it has one, an existing anchor."""
-    ids = {p.name: set(re.findall(r'id="([^"]+)"', p.read_text())) for p in OUT.glob("*.html")}
-    hrefs = [(f, h) for f in ids for h in re.findall(r'(?:href|src)="([^"]+)"', (OUT / f).read_text())]
+    ids = {p.name: set(re.findall(r'id="([^"]+)"', p.read_text(encoding="utf-8"))) for p in OUT.glob("*.html")}
+    hrefs = [(f, h) for f in ids for h in re.findall(r'(?:href|src)="([^"]+)"', (OUT / f).read_text(encoding="utf-8"))]
     hrefs += [("tables.json", t["page"]) for t in tables.values() if t["page"]]
     for f, h in hrefs:
         if h.startswith("http") or h == "#":

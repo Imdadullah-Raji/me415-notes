@@ -48,13 +48,19 @@ but compute them. In a module, prefix the id with `m-` (`#m-mini-glass-solar`): 
 [41]{.lookup t="12b" row="without suspended ceiling;2" col="15"}
 ```
 
-- `t` is the table id: the number and letter of the data-book table (`9`, `12b`, `18a`), or `r134a-sh`, `nh3-sat`, … for
-  the property tables.
+- `t` is the table id: the number and letter of the data-book table (`9`, `12b`, `18a`), `T1`–`T6` for the lift
+  tables, `bnbc` for BNBC Table 4.4.1, or `r134a-sh`, `nh3-sat`, … for the property tables.
 - `row` is the row's key cells joined by `;` (never `|`, which breaks markdown tables).
 - `col` is the CSV column (`tables/*.csv`) or its short form: a compass column (`N`, `E_W`, `HOR`) or an hour (`15`).
 - Do not put a span inside `$…$`.
 
-The build checks that the cell exists and equals the printed value. A plain mention like "Table 19" in running text is
+The build checks that the cell exists and equals the printed value (for a text cell such as `110–130 (10–12)`, the
+printed value must appear in it).
+
+A value read from a **chart**, or a reference to a **whole table**, leaves out `row` and `col`; clicking it shows the
+chart image or the full table: `[145 s]{.lookup t="C2"}` (lift charts `C1`, `C2`).
+
+A plain mention like "Table 19" in running text is
 linked to the whole table automatically.
 
 **Boxes.** A blockquote whose first word is bold and one of `KEY`, `EXAMPLE`, `TRY`, `PRACTICE`, `TIP`, `TRAP`, `ASKED`,

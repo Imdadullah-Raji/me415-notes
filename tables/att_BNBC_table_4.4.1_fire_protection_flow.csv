@@ -1,0 +1,6 @@
+building_type**,sprinkler_system_litre_per_min,standpipe_and_hose_system_litre_per_min,duration_min_up_to_51m,duration_min_51m_to_102m,duration_min_above_102m
+Light hazard-I,1000,1000,30,38,45
+Light hazard-II,1900,1900,50,62,75
+Ordinary hazard-I,2650,1900,75,95,112
+Ordinary hazard-II,3200,1900,75,95,112
+Ordinary hazard-III,4800,1900,75,95,112

@@ -1,0 +1,11 @@
+building_height,floors,net_usable_area_percent_of_gross
+0–10 floors,all,approximately 80
+0–20 floors,1–10,approximately 75
+0–20 floors,11–20,approximately 80
+0–30 floors,1–10,approximately 70
+0–30 floors,11–20,approximately 75
+0–30 floors,21–30,approximately 80
+0–40 floors,1–10,approximately 70
+0–40 floors,11–20,approximately 75
+0–40 floors,21–30,approximately 80
+0–40 floors,31–40,approximately 85

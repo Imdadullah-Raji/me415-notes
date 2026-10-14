@@ -1,0 +1,12 @@
+group,facility_type,interval_sec,waiting_time_sec*
+OFFICE BUILDINGS,Excellent service,15–24,9–14
+OFFICE BUILDINGS,Good service,25–29,15–17
+OFFICE BUILDINGS,Fair service,30–39,18–23
+OFFICE BUILDINGS,Poor service,40–49,24–29
+OFFICE BUILDINGS,Unacceptable service,50+,30+
+RESIDENTIAL,Prestige apartments,50–70,30–42
+RESIDENTIAL,Middle-income apartments,60–80,36–48
+RESIDENTIAL,Low-income apartments,80–120,48–72
+RESIDENTIAL,Dormitories,60–80,36–48
+RESIDENTIAL,Hotels—first quality,30–50,18–30
+RESIDENTIAL,Hotels—second quality,50–70,30–42

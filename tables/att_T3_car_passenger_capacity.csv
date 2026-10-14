@@ -1,0 +1,6 @@
+elevator_capacity_lb,elevator_capacity_kg,maximum_passenger_capacity,normal_passenger_load_per_trip*
+2000,907,12,10
+2500,1134,17,13
+3000,1361,20,16
+3500,1588,23,19
+4000,1814,28,22

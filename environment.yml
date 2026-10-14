@@ -1,0 +1,9 @@
+# Conda environment for building the site (Windows, macOS, Linux):
+#   conda env create -f environment.yml
+#   conda activate me415-notes
+name: me415-notes
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10          # the build uses the standard library only
+  - pandoc=2.9.2.1        # the version the Lua filters are written for (the same as CI)

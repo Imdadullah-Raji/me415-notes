@@ -343,13 +343,37 @@ If the question gives the **gross** floor area, first take the net usable area f
 
 **Step 3. Required handling capacity.** $HC_{req}=PHC\times\text{population}$, persons per 5 minutes.
 
+::: {.mini #m-mini-lift-demand}
+**Mini-example: demand (steps 1–3).** A centre-city office, diversified use, 10 floors above the lobby, each 1200 m² net.
+
+- T2, office, centre city: 12–14%, take **PHC = 13%**. T1, office, good service: **I = 25–29 s**.
+- T4, diversified, normal: 10–12 m²/person, take 11. Population $=10\times1200/11=1090.9\approx$ **1091 persons**. (Had the question given 1500 m² **gross**, T5 for 0–10 floors gives 80% net: $0.80\times1500=1200$ m².)
+- $HC_{req}=0.13\times1090.9=$ **141.8 persons per 5 min**.
+:::
+
 **Step 4. Rise.** Rise = floors above the lobby × floor height (3.7 m).
 
 **Step 5. Car speed (T6).** T6 *office building*, by rise: 0–40 m → **2.0 m/s (350–400 fpm)**; 41–70 m → **2.5 m/s (500–600 fpm)**; 71–85 m → 3.6 m/s (700 fpm); 86–115 m → 4.0 m/s; above 115 m → 5.0 m/s. Use the lower fpm figure (400 or 500) as the curve on C1 and C2.
 
 **Step 6. Car size (T6, T3).** T6 gives 2500, 3000 or 3500 lb (1250, 1360, 1600 kg) for offices: "car capacity is determined by building size, car speed by rise". Small buildings: 3000 lb; large: 3500 lb. T3 gives the **normal load per trip $p$**: 2500 lb → 13, **3000 lb → 16**, **3500 lb → 19**, 4000 lb → 22. Use $p$, not the maximum capacity.
 
+::: {.mini #m-mini-lift-equipment}
+**Mini-example: rise, speed and car (steps 4–6).** The 10-floor office above, 3.7 m floor to floor.
+
+- Rise $=10\times3.7=$ **37.0 m**. T6, office, 0–40 m: **2.0 m/s (350–400 fpm)**: read the 400-fpm curves.
+- A modest floor plate: try **3000 lb (1360 kg)**. T3: normal load **p = 16**.
+:::
+
 **Step 7. Chart readings (C1, C2).** See the box below. Read RT (C2, Fig. 25) and AVRTP (C1, Fig. 24) for the chosen car (panel), speed (curve) and number of local floors (x axis).
+
+::: {.mini #m-mini-lift-charts}
+**Mini-example: chart readings (step 7).** 3000-lb car, 400 fpm, 10 local floors.
+
+- C2 (round trip), panel (b) 3000 lb, the 400-fpm curve, at 10 floors on the x axis: **RT = 130 s**.
+- C1 (average trip), the same panel, curve and floors: **AVRTP = 72 s**.
+
+Write it as "C2, panel (b) 3000 lb, 400-fpm curve, 10 floors: RT = 130 s". Panel = car, curve = speed, x = floors.
+:::
 
 **Step 8. Number of cars.**
 $$I_{req}=\frac{300\,p}{HC_{req}},\qquad N=\frac{RT}{I_{req}}$$
@@ -358,6 +382,19 @@ $N$ is almost never a whole number. Write down both neighbours (e.g. 5.4 → 5 o
 **Step 9. Check both criteria for each option, and choose.** For each whole $N$:
 $$I=\frac{RT}{N},\qquad HC=\frac{300\,p}{I},\qquad PHC=\frac{HC}{\text{population}}$$
 The interval must be in T1 (≤ 29 s for good service) and PHC ≥ 12%. Choose the **cheapest option that passes both** (fewer cars, smaller cars, lower speed). If no option passes, change the car size or the speed and repeat from step 6; if a single group would need more than about 8 cars, **zone the building** (§2.11). Finish with a one-line answer: number of cars × car size (lb and kg) × speed (m/s), with I, PHC and AVRTP.
+
+::: {.mini #m-mini-lift-cars}
+**Mini-example: number of cars and the check (steps 8–9).** $HC_{req}=141.8$, $p=16$, RT = 130 s.
+
+$I_{req}=300\times16/141.8=33.8$ s; $N=130/33.8=$ **3.84**: try 4 and 5.
+
+| Option | $I=RT/N$ | $HC=300p/I$ | PHC | Verdict |
+|---|---|---|---|---|
+| 4 × 3000 lb | 32.5 s (fair) | 147.7 | 13.5% | PHC passes, but the interval is only fair |
+| 5 × 3000 lb | 26.0 s (good) | 184.6 | 16.9% | **passes both** |
+
+Here the **interval** decides it: **5 cars**. (In Solution 2.1 it is the handling capacity.)
+:::
 
 > **KEY: Reading C1 and C2**
 >
@@ -425,7 +462,7 @@ These agree with Grondzik's own readings where he gives them (3000 lb, 500 fpm, 
 
 <!-- pagebreak -->
 
-## 2.11 Zoning and grouping of elevators
+## 2.11 Zoning and grouping of elevators {#zoning}
 
 ### Zoning
 
@@ -459,7 +496,7 @@ A **group (bank)** is a set of cars side by side, controlled together by one sup
 
 ![Fig. 18: Grondzik Fig. 31.28, lobby groupings for multiple-zone systems in plan: a low-rise bank and a high-rise bank, each in its own lobby, in six- and eight-car arrangements [Grondzik §31.39]](figures/018.jpg "w=0.4")
 
-## 2.12 The CIBSE round-trip time calculation (2023-24)
+## 2.12 The CIBSE round-trip time calculation (2023-24) {#cibse}
 
 The 2023-24 paper replaced the charts with an equation sheet. These are the **CIBSE Guide D up-peak formulas**: the round-trip time is computed instead of read. The symbols ("usual meaning") are:
 
@@ -561,7 +598,7 @@ Escalators between more than two floors are arranged in one of two basic ways [N
 
 Sources: [Grondzik §33.2; Note p.197].
 
-### Capacity ★
+### Capacity ★ {#escalator-capacity}
 
 Steps pass the landing at a steady rate, and each carries $P$ persons. Let $V$ be the speed **along the incline**, $\theta$ the incline, and $L$ the **tread (step) length measured horizontally**. The steps form a staircase whose horizontal pitch is $L$, and the staircase moves horizontally at $V\cos\theta$. So [Note p.195]:
 
@@ -639,26 +676,69 @@ Standing assumptions for every design numerical (Family A), unless the solution 
 
 **Solution 2.1** **[TUTOR-GENERATED]** (method of Note pp.185–189 and Grondzik §31.36). This is the model answer for every single-zone design.
 
-*Step 1. Criteria.* T2, office, centre city: 12–14%, take **PHC = 13%**. T1, office, good service: **I = 25–29 s**.
+::: {.problem #sol-2-1}
 
-*Step 2. Population.* T4, office, diversified, normal: 10–12 m²/person, take 11 m²/person.
+::: {.step title="Step 1. Service criteria"}
+::: hint
+T2 (minimum PHC) and T1 (interval) for an office building. Design with the middle of the PHC band. See the [demand mini-example](#m-mini-lift-demand).
+:::
+T2, office, centre city: [12–14]{.lookup t="T2" row="Center city" col="percent_of_population_carried_in_5_minutes"}%, take **PHC = 13%**. T1, office, good service: **I = [25–29]{.lookup t="T1" row="Good service" col="interval_sec"} s**.
+:::
+
+::: {.step title="Step 2. Population"}
+::: hint
+T4: m² of net area per person for a diversified, normal office; the middle of the band. (Net area is given; for gross area use T5.) See the [demand mini-example](#m-mini-lift-demand).
+:::
+T4, office, diversified, normal: [10–12]{.lookup t="T4" row="Diversified (multiple tenancy) — Normal" col="value"} m²/person, take 11.
 $$\text{population}=\frac{12\times2000}{11}=2181.8\approx\mathbf{2182\ persons}$$
+:::
 
-*Step 3. Required handling capacity.* $HC_{req}=0.13\times2181.8=\mathbf{283.6}$ persons per 5 min.
+::: {.step title="Step 3. Required handling capacity"}
+::: hint
+$HC_{req}=PHC\times\text{population}$, persons per 5 minutes.
+:::
+$HC_{req}=0.13\times2181.8=\mathbf{283.6}$ persons per 5 min.
+:::
 
-*Step 4. Rise.* $12\times3.7=\mathbf{44.4\ m}$.
+::: {.step title="Step 4. Rise"}
+::: hint
+Floors above the lobby × floor-to-floor height. See the [equipment mini-example](#m-mini-lift-equipment).
+:::
+Rise $=12\times3.7=\mathbf{44.4\ m}$.
+:::
 
-*Step 5. Speed.* T6, office, rise 41–70 m: **2.5 m/s (500–600 fpm)**; use the 500-fpm curves.
+::: {.step title="Step 5. Car speed"}
+::: hint
+T6, office building: the speed band that contains the rise. Use the lower fpm figure to pick the chart curve.
+:::
+T6, office, rise 41–70 m: **[2.5]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_m_s"} m/s ([500–600]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_fpm"} fpm)**; use the 500-fpm curves.
+:::
 
-*Step 6. Car.* A large floor plate (2000 m²): try **3500 lb (1600 kg)**; T3: $p=19$.
+::: {.step title="Step 6. Car size and load"}
+::: hint
+Large floor plates take the 3500-lb car, smaller ones 3000 lb; T3 gives the normal load per trip $p$.
+:::
+Try **3500 lb (1600 kg)**; T3: $p=$ [19]{.lookup t="T3" row="3500" col="normal_passenger_load_per_trip*"}.
+:::
 
-*Step 7. Charts.* C2, panel (c) 3500 lb, 500-fpm curve, 12 local floors: **RT = 145 s**. C1, panel (c), 500 fpm, 12 floors: **AVRTP = 79 s**.
+::: {.step title="Step 7. Chart readings"}
+::: hint
+C2 for RT, C1 for AVRTP: panel (c) = 3500 lb, the 500-fpm curve, 12 local floors on the x axis. See the [chart mini-example](#m-mini-lift-charts).
+:::
+C2, panel (c) 3500 lb, 500-fpm curve, 12 floors: **RT = [145 s]{.lookup t="C2"}**. C1, panel (c), 500 fpm, 12 floors: **AVRTP = [79 s]{.lookup t="C1"}**.
+:::
 
-*Step 8. Number of cars.*
-$$I_{req}=\frac{300p}{HC_{req}}=\frac{300\times19}{283.6}=20.1\ \text{s},\qquad N=\frac{RT}{I_{req}}=\frac{145}{20.1}=7.22\ \text{cars}\ \rightarrow\ 7\ \text{or}\ 8$$
+::: {.step title="Step 8. Number of cars"}
+::: hint
+$I_{req}=300p/HC_{req}$, then $N=RT/I_{req}$. $N$ is almost never whole: take both neighbours. See the [cars mini-example](#m-mini-lift-cars).
+:::
+$$I_{req}=\frac{300\times19}{283.6}=20.1\ \text{s},\qquad N=\frac{145}{20.1}=\mathbf{7.22}\ \text{cars}$$
+:::
 
-*Step 9. Check the options.*
-
+::: {.step title="Step 9. Check the options and choose"}
+::: hint
+For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval ≤ 29 s (good) and PHC ≥ 12%; choose the cheapest option that passes both. See the [cars mini-example](#m-mini-lift-cars).
+:::
 | Option | $I=RT/N$ | $HC=300p/I$ | PHC | Verdict |
 |---|---|---|---|---|
 | 7 × 3500 lb | $145/7=20.7$ s (excellent) | $300\times19/20.7=275.2$ | $275.2/2181.8=12.6\%$ | **passes both** |
@@ -666,51 +746,262 @@ $$I_{req}=\frac{300p}{HC_{req}}=\frac{300\times19}{283.6}=20.1\ \text{s},\qquad 
 | 8 × 3000 lb ($p=16$, RT 133 s, AVRTP 73 s; $I_{req}=16.9$ s, $N=7.86$) | $133/8=16.6$ s | 288.7 | 13.2% | passes; one more car than 7 × 3500 |
 
 The interval is "excellent" rather than "good" because the handling capacity governs: 6 cars would give $I=24.2$ s but a PHC of only 10.8%.
+:::
 
+:::
+
+::: answer
 **Answer: 7 cars of 3500 lb (1600 kg) at 2.5 m/s (500 fpm)**, single zone: $I=20.7$ s, waiting time $0.6\times20.7=12.4$ s, $HC=275.2$ persons/5 min, **PHC = 12.6%**, AVRTP = 79 s (between "acceptable" 75 s and "annoying" 90 s). Lobby: 3 and 4 cars opposing.
+:::
 
 > **TRY 2.2** `[PP 13-14 Q4(c), 20]` For an office building, downtown, diversified use, 12 rentable floors above the lobby, each 2000 m$^2$. net. Floor-to-floor height = 3.7 m, determine a workable elevator system.
 
-**Solution 2.2** **[TUTOR-GENERATED]** A verbatim repeat of TRY 2.1. Population 2182, $HC_{req}=283.6$, rise 44.4 m → 2.5 m/s; 3500 lb, $p=19$, RT = 145 s, AVRTP = 79 s; $N=7.22$. **Answer: 7 cars of 3500 lb (1600 kg) at 2.5 m/s, I = 20.7 s, PHC = 12.6%.** For 20 marks, show the 8 × 3000 lb alternative as well (I = 16.6 s, PHC 13.2%) and say why 7 × 3500 lb is preferred (one car and one shaft fewer).
+**Solution 2.2** **[TUTOR-GENERATED]** A verbatim repeat of TRY 2.1: work it again.
+
+::: {.problem #sol-2-2}
+
+::: {.step title="Step 1. Service criteria"}
+::: hint
+T2 (minimum PHC) and T1 (interval) for an office building. Design with the middle of the PHC band. See the [demand mini-example](#m-mini-lift-demand).
+:::
+T2, office, centre city: [12–14]{.lookup t="T2" row="Center city" col="percent_of_population_carried_in_5_minutes"}%, take **PHC = 13%**. T1, office, good service: **I = [25–29]{.lookup t="T1" row="Good service" col="interval_sec"} s**.
+:::
+
+::: {.step title="Step 2. Population"}
+::: hint
+T4: m² of net area per person for a diversified, normal office; the middle of the band. (Net area is given; for gross area use T5.) See the [demand mini-example](#m-mini-lift-demand).
+:::
+T4, office, diversified, normal: [10–12]{.lookup t="T4" row="Diversified (multiple tenancy) — Normal" col="value"} m²/person, take 11.
+$$\text{population}=\frac{12\times2000}{11}=2181.8\approx\mathbf{2182\ persons}$$
+:::
+
+::: {.step title="Step 3. Required handling capacity"}
+::: hint
+$HC_{req}=PHC\times\text{population}$, persons per 5 minutes.
+:::
+$HC_{req}=0.13\times2181.8=\mathbf{283.6}$ persons per 5 min.
+:::
+
+::: {.step title="Step 4. Rise"}
+::: hint
+Floors above the lobby × floor-to-floor height. See the [equipment mini-example](#m-mini-lift-equipment).
+:::
+Rise $=12\times3.7=\mathbf{44.4\ m}$.
+:::
+
+::: {.step title="Step 5. Car speed"}
+::: hint
+T6, office building: the speed band that contains the rise. Use the lower fpm figure to pick the chart curve.
+:::
+T6, office, rise 41–70 m: **[2.5]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_m_s"} m/s ([500–600]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_fpm"} fpm)**; use the 500-fpm curves.
+:::
+
+::: {.step title="Step 6. Car size and load"}
+::: hint
+Large floor plates take the 3500-lb car, smaller ones 3000 lb; T3 gives the normal load per trip $p$.
+:::
+Try **3500 lb (1600 kg)**; T3: $p=$ [19]{.lookup t="T3" row="3500" col="normal_passenger_load_per_trip*"}.
+:::
+
+::: {.step title="Step 7. Chart readings"}
+::: hint
+C2 for RT, C1 for AVRTP: panel (c) = 3500 lb, the 500-fpm curve, 12 local floors on the x axis. See the [chart mini-example](#m-mini-lift-charts).
+:::
+C2, panel (c) 3500 lb, 500-fpm curve, 12 floors: **RT = [145 s]{.lookup t="C2"}**. C1, panel (c), 500 fpm, 12 floors: **AVRTP = [79 s]{.lookup t="C1"}**.
+:::
+
+::: {.step title="Step 8. Number of cars"}
+::: hint
+$I_{req}=300p/HC_{req}$, then $N=RT/I_{req}$. $N$ is almost never whole: take both neighbours. See the [cars mini-example](#m-mini-lift-cars).
+:::
+$$I_{req}=\frac{300\times19}{283.6}=20.1\ \text{s},\qquad N=\frac{145}{20.1}=\mathbf{7.22}\ \text{cars}$$
+:::
+
+::: {.step title="Step 9. Check the options and choose"}
+::: hint
+For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval ≤ 29 s (good) and PHC ≥ 12%; choose the cheapest option that passes both. See the [cars mini-example](#m-mini-lift-cars).
+:::
+| Option | $I=RT/N$ | $HC=300p/I$ | PHC | Verdict |
+|---|---|---|---|---|
+| 7 × 3500 lb | $145/7=20.7$ s (excellent) | $300\times19/20.7=275.2$ | $275.2/2181.8=12.6\%$ | **passes both** |
+| 8 × 3500 lb | $145/8=18.1$ s | 314.5 | 14.4% | passes; above the band, one more car |
+| 8 × 3000 lb ($p=16$, RT 133 s, AVRTP 73 s; $I_{req}=16.9$ s, $N=7.86$) | $133/8=16.6$ s | 288.7 | 13.2% | passes; one more car than 7 × 3500 |
+
+The interval is "excellent" rather than "good" because the handling capacity governs: 6 cars would give $I=24.2$ s but a PHC of only 10.8%.
+:::
+
+:::
+
+::: answer
+**Answer: 7 cars of 3500 lb (1600 kg) at 2.5 m/s, I = 20.7 s, PHC = 12.6%.** For 20 marks, show the 8 × 3000 lb alternative as well (I = 16.6 s, PHC 13.2%) and say why 7 × 3500 lb is preferred (one car and one shaft fewer).
+:::
 
 > **TRY 2.3** `[PP 15-16 Q3(b), 15]` For an office building, downtown, diversified use, 10 rentable floors above the lobby, each $2000\ \mathrm{m^2}$. net. Floor-to-floor height = 3.7 m, determine a workable elevator system arrangement.
 
-**Solution 2.3** **[TUTOR-GENERATED]** As Solution 2.1, with these changes.
+**Solution 2.3** **[TUTOR-GENERATED]**
 
-- Population $=10\times2000/11=1818.2\approx$ **1818 persons**; $HC_{req}=0.13\times1818.2=$ **236.4**.
-- Rise $=10\times3.7=$ **37.0 m** → T6, 0–40 m: **2.0 m/s (350–400 fpm)**: use the 400-fpm curves.
-- A smaller building: try **3000 lb (1360 kg)**, $p=16$. C2, panel (b) 3000 lb, 400-fpm curve, 10 floors: **RT = 130 s**; C1, panel (b): **AVRTP = 72 s**.
-- $I_{req}=300\times16/236.4=20.3$ s; $N=130/20.3=$ **6.40** → 6 or 7.
+::: {.problem #sol-2-3}
 
+::: {.step title="Step 1. Service criteria"}
+::: hint
+T2 (minimum PHC) and T1 (interval) for an office building. Design with the middle of the PHC band. See the [demand mini-example](#m-mini-lift-demand).
+:::
+T2, office, centre city: [12–14]{.lookup t="T2" row="Center city" col="percent_of_population_carried_in_5_minutes"}%, take **PHC = 13%**. T1, office, good service: **I = [25–29]{.lookup t="T1" row="Good service" col="interval_sec"} s**.
+:::
+
+::: {.step title="Step 2. Population"}
+::: hint
+T4: m² of net area per person for a diversified, normal office; the middle of the band. (Net area is given; for gross area use T5.) See the [demand mini-example](#m-mini-lift-demand).
+:::
+T4, office, diversified, normal: [10–12]{.lookup t="T4" row="Diversified (multiple tenancy) — Normal" col="value"} m²/person, take 11.
+$$\text{population}=\frac{10\times2000}{11}=1818.2\approx\mathbf{1818\ persons}$$
+:::
+
+::: {.step title="Step 3. Required handling capacity"}
+::: hint
+$HC_{req}=PHC\times\text{population}$, persons per 5 minutes.
+:::
+$HC_{req}=0.13\times1818.2=\mathbf{236.4}$ persons per 5 min.
+:::
+
+::: {.step title="Step 4. Rise"}
+::: hint
+Floors above the lobby × floor-to-floor height. See the [equipment mini-example](#m-mini-lift-equipment).
+:::
+Rise $=10\times3.7=\mathbf{37.0\ m}$.
+:::
+
+::: {.step title="Step 5. Car speed"}
+::: hint
+T6, office building: the speed band that contains the rise. Use the lower fpm figure to pick the chart curve.
+:::
+T6, office, rise 0–40 m: **[2.0]{.lookup t="T6" row="Office building;0–40" col="min_car_speed_m_s"} m/s ([350–400]{.lookup t="T6" row="Office building;0–40" col="min_car_speed_fpm"} fpm)**; use the 400-fpm curves.
+:::
+
+::: {.step title="Step 6. Car size and load"}
+::: hint
+Large floor plates take the 3500-lb car, smaller ones 3000 lb; T3 gives the normal load per trip $p$.
+:::
+Try **3000 lb (1360 kg)**; T3: $p=$ [16]{.lookup t="T3" row="3000" col="normal_passenger_load_per_trip*"}.
+:::
+
+::: {.step title="Step 7. Chart readings"}
+::: hint
+C2 for RT, C1 for AVRTP: panel (b) = 3000 lb, the 400-fpm curve, 10 local floors on the x axis. See the [chart mini-example](#m-mini-lift-charts).
+:::
+C2, panel (b) 3000 lb, 400-fpm curve, 10 floors: **RT = [130 s]{.lookup t="C2"}**. C1, panel (b), 400 fpm, 10 floors: **AVRTP = [72 s]{.lookup t="C1"}**.
+:::
+
+::: {.step title="Step 8. Number of cars"}
+::: hint
+$I_{req}=300p/HC_{req}$, then $N=RT/I_{req}$. $N$ is almost never whole: take both neighbours. See the [cars mini-example](#m-mini-lift-cars).
+:::
+$$I_{req}=\frac{300\times16}{236.4}=20.3\ \text{s},\qquad N=\frac{130}{20.3}=\mathbf{6.40}\ \text{cars}$$
+:::
+
+::: {.step title="Step 9. Check the options and choose"}
+::: hint
+For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval ≤ 29 s (good) and PHC ≥ 12%; choose the cheapest option that passes both. See the [cars mini-example](#m-mini-lift-cars).
+:::
 | Option | $I$ | $HC$ | PHC | Verdict |
 |---|---|---|---|---|
 | 6 × 3000 lb | $130/6=21.7$ s | 221.5 | 12.2% | **passes both** |
 | 7 × 3000 lb | 18.6 s | 258.5 | 14.2% | one more car |
 | 5 × 3500 lb ($p=19$, RT 140 s, AVRTP 77 s; $I_{req}=24.1$ s, $N=5.81$) | 28.0 s | 203.6 | 11.2% | fails PHC |
 | 6 × 3500 lb | 23.3 s | 244.3 | 13.4% | passes; bigger cars, same number |
+:::
 
+:::
+
+::: answer
 **Answer: 6 cars of 3000 lb (1360 kg) at 2.0 m/s (400 fpm)**: I = 21.7 s, PHC = 12.2%, AVRTP = 72 s (below the 75-s "acceptable" limit). Lobby: 3 and 3 opposing.
+:::
 
 > **TRY 2.4** `[PP 12-13 Q8(c), 20]` For an office building, downtown, diversified use, 15 rentable floors above the lobby, each 1500 m$^2$ net. Floor-to-floor height = 3.7 m, determine a workable elevator system arrangement.
 
-**Solution 2.4** **[TUTOR-GENERATED]** As Solution 2.1, with these changes. Fifteen storeys is still a single zone (Grondzik: below 16 storeys, one zone).
+**Solution 2.4** **[TUTOR-GENERATED]** Fifteen storeys is still a single zone (Grondzik: below 16 storeys, one zone).
 
-- Population $=15\times1500/11=2045.5\approx$ **2045 persons**; $HC_{req}=0.13\times2045.5=$ **265.9**.
-- Rise $=15\times3.7=$ **55.5 m** → T6, 41–70 m: **2.5 m/s (500 fpm)**.
-- 3500 lb, $p=19$: C2, panel (c), 500 fpm, 15 floors: **RT = 160 s**; C1, panel (c): **AVRTP = 83 s**.
-- $I_{req}=300\times19/265.9=21.4$ s; $N=160/21.4=$ **7.46** → 7 or 8.
+::: {.problem #sol-2-4}
 
+::: {.step title="Step 1. Service criteria"}
+::: hint
+T2 (minimum PHC) and T1 (interval) for an office building. Design with the middle of the PHC band. See the [demand mini-example](#m-mini-lift-demand).
+:::
+T2, office, centre city: [12–14]{.lookup t="T2" row="Center city" col="percent_of_population_carried_in_5_minutes"}%, take **PHC = 13%**. T1, office, good service: **I = [25–29]{.lookup t="T1" row="Good service" col="interval_sec"} s**.
+:::
+
+::: {.step title="Step 2. Population"}
+::: hint
+T4: m² of net area per person for a diversified, normal office; the middle of the band. (Net area is given; for gross area use T5.) See the [demand mini-example](#m-mini-lift-demand).
+:::
+T4, office, diversified, normal: [10–12]{.lookup t="T4" row="Diversified (multiple tenancy) — Normal" col="value"} m²/person, take 11.
+$$\text{population}=\frac{15\times1500}{11}=2045.5\approx\mathbf{2045\ persons}$$
+:::
+
+::: {.step title="Step 3. Required handling capacity"}
+::: hint
+$HC_{req}=PHC\times\text{population}$, persons per 5 minutes.
+:::
+$HC_{req}=0.13\times2045.5=\mathbf{265.9}$ persons per 5 min.
+:::
+
+::: {.step title="Step 4. Rise"}
+::: hint
+Floors above the lobby × floor-to-floor height. See the [equipment mini-example](#m-mini-lift-equipment).
+:::
+Rise $=15\times3.7=\mathbf{55.5\ m}$.
+:::
+
+::: {.step title="Step 5. Car speed"}
+::: hint
+T6, office building: the speed band that contains the rise. Use the lower fpm figure to pick the chart curve.
+:::
+T6, office, rise 41–70 m: **[2.5]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_m_s"} m/s ([500–600]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_fpm"} fpm)**; use the 500-fpm curves.
+:::
+
+::: {.step title="Step 6. Car size and load"}
+::: hint
+Large floor plates take the 3500-lb car, smaller ones 3000 lb; T3 gives the normal load per trip $p$.
+:::
+Try **3500 lb (1600 kg)**; T3: $p=$ [19]{.lookup t="T3" row="3500" col="normal_passenger_load_per_trip*"}.
+:::
+
+::: {.step title="Step 7. Chart readings"}
+::: hint
+C2 for RT, C1 for AVRTP: panel (c) = 3500 lb, the 500-fpm curve, 15 local floors on the x axis. See the [chart mini-example](#m-mini-lift-charts).
+:::
+C2, panel (c) 3500 lb, 500-fpm curve, 15 floors: **RT = [160 s]{.lookup t="C2"}**. C1, panel (c), 500 fpm, 15 floors: **AVRTP = [83 s]{.lookup t="C1"}**.
+:::
+
+::: {.step title="Step 8. Number of cars"}
+::: hint
+$I_{req}=300p/HC_{req}$, then $N=RT/I_{req}$. $N$ is almost never whole: take both neighbours. See the [cars mini-example](#m-mini-lift-cars).
+:::
+$$I_{req}=\frac{300\times19}{265.9}=21.4\ \text{s},\qquad N=\frac{160}{21.4}=\mathbf{7.46}\ \text{cars}$$
+:::
+
+::: {.step title="Step 9. Check the options and choose"}
+::: hint
+For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval ≤ 29 s (good) and PHC ≥ 12%; choose the cheapest option that passes both. See the [cars mini-example](#m-mini-lift-cars).
+:::
 | Option | $I$ | $HC$ | PHC | Verdict |
 |---|---|---|---|---|
 | 7 × 3500 lb | $160/7=22.9$ s | 249.4 | 12.2% | **passes both** |
 | 8 × 3500 lb | 20.0 s | 285.0 | 13.9% | one more car |
 | 8 × 3000 lb ($p=16$, RT 148 s, AVRTP 77 s; $I_{req}=18.1$ s, $N=8.20$) | 18.5 s | 259.5 | 12.7% | passes; one more car |
+:::
 
+:::
+
+::: answer
 **Answer: 7 cars of 3500 lb (1600 kg) at 2.5 m/s**: I = 22.9 s, PHC = 12.2%, AVRTP = 83 s ("acceptable" to "annoying"; the 3500-lb car is near its 16-floor limit for a 90-s trip [Grondzik §31.32]). Lobby: 3 and 4 opposing.
+:::
 
 > **TRY 2.5** `[PP 22-23 Q4(a), 25]` Classify elevator in different way. Draw the schematic diagram of an electric traction lift and show its different components. For an office building, downtown, diversified use, 12 rentable floors above the lobby, each $1500\ \mathrm{m}^2$ net. Floor-to-floor height = 3.7 m, determine a workable elevator system arrangement.
 
 **Solution 2.5** **[TUTOR-GENERATED]**
+
+::: {.answer label="Show answer: (i) classification and (ii) the schematic"}
 
 *(i) Classification* (5 marks) [Note pp.165–168]:
 
@@ -721,11 +1012,72 @@ The interval is "excellent" rather than "good" because the handling capacity gov
 
 *(ii) Traction lift schematic* (5 marks). Draw the sketch of §2.3 (Fig. 5): machine room on top with **motor, brake, drive sheave, governor and controller**; **hoist ropes** down to the **car** on one side and the **counterweight** on the other; **car and counterweight guide rails** on the shaft walls; **safety gear** under the car linked to the governor rope; **landing doors** and **car doors**; **buffers** in the **pit** under the car and counterweight; travelling cable to the car. One line per item: the sheave moves the ropes by traction; the counterweight (car + 40% of the rated load) balances the car; the guide rails guide the car and are gripped by the safety gear; the governor trips the safety gear on overspeed; the buffers cushion an over-travelling car.
 
-*(iii) Design* (15 marks). As Solution 2.1, with these changes.
+:::
 
-- Population $=12\times1500/11=1636.4\approx$ **1636 persons**; $HC_{req}=0.13\times1636.4=$ **212.7**.
-- Rise 44.4 m → **2.5 m/s (500 fpm)**.
-- Try 3500 lb, $p=19$: RT = 145 s, AVRTP = 79 s (as in Solution 2.1). $I_{req}=300\times19/212.7=26.8$ s; $N=145/26.8=$ **5.41**.
+*(iii) Design* (15 marks).
+::: {.problem #sol-2-5}
+
+::: {.step title="Step 1. Service criteria"}
+::: hint
+T2 (minimum PHC) and T1 (interval) for an office building. Design with the middle of the PHC band. See the [demand mini-example](#m-mini-lift-demand).
+:::
+T2, office, centre city: [12–14]{.lookup t="T2" row="Center city" col="percent_of_population_carried_in_5_minutes"}%, take **PHC = 13%**. T1, office, good service: **I = [25–29]{.lookup t="T1" row="Good service" col="interval_sec"} s**.
+:::
+
+::: {.step title="Step 2. Population"}
+::: hint
+T4: m² of net area per person for a diversified, normal office; the middle of the band. (Net area is given; for gross area use T5.) See the [demand mini-example](#m-mini-lift-demand).
+:::
+T4, office, diversified, normal: [10–12]{.lookup t="T4" row="Diversified (multiple tenancy) — Normal" col="value"} m²/person, take 11.
+$$\text{population}=\frac{12\times1500}{11}=1636.4\approx\mathbf{1636\ persons}$$
+:::
+
+::: {.step title="Step 3. Required handling capacity"}
+::: hint
+$HC_{req}=PHC\times\text{population}$, persons per 5 minutes.
+:::
+$HC_{req}=0.13\times1636.4=\mathbf{212.7}$ persons per 5 min.
+:::
+
+::: {.step title="Step 4. Rise"}
+::: hint
+Floors above the lobby × floor-to-floor height. See the [equipment mini-example](#m-mini-lift-equipment).
+:::
+Rise $=12\times3.7=\mathbf{44.4\ m}$.
+:::
+
+::: {.step title="Step 5. Car speed"}
+::: hint
+T6, office building: the speed band that contains the rise. Use the lower fpm figure to pick the chart curve.
+:::
+T6, office, rise 41–70 m: **[2.5]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_m_s"} m/s ([500–600]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_fpm"} fpm)**; use the 500-fpm curves.
+:::
+
+::: {.step title="Step 6. Car size and load"}
+::: hint
+Large floor plates take the 3500-lb car, smaller ones 3000 lb; T3 gives the normal load per trip $p$.
+:::
+Try **3500 lb (1600 kg)**; T3: $p=$ [19]{.lookup t="T3" row="3500" col="normal_passenger_load_per_trip*"}.
+:::
+
+::: {.step title="Step 7. Chart readings"}
+::: hint
+C2 for RT, C1 for AVRTP: panel (c) = 3500 lb, the 500-fpm curve, 12 local floors on the x axis. See the [chart mini-example](#m-mini-lift-charts).
+:::
+C2, panel (c) 3500 lb, 500-fpm curve, 12 floors: **RT = [145 s]{.lookup t="C2"}**. C1, panel (c), 500 fpm, 12 floors: **AVRTP = [79 s]{.lookup t="C1"}**.
+:::
+
+::: {.step title="Step 8. Number of cars"}
+::: hint
+$I_{req}=300p/HC_{req}$, then $N=RT/I_{req}$. $N$ is almost never whole: take both neighbours. See the [cars mini-example](#m-mini-lift-cars).
+:::
+$$I_{req}=\frac{300\times19}{212.7}=26.8\ \text{s},\qquad N=\frac{145}{26.8}=\mathbf{5.41}\ \text{cars}$$
+:::
+
+::: {.step title="Step 9. Check the options and choose"}
+::: hint
+For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval ≤ 29 s (good) and PHC ≥ 12%; choose the cheapest option that passes both. See the [cars mini-example](#m-mini-lift-cars).
+:::
 - Try 3000 lb, $p=16$: C2, panel (b), 500 fpm, 12 floors: RT = 133 s; C1: AVRTP = 73 s. $I_{req}=4800/212.7=22.6$ s; $N=133/22.6=$ **5.89**.
 
 | Option | $I$ | $HC$ | PHC | Verdict |
@@ -734,38 +1086,78 @@ The interval is "excellent" rather than "good" because the handling capacity gov
 | 6 × 3500 lb | 24.2 s | 235.9 | 14.4% | above the band |
 | 5 × 3000 lb | 26.6 s | 180.5 | 11.0% | fails PHC |
 | 6 × 3000 lb | $133/6=22.2$ s | 216.5 | 13.2% | passes both, with margin |
+:::
 
+:::
+
+::: answer
 **Answer: 5 cars of 3500 lb (1600 kg) at 2.5 m/s**: I = 29.0 s (good), PHC = 12.0%, AVRTP = 79 s. It needs one car and one shaft fewer than 6 × 3000 lb (relative first cost about 5 × 155 = 775 against 6 × 150 = 900 units, Grondzik Table 31.10). If more margin is wanted, **6 × 3000 lb** (I = 22.2 s, PHC = 13.2%, AVRTP = 73 s) is the alternative.
+:::
 
 > **TRY 2.6** `[PP 17-18 Q4(b), 25]` Define Interval (I) time, Handling capacity (HC) and Round Trip (RT) time for elevator. For an office building, downtown, diversified use, 18 rentable floors above the lobby, each $3000\ \mathrm{m^2}$ net, floor-to-floor height = 3.7 m, determine a working elevator system arrangement.
 
 **Solution 2.6** **[TUTOR-GENERATED]** (the zoning answer; see the TRAP after it for the class note's approach).
 
+::: {.answer label="Show answer: the definitions (6 marks)"}
 *Definitions* (6 marks) [Grondzik §31.29]:
 
 - **Interval (I):** the average time between successive departures of cars from the lobby; $I=RT/N$. Average lobby waiting time $\approx0.6I$.
 - **Handling capacity (HC):** the maximum number of passengers the system can carry in 5 minutes (the peak period): $HC=300p/I$, where $p$ is the normal load per trip. It depends on the car size and the interval only.
 - **Round-trip time (RT):** the average time for a car to start from the lower terminal (lobby), serve its upper stops and return to the lobby; it is the sum of the acceleration and deceleration time, door operation at all stops, passenger loading and unloading, and the running time.
+:::
 
-*Single-zone attempt.*
+*Design.* Work it step by step; open a hint if stuck.
 
-- PHC 13%, I 25–29 s (T2, T1). Population $=18\times3000/11=4909.1\approx$ **4909 persons**; $HC_{req}=0.13\times4909.1=$ **638.2**.
-- Rise $=18\times3.7=$ **66.6 m** → T6, 41–70 m: **2.5 m/s (500 fpm)**. Largest office car, 3500 lb, $p=19$.
-- C2, panel (c) 3500 lb, 500 fpm, 18 floors: **RT = 174 s**; C1, panel (c): AVRTP = 86 s.
+::: {.problem #sol-2-6}
+
+::: {.step title="Step 1. Demand, as one zone"}
+::: hint
+Steps 1–3 of the method: T2 and T1, then T4, then $HC_{req}$. See the [demand mini-example](#m-mini-lift-demand).
+:::
+PHC 13%, I 25–29 s (T2 [12–14]{.lookup t="T2" row="Center city" col="percent_of_population_carried_in_5_minutes"}%, T1 [25–29]{.lookup t="T1" row="Good service" col="interval_sec"} s). Population $=18\times3000/11=4909.1\approx$ **4909 persons**; $HC_{req}=0.13\times4909.1=$ **638.2**.
+:::
+
+::: {.step title="Step 2. Rise, speed and car"}
+::: hint
+Rise from the floors; T6 for the speed band; the largest office car in T6, and its $p$ from T3.
+:::
+Rise $=18\times3.7=$ **66.6 m** → T6, 41–70 m: **[2.5]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_m_s"} m/s (500 fpm)**. Largest office car, 3500 lb, $p=$ [19]{.lookup t="T3" row="3500" col="normal_passenger_load_per_trip*"}.
+:::
+
+::: {.step title="Step 3. One bank? Charts and number of cars"}
+::: hint
+C2 panel (c), 500-fpm curve, 18 floors; then $N=RT/I_{req}$. A group has at most 8 cars: if $N$ is far above that, the building must be zoned (§2.11, [zoning](#zoning)).
+:::
+- C2, panel (c) 3500 lb, 500 fpm, 18 floors: **RT = [174 s]{.lookup t="C2"}**; C1, panel (c): AVRTP = [86 s]{.lookup t="C1"}.
 - $I_{req}=300\times19/638.2=8.93$ s; $N=174/8.93=$ **19.5 cars**.
 
 One bank of 20 cars is not workable: the largest group is 8 cars (4 opposite 4; no more than 4 in a row [Grondzik §31.39]); with 20 cars no waiting passenger could reach a car in time, and an 18-floor local run gives an 86-s trip. The building (eighteen storeys, in Grondzik's 16–19 "either way" band) has too much population for one zone. **Zone it.**
+:::
 
-*Two zones.* Low zone floors 1–9, high zone floors 10–18 (Fig. 16). Each zone: $9\times3000=27\,000$ m², population $=27\,000/11=2454.5\approx$ **2455**, $HC_{req}=0.13\times2454.5=$ **319.1**, and with 3500-lb cars $I_{req}=300\times19/319.1=$ **17.9 s**.
+::: {.step title="Step 4. Two zones: the demand of each"}
+::: hint
+Split the floors in two equal halves; each zone's population and $HC_{req}$ are found as in step 1, then $I_{req}=300p/HC_{req}$.
+:::
+Low zone floors 1–9, high zone floors 10–18 (Fig. 16). Each zone: $9\times3000=27\,000$ m², population $=27\,000/11=2454.5\approx$ **2455**, $HC_{req}=0.13\times2454.5=$ **319.1**, and with 3500-lb cars $I_{req}=300\times19/319.1=$ **17.9 s**.
+:::
 
-*Low-rise bank (floors 1–9).* Rise $=9\times3.7=33.3$ m → T6, 0–40 m: **2.0 m/s (400 fpm)**. C2, panel (c), 400 fpm, 9 floors: **RT = 134 s**; C1: **AVRTP = 77 s**. $N=134/17.9=$ **7.50**.
+::: {.step title="Step 5. Low-rise bank (floors 1–9)"}
+::: hint
+A single-zone design for the low floors: rise → T6 speed → C2/C1 at 9 floors → $N$ → check the options.
+:::
+Rise $=9\times3.7=33.3$ m → T6, 0–40 m: **[2.0]{.lookup t="T6" row="Office building;0–40" col="min_car_speed_m_s"} m/s (400 fpm)**. C2, panel (c), 400 fpm, 9 floors: **RT = [134 s]{.lookup t="C2"}**; C1: **AVRTP = [77 s]{.lookup t="C1"}**. $N=134/17.9=$ **7.50**.
 
 | Option | $I$ | $HC$ | PHC | Verdict |
 |---|---|---|---|---|
 | 7 cars | $134/7=19.1$ s | 297.8 | 12.1% | **passes both** |
 | 8 cars | 16.8 s | 340.3 | 13.9% | one more car |
+:::
 
-*High-rise bank (floors 10–18).* Rise to the top 66.6 m → **2.5 m/s (500 fpm)**. Express run through floors 1–9: $H_e=9\times3.7=33.3$ m, $t_e=33.3/2.5=$ **13.3 s** one way. C2, panel (c), 500 fpm, **9 local floors**: 129 s, so
+::: {.step title="Step 6. High-rise bank (floors 10–18), with the express run"}
+::: hint
+The speed follows the rise to the **top** floor. Read C2 at the zone's **local** floors (9) and add the express run twice: $RT_{high}=RT_{C2}+2t_e$, $t_e=H_e/v$ (§2.11, [zoning](#zoning)).
+:::
+Rise to the top 66.6 m → **2.5 m/s (500 fpm)**. Express run through floors 1–9: $H_e=9\times3.7=33.3$ m, $t_e=33.3/2.5=$ **13.3 s** one way. C2, panel (c), 500 fpm, **9 local floors**: [129 s]{.lookup t="C2"}, so
 $$RT_{high}=129+2\times13.3=\mathbf{155.6\ s},\qquad AVRTP\approx75+13.3=88\ \text{s}$$
 (C1, panel (c), 500 fpm, 9 floors, plus the one-way express run). $N=155.6/17.9=$ **8.71**.
 
@@ -775,7 +1167,11 @@ $$RT_{high}=129+2\times13.3=\mathbf{155.6\ s},\qquad AVRTP\approx75+13.3=88\ \te
 | 9 cars | 17.3 s | 329.7 | 13.4% | 9 cars exceed the 8-car group |
 
 Take **8 cars**: the shortfall of 0.1 percentage point is far inside the chart accuracy (as in Example 2.1). If 12% must be met strictly, raise the high-rise cars to 3.6 m/s (700 fpm, gearless): C2, panel (c), 700 fpm, 9 floors, 126 s; $t_e=33.3/3.6=9.25$ s; $RT=126+2\times9.25=144.5$ s; $N=8.09$; 8 cars give $I=18.1$ s and PHC = 12.9%, at a higher first cost.
+:::
 
+:::
+
+::: answer
 **Answer: a two-zone system of 15 cars of 3500 lb (1600 kg):**
 
 | Bank | Floors | Cars | Speed | RT (s) | I (s) | PHC | AVRTP (s) |
@@ -784,6 +1180,7 @@ Take **8 cars**: the shortfall of 0.1 percentage point is far inside the chart a
 | High-rise | 10–18 (express 1–9) | 8 | 2.5 m/s | 155.6 | 19.4 | 11.9% | ≈ 88 |
 
 The two banks together carry $297.8+293.1=590.9$ persons per 5 min, **12.0%** of the 4909 people. Each bank has its own lobby (3 + 4 and 4 + 4 opposing); the high-rise cars run in blind shafts through floors 1–9.
+:::
 
 > **TRAP: The class note's answer to this question**
 >
@@ -791,18 +1188,49 @@ The two banks together carry $297.8+293.1=590.9$ persons per 5 min, **12.0%** of
 
 > **TRY 2.7** `[PP 18-19 Q4(b), 20]` Define Interval (I) time, Percent Handling Capacity (PHC) and Average Trip Time for elevator. For an office building, downtown, diversified use, 16 rentable floors above the lobby, each $3500\ \mathrm{m^2}$. net. Floor-to-floor height = 37 m, determine a workable elevator system arrangement.
 
-**Solution 2.7** **[TUTOR-GENERATED]** "37 m" is a misprint for **3.7 m** (a 37-m storey is impossible; every other paper has 3.7 m). As Solution 2.6, with these changes.
+**Solution 2.7** **[TUTOR-GENERATED]** "37 m" is a misprint for **3.7 m** (a 37-m storey is impossible; every other paper has 3.7 m). The method is that of Solution 2.6.
 
+::: {.answer label="Show answer: the definitions"}
 *Definitions:* **Interval** as in Solution 2.6. **Percent handling capacity (PHC):** the 5-minute handling capacity as a percentage of the building population, $PHC=HC/\text{population}$; T2 gives the minimum (12–14% for a centre-city office). **Average trip time (AVRTP):** the average time from a passenger's arrival in the lobby to leaving the car at the destination floor, i.e. the lobby waiting time plus the travel time to the median stop; under 60 s is highly desirable, 90 s annoying.
+:::
 
-*Single zone.* Population $=16\times3500/11=5090.9\approx$ **5091**; $HC_{req}=0.13\times5090.9=$ **661.8**. Rise $16\times3.7=59.2$ m → 2.5 m/s. 3500 lb: C2, panel (c), 500 fpm, 16 floors: RT = 165 s (AVRTP 85 s). $I_{req}=5700/661.8=8.61$ s; $N=165/8.61=$ **19.2 cars**: not workable in one group, so **zone** (16 storeys is in the 16–19 band, and the population decides).
+*Design.* Work it step by step; open a hint if stuck.
 
-*Two zones of 8 floors.* Each: $8\times3500/11=2545.5\approx2545$ persons, $HC_{req}=$ **330.9**, $I_{req}=5700/330.9=$ **17.2 s**.
+::: {.problem #sol-2-7}
 
-- **Low-rise, floors 1–8:** rise 29.6 m → **2.0 m/s (400 fpm)**. C2 (c), 400 fpm, 8 floors: **RT = 127 s**; C1: AVRTP = 74 s. $N=127/17.2=$ **7.37** → **7 cars**: $I=127/7=18.1$ s, $HC=314.2$, **PHC = 12.3%** (passes).
-- **High-rise, floors 9–16:** **2.5 m/s**; express $H_e=8\times3.7=29.6$ m, $t_e=29.6/2.5=11.84$ s. C2 (c), 500 fpm, 8 floors: 123 s; $RT_{high}=123+2\times11.84=$ **146.7 s**; AVRTP $\approx73+11.8=85$ s. $N=146.7\times330.9/5700=$ **8.52** → **8 cars**: $I=18.3$ s, $HC=310.8$, **PHC = 12.2%** (passes).
+::: {.step title="Step 1. One zone: demand, speed, charts, number of cars"}
+::: hint
+As steps 1–3 of Solution 2.6: population and $HC_{req}$; rise → T6; 3500 lb, $p=19$; C2 panel (c) at 16 floors; $N=RT/I_{req}$. More than 8 cars in one group means zoning (§2.11, [zoning](#zoning)).
+:::
+Population $=16\times3500/11=5090.9\approx$ **5091**; $HC_{req}=0.13\times5090.9=$ **661.8**. Rise $16\times3.7=59.2$ m → [2.5]{.lookup t="T6" row="Office building;41–70" col="min_car_speed_m_s"} m/s. 3500 lb: C2, panel (c), 500 fpm, 16 floors: RT = [165 s]{.lookup t="C2"} (AVRTP 85 s). $I_{req}=5700/661.8=8.61$ s; $N=165/8.61=$ **19.2 cars**: not workable in one group, so **zone** (16 storeys is in the 16–19 band, and the population decides).
+:::
 
+::: {.step title="Step 2. Two zones: the demand of each"}
+::: hint
+Two zones of 8 floors; each zone's population, $HC_{req}$ and $I_{req}$ as in step 4 of Solution 2.6.
+:::
+Each: $8\times3500/11=2545.5\approx2545$ persons, $HC_{req}=$ **330.9**, $I_{req}=5700/330.9=$ **17.2 s**.
+:::
+
+::: {.step title="Step 3. Low-rise bank (floors 1–8)"}
+::: hint
+Rise → T6 speed → C2/C1 panel (c) at 8 floors → $N$ → the nearest whole number that passes.
+:::
+Rise 29.6 m → **[2.0]{.lookup t="T6" row="Office building;0–40" col="min_car_speed_m_s"} m/s (400 fpm)**. C2 (c), 400 fpm, 8 floors: **RT = [127 s]{.lookup t="C2"}**; C1: AVRTP = [74 s]{.lookup t="C1"}. $N=127/17.2=$ **7.37** → **7 cars**: $I=127/7=18.1$ s, $HC=314.2$, **PHC = 12.3%** (passes).
+:::
+
+::: {.step title="Step 4. High-rise bank (floors 9–16), with the express run"}
+::: hint
+Speed from the rise to the top; C2 at the zone's 8 local floors plus $2t_e$, $t_e=H_e/v$ for the 8 express floors.
+:::
+**2.5 m/s**; express $H_e=8\times3.7=29.6$ m, $t_e=29.6/2.5=11.84$ s. C2 (c), 500 fpm, 8 floors: [123 s]{.lookup t="C2"}; $RT_{high}=123+2\times11.84=$ **146.7 s**; AVRTP $\approx73+11.8=85$ s. $N=146.7\times330.9/5700=$ **8.52** → **8 cars**: $I=18.3$ s, $HC=310.8$, **PHC = 12.2%** (passes).
+:::
+
+:::
+
+::: answer
 **Answer: two zones, 15 cars of 3500 lb (1600 kg): 7 cars at 2.0 m/s for floors 1–8 (I = 18.1 s, PHC 12.3%) and 8 cars at 2.5 m/s, express to floor 9, for floors 9–16 (I = 18.3 s, PHC 12.2%).**
+:::
 
 > **TRY 2.8** `[PP 23-24 Q7(c), 15]` A building has 10 floors above the main terminal, has an arrival rate of 15% of the building population in the busiest five minutes. A total building population of 1000 persons is equally distributed on the 10 floors. The floor heights are equal with a value of 4.3 m. Use a rated car-load of 20 persons. The target interval is 30 s.
 > Evaluate the actual interval and the handling capacity of the elevator system and comment on whether it is a compliant or wasteful design. In case of a wasteful design, provide your suggestions to improve the design.
@@ -810,42 +1238,82 @@ The two banks together carry $297.8+293.1=590.9$ persons per 5 min, **12.0%** of
 >
 > Equations provided: $H=N-\sum_{i=1}^{N-1}\left(\frac{i}{N}\right)^P$; $S=N\left[1-\left(1-\frac{1}{N}\right)^P\right]$; $d_f\ge\frac{a^2v+v^2j}{aj}$; $\tau=2H\frac{d_f}{v}+(S+1)\left(t_f-\frac{d_f}{v}+t_{do}+t_{dc}+t_{sd}-t_{ao}\right)+P(t_{pi}+t_{po})$; $HC\%=\frac{300PL}{RTT\cdot U}$.
 
-**Solution 2.8** **[TUTOR-GENERATED]** (CIBSE Guide D up-peak method, §2.12; the start delay $t_{sd}$ and advance door opening $t_{ao}$ are not given and are taken as 0; boarding and alighting are 1.2 s each).
+**Solution 2.8** **[TUTOR-GENERATED]** (CIBSE Guide D up-peak method, §2.12; the start delay $t_{sd}$ and advance door opening $t_{ao}$ are not given and are taken as 0; boarding and alighting are 1.2 s each). Work it step by step; the equations are those printed in the question ([§2.12](#cibse)).
 
-*Step 1. Passengers per trip.* Arrivals $=0.15\times1000=150$ persons in 5 min $=0.5$ persons/s. At the target interval of 30 s each car must carry
+::: {.problem #sol-2-8}
+
+::: {.step title="Step 1. Passengers per trip"}
+::: hint
+Arrivals in 5 min = arrival rate × population; per second, divide by 300. A car leaving every $I$ seconds carries $P=$ (arrivals per s) × $I$. Check $P$ against 80% of the rated load.
+:::
+Arrivals $=0.15\times1000=150$ persons in 5 min $=0.5$ persons/s. At the target interval of 30 s each car must carry
 $$P=0.5\times30=\mathbf{15\ persons}\qquad(P/CC=15/20=75\%\le80\%,\ \text{acceptable})$$
+:::
 
-*Step 2. Flight time over one floor.*
+::: {.step title="Step 2. Flight time over one floor"}
+::: hint
+First check that the car reaches rated speed within one floor: $d_f\ge(a^2v+v^2j)/(aj)$. Then $t_v=d_f/v$ and $t_f=d_f/v+v/a+a/j$.
+:::
 $$\frac{a^2v+v^2j}{aj}=\frac{1^2(1.6)+1.6^2(1)}{1\times1}=4.16\ \text{m}\le d_f=4.3\ \text{m}$$
 so the car reaches rated speed in one floor, and
 $$t_v=\frac{d_f}{v}=\frac{4.3}{1.6}=2.6875\ \text{s},\qquad t_f=\frac{d_f}{v}+\frac{v}{a}+\frac{a}{j}=2.6875+1.6+1.0=5.2875\ \text{s}$$
+:::
 
-*Step 3. Highest reversal floor and probable stops* ($N=10$, $P=15$):
+::: {.step title="Step 3. Highest reversal floor and probable stops"}
+::: hint
+$S=N[1-(1-1/N)^P]$ and $H=N-\sum_{i=1}^{N-1}(i/N)^P$, with $N=10$ floors and $P$ from step 1. Most terms of the sum are negligible.
+:::
+($N=10$, $P=15$):
 $$S=10\left[1-0.9^{15}\right]=10(1-0.2059)=\mathbf{7.941}$$
 $$H=10-\left(0.9^{15}+0.8^{15}+0.7^{15}+0.6^{15}+\dots\right)=10-(0.2059+0.0352+0.0047+0.0005+\dots)=\mathbf{9.754}$$
+:::
 
-*Step 4. Round-trip time.* Stop time per stop $t_f-t_v+t_{do}+t_{dc}=5.2875-2.6875+2+3=7.6$ s.
+::: {.step title="Step 4. Round-trip time"}
+::: hint
+$RTT=2H\,t_v+(S+1)(t_f-t_v+t_{do}+t_{dc}+t_{sd}-t_{ao})+P(t_{pi}+t_{po})$: running, stopping, boarding and alighting.
+:::
+Stop time per stop $t_f-t_v+t_{do}+t_{dc}=5.2875-2.6875+2+3=7.6$ s.
 $$RTT=2(9.754)(2.6875)+(7.941+1)(7.6)+15(1.2+1.2)=52.43+67.95+36.00=\mathbf{156.4\ s}$$
+:::
 
-*Step 5. Number of lifts.* $L=RTT/I_{target}=156.4/30=5.21$, so **6 lifts** are needed (5 would not meet the target).
+::: {.step title="Step 5. Number of lifts"}
+::: hint
+$L=RTT/I_{target}$, rounded **up** to meet the target interval.
+:::
+$L=RTT/I_{target}=156.4/30=5.21$, so **6 lifts** are needed (5 would not meet the target).
+:::
 
-*Step 6. Actual interval and handling capacity.*
+::: {.step title="Step 6. Actual interval and handling capacity"}
+::: hint
+$I=RTT/L$ and $HC\%=300PL/(RTT\cdot U)\times100$, with $U$ the population.
+:::
 $$I=\frac{RTT}{L}=\frac{156.4}{6}=\mathbf{26.1\ s},\qquad HC\%=\frac{300\times15\times6}{156.4\times1000}\times100=\mathbf{17.3\%}$$
+:::
 
-*Step 7. Comment.* With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3\%\ge15\%$. But it is **wasteful**: the sixth lift is needed for only 0.21 of a car, the capacity is 15% above the demand (17.3 against 15%), and at the actual interval only $0.5\times26.1=13$ people arrive per trip, so the 20-person cars run 65% full. With **5 lifts** as specified it is not compliant: $I=156.4/5=31.3$ s and $HC=14.4\%$, both just short.
+::: {.step title="Step 7. Compliant or wasteful? Suggestions"}
+::: hint
+Compliant: $I\le$ target and $HC\%\ge$ the arrival rate. Wasteful: how much of the last lift is really needed, and how full the cars run. To save a lift, cut the stop time (doors) rather than add cars.
+:::
+With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3\%\ge15\%$. But it is **wasteful**: the sixth lift is needed for only 0.21 of a car, the capacity is 15% above the demand (17.3 against 15%), and at the actual interval only $0.5\times26.1=13$ people arrive per trip, so the 20-person cars run 65% full. With **5 lifts** as specified it is not compliant: $I=156.4/5=31.3$ s and $HC=14.4\%$, both just short.
 
 *Suggestions.* Cut the stop time instead of adding a sixth lift:
 
 - **Faster doors** (centre-opening, closing in 2 s instead of 3 s): stop time 6.6 s, $RTT=52.43+8.941\times6.6+36.0=147.4$ s; with 5 lifts $I=29.5$ s and $HC=15.3\%$: **compliant with 5 lifts**.
 - **Advance door opening** ($t_{ao}\approx1$ s, doors start opening while the car levels) has the same effect.
 - Other options: a higher-performance drive (higher acceleration and jerk shorten $t_f$), or a 26-person car with 5 lifts if the arrival rate is expected to grow.
+:::
 
+:::
+
+::: answer
 **Answer: RTT = 156.4 s; 6 lifts give I = 26.1 s and HC = 17.3% (compliant but over-provided, wasteful); 5 lifts with 2-s door closing give I = 29.5 s and HC = 15.3%, compliant with one lift fewer.** (If $P$ is taken as 80% of the rated load, $P=16$: $RTT=160.5$ s, 6 lifts, $I=26.8$ s, $HC=17.9\%$: the same conclusion.)
+:::
 
 ### Family B: the traction lift and its components
 
 > **TRY 2.9** `[PP 21-22 Q4(a), 20]` Describe different components of traction elevator system with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 2.9** **[FROM SOURCE: Note pp.172–176; Grondzik §31.4–31.8]**
 
 *Schematic* (6 marks). Draw the labelled sketch of §2.3 (Fig. 5): hoistway with machine room above; in the machine room the motor, brake, drive sheave (and deflector sheave), overspeed governor and controller; hoist ropes from the sheave to the car and to the counterweight; car guide rails and counterweight guide rails; safety gear under the car tied to the governor rope; car and landing doors; limit switches near the top and bottom; car buffer and counterweight buffer in the pit; travelling cable hanging from the car.
@@ -866,13 +1334,17 @@ $$I=\frac{RTT}{L}=\frac{156.4}{6}=\mathbf{26.1\ s},\qquad HC\%=\frac{300\times15
 12. **Controller:** drive control (speed, acceleration, levelling), operating control (doors, calls, signals) and supervisory group control.
 13. **Doors and door operator:** power-operated car doors coupled to the landing doors; interlocks prevent motion with a door open; safety edge or light curtain reverses a closing door.
 14. **Hoistway, machine room and pit:** the shaft for the car and counterweight, the room above it (about twice the shaft area) carrying the machine, and the pit below the lowest landing with the buffers; plus limit switches, the travelling cable and, in tall buildings, compensating ropes.
+:::
 
 > **TRY 2.10** `[PP 16-17 Q4(a), 15]` Draw a schematic diagram of electric traction lift and show its different components.
 
+::: {.answer label="Show answer"}
 **Solution 2.10** **[FROM SOURCE: Note p.172]** As Solution 2.9: the sketch carries most of the marks. Label at least these 15 parts and add a few words to each: (1) machine room, (2) drive motor, (3) brake, (4) drive sheave, (5) overspeed governor, (6) controller, (7) suspension (hoist) ropes, (8) car with car doors and door operator, (9) landing doors with landing push-buttons and indicator, (10) car guide rails, (11) counterweight and (12) its guide rails, (13) safety gear on the car frame, (14) travelling cable, (15) car and counterweight buffers in the pit, with the governor tension sheave and limit switches.
+:::
 
 > **TRY 2.11** `[PP 18-19 Q4(a), 10]` Draw the schematic diagram of a electric traction lift and show its different components. Draw the schematic diagram of different arrangements of elevator doors.
 
+::: {.answer label="Show answer"}
 **Solution 2.11** **[FROM SOURCE: Note p.172; Grondzik §31.12]**
 
 *Traction lift* (5 marks): the labelled sketch of Solution 2.10 (machine room with motor, brake, sheave, governor, controller; ropes; car; counterweight; guide rails; safety gear; buffers in the pit).
@@ -883,9 +1355,11 @@ $$I=\frac{RTT}{L}=\frac{156.4}{6}=\mathbf{26.1\ s},\qquad HC\%=\frac{300\times15
 - **Centre-opening:** two panels part at the middle at equal speed; 1.07 m offices, 1.2–1.5 m hospitals; fastest, standard for passenger cars.
 - **Two-speed:** two panels on parallel tracks slide to the same side, the leading one twice as fast, so both stack together; 1.07 m; where the side space is limited.
 - **Two-speed centre-opening:** two two-speed pairs parting at the middle; 1.5 m; freight, hospital and department-store cars.
+:::
 
 > **TRY 2.12** `[PP 20-21 Q4(a), 25]` Classify elevators. Draw the schematic diagram of an electric traction lift and show its different components. What are the typical factors to be considered in the design of elevators?
 
+::: {.answer label="Show answer"}
 **Solution 2.12** **[FROM SOURCE: Note pp.165–172; Grondzik §31.2, §31.28–31.39]**
 
 *(i) Classification* (7 marks): by **usage**: passenger (office, residential, hotel, hospital, institution), goods/freight, hospital, dumbwaiter, vehicle, scissor lift; by **drive**: hydraulic (conventional, hole-less, roped) and traction (geared, gearless); by **machine location**: penthouse, basement, machine-room-less; by **control**: single automatic push-button, collective, selective collective, group supervisory. Add one line on each usage class (Solution 2.5 (i) and §2.1).
@@ -904,20 +1378,24 @@ $$I=\frac{RTT}{L}=\frac{156.4}{6}=\mathbf{26.1\ s},\qquad HC\%=\frac{300\times15
 8. door type and width, and the control system;
 9. space and structure: shafts, machine room (about twice the shaft area), pit, loads on the structure;
 10. economics, energy, safety and codes: first and life-cycle cost; BNBC (lifts above 6 storeys or 20 m, fire and hospital lifts), disabled access, emergency power.
+:::
 
 > **TRY 2.13** `[PP 23-24 Q7(b), 10]` Describe the essential features and functions of the following components of a traction elevator system – Counterweight, Guide rails, Buffer, and Sheave.
 
+::: {.answer label="Show answer"}
 **Solution 2.13** **[FROM SOURCE: Note pp.172–176; Grondzik §31.4, §31.7, §31.8]**
 
 - **Counterweight** (2.5 marks). *Features:* cut steel plates stacked in a steel frame, hung on the opposite end of the hoist ropes from the car, running on its own pair of guide rails at the back of the shaft, with its own buffer. Its weight is the **empty car plus about 40% of the rated load**. *Functions:* it balances the car, so the motor lifts only the unbalanced load; it keeps the ropes pressed into the sheave grooves, giving the **traction** needed to move the car; it reduces the machine size, the power demand and the energy cost. *Cost:* the machine-room floor and structure must carry its weight.
 - **Guide rails** (2.5 marks). *Features:* machined steel T-section rails bolted to the hoistway walls with brackets, two for the car and two for the counterweight, running the full height of the shaft. *Functions:* they guide the car (through its guide shoes or rollers) and the counterweight in straight vertical travel, prevent sway and contact with the shaft, and provide the surface that the **safety gear grips** to stop an overspeeding car; they carry the braking load during a safety stop.
 - **Buffer** (2.5 marks). *Features:* oil (hydraulic, a plunger forcing oil through orifices) or spring buffers mounted in the pit under the car and under the counterweight; oil buffers for higher speeds. *Functions:* to bring a car or counterweight that **over-travels the bottom terminal** to a cushioned stop by absorbing its kinetic energy. They are **not** meant to stop a free-falling car; that is the job of the governor and safety gear.
 - **Sheave** (2.5 marks). *Features:* a cast-iron or steel pulley with machined V or U grooves, one per rope, on the machine shaft (drive or traction sheave); a deflector or secondary sheave guides the ropes to the counterweight. *Functions:* the drive sheave turns and moves the ropes by friction (traction) between the ropes and its grooves, and so raises and lowers the car; the groove shape and the wrap angle (single or double wrap) fix the traction; in 2:1 roping, sheaves on the car and counterweight give a mechanical advantage of 2.
+:::
 
 ### Family C: machines, roping, safety, doors and the hydraulic lift
 
 > **TRY 2.14** `[PP 15-16 Q3(a), 10]` Make a brief comparison between gearless and geared traction machine for lift.
 
+::: {.answer label="Show answer"}
 **Solution 2.14** **[FROM SOURCE: Note pp.173–174; Grondzik §31.5–31.6]**
 
 | Point | Gearless traction machine | Geared traction machine |
@@ -933,18 +1411,22 @@ $$I=\frac{RTT}{L}=\frac{156.4}{6}=\mathbf{26.1\ s},\qquad HC\%=\frac{300\times15
 | Typical use | high-speed passenger lifts in tall buildings | low- and medium-rise passenger and freight lifts |
 
 Conclusion: the gearless machine is superior (efficient, quiet, low maintenance, long life) but dearer; it is chosen where speed exceeds about 2.5 m/s [Note p.173].
+:::
 
 > **TRY 2.15** `[PP 12-13 Q8(a), 5]` Draw the different arrangement of elevator machines, sheaves and ropes.
 
+::: {.answer label="Show answer"}
 **Solution 2.15** **[FROM SOURCE: Note p.175; Grondzik §31.7]** Draw the four sketches of §2.5, Figs. 9 and 10 (drive sheave = large circle, deflector = small circle, car = plain box, counterweight = hatched box), each with one line:
 
 1. **1:1 single wrap, penthouse machine:** rope once over the drive sheave, down to the car, and over the deflector sheave to the counterweight; car speed = rope speed.
 2. **1:1 double wrap:** the rope passes twice round the drive and secondary sheaves; more traction, for high-speed gearless lifts.
 3. **2:1 roping:** rope ends anchored at the top; the rope runs under sheaves on the car and the counterweight; mechanical advantage 2, so a smaller, faster motor; car speed = half the rope speed.
 4. **Basement machine (1:1):** machine at the bottom, ropes over idler sheaves at the top; no penthouse; low speed only.
+:::
 
 > **TRY 2.16** `[PP 13-14 Q4(a), 5]` What are the common safety used in a lift?
 
+::: {.answer label="Show answer"}
 **Solution 2.16** **[FROM SOURCE: Note pp.176–177; Grondzik §31.8]**
 
 1. **Main brake** on the machine shaft: holds the car at the floor after dynamic braking; sets on power failure.
@@ -952,9 +1434,11 @@ Conclusion: the gearless machine is superior (efficient, quiet, low maintenance,
 3. **Safety gear:** if the overspeed continues, the governor trips two rail clamps under the car that wedge onto the guide rails and stop it.
 4. **Buffers** (oil or spring) in the pit: cushion an over-travelling car.
 5. **Limit switches** at the terminals; **door interlocks**, safety edge and light curtain on the doors; alarm, emergency stop and intercom in the car.
+:::
 
 > **TRY 2.17** `[PP 13-14 Q4(b), 10]` Draw the schematic diagram of different arrangements of elevator doors.
 
+::: {.answer label="Show answer"}
 **Solution 2.17** **[FROM SOURCE: Grondzik §31.12]** (The class note covers only door safety; Grondzik Fig. 31.12 is the source.) Draw the four plan views of §2.7 (Fig. 13), each showing the car, the hoistway opening, the panels closed (solid) and open (dashed), and the direction of travel:
 
 | Sketch | Description | Width, use |
@@ -965,10 +1449,12 @@ Conclusion: the gearless machine is superior (efficient, quiet, low maintenance,
 | (d) Two-speed centre-opening | two two-speed pairs, one each side | 1.5 m; department stores, freight, hospitals |
 
 Add one line on safety: all automatic doors carry a safety edge or an infrared light curtain that reopens the door on an obstruction, and the closing force and energy are limited.
+:::
 
 > **TRY 2.18** `[PP 11-12 Q4, 35]` Write short notes on (any 5)
 > (i) Hydraulic lift (ii) Roping of traction lift (iii) Safety devices used in conventional lifts (iv) Modes of fire extinguishments (v) Types of fire extinguishers (vi) Fire extinguisher marking as per NFPA (vii) Advantages of gearless lift drives
 
+::: {.answer label="Show answer"}
 **Solution 2.18** **[FROM SOURCE: Note pp.168–176; Grondzik §31.5–31.11]** Seven marks per note. The four lift notes are below, with (iv) as the fifth; (v) and (vi) belong to fire protection (Module 3).
 
 **(i) Hydraulic lift.** The car sits on a plunger (ram) in an oil cylinder. A pump forces oil from a tank through a solenoid valve into the cylinder, raising the car (Pascal's principle); to descend, the valve opens and the car's weight returns the oil. Types: conventional (in-ground cylinder), hole-less (telescopic jacks above ground) and roped (2:1, the car moves twice the plunger stroke). *Advantages:* low first cost, no overhead machine room, no load on the building structure, smaller hoistway, very high load capacity (freight, vehicles). *Disadvantages:* low rise (about 20 m) and slow (≤ 1 m/s), high energy use and heat (no counterweight), ride varies with oil temperature, risk of oil leaks. Used in buildings of 2–5 floors.
@@ -980,19 +1466,25 @@ Add one line on safety: all automatic doors carry a safety edge or an infrared l
 **(iv) Modes of fire extinguishment.** A fire needs fuel, heat, oxygen and the chemical chain reaction (the fire tetrahedron); removing any one puts it out. **Cooling** removes heat (water); **smothering** cuts off the oxygen (foam, CO₂, fire blanket, sand); **starving** removes or isolates the fuel (closing a gas valve, removing combustibles); **inhibition** breaks the chain reaction (dry chemical powder, halon substitutes).
 
 **(vii) Advantages of gearless lift drives.** With the motor directly on the sheave and no worm gear: higher efficiency (losses about half those of geared); quieter and smoother operation; less maintenance and longer life (no gear wear); suitable for high speeds (2.5–10 m/s) and unlimited rise; good levelling and ride quality. The price is a larger, slower, more expensive motor and a higher first cost.
+:::
 
 ### Family D: service quality, performance, special lifts, zoning
 
 > **TRY 2.19** `[PP 12-13 Q8(b), 5]` What are the requirements for the ideal performance of passenger elevators?
 
+::: {.answer label="Show answer"}
 **Solution 2.19** **[FROM SOURCE: Note p.177; Grondzik §31.2]** An ideal installation provides: (1) minimum waiting time for a car at any floor; (2) comfortable acceleration and rapid transportation; (3) smooth, rapid braking and accurate automatic levelling; (4) quick, quiet door operation and rapid loading and unloading; (5) good floor and direction indication, easy call buttons, smooth, quiet and safe operation of all equipment, comfortable lighting and reliable emergency and security equipment.
+:::
 
 > **TRY 2.20** `[PP 17-18 Q4(a), 10]` What are the requirements for the ideal performance of passenger elevators?
 
+::: {.answer label="Show answer"}
 **Solution 2.20** **[FROM SOURCE: Note p.177; Grondzik §31.2]** A verbatim repeat of TRY 2.19, now for 10 marks: give the full list of §2.9, one point per mark: minimum waiting time at every floor; comfortable acceleration; rapid transportation; smooth and rapid braking; accurate automatic levelling at landings; rapid loading and unloading at all stops; quick, quiet operation of doors; good floor-status and travel-direction indication in the car and at landings; easily operated car and landing call buttons; smooth, quiet, safe operation of all equipment under all loads, with comfortable lighting, reliable emergency and security equipment and a pleasant car.
+:::
 
 > **TRY 2.21** `[PP 23-24 Q5(d), 13]` Define "Passenger handling capacity" of an elevator system. How is it typically expressed? Why is the "Five-Minute Handling Capacity" a particularly important metric use in elevator traffic design?
 
+::: {.answer label="Show answer"}
 **Solution 2.21** **[FROM SOURCE: Grondzik §31.29, §31.31; Note pp.178–179]**
 
 *Definition* (4 marks). The passenger handling capacity (HC) of an elevator system is the maximum number of passengers it can carry in a given period, usually 5 minutes, during peak traffic. One door opening every interval $I$ and letting out $p$ passengers gives
@@ -1002,16 +1494,20 @@ with $p$ the normal load per trip (about 80% of the maximum, T3). It depends on 
 *How it is expressed* (4 marks). As **persons per 5 minutes** (e.g. 275 persons/5 min), or as the **percent handling capacity**, $PHC=HC/\text{population}\times100\%$, the percentage of the building population carried in 5 minutes. T2 gives minimum PHCs: centre-city office 12–14%, single-purpose office 14–16%, hotels 10–15%, apartments 5–8%. (CIBSE writes it as $HC\%=300PL/(RTT\,U)$.)
 
 *Why five minutes* (5 marks). The design load for lifts is the **up-peak**, when most of the population arrives within a short period (morning arrival, after lunch). The intensity of the peak is best measured over its busiest 5 minutes: a shorter period would be dominated by random bunching of arrivals, a longer one would average the peak away with quieter periods. Five minutes is also long enough to contain one or two round trips of every car, so the HC is a stable property of the system. It has historically been the standard measure, so arrival rates (e.g. 12–15% in 5 min) and capacities are tabulated on it, and a system that handles the peak 5 minutes handles all other periods. Peak-period waiting is tolerated, but delay outside the peaks is a serious drawback for a building.
+:::
 
 > **TRY 2.22** `[PP 23-24 Q7(a), 5]` Define "Quality of service and "Quantity of service" in the context of elevator systems.
 
+::: {.answer label="Show answer"}
 **Solution 2.22** **[FROM SOURCE: Grondzik §31.28–31.32]**
 
 - **Quality of service** measures how well each passenger is served: chiefly the **interval** and the **average lobby waiting time** ($\approx0.6I$; e.g. office "good" 25–29 s interval, 15–17 s wait), and the **average trip (travel) time** to the destination (< 60 s highly desirable, 90 s annoying), together with ride comfort.
 - **Quantity of service** measures how many people the system can move: the **handling capacity** in persons per 5 minutes, or the **PHC**, which must at least equal the peak arrival rate (e.g. 12–14% of the population in 5 min for a centre-city office).
+:::
 
 > **TRY 2.23** `[PP 23-24 Q5(c), 12]` How do passenger elevators differ in their design objectives and typical features from freight elevators? What unique design requirements and features distinguish hospital elevators from standard passenger elevators?
 
+::: {.answer label="Show answer"}
 **Solution 2.23** **[FROM SOURCE: Note pp.165–167; Grondzik §31.4, §31.12, §31.38; BNBC 2020 Part 8 Ch. 4]**
 
 *Passenger vs freight* (6 marks):
@@ -1033,9 +1529,11 @@ with $p$ the normal load per trip (about 80% of the maximum, T3). It depends on 
 - 3500–4000 lb (1600–2000 kg) cars; interval up to 1 minute; capacity counted with each vehicle as 9 passengers (45 passengers in 5 min adequate);
 - at least one hospital lift in every multi-storey hospital; hospital lifts **operable during fire** with firemen's control, and connected to **emergency power**;
 - grouped centrally but separated by use; ordinary passenger cars added in large hospitals; dumbwaiters for food trays.
+:::
 
 > **TRY 2.24** `[PP 21-22 Q4(b), 15]` Write short notes about zoning of elevators and grouping of elevators. Compare elevator and escalator systems.
 
+::: {.answer label="Show answer"}
 **Solution 2.24** **[FROM SOURCE: Grondzik §31.37, §31.39, §33.10; Note p.194]**
 
 *Zoning* (5 marks). A zone is a group of floors served as a unit by one bank of lifts. In a tall building, one bank serving every floor would need too many cars with too many stops, so the floors are split into a low-rise zone served by one bank and a high-rise zone served by another bank that runs express, in blind shafts, through the low-rise floors. Single zone below about 15 storeys; two or more zones above 20; either between 16 and 19 storeys, depending on population and the interval. Zoning shortens the round trip and trip time and allows faster cars only where needed; the upper-zone round trip adds twice the express run time; the low-rise shafts stop at their top floor, freeing space above. Modern group control can also zone dynamically.
@@ -1043,26 +1541,118 @@ with $p$ the normal load per trip (about 80% of the maximum, T3). It depends on 
 *Grouping* (4 marks). A group (bank) is a set of cars controlled together and sharing a lobby. Cars of a group are placed close together so a passenger can see every hall lantern and reach any car in time; **no more than four in a row**; larger groups face each other across the lobby (3 + 3 in a 2.4–3 m lobby, 4 + 4 in a lobby of at least 3 m, open at both ends); eight cars is the largest group. Lobbies are stacked on every floor, the main lobby near the entrance, with 0.5 m² per waiting person. In a zoned building each bank has its own lobby.
 
 *Elevator vs escalator* (6 marks): the comparison table of §2.13: lifts carry batches vertically in closed cars, are fast and best for long trips and tall buildings, need shafts and machine rooms, can trap passengers and need emergency power, and carry wheelchairs and goods; escalators carry people continuously with no waiting, at about 0.5 m/s, are best for 1–2 floor trips and heavy flows (2300–9000 persons/h), must lie in the main line of traffic, cannot trap people, and are unsuitable for wheelchairs and goods. Typical split: 1 floor 90% by escalator, 3 floors 50/50, 5 floors 90% by lift.
+:::
 
 ### Family E: escalators
 
 > **TRY 2.25** `[PP 12-13 Q8(d), 5]` For an escalator of 35° incline, two passengers per step, speed of 0.5 m/s and 500 mm tread or step length, determine the number of persons moved per hour.
 
+**Solution 2.25** **[FROM SOURCE: Note p.195]** (formula of §2.13, $L$ = horizontal tread length) Work it in three steps.
+
+::: {.problem #sol-2-25}
+
+::: {.step title="Step 1. The data"}
+::: hint
+What is $L$? The papers' "tread or step length" is the horizontal tread depth, so the incline enters through $\cos\theta$ ([escalator capacity](#escalator-capacity)).
+:::
+$\theta=35°$, $P=2$ per step, $V=0.5$ m/s along the incline, $L=0.5$ m (horizontal tread length).
+:::
+
+::: {.step title="Step 2. Steps per second"}
+::: hint
+The staircase moves horizontally at $V\cos\theta$; one step passes every $L$ of that. Calculator in **degrees**.
+:::
+$V\cos\theta/L=0.5\times0.8192/0.5=0.8192$ steps/s.
+:::
+
+::: {.step title="Step 3. Persons per hour"}
+::: hint
+$N=3600\,P\,V\cos\theta/L$: steps per second × persons per step × 3600.
+:::
+$$N=\frac{3600\times2\times0.5\times\cos35°}{0.5}=\mathbf{5898\ persons/h}$$
+:::
+
+:::
+
+::: answer
 **Solution 2.25** **[FROM SOURCE: Note p.195]** (formula of §2.13, $L$ = horizontal tread length). $\theta=35°$, $P=2$, $V=0.5$ m/s, $L=0.5$ m. The steps pass at $V\cos\theta/L=0.5\times0.8192/0.5=0.8192$ steps/s, so
 $$N=\frac{3600\,P\,V\cos\theta}{L}=\frac{3600\times2\times0.5\times\cos35°}{0.5}=7200\times0.8192=\mathbf{5898\ persons/h}$$
 This is the theoretical maximum. (If the 500 mm were the step pitch along the incline, the result would be $3600\times2\times0.5/0.5=7200$ persons/h; say which you assume.)
 
+:::
+
 > **TRY 2.26** `[PP 16-17 Q4(c), 5]` For an escalator of $35^\circ$ incline, two passenger per step, speed of 0.5 m/s and 500 mm tread or step length, determine the number of persons moved per hour.
 
+**Solution 2.26** **[FROM SOURCE: Note p.195]** Work it in three steps.
+
+::: {.problem #sol-2-26}
+
+::: {.step title="Step 1. The data"}
+::: hint
+What is $L$? The papers' "tread or step length" is the horizontal tread depth, so the incline enters through $\cos\theta$ ([escalator capacity](#escalator-capacity)).
+:::
+$\theta=35°$, $P=2$ per step, $V=0.5$ m/s along the incline, $L=0.5$ m (horizontal tread length).
+:::
+
+::: {.step title="Step 2. Steps per second"}
+::: hint
+The staircase moves horizontally at $V\cos\theta$; one step passes every $L$ of that. Calculator in **degrees**.
+:::
+$V\cos\theta/L=0.5\times0.8192/0.5=0.8192$ steps/s.
+:::
+
+::: {.step title="Step 3. Persons per hour"}
+::: hint
+$N=3600\,P\,V\cos\theta/L$: steps per second × persons per step × 3600.
+:::
+$$N=\frac{3600\times2\times0.5\times\cos35°}{0.5}=\mathbf{5898\ persons/h}$$
+:::
+
+:::
+
+::: answer
 **Solution 2.26** **[FROM SOURCE: Note p.195]** A verbatim repeat of TRY 2.25: $N=3600\times2\times0.5\times\cos35°/0.5=$ **5898 persons/h**.
+
+:::
 
 > **TRY 2.27** `[PP 18-19 Q4(c), 5]` For an escalator of $35^\circ$incline, two passengers per step, speed of 0.6 m/s and 600 mm step length, determine the maximum number persons moved per hour.
 
+**Solution 2.27** **[FROM SOURCE: Note p.195]** Work it in three steps.
+
+::: {.problem #sol-2-27}
+
+::: {.step title="Step 1. The data"}
+::: hint
+What is $L$? The papers' "tread or step length" is the horizontal tread depth, so the incline enters through $\cos\theta$ ([escalator capacity](#escalator-capacity)).
+:::
+$\theta=35°$, $P=2$ per step, $V=0.6$ m/s along the incline, $L=0.6$ m (horizontal tread length).
+:::
+
+::: {.step title="Step 2. Steps per second"}
+::: hint
+The staircase moves horizontally at $V\cos\theta$; one step passes every $L$ of that. Calculator in **degrees**.
+:::
+$V\cos\theta/L=0.6\times0.8192/0.6=0.8192$ steps/s.
+:::
+
+::: {.step title="Step 3. Persons per hour"}
+::: hint
+$N=3600\,P\,V\cos\theta/L$: steps per second × persons per step × 3600.
+:::
+$$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}$$
+:::
+
+:::
+
+::: answer
 **Solution 2.27** **[FROM SOURCE: Note p.195]** As Solution 2.25 with $V=0.6$ m/s, $L=0.6$ m: $V/L$ is again 1 s⁻¹, so
 $$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}\ (\text{maximum})$$
 
+:::
+
 > **TRY 2.28** `[PP 15-16 Q3(c), 10]` Draw the schematic diagram of different arrangements of escalator.
 
+::: {.answer label="Show answer"}
 **Solution 2.28** **[FROM SOURCE: Note pp.196–197; Grondzik §33.2]** Draw side elevations over three floor levels (LL, IL, UL), with arrows for the direction (§2.13, Figs. 20–22):
 
 1. **Crisscross, spiral (continuous):** in each storey an up unit and a down unit cross like an X; the up unit of the next storey starts where the last one ends, after a 180° turn. Least floor space and structure, lowest cost, continuous travel; the commonest arrangement.
@@ -1071,14 +1661,19 @@ $$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}\ (\t
 4. **Stacked parallel (walk-around):** the units of successive storeys are stacked; the rider walks the full length at each floor; more floor space; seldom above two floors.
 
 Finish with the comparison: crisscross needs less space, structure and money and gives continuous travel; parallel looks impressive and gives a single entrance location but takes more space.
+:::
 
 > **TRY 2.29** `[PP 20-21 Q4(b), 10]` Draw the schematic diagram of different arrangements of escalator. For an escalator of $35^\circ$ incline, two passengers per step, speed of 0.6 m/s and 600 mm step length, determine the number of persons moved per hour.
 
+::: {.answer label="Show answer"}
 **Solution 2.29** **[FROM SOURCE: Note pp.195–197]** *Arrangements* (6 marks): the four sketches of Solution 2.28 (crisscross spiral, crisscross walk-around, parallel, stacked parallel) with one line each and the crisscross vs parallel comparison. *Capacity* (4 marks): as Solution 2.27, $N=3600\times2\times0.6\times\cos35°/0.6=$ **5898 persons/h**.
+:::
 
 > **TRY 2.30** `[PP 22-23 Q4(b), 5]` Draw the schematic diagram of different arrangements of escalator. For an escalator of $35^\circ$ incline, two passengers per step, speed of 0.6 m/s and 600 mm step length, determine the number of persons moved per hour.
 
+::: {.answer label="Show answer"}
 **Solution 2.30** **[FROM SOURCE: Note pp.195–197]** A verbatim repeat of TRY 2.29, for 5 marks: two quick sketches (crisscross and parallel, side elevation with arrows) and the capacity $N=3600\times2\times0.6\times\cos35°/0.6=$ **5898 persons/h**.
+:::
 
 <!-- pagebreak -->
 

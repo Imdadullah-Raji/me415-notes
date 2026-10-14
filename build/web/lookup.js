@@ -83,9 +83,10 @@
     var r = a.dataset.r != null ? +a.dataset.r : null, c = a.dataset.c != null ? +a.dataset.c : null;
     pop.innerHTML =
       '<div class="ph"><span class="pt">' + esc(t.title) + "</span>" +
-      (t.page ? '<a class="pfull" href="' + esc(t.page) + '">full table →</a>' : "") +
+      (t.page ? '<a class="pfull" href="' + esc(t.page) + '">' + (t.image ? "full chart" : "full table") + ' →</a>' : "") +
       '<button class="px" aria-label="Close">×</button></div>' +
-      '<div class="pb">' + slice(t, r, c) + "</div>";
+      '<div class="pb">' + (t.image ? '<img class="chart" src="' + esc(t.image) + '" alt="' + esc(t.title) + '">'
+                                     : slice(t, r, c)) + "</div>";
     pop.querySelector(".px").onclick = hide;
     veil.hidden = false;
     document.body.classList.add("noscroll");
