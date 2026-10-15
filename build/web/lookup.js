@@ -10,6 +10,40 @@
     } catch (_) {}
   });
 
+  // Data-book tables: hold the key columns in place. Their offsets depend on the rendered widths, so they are set
+  // here (after the maths is drawn, again once the fonts are in); if the key columns would fill much of a narrow
+  // frame, only the first is held.
+  var frozen = document.querySelectorAll("table[data-freeze]");
+  function freeze() {
+    frozen.forEach(function (tb) {
+      var want = +tb.dataset.freeze, head = tb.rows[0], lefts = [], x = 0, n, i, r;
+      if (!head) return;
+      for (i = 0; i < want && i < head.cells.length; i++) { lefts.push(x); x += head.cells[i].offsetWidth; }
+      n = want > 1 && x > 0.45 * tb.parentNode.clientWidth ? 1 : want;
+      for (r = 0; r < tb.rows.length; r++) {
+        for (i = 0; i < want && i < tb.rows[r].cells.length; i++) {
+          var c = tb.rows[r].cells[i], on = i < n;
+          c.classList.toggle("fz", on);
+          c.classList.toggle("fzl", on && i === n - 1);
+          c.style.left = on ? lefts[i] + "px" : "";
+        }
+      }
+    });
+  }
+  if (frozen.length) {
+    freeze();
+    window.addEventListener("load", freeze);
+    window.addEventListener("resize", freeze);
+  }
+
+  // A menu opens scrolled to the current page.
+  document.querySelectorAll("details.menu").forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      var cur = d.open && d.querySelector("li.cur"), ul = d.querySelector("ul");
+      if (cur) ul.scrollTop = cur.offsetTop - ul.clientHeight / 3;
+    });
+  });
+
   var links = document.querySelectorAll("a.lookup, a.tref");
   if (!links.length) return;
 

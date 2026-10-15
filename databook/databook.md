@@ -141,7 +141,7 @@ Datum: $u=s=0$ for saturated liquid at the triple point. $v_f = 1/\rho_f$. For m
 
 Moran & Shapiro Table A-4.
 
-**0.06 bar, T_{sat} 36.16 °C**
+**0.06 bar, T<sub>sat</sub> 36.16 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -159,7 +159,7 @@ Moran & Shapiro Table A-4.
 | 500 | 59.467 | 3132.3 | 3489.1 | 10.1336 |
 
 
-**0.35 bar, T_{sat} 72.69 °C**
+**0.35 bar, T<sub>sat</sub> 72.69 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -177,7 +177,7 @@ Moran & Shapiro Table A-4.
 | 500 | 10.192 | 3132.1 | 3488.8 | 9.3194 |
 
 
-**0.70 bar, T_{sat} 89.95 °C**
+**0.70 bar, T<sub>sat</sub> 89.95 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -195,7 +195,7 @@ Moran & Shapiro Table A-4.
 | 500 | 5.095 | 3131.8 | 3488.5 | 8.9991 |
 
 
-**1.0 bar, T_{sat} 99.63 °C**
+**1.0 bar, T<sub>sat</sub> 99.63 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -213,7 +213,7 @@ Moran & Shapiro Table A-4.
 | 500 | 3.565 | 3131.6 | 3488.1 | 8.8342 |
 
 
-**1.5 bar, T_{sat} 111.37 °C**
+**1.5 bar, T<sub>sat</sub> 111.37 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -231,7 +231,7 @@ Moran & Shapiro Table A-4.
 | 600 | 2.685 | 3301.7 | 3704.3 | 8.9101 |
 
 
-**3.0 bar, T_{sat} 133.55 °C**
+**3.0 bar, T<sub>sat</sub> 133.55 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -248,7 +248,7 @@ Moran & Shapiro Table A-4.
 | 600 | 1.341 | 3300.8 | 3703.2 | 8.5892 |
 
 
-**5.0 bar, T_{sat} 151.86 °C**
+**5.0 bar, T<sub>sat</sub> 151.86 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -266,7 +266,7 @@ Moran & Shapiro Table A-4.
 | 700 | 0.8969 | 3477.5 | 3925.9 | 8.5952 |
 
 
-**7.0 bar, T_{sat} 164.97 °C**
+**7.0 bar, T<sub>sat</sub> 164.97 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -284,7 +284,7 @@ Moran & Shapiro Table A-4.
 | 700 | 0.6403 | 3476.6 | 3924.8 | 8.4391 |
 
 
-**10.0 bar, T_{sat} 179.91 °C**
+**10.0 bar, T<sub>sat</sub> 179.91 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -302,7 +302,7 @@ Moran & Shapiro Table A-4.
 | 640 | 0.4198 | 3367.4 | 3787.2 | 8.1290 |
 
 
-**15.0 bar, T_{sat} 198.32 °C**
+**15.0 bar, T<sub>sat</sub> 198.32 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -320,7 +320,7 @@ Moran & Shapiro Table A-4.
 | 640 | 0.2793 | 3364.8 | 3783.8 | 7.9391 |
 
 
-**20.0 bar, T_{sat} 212.42 °C**
+**20.0 bar, T<sub>sat</sub> 212.42 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -338,7 +338,7 @@ Moran & Shapiro Table A-4.
 | 700 | 0.2232 | 3470.9 | 3917.4 | 7.9487 |
 
 
-**30.0 bar, T_{sat} 233.90 °C**
+**30.0 bar, T<sub>sat</sub> 233.90 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -356,7 +356,7 @@ Moran & Shapiro Table A-4.
 | 700 | 0.1484 | 3466.5 | 3911.7 | 7.7571 |
 
 
-**40 bar, T_{sat} 250.4 °C**
+**40 bar, T<sub>sat</sub> 250.4 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -374,7 +374,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.1157 | 3536.6 | 3999.6 | 7.7141 |
 
 
-**60 bar, T_{sat} 275.64 °C**
+**60 bar, T<sub>sat</sub> 275.64 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -392,7 +392,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.07677 | 3528.3 | 3989.2 | 7.5190 |
 
 
-**80 bar, T_{sat} 295.06 °C**
+**80 bar, T<sub>sat</sub> 295.06 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -410,7 +410,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.05729 | 3520.4 | 3978.7 | 7.3782 |
 
 
-**100 bar, T_{sat} 311.06 °C**
+**100 bar, T<sub>sat</sub> 311.06 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -428,7 +428,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.04560 | 3512.1 | 3968.1 | 7.2670 |
 
 
-**120 bar, T_{sat} 324.75 °C**
+**120 bar, T<sub>sat</sub> 324.75 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -445,7 +445,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.03781 | 3503.7 | 3957.4 | 7.1746 |
 
 
-**140 bar, T_{sat} 336.75 °C**
+**140 bar, T<sub>sat</sub> 336.75 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -462,7 +462,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.03225 | 3495.2 | 3946.7 | 7.0952 |
 
 
-**160 bar, T_{sat} 347.44 °C**
+**160 bar, T<sub>sat</sub> 347.44 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -479,7 +479,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.02808 | 3486.7 | 3935.9 | 7.0251 |
 
 
-**180 bar, T_{sat} 357.06 °C**
+**180 bar, T<sub>sat</sub> 357.06 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -496,7 +496,7 @@ Moran & Shapiro Table A-4.
 | 740 | 0.02483 | 3478.0 | 3925.0 | 6.9623 |
 
 
-**200 bar, T_{sat} 365.81 °C**
+**200 bar, T<sub>sat</sub> 365.81 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -513,7 +513,7 @@ Moran & Shapiro Table A-4.
 | 800 | 0.02385 | 3592.7 | 4069.7 | 7.0544 |
 
 
-**240 bar, T_{sat}  °C**
+**240 bar, T<sub>sat</sub>  °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -529,7 +529,7 @@ Moran & Shapiro Table A-4.
 | 800 | 0.01974 | 3578.0 | 4051.6 | 6.9567 |
 
 
-**280 bar, T_{sat}  °C**
+**280 bar, T<sub>sat</sub>  °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -546,7 +546,7 @@ Moran & Shapiro Table A-4.
 | 900 | 0.01873 | 3774.3 | 4298.8 | 7.1084 |
 
 
-**320 bar, T_{sat}  °C**
+**320 bar, T<sub>sat</sub>  °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -650,7 +650,7 @@ Datum (IIR): $h=200$ kJ/kg, $s=1.00$ kJ/kgK for saturated liquid at 0 °C. $v_f 
 
 Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 
-**0.101325 MPa, T_{sat} -26.07 °C**
+**0.101325 MPa, T<sub>sat</sub> -26.07 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -676,7 +676,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 150.00 | 2.96 | 542.83 | 2.2301 | 192.6 |
 
 
-**0.200 MPa, T_{sat} -10.07 °C**
+**0.200 MPa, T<sub>sat</sub> -10.07 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -701,7 +701,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 150.00 | 5.87 | 542.12 | 2.1734 | 191.7 |
 
 
-**0.400 MPa, T_{sat} 8.94 °C**
+**0.400 MPa, T<sub>sat</sub> 8.94 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -724,7 +724,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 150.00 | 11.87 | 540.66 | 2.1144 | 190.0 |
 
 
-**0.600 MPa, T_{sat} 21.58 °C**
+**0.600 MPa, T<sub>sat</sub> 21.58 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -750,7 +750,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 200.00 | 15.91 | 593.63 | 2.2003 | 200.6 |
 
 
-**0.800 MPa, T_{sat} 31.33 °C**
+**0.800 MPa, T<sub>sat</sub> 31.33 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -775,7 +775,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 200.00 | 21.37 | 592.46 | 2.1750 | 199.4 |
 
 
-**1.000 MPa, T_{sat} 39.39 °C**
+**1.000 MPa, T<sub>sat</sub> 39.39 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -800,7 +800,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 200.00 | 26.92 | 591.29 | 2.1550 | 198.2 |
 
 
-**1.200 MPa, T_{sat} 46.32 °C**
+**1.200 MPa, T<sub>sat</sub> 46.32 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -829,7 +829,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 28.96 | 648.18 | 2.2548 | 209.7 |
 
 
-**1.400 MPa, T_{sat} 52.43 °C**
+**1.400 MPa, T<sub>sat</sub> 52.43 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -857,7 +857,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 33.96 | 647.22 | 2.2408 | 208.9 |
 
 
-**1.600 MPa, T_{sat} 57.91 °C**
+**1.600 MPa, T<sub>sat</sub> 57.91 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -885,7 +885,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 39.00 | 646.25 | 2.2285 | 208.2 |
 
 
-**1.800 MPa, T_{sat} 62.90 °C**
+**1.800 MPa, T<sub>sat</sub> 62.90 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -912,7 +912,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 44.09 | 645.28 | 2.2174 | 207.5 |
 
 
-**2.000 MPa, T_{sat} 67.49 °C**
+**2.000 MPa, T<sub>sat</sub> 67.49 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -939,7 +939,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 49.23 | 644.30 | 2.2073 | 206.8 |
 
 
-**2.200 MPa, T_{sat} 71.74 °C**
+**2.200 MPa, T<sub>sat</sub> 71.74 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -965,7 +965,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 54.42 | 643.33 | 2.1981 | 206.1 |
 
 
-**2.400 MPa, T_{sat} 75.70 °C**
+**2.400 MPa, T<sub>sat</sub> 75.70 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -991,7 +991,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 59.66 | 642.35 | 2.1895 | 205.4 |
 
 
-**2.600 MPa, T_{sat} 79.41 °C**
+**2.600 MPa, T<sub>sat</sub> 79.41 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -1017,7 +1017,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 64.95 | 641.37 | 2.1815 | 204.8 |
 
 
-**2.800 MPa, T_{sat} 82.90 °C**
+**2.800 MPa, T<sub>sat</sub> 82.90 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -1042,7 +1042,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 250.00 | 70.30 | 640.39 | 2.1740 | 204.1 |
 
 
-**3.000 MPa, T_{sat} 86.20 °C**
+**3.000 MPa, T<sub>sat</sub> 86.20 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -1072,7 +1072,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 300.00 | 67.10 | 701.46 | 2.2801 | 217.8 |
 
 
-**4.000 MPa, T_{sat} 100.35 °C**
+**4.000 MPa, T<sub>sat</sub> 100.35 °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s |
 |---|---|---|---|---|
@@ -1100,7 +1100,7 @@ Same datum as the saturated table. $v = 1/\rho$. To find $u$ use $u = h - pv$.
 | 300.00 | 90.75 | 697.38 | 2.2507 | 216.2 |
 
 
-**6.00 MPa, T_{sat}  °C**
+**6.00 MPa, T<sub>sat</sub>  °C**
 
 | $T$ °C | $\rho$ kg/m$^3$ | $h$ kJ/kg | $s$ kJ/kgK | $c$ m/s | flag |
 |---|---|---|---|---|---|
@@ -1186,7 +1186,7 @@ Moran & Shapiro Table A-13. Datum: $h=s=0$ for saturated liquid at $-40$ °C. Do
 
 Moran & Shapiro Table A-15, same datum as Table 3.
 
-**0.4 bar, T_{sat} -50.36 °C**
+**0.4 bar, T<sub>sat</sub> -50.36 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1205,7 +1205,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 5 | 3.3764 | 1352.95 | 1488.00 | 6.6280 |
 
 
-**0.6 bar, T_{sat} -43.28 °C**
+**0.6 bar, T<sub>sat</sub> -43.28 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1222,7 +1222,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 5 | 2.2446 | 1351.75 | 1486.43 | 6.4257 |
 
 
-**0.8 bar, T_{sat} -37.94 °C**
+**0.8 bar, T<sub>sat</sub> -37.94 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1241,7 +1241,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 20 | 1.7732 | 1375.25 | 1517.10 | 6.3939 |
 
 
-**1.0 bar, T_{sat} -33.60 °C**
+**1.0 bar, T<sub>sat</sub> -33.60 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1259,7 +1259,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 20 | 1.4153 | 1374.27 | 1515.80 | 6.2816 |
 
 
-**1.5 bar, T_{sat} -25.22 °C**
+**1.5 bar, T<sub>sat</sub> -25.22 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1278,7 +1278,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 30 | 0.9723 | 1388.76 | 1534.60 | 6.1492 |
 
 
-**2.0 bar, T_{sat} -18.86 °C**
+**2.0 bar, T<sub>sat</sub> -18.86 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1295,7 +1295,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 30 | 0.72553 | 1386.56 | 1531.67 | 6.0014 |
 
 
-**2.5 bar, T_{sat} -13.67 °C**
+**2.5 bar, T<sub>sat</sub> -13.67 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1314,7 +1314,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 45 | 0.60872 | 1410.56 | 1562.74 | 5.9947 |
 
 
-**3.0 bar, T_{sat} -9.24 °C**
+**3.0 bar, T<sub>sat</sub> -9.24 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK | flag |
 |---|---|---|---|---|---|
@@ -1332,7 +1332,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 45 | 0.50512 | 1408.70 | 1560.24 | 5.8998 | s_last_digit_cut_off_in_scan;value_from_Moran_A-15 |
 
 
-**3.5 bar, T_{sat} -5.36 °C**
+**3.5 bar, T<sub>sat</sub> -5.36 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1352,7 +1352,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.65572 | 1691.15 | 1920.65 | 6.7460 |
 
 
-**4.0 bar, T_{sat} -1.90 °C**
+**4.0 bar, T<sub>sat</sub> -1.90 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1372,7 +1372,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.57322 | 1690.56 | 1919.85 | 6.6796 |
 
 
-**4.5 bar, T_{sat} 1.25 °C**
+**4.5 bar, T<sub>sat</sub> 1.25 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1391,7 +1391,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.50905 | 1689.97 | 1919.04 | 6.6208 |
 
 
-**5.0 bar, T_{sat} 4.13 °C**
+**5.0 bar, T<sub>sat</sub> 4.13 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1410,7 +1410,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.45771 | 1689.38 | 1918.24 | 6.5681 |
 
 
-**5.5 bar, T_{sat} 6.79 °C**
+**5.5 bar, T<sub>sat</sub> 6.79 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1430,7 +1430,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.41571 | 1688.79 | 1917.43 | 6.5203 |
 
 
-**6.0 bar, T_{sat} 9.27 °C**
+**6.0 bar, T<sub>sat</sub> 9.27 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1450,7 +1450,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.38071 | 1688.20 | 1916.63 | 6.4766 |
 
 
-**7.0 bar, T_{sat} 13.79 °C**
+**7.0 bar, T<sub>sat</sub> 13.79 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1469,7 +1469,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.32571 | 1687.02 | 1915.01 | 6.3988 |
 
 
-**8.0 bar, T_{sat} 17.84 °C**
+**8.0 bar, T<sub>sat</sub> 17.84 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1488,7 +1488,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.28445 | 1685.83 | 1913.39 | 6.3311 |
 
 
-**9.0 bar, T_{sat} 21.52 °C**
+**9.0 bar, T<sub>sat</sub> 21.52 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1506,7 +1506,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.25237 | 1684.64 | 1911.77 | 6.2711 |
 
 
-**10.0 bar, T_{sat} 24.89 °C**
+**10.0 bar, T<sub>sat</sub> 24.89 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1524,7 +1524,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 200 | 0.22670 | 1683.44 | 1910.14 | 6.2171 |
 
 
-**12.0 bar, T_{sat} 30.94 °C**
+**12.0 bar, T<sub>sat</sub> 30.94 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1544,7 +1544,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 280 | 0.22225 | 1847.04 | 2113.74 | 6.5267 |
 
 
-**14.0 bar, T_{sat} 36.26 °C**
+**14.0 bar, T<sub>sat</sub> 36.26 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1564,7 +1564,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 280 | 0.19010 | 1845.55 | 2111.69 | 6.4488 |
 
 
-**16.0 bar, T_{sat} 41.03 °C**
+**16.0 bar, T<sub>sat</sub> 41.03 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1583,7 +1583,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 280 | 0.16599 | 1844.05 | 2109.64 | 6.3809 |
 
 
-**18.0 bar, T_{sat} 45.38 °C**
+**18.0 bar, T<sub>sat</sub> 45.38 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|
@@ -1602,7 +1602,7 @@ Moran & Shapiro Table A-15, same datum as Table 3.
 | 280 | 0.14724 | 1842.55 | 2107.58 | 6.3207 |
 
 
-**20.0 bar, T_{sat} 49.37 °C**
+**20.0 bar, T<sub>sat</sub> 49.37 °C**
 
 | $T$ °C | $v$ m$^3$/kg | $u$ kJ/kg | $h$ kJ/kg | $s$ kJ/kgK |
 |---|---|---|---|---|

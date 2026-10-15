@@ -226,3 +226,26 @@ ul.fams .yrs { color: var(--muted); font-size: .9em; }
   color: var(--link); cursor: pointer; }
 .themebtn:hover { color: var(--ink); }
 .themebtn:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+
+/* Data-book pages: each table in a frame at most a screen tall that scrolls both ways, with the header row and the
+   key columns held in place (lookup.js sets the columns' offsets). Cells keep their natural width; long text wraps
+   at a fixed width. A row is tinted under the pointer, to follow it across wide tables. */
+.tframe { overflow: auto; max-height: calc(100vh - 6em); max-width: 100%; width: max-content; margin: 1em auto; }
+.tframe table { margin: 0; border-collapse: separate; border-spacing: 0; }
+.tframe thead tr, .tframe tbody tr:last-child { border: 0; }
+.tframe th, .tframe td { white-space: nowrap; }
+.tframe thead th { position: sticky; top: 0; z-index: 1; background: var(--paper);
+  border-top: 1.5px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.tframe tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+.tframe .fz { position: sticky; z-index: 1; background: var(--paper); }
+.tframe thead th.fz { z-index: 2; }
+.tframe .fzl { box-shadow: inset -1px 0 var(--rule); }
+.tframe tbody tr:hover td { background: color-mix(in srgb, var(--hit) 40%, var(--paper)); }
+.tframe .wrap { display: block; width: 22em; white-space: normal; }
+.jump { font-size: .85em; color: var(--muted); text-align: left; line-height: 1.8; }
+.jump span { font-variant: small-caps; letter-spacing: .03em; }
+.tcap a.up { font-size: .8em; margin-left: .3em; }
+@media (max-width: 700px) { .tcap, .jump { scroll-margin-top: 5em; } }
+@media (max-width: 700px) {
+  .menu ul { position: fixed; top: 4.4em; left: 8px; right: 8px; min-width: 0; max-width: none; }
+}

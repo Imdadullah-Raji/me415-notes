@@ -92,7 +92,7 @@ def load_tables(captions):
         head, body = rows[0], rows[1:]
         keys = [head.index(k) for k in KEYS.get(tid, [head[0]])]
         title, page = captions.get(tid, (f"Table {tid}", None))
-        if page and tid not in CSV_IDS.values() and not tid.startswith(("7-", "bnbc")):   # anchors: #t-18a, #t-T1
+        if page and tid not in CSV_IDS.values():         # anchors: #t-18a, #t-T1, #t-7-ED5-3-Cb (see db_tables)
             page += f"#t-{tid}"
         tables[tid] = {"title": tex_plain(title), "page": page, "cols": head, "heads": [pretty_col(h) for h in head],
                        "keys": keys, "rows": body}
@@ -256,7 +256,8 @@ def pandoc(md, databook=False):
     r = subprocess.run(args, input=md, capture_output=True, text=True, encoding="utf-8")
     if r.returncode or r.stderr.strip():
         fail(f"pandoc: {r.stderr.strip()}")
-    return re.sub(r"<colgroup>.*?</colgroup>", "", r.stdout, flags=re.S)   # pandoc's % widths squash wide tables
+    out = re.sub(r"<colgroup>.*?</colgroup>", "", r.stdout, flags=re.S)   # pandoc's % widths squash wide tables
+    return out.replace('<table style="width:100%;">', "<table>")       # ...and so does its width:100%
 
 
 def ids_in(md):
@@ -319,6 +320,73 @@ def load_book(key, files):
             pages.append((f"{key}{num}-{k:02d}-{slugify(pt.replace('★', ''))}.html", pt, p))
         chapters.append({"num": num, "title": strip_md(title), "pages": pages})
     return chapters
+
+
+def db_caption(text):
+    """A data-book table caption -> (table id or None, anchor, short label), or None if it is not a caption."""
+    t = re.sub(r"<[^>]+>", "", text)
+    m = re.match(r"Data Book Table (\d+(?:\([a-z]\))?)", t)
+    if m and m.group(1) == "7":                             # the fittings: one caption per sub-table
+        f = re.search(r"\(([A-Z]+\d-\d+)\)(.*)", t)
+        sub = "-Cb" if "branch" in f.group(2) else "-Cs" if "main" in f.group(2) else ""
+        return f"7-{f.group(1)}{sub}", f"t-7-{f.group(1)}{sub}", f.group(1) + {"-Cb": " branch", "-Cs": " main"}.get(sub, "")
+    if m:
+        return norm_id(m.group(1)), f"t-{norm_id(m.group(1))}", m.group(1)
+    m = re.match(r"(T[1-6])\.", t)
+    if m:
+        return m.group(1), f"t-{m.group(1)}", m.group(1)
+    m = re.match(r"BNBC (\d{4})", t)
+    if m:
+        tid = "bnbc" if m.group(1) == "2020" else f"bnbc-{m.group(1)}"
+        return tid, f"t-{tid}", f"BNBC {m.group(1)}"
+    m = re.match(r"([\d.]+) (bar|MPa),", t)                 # a pressure block of a superheated table
+    if m:
+        return None, "p-" + slugify(f"{m.group(1)} {m.group(2)}"), m.group(1)
+    return None
+
+
+def db_tables(body, tables):
+    """Data-book page: an id on every table caption, each table in a frame that scrolls both ways with its header row
+    and key columns held in place (lookup.js sets the column offsets), long text cells wrapped at a fixed width,
+    and a jump line under the heading. Returns (body, [(menu label, anchor)])."""
+    pieces, jumps, pos, pending = [], [], 0, None
+    for m in re.finditer(r"<p><strong>(.*?)</strong>(.*?)</p>|<table>.*?</table>", body, re.S):
+        pieces.append(body[pos:m.start()])
+        pos = m.end()
+        if m.group(0).startswith("<p>"):
+            pieces.append(m.group(0))
+            info = db_caption(m.group(1))
+            if info:
+                pending = (len(pieces) - 1, m, info)
+            continue
+        tid = None
+        if pending:
+            k, c, (tid, aid, short) = pending
+            pending = None
+            pieces[k] = f'<p class="tcap" id="{aid}"><strong>{c.group(1)}</strong>{c.group(2)}\x00UP\x00</p>'
+            label = re.sub(r'<span class="math inline">(.*?)</span>', lambda s: tex_plain(f"${s.group(1)}$"), c.group(1))
+            label = html.unescape(re.sub(r"<[^>]+>", "", label)).replace("Data Book ", "")
+            jumps.append((short, label if len(label) <= 64 else label[:62].rstrip(" ,.(") + "…", aid))
+        t = tables.get(tid)
+        n = 1
+        if t:                                                   # freeze the leading key columns, at most two
+            n = 0
+            while n < len(t["cols"]) and n in t["keys"]:
+                n += 1
+            n = min(max(n, 1), 2)
+        tab = re.sub(r"<td([^>]*)>(.*?)</td>", lambda d: d.group(0) if len(re.sub(r"<[^>]+>", "", d.group(2))) <= 48
+                     else f'<td{d.group(1)}><span class="wrap">{d.group(2)}</span></td>', m.group(0), flags=re.S)
+        pieces.append(f'<div class="tframe">' + tab.replace("<table>", f'<table data-freeze="{n}">', 1) + "</div>")
+    body = "".join(pieces) + body[pos:]
+    if len(jumps) < 2:
+        return body.replace("\x00UP\x00", ""), []
+    body = body.replace("\x00UP\x00", ' <a class="up" href="#jump" title="Back to the list of tables">↑</a>')
+    unit = {re.search(r"(bar|MPa)", lab).group(1) for _, lab, aid in jumps if aid.startswith("p-")}
+    head = f"Pressure ({unit.pop()}):" if len(unit) == 1 and all(a.startswith("p-") for *_, a in jumps) else "Tables:"
+    line = (f'<p class="jump" id="jump"><span>{head}</span> '
+            + " · ".join(f'<a href="#{aid}">{html.escape(short)}</a>' for short, _, aid in jumps) + "</p>")
+    body = re.sub(r"(</h2>)", lambda m: m.group(1) + "\n" + line, body, count=1)
+    return body, [(label, aid) for _, label, aid in jumps]
 
 
 def subheads(body):
@@ -533,12 +601,15 @@ def main():
     db_items = [(t, f, False, 0) for f, t, _ in db_pages]
     for k, (fname, title, md) in enumerate(db_pages):
         body = pandoc(fix_images(md, DATABOOK.parent), databook=True)
-        body = re.sub(r"<p><strong>Data Book Table (\d+(?:\([a-z]\))?)",
-                      lambda m: f'<p class="tcap" id="t-{norm_id(m.group(1))}"><strong>Data Book Table {m.group(1)}', body)
-        body = re.sub(r"<p><strong>(T[1-6])\.", lambda m: f'<p class="tcap" id="t-{m.group(1)}"><strong>{m.group(1)}.', body)
+        body, jumps = db_tables(body, tables)
         prev = db_pages[k - 1][:2][::-1] if k else None          # (title, file)
         nxt = db_pages[k + 1][:2][::-1] if k + 1 < len(db_pages) else None
-        secs = menu("Sections", [(t, f, f == fname, 0) for t, f, _, _ in db_items], "secs")
+        items = []
+        for t, f, _, _ in db_items:                              # this page's tables, indented under it
+            items.append((t, f, f == fname, 0))
+            if f == fname:
+                items += [(label, f"#{aid}", False, 1) for label, aid in jumps]
+        secs = menu("Sections", items, "secs")
         (OUT / fname).write_text(render(title, body, book_menus() + secs, prev, nxt,
                                         '<a href="db-index.html">Data book</a>'), encoding="utf-8")
 
