@@ -127,7 +127,7 @@ In a practical system some auxiliaries are added to improve the efficiency. How 
 > 1. **"The strong solution from the evaporator"** [Kanak p.44; Aloke p.78; also Ameen §5.2]: nothing but **refrigerant vapour** comes from the evaporator. Write: "the weak solution from the generator and the refrigerant vapour from the evaporator enter the absorber; the strong solution is drawn off". The same slip appears in the label "NH$_3$ vapor + solution" on the evaporator-to-absorber line of the aqua-ammonia figure [Aloke p.83; Kanak p.48].
 > 2. **Analyzer and rectifier labels swapped** [Kanak p.48; Aloke p.83]: in that printed figure the box stacked on the generator is labelled "Rectifier" and the one downstream "Analyzer". The analyzer sits **on the generator** (the incoming strong solution flows down through it), and the rectifier comes **after** it, just before the condenser, and is water-cooled (Fig. 3, and the slides' own Fig. 2 [Aloke p.81]). Draw them in that order.
 
-## 8.4 The maximum (Carnot) COP ★
+## 8.4 The maximum (Carnot) COP ★ {#absorption-carnot}
 
 **Definition.** Neglecting the pump work [Ameen §5.5]:
 $$COP=\frac{\text{refrigeration rate}}{\text{heat supplied to the generator}}=\frac{Q_E}{Q_G},\qquad\text{with pump work: } COP=\frac{Q_E}{Q_G+W_p}$$
@@ -154,6 +154,14 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 > $$COP_{max}=\frac{T_E}{T_G}\cdot\frac{T_G-T_0}{T_0-T_E}=\frac{283.15}{373.15}\cdot\frac{100-35}{35-10}=0.7588\times2.6=\mathbf{1.97}$$
 > The real cycle of the same plant reaches only about 0.73 (Solution 8.2): the irreversibilities of heat transfer through finite temperature differences, mixing in the absorber and throttling cost more than half the ideal COP.
 
+::: {.mini #m-mini-absorption-steam}
+**Mini-example: heating steam between table rows.** A generator is heated by steam at 1.5 bar, 95 % dry, condensing to saturated liquid; it needs 50 kW. Find the steam temperature and the steam flow.
+
+0.15 MPa lies between the Table 1 rows 110 °C ($p=$ [0.14338]{.lookup t="water-sat" row="110" col="p_MPa"} MPa, $h_f=$ [461.42]{.lookup t="water-sat" row="110" col="h_liq_kJ_kg"}, $h_g=$ [2691.06]{.lookup t="water-sat" row="110" col="h_vap_kJ_kg"}) and 115 °C ([0.16918]{.lookup t="water-sat" row="115" col="p_MPa"} MPa, [482.59]{.lookup t="water-sat" row="115" col="h_liq_kJ_kg"}, [2698.58]{.lookup t="water-sat" row="115" col="h_vap_kJ_kg"}). Fraction $=(0.15-0.14338)/(0.16918-0.14338)=0.2566$, so $T=110+0.2566	imes5=111.28$ °C, $h_f=466.85$, $h_g=2692.99$, $h_{fg}=2226.14$ kJ/kg.
+
+Each kg gives up $q=x\,h_{fg}=0.95\times2226.14=2114.8$ kJ/kg, so $\dot m=50/2114.8=0.02364$ kg/s $=85.1$ kg/h.
+:::
+
 ## 8.5 The LiBr–water system and how to solve it ★
 
 **The system** (Fig. 6) [Aloke pp.86–87; Kanak pp.50, 54; Ameen §5.5]. Water is the refrigerant, a solution of LiBr in water the absorbent. Since LiBr is a salt with practically no vapour pressure, **only water vapour leaves the generator**: no analyzer or rectifier is needed. Because water boils at 5–10 °C only at about 1 kPa, the whole machine runs under a **deep vacuum**: about 1 kPa in the evaporator and absorber, 5–9 kPa in the generator and condenser. In commercial chillers the generator and condenser share one shell (same pressure) and the evaporator and absorber share another; cooling water from the cooling tower passes in series through the absorber and then the condenser [Ameen §5.5].
@@ -162,7 +170,7 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 
 **State numbers.** This guide uses the slides' numbering (Fig. 6, Aloke p.87): 1 dilute solution out of the absorber/pump, 2 into the generator, 3 concentrated solution out of the generator, 4 out of the heat exchanger, 5 water vapour to the condenser, 6 liquid water out of the condenser, 7 water vapour out of the evaporator. **Without a heat exchanger** 1 ≡ 2 and 3 ≡ 4. (The 2012-13 paper figure has no heat exchanger and numbers the states 1 solution to the generator, 2 solution from the generator, 3 vapour, 4 liquid water, 5 evaporator vapour: map them before you write.)
 
-### Reading the two LiBr charts
+### Reading the two LiBr charts {#absorption-charts}
 
 **Chart 4 (T–p–x, equilibrium chart)** [Data Book Chart 4, end of this module, Fig. 10]. Left axis: saturation temperature of **pure water**, °C (0–90); right axis: the same lines as vapour pressure, kPa (0.61 kPa at 0 °C, 1.23 at 10 °C, 4.24 at 30 °C, 7.38 at 40 °C …); bottom axis: LiBr in solution, % by mass (the scale is squeezed above 60 %: 67, 68, 69, 70 are close together); sloping lines: solution temperature 5–120 °C; bottom right: the crystallization line. A solution in equilibrium with water vapour at pressure $p$ has the same vapour pressure as pure water at its saturation temperature, so:
 
@@ -171,7 +179,13 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 
 **Chart 5 (h–x)** [Data Book Chart 5, Fig. 11]. Enthalpy of the solution, kJ/kg (−200 to +200), against % LiBr (40–70), with curves of solution temperature 25–150 °C and the crystallization line. Read $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$), and with a heat exchanger $h_2$ at ($x_1$, the given solution temperature at 2). Between two curves, interpolate linearly (e.g. 52 °C lies one-fifth of the way from the 50 °C to the 60 °C curve).
 
-**Water and steam** [Data Book Table 1 (R718) and the superheated steam table, end of this module]: $h_6=h_f(T_C)$, $h_7=h_g(T_E)$. State 5 is water vapour leaving the generator at the **generator temperature** but the **condenser pressure** (5–9 kPa), so it is superheated: $h_5$ from the superheated table, 0.06-bar (6 kPa) block, midway between the 80 °C ($h=2650.1$) and 120 °C ($h=2726.0$) rows: $h_5=(2650.1+2726.0)/2=2688$ kJ/kg at 100 °C. At these low pressures steam is an ideal gas and $h$ depends on $T$ alone (the EOS gives 2687.8–2688.0 kJ/kg from 5 to 9 kPa), so 2688 kJ/kg is used for every condenser temperature.
+**Water and steam** [Data Book Table 1 (R718) and the superheated steam table, end of this module]: $h_6=h_f(T_C)$, $h_7=h_g(T_E)$. State 5 is water vapour leaving the generator at the **generator temperature** but the **condenser pressure** (5–9 kPa), so it is superheated: $h_5$ from the superheated table, 0.06-bar (6 kPa) block, midway between the 80 °C ($h=$ [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"}) and 120 °C ($h=$ [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"}) rows: $h_5=(2650.1+2726.0)/2=2688$ kJ/kg at 100 °C. At these low pressures steam is an ideal gas and $h$ depends on $T$ alone (the EOS gives 2687.8–2688.0 kJ/kg from 5 to 9 kPa), so 2688 kJ/kg is used for every condenser temperature.
+
+::: {.mini #m-mini-absorption-water}
+**Mini-example: water properties between table rows.** Table 1 has a row every 5 °C. Find $p_{sat}$ and $h_g$ at 12 °C (an evaporator) and $h_f$ at 32 °C (a condenser).
+
+12 °C is 2/5 of the way from 10 to 15 °C: $p=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} $+0.4\,($[1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} $-1.23)=1.422$ kPa; $h_g=$ [2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"} $+0.4\,($[2528.33]{.lookup t="water-sat" row="15" col="h_vap_kJ_kg"} $-2519.21)=2522.86$ kJ/kg. 32 °C: $h_f=$ [125.73]{.lookup t="water-sat" row="30" col="h_liq_kJ_kg"} $+0.4\,($[146.63]{.lookup t="water-sat" row="35" col="h_liq_kJ_kg"} $-125.73)=134.09$ kJ/kg.
+:::
 
 > **TRAP: $h_5$ is not $h_g$ at 100 °C**
 >
@@ -181,9 +195,9 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 >
 > **[FROM SOURCE: Aloke pp.88–89; Kanak pp.51–52]**
 >
-> - Pressures (Table 1): $p_H=p_{sat}(40\ °\text{C})=7.38$ kPa; $p_L=p_{sat}(10\ °\text{C})=1.23$ kPa.
-> - Chart 4, absorber: 10 °C line × 30 °C solution line → $x_1=$ **50 %**. Generator: 40 °C line × 100 °C solution line → $x_3=$ **66.4 %** (Fig. 7). The ASHRAE Dühring correlation gives 49.0 % and 66.1 %.
-> - Chart 5: $h_1$ (50 %, 30 °C) $=$ **−168 kJ/kg**; $h_3$ (66.4 %, 100 °C) $=$ **−52 kJ/kg**; $h_2$ (50 %, 52 °C) $=$ **−120 kJ/kg** (Fig. 8).
+> - Pressures (Table 1): $p_H=p_{sat}(40\ °\text{C})=$ [7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa; $p_L=p_{sat}(10\ °\text{C})=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa.
+> - Chart 4, absorber: 10 °C line × 30 °C solution line → $x_1=$ **[50 %]{.lookup t="chart4"}**. Generator: 40 °C line × 100 °C solution line → $x_3=$ **[66.4 %]{.lookup t="chart4"}** (Fig. 7). The ASHRAE Dühring correlation gives 49.0 % and 66.1 %.
+> - Chart 5: $h_1$ (50 %, 30 °C) $=$ **[−168]{.lookup t="chart5"} kJ/kg**; $h_3$ (66.4 %, 100 °C) $=$ **[−52]{.lookup t="chart5"} kJ/kg**; $h_2$ (50 %, 52 °C) $=$ **[−120]{.lookup t="chart5"} kJ/kg** (Fig. 8).
 >
 > On the T–p–x chart the cycle is the rectangle of Fig. 7: the solution is pumped at constant $x$ from the low- to the high-pressure line, boils in the generator along the high-pressure line (water leaves, $x$ rises from 50 to 66.4 %), is throttled at constant $x$ back to the low-pressure line, and absorbs vapour in the absorber along the low-pressure line ($x$ falls back to 50 %).
 
@@ -195,7 +209,7 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 >
 > Chart 4 is the Stoecker & Jones chart. Two published correlations bracket it: at 100 °C/40 °C the ASHRAE (Dühring) correlation gives 66.1 % and the Patek–Klomfar formulation (CoolProp `INCOMP::LiBr`) 66.5 %, against the chart's 66.4 %; at the absorber (30 °C/10 °C) they give 49.0 % and 48.4 % against the chart's 50 %. Read the chart to about ±0.5 %, and the enthalpy chart to ±2 kJ/kg; the COP changes only in the third decimal. The solutions below quote each chart reading and the correlation values beside it, and use the chart reading throughout.
 
-### The method (six steps)
+### The method (six steps) {#absorption-method}
 
 1. **Draw** the schematic with state numbers (Fig. 6); write $T_G$, $T_C$, $T_E$, $T_a$ on it.
 2. **Pressures:** $p_H=p_{sat}(T_C)$, $p_L=p_{sat}(T_E)$ (Table 1).
@@ -207,10 +221,28 @@ $$\dot m_1x_1=\dot m_3x_3\Rightarrow\dot m_3=\dot m_1\frac{x_1}{x_3},\qquad\dot 
 $$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2,\quad q_c=\dot m_5(h_5-h_6),\quad q_e=\dot m_5(h_7-h_6),\quad q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$$
 $$COP=\frac{q_e}{q_g},\qquad\text{check: }q_g+q_e=q_c+q_a$$
 
+::: {.mini #m-mini-absorption-mass}
+**Mini-example: the mass balances.** The pump delivers $\dot m_1=1.0$ kg/s at $x_1=0.52$; the generator outlet is $x_3=0.65$.
+
+LiBr in = LiBr out: $\dot m_3=1.0\times0.52/0.65=0.80$ kg/s of concentrated solution; refrigerant $\dot m_5=1.0-0.80=0.20$ kg/s of water vapour.
+:::
+
+::: {.mini #m-mini-absorption-cop}
+**Mini-example: heat rates and COP.** With the flows above, $h_1=-170$, $h_3=-55$, $h_5=2688$, $h_6=h_f(35\ °\text{C})=146.63$, $h_7=h_g(5\ °\text{C})=2510.06$ kJ/kg, no heat exchanger ($h_2=h_1$, $h_4=h_3$).
+
+$q_g=0.80(-55)+0.20(2688)-1.0(-170)=-44.0+537.6+170.0=663.6$ kW; $q_e=0.20\,(2510.06-146.63)=472.7$ kW; $COP=472.7/663.6=0.712$. Check: $q_c=0.20\,(2688-146.63)=508.3$ kW, $q_a=0.20(2510.06)+0.80(-55)-1.0(-170)=628.0$ kW, and $663.6+472.7=508.3+628.0$.
+:::
+
 **The solution heat exchanger** [Aloke pp.90–91; Kanak pp.54–56]. If the dilute solution enters the generator at a given temperature $T_2$, read $h_2$ at ($x_1$, $T_2$). Only $q_g$ changes (and $q_a$, by the same amount); $q_e$ does not. The heat exchanger balance gives the concentrated-solution enthalpy at its outlet:
 $$\dot m_1(h_2-h_1)=\dot m_3(h_3-h_4)\Rightarrow h_4=h_3-\frac{\dot m_1}{\dot m_3}(h_2-h_1)$$
 
-### Crystallization ★
+::: {.mini #m-mini-absorption-hx}
+**Mini-example: a heat exchanger and the crystallization check.** In the cycle above ($\dot m_1=1.0$, $\dot m_3=0.80$ kg/s, $x_3=65$ %, $h_1=-170$, $h_3=-55$ kJ/kg) a heat exchanger heats the dilute solution so that $h_2=-125$ kJ/kg.
+
+Duty $\dot m_1(h_2-h_1)=1.0\times45=45.0$ kW, so $q_g=663.6-45.0=618.6$ kW and $COP=472.7/618.6=0.764$ ($q_e$ unchanged). Outlet of the concentrated solution: $h_4=-55-\dfrac{1.0}{0.80}\times45=-111.3$ kJ/kg. The crystallization line on Chart 5 at 65 % is at about [−148]{.lookup t="chart5"} kJ/kg; $-111.3$ lies above it (to its left): no crystallization.
+:::
+
+### Crystallization ★ {#absorption-crystallization}
 
 If the LiBr concentration is too high, or the solution too cold, for its concentration, the salt comes out of solution as crystals. They form a **slush** that blocks the pipes (usually the concentrated-solution line from the heat exchanger to the absorber) and stops the unit [Ameen §5.6; Aloke p.91].
 
@@ -310,62 +342,136 @@ Standing assumptions for every LiBr numerical, unless the solution says otherwis
 
 > **TRY 8.1** `[PP 11-12 Q8(d), 15]` In an absorption type refrigerator, the heat is supplied to NH$_3$ generator by condensing steam at 2 bar and 90% dry. The temperature in the evaporator is to be maintained at −5 °C. Find the maximum C.O.P. possible. If the refrigeration load is 20 tonnes and actual C.O.P. is 70% of the maximum C.O.P., find the mass of steam required per hour. Take temperature of the atmosphere as 30 °C.
 
-**Solution 8.1** **[TUTOR-GENERATED]** (§8.4; the classic Khurmi/Rajput problem).
+**Solution 8.1** **[TUTOR-GENERATED]** (§8.4; the classic Khurmi/Rajput problem). Carnot COP between the steam temperature, the evaporator and the atmosphere, then the generator heat and the steam that supplies it. Work it step by step; open a hint if stuck.
 
-*Generator temperature.* The steam condenses at its saturation temperature. Table 1 (R718), rows 120 °C (0.19867 MPa, $h_f=503.81$, $h_g=2705.93$) and 125 °C (0.23224 MPa, 525.07, 2713.10), interpolated in $p$ to 0.2 MPa: $T_G=$ **120.20 °C** $=393.35$ K, $h_{fg}=$ **2201.6 kJ/kg**. $T_E=-5$ °C $=268.15$ K, $T_0=30$ °C $=303.15$ K.
+::: {.problem #sol-8-1}
 
+::: {.step title="Step 1. Generator temperature and latent heat of the steam"}
+::: hint
+The steam condenses at its saturation temperature at 2 bar. Table 1 (R718) has no 0.2 MPa row: take the two rows either side and interpolate $T$, $h_f$ and $h_g$ linearly in $p$. See the [steam mini-example](#m-mini-absorption-steam).
+:::
+*Generator temperature.* The steam condenses at its saturation temperature. Table 1 (R718), rows 120 °C ([0.19867]{.lookup t="water-sat" row="120" col="p_MPa"} MPa, $h_f=$ [503.81]{.lookup t="water-sat" row="120" col="h_liq_kJ_kg"}, $h_g=$ [2705.93]{.lookup t="water-sat" row="120" col="h_vap_kJ_kg"}) and 125 °C ([0.23224]{.lookup t="water-sat" row="125" col="p_MPa"} MPa, [525.07]{.lookup t="water-sat" row="125" col="h_liq_kJ_kg"}, [2713.10]{.lookup t="water-sat" row="125" col="h_vap_kJ_kg"}), interpolated in $p$ to 0.2 MPa: $T_G=$ **120.20 °C** $=393.35$ K, $h_{fg}=$ **2201.6 kJ/kg**. $T_E=-5$ °C $=268.15$ K, $T_0=30$ °C $=303.15$ K.
+:::
+
+::: {.step title="Step 2. Maximum COP"}
+::: hint
+A Carnot engine between $T_G$ and $T_0$ driving a Carnot refrigerator between $T_E$ and $T_0$: $COP_{max}=\frac{T_E}{T_0-T_E}\cdot\frac{T_G-T_0}{T_G}$, in kelvin. Here $T_0$ is the atmosphere, 30 °C. See [§8.4](#absorption-carnot) and Example 8.1.
+:::
 *Maximum COP* (Carnot engine $T_G\to T_0$ driving a Carnot refrigerator $T_E\to T_0$):
 $$COP_{max}=\frac{T_E}{T_0-T_E}\cdot\frac{T_G-T_0}{T_G}=\frac{268.15}{35}\cdot\frac{90.20}{393.35}=7.6614\times0.2293=\mathbf{1.757}$$
+:::
 
+::: {.step title="Step 3. Actual COP and generator heat"}
+::: hint
+Actual COP $=0.7\,COP_{max}$. Load in kW (1 TR = 3.517 kW); $Q_G=Q_E/COP$.
+:::
 *Actual COP* $=0.7\times1.757=$ **1.230**.
 
 *Generator heat.* Load $Q_E=20\times3.517=70.34$ kW (1 TR = 3.517 kW):
 $$Q_G=\frac{Q_E}{COP}=\frac{70.34}{1.230}=57.20\ \text{kW}$$
+:::
 
+::: {.step title="Step 4. Steam consumption"}
+::: hint
+Wet steam condensing to saturated liquid gives up only its latent part, $q=x\,h_{fg}$ per kg; $\dot m_{steam}=Q_G/q$. See the [steam mini-example](#m-mini-absorption-steam).
+:::
 *Steam.* Steam at 2 bar, 90 % dry, condensing to saturated liquid at 2 bar gives up only its latent part: $q=x\,h_{fg}=0.9\times2201.6=1981.4$ kJ/kg.
 $$\dot m_{steam}=\frac{57.20}{1981.4}=0.02887\ \text{kg/s}=\mathbf{103.9\ kg/h}$$
+:::
 
+:::
+
+::: answer
 **Answer: COP$_{max}$ = 1.757; actual COP = 1.230; steam ≈ 103.9 kg/h** (with 1 TR = 211 kJ/min, 104 kg/h).
+:::
 
 ### AB1-B: the LiBr COP problem
 
 > **TRY 8.2** `[PP 12-13 Q4(b), 15]` Estimate refrigerant flow rate and COP of the system shown in Fig. for Q. No. 4(b). [Fig. for Q. No. 4(b): LiBr–water system; generator 100 °C, condenser 40 °C, absorber 30 °C, evaporator 10 °C; solution pump $w$ = 0.6 kg/s; states 1–5.]
 
-**Solution 8.2** **[FROM SOURCE: Aloke pp.86–91; Kanak pp.49–56, corrected]** This is the slides' problem (Stoecker & Jones Ex. 17.1). The paper asks only the real cycle without heat exchanger (part ii below); parts (i), (iii) and (iv) are the slide version, which 2013-14, 2015-16 and 2020-21 ask. This is the model answer for the whole family. The paper's states 1–5 are this guide's 1 (= 2), 3 (= 4), 5, 6 and 7.
+**Solution 8.2** **[FROM SOURCE: Aloke pp.86–91; Kanak pp.49–56, corrected]** The model answer for the whole family: the six steps of [§8.5](#absorption-method), then the heat exchanger and the crystallization check. Work it step by step; open a hint if stuck.
+
+::: {.problem #sol-8-2}
+
+::: {.step title="Step 1. Sketch and Carnot COP"}
+::: hint
+Draw Fig. 6 and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. Carnot: $COP_{max}=\frac{T_E}{T_G}\cdot\frac{T_G-T_0}{T_0-T_E}$ in kelvin, with $T_0=(T_a+T_C)/2$. See [§8.4](#absorption-carnot) and Example 8.1.
+:::
+This is the slides' problem (Stoecker & Jones Ex. 17.1). The paper asks only the real cycle without heat exchanger (part ii below); parts (i), (iii) and (iv) are the slide version, which 2013-14, 2015-16 and 2020-21 ask. The paper's states 1–5 are this guide's 1 (= 2), 3 (= 4), 5, 6 and 7.
 
 *Sketch:* Fig. 6 without the heat exchanger, with $T_G=100$ °C, $T_C=40$ °C, $T_E=10$ °C, $T_a=30$ °C, $\dot m_1=0.6$ kg/s.
 
 **(i) Carnot cycle.** $T_0=(30+40)/2=35$ °C:
 $$COP_{max}=\frac{283.15}{373.15}\cdot\frac{100-35}{35-10}=\mathbf{1.97}$$
+:::
 
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
 **(ii) Real cycle, no heat exchanger.**
 
-*Pressures* (Table 1): $p_H=p_{sat}(40\ °\text{C})=7.38$ kPa (generator, condenser); $p_L=p_{sat}(10\ °\text{C})=1.23$ kPa (evaporator, absorber).
+*Pressures* (Table 1): $p_H=p_{sat}(40\ °\text{C})=$ [7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa (generator, condenser); $p_L=p_{sat}(10\ °\text{C})=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa (evaporator, absorber).
+:::
 
-*Concentrations* (Chart 4, Fig. 7): absorber outlet, 10 °C line × 30 °C solution → $x_1=0.50$; generator outlet, 40 °C line × 100 °C solution → $x_3=0.664$. (ASHRAE Dühring correlation 49.0 % and 66.1 %; CoolProp 48.4 % and 66.5 %.)
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+*Concentrations* (Chart 4, Fig. 7): absorber outlet, 10 °C line × 30 °C solution → $x_1=$ [0.50]{.lookup t="chart4"}; generator outlet, 40 °C line × 100 °C solution → $x_3=$ [0.664]{.lookup t="chart4"}. (ASHRAE Dühring correlation 49.0 % and 66.1 %; CoolProp 48.4 % and 66.5 %.)
+:::
 
-*Enthalpies:* Chart 5 (Fig. 8): $h_1=h_2=-168$ kJ/kg (50 %, 30 °C), $h_3=h_4=-52$ kJ/kg (66.4 %, 100 °C) (correlation −168 and −52). Water: $h_5=2688$ kJ/kg (superheated vapour, 100 °C, 7.38 kPa); $h_6=h_f(40\ °\text{C})=167.53$ kJ/kg; $h_7=h_g(10\ °\text{C})=2519.21$ kJ/kg.
-
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
 *Mass balances:*
 $$\dot m_3=\dot m_1\frac{x_1}{x_3}=0.6\times\frac{0.50}{0.664}=0.4518\ \text{kg/s},\qquad\dot m_5=0.6-0.4518=\mathbf{0.1482\ kg/s}\ \text{(refrigerant)}$$
+:::
 
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+*Enthalpies:* Chart 5 (Fig. 8): $h_1=h_2=$ [−168]{.lookup t="chart5"} kJ/kg (50 %, 30 °C), $h_3=h_4=$ [−52]{.lookup t="chart5"} kJ/kg (66.4 %, 100 °C) (correlation −168 and −52). Water: $h_5=2688$ kJ/kg (superheated vapour, 100 °C, 7.38 kPa; 0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C); $h_6=h_f(40\ °\text{C})=$ [167.53]{.lookup t="water-sat" row="40" col="h_liq_kJ_kg"} kJ/kg; $h_7=h_g(10\ °\text{C})=$ [2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"} kJ/kg.
+:::
+
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
 *Energy balances* (unrounded flows carried):
 $$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-23.49+398.34+100.80=475.6\ \text{kW}$$
 $$q_e=\dot m_5(h_7-h_6)=0.1482\,(2519.21-167.53)=348.5\ \text{kW}$$
 $$COP=\frac{348.5}{475.6}=\mathbf{0.733}$$
 If heat rejection is wanted: $q_c=\dot m_5(h_5-h_6)=373.5$ kW, $q_a=\dot m_5h_7+\dot m_3h_3-\dot m_1h_1=373.33-23.49+100.80=450.6$ kW; check $475.6+348.5=373.5+450.6=824.1$ kW.
+:::
 
-**(iii) With a heat exchanger** after the pump, the dilute solution entering the generator at 52 °C. Chart 5 at (50 %, 52 °C): $h_2=-120$ kJ/kg, one-fifth of the way from the 50 °C to the 60 °C curve (correlation −120; CoolProp gives $h(52)-h(30)=47.1$ kJ/kg at 50 %, chart 48). Flows and $q_e$ are unchanged:
+::: {.step title="Step 7. With a heat exchanger"}
+::: hint
+Chart 5: $h_2$ at ($x_1$, $T_2$). Flows and $q_e$ do not change; $q_g$ (and $q_a$) fall by the exchanger duty $\dot m_1(h_2-h_1)$. Outlet of the concentrated solution: $h_4=h_3-(\dot m_1/\dot m_3)(h_2-h_1)$. See the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iii) With a heat exchanger** after the pump, the dilute solution entering the generator at 52 °C. Chart 5 at (50 %, 52 °C): $h_2=$ [−120]{.lookup t="chart5"} kJ/kg, one-fifth of the way from the 50 °C to the 60 °C curve (correlation −120; CoolProp gives $h(52)-h(30)=47.1$ kJ/kg at 50 %, chart 48). Flows and $q_e$ are unchanged:
 $$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2=-23.49+398.34+72.00=446.8\ \text{kW},\qquad COP=\frac{348.5}{446.8}=\mathbf{0.780}$$
 The heat exchanger transfers $\dot m_1(h_2-h_1)=0.6\times48=28.8$ kW: the generator needs 28.8 kW less and the absorber rejects 28.8 kW less. The concentrated solution leaves it at $h_4=h_3-\dfrac{\dot m_1}{\dot m_3}(h_2-h_1)=-52-1.3280\times48=-115.7$ kJ/kg (≈ 62 °C), just left of the crystallization line at 66.4 % (Fig. 8).
+:::
 
-**(iv) Condensing temperature reduced to 34 °C** (heat exchanger still in place, generator 100 °C). $p_H=p_{sat}(34\ °\text{C})=5.35$ kPa (Table 1; 5.32 kPa EOS). Chart 4: 34 °C line × 100 °C solution → $x_3=0.69$ (Dühring 69.0 %, CoolProp 69.5 %), point 3′ of Fig. 7. Chart 5: $h_3=-53$ kJ/kg (69 %, 100 °C; correlation −52).
+::: {.step title="Step 8. Crystallization check at the lower condensing temperature"}
+::: hint
+New $p_H=p_{sat}(T_C)$, new $x_3$ (Chart 4) and $h_3$ (Chart 5), new $\dot m_3$; then $h_4$ from the heat-exchanger balance. Plot ($x_3$, $h_4$) on Chart 5: beyond the crystallization line, the solution crystallizes. See [Crystallization](#absorption-crystallization) and the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iv) Condensing temperature reduced to 34 °C** (heat exchanger still in place, generator 100 °C). $p_H=p_{sat}(34\ °\text{C})$: Table 1 rows 30 °C ([4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa) and 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa), $4.25+0.8\,(5.63-4.25)=5.35$ kPa (5.32 kPa EOS). Chart 4: 34 °C line × 100 °C solution → $x_3=$ [0.69]{.lookup t="chart4"} (Dühring 69.0 %, CoolProp 69.5 %), point 3′ of Fig. 7. Chart 5: $h_3=$ [−53]{.lookup t="chart5"} kJ/kg (69 %, 100 °C; correlation −52).
 $$\dot m_3=0.6\times\frac{0.50}{0.69}=0.4348\ \text{kg/s},\qquad\dot m_5=0.1652\ \text{kg/s}$$
 $h_1=-168$ and $h_2=-120$ kJ/kg as before. Heat exchanger balance:
 $$h_4=h_3-\frac{\dot m_1}{\dot m_3}(h_2-h_1)=-53-1.3800\times48=-119.2\ \text{kJ/kg}$$
-On Chart 5 the crystallization line at 69 % is at about −73 kJ/kg; the point (69 %, −119 kJ/kg) lies far beyond it (point 4′ of Fig. 8). **Yes: the solution crystallizes**, where the concentrated solution leaves the heat exchanger. A low condensing temperature is the classic cause; plants keep the condensing pressure up.
+On Chart 5 the crystallization line at 69 % is at about [−73]{.lookup t="chart5"} kJ/kg; the point (69 %, −119 kJ/kg) lies far beyond it (point 4′ of Fig. 8). **Yes: the solution crystallizes**, where the concentrated solution leaves the heat exchanger. A low condensing temperature is the classic cause; plants keep the condensing pressure up.
+:::
 
+:::
+
+::: answer
 **Answer: refrigerant flow 0.1482 kg/s; COP = 0.733 without a heat exchanger (Carnot 1.97), 0.780 with it; at 34 °C condensing the solution crystallizes.**
+:::
 
 > **TRAP: Kanak vai's note's and the slides' numbers for this problem**
 >
@@ -377,69 +483,256 @@ On Chart 5 the crystallization line at 69 % is at about −73 kJ/kg; the point (
 
 > **TRY 8.3** `[PP 13-14 Q5(b), 20]` In an absorption refrigerating system using LiBr, T$_G$ = 100°C, T$_E$ = 9°C, T$_a$ = 30°C, T$_C$ = 40°C. Estimate the values of COP for the following conditions: i) Ideal/carnot cycle ii) A real cycle if pump delivers 0.75 kg/s solution iii) If a heat exchanger is inserted after the pump and water enters the generator at 50°C. iv) If condensing temperature is reduced to 35°C, is there any chance of crystallization? The schematic diagram of the system is given in Fig. 5(b).
 
-**Solution 8.3** **[TUTOR-GENERATED]** As Solution 8.2 with $T_E=9$ °C, $\dot m_1=0.75$ kg/s, $T_2=50$ °C and 35 °C. Fig. 5(b) of the paper is Fig. 6 with these temperatures (its states are the same 1–7).
+**Solution 8.3** **[TUTOR-GENERATED]** As Solution 8.2 with $T_E=9$ °C, $\dot m_1=0.75$ kg/s, $T_2=50$ °C and 35 °C. Work it step by step; open a hint if stuck.
+
+::: {.problem #sol-8-3}
+
+::: {.step title="Step 1. Sketch and Carnot COP"}
+::: hint
+Draw Fig. 6 and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. Carnot: $COP_{max}=\frac{T_E}{T_G}\cdot\frac{T_G-T_0}{T_0-T_E}$ in kelvin, with $T_0=(T_a+T_C)/2$. See [§8.4](#absorption-carnot) and Example 8.1.
+:::
+Fig. 5(b) of the paper is Fig. 6 with these temperatures (its states are the same 1–7): $T_G=100$ °C, $T_C=40$ °C, $T_E=9$ °C, $T_a=30$ °C, $\dot m_1=0.75$ kg/s.
 
 **(i)** $T_0=(30+40)/2=35$ °C; $COP_{max}=\dfrac{282.15}{373.15}\cdot\dfrac{65}{26}=$ **1.89**.
+:::
 
-**(ii)** $p_H=7.38$ kPa, $p_L=p_{sat}(9\ °\text{C})=1.158$ kPa. Chart 4: $x_1=0.505$ (9 °C line × 30 °C solution; Dühring 49.7 %, CoolProp 49.1 %), $x_3=0.664$ (as before; Dühring 66.1 %, CoolProp 66.5 %). Chart 5: $h_1=-169$ kJ/kg (50.5 %, 30 °C; correlation −170), $h_3=-52$ kJ/kg (correlation −52). Water: $h_5=2688$, $h_6=167.53$, $h_7=h_g(9\ °\text{C})=2517.38$ kJ/kg.
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
+**(ii)** $p_H=p_{sat}(40\ °\text{C})=$ [7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa. $p_L=p_{sat}(9\ °\text{C})$: Table 1 rows 5 °C ([0.87]{.lookup t="water-sat" row="5" col="p_MPa" x="1000"} kPa) and 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa), $0.87+0.8\,(1.23-0.87)=1.158$ kPa.
+:::
 
-$\dot m_3=0.75\times0.505/0.664=0.5704$ kg/s; $\dot m_5=0.1796$ kg/s.
-$q_g=-29.66+482.75+126.75=579.8$ kW; $q_e=0.1796\,(2517.38-167.53)=422.0$ kW; **COP = 422.0/579.8 = 0.728**.
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+Chart 4: $x_1=$ [0.505]{.lookup t="chart4"} (9 °C line × 30 °C solution; Dühring 49.7 %, CoolProp 49.1 %), $x_3=$ [0.664]{.lookup t="chart4"} (as before; Dühring 66.1 %, CoolProp 66.5 %).
+:::
 
-**(iii)** Chart 5 at (50.5 %, 50 °C): $h_2=-125$ kJ/kg (correlation −126; CoolProp $h(50)-h(30)=42.5$ kJ/kg, chart 44). Heat exchanger duty $0.75\times44=33.0$ kW.
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
+$\dot m_3=0.75\times0.505/0.664=0.5704$ kg/s; $\dot m_5=0.75-0.5704=0.1796$ kg/s.
+:::
+
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+Chart 5: $h_1=$ [−169]{.lookup t="chart5"} kJ/kg (50.5 %, 30 °C; correlation −170), $h_3=$ [−52]{.lookup t="chart5"} kJ/kg (correlation −52). Water: $h_5=2688$ (0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C), $h_6=h_f(40\ °\text{C})=$ [167.53]{.lookup t="water-sat" row="40" col="h_liq_kJ_kg"}, $h_7=h_g(9\ °\text{C})$: rows 5 °C ([2510.06]{.lookup t="water-sat" row="5" col="h_vap_kJ_kg"}) and 10 °C ([2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"}), $2510.06+0.8\,(2519.21-2510.06)=2517.38$ kJ/kg.
+:::
+
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-29.66+482.75+126.75=579.8$ kW; $q_e=0.1796\,(2517.38-167.53)=422.0$ kW; **COP = 422.0/579.8 = 0.728**.
+:::
+
+::: {.step title="Step 7. With a heat exchanger"}
+::: hint
+Chart 5: $h_2$ at ($x_1$, $T_2$). Flows and $q_e$ do not change; $q_g$ (and $q_a$) fall by the exchanger duty $\dot m_1(h_2-h_1)$. Outlet of the concentrated solution: $h_4=h_3-(\dot m_1/\dot m_3)(h_2-h_1)$. See the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iii)** Chart 5 at (50.5 %, 50 °C): $h_2=$ [−125]{.lookup t="chart5"} kJ/kg (correlation −126; CoolProp $h(50)-h(30)=42.5$ kJ/kg, chart 44). Heat exchanger duty $0.75\times44=33.0$ kW.
 $q_g=-29.66+482.75+93.75=546.8$ kW; **COP = 422.0/546.8 = 0.772**. ($h_4=-52-1.3149\times44=-109.9$ kJ/kg, clear of the crystallization line.)
+:::
 
-**(iv)** $T_C=35$ °C: $p_H=5.63$ kPa. Chart 4: $x_3=0.687$ (Dühring 68.5 %, CoolProp 69.0 %); Chart 5: $h_3=-53$ kJ/kg. $\dot m_3=0.75\times0.505/0.687=0.5513$ kg/s, $\dot m_5=0.1987$ kg/s.
-$h_4=-53-1.3604\times44=-112.9$ kJ/kg. The crystallization line at 68.7 % is at about −81 kJ/kg: the point lies beyond it. **Yes, crystallization is likely** at the heat-exchanger outlet of the concentrated solution.
+::: {.step title="Step 8. Crystallization check at the lower condensing temperature"}
+::: hint
+New $p_H=p_{sat}(T_C)$, new $x_3$ (Chart 4) and $h_3$ (Chart 5), new $\dot m_3$; then $h_4$ from the heat-exchanger balance. Plot ($x_3$, $h_4$) on Chart 5: beyond the crystallization line, the solution crystallizes. See [Crystallization](#absorption-crystallization) and the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iv)** $T_C=35$ °C: $p_H=p_{sat}(35\ °\text{C})=$ [5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa. Chart 4: $x_3=$ [0.687]{.lookup t="chart4"} (Dühring 68.5 %, CoolProp 69.0 %); Chart 5: $h_3=$ [−53]{.lookup t="chart5"} kJ/kg. $\dot m_3=0.75\times0.505/0.687=0.5513$ kg/s, $\dot m_5=0.1987$ kg/s.
+$h_4=-53-1.3604\times44=-112.9$ kJ/kg. The crystallization line at 68.7 % is at about [−81]{.lookup t="chart5"} kJ/kg: the point lies beyond it. **Yes, crystallization is likely** at the heat-exchanger outlet of the concentrated solution.
+:::
 
+:::
+
+::: answer
 **Answer: COP 1.89 (Carnot), 0.728 (real), 0.772 (with heat exchanger); at 35 °C condensing the solution crystallizes.**
+:::
 
 > **TRY 8.4** `[PP 15-16 Q6(b), 23]` In an absorption refrigeration system using LiBr, $T_G = 100^\circ\mathrm{C}$, $T_E = 8^\circ\mathrm{C}$, $T_a = 31^\circ\mathrm{C}$, $T_C = 38^\circ\mathrm{C}$. Estimate the values of COP for the following conditions: (i) Ideal/ Carnot cycle (ii) A real cycle if pump delivers 0.5 kg/s solution (iii) If a heat exchanger is inserted after the pump and water enters the generator at $48^\circ\mathrm{C}$. (iv) If condensing temperature is reduced to $33^\circ\mathrm{C}$, is there any chance of crystallization? The schematic diagram of the system is given in Fig. 6 (b).
 
-**Solution 8.4** **[TUTOR-GENERATED]** As Solution 8.2 with 8/31/38 °C, 0.5 kg/s, 48 °C and 33 °C (Fig. 6).
+**Solution 8.4** **[TUTOR-GENERATED]** As Solution 8.2 with 8/31/38 °C, 0.5 kg/s, 48 °C and 33 °C (Fig. 6). Work it step by step; open a hint if stuck.
+
+::: {.problem #sol-8-4}
+
+::: {.step title="Step 1. Sketch and Carnot COP"}
+::: hint
+Draw Fig. 6 and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. Carnot: $COP_{max}=\frac{T_E}{T_G}\cdot\frac{T_G-T_0}{T_0-T_E}$ in kelvin, with $T_0=(T_a+T_C)/2$. See [§8.4](#absorption-carnot) and Example 8.1.
+:::
+Fig. 6 with $T_G=100$ °C, $T_C=38$ °C, $T_E=8$ °C, $T_a=31$ °C, $\dot m_1=0.5$ kg/s.
 
 **(i)** $T_0=(31+38)/2=34.5$ °C; $COP_{max}=\dfrac{281.15}{373.15}\cdot\dfrac{65.5}{26.5}=$ **1.86**.
+:::
 
-**(ii)** $p_H=p_{sat}(38\ °\text{C})=6.68$ kPa, $p_L=p_{sat}(8\ °\text{C})=1.086$ kPa. Chart 4: $x_1=0.52$ (8 °C line × 31 °C solution; Dühring 51.0 %, CoolProp 50.6 %); $x_3=0.674$ (38 °C line × 100 °C; Dühring 67.1 %, CoolProp 67.5 %). Chart 5: $h_1=-172$ kJ/kg (52 %, 31 °C; correlation −172), $h_3=-53$ kJ/kg (67.4 %, 100 °C; correlation −52). Water: $h_6=h_f(38\ °\text{C})=159.17$, $h_7=h_g(8\ °\text{C})=2515.55$ kJ/kg.
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
+**(ii)** $p_H=p_{sat}(38\ °\text{C})$: Table 1 rows 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa) and 40 °C ([7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa), $5.63+0.6\,(7.38-5.63)=6.68$ kPa. $p_L=p_{sat}(8\ °\text{C})$: rows 5 °C ([0.87]{.lookup t="water-sat" row="5" col="p_MPa" x="1000"} kPa) and 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa), $0.87+0.6\,(1.23-0.87)=1.086$ kPa.
+:::
 
-$\dot m_3=0.5\times0.52/0.674=0.3858$ kg/s; $\dot m_5=0.1142$ kg/s.
-$q_g=-20.45+307.09+86.00=372.6$ kW; $q_e=0.1142\,(2515.55-159.17)=269.2$ kW; **COP = 0.722**.
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+Chart 4: $x_1=$ [0.52]{.lookup t="chart4"} (8 °C line × 31 °C solution; Dühring 51.0 %, CoolProp 50.6 %); $x_3=$ [0.674]{.lookup t="chart4"} (38 °C line × 100 °C; Dühring 67.1 %, CoolProp 67.5 %).
+:::
 
-**(iii)** $h_2=-135$ kJ/kg (52 %, 48 °C; correlation −136; CoolProp $\Delta h=35.3$, chart 37). Duty $0.5\times37=18.5$ kW. $q_g=-20.45+307.09+67.50=354.1$ kW; **COP = 269.2/354.1 = 0.760**. ($h_4=-53-1.2962\times37=-101.0$ kJ/kg; the line at 67.4 % is at about −118: clear.)
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
+$\dot m_3=0.5\times0.52/0.674=0.3858$ kg/s; $\dot m_5=0.5-0.3858=0.1142$ kg/s.
+:::
 
-**(iv)** $T_C=33$ °C: $p_H=5.08$ kPa. Chart 4: $x_3=0.697$ (Dühring 69.5 %, CoolProp 70.1 %: right at the edge of the chart); $h_3=-54$ kJ/kg (correlation −51). $\dot m_3=0.5\times0.52/0.697=0.3730$ kg/s, $\dot m_5=0.1270$ kg/s. $h_4=-54-1.3404\times37=-103.6$ kJ/kg, against the crystallization line at about −60 kJ/kg at 69.7 %. **Yes, the solution crystallizes** at the heat-exchanger outlet; even the generator outlet itself (69.7 %, 100 °C) is close to the line.
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+Chart 5: $h_1=$ [−172]{.lookup t="chart5"} kJ/kg (52 %, 31 °C; correlation −172), $h_3=$ [−53]{.lookup t="chart5"} kJ/kg (67.4 %, 100 °C; correlation −52). Water: $h_5=2688$ (0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C); $h_6=h_f(38\ °\text{C})$: rows 35 °C ([146.63]{.lookup t="water-sat" row="35" col="h_liq_kJ_kg"}) and 40 °C ([167.53]{.lookup t="water-sat" row="40" col="h_liq_kJ_kg"}), $146.63+0.6\,(167.53-146.63)=159.17$; $h_7=h_g(8\ °\text{C})$: rows 5 °C ([2510.06]{.lookup t="water-sat" row="5" col="h_vap_kJ_kg"}) and 10 °C ([2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"}), $2510.06+0.6\,(2519.21-2510.06)=2515.55$ kJ/kg.
+:::
 
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-20.45+307.09+86.00=372.6$ kW; $q_e=0.1142\,(2515.55-159.17)=269.2$ kW; **COP = 0.722**.
+:::
+
+::: {.step title="Step 7. With a heat exchanger"}
+::: hint
+Chart 5: $h_2$ at ($x_1$, $T_2$). Flows and $q_e$ do not change; $q_g$ (and $q_a$) fall by the exchanger duty $\dot m_1(h_2-h_1)$. Outlet of the concentrated solution: $h_4=h_3-(\dot m_1/\dot m_3)(h_2-h_1)$. See the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iii)** $h_2=$ [−135]{.lookup t="chart5"} kJ/kg (52 %, 48 °C; correlation −136; CoolProp $\Delta h=35.3$, chart 37). Duty $0.5\times37=18.5$ kW. $q_g=-20.45+307.09+67.50=354.1$ kW; **COP = 269.2/354.1 = 0.760**. ($h_4=-53-1.2962\times37=-101.0$ kJ/kg; the line at 67.4 % is at about [−118]{.lookup t="chart5"}: clear.)
+:::
+
+::: {.step title="Step 8. Crystallization check at the lower condensing temperature"}
+::: hint
+New $p_H=p_{sat}(T_C)$, new $x_3$ (Chart 4) and $h_3$ (Chart 5), new $\dot m_3$; then $h_4$ from the heat-exchanger balance. Plot ($x_3$, $h_4$) on Chart 5: beyond the crystallization line, the solution crystallizes. See [Crystallization](#absorption-crystallization) and the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iv)** $T_C=33$ °C: $p_H=p_{sat}(33\ °\text{C})$: rows 30 °C ([4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa) and 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa), $4.25+0.6\,(5.63-4.25)=5.08$ kPa. Chart 4: $x_3=$ [0.697]{.lookup t="chart4"} (Dühring 69.5 %, CoolProp 70.1 %: right at the edge of the chart); $h_3=$ [−54]{.lookup t="chart5"} kJ/kg (correlation −51). $\dot m_3=0.5\times0.52/0.697=0.3730$ kg/s, $\dot m_5=0.1270$ kg/s. $h_4=-54-1.3404\times37=-103.6$ kJ/kg, against the crystallization line at about [−60]{.lookup t="chart5"} kJ/kg at 69.7 %. **Yes, the solution crystallizes** at the heat-exchanger outlet; even the generator outlet itself (69.7 %, 100 °C) is close to the line.
+:::
+
+:::
+
+::: answer
 **Answer: COP 1.86 (Carnot), 0.722 (real), 0.760 (with heat exchanger); crystallization at 33 °C condensing.**
+:::
 
 > **TRY 8.5** `[PP 20-21 Q7(b), 18]` In a vapor absorption refrigeration system using LiBr, $T_G = 100^\circ\mathrm{C}$, $T_E = 9^\circ\mathrm{C}$, $T_a = 28^\circ\mathrm{C}$, and $T_c = 43^\circ\mathrm{C}$. Estimate the value of COP for: (i) Carnot cycle (ii) Real cycle if pump delivers 0.5 kg/s solutions (iii) If a heat exchanger is inserted after the pump and the water enters the generator at $50^\circ\mathrm{C}$.
 
-**Solution 8.5** **[TUTOR-GENERATED]** As Solution 8.2 with 9/28/43 °C, 0.5 kg/s and 50 °C; no crystallization part.
+**Solution 8.5** **[TUTOR-GENERATED]** As Solution 8.2 with 9/28/43 °C, 0.5 kg/s and 50 °C; no crystallization part. Work it step by step; open a hint if stuck.
+
+::: {.problem #sol-8-5}
+
+::: {.step title="Step 1. Sketch and Carnot COP"}
+::: hint
+Draw Fig. 6 and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. Carnot: $COP_{max}=\frac{T_E}{T_G}\cdot\frac{T_G-T_0}{T_0-T_E}$ in kelvin, with $T_0=(T_a+T_C)/2$. See [§8.4](#absorption-carnot) and Example 8.1.
+:::
+Fig. 6 with $T_G=100$ °C, $T_C=43$ °C, $T_E=9$ °C, $T_a=28$ °C, $\dot m_1=0.5$ kg/s.
 
 **(i)** $T_0=(28+43)/2=35.5$ °C; $COP_{max}=\dfrac{282.15}{373.15}\cdot\dfrac{64.5}{26.5}=$ **1.84**.
+:::
 
-**(ii)** $p_H=p_{sat}(43\ °\text{C})=8.71$ kPa, $p_L=1.158$ kPa. Chart 4: $x_1=0.495$ (9 °C line × 28 °C; Dühring 48.4 %, CoolProp 47.7 %); $x_3=0.651$ (43 °C line × 100 °C; Dühring 64.7 %, CoolProp 65.0 %). Chart 5: $h_1=-171$ kJ/kg (49.5 %, 28 °C; correlation −171), $h_3=-51$ kJ/kg (65.1 %, 100 °C; correlation −52). Water: $h_6=h_f(43\ °\text{C})=180.07$, $h_7=2517.38$ kJ/kg.
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
+**(ii)** $p_H=p_{sat}(43\ °\text{C})$: Table 1 rows 40 °C ([7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa) and 45 °C ([9.59]{.lookup t="water-sat" row="45" col="p_MPa" x="1000"} kPa), $7.38+0.6\,(9.59-7.38)=8.71$ kPa. $p_L=p_{sat}(9\ °\text{C})$: rows 5 °C ([0.87]{.lookup t="water-sat" row="5" col="p_MPa" x="1000"} kPa) and 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa), $0.87+0.8\,(1.23-0.87)=1.158$ kPa.
+:::
 
-$\dot m_3=0.5\times0.495/0.651=0.3802$ kg/s; $\dot m_5=0.1198$ kg/s.
-$q_g=-19.39+322.06+85.50=388.2$ kW; $q_e=0.1198\,(2517.38-180.07)=280.0$ kW; **COP = 0.721**.
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+Chart 4: $x_1=$ [0.495]{.lookup t="chart4"} (9 °C line × 28 °C; Dühring 48.4 %, CoolProp 47.7 %); $x_3=$ [0.651]{.lookup t="chart4"} (43 °C line × 100 °C; Dühring 64.7 %, CoolProp 65.0 %).
+:::
 
-**(iii)** $h_2=-122$ kJ/kg (49.5 %, 50 °C; correlation −122; CoolProp $\Delta h=47.3$, chart 49). Duty $0.5\times49=24.5$ kW. $q_g=-19.39+322.06+61.00=363.7$ kW; **COP = 280.0/363.7 = 0.770**. ($h_4=-51-1.3152\times49=-115.4$ kJ/kg, clear of the line, which is at about −147 kJ/kg at 65.1 %: the high condensing temperature keeps the concentration low.)
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
+$\dot m_3=0.5\times0.495/0.651=0.3802$ kg/s; $\dot m_5=0.5-0.3802=0.1198$ kg/s.
+:::
 
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+Chart 5: $h_1=$ [−171]{.lookup t="chart5"} kJ/kg (49.5 %, 28 °C; correlation −171), $h_3=$ [−51]{.lookup t="chart5"} kJ/kg (65.1 %, 100 °C; correlation −52). Water: $h_5=2688$ (0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C); $h_6=h_f(43\ °\text{C})$: rows 40 °C ([167.53]{.lookup t="water-sat" row="40" col="h_liq_kJ_kg"}) and 45 °C ([188.43]{.lookup t="water-sat" row="45" col="h_liq_kJ_kg"}), $167.53+0.6\,(188.43-167.53)=180.07$; $h_7=h_g(9\ °\text{C})$: rows 5 °C ([2510.06]{.lookup t="water-sat" row="5" col="h_vap_kJ_kg"}) and 10 °C ([2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"}), $2510.06+0.8\,(2519.21-2510.06)=2517.38$ kJ/kg.
+:::
+
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-19.39+322.06+85.50=388.2$ kW; $q_e=0.1198\,(2517.38-180.07)=280.0$ kW; **COP = 0.721**.
+:::
+
+::: {.step title="Step 7. With a heat exchanger"}
+::: hint
+Chart 5: $h_2$ at ($x_1$, $T_2$). Flows and $q_e$ do not change; $q_g$ (and $q_a$) fall by the exchanger duty $\dot m_1(h_2-h_1)$. Outlet of the concentrated solution: $h_4=h_3-(\dot m_1/\dot m_3)(h_2-h_1)$. See the [heat-exchanger mini-example](#m-mini-absorption-hx).
+:::
+**(iii)** $h_2=$ [−122]{.lookup t="chart5"} kJ/kg (49.5 %, 50 °C; correlation −122; CoolProp $\Delta h=47.3$, chart 49). Duty $0.5\times49=24.5$ kW. $q_g=-19.39+322.06+61.00=363.7$ kW; **COP = 280.0/363.7 = 0.770**. ($h_4=-51-1.3152\times49=-115.4$ kJ/kg, clear of the line, which is at about [−147]{.lookup t="chart5"} kJ/kg at 65.1 %: the high condensing temperature keeps the concentration low.)
+:::
+
+:::
+
+::: answer
 **Answer: COP 1.84 (Carnot), 0.721 (real), 0.770 (with heat exchanger).**
+:::
 
 ### AB1-C: LiBr heat rates (the "aqua pump" problem)
 
 > **TRY 8.6** `[PP 16-17 Q7(b), 20]` The operating temperatures of a lithium bromide-water absorption system are as: Generator $100^\circ\mathrm{C}$, condenser $34^\circ\mathrm{C}$, evaporator $7^\circ\mathrm{C}$, absorber $28^\circ\mathrm{C}$. Draw the schematic/block diagram of the system and calculate the following: (i) The heat supplied to the generator. (ii) The heat rejected at the condenser and absorber. (iii) The cooling effect. (iv) The coefficient of performance of the cycle. The mass flow rate delivered by the aqua pump is 0.58 kg/s.
 
-**Solution 8.6** **[TUTOR-GENERATED]** (Ameen Ex. 5.1 is the same problem with 35/5/30 °C and 0.4 kg/s, solved there on a different chart.) The "aqua pump" is the solution pump. No heat exchanger: draw Fig. 6 without it (1 ≡ 2, 3 ≡ 4), with $T_G=100$ °C, $T_C=34$ °C, $T_E=7$ °C, $T_a=28$ °C and $\dot m_1=0.58$ kg/s.
+**Solution 8.6** **[TUTOR-GENERATED]** The six steps of [§8.5](#absorption-method), without a heat exchanger; this is the model answer for the heat-rate family. Work it step by step; open a hint if stuck.
 
-*Pressures* (Table 1): $p_H=p_{sat}(34\ °\text{C})=5.35$ kPa, $p_L=p_{sat}(7\ °\text{C})=1.014$ kPa.
+::: {.problem #sol-8-6}
 
-*Concentrations* (Chart 4): $x_1=0.51$ (7 °C line × 28 °C solution; Dühring 49.8 %, CoolProp 49.3 %); $x_3=0.69$ (34 °C line × 100 °C solution; Dühring 69.0 %, CoolProp 69.5 %).
+::: {.step title="Step 1. Sketch"}
+::: hint
+Draw Fig. 6 without the heat exchanger (1 ≡ 2, 3 ≡ 4) and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. See [the six-step method](#absorption-method).
+:::
+(Ameen Ex. 5.1 is the same problem with 35/5/30 °C and 0.4 kg/s, solved there on a different chart.) The "aqua pump" is the solution pump. No heat exchanger: draw Fig. 6 without it (1 ≡ 2, 3 ≡ 4), with $T_G=100$ °C, $T_C=34$ °C, $T_E=7$ °C, $T_a=28$ °C and $\dot m_1=0.58$ kg/s.
+:::
 
-*Enthalpies:* Chart 5: $h_1=-176$ kJ/kg (51 %, 28 °C; correlation −176), $h_3=-53$ kJ/kg (69 %, 100 °C; correlation −52). Water: $h_5=2688$, $h_6=h_f(34\ °\text{C})=142.45$, $h_7=h_g(7\ °\text{C})=2513.72$ kJ/kg.
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
+*Pressures* (Table 1): $p_H=p_{sat}(34\ °\text{C})$: rows 30 °C ([4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa) and 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa), $4.25+0.8\,(5.63-4.25)=5.35$ kPa; $p_L=p_{sat}(7\ °\text{C})$: rows 5 °C ([0.87]{.lookup t="water-sat" row="5" col="p_MPa" x="1000"} kPa) and 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa), $0.87+0.4\,(1.23-0.87)=1.014$ kPa.
+:::
 
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+*Concentrations* (Chart 4): $x_1=$ [0.51]{.lookup t="chart4"} (7 °C line × 28 °C solution; Dühring 49.8 %, CoolProp 49.3 %); $x_3=$ [0.69]{.lookup t="chart4"} (34 °C line × 100 °C solution; Dühring 69.0 %, CoolProp 69.5 %).
+:::
+
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
 *Mass balances:* $\dot m_3=0.58\times0.51/0.69=0.4287$ kg/s; $\dot m_5=0.58-0.4287=0.1513$ kg/s.
+:::
 
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+*Enthalpies:* Chart 5: $h_1=$ [−176]{.lookup t="chart5"} kJ/kg (51 %, 28 °C; correlation −176), $h_3=$ [−53]{.lookup t="chart5"} kJ/kg (69 %, 100 °C; correlation −52). Water: $h_5=2688$ (0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C); $h_6=h_f(34\ °\text{C})$: rows 30 °C ([125.73]{.lookup t="water-sat" row="30" col="h_liq_kJ_kg"}) and 35 °C ([146.63]{.lookup t="water-sat" row="35" col="h_liq_kJ_kg"}), $125.73+0.8\,(146.63-125.73)=142.45$; $h_7=h_g(7\ °\text{C})$: rows 5 °C ([2510.06]{.lookup t="water-sat" row="5" col="h_vap_kJ_kg"}) and 10 °C ([2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"}), $2510.06+0.4\,(2519.21-2510.06)=2513.72$ kJ/kg.
+:::
+
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
 **(i)** $q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-22.72+406.71+102.08=$ **486.1 kW**
 
 **(ii)** $q_c=\dot m_5(h_5-h_6)=0.1513\times2545.55=$ **385.2 kW**; $q_a=\dot m_5h_7+\dot m_3h_3-\dot m_1h_1=380.34-22.72+102.08=$ **459.7 kW**
@@ -447,29 +740,129 @@ $q_g=-19.39+322.06+85.50=388.2$ kW; $q_e=0.1198\,(2517.38-180.07)=280.0$ kW; **C
 **(iii)** $q_e=\dot m_5(h_7-h_6)=0.1513\times2371.27=$ **358.8 kW** (102 TR)
 
 **(iv)** $COP=358.8/486.1=$ **0.738**. Check: $486.1+358.8=385.2+459.7=844.9$ kW.
+:::
+
+:::
+
+::: answer
+**Answer: $q_g$ = 486.1 kW; $q_c$ = 385.2 kW, $q_a$ = 459.7 kW; cooling effect 358.8 kW (102 TR); COP = 0.738.**
+:::
 
 (At 69 % the concentrated solution is close to the crystallization limit, as in part (iv) of Solution 8.2: without a heat exchanger it stays hot until it is throttled into the absorber and is safe, but a solution heat exchanger would cool it past the crystallization line unless the condensing temperature were raised.)
 
 > **TRY 8.7** `[PP 18-19 Q6(b), 18]` The operating temperatures of a lithium bromide-water absorption system are as: Generator $100^\circ\mathrm{C}$, condenser $36^\circ\mathrm{C}$, evaporator $6^\circ\mathrm{C}$, absorber $28^\circ\mathrm{C}$. Draw the schematic/block diagram of the system and calculate the followings: (i) The heat supplied to the generator (ii) The heat reflected at the condenser (iii) The coefficient of performance of the cycle. The mass flow rate delivered by the aqua pump is 0.45 kg/s.
 
-**Solution 8.7** **[TUTOR-GENERATED]** As Solution 8.6 with 36 °C / 6 °C and 0.45 kg/s ("reflected" means rejected). $p_H=5.98$ kPa, $p_L=0.942$ kPa. Chart 4: $x_1=0.515$ (6 °C line × 28 °C; Dühring 50.5 %, CoolProp 50.1 %), $x_3=0.683$ (36 °C line × 100 °C; Dühring 68.1 %, CoolProp 68.5 %). Chart 5: $h_1=-177$ kJ/kg (correlation −177), $h_3=-53$ kJ/kg (correlation −52). Water: $h_6=h_f(36\ °\text{C})=150.81$, $h_7=h_g(6\ °\text{C})=2511.89$ kJ/kg.
+**Solution 8.7** **[TUTOR-GENERATED]** As Solution 8.6 with 36 °C / 6 °C and 0.45 kg/s ("reflected" means rejected). Work it step by step; open a hint if stuck.
 
-$\dot m_3=0.45\times0.515/0.683=0.3393$ kg/s; $\dot m_5=0.1107$ kg/s.
+::: {.problem #sol-8-7}
 
-**(i)** $q_g=-17.98+297.53+79.65=$ **359.2 kW**; **(ii)** $q_c=0.1107\times2537.19=$ **280.8 kW**; cooling $q_e=0.1107\times2361.08=261.3$ kW; **(iii)** **COP = 261.3/359.2 = 0.728**.
+::: {.step title="Step 1. Sketch"}
+::: hint
+Draw Fig. 6 without the heat exchanger (1 ≡ 2, 3 ≡ 4) and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. See [the six-step method](#absorption-method).
+:::
+Fig. 6 without the heat exchanger (1 ≡ 2, 3 ≡ 4), with $T_G=100$ °C, $T_C=36$ °C, $T_E=6$ °C, $T_a=28$ °C and $\dot m_1=0.45$ kg/s.
+:::
+
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
+$p_H=p_{sat}(36\ °\text{C})$: Table 1 rows 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa) and 40 °C ([7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa), $5.63+0.2\,(7.38-5.63)=5.98$ kPa; $p_L=p_{sat}(6\ °\text{C})$: rows 5 °C ([0.87]{.lookup t="water-sat" row="5" col="p_MPa" x="1000"} kPa) and 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa), $0.87+0.2\,(1.23-0.87)=0.942$ kPa.
+:::
+
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+Chart 4: $x_1=$ [0.515]{.lookup t="chart4"} (6 °C line × 28 °C; Dühring 50.5 %, CoolProp 50.1 %), $x_3=$ [0.683]{.lookup t="chart4"} (36 °C line × 100 °C; Dühring 68.1 %, CoolProp 68.5 %).
+:::
+
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
+$\dot m_3=0.45\times0.515/0.683=0.3393$ kg/s; $\dot m_5=0.45-0.3393=0.1107$ kg/s.
+:::
+
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+Chart 5: $h_1=$ [−177]{.lookup t="chart5"} kJ/kg (51.5 %, 28 °C; correlation −177), $h_3=$ [−53]{.lookup t="chart5"} kJ/kg (68.3 %, 100 °C; correlation −52). Water: $h_5=2688$ (0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C); $h_6=h_f(36\ °\text{C})$: rows 35 °C ([146.63]{.lookup t="water-sat" row="35" col="h_liq_kJ_kg"}) and 40 °C ([167.53]{.lookup t="water-sat" row="40" col="h_liq_kJ_kg"}), $146.63+0.2\,(167.53-146.63)=150.81$; $h_7=h_g(6\ °\text{C})$: rows 5 °C ([2510.06]{.lookup t="water-sat" row="5" col="h_vap_kJ_kg"}) and 10 °C ([2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"}), $2510.06+0.2\,(2519.21-2510.06)=2511.89$ kJ/kg.
+:::
+
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
+**(i)** $q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-17.98+297.53+79.65=$ **359.2 kW**; **(ii)** $q_c=\dot m_5(h_5-h_6)=0.1107\times2537.19=$ **280.8 kW**; cooling $q_e=\dot m_5(h_7-h_6)=0.1107\times2361.08=261.3$ kW; **(iii)** **COP = 261.3/359.2 = 0.728**.
+:::
+
+:::
+
+::: answer
+**Answer: $q_g$ = 359.2 kW; $q_c$ = 280.8 kW; COP = 0.728.**
+:::
 
 > **TRY 8.8** `[PP 22-23 Q7(a), 15]` The operating temperatures of a lithium bromide-water absorption system are as: Generator $100^\circ\mathrm{C}$, condenser $36^\circ\mathrm{C}$, evaporator $6^\circ\mathrm{C}$, absorber $28^\circ\mathrm{C}$. Draw the schematic/block diagram of the system and calculate the followings: (i) The heat supplied to the generator (ii) The heat rejected at the condenser (iii) The coefficient of performance of the cycle. The mass flow rate delivered by the aqua pump is 0.42 kg/s.
 
-**Solution 8.8** **[TUTOR-GENERATED]** TRY 8.7 with 0.42 kg/s: every flow and heat rate scales by 0.42/0.45, and the COP does not change (states, $x$ and $h$ are the same: $x_1=0.515$, $x_3=0.683$, $h_1=-177$, $h_3=-53$, $h_6=150.81$, $h_7=2511.89$ kJ/kg; chart checks as in Solution 8.7: Dühring 50.5 % and 68.1 %, CoolProp 50.1 % and 68.5 %, correlation −177 and −52 kJ/kg).
+**Solution 8.8** **[TUTOR-GENERATED]** As Solution 8.7 with $\dot m_1=0.42$ kg/s. Work it step by step; open a hint if stuck.
 
-$\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
+::: {.problem #sol-8-8}
 
-**(i)** $q_g=-16.78+277.69+74.34=$ **335.2 kW**; **(ii)** $q_c=0.1033\times2537.19=$ **262.1 kW**; cooling $0.1033\times2361.08=243.9$ kW; **(iii)** **COP = 0.728**.
+::: {.step title="Step 1. Sketch"}
+::: hint
+Draw Fig. 6 without the heat exchanger (1 ≡ 2, 3 ≡ 4) and write $T_G$, $T_C$, $T_E$, $T_a$ and the pump flow $\dot m_1$ on it. See [the six-step method](#absorption-method).
+:::
+TRY 8.7 with 0.42 kg/s: every flow and heat rate scales by 0.42/0.45, and the COP does not change (states, $x$ and $h$ are the same). Fig. 6 without the heat exchanger, with $T_G=100$ °C, $T_C=36$ °C, $T_E=6$ °C, $T_a=28$ °C and $\dot m_1=0.42$ kg/s.
+:::
+
+::: {.step title="Step 2. Pressures"}
+::: hint
+Water table (Table 1, R718): $p_H=p_{sat}(T_C)$ (generator, condenser), $p_L=p_{sat}(T_E)$ (evaporator, absorber). Between two 5 °C rows, interpolate linearly: [water-table mini-example](#m-mini-absorption-water).
+:::
+As Solution 8.7: $p_H=p_{sat}(36\ °\text{C})$: Table 1 rows 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa) and 40 °C ([7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa), $5.63+0.2\,(7.38-5.63)=5.98$ kPa; $p_L=p_{sat}(6\ °\text{C})$: rows 5 °C ([0.87]{.lookup t="water-sat" row="5" col="p_MPa" x="1000"} kPa) and 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa), $0.87+0.2\,(1.23-0.87)=0.942$ kPa.
+:::
+
+::: {.step title="Step 3. Concentrations"}
+::: hint
+Chart 4: $x_1$ where the horizontal line of the water temperature $T_E$ meets the solution line $T_a$; $x_3$ where the $T_C$ line meets the $T_G$ line. See [reading the LiBr charts](#absorption-charts) and Example 8.2.
+:::
+Chart 4: $x_1=$ [0.515]{.lookup t="chart4"}, $x_3=$ [0.683]{.lookup t="chart4"} (chart checks as in Solution 8.7: Dühring 50.5 % and 68.1 %, CoolProp 50.1 % and 68.5 %).
+:::
+
+::: {.step title="Step 4. Mass balances"}
+::: hint
+LiBr is conserved in the generator and the vapour carries none: $\dot m_3=\dot m_1x_1/x_3$; refrigerant $\dot m_5=\dot m_1-\dot m_3$. See the [mass-balance mini-example](#m-mini-absorption-mass).
+:::
+$\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.42-0.3167=0.1033$ kg/s.
+:::
+
+::: {.step title="Step 5. Enthalpies"}
+::: hint
+Chart 5: $h_1$ at ($x_1$, $T_a$), $h_3$ at ($x_3$, $T_G$) (see [reading the LiBr charts](#absorption-charts)). Water: $h_5=2688$ kJ/kg (superheated, §8.5), $h_6=h_f(T_C)$, $h_7=h_g(T_E)$ from Table 1, interpolated between rows: [water-table mini-example](#m-mini-absorption-water).
+:::
+Chart 5: $h_1=$ [−177]{.lookup t="chart5"}, $h_3=$ [−53]{.lookup t="chart5"} kJ/kg (correlation −177 and −52 kJ/kg). Water: $h_5=2688$ (0.06-bar block of the superheated table, midway between [2650.1]{.lookup t="water-sh" row="0.06;80" col="h_kJ_kg"} at 80 °C and [2726.0]{.lookup t="water-sh" row="0.06;120" col="h_kJ_kg"} at 120 °C); $h_6=h_f(36\ °\text{C})=150.81$ and $h_7=h_g(6\ °\text{C})=2511.89$ kJ/kg, interpolated as in Solution 8.7 between rows 35 °C ([146.63]{.lookup t="water-sat" row="35" col="h_liq_kJ_kg"}) and 40 °C ([167.53]{.lookup t="water-sat" row="40" col="h_liq_kJ_kg"}), and 5 °C ([2510.06]{.lookup t="water-sat" row="5" col="h_vap_kJ_kg"}) and 10 °C ([2519.21]{.lookup t="water-sat" row="10" col="h_vap_kJ_kg"}).
+:::
+
+::: {.step title="Step 6. Heat rates and COP"}
+::: hint
+$q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_2$ (no heat exchanger: $h_2=h_1$), $q_e=\dot m_5(h_7-h_6)$, $q_c=\dot m_5(h_5-h_6)$, $q_a=\dot m_5h_7+\dot m_3h_4-\dot m_1h_1$; $COP=q_e/q_g$. See the [heat-rate mini-example](#m-mini-absorption-cop).
+:::
+**(i)** $q_g=\dot m_3h_3+\dot m_5h_5-\dot m_1h_1=-16.78+277.69+74.34=$ **335.2 kW**; **(ii)** $q_c=\dot m_5(h_5-h_6)=0.1033\times2537.19=$ **262.1 kW**; cooling $\dot m_5(h_7-h_6)=0.1033\times2361.08=243.9$ kW; **(iii)** **COP = 0.728**.
+:::
+
+:::
+
+::: answer
+**Answer: $q_g$ = 335.2 kW; $q_c$ = 262.1 kW; COP = 0.728.**
+:::
 
 ### AB2: theory
 
 > **TRY 8.9** `[PP 21-22 Q6(b), 18]` Describe an aqua-ammonia vapor absorption refrigeration system with necessary schematic diagram. Hence, analyze the benefit of using two heat exchangers; one after the pump and the another before the expansion valve.
 
+::: {.answer label="Show answer"}
 **Solution 8.9** **[FROM SOURCE: Aloke pp.4–6, 77–81; Kanak pp.3–4, 44–47; Ameen §5.2]** Draw Fig. 3 (about a third of the marks): generator with the analyzer on top, rectifier, condenser, receiver, liquid–vapour heat exchanger, expansion valve, evaporator, absorber, pump, solution heat exchanger, throttle valve; mark $Q_g$ in, $Q_c$, $Q_r$, $Q_a$ out, $Q_e$ in, the strong and weak solutions and the high/low pressure sides.
 
 *Description.*
@@ -487,13 +880,17 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 - **After the pump (solution heat exchanger):** the cold strong solution (absorber temperature) is preheated by the hot weak solution (generator temperature) on its way to the generator, and the weak solution is cooled before it enters the absorber. Heat that would be rejected in the absorber is recycled to the generator: **$Q_g$ falls, $Q_a$ falls by the same amount, the COP rises** (0.73 → 0.78 in the LiBr example, Solution 8.2), and the boiler, absorber and cooling tower can be smaller. A cooler weak solution also absorbs vapour better.
 - **Before the expansion valve (liquid–vapour heat exchanger):** the warm liquid NH$_3$ from the receiver is subcooled by the cold vapour leaving the evaporator. Less liquid flashes in the expansion valve, so **the refrigerating effect per kg rises**; for the same load less NH$_3$ must be generated, so $Q_g$ and the pump flow fall and the COP rises. The vapour is slightly superheated, so no liquid is carried into the absorber.
 - Both save running cost at the price of extra first cost; the number of exchangers is chosen by balancing the two.
+:::
 
 > **TRY 8.10** `[PP 23-24 Q3(a), 15]` Describe an aqua-ammonia vapor absorption refrigeration system with necessary schematic diagram. Hence, analyze the benefit of using two heat exchangers; one after the pump and the another before the expansion valve.
 
+::: {.answer label="Show answer"}
 **Solution 8.10** **[FROM SOURCE: Aloke pp.4–6, 77–81]** A verbatim repeat of TRY 8.9 (here for 15 marks): give Solution 8.9 with Fig. 3, trimming the description to about seven points and the benefits to the two bullet groups.
+:::
 
 > **TRY 8.11** `[PP 18-19 Q6(a), 17]` Describe a vapor absorption refrigeration system with proper schematic diagram. Hence, discuss the function of generator, absorber, heat exchangers, analyzer and rectifier.
 
+::: {.answer label="Show answer"}
 **Solution 8.11** **[FROM SOURCE: Aloke pp.77–81; Kanak pp.44–47; Ameen §5.2]** Draw Fig. 3 and describe it as in Solution 8.9 (points 1–7). Then the functions:
 
 - **Generator:** a shell partly filled with strong solution, kept at a constant level over submerged steam, hot-gas or hot-water tubes; external heat (process or waste steam, solar-heated water) drives NH$_3$ vapour out of the solution at the high pressure.
@@ -501,9 +898,11 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 - **Heat exchangers:** (a) the solution heat exchanger between absorber and generator heats the cool strong solution going to the generator and cools the hot weak solution returning to the absorber, saving generator heat and absorber cooling; (b) a second heat exchanger subcools the liquid refrigerant entering the expansion valve with the cold evaporator vapour, increasing the refrigerating effect per kg.
 - **Analyzer:** built on the generator or separately; the strong aqua from the absorber and the reflux from the rectifier enter at the top and flow down to the generator, cooling the rising vapour so most of its water vapour condenses; the solution is preheated, so less generator heat is needed.
 - **Rectifier:** a water-cooled condenser-like exchanger after the analyzer; it cools the vapour further so the residual water vapour condenses (40–50 °C is enough) and returns to the analyzer, leaving dehydrated NH$_3$ to flow to the condenser.
+:::
 
 > **TRY 8.12** `[PP 12-13 Q4(a), 20]` Make brief comparisons between (i) vapour compression vs. vapour absorption chillers (ii) LiBr vs. NH$_3$ absorption systems.
 
+::: {.answer label="Show answer"}
 **Solution 8.12** **[FROM SOURCE: Aloke pp.7, 84–85; Kanak pp.5, 48–49; Ameen §5.3–5.4]** About ten points each, as tables (the two tables of §8.6).
 
 *(i) Vapour compression vs vapour absorption chillers.*
@@ -534,9 +933,11 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 | Crystallization risk | No crystallization |
 | Non-toxic, non-flammable | NH$_3$ toxic: not used in comfort air conditioning |
 | Low-temperature heat (80–120 °C) is enough | Needs a hotter generator |
+:::
 
 > **TRY 8.13** `[PP 11-12 Q8(b), 5]` What are the disadvantages of Lithium-bromide-water absorption system of refrigeration?
 
+::: {.answer label="Show answer"}
 **Solution 8.13** **[FROM SOURCE: Aloke pp.84–85; Ameen §5.3]** (one point per mark)
 
 1. Water is the refrigerant, so temperatures below about 3 °C cannot be reached: air conditioning only.
@@ -544,6 +945,7 @@ $\dot m_3=0.42\times0.515/0.683=0.3167$ kg/s; $\dot m_5=0.1033$ kg/s.
 3. LiBr is very corrosive (especially with air present): corrosion inhibitors, and a generator temperature limit of about 120 °C.
 4. Crystallization of LiBr at high concentration or low temperature (low condensing temperature, power failure) can block the solution lines.
 5. As an absorption plant: low COP, high first cost, large size, more cooling water and a bigger cooling tower than a compression chiller.
+:::
 
 <!-- pagebreak -->
 

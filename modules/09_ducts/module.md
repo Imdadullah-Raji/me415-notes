@@ -5,7 +5,7 @@
 |---|---|
 | **Where it appears** | Six papers: Section A Q2(c) 2011-12, Q3(c) 2012-13, Q3(a) 2013-14, Q2(a) 2020-21, Q2(a) 2021-22, Q2(b) 2022-23. Not set in 2015-16 to 2018-19 or in 2023-24. |
 | **Share of all marks** | 3.6% (110 of 3055 weighted marks, 6 parts), 15–20 marks when it is set (5.4–7.3% of that paper). One archetype only: equal-friction sizing of a small network plus the static (fan) pressure of the index run, with a layout figure given in the paper. |
-| **Time** | core 2 h (§9.2–9.4, §9.7 and Solutions 6.1 and 6.4), full 3.5 h (all six solutions and the theory) |
+| **Time** | core 2 h (§9.2–9.4, §9.7 and Solutions 9.1 and 9.4), full 3.5 h (all six solutions and the theory) |
 | **Sources** | Arif pp.77a–93b; Kanak pp.129–143; Ameen §15.2–15.4 (Ex. 15.1–15.3); Data Book Chart 6 and Table 7 |
 
 **How it has been asked:**
@@ -117,7 +117,7 @@ In the past papers only the supply side is given. "The static pressure in the in
 >
 > Strictly, the duct and fitting losses are losses of total pressure, and the index-run loss is the total pressure the fan must supply to that run. The course calls it "the static pressure in the index run" (Ameen's wording); the grille loss given in the paper is taken to include the discharge into the room. Write "Static pressure required at the fan outlet = index-run loss = … Pa" and you have answered both wordings.
 
-## 9.3 Friction loss and the friction chart ★
+## 9.3 Friction loss and the friction chart ★ {#duct-friction-chart}
 
 **The friction equation.** For a round duct, the Darcy–Weisbach equation gives
 $$\frac{\Delta p_f}{L}=\frac{f}{D}\,\frac{\rho V^2}{2}\qquad(\text{Pa/m},\ D \text{ in m})$$
@@ -146,8 +146,8 @@ Any two of the four quantities ($\dot V$, $D$, $V$, $\Delta p/L$) fix a point, a
 | Flow (L/s) | Velocity (m/s) | $D=\sqrt{4\dot V/\pi V}$ (mm) | Chart reading (Pa/m) | Equation (Pa/m) | Used in |
 |---|---|---|---|---|---|
 | 2000 | 8 | 564 | 1.15 (slides) | 1.08 | Example 9.2 |
-| 3000 | 8 | 691 | 0.85 (slides: 0.9) | 0.85 | Solutions 6.4, 6.5 |
-| 1500 | 8 | 489 | 1.3 | 1.29 | Solutions 6.1, 6.2 |
+| 3000 | 8 | 691 | 0.85 (slides: 0.9) | 0.85 | Solutions 9.4, 9.5 |
+| 1500 | 8 | 489 | 1.3 | 1.29 | Solutions 9.1, 9.2 |
 | 1500 | 10 | 437 | 2.2 | 2.24 | Solution 9.3 |
 | 3500 | 8 | 746 | 0.8 | 0.77 | Solution 9.6 |
 | 8000 | 8 | 1128 | 0.48 (Ameen) | 0.47 | Example 9.3 |
@@ -158,7 +158,19 @@ Readings within about 5% of the equation are as good as the chart can be read, e
 >
 > Every diameter is rounded **up** to the next standard size (25 mm steps). A rounded-up duct has a lower velocity and a lower friction rate than the design rate, so (a) the velocity limit is always met, and (b) taking every section's loss as (design rate × length), as the course does, slightly **overestimates** the loss: a safe fan pressure. For example, the 500 mm first duct of Solution 9.1 actually runs at 1.15 Pa/m, not 1.3. Do not round down: the velocity limit would be broken (see the TRAP in Solution 9.1).
 
-## 9.4 Dynamic losses in fittings ★
+::: {.mini #m-mini-duct-first}
+**Mini-example: first section and design friction rate.** The first section carries 1.0 m³/s; the velocity must not exceed 6 m/s; standard round ducts in 25 mm steps.
+
+$D_{min}=\sqrt{4(1.0)/(\pi\times6)}=0.461$ m = 461 mm → **475 mm** (rounded up), $V=1.0/(\pi\times0.475^2/4)=5.64$ m/s ≤ 6 ✓. Chart 6 at 1000 L/s and 6 m/s: **Δp/L ≈ [0.8]{.lookup t="chart6"} Pa/m** (equation 0.81). This rate is kept for every section.
+:::
+
+::: {.mini #m-mini-duct-size}
+**Mini-example: sizing a section at the design rate.** Design rate 0.8 Pa/m (the mini-example above). Size a 0.4 m³/s section 4 m long and a 0.6 m³/s section 5 m long.
+
+On Chart 6, along the horizontal line at 0.8 Pa/m: 400 L/s meets it at $D\approx$ [327]{.lookup t="chart6"} mm → **350 mm**, $V=0.4/(\pi\times0.35^2/4)=4.16$ m/s, loss $0.8\times4=3.20$ Pa; 600 L/s at $D\approx$ [380]{.lookup t="chart6"} mm → **400 mm**, $V=4.77$ m/s, loss $0.8\times5=4.00$ Pa. The velocities fall towards the outlets ✓.
+:::
+
+## 9.4 Dynamic losses in fittings ★ {#duct-fittings}
 
 "In the flow through ducts, whenever the direction or velocity changes the pressure loss is greater than that in the case of uninterrupted flow. The additional loss, in excess of the straight duct friction loss, is the **dynamic loss**" [Arif p.92a; Ameen §15.2]. It is caused
 
@@ -211,12 +223,31 @@ So a 5-piece 90° elbow with $r/D=1$ has $C_o=0.33\times1.00=0.33$; a 45° one, 
 >
 > The data book heads the SD5-10 columns $\dot V_b/\dot V_c$ and $\dot V_s/\dot V_c$ (the dot means **flow-rate** ratio), as in the ASHRAE original, where the blank cells are the impossible region where the branch would run much faster than the main. Ameen's Table 15.5 prints the same numbers headed $v_b/v_c$ (velocity ratio), and the course (Ameen Ex. 15.3, the slides, the Full note) reads them that way. The examiners' solutions follow the course, so this module does too; write one line, "SD5-10 read with the velocity ratio $V_b/V_c$ (course convention, Ameen Table 15.5)". The two readings can differ a lot for a branch: in Solution 9.6 the flow-ratio reading gives $C_b\approx0.85$ instead of 0.56.
 
+::: {.mini #m-mini-duct-tee}
+**Mini-example: a tee coefficient from Table 7 (SD5-10).** A branch of 300 mm leaves a 450 mm common section; branch velocity 4.5 m/s, common velocity 6.0 m/s. Find the branch loss.
+
+$V_b/V_c=4.5/6.0=0.75$, $A_b/A_c=(300/450)^2=0.44$. Table 7 $C_b$, row 0.4 between columns 0.7 ([0.27]{.lookup t="7-SD5-10-Cb" row="0.4" col="0.7"}) and 0.8 ([0.24]{.lookup t="7-SD5-10-Cb" row="0.4" col="0.8"}): $0.27+(0.24-0.27)\times0.5=0.255$; row 0.5 ([0.36]{.lookup t="7-SD5-10-Cb" row="0.5" col="0.7"}, [0.30]{.lookup t="7-SD5-10-Cb" row="0.5" col="0.8"}): $0.36+(0.30-0.36)\times0.5=0.330$; at 0.44: $C_b=0.255+0.44\times(0.330-0.255)=0.288\approx$ **0.29**. Loss $=C_b\,\rho V_b^2/2=0.29\times0.6\times4.5^2=0.29\times12.15=3.52$ Pa. The straight path is the same with the $C_s$ table, $A_s/A_c$ and $V_s/V_c$.
+:::
+
+::: {.mini #m-mini-duct-elbow}
+**Mini-example: an elbow coefficient from Table 7 (CD3-10).** A 90° pleated elbow on a 400 mm duct at 6 m/s.
+
+400 mm lies between 380 mm ([0.07]{.lookup t="7-CD3-10" row="380" col="Co"}) and 450 mm ([0.06]{.lookup t="7-CD3-10" row="450" col="Co"}): $C_o=0.07-0.01\times\dfrac{400-380}{450-380}=0.067$. $\rho V^2/2=0.6\times6^2=21.6$ Pa; loss $0.067\times21.6=1.45$ Pa.
+:::
+
 **Fixed allowances.** When the paper gives them, use them instead of coefficients:
 
 - a fixed loss per fitting: "elbow and Tee as 10 Pa and 15 Pa" (2020-21, 2021-22, 2022-23; Arif sir's Example 1);
 - a fraction of the duct friction loss: "fittings as one-fifth (one-fourth) that of the duct length" (2013-14; 2011-12 "joints … 1/4"; Arif sir's Example 2). Then fitting loss of a run = fraction × duct loss of that run, i.e. run loss = $(1+\text{fraction})\times$ duct loss + grille.
 
 Use **one** allowance, never both (TRAP in Solution 9.1). Counting, as in the course tables: one **tee** for every junction the run passes through (charged to the section leaving the junction, whether the run goes straight on or turns into the branch), one **elbow** for every bend that is not a take-off, and one **grille** at the outlet.
+
+::: {.mini #m-mini-duct-fixed}
+**Mini-example: fitting allowances on a run.** Fan at A; main A–B (duct loss 4.00 Pa); at B a tee, with a branch B–C (3.20 Pa) to outlet C and the main B–D (4.00 Pa, one corner elbow) to outlet D; grille 25 Pa at each outlet.
+
+- With **elbow 10 Pa, tee 15 Pa**: run A-B-D has 1T + 1E + 1G = 15 + 10 + 25 = 50 Pa, total $4.00+4.00+50=58.00$ Pa; run A-B-C has 1T + 1G = 15 + 25 = 40 Pa, total $4.00+3.20+40=47.20$ Pa.
+- With **fittings one-fifth of the duct loss** instead: A-B-D $8.00\times1.2+25=34.60$ Pa; A-B-C $7.20\times1.2+25=33.64$ Pa.
+:::
 
 ## 9.5 Rectangular and oval ducts: the equivalent diameter
 
@@ -262,7 +293,7 @@ where $R$ is the **static regain factor**, 0.5–0.95 (typically 0.75–0.9): pa
 
 **Dampering and balancing.** In a branched system the air divides so that every run from the fan to an outlet has the **same** total pressure loss. If the runs are sized with different losses, the short (low-loss) runs take more than their design air and the index run less. The cure is a **balancing damper** (volume damper, or a splitter damper at the take-off) in each run with a smaller loss, set to add a resistance equal to (index-run loss − that run's loss). The index run itself needs no damper. Dampers waste fan energy and can make noise, so the static-regain and balanced-pressure methods try to make the excess small by design.
 
-## 9.7 The equal-friction procedure ★
+## 9.7 The equal-friction procedure ★ {#duct-equal-friction}
 
 Every past-paper duct question is answered with the same five steps and the same table [Arif pp.84a–90a; Kanak pp.133–143; Ameen Ex. 15.1–15.3].
 
@@ -281,6 +312,18 @@ The answer table (the course layout, Ameen Table 15.2):
 
 one block of rows per run, each block ending with the run total.
 
+::: {.mini #m-mini-duct-flows}
+**Mini-example: section flows and lengths.** A fan at A feeds a main A–B, 5 m. At B a branch runs 4 m to outlet C (0.4 m³/s); the main runs on 3 m, turns, and drops 2 m to outlet D (0.6 m³/s).
+
+Each section carries everything downstream of it: A–B $0.4+0.6=1.0$ m³/s, 5 m; B–C 0.4 m³/s, 4 m; B–D 0.6 m³/s, $3+2=5$ m (the two legs of the L-shaped section are added; the corner is an elbow, the take-off at B a tee).
+:::
+
+::: {.mini #m-mini-duct-index}
+**Mini-example: index run and dampering.** The two runs of the fitting-allowance mini-example (§9.4) lose 58.00 Pa (A-B-D) and 47.20 Pa (A-B-C).
+
+The index run is the one with the larger loss, A-B-D: the static (fan) pressure required is **58.00 Pa**. Run A-B-C needs a balancing damper of $58.00-47.20=10.80$ Pa. Compare the **totals**, not the lengths.
+:::
+
 > **TIP: velocities and chart readings in the source tables**
 >
 > The slides and notes print the velocities read off the chart at the design friction rate (e.g. 5.75 m/s for 1 m³/s at 1.15 Pa/m). This module prints $V=\dot V/A$ of the **chosen** standard duct, which is exact and is what the tee coefficients need. Both are acceptable; the losses in the fixed-allowance questions do not depend on them.
@@ -297,7 +340,7 @@ one block of rows per run, each block ending with the run total.
 
 *Step 1. Flows.* A–B and B–C carry $1+0.7+0.3=2.0$ m³/s; C–D $0.7+0.3=1.0$; D–E 0.7; D–H 0.3; C–F and F–G 1.0.
 
-*Step 2.* $D_{min}=\sqrt{4(2.0)/(\pi\times8)}=0.564$ m → **575 mm**, $V=2.0/(\pi\times0.575^2/4)=7.70$ m/s ≤ 8 ✓. Chart at 2000 L/s, 8 m/s: the slides read **1.15 Pa/m** (equation 1.08; inside the grey band 1.1–1.15 is a fair reading). This rate is kept for all sections.
+*Step 2.* $D_{min}=\sqrt{4(2.0)/(\pi\times8)}=0.564$ m → **575 mm**, $V=2.0/(\pi\times0.575^2/4)=7.70$ m/s ≤ 8 ✓. Chart at 2000 L/s, 8 m/s: the slides read **[1.15]{.lookup t="chart6"} Pa/m** (equation 1.08; inside the grey band 1.1–1.15 is a fair reading). This rate is kept for all sections.
 
 *Step 3.* At 1.15 Pa/m:
 
@@ -329,7 +372,7 @@ one block of rows per run, each block ending with the run total.
 
 **Solution.** **[TUTOR-GENERATED]** (method of Ameen Ex. 15.3 and Kanak pp.137–139, sized consistently with 25 mm steps and $V=\dot V/A$; Kanak vai's note's slips are in the TRAP below).
 
-*Steps 1–2.* A–B carries $3+3+2=8$ m³/s; $D_{min}=\sqrt{4(8)/(\pi\times8)}=1.128$ m = 1128 mm → **1150 mm**, $V=7.70$ m/s. Chart at 8000 L/s, 8 m/s: **0.48 Pa/m** (equation 0.47).
+*Steps 1–2.* A–B carries $3+3+2=8$ m³/s; $D_{min}=\sqrt{4(8)/(\pi\times8)}=1.128$ m = 1128 mm → **1150 mm**, $V=7.70$ m/s. Chart at 8000 L/s, 8 m/s: **[0.48]{.lookup t="chart6"} Pa/m** (equation 0.47).
 
 *Step 3.* At 0.48 Pa/m (chart diameters 940, 775, 665 mm):
 
@@ -343,10 +386,10 @@ one block of rows per run, each block ending with the run total.
 
 *Step 4. Fittings* (Table 7, SD5-10, course convention; common section = the section upstream of the junction):
 
-- **Tee at B, branch to E** (common A–B): $V_b/V_c=5.97/7.70=0.77$, $A_b/A_c=(800/1150)^2=0.48$. $C_b$ row 0.4: $0.27+(0.24-0.27)\times0.75=0.248$; row 0.5: $0.36+(0.30-0.36)\times0.75=0.315$; at 0.48: $C_b=0.248+0.84(0.315-0.248)=$ **0.30**. Loss $0.30\times21.37=6.41$ Pa.
-- **Tee at B, straight to C** (common A–B): $V_s/V_c=7.05/7.70=0.92$ (use the 0.9 column), $A_s/A_c=(950/1150)^2=0.68$. $C_s$ in the 0.9 column: 0.150 (row 0.6), 0.140 (row 0.7); at 0.68: **0.14**. Loss $0.14\times29.85=4.18$ Pa.
-- **Tee at C, branch to F** (common B–C): $V_b/V_c=5.59/7.05=0.79$, $A_b/A_c=(675/950)^2=0.50$. $C_b$ row 0.5: $0.36+(0.30-0.36)\times0.92=0.305$; row 0.6: $0.49+(0.39-0.49)\times0.92=0.398$; at 0.505: **0.31**. Loss $0.31\times18.74=5.81$ Pa.
-- **Tee at C, straight to D** (common B–C): $V_s/V_c=5.97/7.05=0.85$, $A_s/A_c=(800/950)^2=0.71$. $C_s$ row 0.7: $0.15+(0.14-0.15)\times0.46=0.145$; row 0.8: $0.13+(0.14-0.13)\times0.46=0.135$; at 0.71: **0.14**. Loss $0.14\times21.37=2.99$ Pa.
+- **Tee at B, branch to E** (common A–B): $V_b/V_c=5.97/7.70=0.77$, $A_b/A_c=(800/1150)^2=0.48$. $C_b$ row 0.4 ([0.27]{.lookup t="7-SD5-10-Cb" row="0.4" col="0.7"}, [0.24]{.lookup t="7-SD5-10-Cb" row="0.4" col="0.8"}): $0.27+(0.24-0.27)\times0.75=0.248$; row 0.5 ([0.36]{.lookup t="7-SD5-10-Cb" row="0.5" col="0.7"}, [0.30]{.lookup t="7-SD5-10-Cb" row="0.5" col="0.8"}): $0.36+(0.30-0.36)\times0.75=0.315$; at 0.48: $C_b=0.248+0.84(0.315-0.248)=$ **0.30**. Loss $0.30\times21.37=6.41$ Pa.
+- **Tee at B, straight to C** (common A–B): $V_s/V_c=7.05/7.70=0.92$ (use the 0.9 column), $A_s/A_c=(950/1150)^2=0.68$. $C_s$ in the 0.9 column: [0.150]{.lookup t="7-SD5-10-Cs" row="0.6" col="0.9"} (row 0.6), [0.140]{.lookup t="7-SD5-10-Cs" row="0.7" col="0.9"} (row 0.7); at 0.68: **0.14**. Loss $0.14\times29.85=4.18$ Pa.
+- **Tee at C, branch to F** (common B–C): $V_b/V_c=5.59/7.05=0.79$, $A_b/A_c=(675/950)^2=0.50$. $C_b$ row 0.5 ([0.36]{.lookup t="7-SD5-10-Cb" row="0.5" col="0.7"}, [0.30]{.lookup t="7-SD5-10-Cb" row="0.5" col="0.8"}): $0.36+(0.30-0.36)\times0.92=0.305$; row 0.6 ([0.49]{.lookup t="7-SD5-10-Cb" row="0.6" col="0.7"}, [0.39]{.lookup t="7-SD5-10-Cb" row="0.6" col="0.8"}): $0.49+(0.39-0.49)\times0.92=0.398$; at 0.505: **0.31**. Loss $0.31\times18.74=5.81$ Pa.
+- **Tee at C, straight to D** (common B–C): $V_s/V_c=5.97/7.05=0.85$, $A_s/A_c=(800/950)^2=0.71$. $C_s$ row 0.7 ([0.15]{.lookup t="7-SD5-10-Cs" row="0.7" col="0.8"}, [0.14]{.lookup t="7-SD5-10-Cs" row="0.7" col="0.9"}): $0.15+(0.14-0.15)\times0.46=0.145$; row 0.8 ([0.13]{.lookup t="7-SD5-10-Cs" row="0.8" col="0.8"}, [0.14]{.lookup t="7-SD5-10-Cs" row="0.8" col="0.9"}): $0.13+(0.14-0.13)\times0.46=0.135$; at 0.71: **0.14**. Loss $0.14\times21.37=2.99$ Pa.
 - **Elbow in C–D**: 5-piece, 90°, $r/D=1$ (Table 15.6): $C_o=0.33\times1.00=0.33$. Loss $0.33\times21.37=7.05$ Pa.
 
 *Step 5. Runs* (register 25 Pa):
@@ -389,11 +432,15 @@ Standing conventions, used in every solution unless it says otherwise:
 
 ![Fig. 15: Fig. for Q. No. 2(a), 2021-22: AHU (filter and fan) at the left discharging at A; main A–C 6 m; at C a curved take-off turns up 3 m to outlet G (0.5 m³/s, arrow up); main continues C–D 4 m; at D a curved take-off drops 2 m to outlet F (0.5 m³/s, arrow down); main continues 6 m from D to a corner elbow and drops 2 m to outlet E (0.5 m³/s, arrow down).](figures/015.jpg "w=0.7")
 
-**Solution 9.1** **[TUTOR-GENERATED]** (method of Arif pp.84a–86a; the class solution [Kanak p.143] is corrected in the TRAP below).
+**Solution 9.1** **[TUTOR-GENERATED]** (method of Arif pp.84a–86a; the class solution [Kanak p.143] is corrected in the TRAP below). Equal friction in the five steps of [§9.7](#duct-equal-friction), with the paper's 10/15 Pa fittings. Work it step by step; open a hint if stuck.
 
+::: {.problem #sol-9-1}
+
+::: {.step title="Step 1. Section flows and lengths"}
+::: hint
+Letter the junctions. Each section carries the sum of the outlet flows downstream of it; add the legs of an L-shaped section. See the [section-flows mini-example](#m-mini-duct-flows).
+:::
 *Assumption.* The paper gives two fitting allowances; use **one**. The specific values, elbow 10 Pa and tee 15 Pa, are used here (as in 2020-21 and 2022-23); the one-fifth allowance is Solution 9.2.
-
-*Step 1. Section flows and lengths.*
 
 | Section | Feeds | $\dot V$ (m³/s) | $L$ (m) |
 |---|---|---|---|
@@ -402,30 +449,61 @@ Standing conventions, used in every solution unless it says otherwise:
 | D–E | E | 0.5 | 6 + 2 = 8 |
 | D–F | F | 0.5 | 2 |
 | C–G | G | 0.5 | 3 |
+:::
 
-*Step 2. First section and friction rate.* $D_{min}=\sqrt{\dfrac{4(1.5)}{\pi\times8}}=0.489$ m = 489 mm → **500 mm** (25 mm steps, rounded up). $V_{AC}=\dfrac{1.5}{\pi(0.5)^2/4}=7.64$ m/s ≤ 8 m/s ✓. Chart 6 at 1500 L/s and 8 m/s: **Δp/L ≈ 1.3 Pa/m** (equation 1.29 Pa/m). This is the design friction rate.
+::: {.step title="Step 2. First section and design friction rate"}
+::: hint
+$D_{min}=\sqrt{4\dot V_1/(\pi V_{max})}$, rounded **up** to the next 25 mm; check $V=\dot V/A\le V_{max}$. Chart 6: enter at the first-section flow (L/s) and the velocity limit, read the friction rate. See the [first-section mini-example](#m-mini-duct-first).
+:::
+$D_{min}=\sqrt{\dfrac{4(1.5)}{\pi\times8}}=0.489$ m = 489 mm → **500 mm** (25 mm steps, rounded up). $V_{AC}=\dfrac{1.5}{\pi(0.5)^2/4}=7.64$ m/s ≤ 8 m/s ✓. Chart 6 at 1500 L/s and 8 m/s: **Δp/L ≈ [1.3]{.lookup t="chart6"} Pa/m** (equation 1.29 Pa/m). This is the design friction rate.
+:::
 
-*Step 3. Sizes at 1.3 Pa/m* (Fig. 8 shows the construction):
+::: {.step title="Step 3. Size every section at the design rate"}
+::: hint
+On Chart 6, along the horizontal line at the design rate, read $D$ where each section's flow meets it; round **up** to 25 mm; $V=\dot V/A$; duct loss $\Delta p_f=(\Delta p/L)\times L$. See the [sizing mini-example](#m-mini-duct-size).
+:::
+Sizes at 1.3 Pa/m (Fig. 8 shows the construction):
 
 | Section | $\dot V$ (m³/s) | $D$ at 1.3 Pa/m (mm) | $D$ chosen (mm) | $V=\dot V/A$ (m/s) | $\Delta p/L$ (Pa/m) | $L$ (m) | $\Delta p_f$ (Pa) |
 |---|---|---|---|---|---|---|---|
 | A–C | 1.5 | 489 | **500** | 7.64 | 1.3 | 6 | 7.80 |
-| C–D | 1.0 | 418 | **425** | 7.05 | 1.3 | 4 | 5.20 |
-| D–E | 0.5 | 322 | **325** | 6.03 | 1.3 | 8 | 10.40 |
-| D–F | 0.5 | 322 | **325** | 6.03 | 1.3 | 2 | 2.60 |
-| C–G | 0.5 | 322 | **325** | 6.03 | 1.3 | 3 | 3.90 |
+| C–D | 1.0 | [418]{.lookup t="chart6"} | **425** | 7.05 | 1.3 | 4 | 5.20 |
+| D–E | 0.5 | [322]{.lookup t="chart6"} | **325** | 6.03 | 1.3 | 8 | 10.40 |
+| D–F | 0.5 | [322]{.lookup t="chart6"} | **325** | 6.03 | 1.3 | 2 | 2.60 |
+| C–G | 0.5 | [322]{.lookup t="chart6"} | **325** | 6.03 | 1.3 | 3 | 3.90 |
 
 Velocities fall from 7.64 m/s at the fan to 6.03 m/s at the outlets, all below 8 m/s ✓.
+:::
 
-*Steps 4–5. Runs* (tee 15 Pa at C and at D, elbow 10 Pa at the corner of D–E, grille 25 Pa):
+::: {.step title="Step 4. Fitting and grille losses"}
+::: hint
+One tee for each junction the run passes (on the section leaving it), one elbow for each bend that is not a take-off, one grille at the outlet; use only one of the paper's allowances. See the [fitting-allowance mini-example](#m-mini-duct-fixed).
+:::
+Tee 15 Pa at C and at D, elbow 10 Pa at the corner of D–E, grille 25 Pa:
 
+- A-C-D-E: 2T + 1E + 1G = 30 + 10 + 25 = 65 Pa;
+- A-C-D-F: 2T + 1G = 30 + 25 = 55 Pa;
+- A-C-G: 1T + 1G = 15 + 25 = 40 Pa.
+:::
+
+::: {.step title="Step 5. Index run, fan pressure and dampering"}
+::: hint
+Run loss = Σ duct + Σ fittings + grille for every run from the fan to an outlet. The largest is the index run, and its loss is the static (fan) pressure; dampering of each other run = index-run loss − run loss. See the [index-run mini-example](#m-mini-duct-index).
+:::
 | Run | Duct loss (Pa) | Fittings | Fitting + grille loss (Pa) | Total (Pa) |
 |---|---|---|---|---|
 | A-C-D-E | 7.80 + 5.20 + 10.40 = 23.40 | 2T + 1E + 1G | 30 + 10 + 25 = 65 | **88.40** |
 | A-C-D-F | 7.80 + 5.20 + 2.60 = 15.60 | 2T + 1G | 30 + 25 = 55 | 70.60 |
 | A-C-G | 7.80 + 3.90 = 11.70 | 1T + 1G | 15 + 25 = 40 | 51.70 |
 
-**(i) Duct sizes: A–C 500 mm, C–D 425 mm, D–E, D–F and C–G 325 mm. (ii) Index run A-C-D-E; static pressure required = 88.40 Pa.** Dampering: **A-C-D-F 17.80 Pa, A-C-G 36.70 Pa.** (With the one-fifth allowance instead of 10/15 Pa: 53.08 Pa, Solution 9.2.)
+Index run A-C-D-E (88.40 Pa). Dampering: A-C-D-F 88.40 − 70.60 = 17.80 Pa; A-C-G 88.40 − 51.70 = 36.70 Pa.
+:::
+
+:::
+
+::: answer
+**Answer: (i) Duct sizes: A–C 500 mm, C–D 425 mm, D–E, D–F and C–G 325 mm. (ii) Index run A-C-D-E; static pressure required = 88.40 Pa.** Dampering: **A-C-D-F 17.80 Pa, A-C-G 36.70 Pa.** (With the one-fifth allowance instead of 10/15 Pa: 53.08 Pa, Solution 9.2.)
+:::
 
 > **TRAP: the class solution of this paper [Kanak p.143]**
 >
@@ -438,25 +516,113 @@ Velocities fall from 7.64 m/s at the fan to 6.03 m/s at the outlets, all below 8
 
 ![Fig. 16: Figure for Q. No. 3(a), 2013-14: the same layout as 2021-22. AHU (fan) at the left discharging at A; A–C 6 m; at C a take-off up 3 m to outlet G (0.5 m³/s); C–D 4 m; at D a take-off down 2 m to outlet F (0.5 m³/s); from D 6 m to a corner, then 2 m down to outlet E (0.5 m³/s).](figures/016.png "w=0.7")
 
-**Solution 9.2** **[TUTOR-GENERATED]** As Solution 9.1 (same layout, same 8 m/s and 25 mm steps), so the same friction rate **1.3 Pa/m** and the same sizes: **A–C 500 mm, C–D 425 mm, D–E, D–F, C–G 325 mm**, and the same duct losses. Only the fittings change: fitting loss = duct loss / 5.
+**Solution 9.2** **[TUTOR-GENERATED]** The layout of Solution 9.1, with the fittings taken as one-fifth of the duct loss. Equal friction in the five steps of [§9.7](#duct-equal-friction); work it step by step; open a hint if stuck.
 
+::: {.problem #sol-9-2}
+
+::: {.step title="Step 1. Section flows and lengths"}
+::: hint
+Letter the junctions. Each section carries the sum of the outlet flows downstream of it; add the legs of an L-shaped section. See the [section-flows mini-example](#m-mini-duct-flows).
+:::
+As Solution 9.1 (same layout, same 8 m/s and 25 mm steps), so the same friction rate **1.3 Pa/m** and the same sizes: **A–C 500 mm, C–D 425 mm, D–E, D–F, C–G 325 mm**, and the same duct losses. Only the fittings change: fitting loss = duct loss / 5.
+
+| Section | Feeds | $\dot V$ (m³/s) | $L$ (m) |
+|---|---|---|---|
+| A–C | E, F, G | 1.5 | 6 |
+| C–D | E, F | 1.0 | 4 |
+| D–E | E | 0.5 | 6 + 2 = 8 |
+| D–F | F | 0.5 | 2 |
+| C–G | G | 0.5 | 3 |
+:::
+
+::: {.step title="Step 2. First section and design friction rate"}
+::: hint
+$D_{min}=\sqrt{4\dot V_1/(\pi V_{max})}$, rounded **up** to the next 25 mm; check $V=\dot V/A\le V_{max}$. Chart 6: enter at the first-section flow (L/s) and the velocity limit, read the friction rate. See the [first-section mini-example](#m-mini-duct-first).
+:::
+$D_{min}=\sqrt{\dfrac{4(1.5)}{\pi\times8}}=0.489$ m = 489 mm → **500 mm** (25 mm steps, rounded up). $V_{AC}=\dfrac{1.5}{\pi(0.5)^2/4}=7.64$ m/s ≤ 8 m/s ✓. Chart 6 at 1500 L/s and 8 m/s: **Δp/L ≈ [1.3]{.lookup t="chart6"} Pa/m** (equation 1.29 Pa/m). This is the design friction rate.
+:::
+
+::: {.step title="Step 3. Size every section at the design rate"}
+::: hint
+On Chart 6, along the horizontal line at the design rate, read $D$ where each section's flow meets it; round **up** to 25 mm; $V=\dot V/A$; duct loss $\Delta p_f=(\Delta p/L)\times L$. See the [sizing mini-example](#m-mini-duct-size).
+:::
+Sizes at 1.3 Pa/m:
+
+| Section | $\dot V$ (m³/s) | $D$ at 1.3 Pa/m (mm) | $D$ chosen (mm) | $V=\dot V/A$ (m/s) | $\Delta p/L$ (Pa/m) | $L$ (m) | $\Delta p_f$ (Pa) |
+|---|---|---|---|---|---|---|---|
+| A–C | 1.5 | 489 | **500** | 7.64 | 1.3 | 6 | 7.80 |
+| C–D | 1.0 | [418]{.lookup t="chart6"} | **425** | 7.05 | 1.3 | 4 | 5.20 |
+| D–E | 0.5 | [322]{.lookup t="chart6"} | **325** | 6.03 | 1.3 | 8 | 10.40 |
+| D–F | 0.5 | [322]{.lookup t="chart6"} | **325** | 6.03 | 1.3 | 2 | 2.60 |
+| C–G | 0.5 | [322]{.lookup t="chart6"} | **325** | 6.03 | 1.3 | 3 | 3.90 |
+:::
+
+::: {.step title="Step 4. Fitting and grille losses"}
+::: hint
+Here the paper gives the fittings as a fraction of the duct loss: fitting loss of a run = duct loss of that run / 5; add the grille. See the [fitting-allowance mini-example](#m-mini-duct-fixed).
+:::
+Duct loss of each run, then fittings = duct/5, grille 25 Pa:
+
+- A-C-D-E: 7.80 + 5.20 + 10.40 = 23.40 Pa; fittings 23.40/5 = 4.68 Pa;
+- A-C-D-F: 7.80 + 5.20 + 2.60 = 15.60 Pa; fittings 15.60/5 = 3.12 Pa;
+- A-C-G: 7.80 + 3.90 = 11.70 Pa; fittings 11.70/5 = 2.34 Pa.
+:::
+
+::: {.step title="Step 5. Index run, fan pressure and dampering"}
+::: hint
+Run loss = Σ duct + Σ fittings + grille for every run from the fan to an outlet. The largest is the index run, and its loss is the static (fan) pressure; dampering of each other run = index-run loss − run loss. See the [index-run mini-example](#m-mini-duct-index).
+:::
 | Run | Duct loss (Pa) | Fittings = duct/5 (Pa) | Grille (Pa) | Total (Pa) |
 |---|---|---|---|---|
 | A-C-D-E | 23.40 | 4.68 | 25 | **53.08** |
 | A-C-D-F | 15.60 | 3.12 | 25 | 43.72 |
 | A-C-G | 11.70 | 2.34 | 25 | 39.04 |
 
-**Index run A-C-D-E; static pressure = 23.40 × 1.2 + 25 = 53.08 Pa.** Dampering: A-C-D-F 9.36 Pa, A-C-G 14.04 Pa.
+Index run A-C-D-E: 23.40 × 1.2 + 25 = 53.08 Pa. Dampering: A-C-D-F 53.08 − 43.72 = 9.36 Pa; A-C-G 53.08 − 39.04 = 14.04 Pa.
+:::
+
+:::
+
+::: answer
+**Answer: sizes A–C 500 mm, C–D 425 mm, D–E, D–F, C–G 325 mm. Index run A-C-D-E; static pressure = 23.40 × 1.2 + 25 = 53.08 Pa.** Dampering: A-C-D-F 9.36 Pa, A-C-G 14.04 Pa.
+:::
 
 > **TRY 9.3** `[PP 11-12 Q2(c), 15]` An air handling unit serves 3 rooms in an apartment, as shown in Fig. for Q. 2(c). (i) Size the duct system using equal friction method. Assume maximum allowable air speed = 10 m/s. (ii) Estimate the four pressure required if there is a pressure drop of 20 Pa at each of the outlet grils at E, F and G, and pressure losses due to joints are assumed to be 1/4 of the duct pressure drop.
 
 ![Fig. 17: Fig. for Q. 2(c), 2011-12: AHU (fan) at the left discharging at A; A to C 6 m; at C a take-off rises 3 m to outlet G (the top of the scan, with G's flow, is cut off); C–D 4 m; at D a take-off drops 2 m to outlet F (0.5 m³/s); from D 6 m to a corner, then 2 m down to outlet E (0.5 m³/s).](figures/017.png "w=0.7")
 
-**Solution 9.3** **[TUTOR-GENERATED]** "Four pressure" is a misprint for **fan pressure**. The flow to G is cut off in the scan; it is 0.5 m³/s, as in the same figure in 2013-14 and 2021-22. No size step is stated: 25 mm steps are assumed. As Solution 9.1, with $V_{max}=10$ m/s:
+**Solution 9.3** **[TUTOR-GENERATED]** As Solution 9.1, with $V_{max}=10$ m/s, joints at 1/4 of the duct loss and 20 Pa grilles. Equal friction in the five steps of [§9.7](#duct-equal-friction); work it step by step; open a hint if stuck.
 
+::: {.problem #sol-9-3}
+
+::: {.step title="Step 1. Section flows and lengths"}
+::: hint
+Letter the junctions. Each section carries the sum of the outlet flows downstream of it; add the legs of an L-shaped section. See the [section-flows mini-example](#m-mini-duct-flows).
+:::
+"Four pressure" is a misprint for **fan pressure**. The flow to G is cut off in the scan; it is 0.5 m³/s, as in the same figure in 2013-14 and 2021-22. No size step is stated: 25 mm steps are assumed.
+
+| Section | Feeds | $\dot V$ (m³/s) | $L$ (m) |
+|---|---|---|---|
+| A–C | E, F, G | 1.5 | 6 |
+| C–D | E, F | 1.0 | 4 |
+| D–E | E | 0.5 | 6 + 2 = 8 |
+| D–F | F | 0.5 | 2 |
+| C–G | G | 0.5 | 3 |
+:::
+
+::: {.step title="Step 2. First section and design friction rate"}
+::: hint
+$D_{min}=\sqrt{4\dot V_1/(\pi V_{max})}$, rounded **up** to the next 25 mm; check $V=\dot V/A\le V_{max}$. Chart 6: enter at the first-section flow (L/s) and the velocity limit, read the friction rate. See the [first-section mini-example](#m-mini-duct-first).
+:::
 - $D_{min}=\sqrt{4(1.5)/(\pi\times10)}=0.437$ m = 437 mm → **450 mm**, $V=9.43$ m/s ≤ 10 ✓.
-- Chart 6 at 1500 L/s and 10 m/s: **Δp/L ≈ 2.2 Pa/m** (equation 2.24).
-- At 2.2 Pa/m: 1.0 m³/s → 376 mm → **400 mm** (7.96 m/s); 0.5 m³/s → 289 mm → **300 mm** (7.07 m/s). (C–D is right at a step: 375 mm would be just too small at 2.2 Pa/m; take 400 mm.)
+- Chart 6 at 1500 L/s and 10 m/s: **Δp/L ≈ [2.2]{.lookup t="chart6"} Pa/m** (equation 2.24).
+:::
+
+::: {.step title="Step 3. Size every section at the design rate"}
+::: hint
+On Chart 6, along the horizontal line at the design rate, read $D$ where each section's flow meets it; round **up** to 25 mm; $V=\dot V/A$; duct loss $\Delta p_f=(\Delta p/L)\times L$. See the [sizing mini-example](#m-mini-duct-size).
+:::
+At 2.2 Pa/m: 1.0 m³/s → [376]{.lookup t="chart6"} mm → **400 mm** (7.96 m/s); 0.5 m³/s → [289]{.lookup t="chart6"} mm → **300 mm** (7.07 m/s). (C–D is right at a step: 375 mm would be just too small at 2.2 Pa/m; take 400 mm.)
 
 | Section | $D$ (mm) | $V$ (m/s) | $L$ (m) | $\Delta p_f$ at 2.2 Pa/m (Pa) |
 |---|---|---|---|---|
@@ -465,14 +631,37 @@ Velocities fall from 7.64 m/s at the fan to 6.03 m/s at the outlets, all below 8
 | D–E | 300 | 7.07 | 8 | 17.60 |
 | D–F | 300 | 7.07 | 2 | 4.40 |
 | C–G | 300 | 7.07 | 3 | 6.60 |
+:::
 
+::: {.step title="Step 4. Fitting and grille losses"}
+::: hint
+Here the paper gives the joints as a fraction of the duct loss: joint loss of a run = duct loss of that run / 4; add the grille. See the [fitting-allowance mini-example](#m-mini-duct-fixed).
+:::
+Duct loss of each run, then joints = duct/4, grille 20 Pa:
+
+- A-C-D-E: 13.20 + 8.80 + 17.60 = 39.60 Pa; joints 39.60/4 = 9.90 Pa;
+- A-C-D-F: 13.20 + 8.80 + 4.40 = 26.40 Pa; joints 26.40/4 = 6.60 Pa;
+- A-C-G: 13.20 + 6.60 = 19.80 Pa; joints 19.80/4 = 4.95 Pa.
+:::
+
+::: {.step title="Step 5. Index run, fan pressure and dampering"}
+::: hint
+Run loss = Σ duct + Σ fittings + grille for every run from the fan to an outlet. The largest is the index run, and its loss is the static (fan) pressure; dampering of each other run = index-run loss − run loss. See the [index-run mini-example](#m-mini-duct-index).
+:::
 | Run | Duct loss (Pa) | Joints = duct/4 (Pa) | Grille (Pa) | Total (Pa) |
 |---|---|---|---|---|
 | A-C-D-E | 39.60 | 9.90 | 20 | **69.50** |
 | A-C-D-F | 26.40 | 6.60 | 20 | 53.00 |
 | A-C-G | 19.80 | 4.95 | 20 | 44.75 |
 
-**Sizes: A–C 450 mm, C–D 400 mm, branches 300 mm. Fan pressure required = index run A-C-D-E = 39.60 × 1.25 + 20 = 69.50 Pa** (plus the AHU's own filter and coil losses, which are not given). Dampering: A-C-D-F 16.50 Pa, A-C-G 24.75 Pa.
+Index run A-C-D-E: 39.60 × 1.25 + 20 = 69.50 Pa. Dampering: A-C-D-F 69.50 − 53.00 = 16.50 Pa; A-C-G 69.50 − 44.75 = 24.75 Pa.
+:::
+
+:::
+
+::: answer
+**Answer: sizes A–C 450 mm, C–D 400 mm, branches 300 mm. Fan pressure required = index run A-C-D-E = 39.60 × 1.25 + 20 = 69.50 Pa** (plus the AHU's own filter and coil losses, which are not given). Dampering: A-C-D-F 16.50 Pa, A-C-G 24.75 Pa.
+:::
 
 ### Family B: the four-room layout
 
@@ -480,26 +669,57 @@ Velocities fall from 7.64 m/s at the fan to 6.03 m/s at the outlets, all below 8
 
 ![Fig. 18: Fig. for Q. No. 2(a), 2020-21: packaged unit (coil and fan) at the left discharging at A; A–B 2 m; at B a curved take-off drops 5 m and turns (elbow) 2 m horizontally to outlet H (1.5 m³/s, arrow left); main B–C 4 m; at C a curved take-off rises 3 m to outlet G (0.5 m³/s, arrow up); main C–D 4 m; at D a curved take-off drops 2 m to outlet F (0.5 m³/s); main continues 6 m from D to a corner elbow and drops 2 m to outlet E (0.5 m³/s).](figures/018.png "w=0.75")
 
-**Solution 9.4** **[TUTOR-GENERATED]** (the layout and data of Arif sir's Example 2 / Ameen Ex. 15.1 [Arif pp.87a–90a], with the paper's 10/15 Pa fittings).
+**Solution 9.4** **[TUTOR-GENERATED]** (the layout and data of Arif sir's Example 2 / Ameen Ex. 15.1 [Arif pp.87a–90a], with the paper's 10/15 Pa fittings). Equal friction in the five steps of [§9.7](#duct-equal-friction); work it step by step; open a hint if stuck.
 
-*Step 1. Flows and lengths.* A–B $1.5+0.5+0.5+0.5=3.0$ m³/s, 2 m; B–H 1.5, 5 + 2 = 7 m; B–C 1.5, 4 m; C–G 0.5, 3 m; C–D 1.0, 4 m; D–F 0.5, 2 m; D–E 0.5, 6 + 2 = 8 m.
+::: {.problem #sol-9-4}
 
-*Step 2.* $D_{min}=\sqrt{4(3.0)/(\pi\times8)}=0.691$ m = 691 mm → **700 mm**, $V=7.80$ m/s ≤ 8 ✓. Chart 6 at 3000 L/s, 8 m/s: **Δp/L ≈ 0.85 Pa/m** (equation 0.85; the slides read 0.9).
+::: {.step title="Step 1. Section flows and lengths"}
+::: hint
+Letter the junctions. Each section carries the sum of the outlet flows downstream of it; add the legs of an L-shaped section. See the [section-flows mini-example](#m-mini-duct-flows).
+:::
+A–B $1.5+0.5+0.5+0.5=3.0$ m³/s, 2 m; B–H 1.5, 5 + 2 = 7 m; B–C 1.5, 4 m; C–G 0.5, 3 m; C–D 1.0, 4 m; D–F 0.5, 2 m; D–E 0.5, 6 + 2 = 8 m.
+:::
 
-*Step 3. Sizes at 0.85 Pa/m.*
+::: {.step title="Step 2. First section and design friction rate"}
+::: hint
+$D_{min}=\sqrt{4\dot V_1/(\pi V_{max})}$, rounded **up** to the next 25 mm; check $V=\dot V/A\le V_{max}$. Chart 6: enter at the first-section flow (L/s) and the velocity limit, read the friction rate. See the [first-section mini-example](#m-mini-duct-first).
+:::
+$D_{min}=\sqrt{4(3.0)/(\pi\times8)}=0.691$ m = 691 mm → **700 mm**, $V=7.80$ m/s ≤ 8 ✓. Chart 6 at 3000 L/s, 8 m/s: **Δp/L ≈ [0.85]{.lookup t="chart6"} Pa/m** (equation 0.85; the slides read 0.9).
+:::
+
+::: {.step title="Step 3. Size every section at the design rate"}
+::: hint
+On Chart 6, along the horizontal line at the design rate, read $D$ where each section's flow meets it; round **up** to 25 mm; $V=\dot V/A$; duct loss $\Delta p_f=(\Delta p/L)\times L$. See the [sizing mini-example](#m-mini-duct-size).
+:::
+Sizes at 0.85 Pa/m:
 
 | Section | $\dot V$ (m³/s) | $D$ at 0.85 Pa/m (mm) | $D$ chosen (mm) | $V$ (m/s) | $L$ (m) | $\Delta p_f$ (Pa) |
 |---|---|---|---|---|---|---|
 | A–B | 3.0 | 691 | **700** | 7.80 | 2 | 1.70 |
-| B–H | 1.5 | 531 | **550** | 6.31 | 7 | 5.95 |
-| B–C | 1.5 | 531 | **550** | 6.31 | 4 | 3.40 |
-| C–G | 0.5 | 351 | **375** | 4.53 | 3 | 2.55 |
-| C–D | 1.0 | 456 | **475** | 5.64 | 4 | 3.40 |
-| D–F | 0.5 | 351 | **375** | 4.53 | 2 | 1.70 |
-| D–E | 0.5 | 351 | **375** | 4.53 | 8 | 6.80 |
+| B–H | 1.5 | [531]{.lookup t="chart6"} | **550** | 6.31 | 7 | 5.95 |
+| B–C | 1.5 | [531]{.lookup t="chart6"} | **550** | 6.31 | 4 | 3.40 |
+| C–G | 0.5 | [351]{.lookup t="chart6"} | **375** | 4.53 | 3 | 2.55 |
+| C–D | 1.0 | [456]{.lookup t="chart6"} | **475** | 5.64 | 4 | 3.40 |
+| D–F | 0.5 | [351]{.lookup t="chart6"} | **375** | 4.53 | 2 | 1.70 |
+| D–E | 0.5 | [351]{.lookup t="chart6"} | **375** | 4.53 | 8 | 6.80 |
+:::
 
-*Steps 4–5. Runs* (tee 15 Pa at B, C, D; elbow 10 Pa at the foot of B–H and the corner of D–E; grille 25 Pa):
+::: {.step title="Step 4. Fitting and grille losses"}
+::: hint
+One tee for each junction the run passes (on the section leaving it), one elbow for each bend that is not a take-off, one grille at the outlet. See the [fitting-allowance mini-example](#m-mini-duct-fixed).
+:::
+Tee 15 Pa at B, C, D; elbow 10 Pa at the foot of B–H and the corner of D–E; grille 25 Pa:
 
+- A-B-H: 1T + 1E + 1G = 15 + 10 + 25 = 50 Pa;
+- A-B-C-G: 2T + 1G = 30 + 25 = 55 Pa;
+- A-B-C-D-F: 3T + 1G = 45 + 25 = 70 Pa;
+- A-B-C-D-E: 3T + 1E + 1G = 45 + 10 + 25 = 80 Pa.
+:::
+
+::: {.step title="Step 5. Index run, fan pressure and dampering"}
+::: hint
+Run loss = Σ duct + Σ fittings + grille for every run from the fan to an outlet. The largest is the index run, and its loss is the static (fan) pressure; dampering of each other run = index-run loss − run loss. See the [index-run mini-example](#m-mini-duct-index).
+:::
 | Run | Duct loss (Pa) | Fittings | Fitting + grille loss (Pa) | Total (Pa) |
 |---|---|---|---|---|
 | A-B-H | 1.70 + 5.95 = 7.65 | 1T + 1E + 1G | 15 + 10 + 25 = 50 | 57.65 |
@@ -507,7 +727,14 @@ Velocities fall from 7.64 m/s at the fan to 6.03 m/s at the outlets, all below 8
 | A-B-C-D-F | 1.70 + 3.40 + 3.40 + 1.70 = 10.20 | 3T + 1G | 45 + 25 = 70 | 80.20 |
 | A-B-C-D-E | 1.70 + 3.40 + 3.40 + 6.80 = 15.30 | 3T + 1E + 1G | 45 + 10 + 25 = 80 | **95.30** |
 
-**(i) Sizes: A–B 700 mm; B–H and B–C 550 mm; C–D 475 mm; C–G, D–F, D–E 375 mm. (ii) Index run A-B-C-D-E; static pressure = 95.30 Pa.** Dampering: A-B-C-D-F 15.10 Pa, A-B-C-G 32.65 Pa, A-B-H 37.65 Pa.
+Index run A-B-C-D-E (95.30 Pa). Dampering: A-B-C-D-F 95.30 − 80.20 = 15.10 Pa; A-B-C-G 95.30 − 62.65 = 32.65 Pa; A-B-H 95.30 − 57.65 = 37.65 Pa.
+:::
+
+:::
+
+::: answer
+**Answer: (i) Sizes: A–B 700 mm; B–H and B–C 550 mm; C–D 475 mm; C–G, D–F, D–E 375 mm. (ii) Index run A-B-C-D-E; static pressure = 95.30 Pa.** Dampering: A-B-C-D-F 15.10 Pa, A-B-C-G 32.65 Pa, A-B-H 37.65 Pa.
+:::
 
 With the slides' allowance "fittings one-fourth of the duct length" instead of 10/15 Pa [Arif p.87a]: $15.30\times1.25+25=44.13$ Pa (the slides get 45.25 Pa with 0.9 Pa/m and 675/525/450/375 mm ducts; their 675 mm first duct gives 8.38 m/s, above the 8 m/s limit).
 
@@ -515,7 +742,74 @@ With the slides' allowance "fittings one-fourth of the duct length" instead of 1
 
 ![Fig. 19: Figure for the Q. No. 2(b), 2022-23: identical to the 2020-21 figure. Fan unit at A; A–B 2 m; take-off at B down 5 m and across 2 m to outlet H (1.5 m³/s); B–C 4 m; take-off at C up 3 m to G (0.5 m³/s); C–D 4 m; take-off at D down 2 m to F (0.5 m³/s); D 6 m to a corner and 2 m down to E (0.5 m³/s).](figures/019.png "w=0.75")
 
-**Solution 9.5** **[TUTOR-GENERATED]** Verbatim repeat of TRY 9.4 (same figure and data, 15 marks instead of 20). The answer is that of Solution 9.4: **sizes A–B 700 mm, B–H and B–C 550 mm, C–D 475 mm, C–G, D–F, D–E 375 mm; index run A-B-C-D-E, static pressure 95.30 Pa**; dampering 15.10 Pa (to F), 32.65 Pa (to G), 37.65 Pa (to H).
+**Solution 9.5** **[TUTOR-GENERATED]** Verbatim repeat of TRY 9.4; equal friction in the five steps of [§9.7](#duct-equal-friction). Work it step by step; open a hint if stuck.
+
+::: {.problem #sol-9-5}
+
+::: {.step title="Step 1. Section flows and lengths"}
+::: hint
+Letter the junctions. Each section carries the sum of the outlet flows downstream of it; add the legs of an L-shaped section. See the [section-flows mini-example](#m-mini-duct-flows).
+:::
+Verbatim repeat of TRY 9.4 (same figure and data, 15 marks instead of 20), so the same steps and numbers as Solution 9.4.
+
+A–B $1.5+0.5+0.5+0.5=3.0$ m³/s, 2 m; B–H 1.5, 5 + 2 = 7 m; B–C 1.5, 4 m; C–G 0.5, 3 m; C–D 1.0, 4 m; D–F 0.5, 2 m; D–E 0.5, 6 + 2 = 8 m.
+:::
+
+::: {.step title="Step 2. First section and design friction rate"}
+::: hint
+$D_{min}=\sqrt{4\dot V_1/(\pi V_{max})}$, rounded **up** to the next 25 mm; check $V=\dot V/A\le V_{max}$. Chart 6: enter at the first-section flow (L/s) and the velocity limit, read the friction rate. See the [first-section mini-example](#m-mini-duct-first).
+:::
+$D_{min}=\sqrt{4(3.0)/(\pi\times8)}=0.691$ m = 691 mm → **700 mm**, $V=7.80$ m/s ≤ 8 ✓. Chart 6 at 3000 L/s, 8 m/s: **Δp/L ≈ [0.85]{.lookup t="chart6"} Pa/m** (equation 0.85; the slides read 0.9).
+:::
+
+::: {.step title="Step 3. Size every section at the design rate"}
+::: hint
+On Chart 6, along the horizontal line at the design rate, read $D$ where each section's flow meets it; round **up** to 25 mm; $V=\dot V/A$; duct loss $\Delta p_f=(\Delta p/L)\times L$. See the [sizing mini-example](#m-mini-duct-size).
+:::
+Sizes at 0.85 Pa/m:
+
+| Section | $\dot V$ (m³/s) | $D$ at 0.85 Pa/m (mm) | $D$ chosen (mm) | $V$ (m/s) | $L$ (m) | $\Delta p_f$ (Pa) |
+|---|---|---|---|---|---|---|
+| A–B | 3.0 | 691 | **700** | 7.80 | 2 | 1.70 |
+| B–H | 1.5 | [531]{.lookup t="chart6"} | **550** | 6.31 | 7 | 5.95 |
+| B–C | 1.5 | [531]{.lookup t="chart6"} | **550** | 6.31 | 4 | 3.40 |
+| C–G | 0.5 | [351]{.lookup t="chart6"} | **375** | 4.53 | 3 | 2.55 |
+| C–D | 1.0 | [456]{.lookup t="chart6"} | **475** | 5.64 | 4 | 3.40 |
+| D–F | 0.5 | [351]{.lookup t="chart6"} | **375** | 4.53 | 2 | 1.70 |
+| D–E | 0.5 | [351]{.lookup t="chart6"} | **375** | 4.53 | 8 | 6.80 |
+:::
+
+::: {.step title="Step 4. Fitting and grille losses"}
+::: hint
+One tee for each junction the run passes (on the section leaving it), one elbow for each bend that is not a take-off, one grille at the outlet. See the [fitting-allowance mini-example](#m-mini-duct-fixed).
+:::
+Tee 15 Pa at B, C, D; elbow 10 Pa at the foot of B–H and the corner of D–E; grille 25 Pa:
+
+- A-B-H: 1T + 1E + 1G = 15 + 10 + 25 = 50 Pa;
+- A-B-C-G: 2T + 1G = 30 + 25 = 55 Pa;
+- A-B-C-D-F: 3T + 1G = 45 + 25 = 70 Pa;
+- A-B-C-D-E: 3T + 1E + 1G = 45 + 10 + 25 = 80 Pa.
+:::
+
+::: {.step title="Step 5. Index run, fan pressure and dampering"}
+::: hint
+Run loss = Σ duct + Σ fittings + grille for every run from the fan to an outlet. The largest is the index run, and its loss is the static (fan) pressure; dampering of each other run = index-run loss − run loss. See the [index-run mini-example](#m-mini-duct-index).
+:::
+| Run | Duct loss (Pa) | Fittings | Fitting + grille loss (Pa) | Total (Pa) |
+|---|---|---|---|---|
+| A-B-H | 1.70 + 5.95 = 7.65 | 1T + 1E + 1G | 15 + 10 + 25 = 50 | 57.65 |
+| A-B-C-G | 1.70 + 3.40 + 2.55 = 7.65 | 2T + 1G | 30 + 25 = 55 | 62.65 |
+| A-B-C-D-F | 1.70 + 3.40 + 3.40 + 1.70 = 10.20 | 3T + 1G | 45 + 25 = 70 | 80.20 |
+| A-B-C-D-E | 1.70 + 3.40 + 3.40 + 6.80 = 15.30 | 3T + 1E + 1G | 45 + 10 + 25 = 80 | **95.30** |
+
+Index run A-B-C-D-E (95.30 Pa). Dampering: A-B-C-D-F 95.30 − 80.20 = 15.10 Pa; A-B-C-G 95.30 − 62.65 = 32.65 Pa; A-B-H 95.30 − 57.65 = 37.65 Pa.
+:::
+
+:::
+
+::: answer
+**Answer: sizes A–B 700 mm, B–H and B–C 550 mm, C–D 475 mm, C–G, D–F, D–E 375 mm; index run A-B-C-D-E, static pressure 95.30 Pa**; dampering 15.10 Pa (to F), 32.65 Pa (to G), 37.65 Pa (to H).
+:::
 
 ### Family C: ASHRAE fitting coefficients (Table 7)
 
@@ -523,37 +817,67 @@ With the slides' allowance "fittings one-fourth of the duct length" instead of 1
 
 ![Fig. 20: Fig. for Q. 3(c), 2012-13 (hand-drawn): 3500 L/s enters at point 1 at the left; the main runs 4 m to junction 2, a diverging tee marked SD5-10. From 2 the branch (points 7–8) rises 3 m to a 90° elbow marked CD3-10 (points 8–9), then runs 3 m horizontally to outlet 10 (2500 L/s). From 2 the main runs on 2 m (points 3–4) to a second CD3-10 elbow (4–5) and drops 4 m to outlet 6 (1000 L/s).](figures/020.png "w=0.6")
 
-**Solution 9.6** **[TUTOR-GENERATED]**
+**Solution 9.6** **[TUTOR-GENERATED]** Equal friction in the five steps of [§9.7](#duct-equal-friction), with the fitting losses from the Table 7 coefficients. Work it step by step; open a hint if stuck.
 
+::: {.problem #sol-9-6}
+
+::: {.step title="Step 1. Section flows and lengths"}
+::: hint
+Letter the junctions. Each section carries the sum of the outlet flows downstream of it; add the legs of an L-shaped section. See the [section-flows mini-example](#m-mini-duct-flows).
+:::
 *Assumptions* (the paper gives no velocity): first-section velocity 8 m/s (low-velocity system, as in every other paper); standard round ducts in 25 mm steps; tee SD5-10 and elbows CD3-10 from Table 7, read with the velocity ratio (course convention, TRAP in §9.4); grille 12 Pa at outlets 6 and 10.
 
-*Step 1. Sections.* 1–2: 3.5 m³/s, 4 m. Branch 2–10 (2–7–8, elbow 8–9, 9–10): 2.5 m³/s, 3 + 3 = 6 m. Main 2–6 (2–3–4, elbow 4–5, 5–6): 1.0 m³/s, 2 + 4 = 6 m.
+*Sections.* 1–2: 3.5 m³/s, 4 m. Branch 2–10 (2–7–8, elbow 8–9, 9–10): 2.5 m³/s, 3 + 3 = 6 m. Main 2–6 (2–3–4, elbow 4–5, 5–6): 1.0 m³/s, 2 + 4 = 6 m.
+:::
 
-*Step 2.* $D_{min}=\sqrt{4(3.5)/(\pi\times8)}=0.746$ m = 746 mm → **750 mm**, $V=7.92$ m/s. Chart 6 at 3500 L/s, 8 m/s: **Δp/L ≈ 0.8 Pa/m** (equation 0.77).
+::: {.step title="Step 2. First section and design friction rate"}
+::: hint
+$D_{min}=\sqrt{4\dot V_1/(\pi V_{max})}$, rounded **up** to the next 25 mm; check $V=\dot V/A\le V_{max}$. Chart 6: enter at the first-section flow (L/s) and the velocity limit, read the friction rate. See the [first-section mini-example](#m-mini-duct-first).
+:::
+$D_{min}=\sqrt{4(3.5)/(\pi\times8)}=0.746$ m = 746 mm → **750 mm**, $V=7.92$ m/s. Chart 6 at 3500 L/s, 8 m/s: **Δp/L ≈ [0.8]{.lookup t="chart6"} Pa/m** (equation 0.77).
+:::
 
-*Step 3. Sizes at 0.8 Pa/m.*
+::: {.step title="Step 3. Size every section at the design rate"}
+::: hint
+On Chart 6, along the horizontal line at the design rate, read $D$ where each section's flow meets it; round **up** to 25 mm; $V=\dot V/A$; duct loss $\Delta p_f=(\Delta p/L)\times L$. With coefficients you also need $\rho V^2/2=0.6V^2$ of each section. See the [sizing mini-example](#m-mini-duct-size).
+:::
+Sizes at 0.8 Pa/m:
 
 | Section | $\dot V$ (m³/s) | $D$ at 0.8 Pa/m (mm) | $D$ (mm) | $V$ (m/s) | $\rho V^2/2$ (Pa) | $L$ (m) | $\Delta p_f$ (Pa) |
 |---|---|---|---|---|---|---|---|
 | 1–2 | 3.5 | 746 | **750** | 7.92 | 37.66 | 4 | 3.20 |
-| 2–10 | 2.5 | 653 | **675** | 6.99 | 29.28 | 6 | 4.80 |
-| 2–6 | 1.0 | 462 | **475** | 5.64 | 19.11 | 6 | 4.80 |
+| 2–10 | 2.5 | [653]{.lookup t="chart6"} | **675** | 6.99 | 29.28 | 6 | 4.80 |
+| 2–6 | 1.0 | [462]{.lookup t="chart6"} | **475** | 5.64 | 19.11 | 6 | 4.80 |
+:::
 
-*Step 4. Fittings.*
-
-- **Tee SD5-10 at 2, branch path to 10** (common section 1–2): $V_b/V_c=6.99/7.92=0.88$, $A_b/A_c=(675/750)^2=0.81$. Table 7 $C_b$, row 0.8: $0.65+(0.52-0.65)\times0.82=0.544$; row 0.9: $0.83+(0.65-0.83)\times0.82=0.683$; at 0.81: $C_b=0.544+0.1\times(0.683-0.544)=$ **0.56**. Loss $0.56\times29.28=16.40$ Pa.
-- **Tee SD5-10 at 2, straight path to 6**: $V_s/V_c=5.64/7.92=0.71$, $A_s/A_c=(475/750)^2=0.40$. Table 7 $C_s$, row 0.4: $0.15+(0.16-0.15)\times0.12=0.151$ (row 0.5: 0.141); at 0.40: $C_s=$ **0.15**. Loss $0.15\times19.11=2.87$ Pa.
-- **Elbow CD3-10 at 8–9** (675 mm): Table 7 between 450 mm (0.06) and 690 mm (0.05): $C_o=0.06-0.01\times\dfrac{675-450}{690-450}=$ **0.051**. Loss $0.051\times29.28=1.49$ Pa.
+::: {.step title="Step 4. Fitting and grille losses"}
+::: hint
+Table 7. SD5-10 tee: row $A/A_c=(D/D_c)^2$, column $V/V_c$, common section $c$ = the one just upstream of the junction; interpolate along each bracketing row, then between the rows. CD3-10 elbow: interpolate in $D$. Loss = $C\times\rho V^2/2$ of the section downstream. See the [tee](#m-mini-duct-tee) and [elbow](#m-mini-duct-elbow) mini-examples.
+:::
+- **Tee SD5-10 at 2, branch path to 10** (common section 1–2): $V_b/V_c=6.99/7.92=0.88$, $A_b/A_c=(675/750)^2=0.81$. Table 7 $C_b$, row 0.8: $0.65+(0.52-0.65)\times0.82=0.544$ (columns 0.8 and 0.9: [0.65]{.lookup t="7-SD5-10-Cb" row="0.8" col="0.8"}, [0.52]{.lookup t="7-SD5-10-Cb" row="0.8" col="0.9"}); row 0.9: $0.83+(0.65-0.83)\times0.82=0.683$ ([0.83]{.lookup t="7-SD5-10-Cb" row="0.9" col="0.8"}, [0.65]{.lookup t="7-SD5-10-Cb" row="0.9" col="0.9"}); at 0.81: $C_b=0.544+0.1\times(0.683-0.544)=$ **0.56**. Loss $0.56\times29.28=16.40$ Pa.
+- **Tee SD5-10 at 2, straight path to 6**: $V_s/V_c=5.64/7.92=0.71$, $A_s/A_c=(475/750)^2=0.40$. Table 7 $C_s$, row 0.4: $0.15+(0.16-0.15)\times0.12=0.151$ (columns 0.7 and 0.8: [0.15]{.lookup t="7-SD5-10-Cs" row="0.4" col="0.7"}, [0.16]{.lookup t="7-SD5-10-Cs" row="0.4" col="0.8"}) (row 0.5: 0.141, from [0.14]{.lookup t="7-SD5-10-Cs" row="0.5" col="0.7"} and [0.15]{.lookup t="7-SD5-10-Cs" row="0.5" col="0.8"}); at 0.40: $C_s=$ **0.15**. Loss $0.15\times19.11=2.87$ Pa.
+- **Elbow CD3-10 at 8–9** (675 mm): Table 7 between 450 mm ([0.06]{.lookup t="7-CD3-10" row="450" col="Co"}) and 690 mm ([0.05]{.lookup t="7-CD3-10" row="690" col="Co"}): $C_o=0.06-0.01\times\dfrac{675-450}{690-450}=$ **0.051**. Loss $0.051\times29.28=1.49$ Pa.
 - **Elbow CD3-10 at 4–5** (475 mm): $C_o=0.06-0.01\times\dfrac{25}{240}=$ **0.059**. Loss $0.059\times19.11=1.13$ Pa.
+- **Grilles** 12 Pa at outlets 6 and 10.
+:::
 
-*Step 5. Runs.*
-
+::: {.step title="Step 5. Index run, fan pressure and dampering"}
+::: hint
+Run loss = Σ duct + Σ fittings + grille for every run from the fan to an outlet. The largest is the index run, and its loss is the fan pressure; dampering of each other run = index-run loss − run loss. See the [index-run mini-example](#m-mini-duct-index).
+:::
 | Run | Duct (Pa) | Tee (Pa) | Elbow (Pa) | Grille (Pa) | Total (Pa) |
 |---|---|---|---|---|---|
 | 1-2-7-8-9-10 | 3.20 + 4.80 | 16.40 | 1.49 | 12 | **37.89** |
 | 1-2-3-4-5-6 | 3.20 + 4.80 | 2.87 | 1.13 | 12 | 23.99 |
 
-**Sizes: 1–2 750 mm, branch 2–10 675 mm, main 2–6 475 mm. Fan pressure required at 1 = index run 1–10 = 37.89 Pa** (supply side only; the AHU's own losses are not given). The run to outlet 6 needs **13.90 Pa** of dampering.
+Index run 1–10 (37.89 Pa). Dampering of the run to 6: 37.89 − 23.99 = 13.90 Pa.
+:::
+
+:::
+
+::: answer
+**Answer: sizes 1–2 750 mm, branch 2–10 675 mm, main 2–6 475 mm. Fan pressure required at 1 = index run 1–10 = 37.89 Pa** (supply side only; the AHU's own losses are not given). The run to outlet 6 needs **13.90 Pa** of dampering.
+:::
 
 > **TIP: the flow-ratio reading of Table 7**
 >

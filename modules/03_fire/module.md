@@ -623,7 +623,7 @@ The BNBC 2006 attachment links the hazard classes to occupancy subgroups [PP 15-
 >
 > Kanak vai's note gives "Laundry, beverage manufacturing, restaurant service area, **bakery**" as Ordinary Hazard Group 1 [Kanak p.216] and "RMG, wood plant, **bakery**" as Group 2 [Kanak p.217]. NFPA 13 (and Grondzik Table 24.8) puts **bakeries in Ordinary Hazard Group 1**. Give a bakery as OH-1, and use RMG and wood plants as the OH-2 examples. Kanak vai's note also has no slide on Ordinary Hazard Group 3 or on the split between Light hazard I and II; use the occupancy table above.
 
-## 3.11 Fire-water storage from BNBC Table 4.4.1 ★
+## 3.11 Fire-water storage from BNBC Table 4.4.1 ★ {#fire-storage}
 
 ### The table
 
@@ -647,6 +647,24 @@ Footnotes (in both versions): \* values are for **one riser serving a floor area
 4. **Building height** $H=N\times h$ (floors × floor-to-floor height) → **duration** $t$: BNBC 2006: base value × 1, 1.25 or 1.5; BNBC 2020: read the column.
 5. **Storage** $V=n_r(Q_{spr}+Q_{sp})\,t$ in litres; divide by 1000 for m³.
 
+The four mini-examples below use one made-up building: a hotel (light hazard-II), 16 floors of 2300 m² each, 3.5 m floor to floor, with sprinkler and standpipe systems.
+
+::: {.mini #m-mini-fire-flow}
+**Mini-example: hazard row and flow per riser (steps 1–2).** Light hazard-II row of Table 4.4.1: sprinkler [1900]{.lookup t="bnbc" row="Light hazard-II" col="sprinkler_system_litre_per_min"} L/min, standpipe and hose [1900]{.lookup t="bnbc" row="Light hazard-II" col="standpipe_and_hose_system_litre_per_min"} L/min, base duration [50]{.lookup t="bnbc" row="Light hazard-II" col="duration_min_up_to_51m"} min. Both systems run together, so the flow per riser is $1900+1900=$ **3800 L/min**.
+:::
+
+::: {.mini #m-mini-fire-risers}
+**Mini-example: number of risers (step 3).** One floor is 2300 m², and one riser serves 1000 m²: $n_r=\lceil2300/1000\rceil=\lceil2.3\rceil=$ **3 risers**. Not $\lceil16\times2300/1000\rceil=37$: the fire is on one floor, and a riser serves the same area on every floor.
+:::
+
+::: {.mini #m-mini-fire-duration}
+**Mini-example: height and duration (step 4).** $H=16\times3.5=56$ m, in the 51–102 m band. BNBC 2006 (base column only): $t=1.25\times50=$ **62.5 min**. BNBC 2020 (read the column): $t=$ [62]{.lookup t="bnbc" row="Light hazard-II" col="duration_min_51m_to_102m"} min.
+:::
+
+::: {.mini #m-mini-fire-storage}
+**Mini-example: storage (step 5).** $V=n_r\,Q\,t=3\times3800\times62.5=712\,500$ L = **712.5 m³** (BNBC 2006). With the 2020 duration, $3\times3800\times62=706\,800$ L = 706.8 m³.
+:::
+
 **Combined systems.** Where the building has both a sprinkler system and a standpipe-and-hose system (the normal case in a high-rise, and what the papers' "fire protection of that building" means), both can run during the same fire: the sprinklers control the fire and the firefighters use the hoses. Kanak vai's note therefore **adds the two flows** for each riser and multiplies by the duration: for light hazard-I up to 51 m, $(1000+1000)\times30=60\,000$ L = 60 m³ per riser [Kanak p.215]. The same reserve feeds both systems through a **combined riser** (one riser serving both, allowed for up to 4850 m² of floor in light and ordinary hazard [BNBC Table 4.4.5 note]), and is kept in the fire-reserve part of the tank (Fig. 20). If the building had only one of the two systems, only that column would be used.
 
 > **TIP: State the combined-system assumption, and know the alternative**
@@ -665,7 +683,7 @@ Footnotes (in both versions): \* values are for **one riser serving a floor area
 >
 > **[TUTOR-GENERATED]**
 >
-> (a) Ordinary hazard-II row: $Q_{spr}=3200$, $Q_{sp}=1900$ L/min; per riser $3200+1900=5100$ L/min.
+> (a) Ordinary hazard-II row: $Q_{spr}$ = [3200]{.lookup t="bnbc" row="Ordinary hazard-II" col="sprinkler_system_litre_per_min"}, $Q_{sp}$ = [1900]{.lookup t="bnbc" row="Ordinary hazard-II" col="standpipe_and_hose_system_litre_per_min"} L/min; per riser $3200+1900=5100$ L/min.
 > Risers: $\lceil2200/1000\rceil=3$. Height $H=12\times4=48$ m ≤ 51 m → $t=75$ min.
 > $$V=3\times5100\times75=1\,147\,500\ \text{L}=\mathbf{1147.5\ m^3}$$
 > (b) $H=13\times4=52$ m, in the 51–102 m band. BNBC 2020 table: $t=95$ min → $V=3\times5100\times95=1\,453\,500$ L = **1453.5 m³**. BNBC 2006 footnote: $t=1.25\times75=93.75$ min → $V=15\,300\times93.75=1\,434\,375$ L = **1434.4 m³**. One more floor (4 m) adds 27% to the storage because it crosses the 51 m line.
@@ -758,6 +776,7 @@ Theory answers are sized to the marks (about one point per mark). Draw a sketch 
 
 > **TRY 3.1** `[PP 12-13 Q7(a), 5]` What is fire tetrahedron? What are the main causes of ignition?
 
+::: {.answer label="Show answer"}
 **Solution 3.1** **[FROM SOURCE: Kanak pp.198, 202; Grondzik §24.1]**
 
 **Fire tetrahedron.** Fire needs four elements at once, shown as the four faces of a tetrahedron (sketch Fig. 1):
@@ -770,18 +789,22 @@ Theory answers are sized to the marks (about one point per mark). Draw a sketch 
 Remove any one face and the fire goes out (starving, cooling, smothering, inhibition).
 
 **Main causes of ignition:** (1) smoking and matches; (2) electrical faults: short circuits, overloaded wiring, arcing, overheated appliances; (3) heaters, stoves and open flames; (4) process machinery and hot work: friction, overheating, welding sparks; (5) arson; (6) flammable and combustible materials: gas leaks, cylinders, chemicals; (7) spontaneous (chemical) combustion of oily rags or stored materials; (8) lightning and static electricity. Grondzik groups these as **chemical, electrical and mechanical** sources.
+:::
 
 > **TRY 3.2** `[PP 15-16 Q4(a), 5]` What are the main causes of ignition?
 
+::: {.answer label="Show answer"}
 **Solution 3.2** **[FROM SOURCE: Kanak p.202; Grondzik §24.1(a)]** As the second half of Solution 3.1, arranged by Grondzik's three groups for five marks:
 
 - **Electrical** (the commonest in Bangladesh): short circuits, overloaded and substandard wiring, loose connections and arcing, overheated appliances and heaters, static electricity, lightning.
 - **Chemical**: spontaneous combustion (oily rags, hay, some chemicals heat themselves when air is supplied but heat cannot escape); reactive chemicals; leaking gas lines and cylinders meeting a flame.
 - **Mechanical**: friction and sparks, overheated bearings and machinery, heat of compression.
 - **Open flames and human acts**: smoking and matches, cooking and heaters, hot work (welding, cutting), arson.
+:::
 
 > **TRY 3.3** `[PP 21-22 Q3(a), 20]` Define fire, fire triangle and explain fire fundamentals in detail. Write short note on flammability and combustibility.
 
+::: {.answer label="Show answer"}
 **Solution 3.3** **[FROM SOURCE: Kanak pp.198–199; Grondzik §24.1]**
 
 **Fire.** Fire is the rapid oxidation of a material in the exothermic chemical process of combustion, releasing heat, light and various reaction products (smoke, CO, CO₂, water vapour). It may be controlled (cooking, engines, boilers) or uncontrolled (building and forest fires, explosions).
@@ -801,9 +824,11 @@ Remove any one face and the fire goes out (starving, cooling, smothering, inhibi
 **Flammability.** The ease with which a material ignites and the speed at which flame spreads over it. A **flammable liquid** has a flash point below 37.8 °C (100 °F): petrol, acetone, alcohol. It ignites at room temperature from a spark and needs closed storage, ventilation and separation from ignition sources. Flammable gases (LPG, natural gas) burn within their flammable limits.
 
 **Combustibility.** The ability of a material to burn at all when enough heat is supplied. A **combustible liquid** has a flash point of 37.8 °C or more (diesel, kerosene, lubricating and cooking oil) and must be heated before it ignites. Wood, paper, cloth and plastics are combustible solids; concrete, brick, steel and glass are **non-combustible**. Every flammable material is combustible, but not every combustible material is flammable. Building codes limit combustible finishes (flame-spread classes A, B, C) [Grondzik Table 24.2].
+:::
 
 > **TRY 3.4** `[PP 23-24 Q5(a), 10]` Differentiate between the fire tetrahedron and fire triangle. Explain how the different fire extinguishing mediums target different elements of fire tetrahedron.
 
+::: {.answer label="Show answer"}
 **Solution 3.4** **[FROM SOURCE: Kanak pp.198, 203–209; Grondzik §24.1, §24.4]**
 
 **Triangle vs tetrahedron:**
@@ -823,9 +848,11 @@ Remove any one face and the fire goes out (starving, cooling, smothering, inhibi
 - **Chain reaction (inhibition):** **dry chemical powders** (ABC: mono-ammonium phosphate; BC: bicarbonates), **halons** and **clean agents** (FM-200) capture the free radicals and stop the flame chemistry almost instantly.
 
 Most agents act on two faces: water (heat + oxygen), foam (oxygen + heat), CO₂ (oxygen + heat), ABC powder (chain + oxygen).
+:::
 
 > **TRY 3.5** `[PP 20-21 Q2(b), 15]` What are the main sources of fire? Why is fire such a devastating hazard in Bangladesh? What is the fire safety concept tree?
 
+::: {.answer label="Show answer"}
 **Solution 3.5** **[FROM SOURCE: Kanak pp.200–202; NFPA 550]**
 
 **Main sources of fire** [Kanak p.202]: (1) smoking; (2) electrical equipment (short circuit, overloaded or substandard wiring, the most common cause in Bangladesh); (3) heaters and cooking appliances; (4) process machinery and hot work; (5) arson; (6) flammable and combustible materials (gas leaks and cylinders, chemical stores). In 2023, most of the 27 624 incidents came from short circuits, burning cigarettes and gas-line leakage.
@@ -844,9 +871,11 @@ Most agents act on two faces: water (heat + oxygen), foam (oxygen + heat), CO₂
 - *Manage fire impact:* **manage the fire** (control the combustion process; suppress the fire automatically or manually; control the fire by construction, i.e. compartmentation) or **manage the exposed** (limit the number of people and amount of property exposed; safeguard them by defending in place or moving them: detection, alarm, exits, refuge).
 
 The tree shows that safety does not depend on any single measure; designers combine prevention, active protection (detection, sprinklers) and passive protection (construction, exits).
+:::
 
 > **TRY 3.6** `[PP 21-22 Q2(b), 15]` Give brief description of major industrial and non-industrial fire accidents and sources of fire in Bangladesh.
 
+::: {.answer label="Show answer"}
 **Solution 3.6** **[FROM SOURCE: Kanak pp.200–202]**
 
 **Industrial fire accidents:**
@@ -867,11 +896,13 @@ The tree shows that safety does not depend on any single measure; designers comb
 4. **Green Cozy Cottage, Bailey Road (February 2024), 46 dead:** a restaurant building with gas cylinders on every floor and the single stair blocked; the fire exit was used as storage.
 
 **Sources of fire in Bangladesh:** electrical short circuit (the largest share), burning cigarettes, gas-pipeline leakage and gas cylinders, cooking stoves and heaters, chemicals stored in residential areas, boilers and hot work, and arson. In 2023 there were 27 624 incidents, 102 deaths and a loss of about Tk 792 crore. The common factors behind the high death tolls: locked or inadequate exits, no fire protection system, high fuel and population density and no fire drills.
+:::
 
 ### FI2. Fire classes and extinguishers
 
 > **TRY 3.7** `[PP 12-13 Q7(b), 10]` Classify fire according to NFPA and specify which type of extinguisher will be used for different type of fire.
 
+::: {.answer label="Show answer"}
 **Solution 3.7** **[FROM SOURCE: Kanak p.203; Grondzik §24.4(e)]**
 
 | Class (NFPA 10) | Fuel | Examples | Extinguisher to use | Do not use |
@@ -883,13 +914,17 @@ The tree shows that safety does not depend on any single measure; designers comb
 | **K** | Cooking oils and fats | Deep-fat fryers in kitchens | **Wet chemical** (potassium acetate/carbonate) | Water (steam explosion) |
 
 Reasons: water cools solids but conducts electricity and floats burning oil; foam blankets liquids; CO₂ is non-conducting and clean; dry powder breaks the chain reaction; class D powder crusts over metals; wet chemical saponifies the oil and cools it below its auto-ignition point. Once the power is cut, a class C fire becomes class A or B.
+:::
 
 > **TRY 3.8** `[PP 16-17 Q3(a), 5]` Classify fire and specify the type of extinguisher necessary for each type.
 
+::: {.answer label="Show answer"}
 **Solution 3.8** **[FROM SOURCE: Kanak p.203]** As Solution 3.7, in five lines: **A** ordinary solids (wood, paper, cloth) → water; **B** flammable liquids and gases (oil, petrol, LPG) → foam, CO₂ or dry powder; **C** live electrical equipment → CO₂ or dry powder (never water or foam); **D** combustible metals (Mg, Na, Li) → special class D powder; **K** cooking oils and fats → wet chemical.
+:::
 
 > **TRY 3.9** `[PP 20-21 Q3(a), 10]` Classify fire according to BNBC with examples. Write short note on evacuation and fire growth.
 
+::: {.answer label="Show answer"}
 **Solution 3.9** **[FROM SOURCE: Kanak pp.203, 202; Grondzik §24.1(e), Table 24.1]**
 
 **Classes of fire, BNBC 2020 Part 4 Ch. 4 §4.1.4:**
@@ -903,9 +938,11 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 **Evacuation.** Evacuation is the movement of all occupants to a safe place before conditions become untenable. It depends on early detection and alarm, a clear decision by occupants (panic is rare; delay is the danger), and adequate **means of egress**: exit access, protected exits (fire-rated stairs, at least two) and exit discharge to the street. Exits must be wide enough for the occupant load, never locked or blocked, lit and signed. Lifts are not exits (except fire lifts for firefighters). Fire drills, wardens, emergency lighting, pressurised stairs and refuge floors help. In Bangladesh poor evacuation (locked and inadequate exits, no drills) causes most deaths.
 
 **Fire growth.** A fire grows through stages: **incipient** (smouldering, invisible particles), **growth** (flames spread over the first item, a hot smoke layer collects under the ceiling), **flashover** (the hot layer, about 500–600 °C, ignites all surfaces at once), **fully developed** (the room burns at 800–1000 °C; ventilation-controlled; fire spreads to other rooms) and **decay**. Growth is faster with continuous, easily ignited fuel and finishes, low ceilings, insulated rooms, open doors and windows, and HVAC fans. Detection, sprinklers and compartmentation aim to act before flashover (sketch Fig. 2).
+:::
 
 > **TRY 3.10** `[PP 18-19 Q3(a), 25]` Make comparison between different types of fire extinguisher. Classify fire and specify which type of extinguisher will be used for different class of fire. Briefly describe the working principle of sprinkler type fire protection system with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 3.10** **[FROM SOURCE: Kanak pp.203–212; Grondzik §24.3, §24.4]**
 
 **(i) Comparison of extinguishers** (10 marks):
@@ -930,9 +967,11 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 4. Water pressure pushes out the cap; the water strikes the **deflector** and sprays over the fire, cooling the fuel and the hot gases.
 5. Only the heads over the fire open. The flow opens the **alarm valve**: the gong sounds and the flow switch signals the alarm panel and fire service; the fire pump starts on low pressure.
 6. Variants: dry-pipe (air-filled, for unheated areas), pre-action (detectors fill the pipes first; for computer rooms) and deluge (open heads, all discharge; for hangars).
+:::
 
 > **TRY 3.11** `[PP 20-21 Q3(b), 25]` Describe different way of extinguishment of fire. Make comparison among different types of fire extinguisher and specify which type of extinguisher will be used for different class of fire. Describe sprinkler fire protection system.
 
+::: {.answer label="Show answer"}
 **Solution 3.11** **[FROM SOURCE: Kanak pp.203–212]** Parts 2 and 3 are as Solution 3.10 (i) and (ii); part 4 as Solution 3.10 (iii), adding the four system types (table in §3.6). The new part:
 
 **Ways of extinguishment** (control or remove one side of the fire tetrahedron):
@@ -941,18 +980,22 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 2. **Smothering** (blanketing, limiting oxygen): foam blanket, CO₂ or inert gas, fire blanket, sand, lid on a pan; steam from water.
 3. **Cooling** (limiting temperature): water absorbs heat (2256 kJ/kg on evaporation) until the fuel is below its fire point; wet chemical on cooking oil.
 4. **Breaking the chemical chain reaction** (inhibition): dry powders, halons and clean agents capture the flame radicals.
+:::
 
 > **TRY 3.12** `[PP 22-23 Q3(a), 25]` What are the main sources of fire? Why is fire such a devastating hazard in Bangladesh? Classify fire according to BNBC with examples. Make comparison between different types of fire extinguisher and specify which type of extinguisher will be used for different class of fire.
 
+::: {.answer label="Show answer"}
 **Solution 3.12** **[FROM SOURCE: Kanak pp.202–209]** This is the compulsory 45-mark question's first part; each sub-part is a repeat:
 
 - *Main sources of fire* (5): smoking; electrical short circuit and overloaded wiring; heaters and stoves; machinery and hot work; arson; flammable materials, gas leaks and cylinders (Solution 3.5).
 - *Why devastating in Bangladesh* (7): many sources and low awareness; very high population and fuel density; unplanned buildings without passive protection; no fire protection systems, long response, lack of water; code violations in exits, no fire lifts, no drills; incidents up 5 times since 1996, only 4% of malls safe (Solution 3.5).
 - *BNBC classes with examples* (5): A common combustibles (wood, paper, plastics, clothes); B flammable liquids and gases (gasoline, propane, solvents); C live electrical equipment (computers, fax machines); D combustible metals (magnesium, lithium, aluminium); K cooking media (cooking oils and fats) (Solution 3.9).
 - *Comparison and selection* (8): the table of Solution 3.10 (i), ending with the class-to-agent list: A water, B foam/CO₂/powder, C CO₂/powder, D class D powder, K wet chemical.
+:::
 
 > **TRY 3.13** `[PP 15-16 Q4(b), 10]` Make a brief comparison between $\mathrm{CO_2}$ and Powder type fire extinguisher.
 
+::: {.answer label="Show answer"}
 **Solution 3.13** **[FROM SOURCE: Kanak pp.206, 208; Grondzik §24.4(c),(e)]**
 
 | Point | CO₂ extinguisher | Dry powder extinguisher |
@@ -968,17 +1011,21 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 | Hazards | Asphyxiation in small rooms; frost burns at the horn; heavy cylinder | Breathing irritation; poor visibility |
 | Check | By weighing (no gauge) | Pressure gauge (stored pressure) |
 | Best use | Server rooms, laboratories, switchrooms, food stores | General-purpose: offices, vehicles, workshops, fuel stations |
+:::
 
 > **TRY 3.14** `[PP 13-14 Q3(b), 5]` Write down some advantages and disadvantages of water fire extinguisher
 
+::: {.answer label="Show answer"}
 **Solution 3.14** **[FROM SOURCE: Kanak pp.204–205; Grondzik §24.3]**
 
 *Advantages:* easily available and cheap; very high cooling capacity (2256 kJ/kg on evaporation, and the steam expands 1700 times and smothers); easily stored and pumped over long distances; non-toxic, no health hazard; penetrates and soaks deep-seated class A fires and prevents re-ignition.
 
 *Disadvantages:* conducts electricity, so the power must be cut first (not class C); must never be used on oil (class B, K) fires, as burning oil floats and is thrown out; reacts with burning metals (class D); damages electrical and electronic equipment and water-soluble materials; the fire area needs clean-up afterwards.
+:::
 
 > **TRY 3.15** `[PP 23-24 Q5(b), 10]` What is the purpose of portable fire extinguishers? Discuss the key factors governing the selection and placement of portable fire extinguishers.
 
+::: {.answer label="Show answer"}
 **Solution 3.15** **[FROM SOURCE: Grondzik §24.4(e), Table 24.11; NFPA 10]**
 
 **Purpose.** Portable extinguishers are first-aid fire-fighting appliances, used by occupants to put out or contain a fire **in its incipient stage**, before it spreads and before the fire service or fixed systems act. Most building fires can be put out early this way. They supplement, and never replace, sprinklers, hose systems and evacuation.
@@ -998,11 +1045,13 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 3. **Close to the hazard but not inside it** (at a switch-room door, at a kitchen exit).
 4. **Mounting height**: top no more than 1.5 m above the floor (1.07 m for units above 18 kg); bottom at least 0.1 m above the floor.
 5. **Protection and maintenance**: on brackets or in cabinets, protected from damage and weather; monthly inspection, yearly maintenance.
+:::
 
 ### FI3. Fire protection systems
 
 > **TRY 3.16** `[PP 17-18 Q3(a), 20]` What is fire? What are the effects of fire? Briefly describe the sprinkler fire protection system with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 3.16** **[FROM SOURCE: Kanak pp.198–199, 210–213; Grondzik §24.1(b), §24.3]**
 
 **Fire** (3): rapid oxidation of a material in the exothermic process of combustion, releasing heat, light and smoke. It needs fuel, heat, oxygen and an uninhibited chain reaction (tetrahedron).
@@ -1016,9 +1065,11 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 - Fire spreads by conduction, convection and radiation to other floors and buildings, so it must be controlled in its initial stage.
 
 **Sprinkler system** (12): definition and components (§3.6), the working-principle steps of Solution 3.10 (iii), and a schematic (Fig. 10): water supply → OS&Y valve → alarm valve with gong → riser → cross mains → branch lines → heads; Siamese connection; drain and test valve. Add the head (glass bulb or fusible link, deflector), the types (wet, dry, pre-action, deluge) in one line each, and the layouts (tree, loop, grid).
+:::
 
 > **TRY 3.17** `[PP 23-24 Q6(c), 12]` Explain the mechanism behind the activation of a fusible element sprinkler head. What is the purpose of producing different spray patterns by the deflectors of different sprinkler heads?
 
+::: {.answer label="Show answer"}
 **Solution 3.17** **[FROM SOURCE: Grondzik §24.3(c); Kanak p.211]**
 
 **Activation of a fusible-element head** (sketch: frame arms, cap on the orifice, levers held by a soldered link, deflector):
@@ -1039,9 +1090,11 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 - **Control or suppression:** fine drops cool the hot gases and ceiling (fire **control**); large, fast drops (ESFR, large-drop heads) penetrate a strong plume to reach the burning fuel (fire **suppression**) in high-piled storage.
 - **Directing water at the fuel:** most water goes down and sideways rather than to the ceiling, wetting the burning material and pre-wetting the fuel around it to stop spread, while cooling nearby heads so they do not open unnecessarily.
 - **Special patterns** for obstructions, atria water curtains, extended coverage and residential rooms (spray high on the walls).
+:::
 
 > **TRY 3.18** `[PP 16-17 Q3(b), 15]` Briefly describe the standpipe and hose fire protection system with a schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 3.18** **[FROM SOURCE: Kanak pp.209–210, 218–220; Grondzik §24.3(a)]**
 
 **Definition.** A standpipe and hose system is a network of vertical pipes (standpipes) with hose valves and hose stations on every floor, permanently connected to a water supply, so that water at adequate pressure (above about 8.8 bar in the network) is available on every floor for manual fire-fighting. It is the backbone of a building's fire protection.
@@ -1060,17 +1113,21 @@ Reasons: water cools solids but conducts electricity and floats burning oil; foa
 **Operation.** The wet standpipe is kept full and pressurised. When a hose valve is opened the pressure drops and the fire pump starts automatically; the hose is laid out and the jet is directed at the fire. The fire brigade can boost supply through the Siamese connection.
 
 **Classes:** I (65 mm outlets, for firefighters), II (40 mm hose for occupants' first aid), III (both). **Types:** automatic-wet (usual), automatic-dry, semi-automatic-dry, manual-dry, manual-wet.
+:::
 
 > **TRY 3.19** `[PP 22-23 Q3(b), 20]` Describe standpipe and hose fire protection systems in details with schematic diagram. Draw the typical diagram for fire protection with automatic fire pump in different water supply zones of a tall building (according to BNBC).
 
+::: {.answer label="Show answer"}
 **Solution 3.19** **[FROM SOURCE: Kanak pp.209–210, 218–224; Grondzik §24.3(a)]**
 
 *Standpipe and hose system in detail* (12): Solution 3.18, plus the class table (§3.7: Class I 65 mm for firefighters, required above three storeys; Class II 40 mm with hose for occupants; Class III both; combined systems also feed sprinklers), the five types, the BNBC sizes (75 mm up to 5 storeys, 100 mm up to 10, 150 mm for 10–20, 200 mm for 20–54 storeys), and the water sources (direct main, roof gravity tank, ground tank with pump; Figs. 18, 30, 27).
 
 *Zoned diagram* (8): draw and label **BNBC Fig. 4.4.8** as in Solution 3.28 (ground tank; two automatic fire pumps; Zone 1 riser closed at the top of Zone 1, about 67 m; Zone 2 express riser with outlets only in Zone 2; hose stations; a Siamese connection with check valve for each riser).
+:::
 
 > **TRY 3.20** `[PP 21-22 Q3(b), 15]` Describe different type of fire protection systems in details with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 3.20** **[FROM SOURCE: Kanak pp.204–214; Grondzik §24.3–24.4, §24.6]**
 
 Fire protection systems are **passive** (built into the structure: fire-rated walls, floors and doors, compartments, protected stairs, fire-stops, fire dampers, non-combustible finishes) or **active** (operate when a fire occurs). The active systems are:
@@ -1082,9 +1139,11 @@ Fire protection systems are **passive** (built into the structure: fire-rated wa
 5. **Foam systems** for flammable-liquid stores, hangars and tank farms; **water spray and mist** systems for transformers and machinery.
 6. **Fire detection and alarm system**: detectors (heat, smoke, flame, CO), manual call points and water-flow switches feed a control panel that sounds alarms, calls the fire service and controls fans, dampers, doors and lifts (sketch Fig. 22).
 7. **Smoke control**: smoke exhaust fans, stair pressurisation, smoke vents and curtain boards.
+:::
 
 > **TRY 3.21** `[PP 23-24 Q6(a), 8]` Explain the purpose of automatic fire detection and alarm systems within a building. What other critical functions can they perform in addition to just alerting the occupants?
 
+::: {.answer label="Show answer"}
 **Solution 3.21** **[FROM SOURCE: Grondzik §24.6, Fig. 24.34]**
 
 **Purpose.** An automatic fire detection and alarm system detects a fire in its earliest stage (smoke, heat, flame or gas), at any time and without anyone present, and warns the occupants and staff so that they can evacuate and fight the fire while it is small. It serves primarily to protect life and secondarily to limit property loss. It consists of initiating devices (detectors, manual call points, flow switches), a control panel and notification appliances (sounders, strobes, voice).
@@ -1098,9 +1157,11 @@ Fire protection systems are **passive** (built into the structure: fire-rated wa
 5. **Start suppression**: open pre-action and deluge valves, release gas systems, start fire pumps.
 6. **Supervise** sprinkler valves, water flow, pumps, power and wiring, giving trouble signals.
 7. Switch on emergency lighting, unlock escape doors, shut off gas and process plant, and broadcast voice evacuation messages.
+:::
 
 > **TRY 3.22** `[PP 23-24 Q6(b), 10]` Compare ionization smoke detectors and photoelectric smoke detectors in terms of the operating principle, advantages/limitations, and suitability in different applications.
 
+::: {.answer label="Show answer"}
 **Solution 3.22** **[FROM SOURCE: Grondzik §24.16–24.17]** Sketch both (Fig. 25), then compare:
 
 **Operating principle.**
@@ -1117,6 +1178,7 @@ Fire protection systems are **passive** (built into the structure: fire-rated wa
 | Limitations | Slow on smouldering fires; nuisance alarms from cooking, steam, exhaust, welding; loses sensitivity with dust, air velocity above 0.25 m/s and hot ceilings; radioactive disposal | Slower on clean flaming fires; black smoke absorbs light; dust, insects and steam cause false alarms |
 
 **Suitability.** Ionization: offices, computer rooms, stores of clean-burning materials (paper, flammable liquids) in still, clean air; not in or near kitchens, bathrooms, garages or workshops. Photoelectric: bedrooms, hotels, hospitals, corridors and escape routes, rooms with upholstered furniture and cables, air ducts and spaces near kitchens; projected-beam and air-sampling versions for atria, halls and warehouses. Where both fire types are possible, use combination or multi-sensor detectors.
+:::
 
 ### FI4. Fire-water storage (BNBC Table 4.4.1)
 
@@ -1124,60 +1186,228 @@ Standing assumptions for this family: the building has **both** a sprinkler and 
 
 > **TRY 3.23** `[PP 15-16 Q4(c), 10]` For a facility having building of light hazard-I type, 15 rentable floors, each $500\ \mathrm{m^2}$net. Floor-to-floor height = 3.7 m. According to BNBC, determine the storage capacity of water for the fire protection of that building.
 
-**Solution 3.23** **[TUTOR-GENERATED]** (method of Kanak p.215 with the attached BNBC 2006 Table 4.4.1, end of this module). This is the model answer for the family.
+**Solution 3.23** **[TUTOR-GENERATED]** (method of Kanak p.215 with the attached BNBC 2006 Table 4.4.1, end of this module). This is the model answer for the family: hazard row, flow per riser, risers, height and duration, storage. Work it step by step; open a hint if stuck.
 
-*Step 1. Hazard row.* Light hazard-I (given): sprinkler $Q_{spr}=1000$ L/min, standpipe and hose $Q_{sp}=1000$ L/min, duration 30 min for buildings up to 51 m.
+::: {.problem #sol-3-23}
 
-*Step 2. Flow per riser* (combined sprinkler + standpipe system):
+::: {.step title="Step 1. Hazard row"}
+::: hint
+BNBC Table 4.4.1, the row of the given hazard class: sprinkler flow, standpipe-and-hose flow and the base duration. BNBC 2006 prints one duration column (buildings up to 51 m), the same values as the 2020 "up to 51 m" column. See the [flow mini-example](#m-mini-fire-flow).
+:::
+Light hazard-I (given): sprinkler $Q_{spr}$ = [1000]{.lookup t="bnbc" row="Light hazard-I" col="sprinkler_system_litre_per_min"} L/min, standpipe and hose $Q_{sp}$ = [1000]{.lookup t="bnbc" row="Light hazard-I" col="standpipe_and_hose_system_litre_per_min"} L/min, duration [30]{.lookup t="bnbc" row="Light hazard-I" col="duration_min_up_to_51m"} min for buildings up to 51 m.
+:::
+
+::: {.step title="Step 2. Flow per riser"}
+::: hint
+Both systems on combined risers can run in the same fire: add the two flows of the row (Kanak vai's note, §3.11). See the [flow mini-example](#m-mini-fire-flow).
+:::
+Combined sprinkler + standpipe system:
 $$Q=Q_{spr}+Q_{sp}=1000+1000=2000\ \text{L/min}$$
+:::
 
-*Step 3. Number of risers.* Footnote \*: values are for one riser serving 1000 m². Floor area 500 m² per floor:
+::: {.step title="Step 3. Number of risers"}
+::: hint
+Footnote \*: one riser serves 1000 m². Divide the area of **one** floor by 1000 m² and round up; never use the total area. See the [risers mini-example](#m-mini-fire-risers).
+:::
+Footnote \*: values are for one riser serving 1000 m². Floor area 500 m² per floor:
 $$n_r=\lceil 500/1000\rceil=1\ \text{riser}$$
+:::
 
-*Step 4. Height and duration.* $H=15\times3.7=55.5$ m, which lies between 51 and 102 m. Footnote \*\*: duration = 1.25 × the tabulated value:
+::: {.step title="Step 4. Height and duration"}
+::: hint
+$H$ = floors × 3.7 m. BNBC 2006 footnote \*\*: base duration up to 51 m, × 1.25 for 51–102 m, × 1.5 above 102 m (with the 2020 table, read the height column instead). See the [duration mini-example](#m-mini-fire-duration).
+:::
+$H=15\times3.7=55.5$ m, which lies between 51 and 102 m. Footnote \*\*: duration = 1.25 × the tabulated value:
 $$t=1.25\times30=37.5\ \text{min}$$
+:::
 
-*Step 5. Storage.*
+::: {.step title="Step 5. Storage"}
+::: hint
+$V=n_r\,Q\,t$ in litres; divide by 1000 for m³. See the [storage mini-example](#m-mini-fire-storage).
+:::
 $$V=n_r\,Q\,t=1\times2000\times37.5=75\,000\ \text{L}$$
+:::
 
+:::
+
+::: answer
 **Answer: fire-water storage = 75 000 L = 75 m³.**
+:::
 
-*With the BNBC 2020 table* (51–102 m column, 38 min): $V=2000\times38=76\,000$ L = 76 m³. If the larger-demand convention for combined risers were used (§3.11 TIP), $1000\times37.5=37\,500$ L = 37.5 m³.
+*With the BNBC 2020 table* (51–102 m column, [38]{.lookup t="bnbc" row="Light hazard-I" col="duration_min_51m_to_102m"} min): $V=2000\times38=76\,000$ L = 76 m³. If the larger-demand convention for combined risers were used (§3.11 TIP), $1000\times37.5=37\,500$ L = 37.5 m³.
 
 > **TRY 3.24** `[PP 16-17 Q3(c), 5]` For a facility having building of light hazard-I type, 20 rentable floors, each $1500\ \mathrm{m^2}$ net. Floor-to-floor height = 3.7 m. According to BNBC, determine the storage capacity of water for fire protection for that building.
 
-**Solution 3.24** **[TUTOR-GENERATED]** As Solution 3.23 (BNBC 2006 attached), with: risers $n_r=\lceil1500/1000\rceil=2$; $H=20\times3.7=74$ m (51–102 m) → $t=1.25\times30=37.5$ min.
-$$V=2\times(1000+1000)\times37.5=4000\times37.5=150\,000\ \text{L}$$
+**Solution 3.24** **[TUTOR-GENERATED]** As Solution 3.23 (BNBC 2006 attached): the same five steps, with two risers and a height in the 51–102 m band. Work it step by step; open a hint if stuck.
 
-**Answer: 150 000 L = 150 m³.** BNBC 2020 (38 min): $4000\times38=152\,000$ L = 152 m³ (larger-demand convention: 75 m³).
+::: {.problem #sol-3-24}
+
+::: {.step title="Step 1. Hazard row"}
+::: hint
+BNBC Table 4.4.1, the light hazard-I row: the two flows and the base duration (BNBC 2006, up to 51 m). See the [flow mini-example](#m-mini-fire-flow).
+:::
+Light hazard-I: $Q_{spr}$ = [1000]{.lookup t="bnbc" row="Light hazard-I" col="sprinkler_system_litre_per_min"} L/min, $Q_{sp}$ = [1000]{.lookup t="bnbc" row="Light hazard-I" col="standpipe_and_hose_system_litre_per_min"} L/min, base duration [30]{.lookup t="bnbc" row="Light hazard-I" col="duration_min_up_to_51m"} min.
+:::
+
+::: {.step title="Step 2. Flow per riser"}
+::: hint
+Add the sprinkler and standpipe flows (combined system). See the [flow mini-example](#m-mini-fire-flow).
+:::
+$$Q=1000+1000=2000\ \text{L/min}$$
+:::
+
+::: {.step title="Step 3. Number of risers"}
+::: hint
+Area of one floor ÷ 1000 m², rounded up. See the [risers mini-example](#m-mini-fire-risers).
+:::
+Risers $n_r=\lceil1500/1000\rceil=2$.
+:::
+
+::: {.step title="Step 4. Height and duration"}
+::: hint
+$H$ = floors × 3.7 m; pick the band and apply the BNBC 2006 multiplier to the base duration. See the [duration mini-example](#m-mini-fire-duration).
+:::
+$H=20\times3.7=74$ m (51–102 m) → $t=1.25\times30=37.5$ min.
+:::
+
+::: {.step title="Step 5. Storage"}
+::: hint
+$V=n_r\,Q\,t$; divide by 1000 for m³. See the [storage mini-example](#m-mini-fire-storage).
+:::
+$$V=2\times(1000+1000)\times37.5=4000\times37.5=150\,000\ \text{L}$$
+:::
+
+:::
+
+::: answer
+**Answer: 150 000 L = 150 m³.**
+:::
+
+BNBC 2020 ([38]{.lookup t="bnbc" row="Light hazard-I" col="duration_min_51m_to_102m"} min): $4000\times38=152\,000$ L = 152 m³ (larger-demand convention: 75 m³).
 
 > **TRY 3.25** `[PP 17-18 Q3(b), 15]` For a facility having building of light hazard-I type, 30 rentable floors, each $2500\ \mathrm{m^2}$ net. Floor-to-floor height = 3.7 m. According to BNBC determine the storage capacity of water for fire protection for that building. Draw the typical diagram for fire protection system with different water supply zones with ground and gravity roof tank with adequate domestic and fire reserve for a tall building (according to BNBC).
 
-**Solution 3.25** **[TUTOR-GENERATED]** (no table attached; BNBC Table 4.4.1, end of this module.)
+**Solution 3.25** **[TUTOR-GENERATED]** (no table attached; BNBC Table 4.4.1, end of this module.) Storage as Solution 3.23, with three risers and a height above 102 m; then the zoned diagram. Work it step by step; open a hint if stuck.
 
-*Storage* (8): as Solution 3.23, with: $n_r=\lceil2500/1000\rceil=3$ risers; $H=30\times3.7=111$ m, above 102 m → $t=1.5\times30=45$ min (BNBC 2020 prints 45 too, so both versions agree).
+*Storage* (8):
+
+::: {.problem #sol-3-25}
+
+::: {.step title="Step 1. Hazard row"}
+::: hint
+BNBC Table 4.4.1, the light hazard-I row: the two flows and the base duration (up to 51 m). See the [flow mini-example](#m-mini-fire-flow).
+:::
+Light hazard-I: $Q_{spr}$ = [1000]{.lookup t="bnbc" row="Light hazard-I" col="sprinkler_system_litre_per_min"} L/min, $Q_{sp}$ = [1000]{.lookup t="bnbc" row="Light hazard-I" col="standpipe_and_hose_system_litre_per_min"} L/min, base duration [30]{.lookup t="bnbc" row="Light hazard-I" col="duration_min_up_to_51m"} min.
+:::
+
+::: {.step title="Step 2. Flow per riser"}
+::: hint
+Add the sprinkler and standpipe flows (combined system). See the [flow mini-example](#m-mini-fire-flow).
+:::
+$$Q=1000+1000=2000\ \text{L/min}$$
+:::
+
+::: {.step title="Step 3. Number of risers"}
+::: hint
+Area of one floor ÷ 1000 m², rounded up. See the [risers mini-example](#m-mini-fire-risers).
+:::
+$n_r=\lceil2500/1000\rceil=3$ risers.
+:::
+
+::: {.step title="Step 4. Height and duration"}
+::: hint
+$H$ = floors × 3.7 m; above 102 m the duration is 1.5 × the base (BNBC 2006), or the "above 102 m" column (BNBC 2020). See the [duration mini-example](#m-mini-fire-duration).
+:::
+$H=30\times3.7=111$ m, above 102 m → $t=1.5\times30=45$ min (BNBC 2020 prints [45]{.lookup t="bnbc" row="Light hazard-I" col="duration_min_above_102m"} too, so both versions agree).
+:::
+
+::: {.step title="Step 5. Storage"}
+::: hint
+$V=n_r\,Q\,t$; divide by 1000 for m³. See the [storage mini-example](#m-mini-fire-storage).
+:::
 $$V=3\times(1000+1000)\times45=6000\times45=270\,000\ \text{L}$$
+:::
 
+:::
+
+::: answer
 **Answer: 270 000 L = 270 m³** (larger-demand convention: 135 m³).
+:::
 
-*Diagram* (7): the building is 111 m tall, more than one 67 m zone, so draw **BNBC Fig. 4.4.9** (Fig. 31): ground tank filled from the main; manually controlled pumps lifting water to a **roof tank** (serving Zone 2) and an **intermediate tank** at the top of Zone 1 (≈ 67 m); each tank divided into domestic reserve (top) and fire reserve (bottom), with the domestic outlet above the fire reserve and the fire supply (with check valve) from the bottom feeding that zone's standpipe and hose stations; Siamese connections for the zones. Write the fire reserve: 270 m³ in total for the building, held in the zone tanks (and ground tank). Describe the parts as in §3.12.
+*Diagram* (7):
+
+::: {.answer label="Show answer: the diagram"}
+The building is 111 m tall, more than one 67 m zone, so draw **BNBC Fig. 4.4.9** (Fig. 31): ground tank filled from the main; manually controlled pumps lifting water to a **roof tank** (serving Zone 2) and an **intermediate tank** at the top of Zone 1 (≈ 67 m); each tank divided into domestic reserve (top) and fire reserve (bottom), with the domestic outlet above the fire reserve and the fire supply (with check valve) from the bottom feeding that zone's standpipe and hose stations; Siamese connections for the zones. Write the fire reserve: 270 m³ in total for the building, held in the zone tanks (and ground tank). Describe the parts as in §3.12.
+:::
 
 > **TRY 3.26** `[PP 18-19 Q3(b), 10]` For a facility having building of Light hazard-II type, 25 rentable floors, each $3500\ \mathrm{m^2}$ net. Floor-to-floor height = 3.7 m. According to BNBC determine the storage capacity of water for the protection of that building. Draw the typical diagram for fire protection system with ground and gravity roof tank with adequate domestic and fire reserve for a building. (according to BNBC)
 
-**Solution 3.26** **[TUTOR-GENERATED]** (no table attached; BNBC Table 4.4.1, end of this module.)
+**Solution 3.26** **[TUTOR-GENERATED]** (no table attached; BNBC Table 4.4.1, end of this module.) Storage as Solution 3.23, with the **light hazard-II** row; then the gravity-tank diagram. Work it step by step; open a hint if stuck.
 
-*Storage* (6): as Solution 3.23, with the **light hazard-II** row: $Q_{spr}=1900$, $Q_{sp}=1900$ L/min, base duration 50 min. Per riser $1900+1900=3800$ L/min; $n_r=\lceil3500/1000\rceil=4$ risers; $H=25\times3.7=92.5$ m (51–102 m) → $t=1.25\times50=62.5$ min.
+*Storage* (6):
+
+::: {.problem #sol-3-26}
+
+::: {.step title="Step 1. Hazard row"}
+::: hint
+BNBC Table 4.4.1, the **light hazard-II** row (not I): the two flows and the base duration (up to 51 m). See the [flow mini-example](#m-mini-fire-flow).
+:::
+Light hazard-II row: $Q_{spr}$ = [1900]{.lookup t="bnbc" row="Light hazard-II" col="sprinkler_system_litre_per_min"}, $Q_{sp}$ = [1900]{.lookup t="bnbc" row="Light hazard-II" col="standpipe_and_hose_system_litre_per_min"} L/min, base duration [50]{.lookup t="bnbc" row="Light hazard-II" col="duration_min_up_to_51m"} min.
+:::
+
+::: {.step title="Step 2. Flow per riser"}
+::: hint
+Add the sprinkler and standpipe flows (combined system). See the [flow mini-example](#m-mini-fire-flow).
+:::
+Per riser $1900+1900=3800$ L/min.
+:::
+
+::: {.step title="Step 3. Number of risers"}
+::: hint
+Area of one floor ÷ 1000 m², rounded up. See the [risers mini-example](#m-mini-fire-risers).
+:::
+$n_r=\lceil3500/1000\rceil=4$ risers.
+:::
+
+::: {.step title="Step 4. Height and duration"}
+::: hint
+$H$ = floors × 3.7 m; pick the band and apply the BNBC 2006 multiplier to the base duration. See the [duration mini-example](#m-mini-fire-duration).
+:::
+$H=25\times3.7=92.5$ m (51–102 m) → $t=1.25\times50=62.5$ min.
+:::
+
+::: {.step title="Step 5. Storage"}
+::: hint
+$V=n_r\,Q\,t$; divide by 1000 for m³. See the [storage mini-example](#m-mini-fire-storage).
+:::
 $$V=4\times3800\times62.5=15\,200\times62.5=950\,000\ \text{L}$$
+:::
 
-**Answer: 950 000 L = 950 m³.** With the BNBC 2020 table (62 min): $15\,200\times62=942\,400$ L = 942.4 m³ (larger-demand convention: 475 m³ with 2006).
+:::
 
-*Diagram* (4): draw **BNBC Fig. 4.4.4** (Fig. 29) as in Solution 3.30, with the roof tank's fire reserve sized at 950 m³. Note under the sketch that at 92.5 m the building exceeds one 67 m pressure zone, so in practice the gravity system is zoned (Fig. 4.4.9) or pressure-reducing valves are fitted on the lower floors (Fig. 4.4.10).
+::: answer
+**Answer: 950 000 L = 950 m³.**
+:::
+
+With the BNBC 2020 table ([62]{.lookup t="bnbc" row="Light hazard-II" col="duration_min_51m_to_102m"} min): $15\,200\times62=942\,400$ L = 942.4 m³ (larger-demand convention: 475 m³ with 2006).
+
+*Diagram* (4):
+
+::: {.answer label="Show answer: the diagram"}
+Draw **BNBC Fig. 4.4.4** (Fig. 29) as in Solution 3.30, with the roof tank's fire reserve sized at 950 m³. Note under the sketch that at 92.5 m the building exceeds one 67 m pressure zone, so in practice the gravity system is zoned (Fig. 4.4.9) or pressure-reducing valves are fitted on the lower floors (Fig. 4.4.10).
+:::
 
 > **TRY 3.27** `[PP 12-13 Q7(c), 10]` For a facility having a total building area of 100000 sq. m, 1000 sq. m of combustible material storage area, 2000 sq. m of elevated floor area, and a special area of 1000 sq.m. Determine the flow requirements and the storage capacity for 90 minutes.
 
-**Solution 3.27** **[TUTOR-GENERATED]** No table was attached, and the area-based guideline this question was set from (Aloke sir's slide: "the storage capacity is to be based on the area of the premises … and the facilities requiring special fire protection … the fire water storage requirement is calculated from the flow requirement" [Kanak p.214]) is not in the surviving notes. State the assumptions and use BNBC Table 4.4.1, per riser of 1000 m²:
+**Solution 3.27** **[TUTOR-GENERATED]** Area-based variant: give each area a hazard class, take its flow per riser of 1000 m² from BNBC Table 4.4.1, add the flows, and multiply by the 90 min given. Work it step by step; open a hint if stuck.
 
-*Assumptions.*
+::: {.problem #sol-3-27}
+
+::: {.step title="Step 1. Assumptions and hazard of each area"}
+::: hint
+No table was attached: state the assumptions. Give each area a BNBC hazard class (§3.10: industry G1 = ordinary hazard-I, storage H2 = ordinary hazard-III, extra hazard not less than ordinary hazard-III) and a number of risers (one per 1000 m² of the area that burns). See the [risers mini-example](#m-mini-fire-risers).
+:::
+No table was attached, and the area-based guideline this question was set from (Aloke sir's slide: "the storage capacity is to be based on the area of the premises … and the facilities requiring special fire protection … the fire water storage requirement is calculated from the flow requirement" [Kanak p.214]) is not in the surviving notes. State the assumptions and use BNBC Table 4.4.1, per riser of 1000 m²:
 
 - The facility has sprinklers and hose standpipes on combined risers; each area's demand = $n_r(Q_{spr}+Q_{sp})$.
 - **General building area** (100 000 m²): an industrial facility, **ordinary hazard-I** (BNBC group G1). A fire is not expected over the whole 100 000 m² at once: the design fire covers **one riser area** (1000 m²), so $n_r=1$.
@@ -1185,26 +1415,41 @@ $$V=4\times3800\times62.5=15\,200\times62.5=950\,000\ \text{L}$$
 - **Elevated floor area** (2000 m², mezzanines and raised floors): **ordinary hazard-I**, whole area, $n_r=2$.
 - **Special area** (1000 m²): extra hazard; BNBC says not less than **ordinary hazard-III**, $n_r=1$.
 - All four demands are supplied at once (fire in the main building spreading to the special areas), and the duration is the 90 min given.
+:::
 
-*Flow requirements.*
-
+::: {.step title="Step 2. Flow requirements"}
+::: hint
+BNBC Table 4.4.1: sprinkler + standpipe flow of each area's row, times its number of risers; then add the four. See the [flow mini-example](#m-mini-fire-flow).
+:::
 | Area | Hazard (row) | $Q_{spr}+Q_{sp}$ (L/min) | $n_r$ | Flow (L/min) |
 |---|---|---|---|---|
-| General building, design fire | OH-I | 2650 + 1900 = 4550 | 1 | 4550 |
-| Combustible storage, 1000 m² | OH-III | 4800 + 1900 = 6700 | 1 | 6700 |
+| General building, design fire | OH-I | [2650]{.lookup t="bnbc" row="Ordinary hazard-I" col="sprinkler_system_litre_per_min"} + [1900]{.lookup t="bnbc" row="Ordinary hazard-I" col="standpipe_and_hose_system_litre_per_min"} = 4550 | 1 | 4550 |
+| Combustible storage, 1000 m² | OH-III | [4800]{.lookup t="bnbc" row="Ordinary hazard-III" col="sprinkler_system_litre_per_min"} + [1900]{.lookup t="bnbc" row="Ordinary hazard-III" col="standpipe_and_hose_system_litre_per_min"} = 6700 | 1 | 6700 |
 | Elevated floors, 2000 m² | OH-I | 4550 | 2 | 9100 |
 | Special area, 1000 m² | ≥ OH-III | 6700 | 1 | 6700 |
 | **Total** | | | | **27 050** |
+:::
 
-*Storage for 90 min.*
+::: {.step title="Step 3. Storage for 90 min"}
+::: hint
+$V=Q\,t$ with the total flow and the 90 min given; divide by 1000 for m³. See the [storage mini-example](#m-mini-fire-storage).
+:::
 $$V=27\,050\times90=2\,434\,500\ \text{L}\approx\mathbf{2434.5\ m^3}$$
+:::
 
-**Answer: flow requirement 27 050 L/min (about 451 L/s); storage ≈ 2434.5 m³.** If only the single largest area demand (elevated floors, 9100 L/min) is taken as the design fire, $9100\times90=819\,000$ L = 819 m³. The marks are for stating the hazard of each area, the per-area flow, the total and $V=Qt$.
+:::
+
+::: answer
+**Answer: flow requirement 27 050 L/min (about 451 L/s); storage ≈ 2434.5 m³.**
+:::
+
+If only the single largest area demand (elevated floors, 9100 L/min) is taken as the design fire, $9100\times90=819\,000$ L = 819 m³. The marks are for stating the hazard of each area, the per-area flow, the total and $V=Qt$.
 
 ### FI5. BNBC riser diagrams
 
 > **TRY 3.28** `[PP 12-13 Q7(d), 10]` Draw the typical diagram for fire protection with automatic fire pump in different water supply zones of a tall building (according to BNBC).
 
+::: {.answer label="Show answer"}
 **Solution 3.28** **[FROM SOURCE: Kanak pp.223–224, BNBC Fig. 4.4.8]**
 
 Draw Fig. 28 (BNBC Fig. 4.4.8) and label:
@@ -1217,13 +1462,17 @@ Draw Fig. 28 (BNBC Fig. 4.4.8) and label:
 6. A **Siamese connection accessible to the fire engine**, with a check valve, on each riser.
 
 Two lines of explanation: in a tall building the static pressure at the lower floors would exceed the pressure rating of the hose equipment, so BNBC divides it into zones (each ≈ 67 m) within the allowable pressure; each zone has its own automatic fire pump (or pressure tank and automatic pump), which starts on a pressure drop, is running within 30 s and runs until stopped manually.
+:::
 
 > **TRY 3.29** `[PP 15-16 Q4(d), 10]` Draw the typical diagram for fire protection with automatic fire pump in different water supply zones of a tall building (according to BNBC).
 
+::: {.answer label="Show answer"}
 **Solution 3.29** **[FROM SOURCE: Kanak p.224]** Word for word the same as TRY 3.28: draw and label Fig. 4.4.8 exactly as in Solution 3.28 (ground tank, two automatic fire pumps, Zone 1 riser ≈ 67 m closed at its top, Zone 2 express riser with outlets only in Zone 2, hose stations, two Siamese connections with check valves).
+:::
 
 > **TRY 3.30** `[PP 13-14 Q3(c), 10]` Draw the typical diagram for fire protection system with ground and gravity roof tank with adequate domestic and fire reserve (according to BNBC).
 
+::: {.answer label="Show answer"}
 **Solution 3.30** **[FROM SOURCE: Kanak pp.218–220, BNBC Figs. 4.4.4, 4.4.7]**
 
 Draw Fig. 29 (BNBC Fig. 4.4.4) and label:
@@ -1236,10 +1485,13 @@ Draw Fig. 29 (BNBC Fig. 4.4.4) and label:
 6. **Siamese connection accessible to the fire engine**, with check valve and valve, at the foot of the standpipe.
 
 Explain in two lines: the domestic outlet is above the fire reserve, so domestic use can never draw the tank below the fire reserve, and the fire water is kept fresh by domestic turnover (Fig. 4.4.7); the tank bottom must be high enough above the top hose station to give the required pressure by gravity, so firefighting water is available even without power.
+:::
 
 > **TRY 3.31** `[PP 16-17 Q3(d), 10]` Draw a typical diagram for fire protection system with ground and gravity roof tank with adequate domestic and fire reserve (according to BNBC).
 
+::: {.answer label="Show answer"}
 **Solution 3.31** **[FROM SOURCE: Kanak p.220]** Word for word the same as TRY 3.30: draw and label Fig. 4.4.4 exactly as in Solution 3.30 (ground tank and water main, manually controlled pump and rising pipe, roof tank with domestic reserve above fire reserve, domestic outlet above the fire reserve, fire header from the tank bottom to the standpipe and hose stations, Siamese connection with check valve).
+:::
 
 <!-- pagebreak -->
 

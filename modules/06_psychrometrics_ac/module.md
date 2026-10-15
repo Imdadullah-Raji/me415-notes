@@ -5,7 +5,7 @@
 |---|---|
 | **Where it appears** | 10 of 11 papers, 2011-12 to 2023-24 (not 2021-22). Almost always Q2 (and Q3 in 2011-12, 2012-13) of Section A; Q1(a) in 2020-21; Q7(b) (2013-14) and Q8(b)/(c) (2023-24) of Section B |
 | **Share of all marks** | 11.3% (346 of 3055 weighted marks): 27 parts. AC system types (AC5) 125 marks; the window/split AC numerical (AC2) 75 marks; other psychrometric numericals (AC3) 60; processes and reheat/bypass systems (AC4) 49; comfort (AC1) 37. Up to 19% of a paper in 2011-12 to 2013-14, 5–12% since |
-| **Time** | core 3 h (§6.1–6.4, §6.7–6.8 and Solutions 5.1, 5.6, 5.19), full 6 h (all 27 solutions) |
+| **Time** | core 3 h (§6.1–6.4, §6.7–6.8 and Solutions 6.1, 6.6, 6.19), full 6 h (all 27 solutions) |
 | **Sources** | Arif pp.14–17, 60–76, 94–106; Kanak pp.29–31, 118–128, 153–163; Ameen §12.1–12.5 (SHR, supply air, mixing); Data Book Table 1 (water) and Chart 8 (psychrometric chart), both at the end of this module |
 
 **How it has been asked:**
@@ -145,7 +145,7 @@ with $T_2=T_{wb}$. Given $T_{db}$ and $T_{wb}$ (sling psychrometer), this gives 
 
 > **EXAMPLE 6.1** `[Arif pp.101–102; Kanak p.159; state 1 of the window AC problem]` Air is at 1 atm, 30 °C and 80 % relative humidity. Find $\omega$, $h$, $v$, the dew point and the wet-bulb temperature.
 >
-> **[TUTOR-GENERATED]** Table 1, row 30 °C: $P_g=0.00425$ MPa $=4.25$ kPa.
+> **[TUTOR-GENERATED]** Table 1, row 30 °C: $P_g=$ [0.00425]{.lookup t="water-sat" row="30" col="p_MPa"} MPa $=4.25$ kPa.
 >
 > $P_v=\phi P_g=0.8\times4.25=3.40$ kPa
 >
@@ -155,12 +155,32 @@ with $T_2=T_{wb}$. Given $T_{db}$ and $T_{wb}$ (sling psychrometer), this gives 
 >
 > $v=\dfrac{0.287\times303.15}{101.325-3.40}=\mathbf{0.8885}$ m³/kg dry air
 >
-> *Dew point:* $T_{sat}$ at 3.40 kPa. Table 1 rows 25 °C (3.17 kPa) and 30 °C (4.25 kPa): $T_{dp}=25+5\,\dfrac{3.40-3.17}{4.25-3.17}=\mathbf{26.06}$ °C.
+> *Dew point:* $T_{sat}$ at 3.40 kPa. Table 1 rows 25 °C ([3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa) and 30 °C ([4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa): $T_{dp}=25+5\,\dfrac{3.40-3.17}{4.25-3.17}=\mathbf{26.06}$ °C.
 >
 > *Wet bulb by trial.* Try $T_{wb}=27$ °C: Table 1 between 25 and 30 °C gives $P_g=3.602$ kPa, $h_{fg}=2436.94$, $h_f=113.19$ kJ/kg; $\omega^*=0.622\times3.602/(101.325-3.602)=0.02293$;
 > $\omega_1=\dfrac{1.005(27-30)+0.02293\times2436.94}{2501+1.82\times30-113.19}=0.02164$ (slightly above 0.0216, so $T_{wb}$ is a little below 27). Try 26 °C: $\omega_1=0.01980$. Interpolating, $T_{wb}=26+\dfrac{0.0216-0.01980}{0.02164-0.01980}=\mathbf{26.98}$ °C $\approx27.0$ °C.
 >
-> *Chart check* (sea-level chart, end of this module): $\omega\approx21.7$ g/kg, $h\approx85.5$ kJ/kg, $v\approx0.889$ m³/kg, $T_{wb}\approx27$ °C, $T_{dp}\approx26$ °C. CoolProp: 0.02168, 85.56 kJ/kg, 0.8884 m³/kg. The table route is within 0.4 % of the exact values; the small difference comes from interpolating $P_g$ linearly over 5 K.
+> *Chart check* (sea-level chart, end of this module): $\omega\approx$ [21.7]{.lookup t="chart8"} g/kg, $h\approx$ [85.5]{.lookup t="chart8"} kJ/kg, $v\approx$ [0.889]{.lookup t="chart8"} m³/kg, $T_{wb}\approx$ [27]{.lookup t="chart8"} °C, $T_{dp}\approx$ [26]{.lookup t="chart8"} °C. CoolProp: 0.02168, 85.56 kJ/kg, 0.8884 m³/kg. The table route is within 0.4 % of the exact values; the small difference comes from interpolating $P_g$ linearly over 5 K.
+
+::: {.mini #m-mini-psy-state}
+**Mini-example: a moist-air state from T and φ.** Air at 1 atm, 40 °C, 40 %. Table 1, row 40 °C: $P_g=$ [7.38]{.lookup t="water-sat" row="40" col="p_MPa" x="1000"} kPa.
+
+$P_v=0.4\times7.38=2.952$ kPa; $\omega=\dfrac{0.622\times2.952}{101.325-2.952}=0.018665$ kg/kg; $h=1.005(40)+0.018665(2501+1.82\times40)=40.20+48.04=88.24$ kJ/kg; $v=\dfrac{0.287\times313.15}{101.325-2.952}=0.9136$ m³/kg.
+:::
+
+::: {.mini #m-mini-psy-interp}
+**Mini-example: Table 1 between two rows.** Find $P_g$ and $h_f$ at 22 °C. Rows 20 °C ($P_g=$ [2.34]{.lookup t="water-sat" row="20" col="p_MPa" x="1000"} kPa, $h_f=$ [83.91]{.lookup t="water-sat" row="20" col="h_liq_kJ_kg"} kJ/kg) and 25 °C ([3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa, [104.83]{.lookup t="water-sat" row="25" col="h_liq_kJ_kg"} kJ/kg); 22 °C is $(22-20)/5=0.4$ of the interval:
+
+$P_g=2.34+0.4(3.17-2.34)=2.672$ kPa; $h_f=83.91+0.4(104.83-83.91)=92.28$ kJ/kg. ($h_{fg}=h_g-h_f$, interpolated the same way.)
+:::
+
+::: {.mini #m-mini-psy-twb}
+**Mini-example: ω from dry- and wet-bulb temperatures.** A sling psychrometer reads 30 °C dry bulb, 25 °C wet bulb, at 1 atm. Table 1, row 25 °C: $P_g=$ [3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa, $h_f=$ [104.83]{.lookup t="water-sat" row="25" col="h_liq_kJ_kg"}, $h_g=$ [2546.51]{.lookup t="water-sat" row="25" col="h_vap_kJ_kg"} kJ/kg, so $h_{fg}=2441.68$ kJ/kg.
+
+$\omega^*=\dfrac{0.622\times3.17}{101.325-3.17}=0.020088$; $\omega_1=\dfrac{1.005(25-30)+0.020088\times2441.68}{2501+1.82\times30-104.83}=\dfrac{44.02}{2450.77}=0.01796$ kg/kg.
+
+The reverse problem (ω known, $T_{wb}$ wanted) is solved by trial: compute $\omega_1$ for two guessed $T_{wb}$ and interpolate, as in Example 6.1.
+:::
 
 ## 6.3 The psychrometric chart ★
 
@@ -225,6 +245,14 @@ During heating $\omega$ stays constant but $\phi$ falls ($P_v$ fixed, $P_g$ rise
 
 ![Fig. 8: Simple heating. (a) Duct with a heating coil: state 1 at 14 °C, φ 80 %, 30 m³/min enters; heat $\dot Q_{in}$ is added; state 2 leaves at 25 °C with ω2 = ω1 and φ2 < φ1. (b) Chart: horizontal arrow from 1 (14 °C, 80 %) to 2 (25 °C, 41 %) at constant ω = 0.00803](figures/008.png "w=0.85")
 
+::: {.mini #m-mini-psy-heating}
+**Mini-example: sensible heating.** 20 kg/min of dry air with $\omega=0.0060$ is heated from 10 °C to 30 °C at 1 atm.
+
+$h_1=1.005(10)+0.0060(2501+18.2)=25.17$ kJ/kg; $h_2=1.005(30)+0.0060(2501+54.6)=45.48$ kJ/kg; $\dot Q_{in}=20(45.48-25.17)=406.2$ kJ/min.
+
+Exit φ: $P_v=\dfrac{101.325\times0.0060}{0.622+0.0060}=0.968$ kPa (unchanged); Table 1, row 30 °C, $P_g=$ [4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa; $\phi_2=0.968/4.25=22.8$ %.
+:::
+
 ### Cooling with dehumidification ★
 
 If the air is cooled below its dew point, moisture condenses on the coil and drains away. This is what every window AC, split AC indoor unit and AHU cooling coil does in summer [Arif p.101a; Kanak p.158]. On the chart (Fig. 9) the air first cools at constant $\omega$ to the dew point x on the saturation curve, then follows the saturation curve down to the exit state 2 (in a real coil the path is a curve from 1 to 2 and the exit is 90–100 % saturated, but only the end states matter). Balances for the coil (control volume around the coil and its drain pan):
@@ -242,7 +270,7 @@ with $h_w=h_f$ at the condensate temperature (Table 1). The condensate term is o
 >
 > *State 1* (Example 6.1): $\omega_1=0.0216$, $h_1=85.34$ kJ/kg, $v_1=0.8885$ m³/kg.
 >
-> *State 2* (14 °C, saturated): Table 1 rows 10 °C (0.00123 MPa) and 15 °C (0.00171 MPa): $P_g=1.23+0.8(1.71-1.23)=1.614$ kPa $=P_{v2}$;
+> *State 2* (14 °C, saturated): Table 1 rows 10 °C ([0.00123]{.lookup t="water-sat" row="10" col="p_MPa"} MPa, $h_f=$ [42.02]{.lookup t="water-sat" row="10" col="h_liq_kJ_kg"} kJ/kg) and 15 °C ([0.00171]{.lookup t="water-sat" row="15" col="p_MPa"} MPa, [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"} kJ/kg): $P_g=1.23+0.8(1.71-1.23)=1.614$ kPa $=P_{v2}$;
 > $\omega_2=\dfrac{0.622\times1.614}{101.325-1.614}=0.01007$; $h_2=1.005(14)+0.01007(2501+1.82\times14)=39.51$ kJ/kg.
 >
 > *Condensate:* $h_w=h_f(14\ °\text{C})=42.02+0.8(62.98-42.02)=58.79$ kJ/kg.
@@ -253,11 +281,17 @@ with $h_w=h_f$ at the condensate temperature (Table 1). The condensate term is o
 >
 > $\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w=515.9-7.6=\mathbf{508\ kJ/min}$ (8.5 kW)
 >
-> *Chart route* (Arif p.102a): $h_1=85.4$, $h_2=39.3$ kJ/kg, $\omega_1=0.0216$, $\omega_2=0.0100$, $v_1=0.889$ → 11.25 kg/min, **0.131 kg/min, 511 kJ/min**. CoolProp: 0.131 kg/min, 512 kJ/min. The table route is about 1 % low because linear interpolation of $P_g$ between 10 and 15 °C overestimates $P_g(14\ °\text{C})$ (1.614 against 1.599 kPa) and so $\omega_2$. Either answer is accepted.
+> *Chart route* (Arif p.102a): $h_1=$ [85.4]{.lookup t="chart8"}, $h_2=$ [39.3]{.lookup t="chart8"} kJ/kg, $\omega_1=$ [0.0216]{.lookup t="chart8"}, $\omega_2=$ [0.0100]{.lookup t="chart8"}, $v_1=$ [0.889]{.lookup t="chart8"} → 11.25 kg/min, **0.131 kg/min, 511 kJ/min**. CoolProp: 0.131 kg/min, 512 kJ/min. The table route is about 1 % low because linear interpolation of $P_g$ between 10 and 15 °C overestimates $P_g(14\ °\text{C})$ (1.614 against 1.599 kPa) and so $\omega_2$. Either answer is accepted.
 
 > **TRAP: 0.135 kg/min in Kanak vai's note (pp.159–160)**
 >
 > Kanak vai's note reads $\omega_1=22$ g/kg off the chart (the true value is 21.6) and gets $\dot m_w=11.24\times(22-10)\times10^{-3}=0.135$ kg/min and $\dot Q_{out}=509.1$ kJ/min. A 0.4 g/kg rounding becomes a 3 % error in the moisture, because $\dot m_w$ depends on the small difference $\omega_1-\omega_2$. The correct answers are **0.131 kg/min and 511 kJ/min** (Arif p.102a). Always carry $\omega$ to three significant figures (four decimals) when you subtract.
+
+::: {.mini #m-mini-psy-coil}
+**Mini-example: the cooling-coil balances.** 20 kg/min of dry air enters a coil with $\omega_1=0.0200$, $h_1=80.0$ kJ/kg and leaves with $\omega_2=0.0090$, $h_2=35.0$ kJ/kg; the condensate leaves at 12 °C, $h_w=50.40$ kJ/kg.
+
+Water: $\dot m_w=20(0.0200-0.0090)=0.220$ kg/min. Energy: $\dot Q_{out}=20(80.0-35.0)-0.220\times50.40=900-11.1=888.9$ kJ/min (14.8 kW).
+:::
 
 ### Heating with humidification
 
@@ -272,11 +306,11 @@ With **steam** humidification the temperature rises a little (2 → 3 slopes up-
 >
 > **[FROM SOURCE: Arif p.103, Kanak pp.161–162, corrected]** $P=100$ kPa, so use the equations, not the chart (Fig. 10).
 >
-> *State 1:* $P_g(10\ °\text{C})=1.23$ kPa; $P_{v1}=0.3\times1.23=0.369$ kPa; $\omega_1=\dfrac{0.622\times0.369}{100-0.369}=0.002304$; $h_1=1.005(10)+0.002304(2501+18.2)=15.85$ kJ/kg; $v_1=\dfrac{0.287\times283.15}{100-0.369}=0.8157$ m³/kg.
+> *State 1:* Table 1 row 10 °C, $P_g=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa; $P_{v1}=0.3\times1.23=0.369$ kPa; $\omega_1=\dfrac{0.622\times0.369}{100-0.369}=0.002304$; $h_1=1.005(10)+0.002304(2501+18.2)=15.85$ kJ/kg; $v_1=\dfrac{0.287\times283.15}{100-0.369}=0.8157$ m³/kg.
 >
 > *State 2:* $\omega_2=\omega_1$, $h_2=1.005(22)+0.002304(2501+40.04)=27.96$ kJ/kg.
 >
-> *State 3:* $P_g(25\ °\text{C})=3.17$ kPa; $P_{v3}=0.6\times3.17=1.902$ kPa; $\omega_3=\dfrac{0.622\times1.902}{100-1.902}=0.01206$.
+> *State 3:* Table 1 row 25 °C, $P_g=$ [3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa; $P_{v3}=0.6\times3.17=1.902$ kPa; $\omega_3=\dfrac{0.622\times1.902}{100-1.902}=0.01206$.
 >
 > $\dot m_a=45/0.8157=55.17$ kg/min
 >
@@ -320,6 +354,12 @@ Eliminating the masses gives $\dfrac{\omega_2-\omega_3}{\omega_3-\omega_1}=\dfra
 
 Two points need care. (1) Volumes are given at different states: convert each stream with its own $v$ ($\dot m_a=\dot V/v$) before weighting; volume weighting is only approximate. (2) If the line 1–2 crosses the saturation curve (very cold and very humid air), the mixture is fogged and some vapour condenses.
 
+::: {.mini #m-mini-psy-mixing}
+**Mini-example: mixing two streams.** 2.0 kg/s of room air ($\omega=0.0100$, $h=50.0$ kJ/kg) mixes with 0.5 kg/s of outdoor air ($\omega=0.0200$, $h=85.0$ kJ/kg).
+
+$\omega_m=\dfrac{2.0\times0.0100+0.5\times0.0200}{2.5}=0.0120$; $h_m=\dfrac{2.0\times50.0+0.5\times85.0}{2.5}=57.0$ kJ/kg; $T_m=\dfrac{57.0-2501\times0.0120}{1.005+1.82\times0.0120}=26.28$ °C. M lies on the line R–O, one fifth of the way from R.
+:::
+
 ![Fig. 13: Adiabatic mixing. (a) Mixing box: recirculated air 1 (ṁa1, ω1, h1) enters horizontally, outdoor air 2 (ṁa2, ω2, h2) enters from above; mixed air 3 (ṁa3, ω3, h3) leaves. (b) Chart: the mixed state 3 lies on the straight line from 1 (room, 25 °C, 50 %) to 2 (outdoor, 33 °C, 80 %), with 1–3 : 3–2 = ṁa2 : ṁa1, here close to 1 because three times as much room air is used (Solution 6.8)](figures/013.png "w=0.95")
 
 ### Chemical dehumidification
@@ -349,6 +389,14 @@ where x is the point at $T_r$ and $\omega_s$ [Ameen eq. 12.19–12.20]. The supp
 5. The rest of S from $T_s$ and $\omega_s$ (φ, $T_{wb}$ by trial, $h$, $v$); supply volume $\dot V=\dot m_av_s$.
 
 *Chart route:* plot R; draw a line through R parallel to the protractor line of the SHR; S is where it crosses the vertical through $T_s$ [Ameen Ex. 12.11].
+
+::: {.mini #m-mini-psy-supply}
+**Mini-example: supply-air flow and ω from the room loads.** Room at 26 °C with $\omega_r=0.0105$; sensible gain 10 kW, moisture gain 5 kg/h; supply at 16 °C.
+
+First pass ($\omega_s=\omega_r$): $\dot m_a=\dfrac{10}{(1.005+1.82\times0.0105)\times10}=0.9765$ kg/s. Moisture $5/3600=0.001389$ kg/s, so $\omega_s=0.0105-0.001389/0.9765=0.009078$.
+
+Second pass: $1.005+1.82\times0.009078=1.0215$, $\dot m_a=10/(1.0215\times10)=0.9789$ kg/s, $\omega_s=0.0105-0.001389/0.9789=0.009081$ kg/kg.
+:::
 
 **Apparatus dew point and bypass factor.** A real cooling coil does not bring all the air into contact with its fins. The effective coil surface temperature is the **apparatus dew point** (ADP), the point where the coil process line meets the saturation curve. Air leaving the coil behaves as a mixture of air that touched the coil (leaving at the ADP) and air that **bypassed** it (unchanged). The **bypass factor** $BPF=\dfrac{T_{out}-T_{ADP}}{T_{in}-T_{ADP}}$ (typically 0.05–0.2); the contact factor is $1-BPF$ [Ameen §12.5]. A deeper coil (more rows) or lower face velocity gives a smaller BPF.
 
@@ -629,10 +677,10 @@ The 27 parts fall into five archetypes. The numericals come first, because they 
 | Group | Papers | Topic | Solved in full |
 |---|---|---|---|
 | AC2. Window/split AC, cooling with dehumidification | 13-14, 16-17, 17-18, 18-19 | §6.4 | Solution 6.1 |
-| AC3. Other psychrometric numericals | 15-16, 11-12, 12-13 (×3) | §6.2, §6.4, §6.5 | Solutions 5.5–5.9 |
-| AC1. Comfort, refrigeration vs AC | 11-12, 12-13, 13-14, 15-16, 23-24 | §6.1 | Solutions 5.10–5.14 |
-| AC4. Processes, bypass/reheat, evaporative cooling | 11-12, 13-14 (×2), 16-17 | §6.4–6.5, §6.8 | Solutions 5.15–5.18 |
-| AC5. AC system types | 11-12 (×2), 12-13, 15-16, 17-18, 18-19, 20-21, 22-23, 23-24 | §6.7–6.8 | Solutions 5.19–5.27 |
+| AC3. Other psychrometric numericals | 15-16, 11-12, 12-13 (×3) | §6.2, §6.4, §6.5 | Solutions 6.5–6.9 |
+| AC1. Comfort, refrigeration vs AC | 11-12, 12-13, 13-14, 15-16, 23-24 | §6.1 | Solutions 6.10–6.14 |
+| AC4. Processes, bypass/reheat, evaporative cooling | 11-12, 13-14 (×2), 16-17 | §6.4–6.5, §6.8 | Solutions 6.15–6.18 |
+| AC5. AC system types | 11-12 (×2), 12-13, 15-16, 17-18, 18-19, 20-21, 22-23, 23-24 | §6.7–6.8 | Solutions 6.19–6.27 |
 
 Standing assumptions for every numerical, unless the solution says otherwise:
 
@@ -644,11 +692,17 @@ Standing assumptions for every numerical, unless the solution says otherwise:
 
 > **TRY 6.1** `[PP 13-14 Q2(c), 20]` Air enters a window air conditioner at 1 atm., 35°C, and 70 percent relative humidity at a rate of 10 m³/min, and it leaves as saturated air at 15°C. Part of the moisture in the air that condenses during the process is also removed at 15°C. Determine the rates of heat and moisture removal from the air.
 
-**Solution 6.1** **[FROM SOURCE: Arif pp.101–102; Kanak pp.158–160, method; numbers tutor-generated]** This is the model answer for the whole family.
+**Solution 6.1** **[FROM SOURCE: Arif pp.101–102; Kanak pp.158–160, method; numbers tutor-generated]** This is the model answer for the whole family: inlet state, exit state, then the water and energy balances of the coil. Work it step by step; open a hint if stuck.
 
+::: {.problem #sol-6-1}
+
+::: {.step title="Step 1. Inlet state 1"}
+::: hint
+Table 1 (water), row at $T_1$: $P_g$ in MPa, × 1000 for kPa. Then $P_v=\phi P_g$, $\omega=0.622P_v/(P-P_v)$, $h=1.005T+\omega(2501+1.82T)$, $v=0.287(T+273.15)/(P-P_v)$ with $P=101.325$ kPa. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
 *Sketch.* Draw the duct with the cooling coil and drain pan, and the chart path 1 → x → 2 (Fig. 9, which is drawn for exactly these numbers).
 
-*State 1* (35 °C, φ = 70 %). Table 1, row 35 °C: $P_g=0.00563$ MPa $=5.63$ kPa.
+*State 1* (35 °C, φ = 70 %). Table 1, row 35 °C: $P_g=$ [0.00563]{.lookup t="water-sat" row="35" col="p_MPa"} MPa $=5.63$ kPa.
 
 $P_{v1}=0.70\times5.63=3.941$ kPa
 
@@ -659,52 +713,141 @@ $h_1=1.005(35)+0.02517(2501+1.82\times35)=35.175+64.557=99.73$ kJ/kg dry air
 $v_1=\dfrac{0.287\,(35+273.15)}{101.325-3.941}=0.9081$ m³/kg dry air
 
 (The dew point is $T_{sat}(3.941\text{ kPa})=28.57$ °C: the coil must be colder than this to condense water. $T_{wb}=30.05$ °C.)
+:::
 
-*State 2* (15 °C, saturated). Table 1, row 15 °C: $P_g=0.00171$ MPa $=1.71$ kPa $=P_{v2}$.
+::: {.step title="Step 2. Exit state 2 and the condensate"}
+::: hint
+Saturated exit air: $P_{v2}=P_g(T_2)$ from Table 1 (interpolate between the 5 °C rows if $T_2$ is not on a row: [interpolation mini-example](#m-mini-psy-interp)); then $\omega_2$ and $h_2$ as in step 1. Condensate: $h_w=h_f(T_2)$, same row.
+:::
+*State 2* (15 °C, saturated). Table 1, row 15 °C: $P_g=$ [0.00171]{.lookup t="water-sat" row="15" col="p_MPa"} MPa $=1.71$ kPa $=P_{v2}$.
 
 $\omega_2=\dfrac{0.622\times1.71}{101.325-1.71}=0.01068$ kg/kg dry air
 
 $h_2=1.005(15)+0.01068(2501+1.82\times15)=42.07$ kJ/kg dry air
 
-*Condensate* at 15 °C: Table 1, $h_w=h_f=62.98$ kJ/kg.
+*Condensate* at 15 °C: Table 1, $h_w=h_f=$ [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"} kJ/kg.
+:::
 
+::: {.step title="Step 3. Dry-air flow and moisture removal"}
+::: hint
+$\dot m_a=\dot V_1/v_1$ with $v_1$ at the inlet, where the volume is measured. Water balance on the coil: $\dot m_w=\dot m_a(\omega_1-\omega_2)$. Carry ω to four decimals before subtracting. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
 *Dry-air flow:* $\dot m_a=\dfrac{\dot V_1}{v_1}=\dfrac{10}{0.9081}=11.01$ kg/min
 
 *Water balance:* $\dot m_a\omega_1=\dot m_a\omega_2+\dot m_w$
 
 $$\dot m_w=\dot m_a(\omega_1-\omega_2)=11.01(0.02517-0.01068)=\mathbf{0.160\ kg/min}\ (9.6\text{ kg/h})$$
+:::
 
+::: {.step title="Step 4. Heat removal"}
+::: hint
+Energy balance on the coil and drain pan: $\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w$; kJ/min ÷ 60 = kW, 1 TR = 3.517 kW. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
 *Energy balance* (control volume: coil and drain pan): $\dot m_ah_1=\dot Q_{out}+\dot m_ah_2+\dot m_wh_w$
 
 $$\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w=634.9-10.1=\mathbf{625\ kJ/min}\ (10.4\text{ kW, about 3.0 TR})$$
+:::
 
+:::
+
+::: answer
 **Answer: moisture removal 0.160 kg/min; heat removal 625 kJ/min (10.4 kW).**
+:::
 
-*Chart route* (sea-level chart): state 1 ω ≈ 25.3 g/kg, h ≈ 100.0 kJ/kg, v ≈ 0.908 m³/kg; state 2 ω ≈ 10.7 g/kg, h ≈ 42.1 kJ/kg → 0.161 kg/min, 628 kJ/min. CoolProp gives the same 0.161 kg/min and 628 kJ/min.
+*Chart route* (sea-level chart): state 1 ω ≈ [25.3]{.lookup t="chart8"} g/kg, h ≈ [100.0]{.lookup t="chart8"} kJ/kg, v ≈ [0.908]{.lookup t="chart8"} m³/kg; state 2 ω ≈ [10.7]{.lookup t="chart8"} g/kg, h ≈ [42.1]{.lookup t="chart8"} kJ/kg → 0.161 kg/min, 628 kJ/min. CoolProp gives the same 0.161 kg/min and 628 kJ/min.
 
 > **TRY 6.2** `[PP 16-17 Q2(c), 20]` Air enters a window air conditioner at 1 atm., 35 °C, and 80 percent relative humidity at a rate of 12 m³/min. The air leaves the cooling section as saturated air at 12 °C. Part of the moisture in the air that condenses during the process is also removed at 12 °C. Determine the rate of heat transfer and moisture removal from the air.
 
-**Solution 6.2** **[TUTOR-GENERATED]** As Solution 6.1 with 80 %, 12 m³/min and 12 °C.
+**Solution 6.2** **[TUTOR-GENERATED]** As Solution 6.1 with 80 %, 12 m³/min and 12 °C. Work it step by step; open a hint if stuck.
 
-*State 1:* $P_{v1}=0.80\times5.63=4.504$ kPa; $\omega_1=0.02893$; $h_1=109.38$ kJ/kg; $v_1=0.9134$ m³/kg (dew point 30.92 °C, $T_{wb}=31.70$ °C).
+::: {.problem #sol-6-2}
 
-*State 2* (12 °C sat.): Table 1 between 10 and 15 °C, $P_g=1.23+0.4(1.71-1.23)=1.422$ kPa; $\omega_2=0.00885$; $h_2=34.40$ kJ/kg. $h_w=h_f(12\ °\text{C})=50.40$ kJ/kg.
+::: {.step title="Step 1. Inlet state 1"}
+::: hint
+Table 1 (water), row 35 °C: $P_g$ (MPa × 1000 = kPa). Then $P_v=\phi P_g$, $\omega$, $h$, $v$ as in Solution 6.1. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
+*State 1* (35 °C, φ = 80 %). Table 1, row 35 °C: $P_g=$ [5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa.
 
-$\dot m_a=12/0.9134=13.14$ kg/min; $\dot m_w=13.14(0.02893-0.00885)=\mathbf{0.264\ kg/min}$;
+$P_{v1}=0.80\times5.63=4.504$ kPa; $\omega_1=\dfrac{0.622\times4.504}{101.325-4.504}=0.02893$;
+$h_1=1.005(35)+0.02893(2501+1.82\times35)=35.175+74.21=109.38$ kJ/kg; $v_1=\dfrac{0.287\,(35+273.15)}{101.325-4.504}=0.9134$ m³/kg (dew point 30.92 °C, $T_{wb}=31.70$ °C).
+:::
+
+::: {.step title="Step 2. Exit state 2 and the condensate"}
+::: hint
+12 °C is between the 10 °C and 15 °C rows of Table 1: interpolate $P_g$ and $h_f$ linearly. See the [interpolation mini-example](#m-mini-psy-interp).
+:::
+*State 2* (12 °C sat.): Table 1 rows 10 °C ($P_g=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa, $h_f=$ [42.02]{.lookup t="water-sat" row="10" col="h_liq_kJ_kg"} kJ/kg) and 15 °C ([1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} kPa, [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"} kJ/kg).
+
+Between 10 and 15 °C, $P_g=1.23+0.4(1.71-1.23)=1.422$ kPa $=P_{v2}$; $\omega_2=\dfrac{0.622\times1.422}{101.325-1.422}=0.00885$; $h_2=1.005(12)+\omega_2(2501+1.82\times12)=34.40$ kJ/kg.
+
+$h_w=h_f(12\ °\text{C})=42.02+0.4(62.98-42.02)=50.40$ kJ/kg.
+:::
+
+::: {.step title="Step 3. Dry-air flow and moisture removal"}
+::: hint
+$\dot m_a=\dot V_1/v_1$; $\dot m_w=\dot m_a(\omega_1-\omega_2)$. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
+$\dot m_a=12/0.9134=13.14$ kg/min; $\dot m_w=13.14(0.02893-0.00885)=\mathbf{0.264\ kg/min}$.
+:::
+
+::: {.step title="Step 4. Heat removal"}
+::: hint
+$\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w$; ÷ 60 for kW. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
 $\dot Q_{out}=13.14(109.38-34.40)-0.264\times50.40=985.1-13.3=\mathbf{972\ kJ/min}$ (16.2 kW).
+:::
+
+:::
+
+::: answer
+**Answer: moisture removal 0.264 kg/min; heat removal 972 kJ/min (16.2 kW).**
+:::
 
 (Chart/CoolProp: 0.267 kg/min, 979 kJ/min.)
 
 > **TRY 6.3** `[PP 17-18 Q2(b), 20]` Air enters a split air conditioner at 1 atm., 32 °C, and 80 percent relative humidity at a rate of 15 m³/min. The air leaves the cooling section as saturated air at 14 °C. Part of the moisture in the air that condenses during the process is also removed at 14 °C. Determine the rate of heat transfer and moisture removal from the air.
 
-**Solution 6.3** **[TUTOR-GENERATED]** As Solution 6.1 with 32 °C, 80 %, 15 m³/min, 14 °C. (A split AC's indoor coil does exactly what the window AC's evaporator does.)
+**Solution 6.3** **[TUTOR-GENERATED]** As Solution 6.1 with 32 °C, 80 %, 15 m³/min, 14 °C. Work it step by step; open a hint if stuck.
 
-*State 1:* Table 1 between 30 and 35 °C: $P_g(32)=4.25+0.4(5.63-4.25)=4.802$ kPa; $P_{v1}=0.8\times4.802=3.842$ kPa; $\omega_1=0.02451$; $h_1=94.89$ kJ/kg; $v_1=0.8984$ m³/kg (dew point 28.11 °C, $T_{wb}=29.01$ °C).
+::: {.problem #sol-6-3}
 
-*State 2* (14 °C sat., as Example 6.2): $P_g=1.614$ kPa, $\omega_2=0.01007$, $h_2=39.51$ kJ/kg; $h_w=58.79$ kJ/kg.
+::: {.step title="Step 1. Inlet state 1"}
+::: hint
+32 °C is between the 30 °C and 35 °C rows of Table 1: interpolate $P_g$ ([interpolation mini-example](#m-mini-psy-interp)); then $P_v$, $\omega$, $h$, $v$ as in Solution 6.1 ([moist-air state mini-example](#m-mini-psy-state)).
+:::
+(A split AC's indoor coil does exactly what the window AC's evaporator does.)
 
-$\dot m_a=15/0.8984=16.70$ kg/min; $\dot m_w=16.70(0.02451-0.01007)=\mathbf{0.241\ kg/min}$;
+*State 1:* Table 1 rows 30 °C ($P_g=$ [4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa) and 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa). Between 30 and 35 °C: $P_g(32)=4.25+0.4(5.63-4.25)=4.802$ kPa; $P_{v1}=0.8\times4.802=3.842$ kPa; $\omega_1=\dfrac{0.622\times3.842}{101.325-3.842}=0.02451$; $h_1=1.005(32)+0.02451(2501+1.82\times32)=32.16+62.73=94.89$ kJ/kg; $v_1=\dfrac{0.287\,(32+273.15)}{101.325-3.842}=0.8984$ m³/kg (dew point 28.11 °C, $T_{wb}=29.01$ °C).
+:::
+
+::: {.step title="Step 2. Exit state 2 and the condensate"}
+::: hint
+14 °C is between the 10 °C and 15 °C rows: interpolate $P_g$ and $h_f$ (as Example 6.2). See the [interpolation mini-example](#m-mini-psy-interp).
+:::
+*State 2* (14 °C sat., as Example 6.2): Table 1 rows 10 °C ($P_g=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa, $h_f=$ [42.02]{.lookup t="water-sat" row="10" col="h_liq_kJ_kg"} kJ/kg) and 15 °C ([1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} kPa, [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"} kJ/kg).
+
+$P_g=1.23+0.8(1.71-1.23)=1.614$ kPa $=P_{v2}$, $\omega_2=\dfrac{0.622\times1.614}{101.325-1.614}=0.01007$, $h_2=1.005(14)+0.01007(2501+1.82\times14)=39.51$ kJ/kg; $h_w=42.02+0.8(62.98-42.02)=58.79$ kJ/kg.
+:::
+
+::: {.step title="Step 3. Dry-air flow and moisture removal"}
+::: hint
+$\dot m_a=\dot V_1/v_1$; $\dot m_w=\dot m_a(\omega_1-\omega_2)$. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
+$\dot m_a=15/0.8984=16.70$ kg/min; $\dot m_w=16.70(0.02451-0.01007)=\mathbf{0.241\ kg/min}$.
+:::
+
+::: {.step title="Step 4. Heat removal"}
+::: hint
+$\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w$; ÷ 60 for kW. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
 $\dot Q_{out}=16.70(94.89-39.51)-0.241\times58.79=924.7-14.2=\mathbf{911\ kJ/min}$ (15.2 kW).
+:::
+
+:::
+
+::: answer
+**Answer: moisture removal 0.241 kg/min; heat removal 911 kJ/min (15.2 kW).**
+:::
 
 (Chart/CoolProp: 0.240 kg/min, 909 kJ/min.)
 
@@ -712,6 +855,7 @@ $\dot Q_{out}=16.70(94.89-39.51)-0.241\times58.79=924.7-14.2=\mathbf{911\ kJ/min
 
 **Solution 6.4** **[TUTOR-GENERATED]**
 
+::: {.answer label="Show answer: the comparison"}
 *Comparison* (sketch the three schematics of §6.7: one ODU piped to one air handler with supply and return ducts; one ODU with separate pipe pairs to several IDUs; one modular inverter ODU on a single main pipe with branch joints to many IDUs):
 
 | | Ducted split | Multi-split | VRF |
@@ -721,13 +865,47 @@ $\dot Q_{out}=16.70(94.89-39.51)-0.241\times58.79=924.7-14.2=\mathbf{911\ kJ/min
 | Part load | poor | poor | good (inverter compressors) |
 | Control | one thermostat, least flexible | per room, more flexible | per zone, most flexible; heat recovery possible |
 | Cost | low | medium | very high |
+:::
 
-*Numerical:* as Solution 6.2 (state 1 is the same 35 °C/80 %: $\omega_1=0.02893$, $h_1=109.38$, $v_1=0.9134$) with 15 m³/min and 12.5 °C.
+*Numerical:* as Solution 6.2 (state 1 is the same 35 °C/80 %) with 15 m³/min and 12.5 °C. Work it step by step; open a hint if stuck.
 
-*State 2* (12.5 °C sat.): $P_g=1.23+0.5(1.71-1.23)=1.47$ kPa; $\omega_2=0.00916$; $h_2=35.67$ kJ/kg; $h_w=h_f(12.5\ °\text{C})=52.50$ kJ/kg.
+::: {.problem #sol-6-4}
 
-$\dot m_a=15/0.9134=16.42$ kg/min; $\dot m_w=16.42(0.02893-0.00916)=\mathbf{0.325\ kg/min}$;
+::: {.step title="Step 1. Inlet state 1"}
+::: hint
+Same inlet state as Solution 6.2: Table 1 row 35 °C, then $P_v$, $\omega$, $h$, $v$. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
+Table 1, row 35 °C: $P_g=$ [5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa; $P_{v1}=0.80\times5.63=4.504$ kPa; as Solution 6.2, $\omega_1=0.02893$, $h_1=109.38$, $v_1=0.9134$.
+:::
+
+::: {.step title="Step 2. Exit state 2 and the condensate"}
+::: hint
+12.5 °C is half-way between the 10 °C and 15 °C rows: interpolate $P_g$ and $h_f$. See the [interpolation mini-example](#m-mini-psy-interp).
+:::
+*State 2* (12.5 °C sat.): Table 1 rows 10 °C ($P_g=$ [1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa, $h_f=$ [42.02]{.lookup t="water-sat" row="10" col="h_liq_kJ_kg"} kJ/kg) and 15 °C ([1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} kPa, [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"} kJ/kg).
+
+$P_g=1.23+0.5(1.71-1.23)=1.47$ kPa $=P_{v2}$; $\omega_2=\dfrac{0.622\times1.47}{101.325-1.47}=0.00916$; $h_2=1.005(12.5)+\omega_2(2501+1.82\times12.5)=35.67$ kJ/kg; $h_w=h_f(12.5\ °\text{C})=42.02+0.5(62.98-42.02)=52.50$ kJ/kg.
+:::
+
+::: {.step title="Step 3. Dry-air flow and moisture removal"}
+::: hint
+$\dot m_a=\dot V_1/v_1$; $\dot m_w=\dot m_a(\omega_1-\omega_2)$. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
+$\dot m_a=15/0.9134=16.42$ kg/min; $\dot m_w=16.42(0.02893-0.00916)=\mathbf{0.325\ kg/min}$.
+:::
+
+::: {.step title="Step 4. Heat removal"}
+::: hint
+$\dot Q_{out}=\dot m_a(h_1-h_2)-\dot m_wh_w$; ÷ 60 for kW. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
 $\dot Q_{out}=16.42(109.38-35.67)-0.325\times52.50=1210.5-17.1=\mathbf{1193\ kJ/min}$ (19.9 kW).
+:::
+
+:::
+
+::: answer
+**Answer: moisture removal 0.325 kg/min; heat removal 1193 kJ/min (19.9 kW).**
+:::
 
 (Chart/CoolProp: 0.328 kg/min, 1203 kJ/min.)
 
@@ -735,97 +913,253 @@ $\dot Q_{out}=16.42(109.38-35.67)-0.325\times52.50=1210.5-17.1=\mathbf{1193\ kJ/
 
 > **TRY 6.5** `[PP 15-16 Q2(b), 10]` Air enters a heating section at atmospheric pressure, 14 °C, and 80 percent relative humidity at a rate of 30 m³/min, and it leaves at 25 °C. Show the process on a psychrometric chart and determine (i) the rate of heat transfer in the heating section and (ii) the relative humidity of the air at the exit.
 
-**Solution 6.5** **[FROM SOURCE: Arif p.100b; Kanak p.157, method]** Simple heating: a horizontal line on the chart from 1 (14 °C, 80 %) to 2 (25 °C) at constant ω (Fig. 8).
+**Solution 6.5** **[FROM SOURCE: Arif p.100b; Kanak p.157, method]** Simple heating: a horizontal line on the chart from 1 (14 °C, 80 %) to 2 (25 °C) at constant ω (Fig. 8). Work it step by step; open a hint if stuck.
 
-*State 1:* $P_g(14)=1.614$ kPa (Table 1, as Example 6.2); $P_{v1}=0.8\times1.614=1.291$ kPa;
+::: {.problem #sol-6-5}
+
+::: {.step title="Step 1. Inlet state 1"}
+::: hint
+14 °C is between the 10 °C and 15 °C rows of Table 1: interpolate $P_g$ ([interpolation mini-example](#m-mini-psy-interp)); then $P_v$, $\omega$, $h$, $v$ ([moist-air state mini-example](#m-mini-psy-state)).
+:::
+*State 1:* Table 1 rows 10 °C ([1.23]{.lookup t="water-sat" row="10" col="p_MPa" x="1000"} kPa) and 15 °C ([1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} kPa): $P_g(14)=1.614$ kPa (Table 1, as Example 6.2); $P_{v1}=0.8\times1.614=1.291$ kPa;
 $\omega_1=\dfrac{0.622\times1.291}{101.325-1.291}=0.00803$; $h_1=1.005(14)+0.00803(2501+25.48)=34.35$ kJ/kg; $v_1=\dfrac{0.287\times287.15}{101.325-1.291}=0.8238$ m³/kg.
+:::
 
+::: {.step title="Step 2. Exit state 2"}
+::: hint
+Sensible heating: no water added, so $\omega_2=\omega_1$; $h_2=1.005T_2+\omega_2(2501+1.82T_2)$. See the [sensible-heating mini-example](#m-mini-psy-heating).
+:::
 *State 2:* $\omega_2=\omega_1=0.00803$; $h_2=1.005(25)+0.00803(2501+45.5)=45.57$ kJ/kg.
+:::
 
+::: {.step title="Step 3. Rate of heat transfer"}
+::: hint
+$\dot m_a=\dot V_1/v_1$ at the inlet; $\dot Q_{in}=\dot m_a(h_2-h_1)$; ÷ 60 for kW. See the [sensible-heating mini-example](#m-mini-psy-heating).
+:::
 $\dot m_a=30/0.8238=36.41$ kg/min
 
 (i) $\dot Q_{in}=\dot m_a(h_2-h_1)=36.41(45.57-34.35)=\mathbf{408.4\ kJ/min}=\mathbf{6.81\ kW}$
+:::
 
-(ii) $P_{v2}=P_{v1}=1.291$ kPa (ω and $P$ unchanged); $P_g(25)=3.17$ kPa: $\phi_2=\dfrac{1.291}{3.17}=\mathbf{40.7\ \%}$
+::: {.step title="Step 4. Exit relative humidity"}
+::: hint
+$P_v$ does not change (ω and $P$ unchanged); $\phi_2=P_{v1}/P_g(T_2)$ with $P_g$ from Table 1 at 25 °C. See the [sensible-heating mini-example](#m-mini-psy-heating).
+:::
+(ii) $P_{v2}=P_{v1}=1.291$ kPa (ω and $P$ unchanged); $P_g(25)=$ [3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa: $\phi_2=\dfrac{1.291}{3.17}=\mathbf{40.7\ \%}$
+:::
 
-(Chart: $h_1\approx34.3$, $h_2\approx45.5$ kJ/kg, $v_1\approx0.824$, φ₂ ≈ 40 %. CoolProp: 409.2 kJ/min, 40.3 %.) Heating alone dries the air relatively from 80 % to about 41 %, which is why winter systems add a humidifier.
+:::
+
+::: answer
+**Answer: (i) heat transfer 408.4 kJ/min (6.81 kW); (ii) exit relative humidity 40.7 %.**
+:::
+
+(Chart: $h_1\approx$ [34.3]{.lookup t="chart8"}, $h_2\approx$ [45.5]{.lookup t="chart8"} kJ/kg, $v_1\approx$ [0.824]{.lookup t="chart8"}, φ₂ ≈ [40 %]{.lookup t="chart8"}. CoolProp: 409.2 kJ/min, 40.3 %.) Heating alone dries the air relatively from 80 % to about 41 %, which is why winter systems add a humidifier.
 
 > **TRY 6.6** `[PP 11-12 Q3(c), 15]` A space is to be maintained at 50% relative humidity and 24 °C. The space has a sensible heat gain of 20 kW and moisture gain of 10 kg/hr. Moist air enters the space at 16 °C. Outside air at 35 °C dbt and 27 °C wbt is supplied at a rate of 400 litre/s. considering the system use is an elementary summer A/C system, estimate (i) wbt and dbt of air entering the space. (ii) required refrigeration load.
 
-**Solution 6.6** **[TUTOR-GENERATED]** (method of Ameen §12.4–12.5). *Assumption:* the elementary summer system of §6.5 (Fig. 14): the 400 L/s of outdoor air O is mixed with recirculated room air R, the mixture M is cooled and dehumidified in the coil and supplied directly (no bypass, no reheat) at S = 16 °C. (400 L/s alone could not carry 20 kW with an 8 K difference, so the rest of the supply must be recirculated air.)
+**Solution 6.6** **[TUTOR-GENERATED]** (method of Ameen §12.4–12.5). *Assumption:* the elementary summer system of §6.5 (Fig. 14), with the outdoor air mixed with recirculated room air and supplied straight from the coil at 16 °C. Work it step by step; open a hint if stuck.
 
-*Room R* (24 °C, 50 %): Table 1 between 20 and 25 °C, $P_g=2.34+0.8(3.17-2.34)=3.004$ kPa; $P_v=1.502$ kPa; $\omega_r=\dfrac{0.622\times1.502}{101.325-1.502}=0.009359$; $h_r=1.005(24)+0.009359(2501+43.68)=47.94$ kJ/kg.
+::: {.problem #sol-6-6}
 
+::: {.step title="Step 1. Room state R"}
+::: hint
+24 °C is between the 20 °C and 25 °C rows of Table 1: interpolate $P_g$ ([interpolation mini-example](#m-mini-psy-interp)); then $P_v$, $\omega_r$, $h_r$ ([moist-air state mini-example](#m-mini-psy-state)).
+:::
+*Assumption in full:* the 400 L/s of outdoor air O is mixed with recirculated room air R, the mixture M is cooled and dehumidified in the coil and supplied directly (no bypass, no reheat) at S = 16 °C. (400 L/s alone could not carry 20 kW with an 8 K difference, so the rest of the supply must be recirculated air.)
+
+*Room R* (24 °C, 50 %): Table 1 rows 20 °C ([2.34]{.lookup t="water-sat" row="20" col="p_MPa" x="1000"} kPa) and 25 °C ([3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa); between 20 and 25 °C, $P_g=2.34+0.8(3.17-2.34)=3.004$ kPa; $P_v=1.502$ kPa; $\omega_r=\dfrac{0.622\times1.502}{101.325-1.502}=0.009359$; $h_r=1.005(24)+0.009359(2501+43.68)=47.94$ kJ/kg.
+:::
+
+::: {.step title="Step 2. Supply air flow and ωs from the room loads"}
+::: hint
+Sensible gain: $\dot m_a=\dot Q_s/[(1.005+1.82\omega_s)(T_r-T_s)]$; moisture gain: $\omega_s=\omega_r-\dot m_{w}/\dot m_a$. Start with $\omega_s=\omega_r$ and repeat once. See the [supply-air mini-example](#m-mini-psy-supply).
+:::
 *Supply mass from the sensible gain:* $\dot Q_s=\dot m_a(1.005+1.82\,\omega_s)(T_r-T_s)$. With $\omega_s$ found below, $1.005+1.82\times0.008226=1.0200$:
 $\dot m_a=\dfrac{20}{1.0200\times(24-16)}=2.451$ kg/s
 
 *Supply ω from the moisture gain:* $10$ kg/h $=0.002778$ kg/s $=\dot m_a(\omega_r-\omega_s)$ → $\omega_r-\omega_s=0.002778/2.451=0.001133$;
 $\omega_s=0.009359-0.001133=0.008226$ kg/kg. (Start with $\omega_s=\omega_r$; one repeat converges.)
+:::
 
-*(i) Supply state S:* $T_{db}=16$ °C. $P_{vs}=\dfrac{101.325\times0.008226}{0.622+0.008226}=1.322$ kPa, $\phi_s=1.322/1.836=72.0$ %, dew point 10.96 °C. Wet bulb by trial with the adiabatic-saturation relation: $T_{wb}=13$ °C gives $\omega=0.008222$, 14 °C gives 0.009240, so $T_{wb}=13+\dfrac{0.008226-0.008222}{0.009240-0.008222}=13.0$ °C.
+::: {.step title="Step 3. Supply state S: dry and wet bulb"}
+::: hint
+$P_{vs}=P\omega_s/(0.622+\omega_s)$; $\phi_s=P_{vs}/P_g(16)$ (Table 1 between 15 and 20 °C). Wet bulb by trial: guess $T_{wb}$, compute ω from the adiabatic-saturation relation, interpolate between two guesses. See the [wet-bulb mini-example](#m-mini-psy-twb).
+:::
+*(i) Supply state S:* $T_{db}=16$ °C. $P_{vs}=\dfrac{101.325\times0.008226}{0.622+0.008226}=1.322$ kPa; Table 1 rows 15 °C ([1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} kPa) and 20 °C ([2.34]{.lookup t="water-sat" row="20" col="p_MPa" x="1000"} kPa) give $P_g(16)=1.71+0.2(2.34-1.71)=1.836$ kPa, so $\phi_s=1.322/1.836=72.0$ %, dew point 10.96 °C. Wet bulb by trial with the adiabatic-saturation relation: $T_{wb}=13$ °C gives $\omega=0.008222$, 14 °C gives 0.009240, so $T_{wb}=13+\dfrac{0.008226-0.008222}{0.009240-0.008222}=13.0$ °C.
 
 **Air entering the space: 16 °C dbt, 13.0 °C wbt** (φ ≈ 72 %, ω = 0.00823). $h_s=36.89$ kJ/kg, $v_s=0.8298$ m³/kg, supply volume $2.451\times0.8298=2.03$ m³/s. (Room latent load $\dot m_a\Delta\omega(2501+1.82\times24)=7.07$ kW, room SHR $=20/27.07=0.74$.)
+:::
 
-*Outdoor air O* (35 °C dbt, 27 °C wbt), from the adiabatic-saturation relation: at 27 °C, $P_g=3.602$ kPa, $\omega^*=0.02293$, $h_{fg}=2436.94$, $h_f=113.19$ kJ/kg;
+::: {.step title="Step 4. Outdoor air O from dry and wet bulb"}
+::: hint
+Adiabatic-saturation relation with $T_{wb}=27$ °C: $\omega^*$ from $P_g(27)$, and $h_f$, $h_{fg}=h_g-h_f$ at 27 °C, all interpolated between the 25 °C and 30 °C rows of Table 1. Then $P_v$, $v$, $h$, and $\dot m_{a,o}=\dot V_o/v_o$. See the [wet-bulb mini-example](#m-mini-psy-twb).
+:::
+*Outdoor air O* (35 °C dbt, 27 °C wbt), from the adiabatic-saturation relation. Table 1 rows 25 °C ($P_g=$ [3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa, $h_f=$ [104.83]{.lookup t="water-sat" row="25" col="h_liq_kJ_kg"}, $h_g=$ [2546.51]{.lookup t="water-sat" row="25" col="h_vap_kJ_kg"} kJ/kg) and 30 °C ([4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa, [125.73]{.lookup t="water-sat" row="30" col="h_liq_kJ_kg"}, [2555.55]{.lookup t="water-sat" row="30" col="h_vap_kJ_kg"} kJ/kg), interpolated at 0.4 of the interval: at 27 °C, $P_g=3.602$ kPa, $\omega^*=0.02293$, $h_{fg}=2436.94$, $h_f=113.19$ kJ/kg;
 $\omega_o=\dfrac{1.005(27-35)+0.02293\times2436.94}{2501+1.82\times35-113.19}=0.01951$; $P_{vo}=3.082$ kPa (φ = 54.7 %); $v_o=\dfrac{0.287\times308.15}{101.325-3.082}=0.9002$ m³/kg; $h_o=1.005(35)+0.01951(2501+63.7)=85.21$ kJ/kg.
 $\dot m_{a,o}=0.400/0.9002=0.4443$ kg/s; recirculated air $\dot m_{a,r}=2.451-0.4443=2.007$ kg/s.
+:::
 
+::: {.step title="Step 5. Mixed air M"}
+::: hint
+Adiabatic mixing: $\omega_m$ and $h_m$ are dry-air-mass weighted averages of R and O. See the [mixing mini-example](#m-mini-psy-mixing).
+:::
 *Mixed air M* (dry-air weighted):
 $\omega_m=\dfrac{2.007\times0.009359+0.4443\times0.01951}{2.451}=0.01120$; $h_m=\dfrac{2.007\times47.94+0.4443\times85.21}{2.451}=54.69$ kJ/kg ($T_m\approx26.0$ °C).
+:::
 
-*(ii) Coil (refrigeration) load:* condensate $\dot m_w=\dot m_a(\omega_m-\omega_s)=2.451(0.01120-0.00823)=0.00729$ kg/s (26.2 kg/h), taken at the coil exit temperature 16 °C, $h_f=67.17$ kJ/kg:
+::: {.step title="Step 6. Coil (refrigeration) load"}
+::: hint
+Coil M → S: $\dot m_w=\dot m_a(\omega_m-\omega_s)$, $\dot Q_{coil}=\dot m_a(h_m-h_s)-\dot m_wh_w$ with $h_w=h_f$ at the coil exit temperature (Table 1 between 15 and 20 °C); 1 TR = 3.517 kW. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
+*(ii) Coil (refrigeration) load:* condensate $\dot m_w=\dot m_a(\omega_m-\omega_s)=2.451(0.01120-0.00823)=0.00729$ kg/s (26.2 kg/h), taken at the coil exit temperature 16 °C: Table 1 rows 15 °C ($h_f=$ [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"}) and 20 °C ([83.91]{.lookup t="water-sat" row="20" col="h_liq_kJ_kg"} kJ/kg) give $h_f=67.17$ kJ/kg:
 
 $$\dot Q_{coil}=\dot m_a(h_m-h_s)-\dot m_wh_w=2.451(54.69-36.89)-0.00729\times67.17=43.63-0.49=\mathbf{43.1\ kW}\approx\mathbf{12.3\ TR}$$
+:::
+
+:::
+
+::: answer
+**Answer: (i) air entering the space at 16 °C dbt, 13.0 °C wbt; (ii) refrigeration load 43.1 kW ≈ 12.3 TR.**
+:::
 
 Check: room load $\dot m_a(h_r-h_s)=27.07$ kW plus outdoor-air load $\dot m_{a,o}(h_o-h_r)=16.56$ kW $=43.63$ kW. The outdoor air is only 18 % of the flow but 38 % of the load. (CoolProp: outdoor ω = 0.01937, h = 84.90 kJ/kg; 43.0 kW. On the chart, read O at the 35 °C / 27 °C wb intersection, mark M on the line R–O at $T\approx26$ °C, and S at 16 °C on the room condition line through R with SHR 0.74.)
 
 > **TRY 6.7** `[PP 12-13 Q2(b), 10]` A space is to be maintained at 25°C and 50% relative humidity. If the space has a sensible heat gain of 50 kW and moisture gain of 40 kg/hr, estimate: (i) conditions of supply air (ii) volume of supply air. You may assume a reasonable temperature of supply air.
 
-**Solution 6.7** **[TUTOR-GENERATED]** (method of Ameen §12.5, Example 12.11). *Assume* a supply temperature $T_s=15$ °C ($T_r-T_s=10$ K, within the usual 8–12 K).
+**Solution 6.7** **[TUTOR-GENERATED]** (method of Ameen §12.5, Example 12.11). *Assume* a supply temperature $T_s=15$ °C ($T_r-T_s=10$ K, within the usual 8–12 K). Work it step by step; open a hint if stuck.
 
-*Room:* Table 1, 25 °C: $P_g=3.17$ kPa; $P_v=1.585$ kPa; $\omega_r=\dfrac{0.622\times1.585}{101.325-1.585}=0.009884$; $h_r=50.30$ kJ/kg.
+::: {.problem #sol-6-7}
 
+::: {.step title="Step 1. Room state R"}
+::: hint
+Table 1, row 25 °C: $P_g$; then $P_v$, $\omega_r$, $h_r$. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
+*Room:* Table 1, 25 °C: $P_g=$ [3.17]{.lookup t="water-sat" row="25" col="p_MPa" x="1000"} kPa; $P_v=1.585$ kPa; $\omega_r=\dfrac{0.622\times1.585}{101.325-1.585}=0.009884$; $h_r=50.30$ kJ/kg.
+:::
+
+::: {.step title="Step 2. Supply air flow and ωs from the room loads"}
+::: hint
+Sensible gain: $\dot m_a=\dot Q_s/[(1.005+1.82\omega_s)(T_r-T_s)]$; moisture gain: $\omega_s=\omega_r-\dot m_{w}/\dot m_a$. Start with $\omega_s=\omega_r$ and repeat once. See the [supply-air mini-example](#m-mini-psy-supply).
+:::
 *Mass flow from the sensible gain.* First pass with $\omega_s=\omega_r$: $\dot m_a=\dfrac{50}{(1.005+1.82\times0.009884)\times10}=4.888$ kg/s. Moisture gain $40/3600=0.01111$ kg/s. Second pass with the $\omega_s$ below, $c_{pm}=1.0189$: $\dot m_a=\dfrac{50}{1.0189\times10}=4.907$ kg/s.
 
 *Supply ω from the moisture gain:* $\omega_r-\omega_s=0.01111/4.907=0.002264$; $\omega_s=0.009884-0.002264=0.007620$ kg/kg.
+:::
 
-*(i) Supply-air condition:* $T_{db}=15$ °C, $\omega_s=0.00762$ kg/kg; $P_{vs}=1.226$ kPa, $\phi_s=1.226/1.71=\mathbf{71.7\ \%}$; dew point 9.95 °C; wet bulb by trial ($T_{wb}=12$ °C gives $\omega=0.007617$, 11 °C gives 0.006604) $=\mathbf{12.0}$ °C; $h_s=34.34$ kJ/kg. **Supply air: 15 °C dbt, 12.0 °C wbt, φ ≈ 72 %, ω = 0.00762 kg/kg.**
+::: {.step title="Step 3. Supply state S"}
+::: hint
+$P_{vs}=P\omega_s/(0.622+\omega_s)$; $\phi_s=P_{vs}/P_g(15)$ from Table 1; wet bulb by trial; $h_s$ from $T_s$ and $\omega_s$. See the [wet-bulb mini-example](#m-mini-psy-twb).
+:::
+*(i) Supply-air condition:* $T_{db}=15$ °C, $\omega_s=0.00762$ kg/kg; $P_{vs}=1.226$ kPa, Table 1 row 15 °C $P_g=$ [1.71]{.lookup t="water-sat" row="15" col="p_MPa" x="1000"} kPa, $\phi_s=1.226/1.71=\mathbf{71.7\ \%}$; dew point 9.95 °C; wet bulb by trial ($T_{wb}=12$ °C gives $\omega=0.007617$, 11 °C gives 0.006604) $=\mathbf{12.0}$ °C; $h_s=34.34$ kJ/kg. **Supply air: 15 °C dbt, 12.0 °C wbt, φ ≈ 72 %, ω = 0.00762 kg/kg.**
+:::
 
+::: {.step title="Step 4. Supply air volume"}
+::: hint
+$v_s=0.287(T_s+273.15)/(P-P_{vs})$; $\dot V=\dot m_av_s$. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
 *(ii) Volume:* $v_s=\dfrac{0.287\times288.15}{101.325-1.226}=0.8262$ m³/kg; $\dot V=4.907\times0.8262=\mathbf{4.05\ m^3/s}$.
+:::
+
+:::
+
+::: answer
+**Answer: (i) supply air at 15 °C dbt, 12.0 °C wbt (φ ≈ 71.7 %, ω = 0.00762 kg/kg); (ii) supply volume 4.05 m³/s.**
+:::
 
 Check: latent load $4.907\times0.002264\times(2501+45.5)=28.3$ kW, SHR $=50/78.3=0.64$ (a humid room: lots of moisture); $\dot m_a(h_r-h_s)=78.3$ kW ✓. *Chart route:* draw the SHR 0.64 line through R (25 °C, 50 %) with the protractor; at 15 °C it gives the same S. Another assumed $T_s$ gives another answer (e.g. 14 °C: less air, drier supply); state the assumption clearly.
 
 > **TRY 6.8** `[PP 12-13 Q2(c), 15]` Air at 25°C and 50% RH is recirculated from a room and mixed with outdoor air at 33°C and 80% RH. If supply air to the room is 12°C and the volume of recirculated air is three times the volume of outdoor air, estimate the capacity of the cooling system.
 
-**Solution 6.8** **[TUTOR-GENERATED]** (mixing method of Ameen §12.4, Example 12.3). *Assumptions:* the coil delivers the supply air saturated at 12 °C (as in the window AC problems); condensate leaves at 12 °C. **No flow rate is given**, so the capacity is found per kg/s of dry air supplied, and then for an assumed 1 m³/s of mixed air.
+**Solution 6.8** **[TUTOR-GENERATED]** (mixing method of Ameen §12.4, Example 12.3). *Assumptions:* the coil delivers the supply air saturated at 12 °C; no flow rate is given, so the capacity is found per kg/s of dry air. Work it step by step; open a hint if stuck.
+
+::: {.problem #sol-6-8}
+
+::: {.step title="Step 1. Room air R"}
+::: hint
+The room state of Solution 6.7 (25 °C, 50 %); add $v_r$. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
+*Assumptions in full:* the coil delivers the supply air saturated at 12 °C (as in the window AC problems); condensate leaves at 12 °C. **No flow rate is given**, so the capacity is found per kg/s of dry air supplied, and then for an assumed 1 m³/s of mixed air.
 
 *Room air R* (25 °C, 50 %): $\omega_r=0.009884$, $h_r=50.30$ kJ/kg, $v_r=0.8579$ m³/kg (Solution 6.7).
+:::
 
-*Outdoor air O* (33 °C, 80 %): Table 1, $P_g(33)=4.25+0.6(5.63-4.25)=5.078$ kPa; $P_v=4.062$ kPa; $\omega_o=0.02598$; $h_o=1.005(33)+0.02598(2501+60.1)=99.70$ kJ/kg; $v_o=0.9034$ m³/kg.
+::: {.step title="Step 2. Outdoor air O"}
+::: hint
+33 °C is between the 30 °C and 35 °C rows of Table 1: interpolate $P_g$ ([interpolation mini-example](#m-mini-psy-interp)); then $P_v$, $\omega_o$, $h_o$, $v_o$.
+:::
+*Outdoor air O* (33 °C, 80 %): Table 1 rows 30 °C ([4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa) and 35 °C ([5.63]{.lookup t="water-sat" row="35" col="p_MPa" x="1000"} kPa), $P_g(33)=4.25+0.6(5.63-4.25)=5.078$ kPa; $P_v=4.062$ kPa; $\omega_o=0.02598$; $h_o=1.005(33)+0.02598(2501+60.1)=99.70$ kJ/kg; $v_o=0.9034$ m³/kg.
+:::
 
+::: {.step title="Step 3. Mixed air M"}
+::: hint
+Convert each volume to dry-air mass with its own $v$, then weight $\omega$ and $h$ by the dry-air masses; $T_m=(h_m-2501\omega_m)/(1.005+1.82\omega_m)$. See the [mixing mini-example](#m-mini-psy-mixing).
+:::
 *Masses* for 3 m³ of room air per 1 m³ of outdoor air: $3/0.8579=3.497$ kg and $1/0.9034=1.107$ kg; outdoor-air mass fraction $=1.107/4.604=0.2404$.
 
 *Mixed air M:* $\omega_m=0.7596\times0.009884+0.2404\times0.02598=0.01375$; $h_m=0.7596\times50.30+0.2404\times99.70=62.17$ kJ/kg; $T_m=\dfrac{62.17-2501\times0.01375}{1.005+1.82\times0.01375}=26.97$ °C (mass-weighted temperature 26.92 °C). On the chart M lies on the line R–O, a quarter of the way from R (Fig. 13).
+:::
 
-*Supply S* (12 °C sat.): $\omega_s=0.00885$, $h_s=34.40$ kJ/kg (Solution 6.2); condensate $\omega_m-\omega_s=0.00490$ kg/kg at $h_f=50.40$ kJ/kg.
+::: {.step title="Step 4. Supply state S and the condensate"}
+::: hint
+Saturated at 12 °C: the exit state of Solution 6.2 ($P_g$ and $h_f$ interpolated between the 10 °C and 15 °C rows of Table 1). See the [interpolation mini-example](#m-mini-psy-interp).
+:::
+*Supply S* (12 °C sat.): $\omega_s=0.00885$, $h_s=34.40$ kJ/kg (Solution 6.2); condensate $\omega_m-\omega_s=0.00490$ kg/kg at $h_f=50.40$ kJ/kg (Table 1 rows 10 °C, [42.02]{.lookup t="water-sat" row="10" col="h_liq_kJ_kg"}, and 15 °C, [62.98]{.lookup t="water-sat" row="15" col="h_liq_kJ_kg"} kJ/kg).
+:::
 
+::: {.step title="Step 5. Cooling capacity"}
+::: hint
+Per kg dry air: $q=h_m-h_s-(\omega_m-\omega_s)h_w$; kJ/kg × kg/s = kW; 1 TR = 3.517 kW. For a volume of mixed air, $\dot m_a=\dot V/v_m$. See the [cooling-coil mini-example](#m-mini-psy-coil).
+:::
 *Cooling capacity per kg dry air:*
 $$q=h_m-h_s-(\omega_m-\omega_s)h_w=62.17-34.40-0.00490\times50.40=\mathbf{27.53\ kJ/kg\ dry\ air}$$
-i.e. **27.5 kW (7.83 TR) for every kg/s of supply air**. For 1 m³/s of mixed air ($v_m=0.8689$ m³/kg, $\dot m_a=1.151$ kg/s): $\dot Q=\mathbf{31.7\ kW}\approx\mathbf{9.0\ TR}$. Multiply by the actual flow when it is known (from the room sensible load, as in Solution 6.7).
+i.e. **27.5 kW (7.83 TR) for every kg/s of supply air**. For 1 m³/s of mixed air ($v_m=0.8689$ m³/kg, $\dot m_a=1.151$ kg/s): $\dot Q=\mathbf{31.7\ kW}\approx\mathbf{9.0\ TR}$.
+:::
+
+:::
+
+::: answer
+**Answer: cooling capacity 27.53 kJ/kg dry air, i.e. 27.5 kW (7.83 TR) per kg/s of supply air; 31.7 kW ≈ 9.0 TR for 1 m³/s of mixed air.**
+:::
+
+Multiply by the actual flow when it is known (from the room sensible load, as in Solution 6.7).
 
 > **TRY 6.9** `[PP 12-13 Q2(a), 10]` Atmosphere air at 30°C and 50% relative humidity is compressed isothermally to a pressure of 10 bar. Estimate the psychometric condition of the compressed air.
 
-**Solution 6.9** **[TUTOR-GENERATED]** (thermodynamics of moist air, §6.2). Take the atmosphere at 101.325 kPa.
+**Solution 6.9** **[TUTOR-GENERATED]** (thermodynamics of moist air, §6.2). Take the atmosphere at 101.325 kPa. Work it step by step; open a hint if stuck.
 
-*Initial state:* $P_g(30)=4.25$ kPa; $P_{v1}=0.5\times4.25=2.125$ kPa; $\omega_1=\dfrac{0.622\times2.125}{101.325-2.125}=0.01332$ kg/kg; $h_1=64.20$ kJ/kg; $v_1=0.8771$ m³/kg.
+::: {.problem #sol-6-9}
 
+::: {.step title="Step 1. Initial state"}
+::: hint
+Table 1, row 30 °C: $P_g$; then $P_v$, $\omega_1$, $h_1$, $v_1$ at 101.325 kPa. See the [moist-air state mini-example](#m-mini-psy-state).
+:::
+*Initial state:* Table 1 row 30 °C, $P_g(30)=$ [4.25]{.lookup t="water-sat" row="30" col="p_MPa" x="1000"} kPa; $P_{v1}=0.5\times4.25=2.125$ kPa; $\omega_1=\dfrac{0.622\times2.125}{101.325-2.125}=0.01332$ kg/kg; $h_1=64.20$ kJ/kg; $v_1=0.8771$ m³/kg.
+:::
+
+::: {.step title="Step 2. Does the vapour condense?"}
+::: hint
+With fixed composition every partial pressure scales with the total pressure. Compare the resulting $P_v$ with $P_g$ at the (unchanged) temperature: $P_v$ can never exceed $P_g$. See §6.2 and the [moist-air state mini-example](#m-mini-psy-state).
+:::
 *Compression without condensation?* If the composition did not change, every partial pressure would rise in proportion to the total pressure: $P_v=2.125\times\dfrac{1000}{101.325}=20.97$ kPa. But at 30 °C the vapour pressure cannot exceed $P_g=4.25$ kPa. So the air **reaches saturation** (at about 2 bar) and the excess vapour **condenses** during the rest of the compression.
+:::
 
+::: {.step title="Step 3. Final state at 10 bar"}
+::: hint
+Saturated at 30 °C: $P_v=P_g(30)$, with $P=1000$ kPa in $\omega=0.622P_v/(P-P_v)$ and in $v$. Water condensed $=\omega_1-\omega_2$ per kg dry air.
+:::
 *Final state* (10 bar = 1000 kPa, 30 °C, saturated): $P_v=P_g=4.25$ kPa;
 $$\omega_2=\frac{0.622\times4.25}{1000-4.25}=\mathbf{0.002655\ kg/kg\ dry\ air}$$
 Water condensed $=\omega_1-\omega_2=0.01332-0.002655=\mathbf{0.01067}$ kg per kg dry air, **80 %** of the moisture (it must be drained from the receiver).
 
-**Condition of the compressed air: 10 bar, $T_{db}=30$ °C, φ = 100 % (saturated), $T_{wb}=T_{dp}=30$ °C, ω = 0.002655 kg/kg**, $h_2=1.005(30)+0.002655(2501+54.6)=36.93$ kJ/kg dry air, $v_2=\dfrac{0.287\times303.15}{1000-4.25}=0.0874$ m³/kg dry air (one tenth of $v_1$). (CoolProp, with the real-gas enhancement factor at 10 bar: ω = 0.00273.)
+$h_2=1.005(30)+0.002655(2501+54.6)=36.93$ kJ/kg dry air, $v_2=\dfrac{0.287\times303.15}{1000-4.25}=0.0874$ m³/kg dry air (one tenth of $v_1$).
+:::
+
+:::
+
+::: answer
+**Condition of the compressed air: 10 bar, $T_{db}=30$ °C, φ = 100 % (saturated), $T_{wb}=T_{dp}=30$ °C, ω = 0.002655 kg/kg**, $h_2=36.93$ kJ/kg dry air, $v_2=0.0874$ m³/kg dry air. (CoolProp, with the real-gas enhancement factor at 10 bar: ω = 0.00273.)
+:::
 
 *Remark:* the ω of saturated air falls almost in proportion to $1/P$. If this compressed air is expanded back to 1 atm at 30 °C, $P_v=\dfrac{101.325\times0.002655}{0.622+0.002655}=0.431$ kPa and φ = 10.1 % (= 101.325/1000): very dry air, with a dew point below 0 °C (about −4 °C). This is how compression plus an aftercooler and drain dries compressed air.
 
@@ -833,6 +1167,7 @@ Water condensed $=\omega_1-\omega_2=0.01332-0.002655=\mathbf{0.01067}$ kg per kg
 
 > **TRY 6.10** `[PP 11-12 Q2(a), 5]` Briefly explain the factors affecting human comfort.
 
+::: {.answer label="Show answer"}
 **Solution 6.10** **[FROM SOURCE: Arif pp.94–95; Kanak p.153]** The body is comfortable when it can freely reject its metabolic waste heat (by convection, radiation and evaporation) and no more. Seven factors decide this:
 
 1. **Activity level:** the metabolic heat (about 115 W at office work, 440 W at heavy work); more activity needs a cooler room.
@@ -845,16 +1180,25 @@ Water condensed $=\omega_1-\omega_2=0.01332-0.002655=\mathbf{0.01067}$ kg per kg
 
 (Air purity and noise also affect comfort.)
 
+:::
+
 > **TRY 6.11** `[PP 12-13 Q3(a), 5]` Briefly explain the factors affecting human comfort.
 
+::: {.answer label="Show answer"}
 **Solution 6.11** **[FROM SOURCE: Arif p.95b]** A verbatim repeat of TRY 6.10: give the same seven factors with one line each (activity, clothing, expectation, air temperature, radiant temperature, humidity, air speed).
+
+:::
 
 > **TRY 6.12** `[PP 13-14 Q2(a), 7]` Give the name of the factors that influence the thermal comfort for human being.
 
+::: {.answer label="Show answer"}
 **Solution 6.12** **[FROM SOURCE: Arif p.95b]** The seven factors influencing thermal comfort (1 mark each): (1) activity level, (2) clothing, (3) expectation, (4) air temperature, (5) radiant temperature, (6) humidity, (7) air speed. The first three are personal factors, the last four environmental. Add a sketch of the man with heat loss by convection, radiation and evaporation (Fig. 1) if time allows.
+
+:::
 
 > **TRY 6.13** `[PP 15-16 Q2(a), 10]` What are the differences between refrigeration and air-conditioning system? What are the factors that influence the thermal comfort of a human being?
 
+::: {.answer label="Show answer"}
 **Solution 6.13** **[TUTOR-GENERATED]** *Differences* (5 marks):
 
 | Refrigeration | Air conditioning |
@@ -870,8 +1214,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 
 *Factors of thermal comfort* (5 marks): activity level, clothing, expectation, air temperature, radiant temperature, humidity and air speed, each explained in one line as in Solution 6.10.
 
+:::
+
 > **TRY 6.14** `[PP 23-24 Q8(b), 10]` Define "Thermal Comfort". Describe the concept of the "Comfort Zone" on the psychometric chart.
 
+::: {.answer label="Show answer"}
 **Solution 6.14** **[FROM SOURCE: Arif pp.94–96; ASHRAE 55]** *Thermal comfort* is that condition of mind which expresses satisfaction with the thermal environment (ASHRAE 55). Physically, it is reached when the body can reject its metabolic heat at the rate it is produced, freely and without strain (no shivering, no visible sweating), with no local discomfort. It depends on activity, clothing, expectation, air temperature, radiant temperature, humidity and air speed.
 
 *Comfort zone.* Sketch a psychrometric chart (T_db horizontal, ω vertical, saturation curve and φ curves) and shade the zone (Fig. 2):
@@ -882,10 +1229,13 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 - Outside the zone: too cold, too warm, too humid or too dry; far to the warm and humid side lie impaired efficiency, distress and the lethal limit (Arif p.96a).
 - The AC designer selects the indoor design point inside the zone (e.g. 25 °C, 50 %) and the system moves the air from the outdoor state into the zone and holds it there.
 
+:::
+
 ### AC4: processes on the chart, bypass and reheat systems, evaporative cooling
 
 > **TRY 6.15** `[PP 13-14 Q2(b), 8]` Show all the Air-conditioning processes on a typical psychrometric chart.
 
+::: {.answer label="Show answer"}
 **Solution 6.15** **[FROM SOURCE: Arif p.99b; Kanak p.154]** Draw the chart skeleton (T_db on the horizontal axis, ω on the right vertical axis, saturation curve at the upper left, two or three φ curves) and a state O in the middle, with arrows (Fig. 6):
 
 1. **Sensible heating:** horizontal to the right (ω const., T ↑, φ ↓).
@@ -898,16 +1248,22 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 8. **Chemical dehumidification:** down-right along a constant-enthalpy line (sorbent; T rises as ω falls).
 9. **Adiabatic mixing:** a straight line between two states, the mix on it.
 
+:::
+
 > **TRY 6.16** `[PP 11-12 Q3(b), 15]` Briefly explain, with schematic diagrams and processes on typical psychrometric charts, (i) Summer a/c system with bypass (ii) Summer a/c system with reheat
 
+::: {.answer label="Show answer"}
 **Solution 6.16** **[TUTOR-GENERATED]** (Ameen §12.5; Arif pp.73–74). In both systems outdoor air O is mixed with return air R to M, and the mixture is cooled and dehumidified in a coil; the room loads move the supply state S to R along the room condition line, whose slope is fixed by the room SHR. The two systems differ in how they bring the cold, saturated coil air to the required S.
 
 *(i) Summer AC with bypass* (Fig. 15). *Schematic:* mixing box → cooling coil → fan → room, with a bypass duct and damper that takes part of the return air (or of the mixed air) around the coil and joins the coil exit. *Chart:* M → C, cooling and dehumidification to C close to the apparatus dew point; then C mixes with the bypassed air R; S lies on the straight line C–R where it meets the room condition line. *Features:* no reheat energy, the supply temperature is raised by the room's own air; less air through the coil; smaller refrigeration load than reheat; the bypass damper gives easy part-load control and constant flow over a DX coil. But humidity control is weaker and the ADP must be lower.
 
 *(ii) Summer AC with reheat* (Fig. 16). *Schematic:* mixing box → cooling coil → reheating coil → fan → room. *Chart:* M → C, cooling and dehumidification down to the dew point that gives the required supply ω (below the needed supply temperature); C → S, sensible reheat at constant ω (horizontal) up to the supply temperature on the room condition line; S → R in the room. *Features:* used when the room SHR is low (large latent load) or at part load, when the coil alone cannot reach the room condition line; gives independent and precise control of humidity (coil) and temperature (reheater). But energy is wasted: the air is overcooled and then reheated, and the reheat adds to the refrigeration load (reduced by using condenser heat for reheat).
 
+:::
+
 > **TRY 6.17** `[PP 13-14 Q7(b), 18]` Describe an "All-Air system with Reheat" air-conditioning system. Mention its advantages and disadvantages.
 
+::: {.answer label="Show answer"}
 **Solution 6.17** **[FROM SOURCE: Arif p.73a; Kanak pp.122–123]** *Description* (with the schematic of the all-air reheat system, and the chart of Fig. 16):
 
 - A central **AHU** (outdoor-air and return-air dampers, filter, chilled-water or DX cooling coil, supply fan, return fan) cools and dehumidifies all the supply air to one low, constant temperature, about 13 °C (55 °F), low enough for the zone with the largest load and for dehumidification.
@@ -931,16 +1287,22 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 3. Hot-water piping, valves and coils above every zone: leaks and maintenance in the ceiling.
 4. Large ducts and fans for constant full flow; high fan energy.
 
+:::
+
 > **TRY 6.18** `[PP 16-17 Q2(b), 8]` Briefly describe the evaporative cooling psychrometric process with example.
 
+::: {.answer label="Show answer"}
 **Solution 6.18** **[FROM SOURCE: Arif p.104a; Kanak p.162]** In hot and dry climates air is cooled by evaporating water into it, in **evaporative (swamp, desert) coolers** and air washers. Air is passed through wetted pads or sprays; the latent heat of the evaporating water is taken from the air, so the air is cooled and humidified. No heat is exchanged with the surroundings, so it is essentially an **adiabatic saturation** process: $T_{wb}\approx$ const. and $h\approx$ const. On the chart (sketch Fig. 11) the state moves up and to the left along the wet-bulb line through the inlet state; the limit is the saturation point at the inlet wet-bulb temperature. It works well only when the air is dry ($T_{db}-T_{wb}$ large).
 
 *Example:* air at 40 °C, 20 % RH ($T_{wb}=21.9$ °C) leaving a desert cooler at 90 % RH is at **23.1 °C**, cooled by 17 K, having taken up 0.00703 kg water per kg dry air, with $h$ ≈ 64 kJ/kg throughout. Other examples: water in a porous earthen jug, which stays cool as water seeping through evaporates; the wet cooling tower, which cools water the same way.
+
+:::
 
 ### AC5: AC system types
 
 > **TRY 6.19** `[PP 11-12 Q2(b), 15]` With schematic diagram, briefly explain the key components of a central air-conditioning system. Mention the functions of following 4 components (i) chiller (ii) cooling tower (iii) AHU (iv) FCU
 
+::: {.answer label="Show answer"}
 **Solution 6.19** **[FROM SOURCE: Arif pp.67–76; Kanak pp.121–126]** *Schematic:* draw Fig. 31: cooling tower ↔ (condenser-water pump) ↔ chiller condenser; the chiller (compressor, condenser, expansion valve, evaporator); evaporator ↔ (chilled-water pump) ↔ AHU and FCU coils; AHU ↔ supply and return ducts ↔ rooms, with outdoor air into the AHU.
 
 *Key components:* chiller, cooling tower, condenser-water and chilled-water pumps and piping, expansion tank, AHUs, FCUs, ducts with dampers, diffusers and grilles, controls (thermostats, valves).
@@ -954,8 +1316,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 - **(iii) AHU:** mixes outdoor and return air, filters, cools and dehumidifies (and heats and humidifies) it, and supplies it with its fan through ducts to many rooms; it also handles exhaust and ventilation.
 - **(iv) FCU:** a room terminal unit (fan + chilled-water coil + filter) that recirculates and cools the air of one room under a local thermostat.
 
+:::
+
 > **TRY 6.20** `[PP 11-12 Q3(a), 5]` Distinguish between split type and window type air conditioners.
 
+::: {.answer label="Show answer"}
 **Solution 6.20** **[FROM SOURCE: Kanak p.128; Arif pp.61–64]**
 
 | Window type | Split type |
@@ -967,8 +1332,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Can take in fresh air | No fresh air |
 | Low capacity, cheap, easy to install | Higher capacity, costlier, needs a technician |
 
+:::
+
 > **TRY 6.21** `[PP 12-13 Q3(b), 10]` Briefly distinguish between (i) FCU and AHU (ii) split and window type a/c
 
+::: {.answer label="Show answer"}
 **Solution 6.21** **[FROM SOURCE: Kanak p.128]** *(i) FCU vs AHU:*
 
 | FCU | AHU |
@@ -982,8 +1350,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 
 *(ii) Split vs window:* the table of Solution 6.20 (one box vs indoor + outdoor units; noise; fans; wall opening; fresh air; capacity; cost and installation).
 
+:::
+
 > **TRY 6.22** `[PP 15-16 Q2(c), 15]` Make a comparison between ducted split type, multi-split type and VRF type air-conditioning system with respective schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 6.22** **[FROM SOURCE: Kanak pp.118–120; Arif pp.64–66]** *Schematics* (draw each in a few lines):
 
 - **Ducted split:** outdoor unit → refrigerant pipes → one indoor air handler (coil + blower + filter) in the ceiling → supply duct with diffusers to several rooms, return duct or plenum back.
@@ -1002,8 +1373,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Flexibility of control | least (one thermostat) | more (rooms at different conditions) | most (individual zones, heat recovery) |
 | Heat carried by | air (ducts) | refrigerant | refrigerant |
 
+:::
+
 > **TRY 6.23** `[PP 17-18 Q2(a), 15]` What are the differences between refrigeration and air conditioning system? Why the outdoor air is required in air conditioning system? What are the basic differences between all air system and all water system?
 
+::: {.answer label="Show answer"}
 **Solution 6.23** **[FROM SOURCE: Arif p.97a; Kanak p.127]**
 
 *Refrigeration vs AC* (5 marks): refrigeration removes heat to keep a product or space below ambient temperature (usually below 10 °C), with no control of humidity, ventilation or filtering and no heating; air conditioning controls temperature, humidity, cleanliness, air motion and distribution of the air of an occupied or process space (20–27 °C, 30–65 %), heats in winter, and needs fans, coils, filters, humidifiers, ducts and controls in addition to the refrigeration plant, which is only one part of it (table in Solution 6.13).
@@ -1022,8 +1396,11 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Good humidity control and filtration; room temperature control difficult unless VAV/reheat | Local control by each FCU; poor humidity control |
 | Sub-types: single and multizone, CAV, VAV, terminal reheat, dual duct | Main type: FCUs (also radiators, convectors, valance units) |
 
+:::
+
 > **TRY 6.24** `[PP 18-19 Q2(a), 20]` Why the outdoor air is required in air conditioning system? Briefly describe the working principle of a central air conditioning system with schematic diagram. Compare all air and all water system with schematic diagram?
 
+::: {.answer label="Show answer"}
 **Solution 6.24** **[FROM SOURCE: Arif pp.67–75, 97a; Kanak pp.121–127]**
 
 *Outdoor air:* the five reasons of Solution 6.23.
@@ -1032,20 +1409,29 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 
 *All-air vs all-water with schematics:* sketch the all-air system (AHU with outdoor-air louvre, filter, cooling coil, heating coil, supply fan → supply ducts to the space → return grilles and return fan → exhaust and recirculation; Arif p.72a) and the all-water system (chiller → chilled-water pipes → an FCU in each room with fan, coil and filter, recirculating room air; Kanak p.125); then the table of Solution 6.23.
 
+:::
+
 > **TRY 6.25** `[PP 20-21 Q1(a), 15]` Why the outdoor air is required in air conditioning system? Compare all air and all water system with schematic diagram. Make comparison between ducted split type, multiple split type and VRE type air-conditioning system with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 6.25** **[FROM SOURCE: Arif pp.64–75, 97a; Kanak pp.118–127]** Three parts of about 5 marks each ("VRE" is a misprint for VRF):
 
 - *Outdoor air:* the five reasons of Solution 6.23.
 - *All-air vs all-water with schematics:* the two sketches of Solution 6.24 and the table of Solution 6.23.
 - *Ducted split vs multi-split vs VRF with schematics:* the three sketches and the table of Solution 6.22.
 
+:::
+
 > **TRY 6.26** `[PP 22-23 Q2(a), 15]` Why the outdoor air is required in air conditioning system? Compare all air and all water system with schematic diagram? Make comparison between ducted split type, multiple split type and VRF system with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 6.26** **[FROM SOURCE: Arif pp.64–75, 97a; Kanak pp.118–127]** A verbatim repeat of TRY 6.25: same three answers (outdoor-air reasons; all-air vs all-water sketches and table; ducted split, multi-split and VRF sketches and table).
+
+:::
 
 > **TRY 6.27** `[PP 23-24 Q8(c), 15]` What is the primary functions of an Air Distribution System in HVAC? Compare between Constant Air Volume (CAV) and Variable Air Volume (VAV) air distribution systems. Identify the main sources of pressure losses in duct systems.
 
+::: {.answer label="Show answer"}
 **Solution 6.27** **[FROM SOURCE: Arif pp.73–74; Kanak p.124; tutor-generated]**
 
 *Primary functions of the air distribution system:* (1) deliver conditioned supply air from the AHU to every space in the design quantity, balanced between branches; (2) distribute it within each space through diffusers and grilles with the right throw and velocity, good mixing and no draughts or noise; (3) return room air to the AHU and exhaust part of it; (4) bring in and distribute the outdoor ventilation air; (5) thereby maintain temperature, humidity, air quality and pressure relationships in every zone, with minimum fan energy.
@@ -1062,6 +1448,8 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 | Single zones, halls, labs, hospitals | Multi-zone offices with varying loads |
 
 *Main sources of pressure loss in ducts:* (1) **friction** in straight runs, $\Delta p_f=f\,(L/D_h)\,\rho V^2/2$, increasing with length, velocity and roughness (flexible duct); (2) **dynamic losses in fittings**, $\Delta p=C\rho V^2/2$: elbows and bends, tees and branch take-offs, junctions, enlargements and contractions (transitions), duct entry and exit; (3) **components**: dampers (volume, fire, smoke), filters, cooling and heating coils, VAV/terminal boxes, sound attenuators, louvres, grilles, registers and diffusers; (4) **leakage** at joints. The fan must overcome the total pressure loss of the index (longest) run.
+
+:::
 
 <!-- pagebreak -->
 

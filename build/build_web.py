@@ -42,7 +42,9 @@ KEYS = {"9": ["station"], "11": ["type_of_premise"], "12a": ["roof_no"], "12b": 
         "28": ["degree_of_activity"],
         "T1": ["facility_type"], "T2": ["facility"], "T3": ["elevator_capacity_lb"], "T4": ["building_type"],
         "r134a-sat": ["T_C"], "nh3-sat": ["T_C"], "r134a-sh": ["p_MPa", "T_C"], "nh3-sh": ["p_bar", "T_C"],
-        "water-sh": ["p_bar", "T_C"],
+        "water-sh": ["p_bar", "T_C"], "water-sat": ["T_C"],
+        "7-ED1-3": ["r_over_D"], "7-CD3-10": ["D_mm"], "7-ED5-3-Cb": ["As_over_Ac", "Ab_over_Ac"],
+        "7-ED5-3-Cs": ["As_over_Ac", "Ab_over_Ac"], "7-SD5-10-Cb": ["Ab_over_Ac"], "7-SD5-10-Cs": ["As_over_Ac"],
         "T5": ["building_height", "floors"], "T6": ["building_type", "rise_m"], "bnbc": ["building_type**"]}
 BLOCKS = {"r134a-sh": "p_MPa", "nh3-sh": "p_bar", "water-sh": "p_bar"}   # the panel stays inside one pressure block
 CHARTS = {"C1": "att_C1_average_trip_time.png", "C2": "att_C2_round_trip_time.png"}   # lift charts: shown as images
@@ -55,13 +57,16 @@ def fail(msg):
 def table_id(stem):
     if stem in CSV_IDS:
         return CSV_IDS[stem]
+    m = re.match(r"t07_([A-Z]+\d-\d+)_.*?(_C[bs])?$", stem)      # Table 7 fittings: 7-ED1-3, 7-ED5-3-Cb, ...
+    if m:
+        return "7-" + m.group(1) + (m.group(2).replace("_", "-") if m.group(2) else "")
     m = re.match(r"att_(T[1-6])_", stem)
     if m:
         return m.group(1)
     if stem.startswith("att_BNBC_table_4.4.1"):
         return "bnbc"
     m = re.match(r"t(\d+)([a-z]?)_", stem)
-    if not m or stem.startswith("t07"):          # Table 7 is six fitting tables; not linked yet
+    if not m:
         return None
     return str(int(m.group(1))) + m.group(2)
 
@@ -87,7 +92,7 @@ def load_tables(captions):
         head, body = rows[0], rows[1:]
         keys = [head.index(k) for k in KEYS.get(tid, [head[0]])]
         title, page = captions.get(tid, (f"Table {tid}", None))
-        if page and tid not in CSV_IDS.values():      # captioned tables get an anchor (#t-18a); property tables do not
+        if page and tid not in CSV_IDS.values() and not tid.startswith(("7-", "bnbc")):   # anchors: #t-18a, #t-T1
             page += f"#t-{tid}"
         tables[tid] = {"title": tex_plain(title), "page": page, "cols": head, "heads": [pretty_col(h) for h in head],
                        "keys": keys, "rows": body}
@@ -111,8 +116,14 @@ def pretty_col(h):
     return s.replace("_", " ")
 
 
+TEX_SYM = {r"\ge": "≥", r"\le": "≤", r"\rho": "ρ", r"\varepsilon": "ε", r"\epsilon": "ε", r"\theta": "θ",
+           r"\Delta": "Δ", r"\omega": "ω", r"\phi": "φ"}
+
+
 def tex_plain(s):
     s = s.replace("$^2$", "²").replace("$^3$", "³")
+    for k, v in TEX_SYM.items():
+        s = s.replace(k, v)
     return re.sub(r"\$([^$]*)\$", lambda m: re.sub(r"[\\{}]", "", m.group(1)).replace("_", ""), s)
 
 
@@ -120,7 +131,8 @@ def find_col(t, col):
     head = t["cols"]
     if col in head:
         return head.index(col)
-    cands = [h for h in head if h in (f"h{col.zfill(2)}", f"hour_{col}") or h.startswith(col + "_")]
+    cands = [h for h in head if h in (f"h{col.zfill(2)}", f"hour_{col}") or h.startswith(col + "_")
+             or h.endswith("_" + col)]                # "0.3" finds Vb_over_Vc_0.3
     if not cands:
         return None
     return head.index(min(cands, key=len))
@@ -399,6 +411,9 @@ def qb_page(qb, mods):
 
 # ---------------------------------------------------------------- build
 def main():
+    global OUT
+    if "--out" in sys.argv:                           # build elsewhere (several builds at once, or a quick check)
+        OUT = Path(sys.argv[sys.argv.index("--out") + 1]).resolve()
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "figures").mkdir(parents=True)
@@ -418,6 +433,17 @@ def main():
             captions.setdefault(cm.group(1), (f"{cm.group(1)}. {cm.group(2)}", fname))
         for cm in re.finditer(r"^!\[(C[12])\. ([^\]]*?)\.? Panels", chunk, re.M):
             captions.setdefault(cm.group(1), (f"{cm.group(1)}. {cm.group(2)}", fname))
+        for cm in re.finditer(r"^!\[Data Book Chart (\d+)\. ([^\]]*?)\]\(([^)\s]+)", chunk, re.M):
+            cid = f"chart{cm.group(1)}"
+            if cid not in CHARTS:
+                CHARTS[cid] = Path(cm.group(3)).name
+                captions[cid] = (f"Chart {cm.group(1)}. " + re.split(r"(?<=[.)])\s(?=[A-Z][a-z])", cm.group(2), 1)[0].rstrip("."), fname)
+        for cm in re.finditer(r"^\*\*Data Book Table 7\. ([^*]*?)\(([A-Z]+\d-\d+)\)([^*]*)\*\*", chunk, re.M):
+            sub = "-Cb" if "branch" in cm.group(3) else "-Cs" if "main" in cm.group(3) else ""
+            for tid in ([f"7-{cm.group(2)}{sub}"] if sub or cm.group(2) in ("ED1-3", "CD3-10") else []):
+                captions.setdefault(tid, (f"Table 7. {cm.group(1)}({cm.group(2)}){cm.group(3)}".strip(), fname))
+        for cm in re.finditer(r"^\*\*BNBC 2020 Table 4\.4\.1\. ([^*]*)\*\*", chunk, re.M):
+            captions.setdefault("bnbc", (f"BNBC 2020 Table 4.4.1. {cm.group(1)}", fname))
         db_pages.append((fname, page_title(chunk), chunk))
     for stem, tid in CSV_IDS.items():                    # property tables have no "Table N" caption
         sec = {"water-sat": "d1", "water-sh": "d2", "r134a-sat": "d3", "r134a-sh": "d4", "nh3-sat": "d6", "nh3-sh": "d7"}[tid]

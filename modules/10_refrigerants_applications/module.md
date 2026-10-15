@@ -461,6 +461,7 @@ Theory answers are sized to the marks (about one point per mark). Draw a labelle
 
 > **TRY 10.1** `[PP 11-12 Q8(a), 5]` Why is H$_2$O not used as a refrigerant in compression refrigeration system? (Although it is used as a refrigerant in absorption refrigeration).
 
+::: {.answer label="Show answer"}
 **Solution 10.1** **[FROM SOURCE: Ameen §4.3; numbers from Example 10.3, data book Table 1]**
 
 Water is cheap, safe and has a very high latent heat, but in a vapour-compression plant:
@@ -472,9 +473,11 @@ Water is cheap, safe and has a very high latent heat, but in a vapour-compressio
 5. Huge pipes and valves are needed for the vapour volume.
 
 **In absorption systems** (LiBr–water) there is no vapour compressor: the low-pressure vapour is **absorbed** by the LiBr solution, the liquid is **pumped** (small pump, little work) and heat drives the vapour out at the condenser pressure. The large vapour volume only passes through wide openings between large shells, and the AC duty (chilled water at 5–7 °C) keeps it above freezing.
+:::
 
 > **TRY 10.2** `[PP 11-12 Q8(c), 10]` Discuss the desirable slopes of saturation curves (liquid and vapor) of a refrigerant.
 
+::: {.answer label="Show answer"}
 **Solution 10.2** **[TUTOR-GENERATED, from Ameen §3, §4.2; numbers from Example 10.2]** Sketch the three T–s diagrams of Fig. 6 (wet, isentropic, dry vapour lines with compression 1→2) and the throttling sketch of Fig. 8.
 
 **General.** On T–s the reversed Carnot cycle is a rectangle: two isotherms and two vertical isentropes. The VCR cycle departs from it because (i) throttling 3→4 along the liquid side replaces isentropic expansion, and (ii) compression of vapour produces superheat. Both losses depend on the slopes of the saturation curves, so **both curves should be as steep (near-vertical) as possible**: a tall, narrow dome.
@@ -493,9 +496,11 @@ Water is cheap, safe and has a very high latent heat, but in a vapour-compressio
 7. A steep vapour line also means a large latent heat compared with the vapour specific heat, i.e. a large refrigerating effect per kg.
 
 So the desirable refrigerant has a **steep liquid line and a vertical (or very slightly left-leaning) vapour line**.
+:::
 
 > **TRY 10.3** `[PP 13-14 Q7(a), 17]` Describe the numbering system for Hydrocarbon, Zeotropic mixtures and Azeotropic mixtures type of refrigerants with proper examples.
 
+::: {.answer label="Show answer"}
 **Solution 10.3** **[FROM SOURCE: Aloke pp.106–109; Hundy §3.5; Ameen Table 4.4]** Refrigerants are numbered by ASHRAE Standard 34; "R" stands for refrigerant.
 
 **(a) Hydrocarbons and halocarbons (methane, ethane, propane series)** (7 marks). For a saturated molecule C$_c$H$_h$F$_f$Cl$_x$ the number is **R-(c−1)(h+1)(f)**:
@@ -533,9 +538,11 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 1. **R500** = R12/R152a (73.8/26.2).
 2. **R502** = R22/R115 (48.8/51.2), the classic low-temperature refrigerant (now banned, CFC content).
 3. **R507A** = R125/R143a (50/50), its HFC replacement.
+:::
 
 > **TRY 10.4** `[PP 16-17 Q6(b), 18]` What are the desirable properties of a refrigerant? Explain the necessity of each particular property for efficient running of a refrigeration system.
 
+::: {.answer label="Show answer"}
 **Solution 10.4** **[FROM SOURCE: Aloke p.104; Ameen §4.2; Hundy §3.2]** No refrigerant has every property; the choice is a compromise for the duty. The desirable properties and why each is needed:
 
 *Thermodynamic*
@@ -570,11 +577,13 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 *Environmental and economic*
 
 18. **Zero ODP and low GWP** (Montreal Protocol, Kigali Amendment), and **low cost and easy availability**, because large plants hold large charges and lose some every year.
+:::
 
 ### RF2. Applications of refrigeration and quick freezing
 
 > **TRY 10.5** `[PP 12-13 Q5(a), 5]` What are the basic characteristics of quick freezing process? Classify quick freezing process.
 
+::: {.answer label="Show answer"}
 **Solution 10.5** **[FROM SOURCE: Arif p.10a; Kanak pp.71, 73; Hundy §14.4–14.6]** This is the model answer for the quick-freezing family.
 
 **Quick freezing** freezes the product in minutes (up to about 30 min), so that it passes rapidly through the zone of maximum ice-crystal formation (−1 to −5 °C). **Characteristics** (3 marks):
@@ -584,13 +593,17 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 3. The temperature is reduced quickly, so the **growth of bacteria and yeasts is retarded**, preventing decomposition during freezing; texture, colour and flavour are kept.
 
 **Classification** (2 marks): (i) **air-blast freezing** (cold air at −35 to −40 °C blown at high speed over the product, in tunnels, spirals or fluidised beds); (ii) **immersion freezing** (product immersed in or sprayed with a cold liquid, brine, glycol or a cryogen such as liquid nitrogen); (iii) **indirect contact freezing** (product pressed between refrigerated metal plates: the plate freezer). Cryogenic freezing (LN$_2$, CO$_2$) is often listed as a fourth class.
+:::
 
 > **TRY 10.6** `[PP 15-16 Q1(a), 5]` What are the basic characteristics of quick freezing process? Classify quick freezing process.
 
+::: {.answer label="Show answer"}
 **Solution 10.6** **[FROM SOURCE: Arif p.10a; Kanak p.71]** Word for word TRY 10.5 (2012-13). Write Solution 10.5: small ice crystals and little cell damage; short freezing period, little salt diffusion and water separation; bacteria and yeast retarded. Classes: **air blast, immersion, indirect contact (plate)**, plus cryogenic.
+:::
 
 > **TRY 10.7** `[PP 21-22 Q1(a), 15]` What are the basic characteristics of quick freezing process? Classify quick freezing process. Briefly describe the Plate Freezing process with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 10.7** **[FROM SOURCE: Arif pp.10a, 12b; Kanak pp.71, 74; Hundy §7.4, §14.6]** Characteristics and classification as Solution 10.5 (5 marks), with the slow vs quick comparison (large vs small crystals, hours vs minutes) and the freezing-curve sketch of Fig. 9 if time allows.
 
 **Plate freezing** (10 marks). Sketch Fig. 13 (or the slide sketch, Fig. 14): insulated cabinet, stack of hollow freezing plates, product packs between them, hydraulic ram on top, flexible hoses to the refrigerant supply and return headers; draw "separated plates" and "closed plates".
@@ -604,9 +617,11 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 7. **Types**: horizontal plate freezers for regular packages (fish fillets, prawns, meat, ice cream in flat cartons); vertical plate freezers for loose wet product such as whole fish, giving solid blocks 75–100 mm thick.
 8. **Advantages**: high heat transfer, fast uniform freezing, compact, flat blocks for storage, little dehydration; **no fans, so lowest running cost**.
 9. **Limitations**: only flat packages of uniform thickness; batch operation with labour for loading.
+:::
 
 > **TRY 10.8** `[PP 13-14 Q1(a), 5]` What are the major applications of refrigeration system?
 
+::: {.answer label="Show answer"}
 **Solution 10.8** **[FROM SOURCE: Arif pp.6b–13b; Kanak pp.74–76; Ameen §1.2]** This is the model answer for the applications family.
 
 1. **Domestic refrigeration**: household refrigerators and freezers (fresh food ≈ 3 °C, freezer −18 °C).
@@ -614,9 +629,11 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 3. **Industrial refrigeration**: cold storage (potato 2–4 °C, 90% RH; fish −18 to −23 °C, 95% RH); food freezing; ice making; dairy products; liquefaction of gases (O$_2$, N$_2$, propane, methane); oil refineries, chemical and petrochemical processes; tempering of steel and cutlery.
 4. **Marine and transport refrigeration**: refrigerated trucks, trains, aircraft, ships and containers for perishable goods.
 5. **Comfort air conditioning** (temperature, humidity, ventilation, air motion, cleaning and noise for human comfort) and **industrial air conditioning** (textile mills, printing, electronics, pharmaceuticals, data centres). Also medical uses (vaccines, blood banks).
+:::
 
 > **TRY 10.9** `[PP 17-18 Q1(a), 15]` Define refrigeration system. With a schematic diagram show the key components of a refrigeration system. What are the applications of refrigeration system?
 
+::: {.answer label="Show answer"}
 **Solution 10.9** **[FROM SOURCE: Arif pp.2b–6a, 6b–13b; Kanak pp.70–76]**
 
 **Definition** (3 marks). **Refrigeration** is the process of removing heat from an enclosed space or a substance and rejecting it elsewhere, to lower its temperature below that of the surroundings and then maintain that lower temperature. A **refrigeration system** is the set of components (with a mechanical device such as a compressor) that does this continuously by circulating a **refrigerant**, which absorbs heat at low temperature by evaporating at low pressure and releases it at high temperature by condensing at high pressure. The vapour-compression system holds about 80% of the market.
@@ -630,9 +647,11 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 5. Auxiliaries: receiver, filter-drier, sight glass, solenoid valve, controls.
 
 **Applications** (5 marks). As Solution 10.8: domestic; commercial; industrial (cold storage, freezing, ice making, dairy, gas liquefaction, refineries and chemical plants, steel tempering); marine and transport; comfort and industrial air conditioning.
+:::
 
 > **TRY 10.10** `[PP 22-23 Q1(a), 10]` What are the major applications of refrigeration system? Briefly describe the Immersion Freezing process with schematic diagram.
 
+::: {.answer label="Show answer"}
 **Solution 10.10** **[FROM SOURCE: Arif pp.11b–12a; Kanak p.73; Hundy §14.6; Ameen §7.6]**
 
 **Applications** (4 marks): as Solution 10.8: domestic, commercial, industrial (cold storage, food freezing, ice, dairy, gas liquefaction, chemical and refinery processes), marine and transport, comfort and industrial air conditioning.
@@ -645,6 +664,7 @@ Sketch the R404A scheme (Fig. 4): R = refrigerant; 4 = 400 series, zeotrope; 04 
 4. **Liquid circuit**: the liquid drains to the tank and is pumped through a chiller (evaporator of a VCR plant) back to the sprays; in a cryogenic unit the boiled-off vapour is recovered by a condenser or vented.
 5. **Uses**: canned citrus-juice concentrate passed continuously through a chamber of liquid freezant; poultry in the first stage of freezing (a uniform white surface colour); occasionally fish and shrimp.
 6. **Limits**: liquid must be non-toxic and not taint the food (wrapped product with salt brines); brines may only pre-cool before a final air blast; cryogens are costly.
+:::
 
 ## 10.14 Summary sheet
 

@@ -5,7 +5,7 @@
 |---|---|
 | **Where it appears** | Every paper, 2011-12 to 2023-24. The multistage numerical is Q1(b) of Section A from 2013-14 to 2022-23 (Q5(c)/Q6(b) of Section B in 2011-12 and 2012-13), asked in 10 of 11 papers; cycle theory is Q1(a), Q2(a) or Q5(a)/(b); 2023-24 asks only the 5-mark multi-evaporator question (Q8(a)) |
 | **Share of all marks** | 10.9% (332 of 3055 weighted marks): 22 parts. The multistage R134a numerical alone is 200 marks (6.5%), 20 marks a year, with verbatim repeats |
-| **Time** | core 3 h (§7.1–7.3, §7.6–7.8 and Solutions 4.1 and 4.7), full 6 h (all 22 solutions) |
+| **Time** | core 3 h (§7.1–7.3, §7.6–7.8 and Solutions 7.1 and 7.7), full 6 h (all 22 solutions) |
 | **Sources** | Arif pp.18–31; Kanak pp.77–96; Rifat pp.4–14; Aloke pp.1–3; Ameen §3.2–3.5; Data Book Tables 1 and 3, superheated tables pp.9–10 and 13–16, Charts 2 and 3 |
 
 **How it has been asked:**
@@ -379,8 +379,8 @@ The 22 parts fall into four archetypes. The multistage numerical carries 200 mar
 | VC2-A. Two evaporators, two compressors, flash tank | 12-13, 15-16, 21-22, 13-14, 16-17, 17-18 | Type C (Fig. 10) | Solution 7.1 |
 | VC2-B. Three stages | 20-21, 22-23, 18-19, 11-12 | Type D (Figs. 11, 12) | Solution 7.7 |
 | VC3. Single-stage ammonia | 11-12 | §7.9 | Solution 7.11 |
-| VC1. Cycle theory | 16-17, 18-19, 15-16, 13-14, 12-13, 11-12 | §7.2–7.6 | Solutions 4.12–4.20 |
-| VC4. Multistage theory | 23-24, 11-12 | §7.7–7.8 | Solutions 4.21–4.22 |
+| VC1. Cycle theory | 16-17, 18-19, 15-16, 13-14, 12-13, 11-12 | §7.2–7.6 | Solutions 7.12–7.20 |
+| VC4. Multistage theory | 23-24, 11-12 | §7.7–7.8 | Solutions 7.21–7.22 |
 
 Standing assumptions for every numerical, unless the solution says otherwise:
 
