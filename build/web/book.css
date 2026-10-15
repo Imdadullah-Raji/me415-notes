@@ -1,9 +1,42 @@
-/* ME415 Notes: a book page, not a web app. Colours follow the PDF (build/header.tex). */
+/* ME415 Notes: a book page, not a web app. Colours follow the PDF (build/header.tex).
+   Every colour is a token; the dark palette below redefines them. Both palettes are checked for WCAG contrast:
+   body text >= 7:1, muted text and links >= 4.5:1 (also on the box tints), bars and box rules >= 3:1. */
 :root {
+  color-scheme: light;
   --ink: #1a1a1a; --muted: #6b6b6b; --rule: #cfcfcf; --paper: #fff; --desk: #f3f2ee;
-  --link: #2a78d6;
+  --link: #1f6bc4;
   --key: #2a78d6; --example: #1f8a5b; --try: #b5560b; --tip: #7a5ac4; --trap: #c0392b; --mock: #444; --asked: #8a6d00;
-  --mini: #6b7280; --hit: #fff2a8;
+  --mini: #6b7280; --hit: #fff2a8; --hit-ink: inherit; --hit-rule: #c9a800;
+  --tint: #fff; --tp: 6%;                       /* boxes: their colour mixed into --tint at --tp */
+  --hint-ink: #555; --flag-bg: #f5e3d3; --flag-ink: #8a420a;
+  --shadow: rgba(0,0,0,.08); --shadow-up: rgba(0,0,0,.3); --veil: rgba(20,20,20,.45);
+  --img-filter: none;
+}
+/* Dark: a dark grey page, not black, and warm off-white text (about 11:1, not the 18:1 of white on black);
+   colours lifted one step so they stay readable; figures kept on their white card but dimmed. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #d9d6cf; --muted: #a3a09a; --rule: #3a3d40; --paper: #1d1f21; --desk: #151617;
+  --link: #8ab4f0;
+  --key: #6fa8ec; --example: #5cbf8f; --try: #e08a4a; --tip: #a993e6; --trap: #ec7063; --mock: #9aa0a6; --asked: #d4b23a;
+  --mini: #8b93a1; --hit: #4a3c0a; --hit-ink: #f4e7b5; --hit-rule: #b8942a;
+  --tint: #1d1f21; --tp: 12%;
+  --hint-ink: #b5b2ab; --flag-bg: #4a2f1a; --flag-ink: #f0b98a;
+  --shadow: rgba(0,0,0,.4); --shadow-up: rgba(0,0,0,.6); --veil: rgba(0,0,0,.6);
+  --img-filter: brightness(.85);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ink: #d9d6cf; --muted: #a3a09a; --rule: #3a3d40; --paper: #1d1f21; --desk: #151617;
+    --link: #8ab4f0;
+    --key: #6fa8ec; --example: #5cbf8f; --try: #e08a4a; --tip: #a993e6; --trap: #ec7063; --mock: #9aa0a6; --asked: #d4b23a;
+    --mini: #8b93a1; --hit: #4a3c0a; --hit-ink: #f4e7b5; --hit-rule: #b8942a;
+    --tint: #1d1f21; --tp: 12%;
+    --hint-ink: #b5b2ab; --flag-bg: #4a2f1a; --flag-ink: #f0b98a;
+    --shadow: rgba(0,0,0,.4); --shadow-up: rgba(0,0,0,.6); --veil: rgba(0,0,0,.6);
+    --img-filter: brightness(.85);
+  }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -30,7 +63,7 @@ a:hover { text-decoration: underline; }
 .menu ul {
   position: absolute; top: 1.8em; left: 0; z-index: 20; margin: 0; padding: .4em 0; list-style: none;
   min-width: 18em; max-width: 90vw; max-height: 70vh; overflow: auto;
-  background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 4px 16px rgba(0,0,0,.12);
+  background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 4px 16px var(--shadow);
 }
 .menu li a { display: block; padding: .25em 1em; color: var(--ink); }
 .menu li a:hover { background: var(--desk); text-decoration: none; }
@@ -39,7 +72,7 @@ a:hover { text-decoration: underline; }
 /* The page. */
 .page {
   max-width: 46em; margin: 0 auto 3em; padding: 2.2em 3.5em 2em; background: var(--paper);
-  box-shadow: 0 1px 4px rgba(0,0,0,.08); min-height: 80vh;
+  box-shadow: 0 1px 4px var(--shadow); min-height: 80vh;
 }
 .crumb { font-size: .8em; color: var(--muted); font-variant: small-caps; letter-spacing: .03em; margin-bottom: 1em; }
 .crumb a { color: var(--muted); }
@@ -50,7 +83,7 @@ h2 { font-size: 1.3em; margin: 1.4em 0 .6em; }
 h3 { font-size: 1.12em; margin: 1.3em 0 .5em; }
 h1.booktitle { font-size: 2em; text-align: center; margin-top: .6em; }
 .subtitle { text-align: center; color: var(--muted); font-style: italic; }
-img { max-width: 100%; height: auto; display: block; margin: 1em auto; }
+img { max-width: 100%; height: auto; display: block; margin: 1em auto; filter: var(--img-filter); }
 figure { margin: 1.2em 0; }
 figcaption { font-size: .85em; color: var(--muted); text-align: center; margin: 0 1.5em; }
 code { font-size: .85em; }
@@ -66,16 +99,16 @@ tbody tr:last-child { border-bottom: 1.5px solid var(--ink); }
 /* Boxes, as in the PDF: a coloured left rule on a light tint. */
 .box, .mini { margin: 1em 0; padding: .4em 1em; border-left: 3px solid; border-radius: 1px; }
 .box > p:first-child, .mini > p:first-child { margin-top: .3em; }
-.box.key { border-color: var(--key); background: color-mix(in srgb, var(--key) 6%, white); }
-.box.example { border-color: var(--example); background: color-mix(in srgb, var(--example) 6%, white); }
-.box.try, .box.practice { border-color: var(--try); background: color-mix(in srgb, var(--try) 6%, white); }
-.box.tip { border-color: var(--tip); background: color-mix(in srgb, var(--tip) 7%, white); }
-.box.trap { border-color: var(--trap); background: color-mix(in srgb, var(--trap) 6%, white); }
-.box.mock { border-color: var(--mock); background: color-mix(in srgb, var(--mock) 5%, white); }
-.box.asked { border-color: var(--asked); background: color-mix(in srgb, var(--asked) 7%, white); }
-.mini { border-color: color-mix(in srgb, var(--mini) 60%, white); background: color-mix(in srgb, var(--mini) 5%, white); scroll-margin-top: 3em; }
+.box.key { border-color: var(--key); background: color-mix(in srgb, var(--key) var(--tp), var(--tint)); }
+.box.example { border-color: var(--example); background: color-mix(in srgb, var(--example) var(--tp), var(--tint)); }
+.box.try, .box.practice { border-color: var(--try); background: color-mix(in srgb, var(--try) var(--tp), var(--tint)); }
+.box.tip { border-color: var(--tip); background: color-mix(in srgb, var(--tip) var(--tp), var(--tint)); }
+.box.trap { border-color: var(--trap); background: color-mix(in srgb, var(--trap) var(--tp), var(--tint)); }
+.box.mock { border-color: var(--mock); background: color-mix(in srgb, var(--mock) var(--tp), var(--tint)); }
+.box.asked { border-color: var(--asked); background: color-mix(in srgb, var(--asked) var(--tp), var(--tint)); }
+.mini { border-color: color-mix(in srgb, var(--mini) 60%, var(--tint)); background: color-mix(in srgb, var(--mini) var(--tp), var(--tint)); scroll-margin-top: 3em; }
 .mini:target { outline: 2px solid var(--hit); }
-.srcflag { font-size: .7em; font-weight: bold; padding: 0 .3em; background: #f5e3d3; color: #8a420a; }
+.srcflag { font-size: .7em; font-weight: bold; padding: 0 .3em; background: var(--flag-bg); color: var(--flag-ink); }
 
 /* Steps: title, then a hint toggle and a step toggle. */
 .problem { margin: 1em 0 1.5em; }
@@ -84,19 +117,19 @@ tbody tr:last-child { border-bottom: 1.5px solid var(--ink); }
 .step-title { font-weight: bold; }
 .step details { margin: .2em 0 .2em 1em; }
 .step summary, details.answer summary { cursor: pointer; font-size: .85em; color: var(--link); width: max-content; }
-.step details.hint[open] { color: #555; font-size: .95em; }
+.step details.hint[open] { color: var(--hint-ink); font-size: .95em; }
 .step details.hint[open] > summary, .step details.sol[open] > summary { color: var(--muted); }
 details.answer { margin: .8em 0; }
 
 /* Look-ups: dotted underline; a click opens a large centred panel over a dimmed page. */
 a.lookup { color: inherit; border-bottom: 1.5px dotted var(--link); }
-a.lookup:hover { background: var(--hit); text-decoration: none; }
+a.lookup:hover { background: var(--hit); color: var(--hit-ink); text-decoration: none; }
 a.tref { color: inherit; border-bottom: 1px dotted var(--muted); }
 a.tref:hover { color: var(--link); text-decoration: none; }
 a.dead { border-bottom: none; pointer-events: none; }
-#veil { position: fixed; inset: 0; z-index: 30; background: rgba(20,20,20,.45); display: flex; align-items: center; justify-content: center; padding: 2vh 2vw; }
+#veil { position: fixed; inset: 0; z-index: 30; background: var(--veil); display: flex; align-items: center; justify-content: center; padding: 2vh 2vw; }
 #veil[hidden] { display: none; }
-#pop { display: flex; flex-direction: column; width: min(92vw, 70em); max-width: max-content; min-width: min(92vw, 30em); max-height: 85vh; background: var(--paper); border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,.3); font-size: .9em; }
+#pop { display: flex; flex-direction: column; width: min(92vw, 70em); max-width: max-content; min-width: min(92vw, 30em); max-height: 85vh; background: var(--paper); border-radius: 4px; box-shadow: 0 10px 40px var(--shadow-up); font-size: .9em; }
 body.noscroll { overflow: hidden; }
 #pop .ph { display: flex; align-items: baseline; gap: .8em; padding: .4em .8em; border-bottom: 1px solid var(--rule); }
 #pop .pt { font-weight: bold; flex: 1; }
@@ -106,13 +139,13 @@ body.noscroll { overflow: hidden; }
 #pop table.lt { margin: .5em 0; font-size: 1em; }
 #pop .lt td { text-align: right; white-space: nowrap; }
 #pop .lt td.key { text-align: left; color: var(--muted); }
-#pop .lt tr.hr td { background: color-mix(in srgb, var(--hit) 45%, white); }
-#pop .lt th.hc { background: color-mix(in srgb, var(--hit) 45%, white); }
-#pop .lt td.hit { background: var(--hit); font-weight: bold; outline: 1.5px solid #c9a800; }
+#pop .lt tr.hr td { background: color-mix(in srgb, var(--hit) 45%, var(--tint)); }
+#pop .lt th.hc { background: color-mix(in srgb, var(--hit) 45%, var(--tint)); }
+#pop .lt td.hit { background: var(--hit); color: var(--hit-ink); font-weight: bold; outline: 1.5px solid var(--hit-rule); }
 #pop .lt tr.more td { text-align: center; color: var(--muted); }
 #pop .flag { color: var(--trap); margin: .3em .4em; }
 .tcap { scroll-margin-top: 3em; }
-.tcap:target { background: var(--hit); }
+.tcap:target { background: var(--hit); color: var(--hit-ink); }
 
 /* Pager. */
 .pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; padding-top: .8em; border-top: 1px solid var(--rule); font-size: .9em; }
@@ -138,7 +171,7 @@ ol.toc.plain { list-style: none; padding-left: 0; }
 }
 #pop .lt th { font-weight: bold; text-align: right; white-space: nowrap; }
 #pop .lt td.key:first-child, #pop .lt th:first-child { position: sticky; left: 0; background: var(--paper); text-align: left; }
-#pop .lt tr.hr td.key:first-child { background: color-mix(in srgb, var(--hit) 45%, white); }
+#pop .lt tr.hr td.key:first-child { background: color-mix(in srgb, var(--hit) 45%, var(--tint)); }
 #pop .fixed { margin: .4em .4em 0; color: var(--muted); font-size: .92em; }
 #pop .lt thead th { position: sticky; top: 0; background: var(--paper); z-index: 1; }
 #pop .lt thead th:first-child { z-index: 2; }
@@ -169,7 +202,7 @@ ol.toc.plain { list-style: none; padding-left: 0; }
 .bsub { display: block; font-size: .8em; color: var(--muted); }
 .btrack { height: .75em; }
 .bfill { height: 100%; background: var(--link); border-radius: 0 4px 4px 0; min-width: 2px; }
-.brow:hover .bfill { background: color-mix(in srgb, var(--link) 80%, black); }
+.brow:hover .bfill { background: color-mix(in srgb, var(--link) 80%, var(--ink)); }
 .bval { font-size: .9em; text-align: right; font-variant-numeric: tabular-nums; }
 .tscroll { overflow-x: auto; }
 table.yt { font-size: .8em; margin: 1em 0; }
@@ -187,3 +220,9 @@ ul.fams .yrs { color: var(--muted); font-size: .9em; }
 .bars.compact .brow { grid-template-columns: 4em 1fr 3.2em; }
 .bars.compact .blab { grid-column: auto; }
 #pop img.chart { display: block; max-width: 100%; height: auto; margin: .5em auto; }
+
+/* Theme toggle: a plain text button in the bar, like the links beside it. */
+.themebtn { border: 0; background: none; padding: 0 .2em; margin-left: .2em; font: inherit; font-size: 1.1em; line-height: 1;
+  color: var(--link); cursor: pointer; }
+.themebtn:hover { color: var(--ink); }
+.themebtn:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }

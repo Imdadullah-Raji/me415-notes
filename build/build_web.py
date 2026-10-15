@@ -251,8 +251,9 @@ def render(title, body, menus, prev, nxt, crumb):
 <title>{html.escape(title)} · {SITE}</title>
 <link rel="stylesheet" href="{KATEX}/katex.min.css">
 <link rel="stylesheet" href="book.css">
+<script src="theme.js"></script>
 </head><body>
-<header class="bar"><a class="home" href="index.html">{SITE}</a>{menus}<a class="dblink" href="qb.html">QB analysis</a><a href="db-index.html">Data book</a></header>
+<header class="bar"><a class="home" href="index.html">{SITE}</a>{menus}<a class="dblink" href="qb.html">QB analysis</a><a href="db-index.html">Data book</a><button class="themebtn" type="button" aria-label="Switch theme">☾</button></header>
 <main class="page">
 <div class="crumb">{crumb}</div>
 {body}
