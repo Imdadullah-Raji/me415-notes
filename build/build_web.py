@@ -41,7 +41,10 @@ KEYS = {"9": ["station"], "11": ["type_of_premise"], "12a": ["roof_no"], "12b": 
         "25": ["total_operational_hours_h"], "26": ["total_operational_hours_h"], "27": ["total_hours_in_space_h"],
         "28": ["degree_of_activity"],
         "T1": ["facility_type"], "T2": ["facility"], "T3": ["elevator_capacity_lb"], "T4": ["building_type"],
+        "r134a-sat": ["T_C"], "nh3-sat": ["T_C"], "r134a-sh": ["p_MPa", "T_C"], "nh3-sh": ["p_bar", "T_C"],
+        "water-sh": ["p_bar", "T_C"],
         "T5": ["building_height", "floors"], "T6": ["building_type", "rise_m"], "bnbc": ["building_type**"]}
+BLOCKS = {"r134a-sh": "p_MPa", "nh3-sh": "p_bar", "water-sh": "p_bar"}   # the panel stays inside one pressure block
 CHARTS = {"C1": "att_C1_average_trip_time.png", "C2": "att_C2_round_trip_time.png"}   # lift charts: shown as images
 
 
@@ -88,6 +91,8 @@ def load_tables(captions):
             page += f"#t-{tid}"
         tables[tid] = {"title": tex_plain(title), "page": page, "cols": head, "heads": [pretty_col(h) for h in head],
                        "keys": keys, "rows": body}
+        if tid in BLOCKS:
+            tables[tid]["block"] = head.index(BLOCKS[tid])
     return tables
 
 
@@ -121,24 +126,39 @@ def find_col(t, col):
     return head.index(min(cands, key=len))
 
 
+def key_eq(cell, tok):
+    """A row key matches as text, or as a number: row="-40" finds the row keyed -40.00."""
+    cell = cell.strip().lower()
+    if cell == tok:
+        return True
+    try:
+        return float(cell) == float(tok)
+    except ValueError:
+        return False
+
+
 def find_row(t, row):
     toks = [x.strip().lower() for x in row.split(";")]
     hits = [i for i, r in enumerate(t["rows"])
-            if all(any(r[k].strip().lower() == tok for k in t["keys"]) for tok in toks)]
+            if all(any(key_eq(r[k], tok) for k in t["keys"]) for tok in toks)]
     return hits
 
 
-def same(printed, cell):
+def same(printed, cell, x=1.0):
+    """The printed value equals the cell (times x, a unit factor such as MPa -> kPa) at the printed precision:
+    51.2 matches 0.05121 MPa with x=1000; 374.00 matches 374.00."""
     a = printed.replace("−", "-").replace("+", "").strip()
     b = cell.strip()
     try:
-        return float(a.rstrip("%")) == float(b.rstrip("%"))
+        va, vb = float(a.rstrip("%")), float(b.rstrip("%")) * x
+        dec = len(a.rstrip("%").split(".")[1]) if "." in a else 0
+        return abs(va - vb) <= 0.5 * 10 ** -dec + 1e-9
     except ValueError:                                # a text cell may hold more than is printed: "110–130 (10–12)^a"
         a = a.rstrip("%").lower()
         return a == b.lower() or bool(re.search(r"(?<![\w.–-])" + re.escape(a) + r"(?![\w.–-])", b.lower()))
 
 
-def resolve(tables, tid, row, col, printed, where):
+def resolve(tables, tid, row, col, printed, where, x=1.0):
     t = tables.get(tid)
     if t is None:
         fail(f"{where}: lookup to unknown table {tid!r}")
@@ -151,7 +171,7 @@ def resolve(tables, tid, row, col, printed, where):
     if c is None:
         fail(f"{where}: table {tid} has no column {col!r}")
     cell = t["rows"][hits[0]][c]
-    if not same(printed, cell):
+    if not same(printed, cell, x):
         fail(f"{where}: table {tid} [{row} / {t['cols'][c]}] is {cell!r}, the text prints {printed!r}")
     return hits[0], c
 
@@ -426,7 +446,8 @@ def main():
             for fname, _, md in ch["pages"]:
                 for m in re.finditer(r"\[([^\]]+)\]\{\.lookup ([^}]*)\}", md):
                     a = dict(re.findall(r'(\w+)="([^"]*)"', m.group(2)))
-                    resolve(tables, a.get("t"), a.get("row", ""), a.get("col", ""), m.group(1), f"{fname} [{m.group(1)}]")
+                    resolve(tables, a.get("t"), a.get("row", ""), a.get("col", ""), m.group(1), f"{fname} [{m.group(1)}]",
+                            float(a.get("x", 1)))
                     n_lookups += 1
                 for i in re.findall(r"\]\(#([\w-]+)\)", md):
                     if i not in home and not re.match(r"^\d", i):

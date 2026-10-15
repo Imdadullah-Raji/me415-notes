@@ -43,7 +43,14 @@
       cols = cols.filter(function (j) { return t.keys.indexOf(j) >= 0 || Math.abs(j - c) <= 6; });
     }
     var r0 = 0, r1 = n;
-    if (r != null) { r0 = Math.max(0, r - 8); r1 = Math.min(n, r + 9); }
+    if (r != null) {
+      r0 = Math.max(0, r - 8); r1 = Math.min(n, r + 9);
+      if (t.block != null) {                         // a superheated table: stay inside the pressure block of the cell
+        var bv = t.rows[r][t.block];
+        while (r0 < r && t.rows[r0][t.block] !== bv) r0++;
+        while (r1 > r + 1 && t.rows[r1 - 1][t.block] !== bv) r1--;
+      }
+    }
     // A text column that is the same on every shown row (e.g. "without suspended ceiling") goes above the table.
     var fixed = [];
     if (r != null && r1 - r0 > 1) {

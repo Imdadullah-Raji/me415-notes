@@ -144,9 +144,9 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 
 ![Fig. 5: The ideal absorption system as a Carnot engine driving a Carnot refrigerator. Left: a Carnot engine takes $Q_G$ from the heat source at $T_G$, rejects $Q_G-W$ to the environment at $T_0$ and delivers work $W$. Right: the work drives a Carnot refrigerator that takes $Q_E$ from the cold space at $T_E$ and rejects $Q_E+W$ to the environment at $T_0$. Below: $W=Q_G(T_G-T_0)/T_G$, $Q_E=W\,T_E/(T_0-T_E)$, hence $COP_{max}=Q_E/Q_G=\frac{T_G-T_0}{T_G}\cdot\frac{T_E}{T_0-T_E}$.](figures/005.png "w=0.7")
 
-> **TRAP: The COP$_{max}$ denominator in the Note**
+> **TRAP: The COP$_{max}$ denominator in Kanak vai's note**
 >
-> The Note's boxed formula [Kanak p.47] reads $COP_{max}=\frac{T_E}{T_G}\left(\frac{T_G-T_0}{T_1-T_E}\right)$. The "$T_1$" is a slip: it is $T_0-T_E$, the lift of the Carnot refrigerator from $T_E$ to the environment. The trends written under it, and every worked number in the sources, use $T_0$.
+> Kanak vai's note's boxed formula [Kanak p.47] reads $COP_{max}=\frac{T_E}{T_G}\left(\frac{T_G-T_0}{T_1-T_E}\right)$. The "$T_1$" is a slip: it is $T_0-T_E$, the lift of the Carnot refrigerator from $T_E$ to the environment. The trends written under it, and every worked number in the sources, use $T_0$.
 
 > **EXAMPLE 8.1** `[Aloke p.88; Kanak p.50]` A LiBr system has $T_G=100$ °C, $T_E=10$ °C, $T_a=30$ °C and $T_C=40$ °C. Find the ideal (Carnot) COP.
 >
@@ -175,7 +175,7 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 
 > **TRAP: $h_5$ is not $h_g$ at 100 °C**
 >
-> The slides, the Note and Ameen take $h_5=h_g(100\ °\text{C})=2676$ kJ/kg [Aloke p.89; Kanak p.52; Ameen Ex. 5.1]. That is saturated vapour at 101.4 kPa. The vapour leaving a generator at 100 °C is at the condenser pressure (7.38 kPa for 40 °C), where water saturates at only 40 °C: it is superheated by 60 K, and $h\approx2688$ kJ/kg. The difference raises $q_g$ by about 12 kJ per kg of refrigerant (1.8 kW in Solution 8.2) and **lowers the COP by about 0.003**. Either value earns the marks if stated; this guide uses 2688.
+> The slides, Kanak vai's note and Ameen take $h_5=h_g(100\ °\text{C})=2676$ kJ/kg [Aloke p.89; Kanak p.52; Ameen Ex. 5.1]. That is saturated vapour at 101.4 kPa. The vapour leaving a generator at 100 °C is at the condenser pressure (7.38 kPa for 40 °C), where water saturates at only 40 °C: it is superheated by 60 K, and $h\approx2688$ kJ/kg. The difference raises $q_g$ by about 12 kJ per kg of refrigerant (1.8 kW in Solution 8.2) and **lowers the COP by about 0.003**. Either value earns the marks if stated; this guide uses 2688.
 
 > **EXAMPLE 8.2** `[Aloke p.88; Kanak pp.51–52; Stoecker & Jones Ex. 17.1]` For $T_G=100$ °C, $T_C=40$ °C, $T_a=30$ °C, $T_E=10$ °C, read the concentrations and enthalpies of the solution at the absorber outlet (1) and generator outlet (3), and the enthalpy of the dilute solution heated to 52 °C (2).
 >
@@ -367,11 +367,11 @@ On Chart 5 the crystallization line at 69 % is at about −73 kJ/kg; the point (
 
 **Answer: refrigerant flow 0.1482 kg/s; COP = 0.733 without a heat exchanger (Carnot 1.97), 0.780 with it; at 34 °C condensing the solution crystallizes.**
 
-> **TRAP: The Note's and the slides' numbers for this problem**
+> **TRAP: Kanak vai's note's and the slides' numbers for this problem**
 >
-> - **$x_3=0.667$ [Kanak pp.52–53; Aloke p.89]** should be **0.664**, the value the slides' own chart construction reads (Aloke p.88). With 0.667 the Note gets $\dot m_3=0.45$, $\dot m_5=0.15$ kg/s; the COP moves by only about 0.001.
+> - **$x_3=0.667$ [Kanak pp.52–53; Aloke p.89]** should be **0.664**, the value the slides' own chart construction reads (Aloke p.88). With 0.667 Kanak vai's note gets $\dot m_3=0.45$, $\dot m_5=0.15$ kg/s; the COP moves by only about 0.001.
 > - **$h_5=2676$ kJ/kg** is $h_g$ at 100 °C; the vapour is superheated at 7.38 kPa, $h\approx2688$ kJ/kg (§8.5 TRAP). This lowers the COP by about 0.003.
-> - Printed results: Note COP **0.737** without and **0.784** with the heat exchanger; slides 0.735 (a misprint: their own $348.2/473.3=0.736$) and 0.783. With $x_3=0.664$ and 2676 the book-value route gives 0.735 and 0.783; the corrected values are **0.733 and 0.780**. Any of these, with the method shown, is a full-mark answer.
+> - Printed results: Kanak vai's note COP **0.737** without and **0.784** with the heat exchanger; slides 0.735 (a misprint: their own $348.2/473.3=0.736$) and 0.783. With $x_3=0.664$ and 2676 the book-value route gives 0.735 and 0.783; the corrected values are **0.733 and 0.780**. Any of these, with the method shown, is a full-mark answer.
 > - **Part (iv):** the slides read $h_3=-57$ kJ/kg at 69 %, 100 °C and get $h_4=-123.2$ kJ/kg (rounded to −120 on the slide). The data-book chart's 100 °C curve is almost flat above 64 % and reads about −53 kJ/kg there, so $h_4\approx-119$ kJ/kg. The conclusion is the same: crystallization.
 > - The slides divide by 476.6 instead of 473.3 for the COP, and write $0.5/0.667\times0.6=0.452$ (it is 0.450; 0.452 belongs to 0.664) [Aloke p.90].
 

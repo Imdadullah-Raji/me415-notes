@@ -1692,7 +1692,7 @@ Finish with the comparison: crisscross needs less space, structure and money and
 > - **Answers:** 12 × 2000: 7 × 3500 lb, 2.5 m/s (20.7 s, 12.6%) · 10 × 2000: 6 × 3000 lb, 2.0 m/s (21.7 s, 12.2%) · 15 × 1500: 7 × 3500 lb (22.9 s, 12.2%) · 12 × 1500: 5 × 3500 lb (29.0 s, 12.0%) · 14 × 1115: 5 × 3000 lb (28.6 s, 11.8%) · 18 × 3000: zone, 7 + 8 cars · 16 × 3500: zone, 7 + 8 cars.
 > - **Zoning:** single bank > 8 cars → zone; $RT_{high}=RT_{C2}(\text{local})+2H_e/v$.
 > - **CIBSE (23-24):** $P=$ arrivals/s × $I$ = 15; $t_f=d_f/v+v/a+a/j$; RTT = 156.4 s; 6 lifts: I = 26.1 s, HC 17.3% (compliant, wasteful); 5 lifts with 2-s doors: 29.5 s, 15.3%.
-> - **Escalator:** $N=3600PV\cos\theta/L$; 35°, 2/step, $V/L=1$: **5898 persons/h** (7200 without the cosine). Note example 30°, 1/step, 0.5 m/s, 0.4 m: 3897. Crisscross (less space, cheaper, continuous) vs parallel (impressive, more space).
+> - **Escalator:** $N=3600PV\cos\theta/L$; 35°, 2/step, $V/L=1$: **5898 persons/h** (7200 without the cosine). Kanak vai's note's example 30°, 1/step, 0.5 m/s, 0.4 m: 3897. Crisscross (less space, cheaper, continuous) vs parallel (impressive, more space).
 
 ## 2.16 Self-test
 

@@ -179,13 +179,13 @@ The **psychrometric chart** plots the properties of moist air at one total press
 
 ![Fig. 5: Anatomy of the psychrometric chart at 101.325 kPa (T_db 0–45 °C horizontal, ω 0–0.030 kg/kg on the right): saturation curve φ = 100 % at the upper left; grey constant-φ curves 20, 40, 60, 80 %; green dashed constant-T_wb lines; orange dash-dot constant-h lines labelled h = 40, 60, 80; blue dotted constant-v lines 0.85 and 0.90. State 1 at 30 °C, φ = 80 % (Example 6.1): a red dashed vertical down to T_db = 30 °C, a red horizontal to the right axis at ω1 = 0.0216, the same horizontal to the left meets the saturation curve at the dew point 26.1 °C; a green line up-left along the wet-bulb line meets the saturation curve at T_wb = 27.0 °C](figures/005.jpg "w=0.85")
 
-**The chart at the end of this module** is ASHRAE chart No. 1 (Data Book Chart 8), normal temperature, **sea level, 101.325 kPa**, with a clean print of the same chart. The chart pasted in the slides and the Note (Arif p.99a, Kanak p.154) is ASHRAE chart **No. 5 for 750 m (92.634 kPa)**: do not read numbers from it. The UIG chart on Kanak p.155 is for 760 mm Hg (sea level) and agrees with Chart 8.
+**The chart at the end of this module** is ASHRAE chart No. 1 (Data Book Chart 8), normal temperature, **sea level, 101.325 kPa**, with a clean print of the same chart. The chart pasted in the slides and Kanak vai's note (Arif p.99a, Kanak p.154) is ASHRAE chart **No. 5 for 750 m (92.634 kPa)**: do not read numbers from it. The UIG chart on Kanak p.155 is for 760 mm Hg (sea level) and agrees with Chart 8.
 
 **Equations or chart?** The equations of §6.2 with Table 1 are exact (to the interpolation in Table 1) at **any** pressure; the chart is quicker but good to about ±0.5 kJ/kg and ±0.0003 in $\omega$, and only at its own pressure. This guide solves every numerical with the equations and quotes the chart reading as a check. In the exam either route earns full marks if the steps are shown; draw the process on a sketch of the chart in both cases.
 
 > **TRAP: The chart is for one pressure only**
 >
-> At 1 atm the chart and the equations agree. At any other pressure the chart is wrong, and $\omega$ and $v$ must be computed: for the same $T$ and φ, $\omega$ and $v$ grow as $P$ falls ($\omega\propto P_v/(P-P_v)$, $v\propto1/(P-P_v)$). The Note's heating-with-humidification problem at **100 kPa** (pp.161–162) reads $v_1=0.80$ m³/kg off the sea-level chart; at 100 kPa it is 0.8157 (Example 6.3), so its heat input 703 kJ/min should be **668 kJ/min**. Whenever a problem states a pressure other than 1 atm (100 kPa, or a plant at altitude), use the equations.
+> At 1 atm the chart and the equations agree. At any other pressure the chart is wrong, and $\omega$ and $v$ must be computed: for the same $T$ and φ, $\omega$ and $v$ grow as $P$ falls ($\omega\propto P_v/(P-P_v)$, $v\propto1/(P-P_v)$). Kanak vai's note's heating-with-humidification problem at **100 kPa** (pp.161–162) reads $v_1=0.80$ m³/kg off the sea-level chart; at 100 kPa it is 0.8157 (Example 6.3), so its heat input 703 kJ/min should be **668 kJ/min**. Whenever a problem states a pressure other than 1 atm (100 kPa, or a plant at altitude), use the equations.
 
 ## 6.4 Air-conditioning processes ★
 
@@ -255,9 +255,9 @@ with $h_w=h_f$ at the condensate temperature (Table 1). The condensate term is o
 >
 > *Chart route* (Arif p.102a): $h_1=85.4$, $h_2=39.3$ kJ/kg, $\omega_1=0.0216$, $\omega_2=0.0100$, $v_1=0.889$ → 11.25 kg/min, **0.131 kg/min, 511 kJ/min**. CoolProp: 0.131 kg/min, 512 kJ/min. The table route is about 1 % low because linear interpolation of $P_g$ between 10 and 15 °C overestimates $P_g(14\ °\text{C})$ (1.614 against 1.599 kPa) and so $\omega_2$. Either answer is accepted.
 
-> **TRAP: 0.135 kg/min in the Note (pp.159–160)**
+> **TRAP: 0.135 kg/min in Kanak vai's note (pp.159–160)**
 >
-> The Note reads $\omega_1=22$ g/kg off the chart (the true value is 21.6) and gets $\dot m_w=11.24\times(22-10)\times10^{-3}=0.135$ kg/min and $\dot Q_{out}=509.1$ kJ/min. A 0.4 g/kg rounding becomes a 3 % error in the moisture, because $\dot m_w$ depends on the small difference $\omega_1-\omega_2$. The correct answers are **0.131 kg/min and 511 kJ/min** (Arif p.102a). Always carry $\omega$ to three significant figures (four decimals) when you subtract.
+> Kanak vai's note reads $\omega_1=22$ g/kg off the chart (the true value is 21.6) and gets $\dot m_w=11.24\times(22-10)\times10^{-3}=0.135$ kg/min and $\dot Q_{out}=509.1$ kJ/min. A 0.4 g/kg rounding becomes a 3 % error in the moisture, because $\dot m_w$ depends on the small difference $\omega_1-\omega_2$. The correct answers are **0.131 kg/min and 511 kJ/min** (Arif p.102a). Always carry $\omega$ to three significant figures (four decimals) when you subtract.
 
 ### Heating with humidification
 
@@ -288,7 +288,7 @@ With **steam** humidification the temperature rises a little (2 → 3 slopes up-
 
 > **TRAP: $v_1$ read off the sea-level chart (Kanak pp.161–162)**
 >
-> The Note takes $v_1=0.80$, $\omega_1=2.5\times10^{-3}$, $h_1=15.5$ from the 760 mm Hg chart and gets $\dot m_a=45/0.80=56.25$ kg/min, $\dot Q_{in}=56.25(28-15.5)=703.1$ kJ/min and $\dot m_w=0.534$ kg/min. At 1 atm the equations give $v_1=0.805$ (55.9 kg/min); at the stated **100 kPa** they give $v_1=0.8157$. The heat input is 5 % too high. The steam rate happens to be close only because the high $\dot m_a$ and the high $\omega_1$ partly cancel. Read the problem's pressure first.
+> Kanak vai's note takes $v_1=0.80$, $\omega_1=2.5\times10^{-3}$, $h_1=15.5$ from the 760 mm Hg chart and gets $\dot m_a=45/0.80=56.25$ kg/min, $\dot Q_{in}=56.25(28-15.5)=703.1$ kJ/min and $\dot m_w=0.534$ kg/min. At 1 atm the equations give $v_1=0.805$ (55.9 kg/min); at the stated **100 kPa** they give $v_1=0.8157$. The heat input is 5 % too high. The steam rate happens to be close only because the high $\dot m_a$ and the high $\omega_1$ partly cancel. Read the problem's pressure first.
 
 ![Fig. 10: Heating with humidification at 100 kPa (Example 6.3). (a) Duct: state 1 (10 °C, 30 %, 45 m³/min) enters the heating section with heating coils; state 2 (22 °C, ω2 = ω1) enters the humidifying section with steam injection; state 3 (25 °C, 60 %) leaves. (b) Chart: horizontal arrow 1 → 2 at ω = 0.0023, then a steep arrow up and slightly right 2 → 3 to ω = 0.0121](figures/010.png "w=0.95")
 
@@ -417,7 +417,7 @@ Power plants, large air-conditioning plants and industry reject large amounts of
 - **Approach** $=T_{water,out}-T_{wb,air\,in}$ (e.g. 30 − 27 = 3 K), set by the size of the tower; it can never be zero.
 - **Make-up** water replaces the losses by evaporation, drift and blow-down. **Blow-down** is water drained periodically to stop the build-up of dissolved solids (scale) as pure water evaporates.
 
-![Fig. 17: Counter-flow induced-draft cooling tower (Note sketch): propeller fan at the top inducting air upward; drift eliminator below it; water distribution header with spray nozzles; fill with air arrows rising through it; louvred air inlets on both lower sides; water basin with an outlet to the condenser [Kanak p.29]](figures/017.jpg "w=0.45")
+![Fig. 17: Counter-flow induced-draft cooling tower (Kanak vai's note, sketch): propeller fan at the top inducting air upward; drift eliminator below it; water distribution header with spray nozzles; fill with air arrows rising through it; louvred air inlets on both lower sides; water basin with an outlet to the condenser [Kanak p.29]](figures/017.jpg "w=0.45")
 
 ![Fig. 18: Cross-flow induced-draft cooling tower: central propeller fan at the top; on each side a hot-water distribution box with nozzles over a slanted fill; air enters horizontally through the side louvres, crosses the falling water at 90°, turns up through the central plenum and leaves through the fan; drift eliminators on the inner faces; basin with outlet to the condenser [Kanak p.30]](figures/018.jpg "w=0.45")
 
@@ -439,7 +439,7 @@ Power plants, large air-conditioning plants and industry reject large amounts of
   2. All-water systems (FCUs).
   3. Air-water systems (FCUs or induction units plus ducted primary air).
 
-![Fig. 21: The Note's classification tree: Air Conditioning System → Unitary system (1 window type, 2 split type → ducted split, multi split, VRF type) and Chiller type (1 all air system, 2 all water system, 3 air-water system) [Kanak p.118]](figures/021.jpg "w=0.5")
+![Fig. 21: Kanak vai's note's classification tree: Air Conditioning System → Unitary system (1 window type, 2 split type → ducted split, multi split, VRF type) and Chiller type (1 all air system, 2 all water system, 3 air-water system) [Kanak p.118]](figures/021.jpg "w=0.5")
 
 ### Window air conditioner
 
@@ -601,7 +601,7 @@ In an **all-air system** the central plant (AHU) delivers **cooled or heated air
 
 **All-water system** [Arif p.75a; Kanak pp.125, 127]. Hot or chilled water from the central plant is piped to **FCUs** (or radiators, convectors, valance units) in each room; all the conditioning except ventilation is done locally. Ventilation comes from opening windows or other means, so no ventilation air is ducted from the plant. Pipes are small (water carries about 3500 times as much heat per unit volume as air), so the system suits buildings where ducts are a problem (low floor-to-floor height, deep beams, refurbishment).
 
-![Fig. 40: Ceiling-mounted fan-coil unit (Note sketch): an FCU box with a cooling coil (cold water in, warmer water out) and a centrifugal fan, a filter on the return-air inlet; return air from the room rises into the unit, the fan pushes it over the coil and down the supply duct into the room [Kanak p.125]](figures/040.jpg "w=0.5")
+![Fig. 40: Ceiling-mounted fan-coil unit (Kanak vai's note, sketch): an FCU box with a cooling coil (cold water in, warmer water out) and a centrifugal fan, a filter on the return-air inlet; return air from the room rises into the unit, the fan pushes it over the coil and down the supply duct into the room [Kanak p.125]](figures/040.jpg "w=0.5")
 
 **Air-water system** [Arif p.76a; Kanak pp.126–127]. All the primary (ventilation) air comes from a central AHU, ducted at a small rate, while local units (FCUs or induction units) supplied with hot or chilled water provide the additional conditioning. The water carries 80–90 % of the thermal load, the air the rest. Particularly effective in perimeter spaces with high heating and cooling loads (offices, hotels, hospitals). Two main types: **fan-coil units with supplementary air** and **induction units** (high-velocity primary air from nozzles induces room air over the coil).
 

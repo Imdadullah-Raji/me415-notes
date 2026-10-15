@@ -116,9 +116,9 @@ $$COP=\frac{h_1-h_4}{h_2-h_1}$$
 > $$\dot W=\dot m(h_2-h_1)=0.06(421.46-385.12)=\mathbf{2.18\ kW}$$
 > $$\dot Q_H=\dot Q_L+\dot W=\mathbf{11.07\ kW},\qquad COP=\frac{8.89}{2.18}=\mathbf{4.08}$$
 
-> **TRAP: h = 428 kJ/kg in the slides, Rifat vai and the Note**
+> **TRAP: h = 428 kJ/kg in the slides, Rifat vai and Kanak vai's note**
 >
-> All three read the compressor outlet as $h=428$ kJ/kg off the chart and get $\dot Q_L=0.06(385.43-236)=8.96$ kW, $\dot W=2.55$ kW, $\dot Q_H=11.51$ kW and **COP = 3.51** (Arif p.21b, Rifat p.5, also Ameen Ex. 3.4), or COP = **3.43** (Kanak p.81). 428 kJ/kg lies on the $s\approx1.764$ isentrope, not on $s=1.7435$; the table and the EOS both give ≈ 421.5 kJ/kg, so the true COP is about **4.08**. The Note also takes $h_f=238.84$ kJ/kg for 0.7 MPa: that is the 28 °C row (0.727 MPa); at 0.7 MPa the table gives 236.98. When you read a chart, follow the isentrope from state 1 carefully, and check the answer: for −22 °C / 27 °C the ideal R134a COP must be close to 4.
+> All three read the compressor outlet as $h=428$ kJ/kg off the chart and get $\dot Q_L=0.06(385.43-236)=8.96$ kW, $\dot W=2.55$ kW, $\dot Q_H=11.51$ kW and **COP = 3.51** (Arif p.21b, Rifat p.5, also Ameen Ex. 3.4), or COP = **3.43** (Kanak p.81). 428 kJ/kg lies on the $s\approx1.764$ isentrope, not on $s=1.7435$; the table and the EOS both give ≈ 421.5 kJ/kg, so the true COP is about **4.08**. Kanak vai's note also takes $h_f=238.84$ kJ/kg for 0.7 MPa: that is the 28 °C row (0.727 MPa); at 0.7 MPa the table gives 236.98. When you read a chart, follow the isentrope from state 1 carefully, and check the answer: for −22 °C / 27 °C the ideal R134a COP must be close to 4.
 
 ## 7.4 The actual cycle: deviations, subcooling and superheating ★
 
@@ -231,7 +231,7 @@ In practice the flash tank and the flash intercooler are one vessel ("intercoole
 >
 > For ammonia, whose isentropes are flat and whose discharge temperature is high, intercooling saves a lot of work. For R12, R22 and R134a the slopes before and after cooling are nearly the same, so the saving from desuperheating alone is small; the main gain of the two-stage R134a system comes from **flash-gas removal** and from the smaller pressure ratio per stage [Ameen §3.5].
 
-## 7.8 Solving any multistage system: the five-step method ★
+## 7.8 Solving any multistage system: the five-step method ★ {#five-step}
 
 Every past-paper multistage problem is solved with the same five steps. Learn them as a drill.
 
@@ -246,6 +246,22 @@ Every past-paper multistage problem is solved with the same five steps. Learn th
 > 5. **Powers and COP:** $\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor, $COP=\sum\dot Q_{evap}/\sum\dot W$.
 
 Steps 2 and 4 can be done in one states table. Draw the schematic and the p-h diagram even when they are not asked: they earn marks and prevent mistakes with the state numbers.
+
+::: {.mini #m-mini-vc-interp}
+**Mini-example: an isentropic discharge from the superheated table.** R134a leaves a compressor at 300 kPa with $s=1.7400$ kJ/kg·K (the suction entropy). Find $h$.
+
+300 kPa lies between the 0.2 and 0.4 MPa blocks, so interpolate twice in $s$ and once in $p$: 0.2 MPa block, rows -10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **394.40**; 0.4 MPa block, rows 10 °C ($h=$ [404.78]{.lookup t="r134a-sh" row="0.4;10" col="h_kJ_kg"}, $s=$ [1.7263]{.lookup t="r134a-sh" row="0.4;10" col="s_kJ_kgK"}) and 20 °C ([414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}), interpolated in $s$ → **408.73**. Linear in $p$ between 200 and 400 kPa: $h_{x}=394.40+\frac{100.0}{200.0}(408.73-394.40)=\mathbf{401.57}$ kJ/kg.
+
+Inside a block the rows either side of $s$ may be the saturated-vapour row. If the pressure is itself a block (2, 4, 8, 12 bar), one interpolation in $s$ is enough.
+:::
+
+::: {.mini #m-mini-vc-flash}
+**Mini-example: one flash tank with its evaporator.** A 10 kW evaporator at −30 °C and a 5 kW evaporator at −10 °C share a flash tank at −10 °C; condenser liquid at 30 °C. Take $h_g(-30)=380.32$, $h_f(-10)=186.70$, $h_g(-10)=392.66$, $h_f(30)=241.72$, and the low-stage discharge $h_2=397.49$ kJ/kg.
+
+- Lowest evaporator, fed with tank liquid: $\dot m_1=10/(380.32-186.70)=0.0516$ kg/s.
+- CV = tank + −10 °C evaporator. In: liquid $\dot m_3$ at 241.72, the 5 kW load, gas $\dot m_1$ at 397.49. Out: vapour $\dot m_3$ at 392.66, liquid $\dot m_1$ at 186.70:
+$$\dot m_3=\frac{5+0.0516(397.49-186.70)}{392.66-241.72}=0.1052\ \text{kg/s}$$
+:::
 
 ### Type A: two compressors, one evaporator, flash intercooler (flash-gas removal)
 
@@ -272,7 +288,7 @@ The liquid from the condenser (5) is throttled to the intermediate pressure into
 
 > **TRAP: Two slips in the Example 7.2 sources**
 >
-> - **The flash-fraction shortcut.** The slides and notes find $x=(241.72-200)/(398.60-200)=0.210$ and then $\dot m=50/[(1-x)(h_1-h_8)]=0.3393$ kg/s for the high stage. That treats the tank as a flash separator only and forgets that the hot low-stage gas 2 is **desuperheated in the tank**, which boils off extra liquid. The energy balance of Step 3 gives 0.3441 kg/s. In every exam problem the low-stage discharge is piped into the tank, so always use the energy balance. With the shortcut and chart values the slide gets COP 4.50, the Note and Rifat vai 4.65 (they also use 402 and 418 instead of the chart's 402.5 and 418.6).
+> - **The flash-fraction shortcut.** The slides and notes find $x=(241.72-200)/(398.60-200)=0.210$ and then $\dot m=50/[(1-x)(h_1-h_8)]=0.3393$ kg/s for the high stage. That treats the tank as a flash separator only and forgets that the hot low-stage gas 2 is **desuperheated in the tank**, which boils off extra liquid. The energy balance of Step 3 gives 0.3441 kg/s. In every exam problem the low-stage discharge is piped into the tank, so always use the energy balance. With the shortcut and chart values the slide gets COP 4.50, Kanak vai's note and Rifat vai 4.65 (they also use 402 and 418 instead of the chart's 402.5 and 418.6).
 > - **The one-stage comparison** (Rifat p.9) reads $h_2=440$ kJ/kg and gets COP **2.67**. The isentrope from −20 °C reaches 770.2 kPa at 422.95 kJ/kg, so the one-stage COP is **3.98**. Two-stage still wins, by about 14% in power, not by 40%.
 
 ### Type B: two evaporators at different temperatures
@@ -325,9 +341,9 @@ $$\dot m_1=\frac{\dot Q_{low}}{h_1-h_8},\qquad \dot m_3=\frac{\dot Q_{high}+\dot
 >
 > Total 106.13 kW, COP $=380/106.13=3.58$. The two-stage system with the flash intercooler saves about 14% of the power.
 
-> **TRAP: h₄ = 418 kJ/kg in the Note and Rifat vai's notes**
+> **TRAP: h₄ = 418 kJ/kg in Kanak vai's note and Rifat vai's notes**
 >
-> Both read $h_4=418$ kJ/kg off the chart for 1016.6 kPa, $s=1.7245$, and get $\dot W_{34}=48.28$ kW (Note) or 46.72 kW (Rifat), COP **4.81** or **4.903**. 418 kJ/kg is below the saturated vapour enthalpy at 40 °C (419.43), which is impossible for a superheated discharge. The table and the EOS both give 423.7 kJ/kg, so $\dot W_{34}=62.6$ kW and COP ≈ 4.14–4.15. Quick check: the discharge enthalpy at 40 °C condensing must exceed $h_g(40\ °\text{C})=419.43$.
+> Both read $h_4=418$ kJ/kg off the chart for 1016.6 kPa, $s=1.7245$, and get $\dot W_{34}=48.28$ kW (Kanak vai's note) or 46.72 kW (Rifat), COP **4.81** or **4.903**. 418 kJ/kg is below the saturated vapour enthalpy at 40 °C (419.43), which is impossible for a superheated discharge. The table and the EOS both give 423.7 kJ/kg, so $\dot W_{34}=62.6$ kW and COP ≈ 4.14–4.15. Quick check: the discharge enthalpy at 40 °C condensing must exceed $h_g(40\ °\text{C})=419.43$.
 
 ### Type D: three stages, three evaporators, two flash tanks
 
@@ -376,203 +392,649 @@ Standing assumptions for every numerical, unless the solution says otherwise:
 
 > **TRY 7.1** `[PP 12-13 Q5(c), 20]` Calculate the power required by the two compressors in a R134a system which serves a 50 TR evaporator at −40 °C and 60 TR evaporator at −10 °C. The system uses two stage compression with inter-cooling and is arranged as in Fig. for Q. No. 5(d) (Fig. 10(a)). The condensing temperature is 30 °C. Also calculate the COP of the system.
 
-**Solution 7.1** **[TUTOR-GENERATED]** (method of Arif pp.29b–30b and Kanak pp.89–91, with the five steps of §7.8). This is the model answer for the whole family.
+**Solution 7.1** **[TUTOR-GENERATED]** (method of Arif pp.29b–30b and Kanak pp.89–91, with the five steps of §7.8). This is the model answer for the whole family. Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-*Step 1. States and sketch.* As in Fig. 10: 1 low-temperature evaporator exit (−40 °C), 2 low-stage discharge, 3 high-stage suction (−10 °C), 4 high-stage discharge, 5 condenser exit (30 °C), 6 after the valves (into the −10 °C evaporator and the tank), 7 tank liquid, 8 low-temperature evaporator inlet. Loads: $\dot Q_{-40}=50\times3.517=175.85$ kW, $\dot Q_{-10}=60\times3.517=211.02$ kW.
+::: {.problem #sol-7-1}
 
-*Steps 2 and 4. States table.* Table 1 rows −40 °C, −10 °C and 30 °C are printed directly.
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 10) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Fig. 10: 1 suction of compressor 1 (sat. vapour at −40 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −10 °C), 4 its discharge; condenser liquid at 30 °C. Loads: $\dot Q_{-40}=50\times3.517=175.85$ kW; $\dot Q_{-10}=60\times3.517=211.02$ kW; total 386.87 kW.
+:::
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
-|---|---|---|---|---|---|
-| 1 | low-temp. evaporator exit, sat. vapour at -40 °C | 51.2 | 374.00 | 1.7643 | Table 1, $T=-40$ °C |
-| 2 | low-stage discharge, $s_2=s_1$ | 200.6 | 400.96 | 1.7643 | superheated table |
-| 3 | high-stage suction, sat. vapour at -10 °C | 200.6 | 392.66 | 1.7334 | Table 1, $T=-10$ °C |
-| 4 | high-stage discharge, $s_4=s_3$ | 770.2 | 420.53 | 1.7334 | superheated table |
-| 5 = 6 | condenser exit, sat. liquid at 30 °C; throttled | 770.2 / 200.6 | 241.72 | | Table 1, $T=30$ °C |
-| 7 = 8 | tank liquid, sat. liquid at -10 °C; throttled | 200.6 / 51.2 | 186.70 | | Table 1, $T=-10$ °C |
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −40 °C (evaporator) | [51.2]{.lookup t="r134a-sat" row="-40" col="p_MPa" x="1000"} | [374.00]{.lookup t="r134a-sat" row="-40" col="h_vap_kJ_kg"} | [1.7643]{.lookup t="r134a-sat" row="-40" col="s_vap_kJ_kgK"} |  |
+| −10 °C (evaporator and tank) | [200.6]{.lookup t="r134a-sat" row="-10" col="p_MPa" x="1000"} | [392.66]{.lookup t="r134a-sat" row="-10" col="h_vap_kJ_kg"} | [1.7334]{.lookup t="r134a-sat" row="-10" col="s_vap_kJ_kgK"} | [186.70]{.lookup t="r134a-sat" row="-10" col="h_liq_kJ_kg"} |
+| 30 °C (condenser) | [770.2]{.lookup t="r134a-sat" row="30" col="p_MPa" x="1000"} | | | [241.72]{.lookup t="r134a-sat" row="30" col="h_liq_kJ_kg"} |
+:::
 
-Isentropic outlets in detail: $h_2$ at 200.6 kPa, $s=1.7643$: 0.2 MPa block, rows −10 °C ($h=392.77$, $s=1.7339$) and 0 °C (401.21, 1.7654) → 400.92; 0.4 MPa block, rows 20 °C (414.00, 1.7583) and 30 °C (423.21, 1.7892) → 415.79; linear in $p$: $h_2=400.92+\frac{0.6}{200}(415.79-400.92)=400.96$ kJ/kg ($T_2\approx-0.3$ °C). $h_4$ at 770.2 kPa, $s=1.7334$: 0.6 MPa block, sat. vapour (410.67, 1.7178) and 30 °C (418.97, 1.7455) → 415.34; 0.8 MPa block, sat. vapour (415.58, 1.7144) and 40 °C (424.61, 1.7437) → 421.44; $h_4=415.34+0.851(421.44-415.34)=420.53$ kJ/kg ($T_4\approx35.4$ °C). The EOS gives 401.0 and 420.6.
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7643$ at the next pressure up, 200.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 200.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **400.92**; 0.4 MPa block, rows 20 °C ($h=$ [414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, $s=$ [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}) and 30 °C ([423.21]{.lookup t="r134a-sh" row="0.4;30" col="h_kJ_kg"}, [1.7892]{.lookup t="r134a-sh" row="0.4;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.79**. Linear in $p$ between 200 and 400 kPa: $h_{2}=400.92+\frac{0.6}{200.0}(415.79-400.92)=\mathbf{400.96}$ kJ/kg.
+:::
 
-*Step 3. Mass and energy balances.*
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7334$ at the next pressure up, 770.2 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 770.2 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.6 MPa block, rows sat. vapour ($h=$ [410.67]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7178]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="s_kJ_kgK"}) and 30 °C ([418.97]{.lookup t="r134a-sh" row="0.6;30" col="h_kJ_kg"}, [1.7455]{.lookup t="r134a-sh" row="0.6;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.34**; 0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **421.44**. Linear in $p$ between 600 and 800 kPa: $h_{4}=415.34+\frac{170.2}{200.0}(421.44-415.34)=\mathbf{420.53}$ kJ/kg.
+:::
 
-- −40 °C evaporator: $\dot m_1=\dot Q_{-40}/(h_1-h_8)$.
-- Control volume = −10 °C evaporator + tank: in, liquid $\dot m_3$ at $h_5$, the load 211.02 kW and the low-stage gas $\dot m_1$ at $h_2$; out, vapour $\dot m_3$ at $h_3$ and liquid $\dot m_1$ at $h_7$:
-$$\dot m_3h_5+\dot Q_{-10}+\dot m_1h_2=\dot m_3h_3+\dot m_1h_7$$
+::: {.step title="Step 5. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-40}}{h_1-h_f(-10)}=\frac{175.85}{374.00-186.70}=0.9389\ \text{kg/s}$$
 
-*Step 5. Powers and COP.*
+CV = −10 °C evaporator + −10 °C tank:
+$$\dot m_3=\frac{211.02+0.9389(400.96-186.70)}{392.66-241.72}=2.7308\ \text{kg/s}$$
+:::
 
-$m_1=\dfrac{175.85}{374.00-186.70}=0.9389$ kg/s;
-$m_3=\dfrac{211.02+0.9389(400.96-186.70)}{392.66-241.72}=2.7308$ kg/s;
-$W_{12}=0.9389(400.96-374.00)=25.31$ kW; $W_{34}=2.7308(420.53-392.66)=76.10$ kW;
-total 101.41 kW; COP $=386.87/101.41=3.81$. EOS: 401.0, 420.6, W 101.6, COP 3.81.
+::: {.step title="Step 6. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=0.9389(400.96-374.00)=25.31$ kW; $\dot W_{34}=2.7308(420.53-392.66)=76.10$ kW.
 
+$$\sum\dot W=101.41\ \text{kW},\qquad COP=\frac{386.87}{101.41}=3.81$$
+
+Check with CoolProp (EOS): discharges 401.0, 420.6 kJ/kg, $\sum\dot W=101.6$ kW, COP 3.81.
+:::
+
+:::
+
+::: answer
 **Answer: low-stage compressor 25.31 kW, high-stage compressor 76.10 kW, total power 101.41 kW; COP = 3.81.** (One stage between −40 °C and 30 °C would have a COP of only about 2.35 for the −40 °C load.)
+:::
 
 > **TRY 7.2** `[PP 15-16 Q1(c), 15]` Calculate the power required by the two compressors in a R 134a system which serves a 50 TR evaporator at −40 °C and 60 TR evaporator at −10 °C. The system uses two stage compression with inter-cooling and is arranged as in Fig. for Q. No. 1 (c). The condensing temperature is 30 °C. Also calculate the COP of the system.
 
-**Solution 7.2** **[TUTOR-GENERATED]** A verbatim repeat of TRY 7.1 (here for 15 marks). Same states and balances:
+**Solution 7.2** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
-|---|---|---|---|---|---|
-| 1 | low-temp. evaporator exit, sat. vapour at -40 °C | 51.2 | 374.00 | 1.7643 | Table 1, $T=-40$ °C |
-| 2 | low-stage discharge, $s_2=s_1$ | 200.6 | 400.96 | 1.7643 | superheated table |
-| 3 | high-stage suction, sat. vapour at -10 °C | 200.6 | 392.66 | 1.7334 | Table 1, $T=-10$ °C |
-| 4 | high-stage discharge, $s_4=s_3$ | 770.2 | 420.53 | 1.7334 | superheated table |
-| 5 = 6 | condenser exit, sat. liquid at 30 °C; throttled | 770.2 / 200.6 | 241.72 | | Table 1, $T=30$ °C |
-| 7 = 8 | tank liquid, sat. liquid at -10 °C; throttled | 200.6 / 51.2 | 186.70 | | Table 1, $T=-10$ °C |
-$m_1=\dfrac{175.85}{374.00-186.70}=0.9389$ kg/s;
-$m_3=\dfrac{211.02+0.9389(400.96-186.70)}{392.66-241.72}=2.7308$ kg/s;
-$W_{12}=0.9389(400.96-374.00)=25.31$ kW; $W_{34}=2.7308(420.53-392.66)=76.10$ kW;
-total 101.41 kW; COP $=386.87/101.41=3.81$. EOS: 401.0, 420.6, W 101.6, COP 3.81.
+::: {.problem #sol-7-2}
 
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 10) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+A verbatim repeat of TRY 7.1 (here for 15 marks). Same states and balances:
+
+As Fig. 10: 1 suction of compressor 1 (sat. vapour at −40 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −10 °C), 4 its discharge; condenser liquid at 30 °C. Loads: $\dot Q_{-40}=50\times3.517=175.85$ kW; $\dot Q_{-10}=60\times3.517=211.02$ kW; total 386.87 kW.
+:::
+
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −40 °C (evaporator) | [51.2]{.lookup t="r134a-sat" row="-40" col="p_MPa" x="1000"} | [374.00]{.lookup t="r134a-sat" row="-40" col="h_vap_kJ_kg"} | [1.7643]{.lookup t="r134a-sat" row="-40" col="s_vap_kJ_kgK"} |  |
+| −10 °C (evaporator and tank) | [200.6]{.lookup t="r134a-sat" row="-10" col="p_MPa" x="1000"} | [392.66]{.lookup t="r134a-sat" row="-10" col="h_vap_kJ_kg"} | [1.7334]{.lookup t="r134a-sat" row="-10" col="s_vap_kJ_kgK"} | [186.70]{.lookup t="r134a-sat" row="-10" col="h_liq_kJ_kg"} |
+| 30 °C (condenser) | [770.2]{.lookup t="r134a-sat" row="30" col="p_MPa" x="1000"} | | | [241.72]{.lookup t="r134a-sat" row="30" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7643$ at the next pressure up, 200.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 200.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **400.92**; 0.4 MPa block, rows 20 °C ($h=$ [414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, $s=$ [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}) and 30 °C ([423.21]{.lookup t="r134a-sh" row="0.4;30" col="h_kJ_kg"}, [1.7892]{.lookup t="r134a-sh" row="0.4;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.79**. Linear in $p$ between 200 and 400 kPa: $h_{2}=400.92+\frac{0.6}{200.0}(415.79-400.92)=\mathbf{400.96}$ kJ/kg.
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7334$ at the next pressure up, 770.2 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 770.2 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.6 MPa block, rows sat. vapour ($h=$ [410.67]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7178]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="s_kJ_kgK"}) and 30 °C ([418.97]{.lookup t="r134a-sh" row="0.6;30" col="h_kJ_kg"}, [1.7455]{.lookup t="r134a-sh" row="0.6;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.34**; 0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **421.44**. Linear in $p$ between 600 and 800 kPa: $h_{4}=415.34+\frac{170.2}{200.0}(421.44-415.34)=\mathbf{420.53}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-40}}{h_1-h_f(-10)}=\frac{175.85}{374.00-186.70}=0.9389\ \text{kg/s}$$
+
+CV = −10 °C evaporator + −10 °C tank:
+$$\dot m_3=\frac{211.02+0.9389(400.96-186.70)}{392.66-241.72}=2.7308\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 6. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=0.9389(400.96-374.00)=25.31$ kW; $\dot W_{34}=2.7308(420.53-392.66)=76.10$ kW.
+
+$$\sum\dot W=101.41\ \text{kW},\qquad COP=\frac{386.87}{101.41}=3.81$$
+
+Check with CoolProp (EOS): discharges 401.0, 420.6 kJ/kg, $\sum\dot W=101.6$ kW, COP 3.81.
+:::
+
+:::
+
+::: answer
 **Answer: 25.31 kW + 76.10 kW = 101.41 kW; COP = 3.81.**
+:::
 
 > **TRY 7.3** `[PP 21-22 Q1(b), 20]` Calculate the power required by the two compressors in a R134a system which serves a 80 TR evaporator at −40 °C and 100 TR evaporator at −10 °C. The system uses two stage compressions with inter-cooling and removal of flash gas. The condensing temperature is 30 °C and the intercooler temperature is −10 °C. Draw the schematic diagram and P-h diagram of the system. Also calculate the COP of the system.
 
-**Solution 7.3** **[TUTOR-GENERATED]** As Solution 7.1 (same temperatures, so the same states table and the same sketches, Fig. 10 with 80 TR and 100 TR), with the loads $80\times3.517=281.36$ kW at −40 °C and $100\times3.517=351.70$ kW at −10 °C:
+**Solution 7.3** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
-|---|---|---|---|---|---|
-| 1 | low-temp. evaporator exit, sat. vapour at -40 °C | 51.2 | 374.00 | 1.7643 | Table 1, $T=-40$ °C |
-| 2 | low-stage discharge, $s_2=s_1$ | 200.6 | 400.96 | 1.7643 | superheated table |
-| 3 | high-stage suction, sat. vapour at -10 °C | 200.6 | 392.66 | 1.7334 | Table 1, $T=-10$ °C |
-| 4 | high-stage discharge, $s_4=s_3$ | 770.2 | 420.53 | 1.7334 | superheated table |
-| 5 = 6 | condenser exit, sat. liquid at 30 °C; throttled | 770.2 / 200.6 | 241.72 | | Table 1, $T=30$ °C |
-| 7 = 8 | tank liquid, sat. liquid at -10 °C; throttled | 200.6 / 51.2 | 186.70 | | Table 1, $T=-10$ °C |
-$m_1=\dfrac{281.36}{374.00-186.70}=1.5022$ kg/s;
-$m_3=\dfrac{351.70+1.5022(400.96-186.70)}{392.66-241.72}=4.4624$ kg/s;
-$W_{12}=1.5022(400.96-374.00)=40.50$ kW; $W_{34}=4.4624(420.53-392.66)=124.36$ kW;
-total 164.86 kW; COP $=633.06/164.86=3.84$. EOS: 401.0, 420.6, W 165.1, COP 3.83.
+::: {.problem #sol-7-3}
 
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 10) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Solution 7.1 (same temperatures, so the same states table and the same sketches, Fig. 10 with 80 TR and 100 TR), with the loads $80\times3.517=281.36$ kW at −40 °C and $100\times3.517=351.70$ kW at −10 °C:
+
+As Fig. 10: 1 suction of compressor 1 (sat. vapour at −40 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −10 °C), 4 its discharge; condenser liquid at 30 °C. Loads: $\dot Q_{-40}=80\times3.517=281.36$ kW; $\dot Q_{-10}=100\times3.517=351.70$ kW; total 633.06 kW.
+:::
+
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −40 °C (evaporator) | [51.2]{.lookup t="r134a-sat" row="-40" col="p_MPa" x="1000"} | [374.00]{.lookup t="r134a-sat" row="-40" col="h_vap_kJ_kg"} | [1.7643]{.lookup t="r134a-sat" row="-40" col="s_vap_kJ_kgK"} |  |
+| −10 °C (evaporator and tank) | [200.6]{.lookup t="r134a-sat" row="-10" col="p_MPa" x="1000"} | [392.66]{.lookup t="r134a-sat" row="-10" col="h_vap_kJ_kg"} | [1.7334]{.lookup t="r134a-sat" row="-10" col="s_vap_kJ_kgK"} | [186.70]{.lookup t="r134a-sat" row="-10" col="h_liq_kJ_kg"} |
+| 30 °C (condenser) | [770.2]{.lookup t="r134a-sat" row="30" col="p_MPa" x="1000"} | | | [241.72]{.lookup t="r134a-sat" row="30" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7643$ at the next pressure up, 200.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 200.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **400.92**; 0.4 MPa block, rows 20 °C ($h=$ [414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, $s=$ [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}) and 30 °C ([423.21]{.lookup t="r134a-sh" row="0.4;30" col="h_kJ_kg"}, [1.7892]{.lookup t="r134a-sh" row="0.4;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.79**. Linear in $p$ between 200 and 400 kPa: $h_{2}=400.92+\frac{0.6}{200.0}(415.79-400.92)=\mathbf{400.96}$ kJ/kg.
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7334$ at the next pressure up, 770.2 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 770.2 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.6 MPa block, rows sat. vapour ($h=$ [410.67]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7178]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="s_kJ_kgK"}) and 30 °C ([418.97]{.lookup t="r134a-sh" row="0.6;30" col="h_kJ_kg"}, [1.7455]{.lookup t="r134a-sh" row="0.6;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.34**; 0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **421.44**. Linear in $p$ between 600 and 800 kPa: $h_{4}=415.34+\frac{170.2}{200.0}(421.44-415.34)=\mathbf{420.53}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-40}}{h_1-h_f(-10)}=\frac{281.36}{374.00-186.70}=1.5022\ \text{kg/s}$$
+
+CV = −10 °C evaporator + −10 °C tank:
+$$\dot m_3=\frac{351.70+1.5022(400.96-186.70)}{392.66-241.72}=4.4624\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 6. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=1.5022(400.96-374.00)=40.50$ kW; $\dot W_{34}=4.4624(420.53-392.66)=124.36$ kW.
+
+$$\sum\dot W=164.86\ \text{kW},\qquad COP=\frac{633.06}{164.86}=3.84$$
+
+Check with CoolProp (EOS): discharges 401.0, 420.6 kJ/kg, $\sum\dot W=165.1$ kW, COP 3.83.
+:::
+
+:::
+
+::: answer
 **Answer: 40.50 kW + 124.36 kW = 164.86 kW; COP = 3.84.** (The COP differs from Solution 7.1 only because the ratio of the two loads is different: the −10 °C load is cheaper to serve.)
+:::
 
 > **TRY 7.4** `[PP 13-14 Q1(c), 20]` Calculate the power required by the two compressors in a R134a system which serves a 60 TR evaporator at −20 °C and 70 TR evaporator at 0 °C. The system uses two stage compression with inter-cooling and is arranged as in Fig. for Q. No. 1(c) (Fig. 10(a) with these temperatures). The condensing temperature is 34 °C. Also calculate the COP of the system.
 
-**Solution 7.4** **[TUTOR-GENERATED]** As Solution 7.1 with −20 °C / 0 °C / 34 °C. Loads $60\times3.517=211.02$ kW and $70\times3.517=246.19$ kW. $h_2$ comes from the coarse 0.2–0.4 MPa blocks (394.75 and 409.10 at $s=1.7413$; Example 7.2), so the chart/EOS value 402.5 is noted.
+**Solution 7.4** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
-|---|---|---|---|---|---|
-| 1 | low-temp. evaporator exit, sat. vapour at -20 °C | 132.7 | 386.55 | 1.7413 | Table 1, $T=-20$ °C |
-| 2 | low-stage discharge, $s_2=s_1$ | 292.8 | 401.41 | 1.7413 | superheated table |
-| 3 | high-stage suction, sat. vapour at 0 °C | 292.8 | 398.60 | 1.7271 | Table 1, $T=0$ °C |
-| 4 | high-stage discharge, $s_4=s_3$ | 862.6 | 420.97 | 1.7271 | superheated table |
-| 5 = 6 | condenser exit, sat. liquid at 34 °C; throttled | 862.6 / 292.8 | 247.54 | | Table 1, $T=34$ °C |
-| 7 = 8 | tank liquid, sat. liquid at 0 °C; throttled | 292.8 / 132.7 | 200.00 | | Table 1, $T=0$ °C |
-$m_1=\dfrac{211.02}{386.55-200.00}=1.1312$ kg/s;
-$m_3=\dfrac{246.19+1.1312(401.41-200.00)}{398.60-247.54}=3.1380$ kg/s;
-$W_{12}=1.1312(401.41-386.55)=16.81$ kW; $W_{34}=3.1380(420.97-398.60)=70.18$ kW;
-total 86.99 kW; COP $=457.21/86.99=5.26$. EOS: 402.5, 421.0, W 88.7, COP 5.16.
+::: {.problem #sol-7-4}
 
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 10) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Solution 7.1 with −20 °C / 0 °C / 34 °C. Loads $60\times3.517=211.02$ kW and $70\times3.517=246.19$ kW. $h_2$ comes from the coarse 0.2–0.4 MPa blocks (394.75 and 409.10 at $s=1.7413$; Example 7.2), so the chart/EOS value 402.5 is noted.
+
+As Fig. 10: 1 suction of compressor 1 (sat. vapour at −20 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at 0 °C), 4 its discharge; condenser liquid at 34 °C. Loads: $\dot Q_{-20}=60\times3.517=211.02$ kW; $\dot Q_{0}=70\times3.517=246.19$ kW; total 457.21 kW.
+:::
+
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −20 °C (evaporator) | [132.7]{.lookup t="r134a-sat" row="-20" col="p_MPa" x="1000"} | [386.55]{.lookup t="r134a-sat" row="-20" col="h_vap_kJ_kg"} | [1.7413]{.lookup t="r134a-sat" row="-20" col="s_vap_kJ_kgK"} |  |
+| 0 °C (evaporator and tank) | [292.8]{.lookup t="r134a-sat" row="0" col="p_MPa" x="1000"} | [398.60]{.lookup t="r134a-sat" row="0" col="h_vap_kJ_kg"} | [1.7271]{.lookup t="r134a-sat" row="0" col="s_vap_kJ_kgK"} | [200.00]{.lookup t="r134a-sat" row="0" col="h_liq_kJ_kg"} |
+| 34 °C (condenser) | [862.6]{.lookup t="r134a-sat" row="34" col="p_MPa" x="1000"} | | | [247.54]{.lookup t="r134a-sat" row="34" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7413$ at the next pressure up, 292.8 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 292.8 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **394.75**; 0.4 MPa block, rows 10 °C ($h=$ [404.78]{.lookup t="r134a-sh" row="0.4;10" col="h_kJ_kg"}, $s=$ [1.7263]{.lookup t="r134a-sh" row="0.4;10" col="s_kJ_kgK"}) and 20 °C ([414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}), interpolated in $s$ → **409.10**. Linear in $p$ between 200 and 400 kPa: $h_{2}=394.75+\frac{92.8}{200.0}(409.10-394.75)=\mathbf{401.41}$ kJ/kg. (Chart/EOS value: 402.5.)
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7271$ at the next pressure up, 862.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 862.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **419.49**; 1 MPa block, rows 40 °C ($h=$ [419.99]{.lookup t="r134a-sh" row="1;40" col="h_kJ_kg"}, $s=$ [1.7139]{.lookup t="r134a-sh" row="1;40" col="s_kJ_kgK"}) and 50 °C ([430.91]{.lookup t="r134a-sh" row="1;50" col="h_kJ_kg"}, [1.7482]{.lookup t="r134a-sh" row="1;50" col="s_kJ_kgK"}), interpolated in $s$ → **424.19**. Linear in $p$ between 800 and 1000 kPa: $h_{4}=419.49+\frac{62.6}{200.0}(424.19-419.49)=\mathbf{420.97}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-20}}{h_1-h_f(0)}=\frac{211.02}{386.55-200.00}=1.1312\ \text{kg/s}$$
+
+CV = 0 °C evaporator + 0 °C tank:
+$$\dot m_3=\frac{246.19+1.1312(401.41-200.00)}{398.60-247.54}=3.1380\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 6. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=1.1312(401.41-386.55)=16.81$ kW; $\dot W_{34}=3.1380(420.97-398.60)=70.18$ kW.
+
+$$\sum\dot W=86.99\ \text{kW},\qquad COP=\frac{457.21}{86.99}=5.26$$
+
+Check with CoolProp (EOS): discharges 402.5, 421.0 kJ/kg, $\sum\dot W=88.7$ kW, COP 5.16.
+:::
+
+:::
+
+::: answer
 **Answer: 16.81 kW + 70.18 kW = 86.99 kW; COP = 5.26** (with the chart value $h_2=402.5$: total 88.7 kW, COP 5.16).
+:::
 
 > **TRY 7.5** `[PP 16-17 Q1(b), 20]` Calculate the power required by the two compressors in an R134a system which serves a 50 kW evaporator at −30 °C and 60 kW evaporator at −6 °C. The system uses two stage compression with inter-cooling and removal of flash gas. The condensing temperature is 32 °C and the intercooler temperature is −6 °C. Draw the schematic diagram and P-h diagram of the system. Also calculate the COP of the system.
 
-**Solution 7.5** **[TUTOR-GENERATED]** As Solution 7.1. Draw Fig. 10 with −30 °C (50 kW), −6 °C (60 kW, and the tank) and 32 °C. Loads are already in kW.
+**Solution 7.5** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
-|---|---|---|---|---|---|
-| 1 | low-temp. evaporator exit, sat. vapour at -30 °C | 84.4 | 380.32 | 1.7515 | Table 1, $T=-30$ °C |
-| 2 | low-stage discharge, $s_2=s_1$ | 234.3 | 399.98 | 1.7515 | superheated table |
-| 3 | high-stage suction, sat. vapour at -6 °C | 234.3 | 395.06 | 1.7307 | Table 1, $T=-6$ °C |
-| 4 | high-stage discharge, $s_4=s_3$ | 815.4 | 420.97 | 1.7307 | superheated table |
-| 5 = 6 | condenser exit, sat. liquid at 32 °C; throttled | 815.4 / 234.3 | 244.62 | | Table 1, $T=32$ °C |
-| 7 = 8 | tank liquid, sat. liquid at -6 °C; throttled | 234.3 / 84.4 | 191.99 | | Table 1, $T=-6$ °C |
-$m_1=\dfrac{50.00}{380.32-191.99}=0.2655$ kg/s;
-$m_3=\dfrac{60.00+0.2655(399.98-191.99)}{395.06-244.62}=0.7659$ kg/s;
-$W_{12}=0.2655(399.98-380.32)=5.22$ kW; $W_{34}=0.7659(420.97-395.06)=19.84$ kW;
-total 25.06 kW; COP $=110.00/25.06=4.39$. EOS: 400.7, 421.0, W 25.3, COP 4.35.
+::: {.problem #sol-7-5}
 
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 10) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Solution 7.1. Draw Fig. 10 with −30 °C (50 kW), −6 °C (60 kW, and the tank) and 32 °C. Loads are already in kW.
+
+As Fig. 10: 1 suction of compressor 1 (sat. vapour at −30 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −6 °C), 4 its discharge; condenser liquid at 32 °C. Loads: $\dot Q_{-30}=50.00$ kW; $\dot Q_{-6}=60.00$ kW; total 110.00 kW.
+:::
+
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −30 °C (evaporator) | [84.4]{.lookup t="r134a-sat" row="-30" col="p_MPa" x="1000"} | [380.32]{.lookup t="r134a-sat" row="-30" col="h_vap_kJ_kg"} | [1.7515]{.lookup t="r134a-sat" row="-30" col="s_vap_kJ_kgK"} |  |
+| −6 °C (evaporator and tank) | [234.3]{.lookup t="r134a-sat" row="-6" col="p_MPa" x="1000"} | [395.06]{.lookup t="r134a-sat" row="-6" col="h_vap_kJ_kg"} | [1.7307]{.lookup t="r134a-sat" row="-6" col="s_vap_kJ_kgK"} | [191.99]{.lookup t="r134a-sat" row="-6" col="h_liq_kJ_kg"} |
+| 32 °C (condenser) | [815.4]{.lookup t="r134a-sat" row="32" col="p_MPa" x="1000"} | | | [244.62]{.lookup t="r134a-sat" row="32" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7515$ at the next pressure up, 234.3 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 234.3 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **397.49**; 0.4 MPa block, rows 10 °C ($h=$ [404.78]{.lookup t="r134a-sh" row="0.4;10" col="h_kJ_kg"}, $s=$ [1.7263]{.lookup t="r134a-sh" row="0.4;10" col="s_kJ_kgK"}) and 20 °C ([414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}), interpolated in $s$ → **412.04**. Linear in $p$ between 200 and 400 kPa: $h_{2}=397.49+\frac{34.3}{200.0}(412.04-397.49)=\mathbf{399.98}$ kJ/kg. (Chart/EOS value: 400.7.)
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7307$ at the next pressure up, 815.4 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 815.4 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **420.60**; 1 MPa block, rows 40 °C ($h=$ [419.99]{.lookup t="r134a-sh" row="1;40" col="h_kJ_kg"}, $s=$ [1.7139]{.lookup t="r134a-sh" row="1;40" col="s_kJ_kgK"}) and 50 °C ([430.91]{.lookup t="r134a-sh" row="1;50" col="h_kJ_kg"}, [1.7482]{.lookup t="r134a-sh" row="1;50" col="s_kJ_kgK"}), interpolated in $s$ → **425.34**. Linear in $p$ between 800 and 1000 kPa: $h_{4}=420.60+\frac{15.4}{200.0}(425.34-420.60)=\mathbf{420.97}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-30}}{h_1-h_f(-6)}=\frac{50.00}{380.32-191.99}=0.2655\ \text{kg/s}$$
+
+CV = −6 °C evaporator + −6 °C tank:
+$$\dot m_3=\frac{60.00+0.2655(399.98-191.99)}{395.06-244.62}=0.7659\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 6. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=0.2655(399.98-380.32)=5.22$ kW; $\dot W_{34}=0.7659(420.97-395.06)=19.84$ kW.
+
+$$\sum\dot W=25.06\ \text{kW},\qquad COP=\frac{110.00}{25.06}=4.39$$
+
+Check with CoolProp (EOS): discharges 400.7, 421.0 kJ/kg, $\sum\dot W=25.3$ kW, COP 4.35.
+:::
+
+:::
+
+::: answer
 **Answer: 5.22 kW + 19.84 kW = 25.06 kW; COP = 4.39** (chart/EOS: $h_2=400.7$, total 25.3 kW, COP 4.35).
+:::
 
 > **TRY 7.6** `[PP 17-18 Q1(b), 20]` A fish freezing plant uses two stage compression refrigeration systems with inter-cooling and removal of flash gas. Calculate the power required by the two compressors if the refrigerant is R-134a which serves a 60 kW evaporator at −40 °C and 70 kW evaporator at −20 °C. The condensing temperature is 34 °C and the intercooler temperature is −20 °C. Draw the schematic diagram and P-h diagram of the system. Also calculate the COP of the system.
 
-**Solution 7.6** **[TUTOR-GENERATED]** As Solution 7.1 with −40 °C / −20 °C / 34 °C (Fig. 10 with these values). $h_2$ at 132.7 kPa lies between the 0.101325 and 0.2 MPa blocks (387.08 and 400.92 at $s=1.7643$).
+**Solution 7.6** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) | From |
-|---|---|---|---|---|---|
-| 1 | low-temp. evaporator exit, sat. vapour at -40 °C | 51.2 | 374.00 | 1.7643 | Table 1, $T=-40$ °C |
-| 2 | low-stage discharge, $s_2=s_1$ | 132.7 | 391.48 | 1.7643 | superheated table |
-| 3 | high-stage suction, sat. vapour at -20 °C | 132.7 | 386.55 | 1.7413 | Table 1, $T=-20$ °C |
-| 4 | high-stage discharge, $s_4=s_3$ | 862.6 | 425.39 | 1.7413 | superheated table |
-| 5 = 6 | condenser exit, sat. liquid at 34 °C; throttled | 862.6 / 132.7 | 247.54 | | Table 1, $T=34$ °C |
-| 7 = 8 | tank liquid, sat. liquid at -20 °C; throttled | 132.7 / 51.2 | 173.64 | | Table 1, $T=-20$ °C |
-$m_1=\dfrac{60.00}{374.00-173.64}=0.2995$ kg/s;
-$m_3=\dfrac{70.00+0.2995(391.48-173.64)}{386.55-247.54}=0.9728$ kg/s;
-$W_{12}=0.2995(391.48-374.00)=5.24$ kW; $W_{34}=0.9728(425.39-386.55)=37.78$ kW;
-total 43.02 kW; COP $=130.00/43.02=3.02$. EOS: 392.5, 425.5, W 43.5, COP 2.99.
+::: {.problem #sol-7-6}
 
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 10) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Solution 7.1 with −40 °C / −20 °C / 34 °C (Fig. 10 with these values). $h_2$ at 132.7 kPa lies between the 0.101325 and 0.2 MPa blocks (387.08 and 400.92 at $s=1.7643$).
+
+As Fig. 10: 1 suction of compressor 1 (sat. vapour at −40 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −20 °C), 4 its discharge; condenser liquid at 34 °C. Loads: $\dot Q_{-40}=60.00$ kW; $\dot Q_{-20}=70.00$ kW; total 130.00 kW.
+:::
+
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −40 °C (evaporator) | [51.2]{.lookup t="r134a-sat" row="-40" col="p_MPa" x="1000"} | [374.00]{.lookup t="r134a-sat" row="-40" col="h_vap_kJ_kg"} | [1.7643]{.lookup t="r134a-sat" row="-40" col="s_vap_kJ_kgK"} |  |
+| −20 °C (evaporator and tank) | [132.7]{.lookup t="r134a-sat" row="-20" col="p_MPa" x="1000"} | [386.55]{.lookup t="r134a-sat" row="-20" col="h_vap_kJ_kg"} | [1.7413]{.lookup t="r134a-sat" row="-20" col="s_vap_kJ_kgK"} | [173.64]{.lookup t="r134a-sat" row="-20" col="h_liq_kJ_kg"} |
+| 34 °C (condenser) | [862.6]{.lookup t="r134a-sat" row="34" col="p_MPa" x="1000"} | | | [247.54]{.lookup t="r134a-sat" row="34" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7643$ at the next pressure up, 132.7 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 132.7 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.101325 MPa block, rows sat. vapour ($h=$ [382.90]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7476]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="s_kJ_kgK"}) and −20 °C ([387.68]{.lookup t="r134a-sh" row="0.101325;-20" col="h_kJ_kg"}, [1.7667]{.lookup t="r134a-sh" row="0.101325;-20" col="s_kJ_kgK"}), interpolated in $s$ → **387.08**; 0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **400.92**. Linear in $p$ between 101.325 and 200 kPa: $h_{2}=387.08+\frac{31.4}{98.7}(400.92-387.08)=\mathbf{391.48}$ kJ/kg. (Chart/EOS value: 392.5.)
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7413$ at the next pressure up, 862.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 862.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **423.87**; 1 MPa block, rows 40 °C ($h=$ [419.99]{.lookup t="r134a-sh" row="1;40" col="h_kJ_kg"}, $s=$ [1.7139]{.lookup t="r134a-sh" row="1;40" col="s_kJ_kgK"}) and 50 °C ([430.91]{.lookup t="r134a-sh" row="1;50" col="h_kJ_kg"}, [1.7482]{.lookup t="r134a-sh" row="1;50" col="s_kJ_kgK"}), interpolated in $s$ → **428.71**. Linear in $p$ between 800 and 1000 kPa: $h_{4}=423.87+\frac{62.6}{200.0}(428.71-423.87)=\mathbf{425.39}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-40}}{h_1-h_f(-20)}=\frac{60.00}{374.00-173.64}=0.2995\ \text{kg/s}$$
+
+CV = −20 °C evaporator + −20 °C tank:
+$$\dot m_3=\frac{70.00+0.2995(391.48-173.64)}{386.55-247.54}=0.9728\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 6. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=0.2995(391.48-374.00)=5.24$ kW; $\dot W_{34}=0.9728(425.39-386.55)=37.78$ kW.
+
+$$\sum\dot W=43.02\ \text{kW},\qquad COP=\frac{130.00}{43.02}=3.02$$
+
+Check with CoolProp (EOS): discharges 392.5, 425.5 kJ/kg, $\sum\dot W=43.5$ kW, COP 2.99.
+:::
+
+:::
+
+::: answer
 **Answer: 5.24 kW + 37.78 kW = 43.02 kW; COP = 3.02** (chart/EOS: $h_2=392.5$, total 43.5 kW, COP 2.99). The COP is low because the high stage lifts from −20 °C to 34 °C.
+:::
 
 ### VC2-B: three-stage systems
 
 > **TRY 7.7** `[PP 20-21 Q1(b), 20]` A fish freezing plant uses three stage compression refrigeration system with inter-cooling and removal of flash gas. Calculate the power required by the three compressors in a R134a system which serves a 60 TR evaporator at −30 °C, 50 TR evaporator at −20 °C and 40 TR evaporator at −10 °C. The condensing temperature is 30 °C and the intercooler temperature is −20 °C and −10 °C. Draw the schematic diagram and P-h diagram of the system. Also calculate the COP of the system.
 
-**Solution 7.7** **[FROM SOURCE: Kanak pp.93–96, completed]** The Note sets up this problem (loads 211, 175.8 and 140.64 kW with 3.516 kW/TR, $\dot m_{11}=1.02$ kg/s, the two loop balances) and stops. Completed here with the five steps.
+**Solution 7.7** **[FROM SOURCE: Kanak pp.93–96, completed]** Kanak vai's note sets up this problem (loads 211, 175.8 and 140.64 kW with 3.516 kW/TR, $\dot m_{11}=1.02$ kg/s, the two loop balances) and stops. Completed here with the five steps. Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-*Step 1.* Schematic and p-h diagram: Fig. 11. Loads: $\dot Q_{-30}=60\times3.517=211.02$ kW, $\dot Q_{-20}=50\times3.517=175.85$ kW, $\dot Q_{-10}=40\times3.517=140.68$ kW; total 527.55 kW.
+::: {.problem #sol-7-7}
 
-*Steps 2 and 4. States table* (Table 1 rows −30, −20, −10 and 30 °C; superheated table for 2, 4, 6):
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 11) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Fig. 11: 1 suction of compressor 1 (sat. vapour at −30 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −20 °C), 4 its discharge, 5 suction of compressor 3 (sat. vapour at −10 °C), 6 its discharge; condenser liquid at 30 °C. Loads: $\dot Q_{-30}=60\times3.517=211.02$ kW; $\dot Q_{-20}=50\times3.517=175.85$ kW; $\dot Q_{-10}=40\times3.517=140.68$ kW; total 527.55 kW.
+:::
 
-| State | Where | $p$ (kPa) | $h$ (kJ/kg) | $s$ (kJ/kg·K) |
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
 |---|---|---|---|---|
-| 1 | −30 °C evaporator exit, sat. vapour | 84.4 | 380.32 | 1.7515 |
-| 2 | compressor 1-2 discharge, $s_2=s_1$ | 132.7 | 388.21 | 1.7515 |
-| 3 | compressor 3-4 suction, sat. vapour at −20 °C | 132.7 | 386.55 | 1.7413 |
-| 4 | compressor 3-4 discharge, $s_4=s_3$ | 200.6 | 394.80 | 1.7413 |
-| 5 | compressor 5-6 suction, sat. vapour at −10 °C | 200.6 | 392.66 | 1.7334 |
-| 6 | compressor 5-6 discharge, $s_6=s_5$ | 770.2 | 420.53 | 1.7334 |
-| 7 = 8 | condenser liquid at 30 °C; throttled to −10 °C | 770.2 / 200.6 | 241.72 | |
-| 9 = 10 | −10 °C tank liquid; throttled to −20 °C | 200.6 / 132.7 | 186.70 | |
-| 11 = 12 | −20 °C tank liquid; throttled to −30 °C | 132.7 / 84.4 | 173.64 | |
+| −30 °C (evaporator) | [84.4]{.lookup t="r134a-sat" row="-30" col="p_MPa" x="1000"} | [380.32]{.lookup t="r134a-sat" row="-30" col="h_vap_kJ_kg"} | [1.7515]{.lookup t="r134a-sat" row="-30" col="s_vap_kJ_kgK"} |  |
+| −20 °C (evaporator and tank) | [132.7]{.lookup t="r134a-sat" row="-20" col="p_MPa" x="1000"} | [386.55]{.lookup t="r134a-sat" row="-20" col="h_vap_kJ_kg"} | [1.7413]{.lookup t="r134a-sat" row="-20" col="s_vap_kJ_kgK"} | [173.64]{.lookup t="r134a-sat" row="-20" col="h_liq_kJ_kg"} |
+| −10 °C (evaporator and tank) | [200.6]{.lookup t="r134a-sat" row="-10" col="p_MPa" x="1000"} | [392.66]{.lookup t="r134a-sat" row="-10" col="h_vap_kJ_kg"} | [1.7334]{.lookup t="r134a-sat" row="-10" col="s_vap_kJ_kgK"} | [186.70]{.lookup t="r134a-sat" row="-10" col="h_liq_kJ_kg"} |
+| 30 °C (condenser) | [770.2]{.lookup t="r134a-sat" row="30" col="p_MPa" x="1000"} | | | [241.72]{.lookup t="r134a-sat" row="30" col="h_liq_kJ_kg"} |
+:::
 
-Isentropic outlets: $h_2$ ($s=1.7515$): 0.101325 MPa block → 383.88, 0.2 MPa block → 397.49, linear in $p$ to 132.7 kPa → 388.21 kJ/kg (chart/EOS 389.1). $h_4$ ($s=1.7413$): 0.2 MPa block → 394.75, 0.4 MPa block → 409.10, to 200.6 kPa → 394.80. $h_6$ ($s=1.7334$) at 770.2 kPa → 420.53 (as in Solution 7.1).
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7515$ at the next pressure up, 132.7 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 132.7 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.101325 MPa block, rows sat. vapour ($h=$ [382.90]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7476]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="s_kJ_kgK"}) and −20 °C ([387.68]{.lookup t="r134a-sh" row="0.101325;-20" col="h_kJ_kg"}, [1.7667]{.lookup t="r134a-sh" row="0.101325;-20" col="s_kJ_kgK"}), interpolated in $s$ → **383.88**; 0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **397.49**. Linear in $p$ between 101.325 and 200 kPa: $h_{2}=383.88+\frac{31.4}{98.7}(397.49-383.88)=\mathbf{388.21}$ kJ/kg. (Chart/EOS value: 389.1.)
+:::
 
-*Step 3. Balances*, from the coldest level up (mass: $\dot m_1=\dot m_2=\dot m_{11}=\dot m_{12}$; $\dot m_3=\dot m_4=\dot m_9$; $\dot m_5=\dot m_6=\dot m_7$):
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7413$ at the next pressure up, 200.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 200.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **394.75**; 0.4 MPa block, rows 10 °C ($h=$ [404.78]{.lookup t="r134a-sh" row="0.4;10" col="h_kJ_kg"}, $s=$ [1.7263]{.lookup t="r134a-sh" row="0.4;10" col="s_kJ_kgK"}) and 20 °C ([414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}), interpolated in $s$ → **409.10**. Linear in $p$ between 200 and 400 kPa: $h_{4}=394.75+\frac{0.6}{200.0}(409.10-394.75)=\mathbf{394.80}$ kJ/kg.
+:::
 
-$$\dot m_1=\frac{211.02}{380.32-173.64}=1.0210\ \text{kg/s}$$
+::: {.step title="Step 5. Discharge of compressor 3: h₆"}
+::: hint
+Isentropic: $s_6=s_5=1.7334$ at the next pressure up, 770.2 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 770.2 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.6 MPa block, rows sat. vapour ($h=$ [410.67]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7178]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="s_kJ_kgK"}) and 30 °C ([418.97]{.lookup t="r134a-sh" row="0.6;30" col="h_kJ_kg"}, [1.7455]{.lookup t="r134a-sh" row="0.6;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.34**; 0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **421.44**. Linear in $p$ between 600 and 800 kPa: $h_{6}=415.34+\frac{170.2}{200.0}(421.44-415.34)=\mathbf{420.53}$ kJ/kg.
+:::
 
-CV = −20 °C evaporator + −20 °C tank: $\dot m_3h_9+175.85+\dot m_1h_2=\dot m_3h_3+\dot m_1h_{11}$:
+::: {.step title="Step 6. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-30}}{h_1-h_f(-20)}=\frac{211.02}{380.32-173.64}=1.0210\ \text{kg/s}$$
+
+CV = −20 °C evaporator + −20 °C tank:
 $$\dot m_3=\frac{175.85+1.0210(388.21-173.64)}{386.55-186.70}=1.9761\ \text{kg/s}$$
 
-CV = −10 °C evaporator + −10 °C tank: $\dot m_5h_7+140.68+\dot m_3h_4=\dot m_5h_5+\dot m_3h_9$:
+CV = −10 °C evaporator + −10 °C tank:
 $$\dot m_5=\frac{140.68+1.9761(394.80-186.70)}{392.66-241.72}=3.6564\ \text{kg/s}$$
+:::
 
-*Step 5. Powers and COP.*
-
-- $\dot W_{12}=1.0210(388.21-380.32)=8.05$ kW
-- $\dot W_{34}=1.9761(394.80-386.55)=16.29$ kW
-- $\dot W_{56}=3.6564(420.53-392.66)=101.90$ kW
+::: {.step title="Step 7. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=1.0210(388.21-380.32)=8.05$ kW; $\dot W_{34}=1.9761(394.80-386.55)=16.29$ kW; $\dot W_{56}=3.6564(420.53-392.66)=101.90$ kW.
 
 $$\sum\dot W=126.24\ \text{kW},\qquad COP=\frac{527.55}{126.24}=4.18$$
 
+Check with CoolProp (EOS): discharges 389.1, 394.8, 420.6 kJ/kg, $\sum\dot W=127.5$ kW, COP 4.14.
+:::
+
+:::
+
+::: answer
 **Answer: 8.05 kW, 16.29 kW and 101.90 kW, total 126.24 kW; COP = 4.18** (EOS throughout: 127.5 kW, COP 4.14). The top compressor does 81% of the work: it carries all the vapour of the three evaporators and the flash gas across the largest pressure ratio.
+:::
 
 > **TRY 7.8** `[PP 22-23 Q1(b), 20]` A fish freezing plant uses multi stage compression refrigeration system with inter-cooling and removal of flash gas. Calculate the power required by the three compressors in a R134a system which serves a 60 TR evaporator at −30 °C, 50 TR evaporator at −20 °C and 40 TR evaporator at −10 °C. The system uses three stage compressions with inter-cooling and removal of flash gas. The condensing temperature is 30 °C and the intercooler temperature is −20 °C and −10 °C. Draw the schematic diagram and P-h diagram of the system. Also, calculate the COP of the system.
 
-**Solution 7.8** **[TUTOR-GENERATED]** A verbatim repeat of TRY 7.7: draw Fig. 11 and reproduce Solution 7.7. Levels −30 °C (84.4 kPa, $h_g=380.32$, $s_g=1.7515$), −20 °C (132.7 kPa, 386.55, 1.7413, $h_f=173.64$), −10 °C (200.6 kPa, 392.66, 1.7334, $h_f=186.70$), condenser 30 °C (770.2 kPa, $h_f=241.72$); discharges 388.21 (chart/EOS 389.1), 394.80, 420.53 kJ/kg. Loads 211.02, 175.85 and 140.68 kW (527.55 kW). Flows 1.0210, 1.9761 and 3.6564 kg/s. **Answer: 8.05 + 16.29 + 101.90 = 126.24 kW; COP = 4.18** (EOS: 127.5 kW, 4.14).
+**Solution 7.8** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
+
+::: {.problem #sol-7-8}
+
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 11) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+A verbatim repeat of TRY 7.7: draw Fig. 11 and reproduce Solution 7.7. Levels −30 °C (84.4 kPa, $h_g=380.32$, $s_g=1.7515$), −20 °C (132.7 kPa, 386.55, 1.7413, $h_f=173.64$), −10 °C (200.6 kPa, 392.66, 1.7334, $h_f=186.70$), condenser 30 °C (770.2 kPa, $h_f=241.72$); discharges 388.21 (chart/EOS 389.1), 394.80, 420.53 kJ/kg. Loads 211.02, 175.85 and 140.68 kW (527.55 kW). Flows 1.0210, 1.9761 and 3.6564 kg/s.
+
+As Fig. 11: 1 suction of compressor 1 (sat. vapour at −30 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −20 °C), 4 its discharge, 5 suction of compressor 3 (sat. vapour at −10 °C), 6 its discharge; condenser liquid at 30 °C. Loads: $\dot Q_{-30}=60\times3.517=211.02$ kW; $\dot Q_{-20}=50\times3.517=175.85$ kW; $\dot Q_{-10}=40\times3.517=140.68$ kW; total 527.55 kW.
+:::
+
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −30 °C (evaporator) | [84.4]{.lookup t="r134a-sat" row="-30" col="p_MPa" x="1000"} | [380.32]{.lookup t="r134a-sat" row="-30" col="h_vap_kJ_kg"} | [1.7515]{.lookup t="r134a-sat" row="-30" col="s_vap_kJ_kgK"} |  |
+| −20 °C (evaporator and tank) | [132.7]{.lookup t="r134a-sat" row="-20" col="p_MPa" x="1000"} | [386.55]{.lookup t="r134a-sat" row="-20" col="h_vap_kJ_kg"} | [1.7413]{.lookup t="r134a-sat" row="-20" col="s_vap_kJ_kgK"} | [173.64]{.lookup t="r134a-sat" row="-20" col="h_liq_kJ_kg"} |
+| −10 °C (evaporator and tank) | [200.6]{.lookup t="r134a-sat" row="-10" col="p_MPa" x="1000"} | [392.66]{.lookup t="r134a-sat" row="-10" col="h_vap_kJ_kg"} | [1.7334]{.lookup t="r134a-sat" row="-10" col="s_vap_kJ_kgK"} | [186.70]{.lookup t="r134a-sat" row="-10" col="h_liq_kJ_kg"} |
+| 30 °C (condenser) | [770.2]{.lookup t="r134a-sat" row="30" col="p_MPa" x="1000"} | | | [241.72]{.lookup t="r134a-sat" row="30" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7515$ at the next pressure up, 132.7 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 132.7 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.101325 MPa block, rows sat. vapour ($h=$ [382.90]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7476]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="s_kJ_kgK"}) and −20 °C ([387.68]{.lookup t="r134a-sh" row="0.101325;-20" col="h_kJ_kg"}, [1.7667]{.lookup t="r134a-sh" row="0.101325;-20" col="s_kJ_kgK"}), interpolated in $s$ → **383.88**; 0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **397.49**. Linear in $p$ between 101.325 and 200 kPa: $h_{2}=383.88+\frac{31.4}{98.7}(397.49-383.88)=\mathbf{388.21}$ kJ/kg. (Chart/EOS value: 389.1.)
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7413$ at the next pressure up, 200.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 200.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **394.75**; 0.4 MPa block, rows 10 °C ($h=$ [404.78]{.lookup t="r134a-sh" row="0.4;10" col="h_kJ_kg"}, $s=$ [1.7263]{.lookup t="r134a-sh" row="0.4;10" col="s_kJ_kgK"}) and 20 °C ([414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}), interpolated in $s$ → **409.10**. Linear in $p$ between 200 and 400 kPa: $h_{4}=394.75+\frac{0.6}{200.0}(409.10-394.75)=\mathbf{394.80}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Discharge of compressor 3: h₆"}
+::: hint
+Isentropic: $s_6=s_5=1.7334$ at the next pressure up, 770.2 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 770.2 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.6 MPa block, rows sat. vapour ($h=$ [410.67]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7178]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="s_kJ_kgK"}) and 30 °C ([418.97]{.lookup t="r134a-sh" row="0.6;30" col="h_kJ_kg"}, [1.7455]{.lookup t="r134a-sh" row="0.6;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.34**; 0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **421.44**. Linear in $p$ between 600 and 800 kPa: $h_{6}=415.34+\frac{170.2}{200.0}(421.44-415.34)=\mathbf{420.53}$ kJ/kg.
+:::
+
+::: {.step title="Step 6. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-30}}{h_1-h_f(-20)}=\frac{211.02}{380.32-173.64}=1.0210\ \text{kg/s}$$
+
+CV = −20 °C evaporator + −20 °C tank:
+$$\dot m_3=\frac{175.85+1.0210(388.21-173.64)}{386.55-186.70}=1.9761\ \text{kg/s}$$
+
+CV = −10 °C evaporator + −10 °C tank:
+$$\dot m_5=\frac{140.68+1.9761(394.80-186.70)}{392.66-241.72}=3.6564\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 7. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=1.0210(388.21-380.32)=8.05$ kW; $\dot W_{34}=1.9761(394.80-386.55)=16.29$ kW; $\dot W_{56}=3.6564(420.53-392.66)=101.90$ kW.
+
+$$\sum\dot W=126.24\ \text{kW},\qquad COP=\frac{527.55}{126.24}=4.18$$
+
+Check with CoolProp (EOS): discharges 389.1, 394.8, 420.6 kJ/kg, $\sum\dot W=127.5$ kW, COP 4.14.
+:::
+
+:::
+
+::: answer
+**Answer: 8.05 + 16.29 + 101.90 = 126.24 kW; COP = 4.18** (EOS: 127.5 kW, 4.14).
+:::
 
 > **TRY 7.9** `[PP 18-19 Q1(b), 20]` A fish freezing plant uses multi stage compression refrigeration system with inter-cooling and removal of flash gas. Calculate the power required by the three compressors in a R134a system which serves a 60 TR evaporator at −40 °C, 50 TR evaporator at −20 °C and 40 TR evaporator at −10 °C. The system uses three stage compressions with inter-cooling and removal of flash gas. The condensing temperature is 30 °C and the intercooler temperature is −20 °C and −10 °C. Draw the schematic diagram and P-h diagram of the system. Also calculate the COP of the system.
 
-**Solution 7.9** **[TUTOR-GENERATED]** As Solution 7.7 with the lowest evaporator at −40 °C instead of −30 °C (Fig. 11 with −40 °C). Only states 1, 2 and 12 change:
+**Solution 7.9** **[TUTOR-GENERATED]** Work it in the five steps of [§7.8](#five-step); open a hint if stuck.
 
-- State 1: Table 1, −40 °C: $p=51.2$ kPa, $h_1=374.00$, $s_1=1.7643$.
-- State 2 at 132.7 kPa, $s=1.7643$: 0.101325 MPa block → 387.08, 0.2 MPa block → 400.92, so $h_2=391.48$ kJ/kg (chart/EOS 392.5).
-- Levels −20 °C (132.7 kPa, $h_g=386.55$, $s_g=1.7413$, $h_f=173.64$) and −10 °C (200.6 kPa, 392.66, 1.7334, $h_f=186.70$); condenser 770.2 kPa, $h_f=241.72$; $h_4=394.80$, $h_6=420.53$ as before. Loads 211.02, 175.85, 140.68 kW (527.55 kW).
+::: {.problem #sol-7-9}
 
-Balances:
-$\dot m_1=\dfrac{211.02}{374.00-173.64}=1.0532$ kg/s;
-$\dot m_3=\dfrac{175.85+1.0532(391.48-173.64)}{386.55-186.70}=2.0279$ kg/s;
-$\dot m_5=\dfrac{140.68+2.0279(394.80-186.70)}{392.66-241.72}=3.7279$ kg/s.
+::: {.step title="Step 1. States and loads"}
+::: hint
+Draw the schematic and the p-h sketch (Fig. 11) and number the states around the flow: every compressor suction is saturated vapour, every liquid leaving the condenser or a tank is saturated liquid, every valve keeps $h$. Loads in kW (1 TR = 3.517 kW). See the [five-step method](#five-step).
+:::
+As Solution 7.7 with the lowest evaporator at −40 °C instead of −30 °C (Fig. 11 with −40 °C). Only states 1, 2 and 12 change:
 
-Powers: $\dot W_{12}=1.0532(391.48-374.00)=18.41$ kW; $\dot W_{34}=2.0279(394.80-386.55)=16.72$ kW; $\dot W_{56}=3.7279(420.53-392.66)=103.89$ kW.
+As Fig. 11: 1 suction of compressor 1 (sat. vapour at −40 °C), 2 its discharge, 3 suction of compressor 2 (sat. vapour at −20 °C), 4 its discharge, 5 suction of compressor 3 (sat. vapour at −10 °C), 6 its discharge; condenser liquid at 30 °C. Loads: $\dot Q_{-40}=60\times3.517=211.02$ kW; $\dot Q_{-20}=50\times3.517=175.85$ kW; $\dot Q_{-10}=40\times3.517=140.68$ kW; total 527.55 kW.
+:::
 
+::: {.step title="Step 2. Saturation properties"}
+::: hint
+R134a saturated table (Table 1), one row per temperature level: $p$, $h_g$, $s_g$, and $h_f$ for the tank and condenser liquids. Click a value to see the row.
+:::
+| Level | $p$ (kPa) | $h_g$ (kJ/kg) | $s_g$ (kJ/kg·K) | $h_f$ (kJ/kg) |
+|---|---|---|---|---|
+| −40 °C (evaporator) | [51.2]{.lookup t="r134a-sat" row="-40" col="p_MPa" x="1000"} | [374.00]{.lookup t="r134a-sat" row="-40" col="h_vap_kJ_kg"} | [1.7643]{.lookup t="r134a-sat" row="-40" col="s_vap_kJ_kgK"} |  |
+| −20 °C (evaporator and tank) | [132.7]{.lookup t="r134a-sat" row="-20" col="p_MPa" x="1000"} | [386.55]{.lookup t="r134a-sat" row="-20" col="h_vap_kJ_kg"} | [1.7413]{.lookup t="r134a-sat" row="-20" col="s_vap_kJ_kgK"} | [173.64]{.lookup t="r134a-sat" row="-20" col="h_liq_kJ_kg"} |
+| −10 °C (evaporator and tank) | [200.6]{.lookup t="r134a-sat" row="-10" col="p_MPa" x="1000"} | [392.66]{.lookup t="r134a-sat" row="-10" col="h_vap_kJ_kg"} | [1.7334]{.lookup t="r134a-sat" row="-10" col="s_vap_kJ_kgK"} | [186.70]{.lookup t="r134a-sat" row="-10" col="h_liq_kJ_kg"} |
+| 30 °C (condenser) | [770.2]{.lookup t="r134a-sat" row="30" col="p_MPa" x="1000"} | | | [241.72]{.lookup t="r134a-sat" row="30" col="h_liq_kJ_kg"} |
+:::
+
+::: {.step title="Step 3. Discharge of compressor 1: h₂"}
+::: hint
+Isentropic: $s_2=s_1=1.7643$ at the next pressure up, 132.7 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 132.7 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.101325 MPa block, rows sat. vapour ($h=$ [382.90]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7476]{.lookup t="r134a-sh" row="0.101325;Sat. vapor" col="s_kJ_kgK"}) and −20 °C ([387.68]{.lookup t="r134a-sh" row="0.101325;-20" col="h_kJ_kg"}, [1.7667]{.lookup t="r134a-sh" row="0.101325;-20" col="s_kJ_kgK"}), interpolated in $s$ → **387.08**; 0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **400.92**. Linear in $p$ between 101.325 and 200 kPa: $h_{2}=387.08+\frac{31.4}{98.7}(400.92-387.08)=\mathbf{391.48}$ kJ/kg. (Chart/EOS value: 392.5.)
+:::
+
+::: {.step title="Step 4. Discharge of compressor 2: h₄"}
+::: hint
+Isentropic: $s_4=s_3=1.7413$ at the next pressure up, 200.6 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 200.6 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.2 MPa block, rows −10 °C ($h=$ [392.77]{.lookup t="r134a-sh" row="0.2;-10" col="h_kJ_kg"}, $s=$ [1.7339]{.lookup t="r134a-sh" row="0.2;-10" col="s_kJ_kgK"}) and 0 °C ([401.21]{.lookup t="r134a-sh" row="0.2;0" col="h_kJ_kg"}, [1.7654]{.lookup t="r134a-sh" row="0.2;0" col="s_kJ_kgK"}), interpolated in $s$ → **394.75**; 0.4 MPa block, rows 10 °C ($h=$ [404.78]{.lookup t="r134a-sh" row="0.4;10" col="h_kJ_kg"}, $s=$ [1.7263]{.lookup t="r134a-sh" row="0.4;10" col="s_kJ_kgK"}) and 20 °C ([414.00]{.lookup t="r134a-sh" row="0.4;20" col="h_kJ_kg"}, [1.7583]{.lookup t="r134a-sh" row="0.4;20" col="s_kJ_kgK"}), interpolated in $s$ → **409.10**. Linear in $p$ between 200 and 400 kPa: $h_{4}=394.75+\frac{0.6}{200.0}(409.10-394.75)=\mathbf{394.80}$ kJ/kg.
+:::
+
+::: {.step title="Step 5. Discharge of compressor 3: h₆"}
+::: hint
+Isentropic: $s_6=s_5=1.7334$ at the next pressure up, 770.2 kPa. In the superheated table, interpolate in $s$ inside each pressure block either side of 770.2 kPa, then linearly in $p$ between them. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+0.6 MPa block, rows sat. vapour ($h=$ [410.67]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7178]{.lookup t="r134a-sh" row="0.6;Sat. vapor" col="s_kJ_kgK"}) and 30 °C ([418.97]{.lookup t="r134a-sh" row="0.6;30" col="h_kJ_kg"}, [1.7455]{.lookup t="r134a-sh" row="0.6;30" col="s_kJ_kgK"}), interpolated in $s$ → **415.34**; 0.8 MPa block, rows sat. vapour ($h=$ [415.58]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="h_kJ_kg"}, $s=$ [1.7144]{.lookup t="r134a-sh" row="0.8;Sat. vapor" col="s_kJ_kgK"}) and 40 °C ([424.61]{.lookup t="r134a-sh" row="0.8;40" col="h_kJ_kg"}, [1.7437]{.lookup t="r134a-sh" row="0.8;40" col="s_kJ_kgK"}), interpolated in $s$ → **421.44**. Linear in $p$ between 600 and 800 kPa: $h_{6}=415.34+\frac{170.2}{200.0}(421.44-415.34)=\mathbf{420.53}$ kJ/kg.
+:::
+
+::: {.step title="Step 6. Mass and energy balances"}
+::: hint
+From the coldest evaporator up. Lowest: $\dot m=\dot Q/(h_g-h_f)$ with the tank liquid that feeds it. Each tank with its evaporator is one control volume: liquid in from above + load + gas from the compressor below = vapour out + liquid out. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+$$\dot m_1=\frac{\dot Q_{-40}}{h_1-h_f(-20)}=\frac{211.02}{374.00-173.64}=1.0532\ \text{kg/s}$$
+
+CV = −20 °C evaporator + −20 °C tank:
+$$\dot m_3=\frac{175.85+1.0532(391.48-173.64)}{386.55-186.70}=2.0279\ \text{kg/s}$$
+
+CV = −10 °C evaporator + −10 °C tank:
+$$\dot m_5=\frac{140.68+2.0279(394.80-186.70)}{392.66-241.72}=3.7279\ \text{kg/s}$$
+:::
+
+::: {.step title="Step 7. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$ for each compressor; $COP=\sum\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=1.0532(391.48-374.00)=18.41$ kW; $\dot W_{34}=2.0279(394.80-386.55)=16.72$ kW; $\dot W_{56}=3.7279(420.53-392.66)=103.89$ kW.
+
+$$\sum\dot W=139.02\ \text{kW},\qquad COP=\frac{527.55}{139.02}=3.79$$
+
+Check with CoolProp (EOS): discharges 392.5, 394.8, 420.6 kJ/kg, $\sum\dot W=140.4$ kW, COP 3.76.
+:::
+
+:::
+
+::: answer
 **Answer: total 139.02 kW; COP = 527.55/139.02 = 3.79** (EOS: 140.4 kW, COP 3.76).
+:::
 
 > **TRY 7.10** `[PP 11-12 Q6(b), 25]` The following data refer to a three stage compression with three stage expansion valve and flash intercooling: Condenser pressure = 12 bar; Evaporator pressure = 2 bar; Flash intercooler pressure = 4 bar and 8 bar; Load on the evaporator = 10 TR. Find the power required to drive the system and compare the C.O.P. of this system with that of simple saturation cycle working between the same overall pressure limits.
 
-**Solution 7.10** **[TUTOR-GENERATED]** The paper does not name the refrigerant. **Assume R134a**, the refrigerant of every other multistage question (2, 4, 8 and 12 bar are exactly the 0.2, 0.4, 0.8 and 1.2 MPa superheated blocks, so each discharge needs only one interpolation in $s$). The system is Fig. 12: Solution 7.7 with no evaporators at the two intermediate levels. Load $10\times3.517=35.17$ kW.
+**Solution 7.10** **[TUTOR-GENERATED]** The paper does not name the refrigerant. **Assume R134a**, the refrigerant of every other multistage question (2, 4, 8 and 12 bar are exactly the 0.2, 0.4, 0.8 and 1.2 MPa superheated blocks, so each discharge needs only one interpolation in $s$). The system is Fig. 12: Solution 7.7 with no evaporators at the two intermediate levels. Load $10\times3.517=35.17$ kW. Work it step by step; open a hint if stuck.
 
-*Saturation properties* (Table 1, interpolated in $p$):
+::: {.problem #sol-7-10}
+
+::: {.step title="Step 1. Saturation properties at 2, 4, 8 and 12 bar"}
+::: hint
+R134a Table 1 is printed by temperature, so interpolate each row in $p$: $T_{sat}$, $h_f$, $h_g$, $s_g$ at each pressure.
+:::
+*Saturation properties*
 
 | $p$ | $T_{sat}$ (°C) | $h_f$ | $h_g$ | $s_g$ |
 |---|---|---|---|---|
@@ -580,50 +1042,108 @@ Powers: $\dot W_{12}=1.0532(391.48-374.00)=18.41$ kW; $\dot W_{34}=2.0279(394.80
 | 4 bar (flash intercooler 1) | 8.92 | 212.10 | 403.71 | 1.7226 |
 | 8 bar (flash intercooler 2) | 31.32 | 243.63 | 415.45 | 1.7140 |
 | 12 bar (condenser) | 46.31 | 265.94 | 422.04 | 1.7088 |
+:::
 
-*Discharges* (superheated table, interpolated in $s$ inside one block): $h_2$ at 0.4 MPa, $s=1.7335$, between 10 °C and 20 °C → 406.84 kJ/kg; $h_4$ at 0.8 MPa, $s=1.7226$, between sat. vapour and 40 °C → 418.10; $h_6$ at 1.2 MPa, $s=1.7140$ → 423.77.
+::: {.step title="Step 2. The three discharges"}
+::: hint
+Each discharge pressure is itself a superheated block (0.4, 0.8, 1.2 MPa), so one interpolation in $s$ inside that block is enough. See the [interpolation mini-example](#m-mini-vc-interp).
+:::
+(superheated table, interpolated in $s$ inside one block): $h_2$ at 0.4 MPa, $s=1.7335$, between 10 °C and 20 °C → 406.84 kJ/kg; $h_4$ at 0.8 MPa, $s=1.7226$, between sat. vapour and 40 °C → 418.10; $h_6$ at 1.2 MPa, $s=1.7140$ → 423.77.
+:::
 
-*Balances* (no load at the tanks):
+::: {.step title="Step 3. Balances (no load at the tanks)"}
+::: hint
+Lowest evaporator: $\dot m_1=\dot Q/(h_g-h_f)$ with the 4-bar tank liquid. Each tank: the gas from below is cooled to saturation by flashing liquid from above. See the [flash-tank mini-example](#m-mini-vc-flash).
+:::
+(no load at the tanks):
 $\dot m_1=\dfrac{35.17}{392.61-212.10}=0.1948$ kg/s;
 4-bar tank: $\dot m_3=\dot m_1\dfrac{h_2-h_{f,4}}{h_{g,4}-h_{f,8}}=0.1948\,\dfrac{406.84-212.10}{403.71-243.63}=0.2370$ kg/s;
 8-bar tank: $\dot m_5=\dot m_3\dfrac{h_4-h_{f,8}}{h_{g,8}-h_{f,12}}=0.2370\,\dfrac{418.10-243.63}{415.45-265.94}=0.2766$ kg/s.
+:::
 
-*Powers:* $\dot W_{12}=0.1948(406.84-392.61)=2.77$ kW; $\dot W_{34}=0.2370(418.10-403.71)=3.41$ kW; $\dot W_{56}=0.2766(423.77-415.45)=2.30$ kW; **total 8.48 kW**, **COP = 35.17/8.48 = 4.15**.
+::: {.step title="Step 4. Powers and COP"}
+::: hint
+$\dot W_k=\dot m_k(h_{out}-h_{in})$; $COP=\dot Q/\sum\dot W$.
+:::
+$\dot W_{12}=0.1948(406.84-392.61)=2.77$ kW; $\dot W_{34}=0.2370(418.10-403.71)=3.41$ kW; $\dot W_{56}=0.2766(423.77-415.45)=2.30$ kW; **total 8.48 kW**, **COP = 35.17/8.48 = 4.15**.
+:::
 
-*Simple saturation cycle* between 2 and 12 bar: $h_1=392.61$, $s_1=1.7335$; $h_2$ at 1.2 MPa, $s=1.7335$ (rows 50–60 °C) → 430.07; $h_4=265.94$. $\dot m=35.17/(392.61-265.94)=0.2777$ kg/s; $\dot W=0.2777(430.07-392.61)=10.40$ kW; **COP = 3.38**.
+::: {.step title="Step 5. The simple saturation cycle, for comparison"}
+::: hint
+One compressor from 2 bar straight to 12 bar: $s$ of the 2-bar vapour at 1.2 MPa in the superheated table, liquid at 12 bar.
+:::
+between 2 and 12 bar: $h_1=392.61$, $s_1=1.7335$; $h_2$ at 1.2 MPa, $s=1.7335$ (rows 50–60 °C) → 430.07; $h_4=265.94$. $\dot m=35.17/(392.61-265.94)=0.2777$ kg/s; $\dot W=0.2777(430.07-392.61)=10.40$ kW; **COP = 3.38**.
+:::
 
+:::
+
+::: answer
 **Answer (R134a): three-stage power 8.48 kW, COP 4.15, against 10.40 kW and COP 3.38 for the simple cycle: 18.4% less power.**
 
 If the examiner intended **ammonia** (Table 3 and the ammonia superheated tables, same method): discharges 1509.0, 1532.9 and 1513.0 kJ/kg; powers 2.53, 2.98 and 1.97 kW, total 7.48 kW, COP 4.70; simple cycle $h_2=1682.9$, $\dot m=0.03219$ kg/s, 8.49 kW, COP 4.14; saving 11.9%. State your refrigerant at the start; the method earns the marks.
+
+:::
 
 ### VC3: single-stage ammonia
 
 > **TRY 7.11** `[PP 11-12 Q5(c), 20]` In a 15 TR ammonia refrigeration plant, the condensing temperature is 25 °C and evaporating temperature −10 °C. The refrigerant ammonia is sub-cooled by 5 °C before passing through the throttle valve. The vapor leaving the evaporator is 0.97 dry. The specific heat of saturated ammonia liquid at 25 °C is 4.6 kJ/kgK and saturated ammonia vapor at 25 °C is 2.8 kJ/kgK. Find (i) the coefficient of performance, and (ii) Power required to run the plant.
 
-**Solution 7.11** **[TUTOR-GENERATED]** Method of §7.9; ammonia Table 3 (Moran & Shapiro, datum $h=s=0$ at −40 °C). States: 1 compressor inlet (−10 °C, $x=0.97$), 2 discharge (25 °C pressure), 3 subcooled liquid (20 °C), 4 after the valve.
+**Solution 7.11** **[TUTOR-GENERATED]** Method of §7.9; ammonia Table 3 (Moran & Shapiro, datum $h=s=0$ at −40 °C). States: 1 compressor inlet (−10 °C, $x=0.97$), 2 discharge (25 °C pressure), 3 subcooled liquid (20 °C), 4 after the valve. Work it step by step; open a hint if stuck.
 
-*Table 3:* −10 °C row: $h_f=133.94$, $h_{fg}=1296.61$, $s_f=0.5389$, $s_{fg}=4.9273$. 25 °C (between the 24 °C and 28 °C rows): $p=10.04$ bar, $h_f=298.28$, $h_g=1463.21$, $s_g=5.0283$.
+::: {.problem #sol-7-11}
 
-*State 1:* $h_1=133.94+0.97(1296.61)=1391.65$ kJ/kg; $s_1=0.5389+0.97(4.9273)=5.3184$ kJ/kg·K.
+::: {.step title="Step 1. Properties from the ammonia table"}
+::: hint
+Ammonia Table 3 (Moran & Shapiro): the −10 °C row for $h_f$, $h_{fg}$, $s_f$, $s_{fg}=s_g-s_f$; the 25 °C values between the 24 °C and 28 °C rows. Do not mix in values from the p-h chart: it has a different datum.
+:::
+−10 °C row: $h_f=$ [133.94]{.lookup t="nh3-sat" row="-10" col="hf_kJ_kg"}, $h_{fg}=$ [1296.61]{.lookup t="nh3-sat" row="-10" col="hfg_kJ_kg"}, $s_f=$ [0.5389]{.lookup t="nh3-sat" row="-10" col="sf_kJ_kgK"}, $s_{fg}=4.9273$. 25 °C (between the 24 °C and 28 °C rows): $p=10.04$ bar, $h_f=298.28$, $h_g=1463.21$, $s_g=5.0283$.
+:::
 
-*State 2:* $s_1=5.3184>s_g(25\ °\text{C})=5.0283$, so the discharge is superheated (wet suction, but dry discharge). With the given $c_{p,v}=2.8$:
+::: {.step title="Step 2. State 1: wet suction"}
+::: hint
+$h_1=h_f+x\,h_{fg}$ and $s_1=s_f+x\,s_{fg}$ at −10 °C with $x=0.97$.
+:::
+$h_1=133.94+0.97(1296.61)=1391.65$ kJ/kg; $s_1=0.5389+0.97(4.9273)=5.3184$ kJ/kg·K.
+:::
+
+::: {.step title="Step 3. State 2: the discharge"}
+::: hint
+Isentropic, $s_2=s_1$, at the condenser pressure. Compare $s_1$ with $s_g$ at 25 °C: if larger, the discharge is superheated; use the given $c_{p,v}$ (or the superheated table).
+:::
+$s_1=5.3184>s_g(25\ °\text{C})=5.0283$, so the discharge is superheated (wet suction, but dry discharge). With the given $c_{p,v}=2.8$:
 $$5.3184=5.0283+2.8\ln\frac{T_2}{298.15}\ \Rightarrow\ T_2=330.7\ \text{K}=57.6\ °\text{C}$$
 $$h_2=1463.21+2.8(330.7-298.15)=1554.35\ \text{kJ/kg}$$
 (The superheated table at 10.04 bar, $s=5.3184$ gives 1554.4: the same.)
+:::
 
-*State 3:* subcooled 5 K: $h_3=298.28-4.6\times5=275.28$ kJ/kg (the 20 °C saturated liquid row gives 274.26, almost the same); $h_4=h_3$.
+::: {.step title="Step 4. State 3: subcooled liquid"}
+::: hint
+Subcooled by 5 K with the given liquid $c_p$: $h_3=h_f(25)-c_{p,l}\Delta T$; the valve keeps $h$: $h_4=h_3$.
+:::
+subcooled 5 K: $h_3=298.28-4.6\times5=275.28$ kJ/kg (the 20 °C saturated liquid row gives 274.26, almost the same); $h_4=h_3$.
+:::
 
-*Performance:*
+::: {.step title="Step 5. Performance"}
+::: hint
+$RE=h_1-h_4$, $w=h_2-h_1$, $COP=RE/w$; $\dot m=\dot Q/RE$ with 1 TR = 3.517 kW; $\dot W=\dot m\,w$.
+:::
 $$RE=h_1-h_4=1391.65-275.28=1116.38\ \text{kJ/kg},\qquad w=h_2-h_1=1554.35-1391.65=162.70\ \text{kJ/kg}$$
 $$COP=\frac{1116.38}{162.70}=\mathbf{6.86}$$
 $$\dot m=\frac{15\times3.517}{1116.38}=\frac{52.76}{1116.38}=0.0473\ \text{kg/s},\qquad \dot W=0.0473\times162.70=\mathbf{7.69\ kW}$$
+:::
 
+:::
+
+::: answer
 **Answer: (i) COP = 6.86 (EOS check: 6.88); (ii) power = 7.69 kW.** Do not take $h$ values from the ammonia p-h chart and mix them with Table 3: the chart has a different datum.
+
+:::
 
 ### VC1: vapour compression cycle theory
 
 > **TRY 7.12** `[PP 16-17 Q1(a), 15]` What are the modifications that are introduced in reversed Carnot cycle to convert it into an ideal vapor compression refrigeration cycle and why? Show these processes on P-h and T-s diagrams.
 
+::: {.answer label="Show answer"}
 **Solution 7.12** **[FROM SOURCE: Aloke pp.1–3; Arif p.18]**
 
 *Reversed Carnot cycle* (Fig. 1(a)): 1-2 isentropic compression of wet vapour from $T_L$ to $T_H$; 2-3 isothermal condensation at $T_H$; 3-4 isentropic expansion in an expander; 4-1 isothermal evaporation at $T_L$. $COP=T_L/(T_H-T_L)$, the highest possible.
@@ -638,9 +1158,11 @@ $$\dot m=\frac{15\times3.517}{1116.38}=\frac{52.76}{1116.38}=0.0473\ \text{kg/s}
 *Consequences:* two irreversibilities, the non-isothermal heat rejection (superheat horn) and throttling. Throttling reduces the refrigerating effect (state 4 lies right of the isentropic 4′: loss = area under 4′-4 on T-s) and the expander work is lost; dry compression increases the work. So $COP_{VCR}<COP_{Carnot}$ between the same temperatures.
 
 *Diagrams:* draw the ideal cycle on T-s (Fig. 1(b)) and on p-h (Fig. 3(b)): on p-h, 1 on the saturated-vapour line at $p_e$; 1-2 along constant $s$ to $p_c$; 2-3 horizontal to the saturated-liquid line; 3-4 vertical (constant $h$) down to $p_e$; 4-1 horizontal.
+:::
 
 > **TRY 7.13** `[PP 18-19 Q1(a), 15]` Establish how an actual cycle differs from a theoretical vapor compression cycle. What is sub-cooling and superheating in vapor compression cycle? Explain with the help of diagram. Why is superheating considered to be good in certain cases?
 
+::: {.answer label="Show answer"}
 **Solution 7.13** **[TUTOR-GENERATED]** (§7.4; Ameen §3.4). Draw Fig. 4(b).
 
 *Actual vs theoretical cycle:*
@@ -664,9 +1186,11 @@ So the actual COP and capacity are lower than the theoretical ones.
 2. A thermostatic expansion valve needs a few kelvin of superheat to control the flow.
 3. Useful superheat increases the refrigerating effect; for R12, R134a and R22 it even raises the COP slightly.
 4. In a liquid-suction heat exchanger the superheat comes from subcooling the liquid, which cuts the flash gas at the valve.
+:::
 
 > **TRY 7.14** `[PP 15-16 Q1(b), 15]` What are the deviations that occur in a real vapor compression cycle from ideal vapor compression cycle? Draw the block diagram of a vapor compression refrigeration system with sub-cooling in condenser and superheating of vapor leaving the evaporator and depict this on a p-h diagram.
 
+::: {.answer label="Show answer"}
 **Solution 7.14** **[TUTOR-GENERATED]** (§7.4).
 
 *Deviations of the real cycle* (one point per mark):
@@ -682,17 +1206,21 @@ So the actual COP and capacity are lower than the theoretical ones.
 *Block diagram:* Fig. 4(a): compressor → (2′) condenser, whose last section is a subcooler → (3′) subcooled liquid → expansion valve → (4′) evaporator, whose last section superheats the vapour → (1′) superheated vapour → compressor.
 
 *p-h diagram:* Fig. 4(b): 3′ lies on the condenser pressure line to the **left** of the saturated-liquid line (subcooled region); 4′ is vertically below 3′ (constant $h$) on the evaporator line, to the left of the saturated state 4; 1′ lies on the evaporator line to the **right** of the saturated-vapour line (superheated region); 1′-2′ follows (or leans slightly right of) a constant-$s$ line to the condenser pressure; 2′-3′ is horizontal. Label $\Delta T_{sub}$ and $\Delta T_{sh}$.
+:::
 
 > **TRY 7.15** `[PP 13-14 Q1(b), 10]` Draw the block diagram of a vapor compression refrigeration system with sub-cooling in condenser and superheating of vapor leaving the evaporator and depict this on a p-h diagram.
 
+::: {.answer label="Show answer"}
 **Solution 7.15** **[TUTOR-GENERATED]** The second half of TRY 7.14 (repeated in 2015-16).
 
 - *Block diagram* (Fig. 4(a)): compressor (1′ → 2′, superheated vapour at high pressure) → condenser: desuperheating, condensing and a subcooling section → 3′ subcooled liquid → expansion valve → 4′ low-quality mixture → evaporator: boiling and a superheating section → 1′ superheated vapour → compressor.
 - *p-h diagram* (Fig. 4(b)): horizontal line at $p_c$ from 2′ (right, superheated) to 3′, which lies left of the saturated-liquid line by $\Delta T_{sub}$; vertical line 3′ → 4′ to $p_e$; horizontal line 4′ → 1′ crossing the saturated-vapour line, 1′ in the superheated region by $\Delta T_{sh}$; constant-entropy line 1′ → 2′.
 - Mark the gains: subcooling moves 4′ left (more RE, same work); superheating moves 1′ right (more RE if useful, more work and a hotter discharge).
+:::
 
 > **TRY 7.16** `[PP 12-13 Q5(b), 5]` What are the deviations in a real vapor compression cycle from Ideal vapor compression cycle?
 
+::: {.answer label="Show answer"}
 **Solution 7.16** **[TUTOR-GENERATED]** (§7.4). Five deviations:
 
 1. Pressure drops in the evaporator, suction line and suction valve (compressor suction below evaporator pressure).
@@ -700,9 +1228,11 @@ So the actual COP and capacity are lower than the theoretical ones.
 3. Superheating of the suction vapour, not saturated vapour.
 4. Subcooling of the liquid before the expansion valve, not saturated liquid.
 5. Non-isentropic compression (friction and heat transfer), with heat exchange with the surroundings in the lines.
+:::
 
 > **TRY 7.17** `[PP 11-12 Q5(b), 10]` Explain the effects of superheating and subcooling in a refrigeration system.
 
+::: {.answer label="Show answer"}
 **Solution 7.17** **[TUTOR-GENERATED]** (§7.4). Sketch both on p-h (Fig. 4(b)).
 
 *Subcooling* (3 → 3′, liquid below $T_{sat}$ at $p_c$):
@@ -730,9 +1260,11 @@ So the actual COP and capacity are lower than the theoretical ones.
 | 5 K subcooling | 392.61 | 426.54 | 249.01 | 143.60 | 33.92 | 4.23 |
 
 (kJ/kg.) Subcooling 5 K raises COP by about 5%; 10 K of useful superheat raises it by only about 1%, and costs more work per kg.
+:::
 
 > **TRY 7.18** `[PP 13-14 Q5(a), 15]` Explain how does the work of compression and power vary with the evaporating temperature in an ideal compressor with constant condensing temperature.
 
+::: {.answer label="Show answer"}
 **Solution 7.18** **[TUTOR-GENERATED]** (§7.5; Stoecker & Jones ch. 10). Draw Fig. 5(b) and (c).
 
 1. **Work of compression per kg**, $w=h_2-h_1$: as the evaporating temperature falls at constant condensing temperature, the suction pressure falls, the pressure ratio rises, and the isentrope from the lower state 1 is longer and flatter, so $w$ **rises continuously** (zero when $T_e=T_c$).
@@ -752,18 +1284,22 @@ Ideal R134a cycle, $T_c=35$ °C (per kg, and per m³/s of compressor displacemen
 | −40 | 125.0 | 59.4 | 2.11 | 346 | 164 |
 
 The work per kg rises from 15.7 to 59.4 kJ/kg as $T_e$ falls from 10 to −40 °C, while the power of the same compressor peaks near 0 °C (331 kW per m³/s) and then falls.
+:::
 
 > **TRY 7.19** `[PP 16-17 Q2(a), 7]` Define EER, SEER, kW/ton. Show the variation of COP with the evaporator and condenser temperature.
 
+::: {.answer label="Show answer"}
 **Solution 7.19** **[FROM SOURCE: Arif p.31; Kanak p.92]**
 
 - **EER** (energy efficiency ratio) = refrigerating effect in Btu/h ÷ power input in W. Because 1 W = 3.412 Btu/h, $EER=3.412\times COP$.
 - **SEER** (seasonal energy efficiency ratio) = total cooling delivered over a typical cooling season (Btu) ÷ total electrical energy used over that season (W·h). It accounts for part-load operation and changing outdoor temperature.
 - **kW/ton** = electrical power input (kW) per TR of cooling $=3.516/COP$; $EER\times\text{kW/ton}=12$ (e.g. EER 12 ⇔ COP 3.516 ⇔ 1.0 kW/ton).
 - **COP vs temperatures** (sketch Fig. 5(a)): COP rises steeply as the evaporator temperature rises and falls as the condenser temperature rises. The Carnot value $T_e/(T_c-T_e)$ shows why: COP depends on the temperature lift $T_c-T_e$. Physically, a higher $T_e$ means a smaller pressure ratio, less work per kg and a larger RE; a higher $T_c$ means more flash gas (smaller RE) and more work.
+:::
 
 > **TRY 7.20** `[PP 11-12 Q5(a), 5]` Mention the advantages of vapor compression refrigeration system over air refrigeration system.
 
+::: {.answer label="Show answer"}
 **Solution 7.20** **[TUTOR-GENERATED]** (§7.6).
 
 1. Much higher COP (heat is absorbed and rejected as latent heat, close to the isothermal processes of the Carnot cycle), so the running cost is low.
@@ -771,11 +1307,13 @@ The work per kg rises from 15.7 to 59.4 kJ/kg as $T_e$ falls from 10 to −40 °
 3. The evaporator temperature is fixed by the pressure and can be controlled easily; it stays constant through the evaporator.
 4. A simple throttle valve replaces the expander.
 5. Any required low temperature (by choosing the refrigerant and pressure), with smaller heat-exchanger surface.
+:::
 
 ### VC4: multistage and multi-evaporator theory
 
 > **TRY 7.21** `[PP 23-24 Q8(a), 5]` What are the primary reasons for employing multi-evaporator systems in refrigeration?
 
+::: {.answer label="Show answer"}
 **Solution 7.21** **[FROM SOURCE: Arif p.22a; Ameen §3.5]**
 
 1. One plant must hold **different spaces at different temperatures**: a dairy with an ice-cream hardening room at −35 °C and a milk cooler at 2 °C; a cold store with frozen and chilled rooms; a fish-freezing plant with a freezer, a chill room and air conditioning.
@@ -783,9 +1321,11 @@ The work per kg rises from 15.7 to 59.4 kJ/kg as $T_e$ falls from 10 to −40 °
 3. Separate independent systems would cost more; one compressor set, condenser and control system are cheaper to buy and maintain.
 4. Product quality: each product is kept at its proper temperature and humidity (an evaporator that is too cold dries out unpacked food).
 5. With a flash tank at the intermediate pressure, the multi-evaporator plant also gains flash-gas removal and intercooling.
+:::
 
 > **TRY 7.22** `[PP 11-12 Q6(a), 10]` Describe, with the help of schematic and p-h diagrams, the working of a two stage compression system with water intercooler, liquid intercooler and a liquid flash chamber.
 
+::: {.answer label="Show answer"}
 **Solution 7.22** **[TUTOR-GENERATED]** (§7.7; Ameen §3.5 Figs. 3.18–3.19; Arif pp.23b–24b). Draw Fig. 7.
 
 *Working* (state numbers of Fig. 7):
@@ -801,6 +1341,7 @@ The work per kg rises from 15.7 to 59.4 kJ/kg as $T_e$ falls from 10 to −40 °
 *p-h diagram* (Fig. 7(b)): three pressure lines $p_e$, $p_i$, $p_c$; 1-2 isentrope from the saturated-vapour line at $p_e$ to $p_i$; 2-2′ horizontal (water); 2′-3 horizontal to the saturated-vapour line at $p_i$ (liquid intercooler); 3-4 isentrope to $p_c$; 4-5 horizontal to the saturated-liquid line; 5-6 vertical to $p_i$; 7 on the saturated-liquid line at $p_i$; 7-8 vertical to $p_e$; 8-1 horizontal.
 
 *Advantages:* less total work (intercooling, smaller pressure ratio per stage), lower discharge temperatures, flash gas compressed only from $p_i$, colder liquid to the evaporator (larger RE), better volumetric efficiency of the LP compressor. Heat balance of the liquid intercooler + flash chamber: $\dot m_{HP}h_5+\dot m_{LP}h_{2'}=\dot m_{HP}h_3+\dot m_{LP}h_7$.
+:::
 
 <!-- pagebreak -->
 
