@@ -307,3 +307,6 @@ span.aside[hidden] { display: none; }
 .doordraw svg.dd-narrow .dd-speed { font-size: 44px; }
 .doordraw svg.dd-narrow .dd-note { font-size: 34px; }
 .doordraw svg.dd-narrow .dd-caption { font-size: 36px; }
+
+/* A closed menu's list is not on the page, so the browser's find (Ctrl+F) does not match page titles in it. */
+.menu:not([open]) > ul { display: none; }
