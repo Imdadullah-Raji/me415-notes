@@ -249,10 +249,12 @@ def fix_images(md, src_dir):
     return re.sub(IMG, sub, md)
 
 
-def pandoc(md, databook=False):
+def pandoc(md, databook=False, liftrefs=False):
     args = ["pandoc", "-f", "markdown", "-t", "html5", "--katex", "--lua-filter", str(BUILD / "web.lua")]
     if databook:
         args += ["-M", "databook=true"]
+    if liftrefs:                                       # the lift chapter: T1-T6, C1, C2 link to their tables
+        args += ["-M", "liftrefs=true"]
     r = subprocess.run(args, input=md, capture_output=True, text=True, encoding="utf-8")
     if r.returncode or r.stderr.strip():
         fail(f"pandoc: {r.stderr.strip()}")
@@ -547,7 +549,7 @@ def main():
                 for i in re.findall(r"\]\(#([\w-]+)\)", md):
                     if i not in home and not re.match(r"^\d", i):
                         fail(f"{fname}: link to #{i}, which no page defines")
-                body = pandoc(md)
+                body = pandoc(md, liftrefs=fname.startswith("m02-"))
                 n_md, n_html = len(re.findall(r"\]\{\.lookup ", md)), body.count('class="lookup"')
                 if n_md != n_html:
                     fail(f"{fname}: {n_md} lookups in the markdown but {n_html} rendered (a broken span or table cell?)")

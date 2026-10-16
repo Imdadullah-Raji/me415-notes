@@ -72,11 +72,41 @@ function Span(el)
   end
 end
 
+-- The lift chapter names its tables and charts T1-T6, C1, C2 (-M liftrefs=true on its pages only, since
+-- elsewhere T1 may be a temperature): each becomes a link that previews the table or chart.
+local liftrefs = false
+local function lift_refs(s)
+  local out, pos, found = {}, 1, false
+  while true do
+    local a, b, id = s:find('%f[%w]([TC]%d)%f[%W]', pos)
+    if not a then break end
+    if a > pos then table.insert(out, pandoc.Str(s:sub(pos, a - 1))) end
+    if id:match('^T[1-6]$') or id:match('^C[12]$') then
+      table.insert(out, pandoc.Link({pandoc.Str(id)}, '#', '', pandoc.Attr('', {'tref'}, {{'data-t', id}})))
+      found = true
+    else
+      table.insert(out, pandoc.Str(id))
+    end
+    pos = b + 1
+  end
+  if not found then return nil end
+  if pos <= #s then table.insert(out, pandoc.Str(s:sub(pos))) end
+  return out
+end
+
 -- "Table 18(a)" / "Table 20:" in running text -> a link that previews the whole table.
 function Inlines(inl)
   local out, i = {}, 1
   while i <= #inl do
     local a, sp, b = inl[i], inl[i + 1], inl[i + 2]
+    if liftrefs and a.t == 'Str' then
+      local parts = lift_refs(a.text)
+      if parts then
+        for _, x in ipairs(parts) do table.insert(out, x) end
+        i = i + 1
+        goto continue
+      end
+    end
     if a.t == 'Str' and (a.text == 'Table' or a.text == '(Table') and sp and sp.t == 'Space' and b and b.t == 'Str' then
       local num, sub, rest = b.text:match('^(%d+)%((%a)%)(.*)$')
       if not num then num, rest = b.text:match('^(%d+)(.*)$'); sub = '' end
@@ -131,7 +161,7 @@ end
 
 -- Table refs are not linked on the data-book pages themselves (-M databook=true).
 local databook = false
-local function Meta(m) databook = m.databook and true or false end
+local function Meta(m) databook = m.databook and true or false; liftrefs = m.liftrefs and true or false end
 local function MaybeInlines(inl) if not databook then return Inlines(inl) end end
 
 return {{Meta = Meta}, {Inlines = MaybeInlines},
