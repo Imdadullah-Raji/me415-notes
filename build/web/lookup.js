@@ -36,6 +36,16 @@
     window.addEventListener("resize", freeze);
   }
 
+  // An aside: the dagger opens its note in place, and closes it again.
+  document.querySelectorAll("button.dag").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var note = b.nextElementSibling, open = b.getAttribute("aria-expanded") !== "true";
+      note.hidden = !open;
+      b.setAttribute("aria-expanded", open);
+      b.title = open ? "Hide the note" : "Show the note";
+    });
+  });
+
   // A menu opens scrolled to the current page.
   document.querySelectorAll("details.menu").forEach(function (d) {
     d.addEventListener("toggle", function () {

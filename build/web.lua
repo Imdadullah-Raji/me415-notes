@@ -55,6 +55,14 @@ function Div(el)
 end
 
 function Span(el)
+  if el.classes:includes('aside') then
+    -- An aside: a dagger that opens the note in place, inside the sentence (lookup.js toggles it).
+    local out = {pandoc.RawInline('html', '<button type="button" class="dag" aria-expanded="false" ' ..
+                                  'title="Show the note">†</button><span class="aside" hidden>')}
+    for _, i in ipairs(el.content) do table.insert(out, i) end
+    table.insert(out, pandoc.RawInline('html', '</span>'))
+    return out
+  end
   if el.classes:includes('lookup') then
     local a = el.attributes
     return pandoc.Link(el.content, '#', '', pandoc.Attr('', {'lookup'},
