@@ -294,7 +294,7 @@ def render(title, body, menus, prev, nxt, crumb):
 </main>
 <script defer src="{KATEX}/katex.min.js"></script>
 <script defer src="lookup.js"></script>
-</body></html>
+{'<script defer src="liftdraw.js"></script>' + chr(10) if 'data-anim="lift"' in body else ''}</body></html>
 """
 
 

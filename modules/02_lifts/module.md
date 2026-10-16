@@ -134,7 +134,9 @@ In a **traction lift** the car hangs from steel ropes that pass over a grooved, 
 
 ![Fig. 5: Electric traction passenger lift, labelled cutaway. Machine room at the top: controller, drive motor, brake, drive sheave and overspeed governor. In the shaft: suspension ropes from the drive sheave to the car and the counterweight, the door operator on the car, car doors, apron, car guide rails, safety gear on the car frame, travelling cables hanging from the car, landing doors with landing indicator and push-button, counterweight and its guide rails, limit switches. In the pit: car buffer, counterweight buffer and the governor tension sheave [Kanak p.172]](figures/005.jpg "w=0.55")
 
+::: {.liftdraw #lift-draw caption="How to draw it in the exam (2 minutes). Draw along: each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
 **How to draw it in the exam (2 minutes).** Draw a tall rectangle (the hoistway) with a box on top (machine room). In the machine room draw the motor, the brake, the drive sheave and the controller. From the sheave, drop ropes to the car on one side and to the counterweight (a box with horizontal lines) on the other. Draw two vertical lines beside the car (car guide rails) and two beside the counterweight. Mark the governor beside the sheave with its rope running down to the car safety gear. In the pit draw two spring buffers, one under the car and one under the counterweight. Label every item.
+:::
 
 **The principal parts** [Kanak pp.172–173; Grondzik §31.4, §31.8]:
 
@@ -1010,7 +1012,7 @@ For each whole $N$: $I=RT/N$, $HC=300p/I$, $PHC=HC/\text{population}$. Interval 
 - **By machine location:** penthouse (overhead) machine room, basement (underslung) machine, machine-room-less.
 - **By control:** single automatic push-button, collective, selective collective, group supervisory control.
 
-*(ii) Traction lift schematic* (5 marks). Draw the sketch of §2.3 (Fig. 5): machine room on top with **motor, brake, drive sheave, governor and controller**; **hoist ropes** down to the **car** on one side and the **counterweight** on the other; **car and counterweight guide rails** on the shaft walls; **safety gear** under the car linked to the governor rope; **landing doors** and **car doors**; **buffers** in the **pit** under the car and counterweight; travelling cable to the car. One line per item: the sheave moves the ropes by traction; the counterweight (car + 40% of the rated load) balances the car; the guide rails guide the car and are gripped by the safety gear; the governor trips the safety gear on overspeed; the buffers cushion an over-travelling car.
+*(ii) Traction lift schematic* (5 marks). Draw the sketch of §2.3 (Fig. 5[; [draw it along, stage by stage](#lift-draw)]{.web}): machine room on top with **motor, brake, drive sheave, governor and controller**; **hoist ropes** down to the **car** on one side and the **counterweight** on the other; **car and counterweight guide rails** on the shaft walls; **safety gear** under the car linked to the governor rope; **landing doors** and **car doors**; **buffers** in the **pit** under the car and counterweight; travelling cable to the car. One line per item: the sheave moves the ropes by traction; the counterweight (car + 40% of the rated load) balances the car; the guide rails guide the car and are gripped by the safety gear; the governor trips the safety gear on overspeed; the buffers cushion an over-travelling car.
 
 :::
 
@@ -1316,7 +1318,7 @@ With 6 lifts the design is **compliant**: $I=26.1\ \text{s}\le30$ s and $HC=17.3
 ::: {.answer label="Show answer"}
 **Solution 2.9** **[FROM SOURCE: Kanak pp.172–176; Grondzik §31.4–31.8]**
 
-*Schematic* (6 marks). Draw the labelled sketch of §2.3 (Fig. 5): hoistway with machine room above; in the machine room the motor, brake, drive sheave (and deflector sheave), overspeed governor and controller; hoist ropes from the sheave to the car and to the counterweight; car guide rails and counterweight guide rails; safety gear under the car tied to the governor rope; car and landing doors; limit switches near the top and bottom; car buffer and counterweight buffer in the pit; travelling cable hanging from the car.
+*Schematic* (6 marks). Draw the labelled sketch of §2.3 (Fig. 5[; [draw it along, stage by stage](#lift-draw)]{.web}): hoistway with machine room above; in the machine room the motor, brake, drive sheave (and deflector sheave), overspeed governor and controller; hoist ropes from the sheave to the car and to the counterweight; car guide rails and counterweight guide rails; safety gear under the car tied to the governor rope; car and landing doors; limit switches near the top and bottom; car buffer and counterweight buffer in the pit; travelling cable hanging from the car.
 
 *Components* (14 marks, about one point each):
 
