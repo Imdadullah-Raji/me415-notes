@@ -114,10 +114,10 @@
     svg.setAttribute("viewBox", "0 0 " + W + " " + h);
     gDraw.setAttribute("transform", narrow ? "translate(" + CX * (1 - k) + " " + CY * (1 - k) + ") scale(" + k + ")" : "");
     labels.forEach(function (lb) {
-      var fs = !narrow ? 25 : lb.stage === now ? 34 : 23, tx = lb.side === "L" ? lx : rx;
+      var big = lb.stage === now || now === "all", fs = !narrow ? 25 : big ? 34 : 23, tx = lb.side === "L" ? lx : rx;
       lb.t.setAttribute("x", tx);
       lb.t.style.fontSize = fs + "px";
-      if (narrow && lb.stage === now) {                      // fit a long label to its column
+      if (narrow && big) {                      // fit a long label to its column
         var w = lb.t.getComputedTextLength(), room = (lb.side === "L" ? lx : W - rx) - 10;
         if (w > room) lb.t.style.fontSize = (fs * room / w).toFixed(1) + "px";
       }
@@ -148,7 +148,7 @@
   window.addEventListener("resize", function () { layoutKey = null; paint(); });
 
   // ---- state: `done` stages are complete; `cur` is the stage being drawn (or null), `t` its elapsed time in ms
-  var done = 0, cur = null, t = 0, running = false, auto = false, last = 0, gapTimer = null;
+  var done = STAGES.length, cur = null, t = 0, running = false, auto = false, last = 0, gapTimer = null;
   var GAP = still ? 0 : 250, BETWEEN = still ? 0 : 1400;
   function dur(it) { return still ? 0 : Math.min(2200, Math.max(600, it.len / 0.42)); }
   function stageLength(st) { return st.items.reduce(function (s, it) { return s + dur(it) + GAP; }, 0); }
@@ -170,10 +170,11 @@
         e -= d + GAP;
       });
     });
-    var s = cur !== null ? cur : done - 1;
-    stageText.dataset.s = s;
-    stageText.dataset.text = s < 0 ? "Press “Draw stage 1” and draw along" : "Stage " + (s + 1) + ": " + STAGES[s].title;
-    layout(s);
+    var s = cur !== null ? cur : done - 1, whole = cur === null && done >= STAGES.length;
+    stageText.dataset.s = whole ? "all" : s;
+    stageText.dataset.text = whole ? "The finished drawing: press “Draw along” to draw it stage by stage"
+      : s < 0 ? "Press “Draw stage 1” and draw along" : "Stage " + (s + 1) + ": " + STAGES[s].title;
+    layout(whole ? "all" : s);
     buttons();
   }
   function frame(now) {
@@ -214,17 +215,18 @@
   function buttons() {
     var end = done >= STAGES.length && cur === null;
     B.main.textContent = running ? "❚❚ Pause" : cur !== null ? "▶ Resume stage " + (cur + 1)
-      : end ? "Done: all " + STAGES.length + " stages" : "▶ Draw stage " + (done + 1);
-    B.main.disabled = end;
+      : end ? "▶ Draw along from stage 1" : "▶ Draw stage " + (done + 1);
     B.all.textContent = auto ? "Stop after this stage" : "Play all";
-    B.all.disabled = end;
     B.back.disabled = done === 0 && cur === null;
   }
   B.main.onclick = function () {
-    if (running) { stop(); auto = false; paint(); } else start();
+    if (running) { stop(); auto = false; paint(); return; }
+    if (done >= STAGES.length && cur === null) done = 0;     // from the finished drawing: start again
+    start();
   };
   B.all.onclick = function () {
     auto = !auto;
+    if (auto && done >= STAGES.length && cur === null) done = 0;
     if (auto && !running && !gapTimer) start();
     if (!auto && gapTimer) stop();
     paint();

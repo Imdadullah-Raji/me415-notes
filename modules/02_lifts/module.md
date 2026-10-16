@@ -134,7 +134,7 @@ In a **traction lift** the car hangs from steel ropes that pass over a grooved, 
 
 ![Fig. 5: Electric traction passenger lift, labelled cutaway. Machine room at the top: controller, drive motor, brake, drive sheave and overspeed governor. In the shaft: suspension ropes from the drive sheave to the car and the counterweight, the door operator on the car, car doors, apron, car guide rails, safety gear on the car frame, travelling cables hanging from the car, landing doors with landing indicator and push-button, counterweight and its guide rails, limit switches. In the pit: car buffer, counterweight buffer and the governor tension sheave [Kanak p.172]](figures/005.jpg "w=0.55")
 
-::: {.liftdraw #lift-draw caption="How to draw it in the exam (2 minutes). Draw along: each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+::: {.liftdraw #lift-draw caption="How to draw it in the exam (2 minutes). This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
 **How to draw it in the exam (2 minutes).** Draw a tall rectangle (the hoistway) with a box on top (machine room). In the machine room draw the motor, the brake, the drive sheave and the controller. From the sheave, drop ropes to the car on one side and to the counterweight (a box with horizontal lines) on the other. Draw two vertical lines beside the car (car guide rails) and two beside the counterweight. Mark the governor beside the sheave with its rope running down to the car safety gear. In the pit draw two spring buffers, one under the car and one under the counterweight. Label every item.
 :::
 
@@ -232,12 +232,24 @@ Passenger lift doors are **power-operated** and synchronised with the levelling 
 |---|---|---|---|
 | **Single-slide** | one panel slides to one side | 0.6–0.9 m (24–36 in.) | small commercial, residential |
 | **Centre-opening** | two panels part from the middle, each moving half the width, at the same speed | 1.07 m (42 in.) offices; 1.2–1.5 m hospitals and service cars | standard commercial passenger doors; fastest |
-| **Two-speed (side-opening)** | two panels slide to the same side; the leading panel moves twice as fast as the other, so both finish together and stack on one side | 1.07 m (42 in.) | general commercial, where space dictates or a wide opening is needed |
+| **Two-speed (side-opening)** | two panels, each half the opening, on two parallel tracks, slide to the same side and stack there; the far panel travels twice as far as the near one in the same time, so it moves twice as fast (2v against v) | 1.07 m (42 in.) | general commercial, where space dictates or a wide opening is needed |
 | **Two-speed centre-opening** | four panels, two each side; each side is a two-speed pair | 1.5 m (60 in.) | department stores, freight, hospital, service |
 
 ![Fig. 13: Grondzik Fig. 31.12, typical hoistway door arrangements in plan: (a) single-slide, one panel; (b) centre-opening, two panels parting at the middle; (c) two-speed, two panels stacking to one side; (d) two-speed centre-opening, four panels, two to each side [Grondzik §31.12]](figures/013.jpg "w=0.6")
 
-**How to draw them.** In plan, draw the car as a rectangle with the opening in the front wall. Draw each door panel as a thick bar in front of the opening, in its closed position, and a dashed copy in its open (stacked) position, with an arrow showing the travel. A single-slide has one bar moving fully to one side; centre-opening two bars moving apart; two-speed two bars on two parallel tracks, both ending on the same side (mark the faster panel "2v"); two-speed centre-opening two such pairs.
+**Two-speed doors, explained.** Take a clear opening of width $W$. A single-slide door is one panel $W$ wide, so when open it needs $W$ of wall beside the opening to slide into. A **two-speed** door splits the panel into two, each $W/2$ wide, on **two parallel tracks**. Opened, the two panels lie side by side, one on each track, in a space only $W/2$ wide beside the opening. To get there, the panel farther from that space travels the whole $W$, the nearer one only $W/2$. They start and stop together, so the far panel moves **twice as fast**: it is marked **2v** and the near one **v**. These are the "two speeds". The gain is wall space: for the same opening a two-speed door needs only half the space of a single-slide, and on one side only (a centre-opening door needs $W/2$ on *both* sides). A **two-speed centre-opening** door is two such pairs, one on each side: four panels of $W/4$, the inner two at 2v and the outer two at v, stacking in only $W/4$ on each side. That is why it gives the widest openings (1.5 m) [Grondzik §31.12].
+
+**How to draw them (in plan, seen from above).**
+
+1. Draw the landing wall as two thick, hatched bars with a gap between them: the clear opening $W$. Mark $W$ with a dimension line.
+2. Below the wall draw the track as a thin line: one track for single-slide and centre-opening, two parallel tracks for the two-speed types.
+3. Draw each panel **closed** as a narrow solid rectangle on its track; together the panels fill the gap. Draw each panel **open** as a dashed rectangle where it ends up, beside the opening, and mark the space it needs ($W$, $W/2$ or $W/4$).
+4. Draw an arrow from each closed panel to its open place and write its speed: **v**, or **2v** for a panel that travels twice as far.
+
+The four sketches: **single-slide**, one panel $W$ to one side; **centre-opening**, two panels $W/2$ parting to both sides; **two-speed**, two panels $W/2$ on two tracks, both stacking on one side, the far one 2v; **two-speed centre-opening**, four panels $W/4$, a two-speed pair on each side.
+
+::: {.doordraw #door-draw caption="The four arrangements in plan. Choose one, then open and close it with the button or the slider; the drawing at 0% is the exam sketch."}
+:::
 
 **Door safety** [Kanak p.177; Grondzik §31.12]: ANSI requires a **safety edge** on the car door of every automatic lift that reopens the car and landing doors on touching an obstruction; **photocells** or a **multi-beam infrared sensor** along the whole door edge reverse the door without contact; an electronic sensor can watch a wide area of the landing (children, wheelchairs, beds). Some doors "nudge" closed slowly after a set time.
 

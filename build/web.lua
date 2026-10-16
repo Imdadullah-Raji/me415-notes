@@ -42,10 +42,12 @@ function Div(el)
     for _, b in ipairs(el.content) do table.insert(out, b) end
     table.insert(out, html('</details>'))
     return out
-  elseif c:includes('liftdraw') then
-    -- The written drawing directive becomes the stage-by-stage drawing (liftdraw.js); the text is kept for no-JS.
-    local out = {html('<figure class="liftdraw" id="' .. el.identifier .. '" data-anim="lift" ' ..
-                      'aria-label="Drawing the traction lift, stage by stage">' ..
+  elseif c:includes('liftdraw') or c:includes('doordraw') then
+    -- A drawing animation (liftdraw.js, doors.js) in place of a written drawing directive; the text is kept for no-JS.
+    local lift = c:includes('liftdraw')
+    local out = {html('<figure class="' .. (lift and 'liftdraw' or 'doordraw') .. '" id="' .. el.identifier ..
+                      '" data-anim="' .. (lift and 'lift' or 'doors') .. '" aria-label="' ..
+                      (lift and 'Drawing the traction lift, stage by stage' or 'Lift door arrangements, in plan') .. '">' ..
                       (el.attributes.caption and ('<figcaption>' .. escape(el.attributes.caption) .. '</figcaption>') or '') ..
                       '</figure><noscript>')}
     for _, b in ipairs(el.content) do table.insert(out, b) end
