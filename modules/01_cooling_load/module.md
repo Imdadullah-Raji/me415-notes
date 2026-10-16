@@ -57,8 +57,8 @@ The CLTD/CLF method builds both effects into tabulated factors, so that the cool
 | 3 | Solar heat through glass | $A\,SC\,SHGF_{max}\,CLF$ | sensible |
 | 4 | Outdoor air (infiltration or ventilation) | $1200\dot V\Delta T$; $3010\times10^3\dot V\Delta\omega$ | sensible + latent |
 | 5 | Occupants | $nq_S\,CLF$; $nq_L$ | sensible + latent |
-| 6 | Equipment | $P\,CLF$ | sensible |
-| 7 | Lights | $W\,BF\,D\,CLF$ | sensible |
+| 6 | Lights | $W\,BF\,D\,CLF$ | sensible |
+| 7 | Equipment (appliances) | $P\,CLF$ | sensible |
 
 This is exactly the seven-row summary table of Arif sir's example [Arif p.58]; end every answer with it.
 
@@ -119,7 +119,7 @@ $$R_{th}=R_o+\sum\frac{L}{k}+R_i,\qquad U=\frac{1}{R_{th}}$$
 
 **Two routes to U** [Arif p.38]:
 
-1. **Build it from layers.** Table 12(a) gives the layer codes of each roof, Table 14 those of each wall group. Table 16 gives each code's $R$ (or $L$ and $k$; use the *actual* thickness with $R=L/k$). Table 17 gives $k$ for other materials (oak door: $k=0.16$ W/m·K [Arif p.42]).
+1. **Build it from layers.** Table 12(a) gives the layer codes of each roof, Table 14 those of each wall group. Table 16 gives each code's $R$ (or $L$ and $k$; use the *actual* thickness with $R=L/k$). Table 17 gives $k$ for other materials (oak door: $k=0.16$ W/m·K [Arif p.42]). A door is one layer between the two films: $R_{th}=$ A0 $+L/k+$ E0 (worked in §1.6).
 2. **Read it from the table.** Table 12(b) prints $U$ for each of the 13 roofs (with the "or 50 mm insulation" value in brackets); Table 14 prints $U$ for each wall construction.
 
 **Rule for this guide:** when the roof or wall matches a listed construction, take $U$ **from Table 12(b) or Table 14**. Build from layers only when it does not (the 254 mm brick wall; a roof with 75 mm insulation). This sidesteps the B7 misprint below.
@@ -199,6 +199,10 @@ The values you will need (24° N):
 | Apr/Aug | −1.1 | −0.5 | −1.6 | 0.0 |
 | May/Jul | 0.5 | 0.0 | −3.3 | 0.5 |
 | Jun | 1.6 | 0.0 | −3.3 | 0.5 |
+
+> **TRAP: The LM column follows the facing**
+>
+> Read $LM$ in the column of the surface's facing: **E/W** for a west (or east) wall, **N** for a north wall, **S** for a south wall, **HOR** for the roof. At 24° N, Apr/Aug, a west wall takes $-0.5$, not the north wall's $-1.1$.
 
 > **TRAP: Table 13 stops at 32° N**
 >
@@ -293,7 +297,7 @@ The 24° N values you need:
 
 > **TRAP: Table 18(a) has only the 24° N block**
 >
-> The first part of Table 18(a) (the other latitudes) is missing from the data book; p.40 begins "(Contd.)" with 24° N. This is the right block for Bangladesh, so nothing is lost, but do not look for 22° or 23° N. Table 18(b) is for **externally shaded** glass and is not used for ordinary windows.
+> The first part of Table 18(a) (the other latitudes) is missing from the data book; p.40 begins "(Contd.)" with 24° N. This is the right block for Bangladesh, so nothing is lost, but do not look for 22° or 23° N. Table 18(b) is for **externally shaded** glass and is not used for ordinary windows: **a sunlit window takes Table 18(a)** (24° N, April, W: 719 W/m², not the 133 of Table 18(b)).
 
 > **TRAP: Gross wall area or net wall area**
 >
@@ -337,7 +341,7 @@ A wall, door or glass between the room and an **unconditioned** space or a **sha
 
 $$Q=U\,A\,TD,\qquad TD=\begin{cases}T_{un}-T_i&\text{next to an unconditioned room (e.g. }30-25.5=4.5\text{ °C)}\\T_o-T_i&\text{shaded outdoor face (e.g. }33-25.5=7.5\text{ °C)}\end{cases}$$
 
-A door's $U$ comes from $R=L/k$ with $k$ from Table 17 (hardwood, oak: 0.16 W/m·K), plus the two films [Arif p.42]. Subtract the door area from the wall it is in. A floor on the ground, or over another conditioned floor, is neglected.
+A door's $U$ is built like a wall of one layer: the outside film A0, the door $L/k$ with $k$ from Table 17 (hardwood, oak: 0.16 W/m·K), and the inside film E0 [Arif p.42]. For a 25 mm hardwood door, $R_{th}=0.059+0.025/0.16+0.121=0.059+0.156+0.121=0.336$ m²·K/W and $U=1/0.336=\mathbf{2.98}$ W/m²·K. Subtract the door area from the wall it is in. A floor on the ground, or over another conditioned floor, is neglected.
 
 In every past paper the statement "no heat transfer through floor, south and east walls" removes this whole group: **partition load = 0**. Say so in one line of the ledger; do not leave the row out silently.
 
@@ -452,14 +456,18 @@ with $\dot V$ in m³/s. The constants are $\rho c_p\approx1.2\times1005\approx12
 
 ## 1.9 The ledger: putting it together ★
 
-Lay out every answer in the same order, with the look-up beside each number. Examiners mark the look-ups.
+Lay out every answer as the same short run of tables, in the same order, with the look-up beside each number. Examiners mark the look-ups. Geometry has no step of its own: each area is worked out in the $A$ column of the table that uses it (e.g. $30-2=28$), and the room volume in the outdoor-air step.
 
-1. **Assumptions box:** outdoor and indoor design conditions; latitude 24° N; solar time = clock time; K = 1, f = 1; roof row; wall group; room construction for Table 19; air flow; appliances.
-2. **Geometry:** floor area, volume, gross wall areas (N, W), glass areas, net wall areas.
-3. **U-values:** roof, walls, glass (given), doors.
-4. **CLTD table:** for roof, N wall, W wall: CLTD, LM, $CLTD_c$; glass CLTD.
-5. **Loads 1–7** (the table in §1.1), each with its formula.
-6. **Summary:** sensible column, latent column, total in W, kW and **TR**.
+0. **Design conditions and assumptions:** $T_o$, $T_i$, $DR$, $T_{o,av}$, $\omega_o$, $\omega_i$ (§1.2); latitude 24° N, month, solar time = clock time; K = 1, f = 1; roof row, wall group, room construction for Table 19, air flow, appliances.
+1. **U-value table** (Item, description, layers, $R_{th}$, $U$): roof, walls, partitions, **door** ($R_{th}=$ A0 $+L/k+$ E0), glass (given). A row read straight from Table 12(b) or 14 gives the look-up instead of the layers.
+2. **Shaded surfaces** (Item, $A$, $U$, $TD$, $Q$): partitions, doors, shaded or partition glass; $Q=UA\,TD$ with $TD=T_{adj}-T_i$.
+3. **Sunlit surfaces** (Item, $A$, $U$, CLTD, $LM$, $CLTD_c$, $Q$): roof, sunlit walls (net of glass and doors), and glass conduction (CLTD from Table 20, not corrected); $Q=UA\,CLTD_c$.
+4. **Solar gain through glass** (Item, $A$, SC, $SHGF_{max}$, CLF, $Q$): one row per window.
+5. **Outdoor air:** volume, $\dot V$, $Q_S$ and $Q_L$.
+6. **People:** $nq_S\,CLF$ and $nq_L$.
+7. **Lights:** $W\,BF\,D\,CLF$, with the floor area.
+8. **Appliances:** $P\,CLF$.
+9. **Summary:** sensible column, latent column, total in W, kW and **TR**.
 
 > **EXAMPLE 1.1** `[Arif pp.33–59; Rifat pp.16–28]` (the lecture example) An office, 10 m × 10 m × 3.0 m high, at 25.5 °C and 50% RH, on 12 April at 5 pm. West and south walls: metal curtain wall, construction type G with 75 mm insulation, sunlit, dark. Partition walls N and E: 127 mm brick with 25 mm plaster on both sides; 30 °C unconditioned space to the north, open (shaded) space to the east. Roof: type 4 with 50 mm insulation, no suspended ceiling. Windows: 6 m² on the west and 6 m² on the east wall, $U=2.86$ W/m²·K, 13 mm, light construction. No heat transfer through the floor. 1.0 air change per hour. Lights and occupants from 8 am to 6 pm; 25 W/m² fluorescent. Five occupants seated, using one computer. Door in the north wall: 2 m × 1 m, 25 mm hardwood. Find the cooling load.
 >
@@ -467,43 +475,59 @@ Lay out every answer in the same order, with the look-up beside each number. Exa
 >
 > **[FROM SOURCE: Arif pp.33–59]**
 >
-> *U-values.* Roof 4 with B5 replaced by B6 (50 mm insulation): $R_{th}=0.059+0.099+0.050+1.173+0.029+0.121=1.531$, $U=0.653$ (the slide prints 1.581, a misprint; its $U$ is right). Curtain wall A0, A3, B12, A3, E0: $R=0.059+0+1.76+0+0.121=1.94$, $U=0.52$. Partition: $0.059+2(0.0343)+0.127/0.727+0.121=0.4236$, $U=2.36$. Door: $R=0.025/0.16=0.156$, $R_{th}=0.336$, $U=2.98$.
+> *Step 1. U-value table.*
 >
-> *1. Partitions* ($TD=30-25.5=4.5$ to the north, $33-25.5=7.5$ to the shaded east):
+> | Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+> |:---|:---|:---|:---|---:|
+> | Roof | type 4 with 50 mm insulation (B5 → B6) | A0, E2, E3, B6, C12, E0 | $0.059+0.099+0.050+1.173+0.029+0.121=1.531$ | 0.653 |
+> | W, S walls | metal curtain wall, group G, 75 mm insulation | A0, A3, B12, A3, E0 | $0.059+0+1.76+0+0.121=1.94$ | 0.52 |
+> | N, E partitions | 127 mm brick, 25 mm plaster both sides | A0, E1, C4, E1, E0 | $0.059+2(0.0343)+0.127/0.727+0.121=0.4236$ | 2.36 |
+> | Door | 25 mm hardwood (oak, Table 17: $k=0.16$) | A0, $L/k$, E0 | $0.059+0.025/0.16+0.121=0.059+0.156+0.121=0.336$ | 2.98 |
+> | Glass | 13 mm | given | | 2.86 |
 >
-> | Item | $A$ | $U$ | $TD$ | $Q$ (W) |
+> The slide prints the roof's $R_{th}$ as 1.581, a misprint; its $U$ is right.
+>
+> *Step 2. Shaded surfaces* ($TD=30-25.5=4.5$ to the north, $33-25.5=7.5$ to the shaded east):
+>
+> | Item | $A$ (m²) | $U$ | $TD$ | $Q$ (W) |
 > |---|---|---|---|---|
 > | N partition | $30-2=28$ | 2.36 | 4.5 | 297.4 |
-> | Door | 2 | 2.98 | 4.5 | 26.8 |
+> | Door | $2\times1=2$ | 2.98 | 4.5 | 26.8 |
 > | E partition | $30-6=24$ | 2.36 | 7.5 | 424.8 |
 > | E glass (shaded) | 6 | 2.86 | 7.5 | 128.7 |
 > | **Total** | | | | **877.7** |
 >
-> *2. Sunlit surfaces.* Roof 4 at 17 h: CLTD 37, LM (24° N, Apr, HOR) 0 → $CLTD_c=37+0-1.9=35.1$. West wall G at 17 h: $40-0.5-1.9=37.6$. South wall G: $17-1.6-1.9=13.5$. Glass at 17 h: 7.
+> *Step 3. Sunlit surfaces* (17 h; Table 13, 24° N, Apr/Aug; $CLTD_c=CLTD+LM-1.9$):
 >
-> | Item | $A$ | $U$ | $CLTD_c$ | $Q$ (W) |
-> |---|---|---|---|---|
-> | Roof | 100 | 0.653 | 35.1 | 2292.0 |
-> | S wall | 30 | 0.52 | 13.5 | 210.6 |
-> | W wall | $30-6=24$ | 0.52 | 37.6 | 469.2 |
-> | W glass | 6 | 2.86 | 7 | 120.1 |
-> | **Total** | | | | **3092.0** |
+> | Item | $A$ (m²) | $U$ | CLTD | $LM$ | $CLTD_c$ | $Q$ (W) |
+> |---|---|---|---|---|---|---|
+> | Roof 4 | $10\times10=100$ | 0.653 | 37 | 0 (HOR) | $37+0-1.9=35.1$ | 2292.0 |
+> | W wall, group G | $30-6=24$ | 0.52 | 40 | −0.5 (E/W) | $40-0.5-1.9=37.6$ | 469.2 |
+> | S wall, group G | $10\times3=30$ | 0.52 | 17 | −1.6 (S) | $17-1.6-1.9=13.5$ | 210.6 |
+> | W glass | 6 | 2.86 | 7 (Table 20) | – | 7 | 120.1 |
+> | **Total** | | | | | | **3092.0** |
 >
-> *3. Solar, west glass:* $6\times0.88\times719\times0.64=2429.6\approx2430$ W (SC 13 mm, $h_o=7$; SHGF April W; CLF W, L, 17 h).
+> *Step 4. Solar gain, west glass* (SC: 13 mm, $h_o=7$; SHGF: Table 18(a), April, W; CLF: Table 19, W, L, 17 h):
 >
-> *4. Air:* $\dot V=300/3600=0.0833$ m³/s; $Q_S=1200(0.0833)(7.5)=750$ W; $Q_L=3010\times10^3(0.0833)(0.0205-0.0100)=2632.7$ W.
+> | Item | $A$ (m²) | SC | $SHGF_{max}$ | CLF | $Q$ (W) |
+> |---|---|---|---|---|---|
+> | W glass | 6 | 0.88 | 719 | 0.64 | $2429.6\approx2430$ |
 >
-> *5. People:* $5\times75=375$ W, $5\times55=275$ W. *6. Equipment:* one computer, 200 W. *7. Lights:* $25\times100\times1.2\times1\times0.85=2550$ W.
+> *Step 5. Outdoor air:* volume $10\times10\times3=300$ m³, $\dot V=300/3600=0.0833$ m³/s; $Q_S=1200(0.0833)(7.5)=750$ W; $Q_L=3010\times10^3(0.0833)(0.0205-0.0100)=2632.7$ W.
+>
+> *Step 6. People:* $5\times75=375$ W, $5\times55=275$ W. *Step 7. Lights:* $25\times100\times1.2\times1\times0.85=2550$ W. *Step 8. Appliances:* one computer, 200 W.
+>
+> *Step 9. Summary.*
 >
 > | Load | $Q_S$ | $Q_L$ |
 > |---|---|---|
-> | 1. Partitions | 877.7 | |
-> | 2. Roof, sunlit walls, glass | 3092.0 | |
-> | 3. Solar through glass | 2430 | |
-> | 4. Air exchange | 750 | 2632.7 |
-> | 5. Occupants | 375 | 275 |
-> | 6. Equipment | 200 | |
-> | 7. Lights | 2550 | |
+> | Shaded surfaces | 877.7 | |
+> | Roof, sunlit walls, glass | 3092.0 | |
+> | Solar through glass | 2430 | |
+> | Outdoor air | 750 | 2632.7 |
+> | Occupants | 375 | 275 |
+> | Lights | 2550 | |
+> | Appliances | 200 | |
 > | **Total** | **10274.7** | **2907.7** |
 >
 > $Q_T=13182.4$ W $=13.18$ kW $=\mathbf{3.75}$ **TR**. With the chart values $\Delta\omega=0.0100$ (TRAP in §1.8) the air latent load is 2507 W and the total 3.71 TR; the slide's answer stands to two figures.
@@ -550,7 +574,7 @@ Standing assumptions, used in every solution unless the solution says otherwise:
 
 ::: {.problem #sol-1-1}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
@@ -563,75 +587,61 @@ Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → a
 - Glass: Table 19 medium construction (M). Outdoor air: infiltration 1 ACH. Appliances: projector 300 W + computer 200 W = 500 W. North wall = 11 m side.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 22% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $11\times3.3=36.3$ m² | $7\times3.3=23.1$ m² |
-| glass, 22% | 7.986 m² | 5.082 m² |
-| net opaque wall | 28.314 m² | 18.018 m² |
-
-Floor (= roof) area $11\times7=77$ m²; volume $77\times3.3=254.1$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.5 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0172+0.3494+0.0172+0.121=0.5638$, $U=1.774$ W/m²·K. Glass $U=2.9$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.5 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0172+0.3494+0.0172+0.121=0.5638$ | 1.774 |
+| Glass | 10 mm clear | given | | 2.9 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 15; Table 15, group C, N and W, hour 15. LM: Table 13, 24° N, **Jun**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 15 h | $LM$ (24° N, Jun) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="15"} | [+0.5]{.lookup t="13" row="24;Jun" col="HOR"} (HOR) | $41+0.5-1.9=39.6$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="15"} | [+1.6]{.lookup t="13" row="24;Jun" col="N"} (N) | $6+1.6-1.9=5.7$ |
-| W wall, group C | [8]{.lookup t="15" row="C;W" col="15"} | [0.0]{.lookup t="13" row="24;Jun" col="E_W"} (E/W) | $8+0.0-1.9=6.1$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times77\times39.6$ | 2942.5 |
-| North wall (net) | $1.774\times28.314\times5.7$ | 286.3 |
-| West wall (net) | $1.774\times18.018\times6.1$ | 195.0 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 15, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 22% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 15, and Table 15, group C, N and W, hour 15; LM from Table 13, 24° N, **Jun**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 15, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 15: CLTD = [8]{.lookup t="20" row="1500" col="CLTD_C"} °C.
+Gross walls: north $11\times3.3=36.3$ m², west $7\times3.3=23.1$ m². Glass, 22%: north 7.986 m², west 5.082 m². Roof = floor $11\times7=77$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.9\times7.986\times8$ | 185.3 |
-| Glass conduction, W | $2.9\times5.082\times8$ | 117.9 |
+| Item | $A$ (m²) | $U$ | CLTD (15 h) | $LM$ (24° N, Jun) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 77 | 0.965 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="15"} | [+0.5]{.lookup t="13" row="24;Jun" col="HOR"} (HOR) | $41+0.5-1.9=39.6$ | 2942.5 |
+| N wall, group C | $36.3-7.986=28.314$ | 1.774 | [6]{.lookup t="15" row="C;N" col="15"} | [+1.6]{.lookup t="13" row="24;Jun" col="N"} (N) | $6+1.6-1.9=5.7$ | 286.3 |
+| W wall, group C | $23.1-5.082=18.018$ | 1.774 | [8]{.lookup t="15" row="C;W" col="15"} | [0.0]{.lookup t="13" row="24;Jun" col="E_W"} (E/W) | $8+0.0-1.9=6.1$ | 195.0 |
+| N glass | 7.986 | 2.9 | [8]{.lookup t="20" row="1500" col="CLTD_C"} (Table 20) | – | 8 | 185.3 |
+| W glass | 5.082 | 2.9 | 8 (Table 20) | – | 8 | 117.9 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **June**, N and E/W columns. CLF: Table 19, medium (M), hour 15, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, June): N [174]{.lookup t="18a" row="June" col="N"}, W [669]{.lookup t="18a" row="June" col="E_W"} W/m². CLF (Table 19, M, 15 h): N [0.76]{.lookup t="19" row="N (Shaded);M" col="15"}, W [0.40]{.lookup t="19" row="W;M" col="15"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $7.986\times0.92\times174\times0.76$ | 971.6 |
-| Glass solar, W | $5.082\times0.92\times669\times0.40$ | 1251.1 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 15 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 7.986 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [174]{.lookup t="18a" row="June" col="N"} | [0.76]{.lookup t="19" row="N (Shaded);M" col="15"} | 971.6 |
+| W glass | 5.082 | 0.92 | [669]{.lookup t="18a" row="June" col="E_W"} | [0.40]{.lookup t="19" row="W;M" col="15"} | 1251.1 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $77\times3.3=254.1$ m³. 1 ACH: $\dot V=254.1/3600=0.0706$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0706)(7.5)$; $3010\times10^3(0.0706)(0.0100)$ | 635.4 | 2125.1 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -642,7 +652,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $60\times75$; $60\times55$ | 4500.0 | 3300.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -651,7 +661,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $20\times77\times1.2\times0.85$ | 1570.8 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -660,24 +670,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=254.1/3600=0.0706$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0706)(7.5)$; $3010\times10^3(0.0706)(0.0100)$ | 635.4 | 2125.1 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times77\times39.6$ | 2942.5 | |
 | North wall (net) | $1.774\times28.314\times5.7$ | 286.3 | |
 | West wall (net) | $1.774\times18.018\times6.1$ | 195.0 | |
@@ -685,10 +684,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.9\times5.082\times8$ | 117.9 | |
 | Glass solar, N | $7.986\times0.92\times174\times0.76$ | 971.6 | |
 | Glass solar, W | $5.082\times0.92\times669\times0.40$ | 1251.1 | |
+| Outdoor air, 1 ACH | $1200(0.0706)(7.5)$; $3010\times10^3(0.0706)(0.0100)$ | 635.4 | 2125.1 |
 | People | $60\times75$; $60\times55$ | 4500.0 | 3300.0 |
 | Lights | $20\times77\times1.2\times0.85$ | 1570.8 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0706)(7.5)$; $3010\times10^3(0.0706)(0.0100)$ | 635.4 | 2125.1 |
 | **Sum** | | **13155.9** | **5425.1** |
 
 **Total $= 13155.9+5425.1 = 18581.0$ W $= 18.58$ kW $= 5.28$ TR** (SHR $= 0.71$).
@@ -721,82 +720,68 @@ Two alternative readings, for reference (state them in one line if you have time
 
 ::: {.problem #sol-1-2}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 As Solution 1.1, with these changes. 4 pm = 16 h; July → May/Jul (Table 13) and July (Table 18(a)). North wall $12\times3.5=42$ m² (glass 8.4, net 33.6), west wall $8\times3.5=28$ m² (glass 5.6, net 22.4); floor 96 m², volume 336 m³.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 20% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $12\times3.5=42$ m² | $8\times3.5=28$ m² |
-| glass, 20% | 8.4 m² | 5.6 m² |
-| net opaque wall | 33.6 m² | 22.4 m² |
-
-Floor (= roof) area $12\times8=96$ m²; volume $96\times3.5=336.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.5 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0172+0.3494+0.0172+0.121=0.5638$, $U=1.774$ W/m²·K. Glass $U=2.5$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.5 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0172+0.3494+0.0172+0.121=0.5638$ | 1.774 |
+| Glass | 10 mm clear | given | | 2.5 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 16; Table 15, group C, N and W, hour 16. LM: Table 13, 24° N, **May/Jul**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 16 h | $LM$ (24° N, May/Jul) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="HOR"} (HOR) | $41+0.5-1.9=39.6$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="N"} (N) | $6+0.5-1.9=4.6$ |
-| W wall, group C | [9]{.lookup t="15" row="C;W" col="16"} | [0.0]{.lookup t="13" row="24;May/Jul" col="E_W"} (E/W) | $9+0.0-1.9=7.1$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times96\times39.6$ | 3668.5 |
-| North wall (net) | $1.774\times33.6\times4.6$ | 274.2 |
-| West wall (net) | $1.774\times22.4\times7.1$ | 282.1 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 16, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 20% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 16, and Table 15, group C, N and W, hour 16; LM from Table 13, 24° N, **May/Jul**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 16, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 16: CLTD = [8]{.lookup t="20" row="1600" col="CLTD_C"} °C.
+Gross walls: north $12\times3.5=42$ m², west $8\times3.5=28$ m². Glass, 20%: north 8.4 m², west 5.6 m². Roof = floor $12\times8=96$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.5\times8.4\times8$ | 168.0 |
-| Glass conduction, W | $2.5\times5.6\times8$ | 112.0 |
+| Item | $A$ (m²) | $U$ | CLTD (16 h) | $LM$ (24° N, May/Jul) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 96 | 0.965 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="HOR"} (HOR) | $41+0.5-1.9=39.6$ | 3668.5 |
+| N wall, group C | $42-8.4=33.6$ | 1.774 | [6]{.lookup t="15" row="C;N" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="N"} (N) | $6+0.5-1.9=4.6$ | 274.2 |
+| W wall, group C | $28-5.6=22.4$ | 1.774 | [9]{.lookup t="15" row="C;W" col="16"} | [0.0]{.lookup t="13" row="24;May/Jul" col="E_W"} (E/W) | $9+0.0-1.9=7.1$ | 282.1 |
+| N glass | 8.4 | 2.5 | [8]{.lookup t="20" row="1600" col="CLTD_C"} (Table 20) | – | 8 | 168.0 |
+| W glass | 5.6 | 2.5 | 8 (Table 20) | – | 8 | 112.0 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **July**, N and E/W columns. CLF: Table 19, medium (M), hour 16, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, July): N [142]{.lookup t="18a" row="July" col="N"}, W [672]{.lookup t="18a" row="July" col="E_W"} W/m². CLF (Table 19, M, 16 h): N [0.74]{.lookup t="19" row="N (Shaded);M" col="16"}, W [0.50]{.lookup t="19" row="W;M" col="16"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $8.4\times0.92\times142\times0.74$ | 812.1 |
-| Glass solar, W | $5.6\times0.92\times672\times0.50$ | 1731.1 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 16 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 8.4 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [142]{.lookup t="18a" row="July" col="N"} | [0.74]{.lookup t="19" row="N (Shaded);M" col="16"} | 812.1 |
+| W glass | 5.6 | 0.92 | [672]{.lookup t="18a" row="July" col="E_W"} | [0.50]{.lookup t="19" row="W;M" col="16"} | 1731.1 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $96\times3.5=336.0$ m³. 1 ACH: $\dot V=336.0/3600=0.0933$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0933)(7.5)$; $3010\times10^3(0.0933)(0.0100)$ | 839.7 | 2808.3 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -807,7 +792,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $50\times75$; $50\times55$ | 3750.0 | 2750.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -816,7 +801,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $30\times96\times1.2\times0.85$ | 2937.6 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -825,24 +810,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=336.0/3600=0.0933$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0933)(7.5)$; $3010\times10^3(0.0933)(0.0100)$ | 839.7 | 2808.3 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times96\times39.6$ | 3668.5 | |
 | North wall (net) | $1.774\times33.6\times4.6$ | 274.2 | |
 | West wall (net) | $1.774\times22.4\times7.1$ | 282.1 | |
@@ -850,10 +824,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.5\times5.6\times8$ | 112.0 | |
 | Glass solar, N | $8.4\times0.92\times142\times0.74$ | 812.1 | |
 | Glass solar, W | $5.6\times0.92\times672\times0.50$ | 1731.1 | |
+| Outdoor air, 1 ACH | $1200(0.0933)(7.5)$; $3010\times10^3(0.0933)(0.0100)$ | 839.7 | 2808.3 |
 | People | $50\times75$; $50\times55$ | 3750.0 | 2750.0 |
 | Lights | $30\times96\times1.2\times0.85$ | 2937.6 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0933)(7.5)$; $3010\times10^3(0.0933)(0.0100)$ | 839.7 | 2808.3 |
 | **Sum** | | **15075.3** | **5558.3** |
 
 **Total $= 15075.3+5558.3 = 20633.6$ W $= 20.63$ kW $= 5.87$ TR** (SHR $= 0.73$).
@@ -881,82 +855,68 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-3}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 (the class solution [Kanak pp.111–117] got 8.9 TR; see the corrections below). As Solution 1.1, with: 5 pm = 17 h; June. North wall $10\times3=30$ m² (glass 3.9, net 26.1), west wall $7\times3=21$ m² (glass 2.73, net 18.27); floor 70 m², volume 210 m³.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 13% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $10\times3=30$ m² | $7\times3=21$ m² |
-| glass, 13% | 3.9 m² | 2.73 m² |
-| net opaque wall | 26.1 m² | 18.27 m² |
-
-Floor (= roof) area $10\times7=70$ m²; volume $70\times3=210.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.5 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0172+0.3494+0.0172+0.121=0.5638$, $U=1.774$ W/m²·K. Glass $U=2.7$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.5 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0172+0.3494+0.0172+0.121=0.5638$ | 1.774 |
+| Glass | 10 mm clear | given | | 2.7 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 17; Table 15, group C, N and W, hour 17. LM: Table 13, 24° N, **Jun**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 17 h | $LM$ (24° N, Jun) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [39]{.lookup t="12b" row="without suspended ceiling;2" col="17"} | [+0.5]{.lookup t="13" row="24;Jun" col="HOR"} (HOR) | $39+0.5-1.9=37.6$ |
-| N wall, group C | [7]{.lookup t="15" row="C;N" col="17"} | [+1.6]{.lookup t="13" row="24;Jun" col="N"} (N) | $7+1.6-1.9=6.7$ |
-| W wall, group C | [11]{.lookup t="15" row="C;W" col="17"} | [0.0]{.lookup t="13" row="24;Jun" col="E_W"} (E/W) | $11+0.0-1.9=9.1$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times70\times37.6$ | 2539.9 |
-| North wall (net) | $1.774\times26.1\times6.7$ | 310.2 |
-| West wall (net) | $1.774\times18.27\times9.1$ | 294.9 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 17, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 13% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 17, and Table 15, group C, N and W, hour 17; LM from Table 13, 24° N, **Jun**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 17, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 17: CLTD = [7]{.lookup t="20" row="1700" col="CLTD_C"} °C.
+Gross walls: north $10\times3=30$ m², west $7\times3=21$ m². Glass, 13%: north 3.9 m², west 2.73 m². Roof = floor $10\times7=70$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.7\times3.9\times7$ | 73.7 |
-| Glass conduction, W | $2.7\times2.73\times7$ | 51.6 |
+| Item | $A$ (m²) | $U$ | CLTD (17 h) | $LM$ (24° N, Jun) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 70 | 0.965 | [39]{.lookup t="12b" row="without suspended ceiling;2" col="17"} | [+0.5]{.lookup t="13" row="24;Jun" col="HOR"} (HOR) | $39+0.5-1.9=37.6$ | 2539.9 |
+| N wall, group C | $30-3.9=26.1$ | 1.774 | [7]{.lookup t="15" row="C;N" col="17"} | [+1.6]{.lookup t="13" row="24;Jun" col="N"} (N) | $7+1.6-1.9=6.7$ | 310.2 |
+| W wall, group C | $21-2.73=18.27$ | 1.774 | [11]{.lookup t="15" row="C;W" col="17"} | [0.0]{.lookup t="13" row="24;Jun" col="E_W"} (E/W) | $11+0.0-1.9=9.1$ | 294.9 |
+| N glass | 3.9 | 2.7 | [7]{.lookup t="20" row="1700" col="CLTD_C"} (Table 20) | – | 7 | 73.7 |
+| W glass | 2.73 | 2.7 | 7 (Table 20) | – | 7 | 51.6 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **June**, N and E/W columns. CLF: Table 19, medium (M), hour 17, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, June): N [174]{.lookup t="18a" row="June" col="N"}, W [669]{.lookup t="18a" row="June" col="E_W"} W/m². CLF (Table 19, M, 17 h): N [0.75]{.lookup t="19" row="N (Shaded);M" col="17"}, W [0.56]{.lookup t="19" row="W;M" col="17"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $3.9\times0.92\times174\times0.75$ | 468.2 |
-| Glass solar, W | $2.73\times0.92\times669\times0.56$ | 940.9 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 17 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 3.9 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [174]{.lookup t="18a" row="June" col="N"} | [0.75]{.lookup t="19" row="N (Shaded);M" col="17"} | 468.2 |
+| W glass | 2.73 | 0.92 | [669]{.lookup t="18a" row="June" col="E_W"} | [0.56]{.lookup t="19" row="W;M" col="17"} | 940.9 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $70\times3=210.0$ m³. 1 ACH: $\dot V=210.0/3600=0.0583$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0583)(7.5)$; $3010\times10^3(0.0583)(0.0100)$ | 524.7 | 1754.8 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -967,7 +927,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $65\times75$; $65\times55$ | 4875.0 | 3575.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -976,7 +936,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $22\times70\times1.2\times0.85$ | 1570.8 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -985,24 +945,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=210.0/3600=0.0583$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0583)(7.5)$; $3010\times10^3(0.0583)(0.0100)$ | 524.7 | 1754.8 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times70\times37.6$ | 2539.9 | |
 | North wall (net) | $1.774\times26.1\times6.7$ | 310.2 | |
 | West wall (net) | $1.774\times18.27\times9.1$ | 294.9 | |
@@ -1010,10 +959,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.7\times2.73\times7$ | 51.6 | |
 | Glass solar, N | $3.9\times0.92\times174\times0.75$ | 468.2 | |
 | Glass solar, W | $2.73\times0.92\times669\times0.56$ | 940.9 | |
+| Outdoor air, 1 ACH | $1200(0.0583)(7.5)$; $3010\times10^3(0.0583)(0.0100)$ | 524.7 | 1754.8 |
 | People | $65\times75$; $65\times55$ | 4875.0 | 3575.0 |
 | Lights | $22\times70\times1.2\times0.85$ | 1570.8 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0583)(7.5)$; $3010\times10^3(0.0583)(0.0100)$ | 524.7 | 1754.8 |
 | **Sum** | | **12149.9** | **5329.8** |
 
 **Total $= 12149.9+5329.8 = 17479.7$ W $= 17.48$ kW $= 4.97$ TR** (SHR $= 0.70$).
@@ -1043,82 +992,68 @@ How this differs from the class solution: roof $U$ 0.965, not 0.374 (B7 misprint
 
 ::: {.problem #sol-1-4}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 As Solution 1.1, with: Dhaka (23°43′ N) → Chittagong design data and the 24° N tables (TIP in §1.2); 16 h; April → Apr/Aug and Apr. North wall $8\times3.5=28$ m² (glass 4.2, net 23.8), west wall $7\times3.5=24.5$ m² (glass 3.675, net 20.825); floor 56 m², volume 196 m³.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 15% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $8\times3.5=28$ m² | $7\times3.5=24.5$ m² |
-| glass, 15% | 4.2 m² | 3.675 m² |
-| net opaque wall | 23.8 m² | 20.825 m² |
-
-Floor (= roof) area $8\times7=56$ m²; volume $56\times3.5=196.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.5 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0172+0.3494+0.0172+0.121=0.5638$, $U=1.774$ W/m²·K. Glass $U=2.9$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.5 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0172+0.3494+0.0172+0.121=0.5638$ | 1.774 |
+| Glass | 10 mm clear | given | | 2.9 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 16; Table 15, group C, N and W, hour 16. LM: Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 16 h | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="16"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ |
-| W wall, group C | [9]{.lookup t="15" row="C;W" col="16"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $9-0.5-1.9=6.6$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times56\times39.1$ | 2113.0 |
-| North wall (net) | $1.774\times23.8\times3.0$ | 126.7 |
-| West wall (net) | $1.774\times20.825\times6.6$ | 243.8 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 16, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 15% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 16, and Table 15, group C, N and W, hour 16; LM from Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 16, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 16: CLTD = [8]{.lookup t="20" row="1600" col="CLTD_C"} °C.
+Gross walls: north $8\times3.5=28$ m², west $7\times3.5=24.5$ m². Glass, 15%: north 4.2 m², west 3.675 m². Roof = floor $8\times7=56$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.9\times4.2\times8$ | 97.4 |
-| Glass conduction, W | $2.9\times3.675\times8$ | 85.3 |
+| Item | $A$ (m²) | $U$ | CLTD (16 h) | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 56 | 0.965 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ | 2113.0 |
+| N wall, group C | $28-4.2=23.8$ | 1.774 | [6]{.lookup t="15" row="C;N" col="16"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ | 126.7 |
+| W wall, group C | $24.5-3.675=20.825$ | 1.774 | [9]{.lookup t="15" row="C;W" col="16"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $9-0.5-1.9=6.6$ | 243.8 |
+| N glass | 4.2 | 2.9 | [8]{.lookup t="20" row="1600" col="CLTD_C"} (Table 20) | – | 8 | 97.4 |
+| W glass | 3.675 | 2.9 | 8 (Table 20) | – | 8 | 85.3 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **April**, N and E/W columns. CLF: Table 19, medium (M), hour 16, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, April): N [117]{.lookup t="18a" row="Apr." col="N"}, W [719]{.lookup t="18a" row="Apr." col="E_W"} W/m². CLF (Table 19, M, 16 h): N [0.74]{.lookup t="19" row="N (Shaded);M" col="16"}, W [0.50]{.lookup t="19" row="W;M" col="16"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $4.2\times0.92\times117\times0.74$ | 334.5 |
-| Glass solar, W | $3.675\times0.92\times719\times0.50$ | 1215.5 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 16 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 4.2 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [117]{.lookup t="18a" row="Apr." col="N"} | [0.74]{.lookup t="19" row="N (Shaded);M" col="16"} | 334.5 |
+| W glass | 3.675 | 0.92 | [719]{.lookup t="18a" row="Apr." col="E_W"} | [0.50]{.lookup t="19" row="W;M" col="16"} | 1215.5 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $56\times3.5=196.0$ m³. 1 ACH: $\dot V=196.0/3600=0.0544$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0544)(7.5)$; $3010\times10^3(0.0544)(0.0100)$ | 489.6 | 1637.4 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -1129,7 +1064,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $60\times75$; $60\times55$ | 4500.0 | 3300.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -1138,7 +1073,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $25\times56\times1.2\times0.85$ | 1428.0 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -1147,24 +1082,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=196.0/3600=0.0544$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0544)(7.5)$; $3010\times10^3(0.0544)(0.0100)$ | 489.6 | 1637.4 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times56\times39.1$ | 2113.0 | |
 | North wall (net) | $1.774\times23.8\times3.0$ | 126.7 | |
 | West wall (net) | $1.774\times20.825\times6.6$ | 243.8 | |
@@ -1172,10 +1096,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.9\times3.675\times8$ | 85.3 | |
 | Glass solar, N | $4.2\times0.92\times117\times0.74$ | 334.5 | |
 | Glass solar, W | $3.675\times0.92\times719\times0.50$ | 1215.5 | |
+| Outdoor air, 1 ACH | $1200(0.0544)(7.5)$; $3010\times10^3(0.0544)(0.0100)$ | 489.6 | 1637.4 |
 | People | $60\times75$; $60\times55$ | 4500.0 | 3300.0 |
 | Lights | $25\times56\times1.2\times0.85$ | 1428.0 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0544)(7.5)$; $3010\times10^3(0.0544)(0.0100)$ | 489.6 | 1637.4 |
 | **Sum** | | **11133.8** | **4937.4** |
 
 **Total $= 11133.8+4937.4 = 16071.2$ W $= 16.07$ kW $= 4.57$ TR** (SHR $= 0.69$).
@@ -1203,82 +1127,68 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-5}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 As Solution 1.1, with: 12.7 mm plaster → wall $U=1.772$ (Example 1.2); 15 h; April. Both walls $8\times4=32$ m² (glass 4.16, net 27.84 each); floor 64 m², volume 256 m³.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 13% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $8\times4=32$ m² | $8\times4=32$ m² |
-| glass, 13% | 4.16 m² | 4.16 m² |
-| net opaque wall | 27.84 m² | 27.84 m² |
-
-Floor (= roof) area $8\times8=64$ m²; volume $64\times4=256.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.7 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0175+0.3494+0.0175+0.121=0.5644$, $U=1.772$ W/m²·K. Glass $U=2.8$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.7 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0175+0.3494+0.0175+0.121=0.5644$ | 1.772 |
+| Glass | 10 mm clear | given | | 2.8 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 15; Table 15, group C, N and W, hour 15. LM: Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 15 h | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="15"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="15"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ |
-| W wall, group C | [8]{.lookup t="15" row="C;W" col="15"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $8-0.5-1.9=5.6$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times64\times39.1$ | 2414.8 |
-| North wall (net) | $1.772\times27.84\times3.0$ | 148.0 |
-| West wall (net) | $1.772\times27.84\times5.6$ | 276.3 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 15, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 13% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 15, and Table 15, group C, N and W, hour 15; LM from Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 15, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 15: CLTD = [8]{.lookup t="20" row="1500" col="CLTD_C"} °C.
+Gross walls: north $8\times4=32$ m², west $8\times4=32$ m². Glass, 13%: north 4.16 m², west 4.16 m². Roof = floor $8\times8=64$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.8\times4.16\times8$ | 93.2 |
-| Glass conduction, W | $2.8\times4.16\times8$ | 93.2 |
+| Item | $A$ (m²) | $U$ | CLTD (15 h) | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 64 | 0.965 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="15"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ | 2414.8 |
+| N wall, group C | $32-4.16=27.84$ | 1.772 | [6]{.lookup t="15" row="C;N" col="15"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ | 148.0 |
+| W wall, group C | $32-4.16=27.84$ | 1.772 | [8]{.lookup t="15" row="C;W" col="15"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $8-0.5-1.9=5.6$ | 276.3 |
+| N glass | 4.16 | 2.8 | [8]{.lookup t="20" row="1500" col="CLTD_C"} (Table 20) | – | 8 | 93.2 |
+| W glass | 4.16 | 2.8 | 8 (Table 20) | – | 8 | 93.2 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **April**, N and E/W columns. CLF: Table 19, medium (M), hour 15, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, April): N [117]{.lookup t="18a" row="Apr." col="N"}, W [719]{.lookup t="18a" row="Apr." col="E_W"} W/m². CLF (Table 19, M, 15 h): N [0.76]{.lookup t="19" row="N (Shaded);M" col="15"}, W [0.40]{.lookup t="19" row="W;M" col="15"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $4.16\times0.92\times117\times0.76$ | 340.3 |
-| Glass solar, W | $4.16\times0.92\times719\times0.40$ | 1100.7 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 15 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 4.16 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [117]{.lookup t="18a" row="Apr." col="N"} | [0.76]{.lookup t="19" row="N (Shaded);M" col="15"} | 340.3 |
+| W glass | 4.16 | 0.92 | [719]{.lookup t="18a" row="Apr." col="E_W"} | [0.40]{.lookup t="19" row="W;M" col="15"} | 1100.7 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $64\times4=256.0$ m³. 1 ACH: $\dot V=256.0/3600=0.0711$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0711)(7.5)$; $3010\times10^3(0.0711)(0.0100)$ | 639.9 | 2140.1 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -1289,7 +1199,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $40\times75$; $40\times55$ | 3000.0 | 2200.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -1298,7 +1208,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $25\times64\times1.2\times0.85$ | 1632.0 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -1307,24 +1217,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=256.0/3600=0.0711$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0711)(7.5)$; $3010\times10^3(0.0711)(0.0100)$ | 639.9 | 2140.1 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times64\times39.1$ | 2414.8 | |
 | North wall (net) | $1.772\times27.84\times3.0$ | 148.0 | |
 | West wall (net) | $1.772\times27.84\times5.6$ | 276.3 | |
@@ -1332,10 +1231,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.8\times4.16\times8$ | 93.2 | |
 | Glass solar, N | $4.16\times0.92\times117\times0.76$ | 340.3 | |
 | Glass solar, W | $4.16\times0.92\times719\times0.40$ | 1100.7 | |
+| Outdoor air, 1 ACH | $1200(0.0711)(7.5)$; $3010\times10^3(0.0711)(0.0100)$ | 639.9 | 2140.1 |
 | People | $40\times75$; $40\times55$ | 3000.0 | 2200.0 |
 | Lights | $25\times64\times1.2\times0.85$ | 1632.0 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0711)(7.5)$; $3010\times10^3(0.0711)(0.0100)$ | 639.9 | 2140.1 |
 | **Sum** | | **10238.4** | **4340.1** |
 
 **Total $= 10238.4+4340.1 = 14578.5$ W $= 14.58$ kW $= 4.15$ TR** (SHR $= 0.70$).
@@ -1363,82 +1262,68 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-6}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 As Solution 1.1, with: an **office**, so Table 11 gives 25.5 °C and **55% RH**: $\omega_i=0.0113$, $\Delta\omega=0.0202-0.0113=0.0089$; 12.7 mm plaster → $U=1.772$; 16 h; April. Both walls $8\times3.5=28$ m² (glass 3.36, net 24.64 each); floor 64 m², volume 224 m³. Appliances 500 W, as for the classrooms.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 12% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $8\times3.5=28$ m² | $8\times3.5=28$ m² |
-| glass, 12% | 3.36 m² | 3.36 m² |
-| net opaque wall | 24.64 m² | 24.64 m² |
-
-Floor (= roof) area $8\times8=64$ m²; volume $64\times3.5=224.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.7 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0175+0.3494+0.0175+0.121=0.5644$, $U=1.772$ W/m²·K. Glass $U=2.6$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.7 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0175+0.3494+0.0175+0.121=0.5644$ | 1.772 |
+| Glass | 10 mm clear | given | | 2.6 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 16; Table 15, group C, N and W, hour 16. LM: Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 16 h | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="16"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ |
-| W wall, group C | [9]{.lookup t="15" row="C;W" col="16"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $9-0.5-1.9=6.6$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times64\times39.1$ | 2414.8 |
-| North wall (net) | $1.772\times24.64\times3.0$ | 131.0 |
-| West wall (net) | $1.772\times24.64\times6.6$ | 288.2 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 16, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 12% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 16, and Table 15, group C, N and W, hour 16; LM from Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 16, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 16: CLTD = [8]{.lookup t="20" row="1600" col="CLTD_C"} °C.
+Gross walls: north $8\times3.5=28$ m², west $8\times3.5=28$ m². Glass, 12%: north 3.36 m², west 3.36 m². Roof = floor $8\times8=64$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.6\times3.36\times8$ | 69.9 |
-| Glass conduction, W | $2.6\times3.36\times8$ | 69.9 |
+| Item | $A$ (m²) | $U$ | CLTD (16 h) | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 64 | 0.965 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ | 2414.8 |
+| N wall, group C | $28-3.36=24.64$ | 1.772 | [6]{.lookup t="15" row="C;N" col="16"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ | 131.0 |
+| W wall, group C | $28-3.36=24.64$ | 1.772 | [9]{.lookup t="15" row="C;W" col="16"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $9-0.5-1.9=6.6$ | 288.2 |
+| N glass | 3.36 | 2.6 | [8]{.lookup t="20" row="1600" col="CLTD_C"} (Table 20) | – | 8 | 69.9 |
+| W glass | 3.36 | 2.6 | 8 (Table 20) | – | 8 | 69.9 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **April**, N and E/W columns. CLF: Table 19, medium (M), hour 16, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, April): N [117]{.lookup t="18a" row="Apr." col="N"}, W [719]{.lookup t="18a" row="Apr." col="E_W"} W/m². CLF (Table 19, M, 16 h): N [0.74]{.lookup t="19" row="N (Shaded);M" col="16"}, W [0.50]{.lookup t="19" row="W;M" col="16"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $3.36\times0.92\times117\times0.74$ | 267.6 |
-| Glass solar, W | $3.36\times0.92\times719\times0.50$ | 1111.3 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 16 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 3.36 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [117]{.lookup t="18a" row="Apr." col="N"} | [0.74]{.lookup t="19" row="N (Shaded);M" col="16"} | 267.6 |
+| W glass | 3.36 | 0.92 | [719]{.lookup t="18a" row="Apr." col="E_W"} | [0.50]{.lookup t="19" row="W;M" col="16"} | 1111.3 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $64\times3.5=224.0$ m³. 1 ACH: $\dot V=224.0/3600=0.0622$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0089$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0089)$ | 559.8 | 1666.3 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -1449,7 +1334,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $35\times75$; $35\times55$ | 2625.0 | 1925.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -1458,7 +1343,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $27\times64\times1.2\times0.85$ | 1762.6 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -1467,24 +1352,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=224.0/3600=0.0622$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0089$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0089)$ | 559.8 | 1666.3 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times64\times39.1$ | 2414.8 | |
 | North wall (net) | $1.772\times24.64\times3.0$ | 131.0 | |
 | West wall (net) | $1.772\times24.64\times6.6$ | 288.2 | |
@@ -1492,10 +1366,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.6\times3.36\times8$ | 69.9 | |
 | Glass solar, N | $3.36\times0.92\times117\times0.74$ | 267.6 | |
 | Glass solar, W | $3.36\times0.92\times719\times0.50$ | 1111.3 | |
+| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0089)$ | 559.8 | 1666.3 |
 | People | $35\times75$; $35\times55$ | 2625.0 | 1925.0 |
 | Lights | $27\times64\times1.2\times0.85$ | 1762.6 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0089)$ | 559.8 | 1666.3 |
 | **Sum** | | **9800.1** | **3591.3** |
 
 **Total $= 9800.1+3591.3 = 13391.4$ W $= 13.39$ kW $= 3.81$ TR** (SHR $= 0.73$).
@@ -1523,82 +1397,68 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-7}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 As Solution 1.6 (same room, 16 h, April) but a classroom (50% RH, $\Delta\omega=0.0100$), 30 students, 15% glass with $U=2.5$, 30 W/m². Both walls 28 m² (glass 4.2, net 23.8 each).
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 15% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $8\times3.5=28$ m² | $8\times3.5=28$ m² |
-| glass, 15% | 4.2 m² | 4.2 m² |
-| net opaque wall | 23.8 m² | 23.8 m² |
-
-Floor (= roof) area $8\times8=64$ m²; volume $64\times3.5=224.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof: read $U$ from Table 12(b). Wall: not listed, so build it from Table 16 layers. Glass: given. See the [U-value mini-example](#m-mini-u).
 :::
-Roof 2: $U=$ [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} (Table 12(b)). Wall, 12.7 mm plaster, from Table 16 layers (Example 1.2): $R_{th}=0.059+0.0175+0.3494+0.0175+0.121=0.5644$, $U=1.772$ W/m²·K. Glass $U=2.5$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 2, no suspended ceiling | Table 12(b) | | [0.965]{.lookup t="12b" row="without suspended ceiling;2" col="U_W_m2K"} |
+| Walls N, W | 254 mm brick, 12.7 mm plaster both sides (Example 1.2) | A0, E1, C4, E1, E0 | $0.059+0.0175+0.3494+0.0175+0.121=0.5644$ | 1.772 |
+| Glass | 10 mm clear | given | | 2.5 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 2, hour 16; Table 15, group C, N and W, hour 16. LM: Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 16 h | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 2 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="16"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ |
-| W wall, group C | [9]{.lookup t="15" row="C;W" col="16"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $9-0.5-1.9=6.6$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.965\times64\times39.1$ | 2414.8 |
-| North wall (net) | $1.772\times23.8\times3.0$ | 126.5 |
-| West wall (net) | $1.772\times23.8\times6.6$ | 278.3 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 16, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 15% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 2, hour 16, and Table 15, group C, N and W, hour 16; LM from Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 16, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 16: CLTD = [8]{.lookup t="20" row="1600" col="CLTD_C"} °C.
+Gross walls: north $8\times3.5=28$ m², west $8\times3.5=28$ m². Glass, 15%: north 4.2 m², west 4.2 m². Roof = floor $8\times8=64$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.5\times4.2\times8$ | 84.0 |
-| Glass conduction, W | $2.5\times4.2\times8$ | 84.0 |
+| Item | $A$ (m²) | $U$ | CLTD (16 h) | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 2 | 64 | 0.965 | [41]{.lookup t="12b" row="without suspended ceiling;2" col="16"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $41+0.0-1.9=39.1$ | 2414.8 |
+| N wall, group C | $28-4.2=23.8$ | 1.772 | [6]{.lookup t="15" row="C;N" col="16"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ | 126.5 |
+| W wall, group C | $28-4.2=23.8$ | 1.772 | [9]{.lookup t="15" row="C;W" col="16"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $9-0.5-1.9=6.6$ | 278.3 |
+| N glass | 4.2 | 2.5 | [8]{.lookup t="20" row="1600" col="CLTD_C"} (Table 20) | – | 8 | 84.0 |
+| W glass | 4.2 | 2.5 | 8 (Table 20) | – | 8 | 84.0 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 10 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **April**, N and E/W columns. CLF: Table 19, medium (M), hour 16, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, April): N [117]{.lookup t="18a" row="Apr." col="N"}, W [719]{.lookup t="18a" row="Apr." col="E_W"} W/m². CLF (Table 19, M, 16 h): N [0.74]{.lookup t="19" row="N (Shaded);M" col="16"}, W [0.50]{.lookup t="19" row="W;M" col="16"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $4.2\times0.92\times117\times0.74$ | 334.5 |
-| Glass solar, W | $4.2\times0.92\times719\times0.50$ | 1389.1 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 16 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 4.2 | [0.92]{.lookup t="21" row="A. Single Glass;Clear;10 mm" col="SC_ho_7.0_W_m2K"} | [117]{.lookup t="18a" row="Apr." col="N"} | [0.74]{.lookup t="19" row="N (Shaded);M" col="16"} | 334.5 |
+| W glass | 4.2 | 0.92 | [719]{.lookup t="18a" row="Apr." col="E_W"} | [0.50]{.lookup t="19" row="W;M" col="16"} | 1389.1 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $64\times3.5=224.0$ m³. 1 ACH: $\dot V=224.0/3600=0.0622$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0100)$ | 559.8 | 1872.2 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -1609,7 +1469,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $30\times75$; $30\times55$ | 2250.0 | 1650.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -1618,7 +1478,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $30\times64\times1.2\times0.85$ | 1958.4 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -1627,24 +1487,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=224.0/3600=0.0622$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0100)$ | 559.8 | 1872.2 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.965\times64\times39.1$ | 2414.8 | |
 | North wall (net) | $1.772\times23.8\times3.0$ | 126.5 | |
 | West wall (net) | $1.772\times23.8\times6.6$ | 278.3 | |
@@ -1652,10 +1501,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.5\times4.2\times8$ | 84.0 | |
 | Glass solar, N | $4.2\times0.92\times117\times0.74$ | 334.5 | |
 | Glass solar, W | $4.2\times0.92\times719\times0.50$ | 1389.1 | |
+| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0100)$ | 559.8 | 1872.2 |
 | People | $30\times75$; $30\times55$ | 2250.0 | 1650.0 |
 | Lights | $30\times64\times1.2\times0.85$ | 1958.4 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0622)(7.5)$; $3010\times10^3(0.0622)(0.0100)$ | 559.8 | 1872.2 |
 | **Sum** | | **9979.4** | **3522.2** |
 
 **Total $= 9979.4+3522.2 = 13501.6$ W $= 13.50$ kW $= 3.84$ TR** (SHR $= 0.74$).
@@ -1685,7 +1534,7 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-8}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
@@ -1697,75 +1546,61 @@ Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → a
 - Geometry: floor 100 m²; each wall $10\times3=30$ m² gross, glass 6 m², net 24 m².
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 20% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $10\times3=30$ m² | $10\times3=30$ m² |
-| glass, 20% | 6 m² | 6 m² |
-| net opaque wall | 24 m² | 24 m² |
-
-Floor (= roof) area $10\times10=100$ m²; volume $100\times3=300.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Both constructions are tabulated: roof from Table 12(b), wall from Table 14. Glass $U$ is given.
 :::
-Roof 9: $U=$ [1.136]{.lookup t="12b" row="without suspended ceiling;9" col="U_W_m2K"} (Table 12(b)). Wall: Table 14, air space + face brick, group C: $U=$ [2.033]{.lookup t="14" row="C;Air Space + 101.6-mm Face Brick" col="U_W_m2K"}. Glass $U=2.5$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 9, no suspended ceiling | Table 12(b) | | [1.136]{.lookup t="12b" row="without suspended ceiling;9" col="U_W_m2K"} |
+| Walls N, W | air space + 101.6 mm face brick, group C | Table 14 | | [2.033]{.lookup t="14" row="C;Air Space + 101.6-mm Face Brick" col="U_W_m2K"} |
+| Glass | 13 mm clear | given | | 2.5 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 9, hour 15; Table 15, group C, N and W, hour 15. LM: Table 13, 24° N, **May/Jul**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 15 h | $LM$ (24° N, May/Jul) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 9 | [25]{.lookup t="12b" row="without suspended ceiling;9" col="15"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="HOR"} (HOR) | $25+0.5-1.9=23.6$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="15"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="N"} (N) | $6+0.5-1.9=4.6$ |
-| W wall, group C | [8]{.lookup t="15" row="C;W" col="15"} | [0.0]{.lookup t="13" row="24;May/Jul" col="E_W"} (E/W) | $8+0.0-1.9=6.1$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $1.136\times100\times23.6$ | 2681.0 |
-| North wall (net) | $2.033\times24\times4.6$ | 224.4 |
-| West wall (net) | $2.033\times24\times6.1$ | 297.6 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 15, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 20% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 9, hour 15, and Table 15, group C, N and W, hour 15; LM from Table 13, 24° N, **May/Jul**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 15, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 15: CLTD = [8]{.lookup t="20" row="1500" col="CLTD_C"} °C.
+Gross walls: north $10\times3=30$ m², west $10\times3=30$ m². Glass, 20%: north 6 m², west 6 m². Roof = floor $10\times10=100$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.5\times6\times8$ | 120.0 |
-| Glass conduction, W | $2.5\times6\times8$ | 120.0 |
+| Item | $A$ (m²) | $U$ | CLTD (15 h) | $LM$ (24° N, May/Jul) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 9 | 100 | 1.136 | [25]{.lookup t="12b" row="without suspended ceiling;9" col="15"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="HOR"} (HOR) | $25+0.5-1.9=23.6$ | 2681.0 |
+| N wall, group C | $30-6=24$ | 2.033 | [6]{.lookup t="15" row="C;N" col="15"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="N"} (N) | $6+0.5-1.9=4.6$ | 224.4 |
+| W wall, group C | $30-6=24$ | 2.033 | [8]{.lookup t="15" row="C;W" col="15"} | [0.0]{.lookup t="13" row="24;May/Jul" col="E_W"} (E/W) | $8+0.0-1.9=6.1$ | 297.6 |
+| N glass | 6 | 2.5 | [8]{.lookup t="20" row="1500" col="CLTD_C"} (Table 20) | – | 8 | 120.0 |
+| W glass | 6 | 2.5 | 8 (Table 20) | – | 8 | 120.0 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 13 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **May**, N and E/W columns. CLF: Table 19, medium (M), hour 15, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, May): N [136]{.lookup t="18a" row="May" col="N"}, W [688]{.lookup t="18a" row="May" col="E_W"} W/m². CLF (Table 19, M, 15 h): N [0.76]{.lookup t="19" row="N (Shaded);M" col="15"}, W [0.40]{.lookup t="19" row="W;M" col="15"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $6\times0.88\times136\times0.76$ | 545.7 |
-| Glass solar, W | $6\times0.88\times688\times0.40$ | 1453.1 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 15 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 6 | [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} | [136]{.lookup t="18a" row="May" col="N"} | [0.76]{.lookup t="19" row="N (Shaded);M" col="15"} | 545.7 |
+| W glass | 6 | 0.88 | [688]{.lookup t="18a" row="May" col="E_W"} | [0.40]{.lookup t="19" row="W;M" col="15"} | 1453.1 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+The question asks for ASHRAE ventilation: 8 L/s per person, and no separate infiltration. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $100\times3=300.0$ m³. Ventilation: $25\times8$ L/s $=0.200$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 8 L/s p.p. | $1200(0.200)(7.5)$; $3010\times10^3(0.200)(0.0100)$ | 1800.0 | 6020.0 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -1776,7 +1611,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $25\times75$; $25\times55$ | 1875.0 | 1375.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -1785,7 +1620,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $20\times100\times1.2\times0.85$ | 2040.0 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -1794,24 +1629,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-The question asks for ASHRAE ventilation: 8 L/s per person, and no separate infiltration. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-Ventilation: $25\times8$ L/s $=0.200$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 8 L/s p.p. | $1200(0.200)(7.5)$; $3010\times10^3(0.200)(0.0100)$ | 1800.0 | 6020.0 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $1.136\times100\times23.6$ | 2681.0 | |
 | North wall (net) | $2.033\times24\times4.6$ | 224.4 | |
 | West wall (net) | $2.033\times24\times6.1$ | 297.6 | |
@@ -1819,10 +1643,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.5\times6\times8$ | 120.0 | |
 | Glass solar, N | $6\times0.88\times136\times0.76$ | 545.7 | |
 | Glass solar, W | $6\times0.88\times688\times0.40$ | 1453.1 | |
+| Outdoor air, 8 L/s p.p. | $1200(0.200)(7.5)$; $3010\times10^3(0.200)(0.0100)$ | 1800.0 | 6020.0 |
 | People | $25\times75$; $25\times55$ | 1875.0 | 1375.0 |
 | Lights | $20\times100\times1.2\times0.85$ | 2040.0 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 8 L/s p.p. | $1200(0.200)(7.5)$; $3010\times10^3(0.200)(0.0100)$ | 1800.0 | 6020.0 |
 | **Sum** | | **11656.8** | **7395.0** |
 
 **Total $= 11656.8+7395.0 = 19051.8$ W $= 19.05$ kW $= 5.42$ TR** (SHR $= 0.61$).
@@ -1850,82 +1674,68 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-9}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
 As Solution 1.8 (roof 9, $U=1.136$; group C wall, $U=2.033$; 15 h), with: April; 30 students; 15% glass, 12.5 mm → 13 mm row, SC 0.88, $U=3$; 25 W/m²; **no ventilation rate asked, so 1 ACH**: $\dot V=300/3600=0.0833$ m³/s. Each wall 30 m² gross, glass 4.5 m², net 25.5 m².
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 15% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $10\times3=30$ m² | $10\times3=30$ m² |
-| glass, 15% | 4.5 m² | 4.5 m² |
-| net opaque wall | 25.5 m² | 25.5 m² |
-
-Floor (= roof) area $10\times10=100$ m²; volume $100\times3=300.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Both constructions are tabulated: roof from Table 12(b), wall from Table 14. Glass $U$ is given.
 :::
-Roof 9: $U=$ [1.136]{.lookup t="12b" row="without suspended ceiling;9" col="U_W_m2K"} (Table 12(b)). Wall: Table 14, air space + face brick, group C: $U=$ [2.033]{.lookup t="14" row="C;Air Space + 101.6-mm Face Brick" col="U_W_m2K"}. Glass $U=3$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 9, no suspended ceiling | Table 12(b) | | [1.136]{.lookup t="12b" row="without suspended ceiling;9" col="U_W_m2K"} |
+| Walls N, W | air space + 101.6 mm face brick, group C | Table 14 | | [2.033]{.lookup t="14" row="C;Air Space + 101.6-mm Face Brick" col="U_W_m2K"} |
+| Glass | 13 mm clear | given | | 3 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 9, hour 15; Table 15, group C, N and W, hour 15. LM: Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 15 h | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 9 | [25]{.lookup t="12b" row="without suspended ceiling;9" col="15"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $25+0.0-1.9=23.1$ |
-| N wall, group C | [6]{.lookup t="15" row="C;N" col="15"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ |
-| W wall, group C | [8]{.lookup t="15" row="C;W" col="15"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $8-0.5-1.9=5.6$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $1.136\times100\times23.1$ | 2624.2 |
-| North wall (net) | $2.033\times25.5\times3.0$ | 155.5 |
-| West wall (net) | $2.033\times25.5\times5.6$ | 290.3 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 15, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 15% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 9, hour 15, and Table 15, group C, N and W, hour 15; LM from Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 15, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 15: CLTD = [8]{.lookup t="20" row="1500" col="CLTD_C"} °C.
+Gross walls: north $10\times3=30$ m², west $10\times3=30$ m². Glass, 15%: north 4.5 m², west 4.5 m². Roof = floor $10\times10=100$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $3\times4.5\times8$ | 108.0 |
-| Glass conduction, W | $3\times4.5\times8$ | 108.0 |
+| Item | $A$ (m²) | $U$ | CLTD (15 h) | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 9 | 100 | 1.136 | [25]{.lookup t="12b" row="without suspended ceiling;9" col="15"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $25+0.0-1.9=23.1$ | 2624.2 |
+| N wall, group C | $30-4.5=25.5$ | 2.033 | [6]{.lookup t="15" row="C;N" col="15"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $6-1.1-1.9=3.0$ | 155.5 |
+| W wall, group C | $30-4.5=25.5$ | 2.033 | [8]{.lookup t="15" row="C;W" col="15"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $8-0.5-1.9=5.6$ | 290.3 |
+| N glass | 4.5 | 3 | [8]{.lookup t="20" row="1500" col="CLTD_C"} (Table 20) | – | 8 | 108.0 |
+| W glass | 4.5 | 3 | 8 (Table 20) | – | 8 | 108.0 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 13 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **April**, N and E/W columns. CLF: Table 19, medium (M), hour 15, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, April): N [117]{.lookup t="18a" row="Apr." col="N"}, W [719]{.lookup t="18a" row="Apr." col="E_W"} W/m². CLF (Table 19, M, 15 h): N [0.76]{.lookup t="19" row="N (Shaded);M" col="15"}, W [0.40]{.lookup t="19" row="W;M" col="15"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $4.5\times0.88\times117\times0.76$ | 352.1 |
-| Glass solar, W | $4.5\times0.88\times719\times0.40$ | 1138.9 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 15 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 4.5 | [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} | [117]{.lookup t="18a" row="Apr." col="N"} | [0.76]{.lookup t="19" row="N (Shaded);M" col="15"} | 352.1 |
+| W glass | 4.5 | 0.88 | [719]{.lookup t="18a" row="Apr." col="E_W"} | [0.40]{.lookup t="19" row="W;M" col="15"} | 1138.9 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $100\times3=300.0$ m³. 1 ACH: $\dot V=300.0/3600=0.0833$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 1 ACH | $1200(0.0833)(7.5)$; $3010\times10^3(0.0833)(0.0100)$ | 749.7 | 2507.3 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -1936,7 +1746,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $30\times75$; $30\times55$ | 2250.0 | 1650.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -1945,7 +1755,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $25\times100\times1.2\times0.85$ | 2550.0 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 “Reasonable appliances”: state them; for a classroom, projector 300 W + computer 200 W. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -1954,24 +1764,13 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Equipment | projector 300 + PC 200 | 500.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-No ventilation rate asked → 1 ACH, $\dot V=$ volume/3600. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-1 ACH: $\dot V=300.0/3600=0.0833$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0100$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 1 ACH | $1200(0.0833)(7.5)$; $3010\times10^3(0.0833)(0.0100)$ | 749.7 | 2507.3 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $1.136\times100\times23.1$ | 2624.2 | |
 | North wall (net) | $2.033\times25.5\times3.0$ | 155.5 | |
 | West wall (net) | $2.033\times25.5\times5.6$ | 290.3 | |
@@ -1979,10 +1778,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $3\times4.5\times8$ | 108.0 | |
 | Glass solar, N | $4.5\times0.88\times117\times0.76$ | 352.1 | |
 | Glass solar, W | $4.5\times0.88\times719\times0.40$ | 1138.9 | |
+| Outdoor air, 1 ACH | $1200(0.0833)(7.5)$; $3010\times10^3(0.0833)(0.0100)$ | 749.7 | 2507.3 |
 | People | $30\times75$; $30\times55$ | 2250.0 | 1650.0 |
 | Lights | $25\times100\times1.2\times0.85$ | 2550.0 | |
 | Equipment | projector 300 + PC 200 | 500.0 | |
-| Outdoor air, 1 ACH | $1200(0.0833)(7.5)$; $3010\times10^3(0.0833)(0.0100)$ | 749.7 | 2507.3 |
 | **Sum** | | **10826.7** | **4157.3** |
 
 **Total $= 10826.7+4157.3 = 14984.0$ W $= 14.98$ kW $= 4.26$ TR** (SHR $= 0.72$).
@@ -2012,7 +1811,7 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-10}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
@@ -2027,75 +1826,61 @@ As Solution 1.8, with these changes.
 - Each wall $9\times3.8=34.2$ m² gross, glass 6.156 m², net 28.044 m²; floor 81 m².
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 18% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $9\times3.8=34.2$ m² | $9\times3.8=34.2$ m² |
-| glass, 18% | 6.156 m² | 6.156 m² |
-| net opaque wall | 28.044 m² | 28.044 m² |
-
-Floor (= roof) area $9\times9=81$ m²; volume $81\times3.8=307.8$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Roof 9 with 50 mm insulation is the bracketed $U$ of Table 12(b); the wall is tabulated in Table 14. Glass $U$ is given.
 :::
-Roof 9 with 50 mm insulation: the bracketed value, $U=$ [0.681]{.lookup t="12b" row="without suspended ceiling;9" col="U_alt_W_m2K"} (Table 12(b)). Wall: Table 14, face brick + common brick, group D: $U=$ [2.356]{.lookup t="14" row="D;101.6-mm Common Brick" col="U_W_m2K"}. Glass $U=2.8$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | roof 9 with 50 mm insulation (bracketed value), no suspended ceiling | Table 12(b) | | [0.681]{.lookup t="12b" row="without suspended ceiling;9" col="U_alt_W_m2K"} |
+| Walls N, W | face brick + 101.6 mm common brick, group D | Table 14 | | [2.356]{.lookup t="14" row="D;101.6-mm Common Brick" col="U_W_m2K"} |
+| Glass | 13 mm clear | given | | 2.8 |
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 9, hour 16; Table 15, group D, N and W, hour 16. LM: Table 13, 24° N, **May/Jul**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 16 h | $LM$ (24° N, May/Jul) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 9 | [28]{.lookup t="12b" row="without suspended ceiling;9" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="HOR"} (HOR) | $28+0.5-1.9=26.6$ |
-| N wall, group D | [7]{.lookup t="15" row="D;N" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="N"} (N) | $7+0.5-1.9=5.6$ |
-| W wall, group D | [10]{.lookup t="15" row="D;W" col="16"} | [0.0]{.lookup t="13" row="24;May/Jul" col="E_W"} (E/W) | $10+0.0-1.9=8.1$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.681\times81\times26.6$ | 1467.3 |
-| North wall (net) | $2.356\times28.044\times5.6$ | 370.0 |
-| West wall (net) | $2.356\times28.044\times8.1$ | 535.2 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 16, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 18% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 9, hour 16, and Table 15, group D, N and W, hour 16; LM from Table 13, 24° N, **May/Jul**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 16, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 16: CLTD = [8]{.lookup t="20" row="1600" col="CLTD_C"} °C.
+Gross walls: north $9\times3.8=34.2$ m², west $9\times3.8=34.2$ m². Glass, 18%: north 6.156 m², west 6.156 m². Roof = floor $9\times9=81$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.8\times6.156\times8$ | 137.9 |
-| Glass conduction, W | $2.8\times6.156\times8$ | 137.9 |
+| Item | $A$ (m²) | $U$ | CLTD (16 h) | $LM$ (24° N, May/Jul) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 9 | 81 | 0.681 | [28]{.lookup t="12b" row="without suspended ceiling;9" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="HOR"} (HOR) | $28+0.5-1.9=26.6$ | 1467.3 |
+| N wall, group D | $34.2-6.156=28.044$ | 2.356 | [7]{.lookup t="15" row="D;N" col="16"} | [+0.5]{.lookup t="13" row="24;May/Jul" col="N"} (N) | $7+0.5-1.9=5.6$ | 370.0 |
+| W wall, group D | $34.2-6.156=28.044$ | 2.356 | [10]{.lookup t="15" row="D;W" col="16"} | [0.0]{.lookup t="13" row="24;May/Jul" col="E_W"} (E/W) | $10+0.0-1.9=8.1$ | 535.2 |
+| N glass | 6.156 | 2.8 | [8]{.lookup t="20" row="1600" col="CLTD_C"} (Table 20) | – | 8 | 137.9 |
+| W glass | 6.156 | 2.8 | 8 (Table 20) | – | 8 | 137.9 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 13 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **May**, N and E/W columns. CLF: Table 19, medium (M), hour 16, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, May): N [136]{.lookup t="18a" row="May" col="N"}, W [688]{.lookup t="18a" row="May" col="E_W"} W/m². CLF (Table 19, M, 16 h): N [0.74]{.lookup t="19" row="N (Shaded);M" col="16"}, W [0.50]{.lookup t="19" row="W;M" col="16"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $6.156\times0.88\times136\times0.74$ | 545.2 |
-| Glass solar, W | $6.156\times0.88\times688\times0.50$ | 1863.5 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, M, 16 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 6.156 | [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} | [136]{.lookup t="18a" row="May" col="N"} | [0.74]{.lookup t="19" row="N (Shaded);M" col="16"} | 545.2 |
+| W glass | 6.156 | 0.88 | [688]{.lookup t="18a" row="May" col="E_W"} | [0.50]{.lookup t="19" row="W;M" col="16"} | 1863.5 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+The question asks for ASHRAE ventilation: 10 L/s per person, and no separate infiltration. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $81\times3.8=307.8$ m³. Ventilation: $9\times10$ L/s $=0.090$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0089$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 10 L/s p.p. | $1200(0.090)(7.5)$; $3010\times10^3(0.090)(0.0089)$ | 810.0 | 2411.0 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -2106,7 +1891,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $9\times75$; $9\times55$ | 675.0 | 495.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -2115,7 +1900,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $13\times81\times1.2\times0.85$ | 1074.1 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 The appliances are given in the question; CLF = 1. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -2124,24 +1909,13 @@ The appliances are given in the question; CLF = 1. See the [equipment mini-examp
 | Equipment | $3\times90$ | 270.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-The question asks for ASHRAE ventilation: 10 L/s per person, and no separate infiltration. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-Ventilation: $9\times10$ L/s $=0.090$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0089$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 10 L/s p.p. | $1200(0.090)(7.5)$; $3010\times10^3(0.090)(0.0089)$ | 810.0 | 2411.0 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.681\times81\times26.6$ | 1467.3 | |
 | North wall (net) | $2.356\times28.044\times5.6$ | 370.0 | |
 | West wall (net) | $2.356\times28.044\times8.1$ | 535.2 | |
@@ -2149,10 +1923,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.8\times6.156\times8$ | 137.9 | |
 | Glass solar, N | $6.156\times0.88\times136\times0.74$ | 545.2 | |
 | Glass solar, W | $6.156\times0.88\times688\times0.50$ | 1863.5 | |
+| Outdoor air, 10 L/s p.p. | $1200(0.090)(7.5)$; $3010\times10^3(0.090)(0.0089)$ | 810.0 | 2411.0 |
 | People | $9\times75$; $9\times55$ | 675.0 | 495.0 |
 | Lights | $13\times81\times1.2\times0.85$ | 1074.1 | |
 | Equipment | $3\times90$ | 270.0 | |
-| Outdoor air, 10 L/s p.p. | $1200(0.090)(7.5)$; $3010\times10^3(0.090)(0.0089)$ | 810.0 | 2411.0 |
 | **Sum** | | **7886.1** | **2906.0** |
 
 **Total $= 7886.1+2906.0 = 10792.1$ W $= 10.79$ kW $= 3.07$ TR** (SHR $= 0.73$).
@@ -2182,7 +1956,7 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 
 ::: {.problem #sol-1-11}
 
-::: {.step title="Step 0. Assumptions"}
+::: {.step title="Step 0. Design conditions and assumptions"}
 ::: hint
 Outdoor: Table 9 (Chittagong; also for Dhaka). Indoor: Table 11 (classroom → auditorium, office → offices). $\omega$ from the chart. Then fix the roof row, the wall group, the Table 19 construction, the air flow and the appliances. See the [design-conditions mini-example](#m-mini-design) and the standing assumptions of §1.10.
 :::
@@ -2195,75 +1969,63 @@ $$R_{th}=0.059+0.099+0.050+1.760+0.059+0.121=2.148,\qquad U=0.466\ \text{W/m}^2\
 - People: 3, office work: 75 W / 55 W. Equipment: $3\times75=225$ W. Ventilation (ASHRAE 62, office): $3\times10$ L/s $=0.030$ m³/s.
 :::
 
-::: {.step title="Step 1. Geometry"}
-::: hint
-North wall = first floor dimension, west wall = second. Glass = 25% of the gross area; net = gross − glass. See the [geometry mini-example](#m-mini-geometry).
-:::
-| Quantity | North wall | West wall |
-|---|---|---|
-| gross area | $10\times3.5=35$ m² | $10\times3.5=35$ m² |
-| glass, 25% | 8.75 m² | 8.75 m² |
-| net opaque wall | 26.25 m² | 26.25 m² |
-
-Floor (= roof) area $10\times10=100$ m²; volume $100\times3.5=350.0$ m³.
-:::
-
-::: {.step title="Step 2. U-values"}
+::: {.step title="Step 1. U-value table"}
 ::: hint
 Neither the 75 mm-insulated roof nor the curtain wall is tabulated: build both from Table 16 layers. See the [U-value mini-example](#m-mini-u).
 :::
-Roof $U=0.466$ and wall $U=0.515$, built from layers in Step 0 (neither construction is in Tables 12(b) or 14). Glass $U=2.5$ (given).
+| Item | Description | Layers | $R_{th}$ (m²·K/W) | $U$ (W/m²·K) |
+|:---|:---|:---|:---|---:|
+| Roof | 100 mm concrete + 75 mm insulation (roof 9 with B12 for B5), no suspended ceiling | A0, E2, E3, B12, C5, E0 | $0.059+0.099+0.050+1.760+0.059+0.121=2.148$ | 0.466 |
+| Walls N, W | metal curtain wall, group G, 75 mm insulation [Arif p.40] | A0, A3, B12, A3, E0 | $0.059+0+1.760+0+0.121=1.940$ | 0.515 |
+| Glass | 13 mm clear | given | | 2.5 |
+
+Roof $U=0.466$ and wall $U=0.515$ are built from layers in Step 0 (neither construction is in Tables 12(b) or 14).
 :::
 
-::: {.step title="Step 3. Corrected CLTD, roof and walls"}
+::: {.step title="Step 2. Shaded surfaces"}
 ::: hint
-$CLTD_c=CLTD+LM-1.9$. CLTD: Table 12(b), roof 9, hour 15; Table 15, group G, N and W, hour 15. LM: Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W. See the [corrected-CLTD mini-example](#m-mini-cltd).
+Partitions, doors and shaded glass: $Q=UA\,TD$. Here read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
 :::
-| Surface | CLTD at 15 h | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) |
-|---|---|---|---|
-| Roof 9 | [25]{.lookup t="12b" row="without suspended ceiling;9" col="15"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $25+0.0-1.9=23.1$ |
-| N wall, group G | [13]{.lookup t="15" row="G;N" col="15"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $13-1.1-1.9=10.0$ |
-| W wall, group G | [31]{.lookup t="15" row="G;W" col="15"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $31-0.5-1.9=28.6$ |
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Roof | $0.466\times100\times23.1$ | 1076.5 |
-| North wall (net) | $0.515\times26.25\times10.0$ | 135.2 |
-| West wall (net) | $0.515\times26.25\times28.6$ | 386.6 |
+Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the summary.
 :::
 
-::: {.step title="Step 4. Glass conduction"}
+::: {.step title="Step 3. Sunlit surfaces"}
 ::: hint
-$Q=UA\,CLTD$ with the glass areas of Step 1; CLTD from Table 20 at hour 15, **not corrected**. See the [glass-conduction mini-example](#m-mini-glass-cond).
+Areas: north wall = first floor dimension × height, west wall = second; glass = 25% of the gross area; net = gross − glass ([geometry mini-example](#m-mini-geometry)). $CLTD_c=CLTD+LM-1.9$: CLTD from Table 12(b), roof 9, hour 15, and Table 15, group G, N and W, hour 15; LM from Table 13, 24° N, **Apr/Aug**, columns HOR, N, E/W ([corrected-CLTD mini-example](#m-mini-cltd)). Glass: CLTD from Table 20 at hour 15, **not corrected** ([glass-conduction mini-example](#m-mini-glass-cond)).
 :::
-Table 20, hour 15: CLTD = [8]{.lookup t="20" row="1500" col="CLTD_C"} °C.
+Gross walls: north $10\times3.5=35$ m², west $10\times3.5=35$ m². Glass, 25%: north 8.75 m², west 8.75 m². Roof = floor $10\times10=100$ m².
 
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass conduction, N | $2.5\times8.75\times8$ | 175.0 |
-| Glass conduction, W | $2.5\times8.75\times8$ | 175.0 |
+| Item | $A$ (m²) | $U$ | CLTD (15 h) | $LM$ (24° N, Apr/Aug) | $CLTD_c$ (°C) | $Q$ (W) |
+|:---|:---|---:|:---|:---|:---|---:|
+| Roof 9 | 100 | 0.466 | [25]{.lookup t="12b" row="without suspended ceiling;9" col="15"} | [0.0]{.lookup t="13" row="24;Apr/Aug" col="HOR"} (HOR) | $25+0.0-1.9=23.1$ | 1076.5 |
+| N wall, group G | $35-8.75=26.25$ | 0.515 | [13]{.lookup t="15" row="G;N" col="15"} | [−1.1]{.lookup t="13" row="24;Apr/Aug" col="N"} (N) | $13-1.1-1.9=10.0$ | 135.2 |
+| W wall, group G | $35-8.75=26.25$ | 0.515 | [31]{.lookup t="15" row="G;W" col="15"} | [−0.5]{.lookup t="13" row="24;Apr/Aug" col="E_W"} (E/W) | $31-0.5-1.9=28.6$ | 386.6 |
+| N glass | 8.75 | 2.5 | [8]{.lookup t="20" row="1500" col="CLTD_C"} (Table 20) | – | 8 | 175.0 |
+| W glass | 8.75 | 2.5 | 8 (Table 20) | – | 8 | 175.0 |
 :::
 
-::: {.step title="Step 5. Glass solar gain"}
+::: {.step title="Step 4. Solar gain through glass"}
 ::: hint
 $Q=A\,SC\,SHGF_{max}\,CLF$. SC: Table 21, 13 mm clear, $h_o=7.0$. SHGF: Table 18(a), 24° N, **April**, N and E/W columns. CLF: Table 19, light (L), hour 15, rows “N (Shaded)” and W. See the [glass-solar mini-example](#m-mini-glass-solar).
 :::
-SC = [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} (Table 21). $SHGF_{max}$ (Table 18(a), 24° N, April): N [117]{.lookup t="18a" row="Apr." col="N"}, W [719]{.lookup t="18a" row="Apr." col="E_W"} W/m². CLF (Table 19, L, 15 h): N [0.82]{.lookup t="19" row="N (Shaded);L" col="15"}, W [0.45]{.lookup t="19" row="W;L" col="15"}.
-
-| Item | Calculation | $Q_S$ (W) |
-|:---|:---|---:|
-| Glass solar, N | $8.75\times0.88\times117\times0.82$ | 738.7 |
-| Glass solar, W | $8.75\times0.88\times719\times0.45$ | 2491.3 |
+| Item | $A$ (m²) | SC (Table 21) | $SHGF_{max}$ (Table 18(a)) | CLF (Table 19, L, 15 h) | $Q$ (W) |
+|:---|---:|---:|---:|---:|---:|
+| N glass | 8.75 | [0.88]{.lookup t="21" row="A. Single Glass;Clear;13 mm" col="SC_ho_7.0_W_m2K"} | [117]{.lookup t="18a" row="Apr." col="N"} | [0.82]{.lookup t="19" row="N (Shaded);L" col="15"} | 738.7 |
+| W glass | 8.75 | 0.88 | [719]{.lookup t="18a" row="Apr." col="E_W"} | [0.45]{.lookup t="19" row="W;L" col="15"} | 2491.3 |
 :::
 
-::: {.step title="Step 6. Partitions"}
+::: {.step title="Step 5. Outdoor air"}
 ::: hint
-Read the question's assumptions about the floor and the south and east walls. See the [partition mini-example](#m-mini-partition).
+The question asks for ASHRAE ventilation: 10 L/s per person, and no separate infiltration. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
 :::
-Floor, south and east walls: no heat transfer (given) → **0 W**. Keep the row in the ledger.
+Volume $100\times3.5=350.0$ m³. Ventilation: $3\times10$ L/s $=0.030$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0089$.
+
+| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
+|:---|:---|---:|---:|
+| Outdoor air, 10 L/s p.p. | $1200(0.030)(7.5)$; $3010\times10^3(0.030)(0.0089)$ | 270.0 | 803.7 |
 :::
 
-::: {.step title="Step 7. People"}
+::: {.step title="Step 6. People"}
 ::: hint
 Table 28, moderately active office work; CLF = 1 (Table 27 footnote); latent has no CLF. See the [people mini-example](#m-mini-people).
 :::
@@ -2274,7 +2036,7 @@ Table 28: [75]{.lookup t="28" row="Moderately active office work" col="sensible_
 | People | $3\times75$; $3\times55$ | 225.0 | 165.0 |
 :::
 
-::: {.step title="Step 8. Lights"}
+::: {.step title="Step 7. Lights"}
 ::: hint
 W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the [lights mini-example](#m-mini-lights).
 :::
@@ -2283,7 +2045,7 @@ W/m² × **floor** area × 1.2 × 1 × 0.85. Never × a number of lamps. See the
 | Lights | $12\times100\times1.2\times0.85$ | 1224.0 |
 :::
 
-::: {.step title="Step 9. Equipment"}
+::: {.step title="Step 8. Appliances"}
 ::: hint
 The appliances are given in the question; CLF = 1. See the [equipment mini-example](#m-mini-equipment).
 :::
@@ -2292,24 +2054,13 @@ The appliances are given in the question; CLF = 1. See the [equipment mini-examp
 | Equipment | $3\times75$ | 225.0 |
 :::
 
-::: {.step title="Step 10. Outdoor air"}
+::: {.step title="Step 9. Summary and total"}
 ::: hint
-The question asks for ASHRAE ventilation: 10 L/s per person, and no separate infiltration. Use the design $T_o=33$ °C (not $T_{o,av}$) and $\Delta\omega$ from Step 0. See the [outdoor-air mini-example](#m-mini-air).
-:::
-Ventilation: $3\times10$ L/s $=0.030$ m³/s. $\Delta T=33-25.5=7.5$ °C, $\Delta\omega=0.0089$.
-
-| Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
-|:---|:---|---:|---:|
-| Outdoor air, 10 L/s p.p. | $1200(0.030)(7.5)$; $3010\times10^3(0.030)(0.0089)$ | 270.0 | 803.7 |
-:::
-
-::: {.step title="Step 11. The ledger and the total"}
-::: hint
-Collect every row in two columns, sensible and latent; add; convert with 1 TR = 3.517 kW.
+Collect every row in two columns, sensible and latent, in the order of the steps; add; convert with 1 TR = 3.517 kW.
 :::
 | Item | Calculation | $Q_S$ (W) | $Q_L$ (W) |
 |:-------------------|:--------------------------------------|---------:|---------:|
-| Partitions | none | 0 | |
+| Shaded surfaces | none | 0 | |
 | Roof | $0.466\times100\times23.1$ | 1076.5 | |
 | North wall (net) | $0.515\times26.25\times10.0$ | 135.2 | |
 | West wall (net) | $0.515\times26.25\times28.6$ | 386.6 | |
@@ -2317,10 +2068,10 @@ Collect every row in two columns, sensible and latent; add; convert with 1 TR = 
 | Glass conduction, W | $2.5\times8.75\times8$ | 175.0 | |
 | Glass solar, N | $8.75\times0.88\times117\times0.82$ | 738.7 | |
 | Glass solar, W | $8.75\times0.88\times719\times0.45$ | 2491.3 | |
+| Outdoor air, 10 L/s p.p. | $1200(0.030)(7.5)$; $3010\times10^3(0.030)(0.0089)$ | 270.0 | 803.7 |
 | People | $3\times75$; $3\times55$ | 225.0 | 165.0 |
 | Lights | $12\times100\times1.2\times0.85$ | 1224.0 | |
 | Equipment | $3\times75$ | 225.0 | |
-| Outdoor air, 10 L/s p.p. | $1200(0.030)(7.5)$; $3010\times10^3(0.030)(0.0089)$ | 270.0 | 803.7 |
 | **Sum** | | **7122.3** | **968.7** |
 
 **Total $= 7122.3+968.7 = 8091.0$ W $= 8.09$ kW $= 2.30$ TR** (SHR $= 0.88$).

@@ -210,6 +210,9 @@ def split_pages(md):
 
     pages = []
     for sec in cut(md.split("\n"), "##"):
+        if QSECTION.match(sec[0]):
+            pages += question_pages(sec, cut)
+            continue
         if len(sec) <= PAGE_LINES:
             pages.append(sec)
             continue
@@ -223,9 +226,59 @@ def split_pages(md):
     return ["\n".join(p).strip() + "\n" for p in pages]
 
 
+QSECTION = re.compile(r"^## \S+ Term-final questions")
+TRY = re.compile(r"^> \*\*TRY (\d+\.\d+)\*\*(?:\s*`\[([^\]]*)\]`)?")
+
+
+def question_title(num, tag):
+    """"1.1", "PP 23-24 Q4, 45" -> "Question 1.1 · 2023-24 Q4 (45 marks)"."""
+    m = re.match(r"PP (\d\d)-(\d\d) (.+?)(?:, (\d+))?$", tag or "")
+    if not m:
+        return f"Question {num}"
+    return f"Question {num} · 20{m.group(1)}-{m.group(2)} {m.group(3)}" + (f" ({m.group(4)} marks)" if m.group(4) else "")
+
+
+def question_pages(sec, cut):
+    """The term-final questions: the section's intro is one page; each family's intro becomes a page that lists its
+    questions; a question with a stepped solution gets a page of its own, and short (theory) questions are packed
+    together up to PAGE_LINES. Each question gets a heading, so it is in the Sections menu and in prev/next."""
+    pieces = cut(sec, "###")
+    pages = [pieces[0]] if not pieces[0][0].startswith("### ") else []
+    for fam in (pieces[1:] if pages else pieces):
+        chunks, cur = [], []
+        for ln in fam:
+            if TRY.match(ln) and any(x.strip() for x in cur):
+                chunks.append(cur)
+                cur = []
+            cur.append(ln)
+        chunks.append(cur)
+        intro, qs = (chunks[0], chunks[1:]) if not TRY.match(chunks[0][0]) else ([], chunks)
+        heads = []
+        for q in qs:
+            m = TRY.match(q[0])
+            qid = "q-" + m.group(1).replace(".", "-")
+            heads.append((question_title(m.group(1), m.group(2)), qid))
+            q.insert(0, f"### {heads[-1][0]} {{#{qid}}}\n")
+        if intro:
+            pages.append(intro + ([""] + [f"- [{t}](#{i})" for t, i in heads] + [""] if heads else []))
+        cur = []
+        for q in qs:
+            alone = any("{.problem" in ln for ln in q)
+            if cur and (alone or len(cur) + len(q) > PAGE_LINES):
+                pages.append(cur)
+                cur = []
+            if alone:
+                pages.append(q)
+            else:
+                cur += q
+        if cur:
+            pages.append(cur)
+    return pages
+
+
 def page_title(md):
     heads = re.findall(r"^#{1,3} (.*)$", md, re.M)
-    return heads[0] if heads else ""
+    return re.sub(r"\s*\{#[\w-]+\}\s*$", "", heads[0]) if heads else ""      # without a {#id}
 
 
 def strip_md(s):
@@ -574,7 +627,7 @@ def main():
         if cur_ch:
             items = []
             for f, t, _ in cur_ch["pages"]:
-                items.append((t, f, f == cur_page, 0))
+                items.append((t, f, f == cur_page, 1 if t.startswith("Question ") else 0))   # questions under their family
                 heads = subheads(bodies[f])
                 if heads and heads[0][1] == t:          # the page opens with this ### heading: already listed
                     heads = heads[1:]
