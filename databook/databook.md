@@ -2716,7 +2716,7 @@ Attached to the ME415 papers (identical in 2012-13 to 2022-23); from Grondzik, M
 | Single-purpose | 14–16 |
 | **RESIDENTIAL** | |
 | Prestige | 5–7 |
-| Other | 6–8^a |
+| Other | 6–8^a^ |
 | Dormitories | 10–11 |
 | Hotels—first quality | 12–15 |
 | Hotels—second quality | 10–12 |
@@ -2740,7 +2740,7 @@ Attached to the ME415 papers (identical in 2012-13 to 2022-23); from Grondzik, M
 | Type | Unit | Value |
 |---|---|---|
 | **OFFICE BUILDINGS** | | |
-| Diversified (multiple tenancy) — Normal | ft2 per person (m2/person) | 110–130 (10–12)^a |
+| Diversified (multiple tenancy) — Normal | ft2 per person (m2/person) | 110–130 (10–12)^a^ |
 | Diversified (multiple tenancy) — Prestige | ft2 per person (m2/person) | 150–250 (14–23) |
 | Single tenancy — Normal | ft2 per person (m2/person) | 90–110 (8–10) |
 | Single tenancy — Prestige | ft2 per person (m2/person) | 130–200 (12–19) |
@@ -2748,8 +2748,8 @@ Attached to the ME415 papers (identical in 2012-13 to 2022-23); from Grondzik, M
 | Normal use | persons per sleeping room | 1.3 |
 | Conventions | persons per sleeping room | 1.9 |
 | **HOSPITALS** | | |
-| General private | visitors and staff per bed^b | 3 |
-| General public (large wards) | visitors and staff per bed^b | 3–4 |
+| General private | visitors and staff per bed^b^ | 3 |
+| General public (large wards) | visitors and staff per bed^b^ | 3–4 |
 | **APARTMENT HOUSES** | | |
 | High-rental housing | persons per bedroom | 1.5 |
 | Moderate-rental housing | persons per bedroom | 2.0 |

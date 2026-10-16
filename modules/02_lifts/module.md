@@ -345,7 +345,7 @@ The designer considers [Grondzik §31.2, §31.28, §31.34–31.39; Kanak p.165]:
 
 ## 2.10 The lift-design method ★
 
-Every design numerical is solved with the same nine steps, using the attached tables T1–T6 and charts C1, C2 (all at the end of this module) [Kanak pp.185–189; Grondzik §31.34–31.36]. Learn them as a fixed procedure.
+Every design numerical is solved with the same nine steps, using the attached tables T1–T6 and charts C1, C2 (data book D18 and D19; the PDF also prints them at the end of this module) [Kanak pp.185–189; Grondzik §31.34–31.36]. Learn them as a fixed procedure.
 
 ![Fig. 15: The nine-step lift-design procedure as a flow: (1) building type gives the interval from T1 and the PHC from T2; (2) population = net area divided by m² per person from T4, net area from T5 if gross is given; (3) required HC = PHC × population; (4) rise = floors × floor height; (5) car speed from the rise, T6; (6) car size from T6 and its normal load p from T3; (7) read RT from C2 and AVRTP from C1, choosing the panel by car size, the curve by speed and the x value by the number of floors; (8) N = RT / I_req with I_req = 300p / HC_req, rounded to whole cars; (9) check I = RT/N against T1 and PHC = (300p/I)/population against T2, and iterate (change car size, speed, or zone) if a check fails](figures/015.png "w=0.65")
 

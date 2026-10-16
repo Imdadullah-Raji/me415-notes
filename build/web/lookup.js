@@ -79,6 +79,8 @@
     return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
   }
 
+  function mark(s) { return s.replace(/\^([a-z])\b/g, "<sup>$1</sup>"); }   // a footnote mark, "6–8^a"
+
   function slice(t, r, c) {
     var n = t.rows.length, cols = [], i;
     var flag = t.cols.indexOf("flag");
@@ -117,7 +119,7 @@
         var cls = [];
         if (t.keys.indexOf(j) >= 0) cls.push("key");
         if (i === r && j === c) cls.push("hit");
-        h += "<td" + (cls.length ? ' class="' + cls.join(" ") + '"' : "") + ">" + esc(t.rows[i][j]) + "</td>";
+        h += "<td" + (cls.length ? ' class="' + cls.join(" ") + '"' : "") + ">" + mark(esc(t.rows[i][j])) + "</td>";
       });
       h += "</tr>";
     }
