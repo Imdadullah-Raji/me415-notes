@@ -46,6 +46,20 @@
     });
   });
 
+  // A menu closes on a click anywhere outside it, or on Escape; opening one menu closes the other.
+  var menus = document.querySelectorAll("details.menu");
+  document.addEventListener("click", function (e) {
+    menus.forEach(function (d) { if (d.open && !d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") menus.forEach(function (d) { d.open = false; });
+  });
+  menus.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) menus.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+
   // A menu opens scrolled to the current page.
   document.querySelectorAll("details.menu").forEach(function (d) {
     d.addEventListener("toggle", function () {
