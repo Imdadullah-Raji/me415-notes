@@ -316,7 +316,6 @@ span.aside[hidden] { display: none; }
 .escdraw .es-floor { fill: none; stroke: var(--ink); stroke-width: 2.4; }
 .escdraw .es-run { fill: none; stroke: var(--ink); stroke-width: 3.4; stroke-linecap: round; }
 .escdraw .es-run.es-down { stroke-dasharray: 14 9; stroke-linecap: butt; }
-.escdraw .es-walk { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 3 6; }
 .escdraw .es-arrow.es-up { fill: var(--ink); }
 .escdraw .es-arrow.es-down { fill: var(--paper); stroke: var(--ink); stroke-width: 2.4; stroke-linejoin: round; }
 .escdraw text { fill: var(--ink); }

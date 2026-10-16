@@ -594,7 +594,7 @@ Escalators between more than two floors are arranged in one of two basic ways [K
 - *Stacked parallel (walk-around):* the units are stacked vertically one storey above another; the rider walks the whole length of the escalator at each floor.
 
 ::: {.escdraw #esc-draw caption="Fig. 20: The four arrangements in side elevation, over four floors. Choose one; solid runs go up, dashed runs come down, and the arrows follow the rider, walking along the floor where the arrangement needs it."}
-![Fig. 20: Escalator arrangements in side elevation, four floors: (a) spiral crisscross, (b) walk-around crisscross, (c) parallel spiral, (d) stacked parallel. Solid runs go up, dashed runs come down; arrows follow the rider, dotted lines are walks along a floor.](figures/020_arrangements.pdf "w=0.95")
+![Fig. 20: Escalator arrangements in side elevation, four floors: (a) spiral crisscross, (b) walk-around crisscross, (c) parallel spiral, (d) stacked parallel. Solid runs go up, dashed runs come down; arrows follow the rider, walking along a floor where the arrangement needs it.](figures/020_arrangements.pdf "w=0.95")
 :::
 
 | | Crisscross | Parallel |

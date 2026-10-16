@@ -9,7 +9,7 @@
   if (!host) return;
   var NS = "http://www.w3.org/2000/svg", VW = 1000, VH = 560;
   var FL = [510, 370, 230, 90], X0 = 170, X1 = 950, XL = 360, XR = 780;   // floor levels (Floor 1 at the bottom); run ends
-  var OFF = 6, WALK = { up: 20, down: 44 };            // up runs above their line, down runs below; walks above the floor
+  var OFF = 6, WALK = { up: 0, down: 0 };              // up runs above their line, down runs below; walks on the floor
   var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var STATIC = host.hasAttribute("data-static");
 
@@ -41,7 +41,7 @@
 
   // The runs to draw, in drawing order (up runs in the rider's order, then down runs), and the two rider paths.
   function geometry(m) {
-    var runs = [], walks = [], up = [], down = [], i, a, b;
+    var runs = [], up = [], down = [], i, a, b;
     for (i = 0; i < 3; i++) {                            // up, storey by storey from Floor 1
       a = { x: X(m.up[i]), y: FL[i] - OFF };
       b = { x: X(other(m.up[i])), y: FL[i + 1] - OFF };
@@ -56,11 +56,10 @@
       if (down.length && down[down.length - 1].x !== a.x) walk(down, a, FL[i + 1] - WALK.down);
       down.push(a, b);
     }
-    return { runs: runs, walks: walks, paths: [route(up, "up"), route(down, "down")] };
+    return { runs: runs, paths: [route(up, "up"), route(down, "down")] };
     function walk(nodes, a, y) {                         // off one run, along the floor, onto the next
       var x0 = nodes[nodes.length - 1].x;
       nodes.push({ x: x0, y: y }, { x: a.x, y: y });
-      walks.push({ a: { x: x0, y: y }, b: { x: a.x, y: y }, dir: "walk" });
     }
   }
   function route(nodes, dir) {                           // segments with lengths; walks are the level ones
@@ -95,9 +94,9 @@
       var t = el("text", { x: X0 - 16, y: y + 8, "class": "es-note", "text-anchor": "end" }, g);
       t.textContent = "Floor " + (i + 1);
     });
-    geo.runs.concat(geo.walks).forEach(function (r) {
+    geo.runs.forEach(function (r) {
       var d = "M" + r.a.x + " " + r.a.y + "L" + r.b.x + " " + r.b.y;
-      var p = el("path", { d: d, "class": r.dir === "walk" ? "es-walk" : "es-run es-" + r.dir }, g), it = { path: p, dur: r.dir === "walk" ? 250 : 320 };
+      var p = el("path", { d: d, "class": "es-run es-" + r.dir }, g), it = { path: p, dur: 320 };
       if (r.dir !== "up") {                              // a dashed line is revealed through a growing mask
         var id = "es-m" + uid++, mk = el("mask", { id: id, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: VW, height: VH }, defs);
         it.reveal = el("path", { d: d, stroke: "#fff", "stroke-width": 10, fill: "none", pathLength: 1 }, mk);
@@ -110,12 +109,12 @@
     });
     items.forEach(function (it) { it.reveal.setAttribute("stroke-dasharray", "1 1"); });
     geo.paths.forEach(function (r) {
-      // moving: one arrow every ~120 units of path (220 on a phone); still: one at the middle of each run and of each walk
+      // moving: about two arrows on each run (one every ~220 units of path); still: one at the middle of each run and of each walk
       var spots = [];
-      if (STATIC || still) r.segs.forEach(function (s) { if (!s.step) spots.push(s.at + s.len * (s.walk ? 0.85 : 0.3)); });
-      else for (var n = Math.max(4, Math.round(r.total / (big ? 220 : 120))), i = 0; i < n; i++) spots.push(i * r.total / n);
+      if (STATIC || still) r.segs.forEach(function (s) { if (!s.step) spots.push(s.at + s.len * (s.walk ? (r.dir === "up" ? 0.8 : 0.5) : 0.3)); });
+      else for (var n = Math.max(3, Math.round(r.total / 220)), i = 0; i < n; i++) spots.push(i * r.total / n);
       spots.forEach(function (d0) {
-        var a = el("path", { d: r.dir === "up" ? "M-10 -8L8 0L-10 8Z" : "M-10 -8L6 0L-10 8", "class": "es-arrow es-" + r.dir }, g);
+        var a = el("path", { d: r.dir === "up" ? "M-7 -5.5L6 0L-7 5.5Z" : "M-7 -5.5L4.5 0L-7 5.5", "class": "es-arrow es-" + r.dir }, g);
         arrows.push({ el: a, r: r, d0: d0, k: big ? 1.6 : STATIC ? 1.4 : 1 });
       });
     });
@@ -135,7 +134,7 @@
     var sheet = el("svg", { xmlns: NS, viewBox: "0 0 " + 2 * VW + " " + 2 * (VH + 70), width: 2 * VW, height: 2 * (VH + 70) });
     el("style", {}, sheet).textContent = ".es-floor{fill:none;stroke:#000;stroke-width:2.4}.es-run{fill:none;stroke:#000;stroke-width:3.4}" +
       ".es-run.es-down{stroke-dasharray:14 9}.es-arrow.es-up{fill:#000}.es-arrow.es-down{fill:#fff;stroke:#000;stroke-width:2.4;stroke-linejoin:round}" +
-      ".es-walk{fill:none;stroke:#555;stroke-width:1.6;stroke-dasharray:3 6}.es-note{font:24px serif;font-variant:small-caps;fill:#555}.es-title{font:bold 32px serif;fill:#000}";
+      ".es-note{font:24px serif;font-variant:small-caps;fill:#555}.es-title{font:bold 32px serif;fill:#000}";
     var sdefs = el("defs", {}, sheet);
     Object.keys(MODES).forEach(function (k, i) {
       var g = el("g", { transform: "translate(" + (i % 2) * VW + " " + (Math.floor(i / 2) * (VH + 70) + 60) + ")" }, sheet);
