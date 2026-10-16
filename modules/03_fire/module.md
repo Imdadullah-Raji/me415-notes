@@ -32,7 +32,7 @@
 
 ## 3.1 Fire and its fundamentals ★
 
-### What fire is
+### What fire is {#fire-what}
 
 **Fire** is the rapid oxidation of a material in the exothermic chemical process of combustion, releasing heat, light and various reaction products [Kanak p.198]. Grondzik puts it as: "Fire is a special kind of oxidation known as combustion." Molecules of fuel combine with oxygen and give gases and energy; when this happens fast, the energy appears as heat and light and some of the gases become visible as smoke [Grondzik §24.1].
 
@@ -41,7 +41,7 @@ Combustion is either **controlled** or **uncontrolled** [Kanak p.199]:
 - *Controlled* combustion is used on purpose: cooking, lighting, engines of vehicles and aircraft, boilers.
 - *Uncontrolled* combustion starts unintentionally and spreads: house fires, wild and forest fires, explosions. Fire protection deals with this kind.
 
-### The fire triangle and the fire tetrahedron
+### The fire triangle and the fire tetrahedron {#fire-triangle}
 
 **Fire triangle.** A fire needs three things at once: **fuel**, **heat** (a temperature high enough to release vapour from the fuel and ignite it) and **oxygen** (an oxidising agent, normally air with 21% O₂). "If deprived of any of these needs, building fires will be extinguished" [Grondzik §24.1].
 
@@ -64,7 +64,7 @@ The fuel–air ratio must also lie inside the **flammable limits** [Kanak p.198]
 | Typical fires | Smouldering (glowing) combustion of solids is described well by the triangle | Flaming fires of liquids, gases and most solids |
 | Status | Older, simpler model | Current model (NFPA[The National Fire Protection Association, a US non-profit founded in 1896, writes fire codes and standards used around the world: NFPA 10 (portable extinguishers), NFPA 13 (sprinklers), NFPA 30 (flammable and combustible liquids), NFPA 72 (fire alarms), NFPA 101 (the Life Safety Code). BNBC 2020 Part 4 uses its fire classes.]{.aside}) |
 
-### Terms of fire science (flammability and combustibility)
+### Terms of fire science (flammability and combustibility) {#fire-terms}
 
 - **Ignition (kindling) temperature:** the lowest temperature at which a material, heated by an outside source (spark, flame), ignites and continues to burn.
 - **Auto-ignition temperature:** the lowest temperature at which a substance ignites by itself, with no spark or flame. Cooking oil can auto-ignite; this is why class K fires re-ignite until the oil is cooled [Kanak p.209].
@@ -79,7 +79,7 @@ The fuel–air ratio must also lie inside the **flammable limits** [Kanak p.198]
 
 **How fire spreads.** By **conduction** (through steel beams, pipes, walls), **convection** (hot smoke and gases rising through stairs, shafts and ducts and spreading under the ceiling), **radiation** (from flames and the hot smoke layer to nearby fuel and to neighbouring buildings) and **direct flame contact** and flying brands.
 
-### Products and effects of fire
+### Products and effects of fire {#fire-effects}
 
 **Products of combustion** [Grondzik §24.1(b)]:
 
@@ -95,7 +95,7 @@ The fuel–air ratio must also lie inside the **flammable limits** [Kanak p.198]
 - Smoke spreads much more easily than fire and harms people far from the fire. **Smoke from a fire has killed more people than the fire itself.**
 - Losses are enormous: lives, injuries, buildings, contents, business continuity and the environment.
 
-### How a fire grows
+### How a fire grows {#fire-growth}
 
 A compartment fire passes through five stages (Fig. 2) [Grondzik §24.16, Table 24.1]:
 
@@ -109,9 +109,19 @@ Grondzik's Table 24.1 divides growth into five *realms*: preburning (overheat to
 
 ![Fig. 2: Fire development curve: indicative room gas temperature (vertical axis, 0–1200 °C) against time (horizontal axis). The curve rises slowly in the INCIPIENT stage (ignition, smouldering, invisible particles), curves upward in the GROWTH stage (flames spread, hot smoke layer under the ceiling; marked as the escape and first-aid firefighting window), jumps steeply at FLASHOVER (all exposed surfaces ignite, gas layer about 500–600 °C), stays near 850–900 °C in the FULLY DEVELOPED stage (whole room burns, ventilation-controlled) and falls in the DECAY stage (fuel used up). Dashed vertical lines separate the stages.](figures/002.jpg "w=0.75")
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What is fire?” (2017-18); “Define fire, fire triangle and explain fire fundamentals in detail” (2021-22). *Read:* [What fire is](#fire-what), [the triangle and tetrahedron](#fire-triangle). *Answer:* [Solution 3.16](#q-3-16), [Solution 3.3](#q-3-3).
+> - “What is fire tetrahedron?” (2012-13); “Differentiate between the fire tetrahedron and fire triangle” (2023-24). *Read:* [the triangle and tetrahedron](#fire-triangle). *Answer:* [Solution 3.1](#q-3-1), [Solution 3.4](#q-3-4).
+> - “Write short note on flammability and combustibility” (2021-22). *Read:* [terms of fire science](#fire-terms). *Answer:* [Solution 3.3](#q-3-3).
+> - “What are the effects of fire?” (2017-18). *Read:* [products and effects](#fire-effects). *Answer:* [Solution 3.16](#q-3-16).
+> - “Write short note on … fire growth” (2020-21). *Read:* [how a fire grows](#fire-growth). *Answer:* [Solution 3.9](#q-3-9).
+
 ## 3.2 Causes and sources of fire; the Bangladesh picture ★
 
-### Causes of ignition
+### Causes of ignition {#fire-causes}
 
 **Main sources of fire** [Kanak p.202]:
 
@@ -128,7 +138,7 @@ Grondzik groups the ignition sources in buildings into **three basic kinds** [Gr
 - **Electrical**: mostly resistance heating (appliances, space heaters, overloaded cables); also induction, dielectric heating, arcing, static electricity and lightning.
 - **Mechanical**: friction (including sparks), overheated machinery and, occasionally, heat of compression.
 
-### Fire statistics of Bangladesh
+### Fire statistics of Bangladesh {#fire-bd-stats}
 
 [Kanak pp.200–201; Bangladesh Fire Service and Civil Defence (BFSCD)]
 
@@ -160,7 +170,7 @@ Grondzik groups the ignition sources in buildings into **three basic kinds** [Gr
 | Jan 2024 | Benapole Express train, Dhaka | 4 | Arson (fire set intentionally) |
 | Feb 2024 | Green Cozy Cottage (Kacchi Bhai), Bailey Road | 46 | Gas cylinders on every floor of a restaurant building blocked the only stair, the fire exit |
 
-### Why fire is such a devastating hazard in Bangladesh
+### Why fire is such a devastating hazard in Bangladesh {#fire-bd-why}
 
 Kanak vai's note's slide (starred by the student) sorts the reasons by the stage of the fire [Kanak p.202]:
 
@@ -169,7 +179,7 @@ Kanak vai's note's slide (starred by the student) sorts the reasons by the stage
 - **Fire control and extinguishment**: no fire protection system inside the occupancy; long fire-service response time in congested roads; the fire is already large before active firefighting can start; lack of water (no hydrants, no reserve) and of fire protection systems.
 - **Evacuation from the building**: violation of the building code (too few exits, narrow exit passages, locked or blocked exits, no fire lifts in high-rise buildings and health-care facilities); no or very few fire drills.
 
-### The fire safety concept
+### The fire safety concept {#fire-concept}
 
 The **fire safety concept** is that fire safety objectives (life safety first, then property, continuity of operation and heritage [Grondzik §24.1(c)]) are met by a combination of measures, so that no single failure causes a disaster. The **Fire Safety Concepts Tree** (NFPA 550) shows the logic (Fig. 3):
 
@@ -184,7 +194,7 @@ Two other ways of saying the same thing appear in answers:
 
 ![Fig. 3: The Fire Safety Concepts Tree (after NFPA 550). Top box: FIRE SAFETY OBJECTIVES (life, property, mission, heritage). Through an OR gate it branches to PREVENT FIRE IGNITION and MANAGE FIRE IMPACT. Prevent fire ignition splits into three boxes: control heat-energy sources (wiring, smoking, hot work, heaters), control source–fuel interactions (separation, insulation, distance) and control fuel (limit, choose non-combustible, housekeeping). Manage fire impact splits into MANAGE FIRE and MANAGE EXPOSED. Manage fire splits into control combustion process (materials, finishes), suppress fire (sprinklers, hose, extinguishers) and control fire by construction (compartments, fire walls). Manage exposed splits into limit amount exposed (occupant load, layout) and safeguard exposed: defend in place or move (detect, alarm, evacuate). A footnote says prevention acts before ignition; detection, suppression, compartmentation and escape act after it.](figures/003.jpg "w=0.85")
 
-### Evacuation
+### Evacuation {#fire-evacuation}
 
 Evacuation is the orderly movement of occupants from the fire to a safe place outside (or to a protected refuge) before conditions become untenable [Grondzik §24.1(e)]:
 
@@ -192,6 +202,16 @@ Evacuation is the orderly movement of occupants from the fire to a safe place ou
 - **Means of egress:** *exit access* (corridor to an exit), *exit* (protected stair or door, fire-rated), *exit discharge* (from the exit to a public way). Exits must be enough in number (at least two), wide enough for the occupant load, never locked, lit and signed, and reachable within the code's travel distance.
 - **Vertical exits** are protected stairs and smoke-proof towers, **not lifts** (only dedicated fire lifts are used by firefighters). At least 30% of fire deaths happen because fire cuts off the exit route.
 - **Needs:** fire drills, trained wardens, emergency lighting, exit signs, refuge floors in tall buildings, pressurised stairs.
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the main causes of ignition?” (2012-13, 2015-16). *Read:* [causes of ignition](#fire-causes). *Answer:* [Solution 3.1](#q-3-1), [Solution 3.2](#q-3-2).
+> - “What are the main sources of fire? Why is fire such a devastating hazard in Bangladesh?” (2020-21, 2022-23). *Read:* [causes](#fire-causes), [why so devastating](#fire-bd-why). *Answer:* [Solution 3.5](#q-3-5), [Solution 3.12](#q-3-12).
+> - “Give brief description of major industrial and non-industrial fire accidents and sources of fire in Bangladesh” (2021-22). *Read:* [fire statistics of Bangladesh](#fire-bd-stats). *Answer:* [Solution 3.6](#q-3-6).
+> - “What is the fire safety concept tree?” (2020-21). *Read:* [the fire safety concept](#fire-concept). *Answer:* [Solution 3.5](#q-3-5).
+> - “Write short note on evacuation …” (2020-21). *Read:* [evacuation](#fire-evacuation). *Answer:* [Solution 3.9](#q-3-9).
 
 ## 3.3 Extinguishing a fire: the four modes ★
 
@@ -205,6 +225,13 @@ A fire is put out by **controlling or removing one or more sides of the fire tet
 | **Inhibition** (breaking the chemical chain reaction) | Chain reaction | Agent captures the free radicals in the flame | Dry chemical powders (ABC, BC), halons, clean agents (FM-200) |
 
 Most agents work by more than one mode. Water cools mainly, but the steam it forms (1700 times the volume of the water) also smothers. Foam smothers and cools. CO₂ smothers and also cools (it absorbs about 280 kJ/kg on release). Dry powder inhibits the chain reaction and also coats (smothers) the fuel [Grondzik §24.3, §24.4].
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Describe different way of extinguishment of fire” (2020-21). *Read:* the four modes above. *Answer:* [Solution 3.11](#q-3-11).
+> - “Explain how the different fire extinguishing mediums target different elements of fire tetrahedron” (2023-24), with §3.5 for the agents. *Read:* the four modes above. *Answer:* [Solution 3.4](#q-3-4).
 
 ## 3.4 Classes of fire ★
 
@@ -226,11 +253,18 @@ Fires are classified by the fuel, because the fuel decides which agent works and
 >
 > In the European/British system (EN 2) class B is flammable liquids, **class C is flammable gases**, class D metals, **class F** cooking oils, and electrical fires have no letter. Questions here ask "according to NFPA" or "according to BNBC"; both use A, B, C (electrical), D, K. State which system you use.
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Classify fire according to NFPA” or “Classify fire” (2012-13, 2016-17, 2018-19, 2020-21), always with “specify which type of extinguisher will be used” from §3.5. *Read:* the class table above. *Answer:* [Solution 3.7](#q-3-7), [Solution 3.8](#q-3-8), [Solution 3.10](#q-3-10), [Solution 3.11](#q-3-11).
+> - “Classify fire according to BNBC with examples” (2020-21, 2022-23). *Read:* the class table above. *Answer:* [Solution 3.9](#q-3-9), [Solution 3.12](#q-3-12).
+
 ## 3.5 Extinguishing agents and portable extinguishers ★
 
 The extinguishing agents are water, foam, powder, gaseous agents (CO₂, inert gases) and vaporising liquids (halons and their clean-agent replacements) [Kanak p.204].
 
-### Water
+### Water {#ext-water}
 
 Water is the most commonly available and effective fire-fighting medium. It removes heat: the heat that would pyrolyse the fuel goes into raising the water's temperature and, mainly, into evaporating it (2256 kJ/kg). The steam (1700 times the liquid volume) also displaces air. "Water cools, smothers, emulsifies, and dilutes" [Kanak p.204; Grondzik §24.3].
 
@@ -247,7 +281,7 @@ Water is the most commonly available and effective fire-fighting medium. It remo
 
 ![Fig. 4: Pressurised water fire extinguisher. Left: photograph of a stainless-steel cylinder with a black hose and a red label "WATER fire extinguisher". Right: cut-away labelled operating lever, safety pin and carrying handle at the head, control valve, the stored-pressure (gas) space at the top, water in the lower part of the cylinder, a discharge tube (dip tube) from the head to near the bottom, and the nozzle at the end of the external hose. [Kanak p.205]](figures/004.jpg "w=0.55")
 
-### Carbon dioxide
+### Carbon dioxide {#ext-co2}
 
 CO₂ is stored as a **liquid under pressure** (about 55 bar at room temperature) in a heavy steel cylinder; on release it flashes to gas and partly to "snow" at −78 °C [Kanak p.206]. It **smothers** (displaces oxygen) and **cools** (it absorbs about 280 kJ/kg) [Grondzik §24.4(c)]. It is **clean**: non-conducting, leaves no residue, does not contaminate food, valuable materials or clothing. So CO₂ extinguishers are used in data-processing centres, laboratories, communication rooms, switch rooms and food stores and processing plants, where contamination and clean-up time matter. The extinguisher has no pressure gauge (it is checked by weight) and discharges through a wide **horn** (Fig. 5), which slows the gas and must not be held with bare hands (frost burns).
 
@@ -269,7 +303,7 @@ Limitations: **foam solutions are electrically conductive**, so not for live ele
 
 ![Fig. 6: 9-litre chemical foam extinguisher, cut-away. An inner compartment (a central tube) holds aluminium sulphate solution; the outer compartment holds sodium bicarbonate solution, with a water-level indicator mark on the outer shell. At the top are a spring-loaded T handle, a valve on the inner container, a nozzle valve and porthole, and the nozzle on the cap. [Kanak p.207]](figures/006.jpg "w=0.45")
 
-### Dry chemical powder
+### Dry chemical powder {#ext-powder}
 
 The **ABC (multipurpose) dry chemical powder** is mostly **mono-ammonium phosphate** with ammonium sulphate, finely ground and made free-flowing; **BC powder** is sodium or potassium bicarbonate [Kanak p.208; Grondzik §24.4(e)]. The powder is expelled either by stored pressure (nitrogen in the body, with a gauge) or by a **CO₂ gas cartridge** that is pierced by a strike knob when the extinguisher is used (Fig. 7). Nitrogen may also be used as the expellant.
 
@@ -291,7 +325,7 @@ Wet chemical extinguishers use the agent **in liquid form** and are ideal for **
 
 **Halons** (halogenated hydrocarbons such as Halon 1301, CF₃Br) put out fires by interrupting the chain reaction, leave no residue and are safe at use concentrations, but they destroy stratospheric ozone; their production was phased out in 1994 [Grondzik §24.4(a)]. **Clean agents** replace them: **FM-200 (HFC-227ea, heptafluoropropane)**, other HFCs, and inert-gas mixtures (IG-541: nitrogen, argon, CO₂). FM-200 vaporises, mixes with air and interrupts combustion; it is clean, non-toxic, odourless, non-conducting and has zero ozone-depletion potential, but needs about 50% more cylinders than Halon 1301 and is costly. They are used in total-flooding systems for computer rooms, control rooms, telecom rooms, archives and museums [Grondzik §24.4(d)].
 
-### Comparison of extinguisher types
+### Comparison of extinguisher types {#ext-compare}
 
 | Type (agent) | Fire classes | Mechanism | Advantages | Limitations |
 |---|---|---|---|---|
@@ -303,7 +337,7 @@ Wet chemical extinguishers use the agent **in liquid form** and are ideal for **
 | **Wet chemical** | **K**, A | Saponification (soap layer on the oil) and cooling | Prevents re-ignition of hot cooking oil; gentle mist does not splash | Conductive (not C); limited to kitchens |
 | **Clean agent** (FM-200, inert gas) | **A** (surface), **B, C** | Chain-reaction inhibition (HFC) or O₂ dilution (inert gas) | No residue, non-conducting, safe for people at design concentration, fast | Expensive; needs an enclosed room; HFCs have high global-warming potential |
 
-### Portable fire extinguishers: purpose, selection and placement
+### Portable fire extinguishers: purpose, selection and placement {#ext-portable}
 
 **Purpose.** Portable extinguishers are **first-aid** fire-fighting appliances: hand-held units used by occupants to put out or control a fire **in its incipient stage**, before it grows, before the fire service arrives and before fixed systems are overwhelmed. "Most fires in buildings can be extinguished at an early stage with these commonly seen devices" [Grondzik §24.4(e)]. They do not replace sprinklers, hose or evacuation; the user must always keep an escape route behind them.
 
@@ -326,9 +360,20 @@ Wet chemical extinguishers use the agent **in liquid form** and are ideal for **
 
 ![Fig. 8: Extinguisher and standpipe locations on a typical multi-storey office floor plan. Extinguishers are placed at the stair enclosures and in the lobby and corridors, so that no point on the floor is more than 75 ft (23 m) of travel from an extinguisher; standpipe hose connections are in the stairs. [Grondzik Fig. 24.29]](figures/008.png "w=0.6")
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Make comparison between different types of fire extinguisher … specify which type of extinguisher will be used for different class of fire” (2018-19, 2020-21, 2022-23). *Read:* [comparison of extinguisher types](#ext-compare). *Answer:* [Solution 3.10](#q-3-10), [Solution 3.11](#q-3-11), [Solution 3.12](#q-3-12).
+> - “… specify which type of extinguisher will be used for different type of fire” (2012-13, 2016-17). *Read:* [comparison of extinguisher types](#ext-compare). *Answer:* [Solution 3.7](#q-3-7), [Solution 3.8](#q-3-8).
+> - “Make a brief comparison between CO₂ and Powder type fire extinguisher” (2015-16). *Read:* [carbon dioxide](#ext-co2), [dry chemical powder](#ext-powder). *Answer:* [Solution 3.13](#q-3-13).
+> - “Write down some advantages and disadvantages of water fire extinguisher” (2013-14). *Read:* [water](#ext-water). *Answer:* [Solution 3.14](#q-3-14).
+> - “Explain how the different fire extinguishing mediums target different elements of fire tetrahedron” (2023-24). *Read:* each agent’s “how it works” line. *Answer:* [Solution 3.4](#q-3-4).
+> - “What is the purpose of portable fire extinguishers? Discuss the key factors governing the selection and placement” (2023-24). *Read:* [portable fire extinguishers](#ext-portable). *Answer:* [Solution 3.15](#q-3-15).
+
 ## 3.6 Sprinkler systems ★
 
-### What a sprinkler system is and how it works
+### What a sprinkler system is and how it works {#spr-what}
 
 A fire **sprinkler system** is an active fire protection method consisting of a water supply providing adequate pressure and flow to a network of distribution pipes onto which **sprinkler heads** are connected [Kanak p.210]. Sprinkler systems are **automatic**: they **detect** a fire, **announce** it (alarm) and **act** by spraying water to control or suppress it, with no person present. A sprinkler is already above the fire and acts within seconds, while firefighters take minutes; most fires in sprinklered buildings are put out by one to five heads, and over half by two or fewer [Grondzik §24.1(c), §24.3(d)].
 
@@ -354,7 +399,7 @@ A fire **sprinkler system** is an active fire protection method consisting of a 
 
 ![Fig. 10: Wet-pipe sprinkler system schematic (Grondzik Fig. 24.18): from the water supply main the pipe passes an OS&Y gate valve and the alarm valve (with a local alarm and a main drain); a fire department (Siamese) connection joins downstream; the riser (bulk main) rises to the cross mains, which feed branch lines carrying the automatic sprinklers; an inspector's test connection is at the far end of the system.](figures/010.png "w=0.6")
 
-### Sprinkler heads
+### Sprinkler heads {#spr-heads}
 
 Sprinkler heads are the key components; each must suit the property protected in **design, performance, application and temperature rating** [Kanak p.212].
 
@@ -394,7 +439,7 @@ The head opens because of **heat at the head only**, not because of smoke or an 
 
 **Quick-response** heads have a light element with a response time index RTI ≤ 50 (m·s)^½ (standard ≥ 80) and open sooner; they are required in light-hazard occupancies such as offices and hotels [Grondzik §24.3(f)]. Discharge from a head is $Q=K\sqrt{p}$ ($Q$ in L/min, $p$ in bar, $K\approx80$ for a 15 mm head) [Grondzik §24.3(d)].
 
-### Types of sprinkler system
+### Types of sprinkler system {#spr-types}
 
 [Grondzik §24.3(j)–(n)]
 
@@ -439,6 +484,14 @@ Water is conveyed from the supply to the heads through a network of pipes: riser
 > **TRAP: Table 4.4.6 misprint**
 >
 > In BNBC Table 4.4.6 (copper pipe) the 63 mm row is labelled "(1½)" inch; it is **2½ inch**, as in Table 4.4.5.
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Briefly describe the sprinkler fire protection system with schematic diagram” (2017-18, 2018-19, 2020-21). *Read:* [what a sprinkler system is and how it works](#spr-what), [types](#spr-types). *Answer:* [Solution 3.16](#q-3-16), [Solution 3.10](#q-3-10), [Solution 3.11](#q-3-11).
+> - “Explain the mechanism behind the activation of a fusible element sprinkler head. What is the purpose of producing different spray patterns by the deflectors?” (2023-24). *Read:* [sprinkler heads](#spr-heads). *Answer:* [Solution 3.17](#q-3-17).
+> - “Describe different type of fire protection systems in details with schematic diagram” (2021-22), with §3.7 and §3.9. *Read:* the whole section. *Answer:* [Solution 3.20](#q-3-20).
 
 ## 3.7 Standpipe and hose systems ★
 
@@ -487,6 +540,13 @@ NFPA 14 flow for Class I and III: 1893 L/min (500 gpm) for the first standpipe p
 
 ![Fig. 19: Standpipe components (Grondzik Fig. 24.14): (a) a hose rack with folded hose, valve and nozzle; (b) a recessed hose cabinet that also holds a portable extinguisher; (c) a Siamese fire department connection on an outside wall, with two inlets, a check valve and a ball drip.](figures/019.jpg "w=0.55")
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Briefly describe the standpipe and hose fire protection system with a schematic diagram” (2016-17, 2022-23). *Read:* the whole section. *Answer:* [Solution 3.18](#q-3-18), [Solution 3.19](#q-3-19).
+> - “Describe different type of fire protection systems in details with schematic diagram” (2021-22), with §3.6 and §3.9. *Read:* the whole section. *Answer:* [Solution 3.20](#q-3-20).
+
 ## 3.8 Water supply and fire pumps
 
 ### Water sources (BNBC)
@@ -517,7 +577,7 @@ Water for fire protection should preferably come from fresh sources (river, tube
 
 ## 3.9 Fire detection and alarm ★
 
-### Purpose and functions
+### Purpose and functions {#alarm-purpose}
 
 "A fire alarm system serves primarily to protect life and secondarily to prevent property loss" [Grondzik §24.6]. An **automatic fire detection and alarm system** senses a fire in its early stage (smoke, heat, flame, gas) without any person present, and **warns the occupants** in time to evacuate and the staff to fight the fire while it is small.
 
@@ -557,7 +617,7 @@ Kanak vai's note lists heat detectors, smoke detectors, CO detectors, multi-sens
 
 ![Fig. 24: The four stages of a fire and the detector for each (Grondzik Fig. 24.40): hazard rising with time through the incipient stage (invisible particles; ionization or gas detector), the smouldering stage (visible smoke; photoelectric detector), the flame stage (flame detector) and the heat stage (heat detector).](figures/024.png "w=0.6")
 
-### Ionization vs photoelectric smoke detectors ★
+### Ionization vs photoelectric smoke detectors ★ {#alarm-smoke}
 
 **Ionization detector** (Fig. 25a) [Grondzik §24.16]. A small radioactive source (americium-241, about 1 microcurie) emits alpha particles that **ionize the air** in a chamber between two charged plates, so a tiny current flows. Combustion particles entering the chamber attach to the ions and **reduce their mobility**, so the current falls (and the chamber voltage rises). The electronics sense the drop and raise the alarm. Response is essentially instantaneous once particles arrive. It detects the **small, invisible particles (0.01–1 $\mu$m)** of the incipient stage and of **fast, clean flaming fires**.
 
@@ -578,6 +638,13 @@ Combination (dual-sensor) detectors use both principles. Where both kinds of fir
 ![Fig. 25: Smoke detector principles. (a) Ionization: a chamber with a positive plate at the top and a negative plate at the bottom; an americium-241 source on the lower plate emits alpha particles that ionize the air, shown as plus and minus ions between the plates, so a small current flows to a current sensor; grey smoke particles entering the chamber capture ions, the ion current falls and the alarm sounds. (b) Photoelectric (light-scattering): an LED sends a light beam across the chamber into a light trap; a photocell sits above the beam behind a baffle, out of the direct beam, so in clean air it sees no light; grey smoke particles in the beam scatter light (dashed arrows) up onto the photocell, its signal rises and the alarm sounds.](figures/025.png "w=0.85")
 
 ![Fig. 26: Scattered-light photoelectronic spot detector (Grondzik Fig. 24.45): a light source and lens send a beam to a supervisory photocell; the alarm photocell is set at an angle out of the beam, and smoke entering the chamber scatters light onto it.](figures/026.png "w=0.45")
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Explain the purpose of automatic fire detection and alarm systems within a building. What other critical functions can they perform?” (2023-24). *Read:* [purpose and functions](#alarm-purpose). *Answer:* [Solution 3.21](#q-3-21).
+> - “Compare ionization smoke detectors and photoelectric smoke detectors …” (2023-24). *Read:* [ionization vs photoelectric](#alarm-smoke). *Answer:* [Solution 3.22](#q-3-22).
 
 ## 3.10 BNBC occupancy and hazard classification ★
 
@@ -639,7 +706,7 @@ The BNBC 2006 attachment links the hazard classes to occupancy subgroups [PP 15-
 
 Footnotes (in both versions): \* values are for **one riser serving a floor area of 1000 m²**; \*\* the durations are for a building up to **51 m** high; for 51–102 m and above 102 m the duration is **1.25 times** and **1.5 times** the specified value. BNBC 2006 prints only the 51 m column and the footnote; BNBC 2020 prints the multiplied values as columns (rounded).
 
-### The method
+### The method {#storage-method}
 
 1. **Hazard class** → the row of Table 4.4.1 (given in the papers; otherwise from the occupancy, §3.10).
 2. **Flow per riser**: sprinkler flow $Q_{spr}$ and standpipe-and-hose flow $Q_{sp}$ from the row.
@@ -694,6 +761,13 @@ The four mini-examples below use one made-up building: a hotel (light hazard-II)
 >
 > One riser; $V=(1000+1000)\times30=60\,000$ L = **60 m³** fire reserve. The roof tank holds the fire reserve in its lower part and the domestic reserve above it (Fig. 20): total **100 m³** (domestic outlet set at the 60 m³ level).
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “For a facility having building of light hazard-I type, N rentable floors, each A m² net. Floor-to-floor height = 3.7 m. According to BNBC, determine the storage capacity of water for fire protection” (2015-16, 2016-17, 2017-18; light hazard-II in 2018-19). *Read:* [the method](#storage-method). *Answer:* [Solution 3.23](#q-3-23), [Solution 3.24](#q-3-24), [Solution 3.25](#q-3-25), [Solution 3.26](#q-3-26).
+> - “Total building area of 100000 sq. m … Determine the flow requirements and the storage capacity for 90 minutes” (2012-13). *Read:* [the method](#storage-method). *Answer:* [Solution 3.27](#q-3-27).
+
 ## 3.12 BNBC riser diagrams ★
 
 These are the drawing questions (2012-13 to 2022-23). Draw them large, label every item, and add the zone height and the tank divisions. Two layouts are asked.
@@ -704,7 +778,7 @@ Where the supply pressure is low, the water is stored in a **ground (or undergro
 
 ![Fig. 27: BNBC Fig. 4.4.3: typical diagram for fire protection with a ground tank and an automatic fire pump. Elevation of a six-storey building with one vertical riser (standpipe) rising to the roof, closed at the top, with a hose-station symbol on every floor. In the basement/ground: the water main fills a ground tank through an inlet over the top; two suction pipes from the tank bottom go to the automatic fire pump, whose discharge passes a valve into a horizontal header that feeds the riser and a hose station on the lowest level; a Siamese connection accessible to the fire engine, with a check valve, connects to the same header at the outside wall. [Kanak p.220]](figures/027.jpg "w=0.5")
 
-### Automatic fire pumps in different water supply zones of a tall building (Fig. 4.4.8)
+### Automatic fire pumps in different water supply zones of a tall building (Fig. 4.4.8) {#riser-448}
 
 **Why zones.** In a tall building the static pressure at the bottom of a riser rises by about 9.8 kPa per metre of height (10 bar at 100 m). Hose valves, hoses and sprinkler fittings have a maximum allowable working pressure, and a hose at too high a pressure cannot be handled. BNBC therefore requires the pressure on the equipment to be reduced by one of three methods [Kanak p.223; BNBC 2020 Part 4 §4.2.5]:
 
@@ -724,7 +798,7 @@ The zone height of about 67 m corresponds to the largest static head the hose eq
 
 ![Fig. 28: BNBC Fig. 4.4.8: typical diagram for fire protection in different water supply zones of a tall building. Elevation of a tall building split by a break line into Zone 1 (lower floors, dimension "Zone 1 hight ≈ 67 m") and Zone 2 (upper floors). At ground level, the water main or individual water supply fills a ground tank; two automatic fire pumps draw from the tank bottom. Pump 1, through a valve, feeds the Zone-1 riser, which has a hose station on every Zone-1 floor and is closed at the top of Zone 1. Pump 2, through a valve, feeds a separate taller riser that passes through Zone 1 without outlets and serves hose stations only on the Zone-2 floors, ending at the roof. Two Siamese connections accessible to the fire engine: one at upper left on the Zone-2 riser line, one at right on the Zone-1 riser. [Kanak p.224]](figures/028.jpg "w=0.6")
 
-### Ground tank and gravity roof tank with domestic and fire reserve (Fig. 4.4.4)
+### Ground tank and gravity roof tank with domestic and fire reserve (Fig. 4.4.4) {#riser-444}
 
 **Fig. 4.4.4 described** (Fig. 29). The **water main or individual water supply** fills a **ground tank**. A **manually controlled pump** (a transfer pump; a manual pump is allowed because it only fills a tank) takes suction from the ground tank and lifts water through a separate rising pipe, with a valve, to the **roof tank**. The roof tank is divided by level (dashed line) into a **domestic reserve** (upper part) and a **fire reserve** (lower part). The **domestic water supply pipe** leaves the tank **above** the fire reserve and runs down to the floors, so domestic use can never draw down the fire reserve. The **fire header** leaves from the **bottom** of the tank and feeds the **standpipe**, which runs down the building with a **hose station on every floor**. At ground level a **Siamese connection accessible to the fire engine**, with a check valve and a valve, connects to the bottom of the standpipe so the fire service can pump water up into it.
 
@@ -736,7 +810,7 @@ The roof tank must be high enough above the top hose station for the static head
 
 ![Fig. 30: BNBC Fig. 4.4.2: gravity roof tank with adequate domestic and fire reserve, showing the required static head. Six-storey building with basement. The roof gravity tank is split by a dashed line into an upper domestic reserve and a lower fire reserve; the domestic water supply line leaves above the fire reserve and runs down the building; the stand pipe is fed from the bottom of the tank and has a hose station on every floor and a branch to the sprinkler system (optional). A dimension at the roof reads "this vertical distance should be sufficient to create required pressure" (the static head between the tank bottom and the top hose station). At ground, the water supply line from the main goes to a water lifting pump that fills the roof tank; a Siamese connection on the outside wall feeds the stand pipe. [Kanak p.219]](figures/030.jpg "w=0.5")
 
-### Zones with gravity tanks, and pressure-reducing valves (Figs. 4.4.9, 4.4.10)
+### Zones with gravity tanks, and pressure-reducing valves (Figs. 4.4.9, 4.4.10) {#riser-449}
 
 **Fig. 4.4.9** (Fig. 31): for a **tall** building, the gravity-tank layout is repeated per zone. A ground tank is filled from the main; **manually controlled pumps** lift water through separate rising pipes to a **roof tank** (serving Zone 2) and to an **intermediate tank** at the top of Zone 1 (zone height about 67 m). Each tank is divided into **domestic reserve** (top) and **fire reserve** (bottom); from each, the domestic supply leaves above the fire reserve, and a **fire supply** pipe with a check valve leaves the bottom and feeds that zone's standpipe and hose stations. Siamese connections accessible to the fire engine are provided for the zones. This is the answer when a "tall building" is asked "with different water supply zones with ground and gravity roof tank" (2017-18).
 
@@ -757,6 +831,13 @@ The roof tank must be high enough above the top hose station for the static head
 | 4.4.10 | Ground tank | pump | one roof tank | pressure-reducing valves | Tall building |
 
 <!-- pagebreak -->
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Draw the typical diagram for fire protection with automatic fire pump in different water supply zones of a tall building” (2012-13, 2015-16, 2022-23). *Read:* [Fig. 4.4.8](#riser-448). *Answer:* [Solution 3.28](#q-3-28), [Solution 3.29](#q-3-29), [Solution 3.19](#q-3-19).
+> - “Draw the typical diagram for fire protection system with ground and gravity roof tank with adequate domestic and fire reserve” (2013-14, 2016-17, 2018-19; with water supply zones for a tall building in 2017-18). *Read:* [Fig. 4.4.4](#riser-444), [Figs. 4.4.9, 4.4.10](#riser-449). *Answer:* [Solution 3.30](#q-3-30), [Solution 3.31](#q-3-31), [Solution 3.26](#q-3-26), [Solution 3.25](#q-3-25).
 
 ## 3.13 Term-final questions with solutions
 
