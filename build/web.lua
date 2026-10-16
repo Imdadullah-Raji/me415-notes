@@ -42,6 +42,12 @@ function Div(el)
     for _, b in ipairs(el.content) do table.insert(out, b) end
     table.insert(out, html('</details>'))
     return out
+  elseif c:includes('escdraw') then
+    -- The escalator arrangements (escalators.js). The div holds the PDF's static figure, which is not shown here.
+    return html('<figure class="escdraw" id="' .. el.identifier .. '" data-anim="escalators" ' ..
+                'aria-label="Escalator arrangements, side elevation">' ..
+                (el.attributes.caption and ('<figcaption>' .. escape(el.attributes.caption) .. '</figcaption>') or '') ..
+                '<noscript><p>The drawing needs JavaScript; the PDF edition has it as a figure.</p></noscript></figure>')
   elseif c:includes('liftdraw') or c:includes('doordraw') then
     -- A drawing animation (liftdraw.js, doors.js) in place of a written drawing directive; the text is kept for no-JS.
     local lift = c:includes('liftdraw')

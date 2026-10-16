@@ -308,5 +308,25 @@ span.aside[hidden] { display: none; }
 .doordraw svg.dd-narrow .dd-note { font-size: 34px; }
 .doordraw svg.dd-narrow .dd-caption { font-size: 36px; }
 
+/* The escalator arrangements (escalators.js): side elevation; up runs solid, down runs dashed, arrows on the rider's path.
+   The buttons share the door drawing's rules (.dd-controls, .dd-modes). */
+.escdraw { margin: 1.2em 0; }
+.escdraw figcaption { font-size: .9em; color: var(--muted); text-align: left; margin: 0 0 .5em; }
+.escdraw svg { display: block; width: 100%; background: var(--paper); border: 1px solid var(--rule); font-family: inherit; }
+.escdraw .es-floor { fill: none; stroke: var(--ink); stroke-width: 2.4; }
+.escdraw .es-run { fill: none; stroke: var(--ink); stroke-width: 3.4; stroke-linecap: round; }
+.escdraw .es-run.es-down { stroke-dasharray: 14 9; stroke-linecap: butt; }
+.escdraw .es-walk { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 3 6; }
+.escdraw .es-arrow.es-up { fill: var(--ink); }
+.escdraw .es-arrow.es-down { fill: var(--paper); stroke: var(--ink); stroke-width: 2.4; stroke-linejoin: round; }
+.escdraw text { fill: var(--ink); }
+.escdraw .es-note { font-size: 24px; fill: var(--muted); font-variant: small-caps; }
+.escdraw .es-caption { font-size: 25px; }
+.es-acts { margin-top: .3em; }
+.escdraw svg.es-narrow .es-note { font-size: 44px; }
+.escdraw svg.es-narrow .es-caption { font-size: 44px; }
+.escdraw svg.es-narrow .es-run { stroke-width: 5; }
+.escdraw svg.es-narrow .es-floor { stroke-width: 3.5; }
+
 /* A closed menu's list is not on the page, so the browser's find (Ctrl+F) does not match page titles in it. */
 .menu:not([open]) > ul { display: none; }

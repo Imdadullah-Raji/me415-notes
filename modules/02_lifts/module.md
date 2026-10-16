@@ -378,7 +378,7 @@ If the question gives the **gross** floor area, first take the net usable area f
 - A modest floor plate: try **3000 lb (1360 kg)**. T3: normal load **p = 16**.
 :::
 
-**Step 7. Chart readings (C1, C2).** See the box below. Read RT (C2, Fig. 25) and AVRTP (C1, Fig. 24) for the chosen car (panel), speed (curve) and number of local floors (x axis).
+**Step 7. Chart readings (C1, C2).** See the box below. Read RT (C2, Fig. 23) and AVRTP (C1, Fig. 22) for the chosen car (panel), speed (curve) and number of local floors (x axis).
 
 ::: {.mini #m-mini-lift-charts}
 **Mini-example: chart readings (step 7).** 3000-lb car, 400 fpm, 10 local floors.
@@ -593,13 +593,9 @@ Escalators between more than two floors are arranged in one of two basic ways [K
 - *Parallel spiral (multiple parallel):* units in each storey are side by side; the rider turns and continues in the same direction. Banks of 3–4 parallel units in terminals can run all but one in the direction of heaviest traffic.
 - *Stacked parallel (walk-around):* the units are stacked vertically one storey above another; the rider walks the whole length of the escalator at each floor.
 
-![Fig. 20: Hand sketches of escalator arrangements in side view (thick lines are escalator runs between landings A, B, C ...). (1) Parallel: two runs from a middle landing B to landings A and C, forming a "<" shape. (2) Multiple parallel: several escalators side by side between A and B, three up and one down. (3) Crisscross: runs A–E and B–F crossed by runs C–E and B–D. (4) Walkaround: two parallel inclined runs, A to C and B to D, with curved arrows for the walk around at each landing [Kanak p.196]](figures/020.jpg "w=0.5")
-
-![Fig. 21: The crisscross arrangement of escalators. Side elevation: three levels, lower (LL), intermediate (IL) and upper (UL); the up escalator from LL to IL is followed, after a turn, by the up escalator from IL to UL, and the down escalators cross them, UL to IL and IL to LL. End elevation "adjacent": the two escalators of a storey stacked in one well; plan with a turn at IL. End elevation "separated": the units side by side, separated by a distance D, with "turn and walk" [Kanak p.197]](figures/021.jpg "w=0.8")
-
-![Fig. 22: Parallel escalators. Side elevation: escalators parallel to each other between successive floors, all rising in the same direction, with the down escalator behind; the rider walks round at each floor. End elevation "adjacent": the up and down units side by side in each storey; "separated": the units offset into two wells, separated by D [Kanak p.197]](figures/022.jpg "w=0.8")
-
-**How to draw them in the exam.** Draw three horizontal lines (floors). *Crisscross:* in each storey draw two crossing diagonals (one up, one down); in the next storey repeat, so that the top of one up run is next to the foot of the next up run; mark arrows. *Parallel:* in each storey draw two parallel diagonals rising the same way (one marked up, one down); in a stacked parallel the next storey's units start at the far end, so draw the walk-around path with a curved arrow.
+::: {.escdraw #esc-draw caption="Fig. 20: The four arrangements in side elevation, over four floors. Choose one; solid runs go up, dashed runs come down, and the arrows follow the rider, walking along the floor where the arrangement needs it."}
+![Fig. 20: Escalator arrangements in side elevation, four floors: (a) spiral crisscross, (b) walk-around crisscross, (c) parallel spiral, (d) stacked parallel. Solid runs go up, dashed runs come down; arrows follow the rider, dotted lines are walks along a floor.](figures/020_arrangements.pdf "w=0.95")
+:::
 
 | | Crisscross | Parallel |
 |---|---|---|
@@ -620,7 +616,7 @@ $$\text{steps per second}=\frac{V\cos\theta}{L},\qquad \boxed{N=\frac{3600\,P\,V
 
 Equivalently, along the incline the step pitch is $L/\cos\theta$, and $N=3600\,P\,V/(L/\cos\theta)$: the same formula.
 
-![Fig. 23: Geometry of escalator capacity: a staircase at incline θ; the tread (step) length L is measured horizontally; the pitch of the step noses along the incline is L / cos θ; the step speed V along the incline has horizontal component V cos θ; steps passing a point per second = V cos θ / L, and persons per hour N = 3600 P V cos θ / L](figures/023.png "w=0.75")
+![Fig. 21: Geometry of escalator capacity: a staircase at incline θ; the tread (step) length L is measured horizontally; the pitch of the step noses along the incline is L / cos θ; the step speed V along the incline has horizontal component V cos θ; steps passing a point per second = V cos θ / L, and persons per hour N = 3600 P V cos θ / L](figures/023.png "w=0.75")
 
 **Reconciling with Grondzik.** Grondzik gives only a table (Table 33.1): a 32-in. unit (0.61 m tread) at 0.5 m/s carries 5200 persons/h theoretical maximum, 4000 nominal (heavy) and 2300 observed; a 48-in. unit (1.02 m tread, about 2 persons per step) carries 9000, 6750 and 4500. His figures correspond to $N=3600\,P\,V/s$ with $s\approx0.4$ m the step pitch **measured along the direction of travel**, with no $\cos\theta$: $3600\times2\times0.51/0.406\approx9040$ persons/h. The two formulas are the same physics with $L$ measured differently:
 
@@ -1667,7 +1663,7 @@ $$N=\frac{3600\times2\times0.6\times\cos35°}{0.6}=\mathbf{5898\ persons/h}\ (\t
 > **TRY 2.28** `[PP 15-16 Q3(c), 10]` Draw the schematic diagram of different arrangements of escalator.
 
 ::: {.answer label="Show answer"}
-**Solution 2.28** **[FROM SOURCE: Kanak pp.196–197; Grondzik §33.2]** Draw side elevations over three floor levels (LL, IL, UL), with arrows for the direction (§2.13, Figs. 20–22):
+**Solution 2.28** **[FROM SOURCE: Kanak pp.196–197; Grondzik §33.2]** Draw side elevations over three floor levels (LL, IL, UL), with arrows for the direction (§2.13, Fig. 20):
 
 1. **Crisscross, spiral (continuous):** in each storey an up unit and a down unit cross like an X; the up unit of the next storey starts where the last one ends, after a 180° turn. Least floor space and structure, lowest cost, continuous travel; the commonest arrangement.
 2. **Crisscross, walk-around:** the same structure with the upper-storey directions reversed; the rider walks round the length of the escalator at each floor (stores use it to show goods).
@@ -1857,8 +1853,8 @@ Attached to the ME415 papers (identical in 2012-13 to 2022-23); from Grondzik, M
 | Stores | 3500 (1600); 4000 (2000); 5000 (2500) | >200 | >60 | 500 | 2.5 |
 
 
-![Fig. 24: C1. Average trip time (AVRTP) vs number of local floors. Panels (a)–(d): 2500, 3000, 3500, 4000 lb cars, 12 ft (3.66 m) floor to floor. 100 fpm = 0.508 m/s.](figures/024.png)
+![Fig. 22: C1. Average trip time (AVRTP) vs number of local floors. Panels (a)–(d): 2500, 3000, 3500, 4000 lb cars, 12 ft (3.66 m) floor to floor. 100 fpm = 0.508 m/s.](figures/024.png)
 
-![Fig. 25: C2. Round-trip time (RT) vs number of local floors. Panels for 2500, 3000, 3500, 4000 lb cars, 12 ft floor to floor; one curve per car speed (fpm).](figures/025.jpg)
+![Fig. 23: C2. Round-trip time (RT) vs number of local floors. Panels for 2500, 3000, 3500, 4000 lb cars, 12 ft floor to floor; one curve per car speed (fpm).](figures/025.jpg)
 
 <!-- END DATA TABLES -->
