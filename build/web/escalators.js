@@ -112,7 +112,8 @@
       // moving: about two arrows on each run (one every ~220 units of path); still: one at the middle of each run and of each walk
       var spots = [];
       if (STATIC || still) r.segs.forEach(function (s) { if (!s.step) spots.push(s.at + s.len * (s.walk ? (r.dir === "up" ? 0.8 : 0.5) : 0.3)); });
-      else for (var n = Math.max(3, Math.round(r.total / 220)), i = 0; i < n; i++) spots.push(i * r.total / n);
+      else for (var n = Math.max(3, Math.round(r.total / 220)), i = 0; i < n; i++)
+        spots.push((i + (r.dir === "down" ? 0.5 : 0)) * r.total / n);   // down arrows half a gap behind: where both walk one floor, they alternate
       spots.forEach(function (d0) {
         var a = el("path", { d: r.dir === "up" ? "M-7 -5.5L6 0L-7 5.5Z" : "M-7 -5.5L4.5 0L-7 5.5", "class": "es-arrow es-" + r.dir }, g);
         arrows.push({ el: a, r: r, d0: d0, k: big ? 1.6 : STATIC ? 1.4 : 1 });
