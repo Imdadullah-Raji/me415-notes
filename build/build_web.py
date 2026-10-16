@@ -678,14 +678,15 @@ def main():
                        + "</li>" for c in chapters)
     idx = (f'<h1 class="booktitle">{SITE}</h1><p class="subtitle">ME 415 term-final preparation, '
            f'with the data book one click away.</p>'
-           + (pandoc((GUIDE / "cover.md").read_text(encoding="utf-8")) if (GUIDE / "cover.md").exists() else "")
            + "".join(f'<h2>{name}</h2>'
                      + ('<p>One module per topic, in order of exam weight: the full theory and every past term-final '
                         'question solved. Sections marked ★ are the first read.</p>' if key == "m" else "")
                      + f'<ul class="toc">{toc(chapters)}</ul>' for key, (name, chapters) in books.items())
            + '<h2>Also</h2><ul class="toc"><li><a href="db-index.html">Data book</a></li>'
            + ('<li><a href="qb.html">Question bank analysis</a>: where the marks of eleven papers went</li>' if qb else "")
-           + "</ul>")
+           + "</ul>"
+           + ('<h2>About these notes</h2>' + pandoc((GUIDE / "cover.md").read_text(encoding="utf-8"))
+              if (GUIDE / "cover.md").exists() else ""))
     (OUT / "index.html").write_text(render("Contents", idx, book_menus(), None, None, ""), encoding="utf-8")
     if qb:
         mods = {c["num"]: c for c in books["m"][1]}
