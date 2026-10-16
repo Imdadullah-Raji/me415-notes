@@ -62,7 +62,7 @@ The fuel–air ratio must also lie inside the **flammable limits** [Kanak p.198]
 | What it explains | Ignition and burning of any fire | Sustained **flaming** combustion as a self-propagating radical reaction |
 | Extinguishing modes it explains | Starving, smothering, cooling | The same three **plus chemical inhibition** (dry chemical powders, halons, clean agents) |
 | Typical fires | Smouldering (glowing) combustion of solids is described well by the triangle | Flaming fires of liquids, gases and most solids |
-| Status | Older, simpler model | Current model (NFPA) |
+| Status | Older, simpler model | Current model (NFPA[The National Fire Protection Association, a US non-profit founded in 1896, writes fire codes and standards used around the world: NFPA 10 (portable extinguishers), NFPA 13 (sprinklers), NFPA 30 (flammable and combustible liquids), NFPA 72 (fire alarms), NFPA 101 (the Life Safety Code). BNBC 2020 Part 4 uses its fire classes.]{.aside}) |
 
 ### Terms of fire science (flammability and combustibility)
 
