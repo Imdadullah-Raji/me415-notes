@@ -616,7 +616,7 @@ $$\text{steps per second}=\frac{V\cos\theta}{L},\qquad \boxed{N=\frac{3600\,P\,V
 
 Equivalently, along the incline the step pitch is $L/\cos\theta$, and $N=3600\,P\,V/(L/\cos\theta)$: the same formula.
 
-![Fig. 21: Geometry of escalator capacity: a staircase at incline θ; the tread (step) length L is measured horizontally; the pitch of the step noses along the incline is L / cos θ; the step speed V along the incline has horizontal component V cos θ; steps passing a point per second = V cos θ / L, and persons per hour N = 3600 P V cos θ / L](figures/023.png "w=0.75")
+![Fig. 21: Geometry of escalator capacity: a staircase at incline θ; the tread (step) length L is measured horizontally; the pitch of the step noses along the incline is L / cos θ; the step speed V along the incline has horizontal component V cos θ; steps passing a point per second = V cos θ / L, and persons per hour N = 3600 P V cos θ / L](figures/021.png "w=0.75")
 
 **Reconciling with Grondzik.** Grondzik gives only a table (Table 33.1): a 32-in. unit (0.61 m tread) at 0.5 m/s carries 5200 persons/h theoretical maximum, 4000 nominal (heavy) and 2300 observed; a 48-in. unit (1.02 m tread, about 2 persons per step) carries 9000, 6750 and 4500. His figures correspond to $N=3600\,P\,V/s$ with $s\approx0.4$ m the step pitch **measured along the direction of travel**, with no $\cos\theta$: $3600\times2\times0.51/0.406\approx9040$ persons/h. The two formulas are the same physics with $L$ measured differently:
 
@@ -1853,8 +1853,8 @@ Attached to the ME415 papers (identical in 2012-13 to 2022-23); from Grondzik, M
 | Stores | 3500 (1600); 4000 (2000); 5000 (2500) | >200 | >60 | 500 | 2.5 |
 
 
-![Fig. 22: C1. Average trip time (AVRTP) vs number of local floors. Panels (a)–(d): 2500, 3000, 3500, 4000 lb cars, 12 ft (3.66 m) floor to floor. 100 fpm = 0.508 m/s.](figures/024.png)
+![Fig. 22: C1. Average trip time (AVRTP) vs number of local floors. Panels (a)–(d): 2500, 3000, 3500, 4000 lb cars, 12 ft (3.66 m) floor to floor. 100 fpm = 0.508 m/s.](figures/022.png)
 
-![Fig. 23: C2. Round-trip time (RT) vs number of local floors. Panels for 2500, 3000, 3500, 4000 lb cars, 12 ft floor to floor; one curve per car speed (fpm).](figures/025.jpg)
+![Fig. 23: C2. Round-trip time (RT) vs number of local floors. Panels for 2500, 3000, 3500, 4000 lb cars, 12 ft floor to floor; one curve per car speed (fpm).](figures/023.jpg)
 
 <!-- END DATA TABLES -->
