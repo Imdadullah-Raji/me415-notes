@@ -257,7 +257,8 @@ def pandoc(md, databook=False):
     if r.returncode or r.stderr.strip():
         fail(f"pandoc: {r.stderr.strip()}")
     out = re.sub(r"<colgroup>.*?</colgroup>", "", r.stdout, flags=re.S)   # pandoc's % widths squash wide tables
-    return out.replace('<table style="width:100%;">', "<table>")       # ...and so does its width:100%
+    out = out.replace('<table style="width:100%;">', "<table>")        # ...and so does its width:100%
+    return re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', out)   # outside links: a new tab
 
 
 def ids_in(md):
