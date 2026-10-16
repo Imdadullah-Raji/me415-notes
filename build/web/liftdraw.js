@@ -68,11 +68,11 @@
   var defs = el("defs", {}, svg);
   var gDraw = el("g", { "class": "ld-draw" }, svg);
   var gLab = el("g", { "class": "ld-labels" }, svg);
-  var stageText = el("text", { x: W / 2, y: 978, "class": "ld-stage", "text-anchor": "middle" }, svg);
+  var stageText = el("text", { x: W / 2, "class": "ld-stage", "text-anchor": "middle" }, svg);
   host.appendChild(svg);
 
-  var n = 0;
-  STAGES.forEach(function (st) {
+  var n = 0, labels = [];
+  STAGES.forEach(function (st, si) {
     st.items.forEach(function (it) {
       var p = el("path", { d: it.d, "class": "ld-line", "stroke-width": it.w || 2.2, "pathLength": 1 }, gDraw);
       it.len = p.getTotalLength ? p.getTotalLength() : 300;
@@ -89,16 +89,63 @@
       it.reveal.setAttribute("stroke-dasharray", "1 1");
       it.labelEls = it.labels.map(function (lb) {
         var g = el("g", { "class": "ld-label" }, gLab);
-        var tx = lb.side === "L" ? LX : RX;
-        el("polyline", { points: (tx + (lb.side === "L" ? 8 : -8)) + "," + (lb.y - 8) + " " + lb.ax + "," + lb.ay, "class": "ld-leader" }, g);
-        el("circle", { cx: lb.ax, cy: lb.ay, r: 3.5, "class": "ld-dot" }, g);
-        var t = el("text", { x: tx, y: lb.y, "text-anchor": lb.side === "L" ? "end" : "start" }, g);
-        t.textContent = lb.text;
+        lb.stage = si;
+        lb.leader = el("polyline", { "class": "ld-leader" }, g);
+        lb.dot = el("circle", { r: 3.5, "class": "ld-dot" }, g);
+        lb.t = el("text", { y: lb.y, "text-anchor": lb.side === "L" ? "end" : "start" }, g);
+        lb.t.textContent = lb.text;
+        labels.push(lb);
         return g;
       });
       n++;
     });
   });
+
+  // ---- layout. Wide: the drawing at full size, every label at one size. Narrow (a phone): the drawing at 80%, so
+  // the label columns widen; the labels of the stage on screen are large (fitted to their column), earlier ones
+  // small; the stage line may take two lines, so the sheet grows a little taller.
+  var layoutKey = null, NARROW = 560, K = 0.8, CX = 500, CY = 470;
+  function layout(now) {
+    var narrow = host.clientWidth > 0 && host.clientWidth < NARROW;
+    var key = narrow + ":" + now + ":" + stageText.dataset.s;
+    if (key === layoutKey) return;
+    layoutKey = key;
+    var k = narrow ? K : 1, lx = narrow ? 330 : LX, rx = narrow ? 670 : RX, h = narrow ? 1070 : H;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + h);
+    gDraw.setAttribute("transform", narrow ? "translate(" + CX * (1 - k) + " " + CY * (1 - k) + ") scale(" + k + ")" : "");
+    labels.forEach(function (lb) {
+      var fs = !narrow ? 25 : lb.stage === now ? 34 : 23, tx = lb.side === "L" ? lx : rx;
+      lb.t.setAttribute("x", tx);
+      lb.t.style.fontSize = fs + "px";
+      if (narrow && lb.stage === now) {                      // fit a long label to its column
+        var w = lb.t.getComputedTextLength(), room = (lb.side === "L" ? lx : W - rx) - 10;
+        if (w > room) lb.t.style.fontSize = (fs * room / w).toFixed(1) + "px";
+      }
+      var ax = CX + (lb.ax - CX) * k, ay = CY + (lb.ay - CY) * k;
+      lb.leader.setAttribute("points", (tx + (lb.side === "L" ? 8 : -8)) + "," + (lb.y - parseFloat(lb.t.style.fontSize) * 0.32) + " " + ax + "," + ay);
+      lb.dot.setAttribute("cx", ax);
+      lb.dot.setAttribute("cy", ay);
+    });
+    // the stage line: one line if it fits, else two, broken at a word
+    var text = stageText.dataset.text || "", fsS = narrow ? 34 : 26;
+    stageText.style.fontSize = fsS + "px";
+    stageText.textContent = text;
+    var lines = [text];
+    if (stageText.getComputedTextLength() > W - 40) {
+      var words = text.split(" "), best = 1, i;
+      for (i = 1; i < words.length; i++) {
+        if (Math.abs(words.slice(0, i).join(" ").length - text.length / 2) < Math.abs(words.slice(0, best).join(" ").length - text.length / 2)) best = i;
+      }
+      lines = [words.slice(0, best).join(" "), words.slice(best).join(" ")];
+    }
+    stageText.textContent = "";
+    var y0 = h - 22 - (lines.length - 1) * fsS * 1.2;
+    lines.forEach(function (ln, j) {
+      var ts = el("tspan", { x: W / 2, y: (y0 + j * fsS * 1.2).toFixed(1) }, stageText);
+      ts.textContent = ln;
+    });
+  }
+  window.addEventListener("resize", function () { layoutKey = null; paint(); });
 
   // ---- state: `done` stages are complete; `cur` is the stage being drawn (or null), `t` its elapsed time in ms
   var done = 0, cur = null, t = 0, running = false, auto = false, last = 0, gapTimer = null;
@@ -123,9 +170,10 @@
         e -= d + GAP;
       });
     });
-    var s = cur !== null ? cur : Math.max(0, done - 1);
-    stageText.textContent = done === 0 && cur === null ? "Press “Draw stage 1” and draw along"
-      : "Stage " + (s + 1) + ": " + STAGES[s].title;
+    var s = cur !== null ? cur : done - 1;
+    stageText.dataset.s = s;
+    stageText.dataset.text = s < 0 ? "Press “Draw stage 1” and draw along" : "Stage " + (s + 1) + ": " + STAGES[s].title;
+    layout(s);
     buttons();
   }
   function frame(now) {
