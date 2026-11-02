@@ -111,11 +111,36 @@ One mechanism cannot serve every duty efficiently [Kanak p.16; Hundy §4.1, §4.
 
 ![Fig. 3: Cut-away of a hermetic reciprocating compressor inside a welded steel shell. Labels: internal pressure relief valve, muffler, piston, crankcase heater, oil sight glass (left); suction inlet, motor winding at the top, terminal box, discharge connection (right). Suction gas enters the shell and cools the motor winding before it reaches the cylinder. [Aloke p.25]](figures/003.jpg "w=0.5")
 
+![Fig. 4: Cut-away of a semi-hermetic reciprocating compressor with a bolted housing. Motor end (left): terminal box, stator winding, motor connectors, rotor on the extended crankshaft. Compressor end (right): suction valve plate, piston ring, piston, connecting rod, crankshaft, oil return port, oil level sight glass. [Aloke p.26]](figures/004.jpg "w=0.55")
+
 ::: {.liftdraw #comp-hermetic-draw drawing="hermetic" label="Drawing the hermetic compressor, stage by stage" caption="How to draw it in the exam (3 minutes). Not asked so far, but it is the natural 'draw and describe a hermetic compressor' answer. This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
 **How to draw it in the exam (3 minutes).** Draw a tall shell with domed ends, a weld seam across the middle and two mounting feet. In the upper half draw the motor: two stator blocks with the winding ends above and below, the rotor between them on a vertical crankshaft that runs down into the oil, and a terminal box on the shell wall. Below the motor draw the frame with the main bearing, resting on suspension springs. Hang a horizontal cylinder from the frame with a piston in it, a connecting rod to an eccentric on the shaft, and at the outer end the valve plate (suction and discharge reed valves) and cylinder head. Draw the suction inlet on the shell and show the gas passing over the motor (it cools the winding) to the suction side of the head. From the discharge side draw the muffler and the discharge line out through the shell. In the bottom dome mark the oil level, the oil pick-up at the end of the shaft, the oil sight glass and the crankcase heater. Label every item.
 :::
 
-![Fig. 4: Cut-away of a semi-hermetic reciprocating compressor with a bolted housing. Motor end (left): terminal box, stator winding, motor connectors, rotor on the extended crankshaft. Compressor end (right): suction valve plate, piston ring, piston, connecting rod, crankshaft, oil return port, oil level sight glass. [Aloke p.26]](figures/004.jpg "w=0.55")
+### Parts of a hermetic compressor and what they do {#comp-hermetic-parts}
+
+The motor and the compressor share one shaft inside a welded steel shell; the shell is full of suction gas, and nothing leaves it except the refrigerant pipes and the electric terminals [Aloke p.25; Hundy §4.6]. In the order of the drawing:
+
+| Part | What it is and what it does |
+|---|---|
+| **Welded steel shell** | two pressed steel halves (upper dome, lower dome) welded along a **weld seam**; it is the pressure boundary, sits at suction pressure, and makes the unit leak-tight with no shaft seal. It cannot be opened for repair. |
+| **Mounting feet** | brackets welded to the bottom of the shell, bolted down through **rubber grommets** that stop vibration reaching the cabinet. |
+| **Motor (stator, winding, rotor)** | an induction motor. The **stator** with its **winding** is fixed in the frame; the **rotor** is pressed on the crankshaft. It runs at line speed (about 2900 rpm). The winding is cooled by the suction gas, so its insulation must suit the refrigerant and oil (not ammonia). |
+| **Terminal box (hermetic terminal)** | glass-sealed pins through the shell wall that bring power to the winding without a leak path; the box outside covers them and holds the overload and starting devices. |
+| **Vertical crankshaft** | carries the rotor at the top and the eccentric at the bottom; it is hollow, so it also pumps the oil (see oil pick-up). |
+| **Frame and main bearing** | the casting that carries the stator, the cylinder and the shaft bearing; the whole motor-compressor block hangs on it. |
+| **Suspension springs** | coil springs between the frame and brackets on the shell; the block floats on them, so its vibration and noise are not passed to the shell. |
+| **Cylinder, piston, connecting rod, eccentric** | the compressor itself (§4.4). The **eccentric** (crank) on the shaft drives the **connecting rod**, which moves the **piston** to and fro in a horizontal **cylinder**. |
+| **Valve plate with reed valves** | a plate across the end of the cylinder with thin spring-steel **suction** and **discharge reed valves**, opened and closed by the pressure difference across them. |
+| **Cylinder head** | the cover on the valve plate, divided into a suction chamber and a discharge chamber. |
+| **Suction inlet** | a pipe stub into the shell. The gas fills the shell and passes over the motor, **cooling the winding**, then enters the suction chamber. (This heats the gas: the "motor heat pick-up" loss of §4.4.) |
+| **Discharge muffler** | a small chamber on the discharge side that damps the pulsations of the gas, so less noise and vibration reach the pipes. |
+| **Discharge line and connection** | a tube (often looped, to stay flexible on the springs) from the muffler to a stub through the shell, leading the hot gas to the condenser. |
+| **Oil sump** | the bottom dome holds the oil; the oil level is below the moving parts. |
+| **Oil pick-up** | the lower end of the hollow crankshaft dips into the oil; as the shaft spins, centrifugal action lifts the oil up the shaft to the bearings, the eccentric and the cylinder. No separate oil pump is needed. |
+| **Oil sight glass** | a window in the lower shell (on larger units) to check the oil level. |
+| **Crankcase heater** | a strap heater round the lower shell that keeps the oil warm during the off cycle, so refrigerant does not condense and dissolve in it (which would make the oil foam at start-up). |
+| **Internal pressure relief valve** | (in Fig. 3, not drawn) opens from discharge to the shell if the discharge pressure becomes too high. |
 
 **Advantages of a hermetic unit:** no shaft coupling or external shaft seal, so no refrigerant leakage and no seal maintenance; compact, light, quiet; the motor is cooled by the refrigerant and can be smaller. **Disadvantages:** cannot be repaired in the field; a motor burn-out decomposes the refrigerant and oil and contaminates the whole system; the motor heat goes into the suction gas and lowers the volumetric efficiency; the refrigerant must be compatible with the winding insulation (not ammonia) [Hundy §4.6].
 
@@ -163,7 +188,17 @@ The losses (Fig. 6) are [Aloke p.36; Kanak p.24; Hundy §4.10]:
 
 ![Fig. 6: Left: hermetic reciprocating compressor between a suction gauge (P1, T1) and a discharge gauge (P2, T2), with the volumetric losses marked: motor heat pick-up (suction gas over the motor), pressure drops (valves), heat transfer (cylinder head), re-expansion loss (clearance gas), leakage loss (piston rings). Right: volumetric efficiency against pressure ratio (1 to 20): scroll and screw stay high (upper lines), the typical piston compressor falls from 100% at pressure ratio 1 to about 72% at ratio 7 and 50% at ratio 14. [Aloke p.36, from Hundy Figs. 4.15–4.16]](figures/006.jpg "w=0.75")
 
-**Why $\eta_v$ falls as the pressure ratio rises.** With clearance ratio $C=V_c/V_s$ and re-expansion $pV^n=$ const, the clearance gas expands from $V_c$ to $V_c(p_d/p_s)^{1/n}$. The fresh charge per stroke is $V_s+V_c-V_c(p_d/p_s)^{1/n}$, so [Ameen §16.1]
+**Symbols.**
+
+- $p_s$: **suction pressure**, at the compressor inlet (about the evaporating pressure $P_e$ of Fig. 5).
+- $p_d$: **discharge pressure**, at the compressor outlet (about the condensing pressure $P_c$). $p_d/p_s$ is the **pressure ratio**.
+- $V_s$: **swept volume** (piston displacement) = piston area × stroke, the volume the piston sweeps between top and bottom dead centre. "Compressor displacement" above is $V_s$ per stroke (× number of cylinders × strokes per second for a volume flow).
+- $V_c$: **clearance volume**, the space left between the piston and the valve plate at top dead centre (including the valve ports).
+- $V_c$ is **not part of** $V_s$: at top dead centre the cylinder holds $V_c$, at bottom dead centre it holds $V_s+V_c$.
+- $C=V_c/V_s$: **clearance ratio**, a few per cent (0.02–0.08 in Fig. 7).
+- $n$: polytropic index of the re-expansion ($pV^n=$ const).
+
+**Why $\eta_v$ falls as the pressure ratio rises.** At top dead centre the clearance gas, volume $V_c$, is at $p_d$. On the down-stroke it re-expands to $V_c(p_d/p_s)^{1/n}$ before the cylinder pressure falls to $p_s$ and the suction valve opens. Suction then lasts until bottom dead centre, where the cylinder volume is $V_s+V_c$. The fresh charge per stroke is $V_s+V_c-V_c(p_d/p_s)^{1/n}$; dividing by $V_s$ [Ameen §16.1]
 
 $$\eta_{vc}=1+C-C\left(\frac{p_d}{p_s}\right)^{1/n}$$
 
