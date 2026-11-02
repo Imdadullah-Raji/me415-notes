@@ -1,12 +1,11 @@
-// ME415 Notes: the electric traction lift, drawn stage by stage as it is drawn in the exam.
+// ME415 Notes: staged exam drawings (the traction lift, the hermetic compressor), drawn stage by stage as in the exam.
 // The canvas holds only the drawing, its labels (which stay once drawn) and the stage line at the bottom;
 // the buttons sit below it. Each stage stops when drawn, so the reader can copy it before going on.
+// Each drawing is an entry in DRAWINGS; a page shows it with <figure class="liftdraw" data-anim="NAME">.
 (function () {
   "use strict";
-  var host = document.querySelector('[data-anim="lift"]');
-  if (!host) return;
   var NS = "http://www.w3.org/2000/svg";
-  var W = 1000, H = 1000, LX = 300, RX = 700;          // labels end at LX (left column) or start at RX (right)
+  var W = 1000, H = 1000;   // a drawing's labels end at its lx (left column) or start at its rx (right)
   var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function R(x, y, w, h) { return "M" + x + " " + y + "h" + w + "v" + h + "h" + (-w) + "Z"; }
@@ -15,9 +14,15 @@
   function spring(cx) {                                  // a buffer: base plate, coil, striker plate
     return R(cx - 16, 912, 32, 8) + " M" + cx + " 912l-10 -6l20 -8l-20 -8l20 -8l-10 -6 M" + (cx - 14) + " 876h28";
   }
+  function coil(cx, y0, turns) {                         // a vertical coil spring from y0 downwards, 18 px a turn
+    var d = "M" + cx + " " + y0 + "l-10 4.5";
+    for (var i = 0; i < turns; i++) d += "l20 9l-20 9";
+    return d + "l10 4.5";
+  }
+  var DRAWINGS = {};
 
   // Each stage is a list of objects; each object is drawn in one go and then gets its labels.
-  var STAGES = [
+  DRAWINGS.lift = { aria: "Electric traction lift, drawn stage by stage", stages: [
     { title: "Hoistway, machine room and pit", items: [
       { d: R(320, 50, 360, 160) + " M320 222H680", labels: [L("L", "Machine room", 50, 320, 62)] },
       { d: "M340 222V920H660V222 M300 590H340 M300 840H340", labels: [L("R", "Hoistway (lift well)", 760, 660, 760)] },
@@ -55,8 +60,54 @@
     { title: "Car buffer and counterweight buffer in the pit", items: [
       { d: spring(470), labels: [L("L", "Car buffer", 945, 460, 908)] },
       { d: spring(610), labels: [L("R", "Counterweight buffer", 910, 622, 896)] }] }
-  ];
+  ] };
 
+  // The hermetic reciprocating compressor in section (as Fig. 3 of Module 4, flattened for the exam):
+  // shell 320-680 wide with domed ends, the motor in the upper half on a vertical crankshaft, the horizontal
+  // cylinder below it, the oil sump in the bottom dome.
+  DRAWINGS.hermetic = { aria: "Hermetic reciprocating compressor, drawn stage by stage", lx: 280, rx: 720, top: 140, h: 860, stages: [
+    { title: "Welded steel shell, weld seam and mounting feet", items: [
+      { d: "M320 280V740A180 100 0 0 0 680 740V280A180 120 0 0 0 320 280Z", w: 3,
+        labels: [L("R", "Welded steel shell", 200, 640, 205)] },
+      { d: "M308 520H332 M668 520H692", w: 3, labels: [L("L", "Weld seam", 520, 308, 520)] },
+      { d: "M380 815L360 868H420L410 827 M620 815L640 868H580L590 827 " + R(366, 868, 48, 10) + " " + R(586, 868, 48, 10),
+        labels: [L("R", "Mounting feet", 870, 634, 862)] }] },
+    { title: "Motor: stator and winding, rotor on the vertical crankshaft, terminal box", items: [
+      { d: R(385, 270, 75, 130) + " " + R(540, 270, 75, 130), labels: [L("L", "Stator", 330, 385, 335)] },
+      { d: "M390 270a32 14 0 0 1 64 0 M546 270a32 14 0 0 1 64 0 M390 400a32 14 0 0 0 64 0 M546 400a32 14 0 0 0 64 0",
+        labels: [L("R", "Motor winding", 262, 604, 264)] },
+      { d: R(468, 280, 64, 110) + " M468 302H532 M468 324H532 M468 346H532 M468 368H532",
+        labels: [L("R", "Rotor", 370, 532, 372)] },
+      { d: "M494 236V790 M506 236V790", labels: [L("R", "Vertical crankshaft", 720, 506, 700)] },
+      { d: R(680, 440, 24, 56) + " M686 452h12 M686 468h12 M686 484h12 M612 404C640 420 660 460 680 468",
+        labels: [L("R", "Terminal box", 475, 704, 470)] }] },
+    { title: "Compressor: frame and bearing, springs, cylinder, piston, connecting rod, eccentric", items: [
+      { d: R(350, 420, 300, 20) + " " + R(478, 440, 44, 46), labels: [L("R", "Frame and main bearing", 425, 650, 430)] },
+      { d: coil(368, 440, 4) + " " + coil(632, 440, 4) + " M320 518H386 M680 518H614", labels: [L("L", "Suspension springs", 470, 358, 470)] },
+      { d: "M372 556H480V624H372 M440 556V440", labels: [L("R", "Cylinder", 660, 480, 620)] },
+      { d: R(420, 566, 32, 48), labels: [L("L", "Piston", 650, 436, 614)] },
+      { d: "M452 584H488 M452 596H488", labels: [L("R", "Connecting rod", 620, 470, 596)] },
+      { d: R(486, 574, 34, 32), labels: [L("R", "Eccentric (crank)", 570, 520, 584)] }] },
+    { title: "Valve plate with suction and discharge reed valves, cylinder head", items: [
+      { d: R(364, 552, 8, 76) + " M372 570l14 7 M364 610l-14 7", labels: [L("L", "Valve plate, reed valves", 610, 368, 600)] },
+      { d: "M364 546H334V634H364 M334 590H364", labels: [L("L", "Cylinder head", 565, 334, 560)] }] },
+    { title: "Suction: the gas enters the shell and cools the motor on its way to the cylinder", items: [
+      { d: "M705 316H680 M705 334H680", w: 3, labels: [L("R", "Suction inlet", 325, 705, 325)] },
+      { d: "M676 325C630 325 620 232 500 228C390 226 340 260 340 330V530", dash: "10 8",
+        labels: [L("L", "Suction gas cools motor", 220, 420, 233)] },
+      { d: "M332 522l8 14l8 -14", labels: [] }] },
+    { title: "Discharge: muffler and discharge line out through the shell", items: [
+      { d: "M349 634V648 " + R(334, 648, 40, 40) + " M334 668H374", labels: [L("L", "Discharge muffler", 690, 334, 676)] },
+      { d: "M354 688V712H320 M320 704H292 M320 720H292", labels: [L("L", "Discharge connection", 735, 296, 716)] }] },
+    { title: "Oil sump, oil pick-up, sight glass and crankcase heater", items: [
+      { d: "M326 760H674", dash: "12 8", labels: [L("R", "Oil sump (oil level)", 770, 650, 760)] },
+      { d: "M494 790L486 812H514L506 790", labels: [L("R", "Oil pick-up", 815, 514, 806)] },
+      { d: C(440, 830, 9) + " " + C(440, 830, 4), labels: [L("L", "Oil sight glass", 850, 432, 832)] },
+      { d: R(308, 744, 10, 26) + " M308 752h10 M308 762h10", labels: [L("L", "Crankcase heater", 790, 310, 768)] }] }
+  ] };
+
+  function init(host, D, name) {
+  var STAGES = D.stages, LX = D.lx || 300, RX = D.rx || 700, TOP = D.top || 0, HH = D.h || H;   // the sheet: y from TOP, HH tall
   // ---- the canvas
   function el(name, attrs, parent) {
     var e = document.createElementNS(NS, name);
@@ -64,7 +115,7 @@
     if (parent) parent.appendChild(e);
     return e;
   }
-  var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Electric traction lift, drawn stage by stage" });
+  var svg = el("svg", { viewBox: "0 " + TOP + " " + W + " " + HH, role: "img", "aria-label": D.aria });
   var defs = el("defs", {}, svg);
   var gDraw = el("g", { "class": "ld-draw" }, svg);
   var gLab = el("g", { "class": "ld-labels" }, svg);
@@ -77,11 +128,11 @@
       var p = el("path", { d: it.d, "class": "ld-line", "stroke-width": it.w || 2.2, "pathLength": 1 }, gDraw);
       it.len = p.getTotalLength ? p.getTotalLength() : 300;
       if (it.dash) {                                     // a dashed line is revealed through a growing mask
-        var m = el("mask", { id: "ld-m" + n, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: W, height: H }, defs);
+        var m = el("mask", { id: "ld-" + name + n, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: W, height: H }, defs);
         it.reveal = el("path", { d: it.d, stroke: "#fff", "stroke-width": 8, fill: "none", pathLength: 1 }, m);
         p.removeAttribute("pathLength");
         p.setAttribute("stroke-dasharray", it.dash);
-        p.setAttribute("mask", "url(#ld-m" + n + ")");
+        p.setAttribute("mask", "url(#ld-" + name + n + ")");
       } else {
         it.reveal = p;
       }
@@ -110,8 +161,8 @@
     var key = narrow + ":" + now + ":" + stageText.dataset.s;
     if (key === layoutKey) return;
     layoutKey = key;
-    var k = narrow ? K : 1, lx = narrow ? 330 : LX, rx = narrow ? 670 : RX, h = narrow ? 1070 : H;
-    svg.setAttribute("viewBox", "0 0 " + W + " " + h);
+    var k = narrow ? K : 1, lx = narrow ? 330 : LX, rx = narrow ? 670 : RX, h = narrow ? HH + 70 : HH;
+    svg.setAttribute("viewBox", "0 " + TOP + " " + W + " " + h);
     gDraw.setAttribute("transform", narrow ? "translate(" + CX * (1 - k) + " " + CY * (1 - k) + ") scale(" + k + ")" : "");
     labels.forEach(function (lb) {
       var big = lb.stage === now || now === "all", fs = !narrow ? 25 : big ? 34 : 23, tx = lb.side === "L" ? lx : rx;
@@ -139,7 +190,7 @@
       lines = [words.slice(0, best).join(" "), words.slice(best).join(" ")];
     }
     stageText.textContent = "";
-    var y0 = h - 22 - (lines.length - 1) * fsS * 1.2;
+    var y0 = TOP + h - 22 - (lines.length - 1) * fsS * 1.2;
     lines.forEach(function (ln, j) {
       var ts = el("tspan", { x: W / 2, y: (y0 + j * fsS * 1.2).toFixed(1) }, stageText);
       ts.textContent = ln;
@@ -244,4 +295,10 @@
     if (e.key === "ArrowLeft") { e.preventDefault(); B.back.click(); }
   });
   paint();
+  }
+
+  document.querySelectorAll(".liftdraw[data-anim]").forEach(function (host) {
+    var D = DRAWINGS[host.dataset.anim];
+    if (D) init(host, D, host.dataset.anim);
+  });
 })();

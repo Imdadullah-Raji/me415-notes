@@ -50,10 +50,12 @@ function Div(el)
                 '<noscript><p>The drawing needs JavaScript; the PDF edition has it as a figure.</p></noscript></figure>')
   elseif c:includes('liftdraw') or c:includes('doordraw') then
     -- A drawing animation (liftdraw.js, doors.js) in place of a written drawing directive; the text is kept for no-JS.
+    -- A staged drawing names its entry in liftdraw.js with drawing=NAME and its accessible name with label=.
     local lift = c:includes('liftdraw')
+    local name = lift and (el.attributes.drawing or 'lift') or 'doors'
+    local label = el.attributes.label or (lift and 'Drawing the traction lift, stage by stage' or 'Lift door arrangements, in plan')
     local out = {html('<figure class="' .. (lift and 'liftdraw' or 'doordraw') .. '" id="' .. el.identifier ..
-                      '" data-anim="' .. (lift and 'lift' or 'doors') .. '" aria-label="' ..
-                      (lift and 'Drawing the traction lift, stage by stage' or 'Lift door arrangements, in plan') .. '">' ..
+                      '" data-anim="' .. name .. '" aria-label="' .. escape(label) .. '">' ..
                       (el.attributes.caption and ('<figcaption>' .. escape(el.attributes.caption) .. '</figcaption>') or '') ..
                       '</figure><noscript>')}
     for _, b in ipairs(el.content) do table.insert(out, b) end
