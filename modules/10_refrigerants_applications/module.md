@@ -30,7 +30,7 @@
 > - **Glide** of a zeotrope $=T_{dew}-T_{bubble}$ at one pressure (R407C ≈ 7 K, R404A < 1 K, R410A ≈ 0.1 K).
 > - **Quick freezing:** fast passage through the zone of maximum ice-crystal formation (−1 to −5 °C) → small crystals, little cell damage, little drip loss. Methods: **air blast**, **immersion/spray**, **indirect contact (plate)**, and **cryogenic** (LN$_2$, CO$_2$).
 
-## 10.1 Refrigeration, the refrigeration system and the refrigerant
+## 10.1 Refrigeration, the refrigeration system and the refrigerant {#refapp-system}
 
 **Refrigeration** "is a process of reducing and maintaining low temperature of a space or material below the temperature of the surroundings" [Arif p.2b; Kanak p.70]. The longer definition: "the process of removing heat from an enclosed space, or from a substance, and rejecting it elsewhere for the purpose of lowering the temperature of the enclosed space or substance and then maintaining that lower temperature."
 
@@ -53,7 +53,13 @@ In a domestic refrigerator (Fig. 2) the evaporator sits in the freezer compartme
 
 **Primary and secondary refrigerants** [Ameen §4]. A **primary refrigerant** circulates in the cycle and changes phase: it is compressed, condensed, expanded and evaporated (R134a, R22, NH$_3$). A **secondary refrigerant** is a heat-transfer medium that is cooled by the primary refrigerant and carries the cooling to the load **without a change of state**, only with a change of temperature: chilled water in a central AC plant, or **brine**. Below 0 °C a non-freezing liquid is needed: sodium or calcium chloride solutions (hence the name brine) and propylene or ethylene glycol–water mixtures; propylene glycol is permitted where it may touch food [Hundy §12.6]. Secondary systems keep the toxic or expensive primary charge small and inside the plant room.
 
-## 10.2 Desirable properties of a refrigerant ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Define refrigeration system. With a schematic diagram show the key components of a refrigeration system” (2017-18). *Read:* [refrigeration, the system and the refrigerant](#refapp-system). *Answer:* [Solution 10.9](#q-10-9).
+
+## 10.2 Desirable properties of a refrigerant ★ {#refapp-props}
 
 "No single refrigerant satisfies all the attributes desired … for all operating conditions" [Ameen §4.2]. The choice is always a compromise for the given duty (temperature level, compressor type, size). The slide list [Aloke p.104] and Hundy's list [Hundy §3.2] are the core; Ameen explains each [Ameen §4.2].
 
@@ -82,6 +88,12 @@ In a domestic refrigerator (Fig. 2) the evaporator sits in the freezer compartme
 
 > **TIP: Leak detection** [Aloke p.113; Ameen §4.3]. **Halide torch**: air drawn over a copper element heated by a methanol (CH$_3$OH) flame; a halocarbon leak turns the flame **green** (small leak) or **bluish with a red tip** (large leak). **Electronic** detector: ionisation current between two charged electrodes changes. **Soap bubbles** at joints (the only method for CO$_2$). Ammonia: its smell, or a **sulphur candle** that gives dense white smoke.
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the desirable properties of a refrigerant? Explain the necessity of each particular property …” (2016-17). *Read:* [desirable properties of a refrigerant](#refapp-props). *Answer:* [Solution 10.4](#q-10-4).
+
 ## 10.3 Classification and the ASHRAE numbering system ★
 
 ### Families and prefixes
@@ -101,7 +113,7 @@ Refrigerants are grouped as **halocarbons** (CFC, HCFC, HFC, HFO), **hydrocarbon
 
 Halocarbons are made by replacing some or all of the hydrogen atoms of methane (CH$_4$) or ethane (C$_2$H$_6$) by chlorine, fluorine or bromine [Ameen §4.1]. Chlorine is what destroys ozone: a fully halogenated CFC lives long enough to reach the stratosphere; adding hydrogen (HCFC) shortens its life [Ameen §4.1].
 
-### Rule for halocarbons and hydrocarbons of the methane, ethane and propane series
+### Rule for halocarbons and hydrocarbons of the methane, ethane and propane series {#refapp-numbering}
 
 For a saturated compound $\mathrm{C}_c\mathrm{H}_h\mathrm{F}_f\mathrm{Cl}_x$ (Fig. 3) [Aloke p.107; Hundy §3.5]:
 
@@ -121,7 +133,7 @@ $$\boxed{\text{R-}(c-1)\,(h+1)\,(f)}$$
 
 **Hydrocarbons** follow the same rule up to propane: methane CH$_4$ → R50; ethane C$_2$H$_6$ → R170; propane C$_3$H$_8$ → R290 [Aloke p.107]. Butane would need a "first digit" of 3 and a "second digit" of 11, which no longer fits, so butane and the heavier organics go into the **600 series**: R600 = n-butane, **R600a = isobutane** (the a again marks the isomer) [Aloke p.109; Hundy §3.5].
 
-### Mixtures: 400 and 500 series
+### Mixtures: 400 and 500 series {#refapp-mixtures}
 
 - **Zeotropic mixtures: 400 series** (Fig. 4). The number is given in the **chronological order** of ASHRAE approval and identifies **which components** are in the blend, **not the percentages**. An **upper-case letter** gives the **composition**: R407A = R32/R125/R134a (20/40/40), R407B = (10/70/20), R407C = (23/25/52) by mass [Aloke p.108; Hundy §3.5].
 - **Azeotropic mixtures: 500 series**, also in order of approval: R500 = R12/R152a (73.8/26.2), R502 = R22/R115 (48.8/51.2), R507A = R125/R143a (50/50) [Hundy §3.5; Ameen Table 4.4].
@@ -159,7 +171,13 @@ The components decode the same way: R125 = C2, H1, F5 → CHF$_2$CF$_3$; R143a =
 
 > **TRAP: GWP values differ between sources.** Aloke sir's table [Aloke p.110] is from Hundy's 4th edition (older IPCC values): R22 1500, R134a 1300, R404A 3260, R410A 1725, R407C 1525. Hundy 5th ed. (IPCC AR4) gives R22 1810, R134a 1430, R404A 3922, R410A 2088, R407C 1774. Either set earns the marks if you say which; the ODP of R22 is 0.05 on the slide and 0.055 in the Montreal Protocol.
 
-## 10.4 Azeotropes, zeotropes and temperature glide ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Describe the numbering system for Hydrocarbon, Zeotropic mixtures and Azeotropic mixtures type of refrigerants with proper examples” (2013-14). *Read:* [rule for hydrocarbons](#refapp-numbering), [mixtures: 400 and 500 series](#refapp-mixtures), [azeotropes and zeotropes](#refapp-azeo). *Answer:* [Solution 10.3](#q-10-3).
+
+## 10.4 Azeotropes, zeotropes and temperature glide ★ {#refapp-azeo}
 
 A **blend** is a mixture of two or more chemical compounds [Aloke p.105].
 
@@ -228,7 +246,7 @@ So the sequence of replacements has been **CFC → HCFC → HFC → low-GWP HFO,
 | **R32** (HFC) | GWP 675, high capacity, single component | Mildly flammable (A2L), high discharge temperature | New split AC (replaces R410A) [Hundy §3.9.2] |
 | **R404A** (HFC blend) | Low discharge temperature, good at low temperature | GWP 3922: targeted for rapid phase-out | Commercial freezers, transport [Hundy §3.9.3] |
 
-## 10.7 Slopes of the saturation curves ★
+## 10.7 Slopes of the saturation curves ★ {#refapp-slopes}
 
 On a T–s diagram the saturation dome has two branches: the **saturated-liquid line** (left) and the **saturated-vapour line** (right), meeting at the critical point. Their slopes decide how far the real vapour-compression cycle departs from the Carnot (reversed) cycle, whose processes are two horizontal isotherms and two vertical isentropes. The steeper both lines are, the narrower and taller the dome, and the closer the VCR cycle comes to the Carnot rectangle [Ameen §3; Ameen §4.2].
 
@@ -281,7 +299,13 @@ At 5 °C / 40 °C (data book): water $x_4$ = (167.53 − 21.02)/2489.04 = **0.05
 
 **Desirable slopes, in one line:** both saturation curves **as steep as possible**: the liquid line steep (small $c_{p,l}/h_{fg}$, little flash gas) and the vapour line nearly vertical (dry compression, little superheat). A vapour line that leans right (dry fluid) is undesirable for compression; one that leans strongly left (water, ammonia) gives hot discharge.
 
-## 10.8 Why water is not used in vapour-compression plant ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Discuss the desirable slopes of saturation curves (liquid and vapor) of a refrigerant” (2011-12). *Read:* [slopes of the saturation curves](#refapp-slopes). *Answer:* [Solution 10.2](#q-10-2).
+
+## 10.8 Why water is not used in vapour-compression plant ★ {#refapp-water}
 
 Water (R718) is free, non-toxic, non-flammable, chemically stable, ODP = GWP = 0, and has the largest latent heat of all (2257 kJ/kg at 100 °C) [Ameen §4.3]. Yet it is not used in ordinary compression plant: "the two disadvantages of water are its high freezing point and high vacuum required. The very large volume of water vapour at such low operating pressures makes the use of ordinary compression equipment impossible" [Ameen §4.3].
 
@@ -315,6 +339,12 @@ The COP of water is as good as the others: the trouble is **not** thermodynamic 
 
 **Why it does work in absorption systems.** In a LiBr–water plant there is **no vapour compressor**. The low-pressure water vapour from the evaporator is **absorbed** into the LiBr solution in the absorber, a liquid solution is **pumped** to the generator (pumping a liquid takes very little work and a small pump), and heat drives the vapour out at the high pressure. The huge vapour volume only has to pass through short, wide openings between large shells (evaporator–absorber, generator–condenser), not through a compressor. Air conditioning (chilled water at 5–7 °C) keeps it above freezing [Ameen §4.3, §5.1]. Water is also used in steam-jet (ejector) refrigeration, where a steam jet entrains the large vapour volume [Ameen §4.3].
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Why is H$_2$O not used as a refrigerant in compression refrigeration system? (Although it is used … in absorption refrigeration)” (2011-12). *Read:* [why water is not used](#refapp-water). *Answer:* [Solution 10.1](#q-10-1).
+
 ## 10.9 Secondary refrigerants and brines
 
 A secondary refrigerant carries cooling from a central plant to many loads without changing phase [Ameen §4; Hundy §12.6]:
@@ -325,7 +355,7 @@ A secondary refrigerant carries cooling from a central plant to many loads witho
 - Solutions weaker than eutectic are used to save cost and reduce viscosity, provided no freezing occurs at the evaporator [Hundy §12.6].
 - Reasons: a small primary charge kept in the machine room (important for NH$_3$ and flammable HCs), easy distribution to many loads, safety near food and people, thermal storage. Cost: an extra temperature difference and pump power.
 
-## 10.10 Applications of refrigeration ★
+## 10.10 Applications of refrigeration ★ {#refapp-applications}
 
 Modern refrigeration is mostly applied in four general fields: **ice making, preservation and transportation of perishables, special industrial processes, and air conditioning** [Ameen §1.2]. The course groups them in six [Arif pp.6b–13b; Kanak pp.74–76; Rifat pp.2–3]:
 
@@ -349,6 +379,12 @@ Further applications: **medical** (blood banks and vaccines at 2–8 °C, plasma
 
 Why refrigeration preserves food: low temperature slows **microbial growth**, **oxidation**, **enzymatic and fermentation reactions** and **drying**, and slows the respiration of live produce [Ameen §1.2, §7.4]. Live produce (fruit, vegetables, eggs) is kept just above freezing; dead foods (meat, fish, dairy) are chilled for short storage or frozen (to −18 to −30 °C) for long storage [Ameen §7.4].
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the major applications of refrigeration system?” (2013-14, 2022-23); “What are the applications of refrigeration system?” (2017-18). *Read:* [applications of refrigeration](#refapp-applications). *Answer:* [Solution 10.8](#q-10-8), [Solution 10.9](#q-10-9), [Solution 10.10](#q-10-10).
+
 ## 10.11 Slow freezing and quick freezing ★
 
 **Slow freezing** "is accomplished by placing the product in a low temperature room and allowing it to freeze slowly, usually in still air" [Arif p.9b]. It is used for small amounts [Kanak p.71].
@@ -361,7 +397,7 @@ Cells of animal and vegetable products contain a water solution of salts and sug
 
 ![Fig. 9: Product centre temperature (°C) against time (min, schematic). Both curves start at +10 °C. The quick-freezing curve (blue) falls to −1 °C within a few minutes, crosses the shaded zone of maximum ice-crystal formation (−1 to −5 °C) in under 30 min, then sub-cools quickly to the storage temperature of −25 °C. The slow-freezing curve (red, still air in a cold room) takes about an hour to reach −1 °C and stays in the shaded zone for several hours, during which large ice crystals grow and cells rupture, before cooling on toward −20 °C.](figures/009.png "w=0.75")
 
-### Basic characteristics of quick freezing [Arif p.10a; Kanak p.71]
+### Basic characteristics of quick freezing [Arif p.10a; Kanak p.71] {#refapp-quick-char}
 
 1. **Smaller ice crystals are formed and there is less damage to the cells.**
 2. **The freezing period is short, so less time is allowed for diffusion of salts and separation of water** (less dehydration of cells and concentration of solutes).
@@ -384,7 +420,13 @@ Cells of animal and vegetable products contain a water solution of salts and sug
 
 As a rule, products eaten raw or only briefly cooked (green peas, strawberries, beans) must be quick-frozen; meat, whose texture changes in cooking anyway, may be frozen more slowly [Hundy §14.4]. Very fast freezing in liquid nitrogen can crack large products mechanically [Ameen §7.6].
 
-## 10.12 Classification of quick-freezing methods ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the basic characteristics of quick freezing process?” (2012-13, 2015-16, 2021-22). *Read:* [basic characteristics of quick freezing](#refapp-quick-char). *Answer:* [Solution 10.5](#q-10-5), [Solution 10.6](#q-10-6), [Solution 10.7](#q-10-7).
+
+## 10.12 Classification of quick-freezing methods ★ {#refapp-quick-class}
 
 The course lists **three** types of quick freezing system [Arif p.10a; Kanak p.71; Rifat p.3]:
 
@@ -407,7 +449,7 @@ Cold air is blown over the product at high speed. In a batch cold room the produ
 
 ![Fig. 10: Tunnel air-blast freezer, side section. An insulated tunnel (walls, roof and floor insulated) has a mesh/stainless-steel belt conveyor running through it from left (product in at +5 to +10 °C) to right (frozen product out at −18 °C core). Above a horizontal baffle are two axial fans and an evaporator coil fed with liquid refrigerant (NH3 or R404A) and returning vapour to the compressor. The fans push warmed air (red) through the coil; the cold air (blue, −35 to −40 °C) drops down at the far end and blows back over the product at 3–5 m/s, counter to the belt motion, then rises at the inlet end back to the fans.](figures/010.png "w=0.85")
 
-### Immersion freezing
+### Immersion freezing {#refapp-immersion}
 
 "Liquid immersion freezing is accomplished when a food product, either packaged or unpackaged, is frozen by **immersion in or by spraying with a refrigerant that remains liquid throughout the process**" [Arif p.11b; Kanak p.73]. Liquids used: aqueous solutions of **propylene glycol, glycerol, sodium chloride, and mixtures of salt and sugar**, and (as a cryogenic spray) **liquid nitrogen** [Arif p.11b].
 
@@ -424,7 +466,7 @@ Cold air is blown over the product at high speed. In a batch cold room the produ
 
 ![Fig. 12: Liquid (cryogenic) immersion and spray freezer for IQF product: product in on an inclined inlet conveyor, liquid spray for hardening the product on the belt conveyor, freezing conveyor through a reservoir of liquid refrigerant, refrigerant sprays, condenser for refrigerant recovery above, discharge conveyor, IQF product out at the right (printed "IOF" on the slide). [Arif p.12a]](figures/012.png "w=0.65")
 
-### Plate (indirect contact) freezing
+### Plate (indirect contact) freezing {#refapp-plate}
 
 "Plate freezing refrigeration systems work by placing food products in **direct contact with large metal plates that are cooled by a circulating refrigerant**. The plates are arranged in a stack, with the food sandwiched between them to maximise surface contact and ensure uniform freezing" [Kanak p.74]. The first contact freezer was patented by Clarence Birdseye in 1929 [Hundy §14.6].
 
@@ -445,6 +487,14 @@ Cold air is blown over the product at high speed. In a batch cold room the produ
 ### Cryogenic freezing
 
 Liquid nitrogen (boiling at −196 °C) or carbon dioxide (−78.5 °C, as liquid or snow) is sprayed onto the product on a belt, or the product is dipped in it [Hundy §14.6]. The cryogen boils on the product surface and is not recovered (or is partly recovered). It is the fastest method, the equipment is simple and cheap and the dehydration is minimal, but the cryogen is expensive, so it is used for small, high-value items (shrimp, berries, IQF products) [Ameen §7.6].
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Classify quick freezing process” (2012-13, 2015-16, 2021-22). *Read:* [classification of quick-freezing methods](#refapp-quick-class). *Answer:* [Solution 10.5](#q-10-5), [Solution 10.6](#q-10-6), [Solution 10.7](#q-10-7).
+> - “Briefly describe the Plate Freezing process with schematic diagram” (2021-22). *Read:* [plate freezing](#refapp-plate). *Answer:* [Solution 10.7](#q-10-7).
+> - “Briefly describe the Immersion Freezing process with schematic diagram” (2022-23). *Read:* [immersion freezing](#refapp-immersion). *Answer:* [Solution 10.10](#q-10-10).
 
 ## 10.13 Term-final questions with solutions
 

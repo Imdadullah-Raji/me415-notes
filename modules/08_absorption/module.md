@@ -81,7 +81,7 @@ The three steps that replace the compressor (Stoecker & Jones, Kanak p.43):
 >
 > **This guide uses the slides' convention throughout** (strong = strong in refrigerant). For LiBr–water it always adds the unambiguous words: **dilute solution** (state 1, from the absorber, more water) and **concentrated solution** (state 3, from the generator, more LiBr). In an exam, define your words on the sketch (e.g. "strong solution (rich in NH$_3$)"), and you cannot be marked wrong.
 
-## 8.3 The practical aqua-ammonia system and its components ★
+## 8.3 The practical aqua-ammonia system and its components ★ {#absorption-aqua}
 
 In a practical system some auxiliaries are added to improve the efficiency. How many to add is a balance between first cost and running cost [Aloke p.77; Kanak p.44; Ameen §5.2]. Fig. 3 shows the complete aqua-ammonia system with all the auxiliaries and two heat exchangers; Fig. 4 is the same figure as printed in the course slides.
 
@@ -127,6 +127,13 @@ In a practical system some auxiliaries are added to improve the efficiency. How 
 > 1. **"The strong solution from the evaporator"** [Kanak p.44; Aloke p.78; also Ameen §5.2]: nothing but **refrigerant vapour** comes from the evaporator. Write: "the weak solution from the generator and the refrigerant vapour from the evaporator enter the absorber; the strong solution is drawn off". The same slip appears in the label "NH$_3$ vapor + solution" on the evaporator-to-absorber line of the aqua-ammonia figure [Aloke p.83; Kanak p.48].
 > 2. **Analyzer and rectifier labels swapped** [Kanak p.48; Aloke p.83]: in that printed figure the box stacked on the generator is labelled "Rectifier" and the one downstream "Analyzer". The analyzer sits **on the generator** (the incoming strong solution flows down through it), and the rectifier comes **after** it, just before the condenser, and is water-cooled (Fig. 3, and the slides' own Fig. 2 [Aloke p.81]). Draw them in that order.
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Describe an aqua-ammonia vapor absorption refrigeration system with necessary schematic diagram. Hence, analyze the benefit of using two heat exchangers; one after the pump and the another before the expansion valve” (2021-22, 2023-24). *Read:* [the practical aqua-ammonia system](#absorption-aqua). *Answer:* [Solution 8.9](#q-8-9), [Solution 8.10](#q-8-10).
+> - “Describe a vapor absorption refrigeration system with proper schematic diagram. Hence, discuss the function of generator, absorber, heat exchangers, analyzer and rectifier” (2018-19). *Read:* [the practical aqua-ammonia system](#absorption-aqua). *Answer:* [Solution 8.11](#q-8-11).
+
 ## 8.4 The maximum (Carnot) COP ★ {#absorption-carnot}
 
 **Definition.** Neglecting the pump work [Ameen §5.5]:
@@ -162,7 +169,7 @@ For a LiBr problem the absorber and condenser are both heat sinks at different t
 Each kg gives up $q=x\,h_{fg}=0.95\times2226.14=2114.8$ kJ/kg, so $\dot m=50/2114.8=0.02364$ kg/s $=85.1$ kg/h.
 :::
 
-## 8.5 The LiBr–water system and how to solve it ★
+## 8.5 The LiBr–water system and how to solve it ★ {#absorption-libr}
 
 **The system** (Fig. 6) [Aloke pp.86–87; Kanak pp.50, 54; Ameen §5.5]. Water is the refrigerant, a solution of LiBr in water the absorbent. Since LiBr is a salt with practically no vapour pressure, **only water vapour leaves the generator**: no analyzer or rectifier is needed. Because water boils at 5–10 °C only at about 1 kPa, the whole machine runs under a **deep vacuum**: about 1 kPa in the evaporator and absorber, 5–9 kPa in the generator and condenser. In commercial chillers the generator and condenser share one shell (same pressure) and the evaporator and absorber share another; cooling water from the cooling tower passes in series through the absorber and then the condenser [Ameen §5.5].
 
@@ -251,9 +258,16 @@ If the LiBr concentration is too high, or the solution too cold, for its concent
 - **Why a low condensing temperature is dangerous:** a lower $T_C$ lowers $p_H$; at the same generator temperature more water boils off, so $x_3$ rises (66.4 → 69 % for 40 → 34 °C in Fig. 7), and the cooled solution at 4 falls past the line. **Modern systems keep the condensing pressure up** even when cold cooling water is available, to avoid crystallization [Aloke p.91; Kanak p.56]. Other causes: a generator that is too hot, air leakage (raises the absorber pressure), a power failure that lets the hot concentrated solution cool in the pipes. Remedies: controls that limit $T_G$ or the concentration, keeping $T_C$ up, a by-pass (anti-crystallization) line, and dilution cycles at shutdown.
 - **Freezing at part load:** at reduced load the refrigerant water can freeze; capacity is controlled by reducing the refrigerant water pump flow, reducing the generator temperature or raising the condensing temperature [Ameen §5.6].
 
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Draw the schematic/block diagram of the system” (lithium bromide-water absorption system) (2016-17, 2018-19, 2022-23). *Read:* [the LiBr–water system](#absorption-libr), [the method](#absorption-method). *Answer:* [Solution 8.6](#q-8-6), [Solution 8.7](#q-8-7), [Solution 8.8](#q-8-8).
+> - “If condensing temperature is reduced to … °C, is there any chance of crystallization?” (2013-14, 2015-16). *Read:* [crystallization](#absorption-crystallization). *Answer:* [Solution 8.3](#q-8-3), [Solution 8.4](#q-8-4).
+
 ## 8.6 Comparisons ★
 
-### Vapour compression vs vapour absorption
+### Vapour compression vs vapour absorption {#absorption-vc-vs-va}
 
 [Aloke pp.7, 85; Kanak p.5; Ameen §5.4]
 
@@ -274,7 +288,7 @@ If the LiBr concentration is too high, or the solution too cold, for its concent
 | Other | needs a chimney (fired units), maintenance, longer overhaul downtime | none of these |
 | Best where | waste heat or cheap fuel is available, electricity is costly or scarce, low noise and vibration are needed | electricity is available; small and medium plants |
 
-### LiBr–water vs aqua-ammonia
+### LiBr–water vs aqua-ammonia {#absorption-libr-vs-nh3}
 
 [Aloke p.84; Kanak p.48; Ameen §5.3]
 
@@ -291,7 +305,7 @@ If the LiBr concentration is too high, or the solution too cold, for its concent
 | Heat source | low temperature (80–120 °C) | higher generator temperature (≈ 120–150 °C) |
 | Typical use | large building water chillers | industrial cold stores, ice plants, Electrolux refrigerators |
 
-### Disadvantages of the LiBr–water system
+### Disadvantages of the LiBr–water system {#absorption-libr-disadv}
 
 [Aloke pp.84–85; Ameen §5.3]
 
@@ -300,6 +314,13 @@ If the LiBr concentration is too high, or the solution too cold, for its concent
 3. LiBr is very corrosive in the presence of air: corrosion inhibitors are needed and the generator temperature is limited.
 4. **Crystallization** of LiBr at high concentration or low solution temperature (e.g. low condensing water temperature or a power failure) blocks the flow.
 5. Like every absorption system: high first cost, low COP (below 1), more space, more condenser water (heat of absorption) and a larger cooling tower, a chimney for fired units, and careful maintenance. LiBr is also expensive.
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Make brief comparisons between (i) vapour compression vs. vapour absorption chillers (ii) LiBr vs. NH$_3$ absorption systems” (2012-13). *Read:* [vapour compression vs vapour absorption](#absorption-vc-vs-va), [LiBr–water vs aqua-ammonia](#absorption-libr-vs-nh3). *Answer:* [Solution 8.12](#q-8-12).
+> - “What are the disadvantages of Lithium-bromide-water absorption system of refrigeration?” (2011-12). *Read:* [disadvantages of the LiBr–water system](#absorption-libr-disadv). *Answer:* [Solution 8.13](#q-8-13).
 
 ## 8.7 The Electrolux (three-fluid) refrigerator
 

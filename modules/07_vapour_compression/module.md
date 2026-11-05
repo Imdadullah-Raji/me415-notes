@@ -28,7 +28,7 @@
 > - **Flash tank / evaporator control volume** (steady, adiabatic, no work): $\sum \dot m_{in}h_{in}+\dot Q_{evap}=\sum \dot m_{out}h_{out}$, with the mass balance $\sum\dot m_{in}=\sum\dot m_{out}$.
 > - **Multistage COP** $=\sum \dot Q_{evap}/\sum \dot W_{comp}$.
 
-## 7.1 Refrigeration, COP and the ton ★
+## 7.1 Refrigeration, COP and the ton ★ {#vcr-cop}
 
 A **refrigerator** moves heat $Q_L$ from a cold space at $T_L$ to warm surroundings at $T_H$, using work $W$. It rejects $Q_H=Q_L+W$. A **heat pump** is the same machine, valued for $Q_H$ [Ameen §3.1].
 
@@ -47,7 +47,13 @@ A **refrigerator** moves heat $Q_L$ from a cold space at $T_L$ to warm surroundi
 
 (Arif p.31; Kanak p.92.)
 
-## 7.2 From the reversed Carnot cycle to the ideal vapour compression cycle ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Define EER, SEER, kW/ton” (2016-17). *Read:* [refrigeration, COP and the ton](#vcr-cop). *Answer:* [Solution 7.19](#q-7-19).
+
+## 7.2 From the reversed Carnot cycle to the ideal vapour compression cycle ★ {#vcr-carnot}
 
 **The reversed Carnot cycle** is the best possible refrigerator between $T_L$ and $T_H$. It has two isothermal and two isentropic processes, and with a vapour all four are inside the dome (Fig. 1(a)) [Aloke p.3; Ameen §3.2]:
 
@@ -74,6 +80,12 @@ It depends only on the two temperatures. Every real cycle between the same tempe
 ![Fig. 1: Reversed Carnot cycle and ideal VCR cycle on T-s for R134a between −10 °C and 40 °C. (a) Carnot: rectangle 1-2-3-4 inside the dome; 1-2 isentropic compression of wet vapour, 2-3 condensation at 40 °C, 3-4 isentropic expansion in an expander, 4-1 evaporation at −10 °C; the shaded rectangle is the net work. (b) Ideal VCR: 1 on the saturated-vapour line at −10 °C, 1-2 vertical isentropic compression to state 2 above 40 °C (a small superheat horn for R134a), 2-3 desuperheating and condensation along the 40 °C pressure line, 3-4 throttling drawn dashed to 4 in the dome at −10 °C, to the right of the isentropic point 4′; 4-1 evaporation, the refrigerating effect being the area under 4-1.](figures/001.png "w=0.9")
 
 ![Fig. 2: Aloke sir's comparison of the Carnot cycle 1-2''-3-4′ and the standard VCRS 1-2-3-4 on T-s: isotherms T_c and T_e, points 2, 2′, 2'' above the condensing line, 4′ (isentropic) and 4 (throttled) on the evaporating line; the hatched area A2 between 4′ and 4 is the refrigerating effect lost by throttling [Aloke p.3]](figures/002.jpg "w=0.5")
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the modifications that are introduced in reversed Carnot cycle to convert it into an ideal vapor compression refrigeration cycle and why? Show these processes on P-h and T-s diagrams” (2016-17). *Read:* [from the reversed Carnot cycle to the ideal cycle](#vcr-carnot). *Answer:* [Solution 7.12](#q-7-12).
 
 ## 7.3 The ideal cycle on the p-h diagram ★
 
@@ -120,7 +132,7 @@ $$COP=\frac{h_1-h_4}{h_2-h_1}$$
 >
 > All three read the compressor outlet as $h=428$ kJ/kg off the chart and get $\dot Q_L=0.06(385.43-236)=8.96$ kW, $\dot W=2.55$ kW, $\dot Q_H=11.51$ kW and **COP = 3.51** (Arif p.21b, Rifat p.5, also Ameen Ex. 3.4), or COP = **3.43** (Kanak p.81). 428 kJ/kg lies on the $s\approx1.764$ isentrope, not on $s=1.7435$; the table and the EOS both give ≈ 421.5 kJ/kg, so the true COP is about **4.08**. Kanak vai's note also takes $h_f=238.84$ kJ/kg for 0.7 MPa: that is the 28 °C row (0.727 MPa); at 0.7 MPa the table gives 236.98. When you read a chart, follow the isentrope from state 1 carefully, and check the answer: for −22 °C / 27 °C the ideal R134a COP must be close to 4.
 
-## 7.4 The actual cycle: deviations, subcooling and superheating ★
+## 7.4 The actual cycle: deviations, subcooling and superheating ★ {#vcr-actual}
 
 **Deviations of the actual cycle from the ideal cycle** [Ameen §3.4; Arif p.18; McQuiston ch. 15]:
 
@@ -136,7 +148,7 @@ The net result: the actual cycle has a lower refrigerating effect per unit of wo
 
 ![Fig. 4: VCR system with subcooling and superheating. (a) Block diagram: compressor → 2′ → condenser with a subcooling section at its outlet → 3′ subcooled liquid → expansion valve → 4′ → evaporator with a superheating section at its outlet → 1′ superheated vapour → compressor. (b) p-h diagram: the ideal cycle 1-2-3-4 in grey and the actual cycle 1′-2′-3′-4′ in red: 3′ left of the saturated-liquid line (subcooling 3→3′), 1′ right of the saturated-vapour line (superheat 1→1′), sloping lines for the pressure drops in the condenser and evaporator, and a compression line 1′-2′ that leans to the right of the isentrope (non-isentropic compression).](figures/004.jpg "w=1.0")
 
-### Subcooling
+### Subcooling {#vcr-subcool}
 
 **Subcooling** is cooling the condensed liquid below its saturation temperature at the condenser pressure (3 → 3′ in Fig. 4) [Ameen §3.4]. It is done in the last passes of the condenser, in a separate subcooler (cooling water), or in a liquid-suction heat exchanger.
 
@@ -144,7 +156,7 @@ The net result: the actual cycle has a lower refrigerating effect per unit of wo
 - It also ensures that only liquid, without flash gas, reaches the expansion valve, so the valve meters correctly and is not eroded.
 - Its only cost is the cooling medium (or the larger condenser) needed.
 
-### Superheating
+### Superheating {#vcr-superheat}
 
 **Superheating** is heating the vapour above its saturation temperature at the evaporator pressure (1 → 1′).
 
@@ -165,7 +177,16 @@ The net result: the actual cycle has a lower refrigerating effect per unit of wo
 - **Dry compression:** the vapour enters the compressor saturated or superheated; the discharge is superheated. This is the standard (ideal) cycle and the practical choice.
 - **Wet compression:** the vapour enters as a wet mixture (e.g. $x=0.97$), chosen so that compression ends at or near saturated vapour. Its theoretical advantage is a lower discharge temperature and a COP closer to Carnot. In practice the liquid droplets do not evaporate in the short compression time; they wash the oil off the cylinder walls and can hammer the valves. So wet compression is avoided in reciprocating compressors. The 2011-12 ammonia problem (Solution 7.11) has wet suction ($x_1=0.97$) but still ends superheated, because ammonia has a large superheat horn.
 
-## 7.5 Effect of evaporating and condensing temperature ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the deviations in a real vapor compression cycle from Ideal vapor compression cycle?” (2012-13, 2015-16). *Read:* [deviations of the actual cycle](#vcr-actual). *Answer:* [Solution 7.14](#q-7-14), [Solution 7.16](#q-7-16).
+> - “Establish how an actual cycle differs from a theoretical vapor compression cycle. What is sub-cooling and superheating … Why is superheating considered to be good in certain cases?” (2018-19). *Read:* [deviations of the actual cycle](#vcr-actual), [subcooling](#vcr-subcool), [superheating](#vcr-superheat). *Answer:* [Solution 7.13](#q-7-13).
+> - “Draw the block diagram of a vapor compression refrigeration system with sub-cooling in condenser and superheating of vapor leaving the evaporator and depict this on a p-h diagram” (2013-14, 2015-16). *Read:* [the actual cycle, Fig. 4](#vcr-actual). *Answer:* [Solution 7.14](#q-7-14), [Solution 7.15](#q-7-15).
+> - “Explain the effects of superheating and subcooling in a refrigeration system” (2011-12). *Read:* [subcooling](#vcr-subcool), [superheating](#vcr-superheat). *Answer:* [Solution 7.17](#q-7-17).
+
+## 7.5 Effect of evaporating and condensing temperature ★ {#vcr-temps}
 
 For the ideal cycle with a fixed condensing temperature (Fig. 5) [Ameen §3.3; Stoecker & Jones ch. 10]:
 
@@ -176,7 +197,14 @@ For the ideal cycle with a fixed condensing temperature (Fig. 5) [Ameen §3.3; S
 
 ![Fig. 5: Effect of temperatures on the ideal R134a cycle. (a) COP against evaporating temperature from −45 to 15 °C for condensing temperatures of 30, 40 and 50 °C: COP rises steeply with T_e and is lower for a higher T_c. (b) At T_c = 35 °C, refrigerating effect h1 − h4 (falling as T_e falls) and work of compression h2 − h1 (rising as T_e falls), kJ/kg. (c) For a fixed compressor displacement, the power (h2 − h1)/v1 rises from zero at T_e = T_c to a peak near 0 °C and then falls; the capacity (h1 − h4)/v1 falls continuously as T_e falls.](figures/005.jpg "w=1.0")
 
-## 7.6 Vapour compression vs air refrigeration
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Explain how does the work of compression and power vary with the evaporating temperature in an ideal compressor with constant condensing temperature” (2013-14). *Read:* [effect of evaporating and condensing temperature](#vcr-temps). *Answer:* [Solution 7.18](#q-7-18).
+> - “Show the variation of COP with the evaporator and condenser temperature” (2016-17). *Read:* [effect of evaporating and condensing temperature](#vcr-temps). *Answer:* [Solution 7.19](#q-7-19).
+
+## 7.6 Vapour compression vs air refrigeration {#vcr-vs-air}
 
 The **air refrigeration** (reversed Brayton or Bell-Coleman) cycle uses air as the refrigerant: compression, cooling at constant pressure, expansion in an expander, heating at constant pressure. No phase change occurs. The **vapour compression** cycle uses the latent heat of a boiling refrigerant [Ameen §3.3; Arora ch. 3].
 
@@ -191,7 +219,13 @@ The **air refrigeration** (reversed Brayton or Bell-Coleman) cycle uses air as t
 | Leakage, toxicity | refrigerant must be contained | air is free, safe, leak does no harm |
 | Weight / use | stationary plants, buildings | aircraft (light, uses bleed air) |
 
-## 7.7 Multipressure systems: flash-gas removal and intercooling ★
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “Mention the advantages of vapor compression refrigeration system over air refrigeration system” (2011-12). *Read:* [vapour compression vs air refrigeration](#vcr-vs-air). *Answer:* [Solution 7.20](#q-7-20).
+
+## 7.7 Multipressure systems: flash-gas removal and intercooling ★ {#vcr-multipressure}
 
 A **multipressure system** has two or more low-side pressures [Arif p.22a; Ameen §3.5]. It arises in two ways:
 
@@ -200,7 +234,7 @@ A **multipressure system** has two or more low-side pressures [Arif p.22a; Ameen
 
 Two functions are part of nearly every multipressure system [Arif p.23a]: **removal of flash gas** and **intercooling**.
 
-### Flash-gas removal
+### Flash-gas removal {#vcr-flash}
 
 When saturated liquid is throttled from the condenser pressure to a low evaporator pressure, part of it flashes to vapour; the vapour fraction grows as the pressure falls. This **flash gas** does no cooling in the evaporator, but it must still be compressed from the lowest pressure [Arif p.24b]. If the liquid is throttled first to an intermediate pressure into a **flash tank** (Fig. 6), the flash vapour (state 6) is drawn off and compressed only from the intermediate pressure, and only saturated liquid (state 4) goes on to the evaporator. Gains:
 
@@ -211,7 +245,7 @@ The flash fraction at the tank is the quality after throttling: $x=\dfrac{h_{con
 
 ![Fig. 6: Flash-gas removal. (a) Schematic: liquid from the condenser (1) through an expansion valve to the flash tank at an intermediate pressure (3); the flash vapour (6) leaves the top of the tank to the compressor; saturated liquid (4) leaves the bottom through a second expansion valve (5) to the evaporator, whose vapour (7) goes to the compressor. (b) p-h diagram (R134a, 30 °C condenser, 0 °C tank, −20 °C evaporator): direct throttling 1→2 into the evaporator compared with throttling 1→3 to the tank, separation into liquid 4 and vapour 6, and throttling 4→5; the length 5–2 is the gain in RE per kg of liquid.](figures/006.png "w=1.0")
 
-### Intercooling
+### Intercooling {#vcr-intercool}
 
 **Intercooling** between two stages of compression reduces the compression work [Arif p.23b]. Isentropes on p-h become flatter (lean further right) as the vapour gets more superheated, so compressing a cooled vapour from the intermediate pressure takes less work than continuing the hot compression (Fig. 7(b)): on the p-V diagram the area between the uncooled and the cooled high-stage compression is the work saved. It also lowers the discharge temperature, protecting the oil and the valves.
 
@@ -230,6 +264,13 @@ In practice the flash tank and the flash intercooler are one vessel ("intercoole
 > **TIP: Intercooling effectiveness depends on the refrigerant**
 >
 > For ammonia, whose isentropes are flat and whose discharge temperature is high, intercooling saves a lot of work. For R12, R22 and R134a the slopes before and after cooling are nearly the same, so the saving from desuperheating alone is small; the main gain of the two-stage R134a system comes from **flash-gas removal** and from the smaller pressure ratio per stage [Ameen §3.5].
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “What are the primary reasons for employing multi-evaporator systems in refrigeration?” (2023-24). *Read:* [multipressure systems](#vcr-multipressure). *Answer:* [Solution 7.21](#q-7-21).
+> - “Describe, with the help of schematic and p-h diagrams, the working of a two stage compression system with water intercooler, liquid intercooler and a liquid flash chamber” (2011-12). *Read:* [intercooling](#vcr-intercool), [flash-gas removal](#vcr-flash). *Answer:* [Solution 7.22](#q-7-22).
 
 ## 7.8 Solving any multistage system: the five-step method ★ {#five-step}
 
@@ -299,7 +340,7 @@ The liquid from the condenser (5) is throttled to the intermediate pressure into
 
 ![Fig. 9: Two evaporators at different temperatures. (a) One compressor: condenser liquid 3 splits; one branch through an expansion valve (4) to the high-temperature evaporator (exit 5) and a back-pressure (pressure-reducing) valve (6); the other through an expansion valve (7) to the low-temperature evaporator (exit 8); 6 and 8 mix to 1 at the compressor suction; discharge 2 to the condenser. (b) p-h of (a): 3-4 and 3-7 throttling, 4-5 evaporation at the higher pressure, 5-6 vertical drop at constant h through the back-pressure valve, 7-8 evaporation at the lower pressure, 1 between 8 and 6, 1-2 compression. (c) Individual compressors: compressor A serves the high-temperature evaporator, compressor B the low-temperature evaporator; both discharge to the condenser.](figures/009.png "w=1.0")
 
-### Type C: two compressors, two evaporators, flash intercooler (the exam template)
+### Type C: two compressors, two evaporators, flash intercooler (the exam template) {#vcr-type-c}
 
 This is the arrangement of the exam figure (Fig. 10) [Arif pp.25a, 29b–30b; Kanak pp.85, 89–91; Rifat pp.10–12]. The high-temperature evaporator works at the intermediate pressure, fed directly from the condenser through its own valve; its vapour joins the tank vapour at the high-stage suction (3). The **control volume** for Step 3 encloses the high-temperature evaporator **and** the flash tank (the hand-drawn loop on Arif p.30a):
 
@@ -345,7 +386,7 @@ $$\dot m_1=\frac{\dot Q_{low}}{h_1-h_8},\qquad \dot m_3=\frac{\dot Q_{high}+\dot
 >
 > Both read $h_4=418$ kJ/kg off the chart for 1016.6 kPa, $s=1.7245$, and get $\dot W_{34}=48.28$ kW (Kanak vai's note) or 46.72 kW (Rifat), COP **4.81** or **4.903**. 418 kJ/kg is below the saturated vapour enthalpy at 40 °C (419.43), which is impossible for a superheated discharge. The table and the EOS both give 423.7 kJ/kg, so $\dot W_{34}=62.6$ kW and COP ≈ 4.14–4.15. Quick check: the discharge enthalpy at 40 °C condensing must exceed $h_g(40\ °\text{C})=419.43$.
 
-### Type D: three stages, three evaporators, two flash tanks
+### Type D: three stages, three evaporators, two flash tanks {#vcr-type-d}
 
 The fish-freezing plant of 2018-19, 2020-21 and 2022-23 (Fig. 11) [Kanak pp.93–96]. Condenser liquid 7 feeds the −10 °C evaporator and the −10 °C tank (both at $h_8=h_7$). Liquid 9 from the −10 °C tank feeds the −20 °C evaporator and the −20 °C tank ($h_{10}=h_9$). Liquid 11 from the −20 °C tank feeds the −30 °C evaporator ($h_{12}=h_{11}$). Compressor 1-2 discharges into the −20 °C tank, compressor 3-4 into the −10 °C tank, compressor 5-6 into the condenser. Two control volumes, each "evaporator + its tank":
 
@@ -357,6 +398,13 @@ $$\text{CV}_{-10}:\ \dot m_5h_7+\dot Q_{-10}+\dot m_3h_4=\dot m_5h_5+\dot m_3h_9
 ![Fig. 11: Three-stage system with three evaporators and two flash tanks (2018-19, 2020-21, 2022-23). (a) Schematic: condenser 30 °C → 7, split between an expansion valve to the evaporator −10 °C, 40 TR (8) and a valve into the −10 °C flash tank (8); vapour from both → 5 → compressor 5-6 → 6 → condenser. Liquid 9 from the −10 °C tank splits between the evaporator −20 °C, 50 TR (10) and the −20 °C flash tank (10); vapour from both → 3 → compressor 3-4 → 4, piped into the −10 °C tank. Liquid 11 from the −20 °C tank → valve → 12 → evaporator −30 °C, 60 TR → 1 → compressor 1-2 → 2, piped into the −20 °C tank. (b) p-h diagram on R134a coordinates: four pressure levels −30 °C (84 kPa), −20 °C (133 kPa), −10 °C (201 kPa) and 30 °C (770 kPa); compressions 1-2, 3-4, 5-6; throttling 7-8, 9-10, 11-12; evaporation at each level; 2→3 and 4→5 desuperheating in the tanks.](figures/011.jpg "w=1.0")
 
 ![Fig. 12: Three-stage compression with three expansion valves, two flash intercoolers and one evaporator (2011-12 Q6(b), pressures 2, 4, 8 and 12 bar). (a) Schematic: as the three-evaporator system but without the evaporators at the two intermediate levels: condenser liquid 7 → valve → 8 into the 8-bar flash tank; liquid 9 → valve → 10 into the 4-bar flash tank; liquid 11 → valve → 12 → evaporator at 2 bar → 1 → compressor 1-2 → 2 into the 4-bar tank; vapour 3 → compressor 3-4 → 4 into the 8-bar tank; vapour 5 → compressor 5-6 → 6 → condenser at 12 bar. (b) p-h diagram on R134a coordinates with the four pressure levels.](figures/012.png "w=1.0")
+
+> **ASKED: Read this section to answer**
+>
+> These past-paper parts are answered from this section; the full answers are with the term-final questions at the end of the module.
+>
+> - “… two stage compressions with inter-cooling and removal of flash gas … Draw the schematic diagram and P-h diagram of the system” (2016-17, 2017-18, 2021-22). *Read:* [Type C, the exam template](#vcr-type-c). *Answer:* [Solution 7.3](#q-7-3), [Solution 7.5](#q-7-5), [Solution 7.6](#q-7-6).
+> - “… three stage compression refrigeration system with inter-cooling and removal of flash gas … Draw the schematic diagram and P-h diagram of the system” (2018-19, 2020-21, 2022-23). *Read:* [Type D, three stages](#vcr-type-d). *Answer:* [Solution 7.7](#q-7-7), [Solution 7.8](#q-7-8), [Solution 7.9](#q-7-9).
 
 ## 7.9 Single-stage cycle with subcooling and wet suction (ammonia)
 
