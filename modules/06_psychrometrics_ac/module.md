@@ -395,16 +395,23 @@ The space gains **sensible heat** $\dot Q_s$ (conduction through walls, roof and
 - $T_r-T_s$: the **supply temperature difference** (usually 8–12 K).
 - $\dot m_a$: supply mass flow of **dry air** (kg/s). Every $h$ and $\omega$ is per kg of dry air.
 - $\dot Q_s$, $\dot Q_l$: the room's sensible and latent heat gains (kW). $\dot m_{w,gain}$: the moisture added to the room (kg/s).
-- x: a helper point at $T_r$ and $\omega_s$, directly below R and level with S. S → x is the sensible part of the process (heating at constant $\omega$), x → R the latent part (moisture added at constant $T$).
+- x: a helper point used only to split the load; see "The point x" below.
 - For the systems below: O, the **outdoor** air; M, the **mixture** of outdoor and return air entering the coil; C, the **coil exit**; $\dot m_{a,o}$, the outdoor (fresh) dry-air flow; $\dot m_w$, $h_w$, the condensate leaving the coil and its enthalpy ($h_f$ at the condensate temperature). ADP and BPF are defined at the end of this subsection.
 
 $$\dot Q_s=\dot m_a(1.005+1.82\,\omega_s)(T_r-T_s)\qquad \dot m_{w,gain}=\dot m_a(\omega_r-\omega_s)\qquad \dot Q_l=\dot m_a(\omega_r-\omega_s)(2501+1.82\,T_r)$$
 
-Here $1.005+1.82\,\omega_s$ (kJ/kg·K) is the specific heat of the moist air per kg of dry air, and $2501+1.82\,T_r$ (kJ/kg) is the enthalpy of the added vapour at room temperature, so that $\dot Q_s+\dot Q_l=\dot m_a(h_r-h_s)$. The **sensible heat ratio** (sensible heat factor) is
+Here $1.005+1.82\,\omega_s$ (kJ/kg·K) is the specific heat of the moist air per kg of dry air, and $2501+1.82\,T_r$ (kJ/kg) is the enthalpy of the added vapour at room temperature, so that $\dot Q_s+\dot Q_l=\dot m_a(h_r-h_s)$. The **sensible heat ratio** (sensible heat factor) is [Ameen eq. 12.19–12.20]
 
 $$SHR=\frac{\dot Q_s}{\dot Q_s+\dot Q_l}=\frac{h_x-h_s}{h_r-h_s}$$
 
-where $h_x-h_s$ is the sensible part and $h_r-h_x$ the latent part of the enthalpy rise from S to R [Ameen eq. 12.19–12.20]. The supply state S must lie on the straight line through R whose slope is fixed by the SHR: the **room condition line** (RSHR line). SHR = 1 is a horizontal line (no moisture); SHR = 0 is vertical. Typical values: about 0.8 in dry climates, 0.7 or lower in humid tropical climates such as Bangladesh [Ameen §12.5].
+**The point x.** In the room the supply air goes from S to R: it gets warmer and wetter at the same time. To split that change into its sensible and latent parts, imagine it in two legs on the chart (dry-bulb temperature across, $\omega$ up):
+
+1. **S → x, sensible only.** Heat the air at constant $\omega=\omega_s$ (a horizontal line to the right) until its temperature reaches $T_r$. That point is x: temperature $T_r$, humidity ratio $\omega_s$. The enthalpy gained, $h_x-h_s$, is the sensible heat per kg of dry air.
+2. **x → R, latent only.** Add moisture at constant $T=T_r$ (a vertical line up) until $\omega$ reaches $\omega_r$. The enthalpy gained, $h_r-h_x$, is the latent heat per kg of dry air.
+
+So x is the corner of the right angle S → x → R: directly below R, level with S. It is not a real state anywhere in the system. Example (the mini-example below): R = 26 °C, $\omega_r=0.0105$; S = 16 °C, $\omega_s=0.00908$; so x = 26 °C, $\omega=0.00908$. With $h=1.005T+\omega(2501+1.82T)$: $h_s=39.05$, $h_x=49.27$, $h_r=52.89$ kJ/kg, and $SHR=(49.27-39.05)/(52.89-39.05)=0.74$, the same as $10/(10+3.54)$ from the loads.
+
+The supply state S must lie on the straight line through R whose slope is fixed by the SHR: the **room condition line** (RSHR line). SHR = 1 is a horizontal line (no moisture); SHR = 0 is vertical. Typical values: about 0.8 in dry climates, 0.7 or lower in humid tropical climates such as Bangladesh [Ameen §12.5].
 
 **Method** (a calculator, or the chart):
 
