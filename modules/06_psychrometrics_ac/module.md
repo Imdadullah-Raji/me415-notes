@@ -386,15 +386,25 @@ Air passed over a **sorbent** (silica gel, activated alumina, or sprayed lithium
 
 ### Sensible and latent loads, SHR and the supply-air state
 
-The space gains **sensible heat** $\dot Q_s$ (conduction through walls, roof and glass, solar radiation, people's sensible heat, lights, equipment), which raises its temperature, and **latent heat** $\dot Q_l$, the moisture added by people, cooking and infiltration, which raises its humidity (Module 1 calculates them). To hold the room at R, the system supplies air at a colder and drier state S whose mass flow $\dot m_a$ absorbs both [Ameen §12.5]:
+The space gains **sensible heat** $\dot Q_s$ (conduction through walls, roof and glass, solar radiation, people's sensible heat, lights, equipment), which raises its temperature, and **latent heat** $\dot Q_l$, the moisture added by people, cooking and infiltration, which raises its humidity (Module 1 calculates them). To hold the room at R, the system supplies air at a colder and drier state S whose mass flow $\dot m_a$ absorbs both [Ameen §12.5].
+
+**States and symbols** (each state is a point on the chart; Fig. 14 shows O, M, C, S and R):
+
+- R: the **room** state, the condition the space is held at (e.g. 24 °C, 50 %). $T_r$, $\omega_r$, $h_r$: its dry-bulb temperature, humidity ratio and enthalpy.
+- S: the **supply** state, the air leaving the diffusers into the room. $T_s$, $\omega_s$, $h_s$: its dry-bulb temperature, humidity ratio and enthalpy. S is colder than R ($T_s<T_r$) so that it can take up the sensible gain, and drier ($\omega_s<\omega_r$) so that it can take up the moisture gain. In the room S warms and wets to R.
+- $T_r-T_s$: the **supply temperature difference** (usually 8–12 K).
+- $\dot m_a$: supply mass flow of **dry air** (kg/s). Every $h$ and $\omega$ is per kg of dry air.
+- $\dot Q_s$, $\dot Q_l$: the room's sensible and latent heat gains (kW). $\dot m_{w,gain}$: the moisture added to the room (kg/s).
+- x: a helper point at $T_r$ and $\omega_s$, directly below R and level with S. S → x is the sensible part of the process (heating at constant $\omega$), x → R the latent part (moisture added at constant $T$).
+- For the systems below: O, the **outdoor** air; M, the **mixture** of outdoor and return air entering the coil; C, the **coil exit**; $\dot m_{a,o}$, the outdoor (fresh) dry-air flow; $\dot m_w$, $h_w$, the condensate leaving the coil and its enthalpy ($h_f$ at the condensate temperature). ADP and BPF are defined at the end of this subsection.
 
 $$\dot Q_s=\dot m_a(1.005+1.82\,\omega_s)(T_r-T_s)\qquad \dot m_{w,gain}=\dot m_a(\omega_r-\omega_s)\qquad \dot Q_l=\dot m_a(\omega_r-\omega_s)(2501+1.82\,T_r)$$
 
-so that $\dot Q_s+\dot Q_l=\dot m_a(h_r-h_s)$. The **sensible heat ratio** (sensible heat factor) is
+Here $1.005+1.82\,\omega_s$ (kJ/kg·K) is the specific heat of the moist air per kg of dry air, and $2501+1.82\,T_r$ (kJ/kg) is the enthalpy of the added vapour at room temperature, so that $\dot Q_s+\dot Q_l=\dot m_a(h_r-h_s)$. The **sensible heat ratio** (sensible heat factor) is
 
 $$SHR=\frac{\dot Q_s}{\dot Q_s+\dot Q_l}=\frac{h_x-h_s}{h_r-h_s}$$
 
-where x is the point at $T_r$ and $\omega_s$ [Ameen eq. 12.19–12.20]. The supply state S must lie on the straight line through R whose slope is fixed by the SHR: the **room condition line** (RSHR line). SHR = 1 is a horizontal line (no moisture); SHR = 0 is vertical. Typical values: about 0.8 in dry climates, 0.7 or lower in humid tropical climates such as Bangladesh [Ameen §12.5].
+where $h_x-h_s$ is the sensible part and $h_r-h_x$ the latent part of the enthalpy rise from S to R [Ameen eq. 12.19–12.20]. The supply state S must lie on the straight line through R whose slope is fixed by the SHR: the **room condition line** (RSHR line). SHR = 1 is a horizontal line (no moisture); SHR = 0 is vertical. Typical values: about 0.8 in dry climates, 0.7 or lower in humid tropical climates such as Bangladesh [Ameen §12.5].
 
 **Method** (a calculator, or the chart):
 
@@ -404,7 +414,7 @@ where x is the point at $T_r$ and $\omega_s$ [Ameen eq. 12.19–12.20]. The supp
 4. $\omega_s$ from the moisture (or latent) load: $\omega_s=\omega_r-\dot m_{w,gain}/\dot m_a$.
 5. The rest of S from $T_s$ and $\omega_s$ (φ, $T_{wb}$ by trial, $h$, $v$); supply volume $\dot V=\dot m_av_s$.
 
-*Chart route:* plot R; draw a line through R parallel to the protractor line of the SHR; S is where it crosses the vertical through $T_s$ [Ameen Ex. 12.11].
+*Chart route:* plot R; draw a line through R parallel to the line joining the protractor's centre to the SHR value on its scale (§6.3); S is where it crosses the vertical through $T_s$ [Ameen Ex. 12.11].
 
 ::: {.mini #m-mini-psy-supply}
 **Mini-example: supply-air flow and ω from the room loads.** Room at 26 °C with $\omega_r=0.0105$; sensible gain 10 kW, moisture gain 5 kg/h; supply at 16 °C.
@@ -414,7 +424,7 @@ First pass ($\omega_s=\omega_r$): $\dot m_a=\dfrac{10}{(1.005+1.82\times0.0105)\
 Second pass: $1.005+1.82\times0.009078=1.0215$, $\dot m_a=10/(1.0215\times10)=0.9789$ kg/s, $\omega_s=0.0105-0.001389/0.9789=0.009081$ kg/kg.
 :::
 
-**Apparatus dew point and bypass factor.** A real cooling coil does not bring all the air into contact with its fins. The effective coil surface temperature is the **apparatus dew point** (ADP), the point where the coil process line meets the saturation curve. Air leaving the coil behaves as a mixture of air that touched the coil (leaving at the ADP) and air that **bypassed** it (unchanged). The **bypass factor** $BPF=\dfrac{T_{out}-T_{ADP}}{T_{in}-T_{ADP}}$ (typically 0.05–0.2); the contact factor is $1-BPF$ [Ameen §12.5]. A deeper coil (more rows) or lower face velocity gives a smaller BPF.
+**Apparatus dew point and bypass factor.** A real cooling coil does not bring all the air into contact with its fins. The effective coil surface temperature is the **apparatus dew point** (ADP), the point where the coil process line meets the saturation curve. Air leaving the coil behaves as a mixture of air that touched the coil (leaving at the ADP) and air that **bypassed** it (unchanged). The **bypass factor** $BPF=\dfrac{T_{out}-T_{ADP}}{T_{in}-T_{ADP}}$, where $T_{in}$ and $T_{out}$ are the dry-bulb temperatures of the air entering and leaving the coil (M and C) and $T_{ADP}$ is the ADP temperature (typically 0.05–0.2); the contact factor is $1-BPF$ [Ameen §12.5]. A deeper coil (more rows) or lower face velocity gives a smaller BPF.
 
 ### The elementary summer AC system
 
