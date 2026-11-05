@@ -113,6 +113,244 @@
       { d: R(308, 744, 10, 26) + " M308 752h10 M308 762h10", labels: [L("L", "Crankcase heater", 790, 310, 768)] }] }
   ] };
 
+  // ---- Module 6 §6.7: air-conditioning systems (BEGIN ac block)
+  function head(x, y, ux, uy) {                          // an arrowhead at (x, y) pointing along (ux, uy)
+    var s = 14, w = 7;
+    return " M" + (x - s * ux - w * uy).toFixed(1) + " " + (y - s * uy + w * ux).toFixed(1) + "L" + x + " " + y +
+      "L" + (x - s * ux + w * uy).toFixed(1) + " " + (y - s * uy - w * ux).toFixed(1);
+  }
+  function A(x1, y1, x2, y2) {                           // a straight arrow
+    var dx = x2 - x1, dy = y2 - y1, l = Math.sqrt(dx * dx + dy * dy);
+    return "M" + x1 + " " + y1 + "L" + x2 + " " + y2 + head(x2, y2, dx / l, dy / l);
+  }
+  function hfins(x, y, w, h, s) {                        // a finned coil seen edge-on: a box with fins across it
+    var d = R(x, y, w, h);
+    for (var k = y + s; k < y + h - 2; k += s) d += " M" + x + " " + k + "h" + w;
+    return d;
+  }
+  function vfins(x, y, w, h, s) {                        // the same with upright fins (air passing upwards)
+    var d = R(x, y, w, h);
+    for (var k = x + s; k < x + w - 2; k += s) d += " M" + k + " " + y + "v" + h;
+    return d;
+  }
+  function serp(x0, ya, yb, dx, n) {                     // a serpentine tube: n upright passes from x0, dx apart, from ya
+    var d = "M" + x0 + " " + ya, y = ya, r = Math.abs(dx) / 2;
+    for (var i = 0; i < n; i++) {
+      var yn = y === ya ? yb : ya;
+      d += "V" + yn;
+      if (i < n - 1) d += "A" + r + " " + r + " 0 0 " + ((yn < y) !== (dx < 0) ? 1 : 0) + " " + (x0 + (i + 1) * dx) + " " + yn;
+      y = yn;
+    }
+    return d;
+  }
+  function E(cx, cy, rx, ry) {
+    return "M" + (cx - rx) + " " + cy + "a" + rx + " " + ry + " 0 1 0 " + 2 * rx + " 0a" + rx + " " + ry + " 0 1 0 " + (-2 * rx) + " 0";
+  }
+  function prop(cx, cy, r) {                             // a propeller fan seen from the side: hub and two blades
+    return C(cx, cy, 5) + " " + E(cx, cy - r / 2 - 3, 9, r / 2) + " " + E(cx, cy + r / 2 + 3, 9, r / 2);
+  }
+  function blowerR(cx, cy, r, x2) {                      // a centrifugal blower, outlet along its top to x2
+    return "M" + x2 + " " + (cy - r) + "H" + cx + "A" + r + " " + r + " 0 1 0 " + (cx + r) + " " + cy + "V" + (cy - 0.35 * r).toFixed(1) +
+      "H" + x2 + " " + C(cx, cy, 0.6 * r) + " " + C(cx, cy, 0.2 * r);
+  }
+  function blowerU(cx, cy, r, y2) {                      // the same, outlet up its left side to y2
+    return "M" + (cx - r) + " " + y2 + "V" + cy + "A" + r + " " + r + " 0 1 0 " + cx + " " + (cy - r) + "H" + (cx - 0.35 * r).toFixed(1) +
+      "V" + y2 + " " + C(cx, cy, 0.6 * r) + " " + C(cx, cy, 0.2 * r);
+  }
+  function comp(x, y, w, h) {                            // a hermetic compressor: a can with a domed top
+    return "M" + x + " " + (y + h) + "V" + (y + 14) + "A" + w / 2 + " 14 0 0 1 " + (x + w) + " " + (y + 14) + "V" + (y + h) + "Z";
+  }
+  function valve(cx, cy) { return "M" + (cx - 13) + " " + (cy - 9) + "V" + (cy + 9) + "L" + (cx + 13) + " " + (cy - 9) + "V" + (cy + 9) + "Z"; }
+  function hatch(x, y, w, h) {                           // a hatched wall
+    var d = R(x, y, w, h);
+    for (var k = w + 4; k <= h; k += 16) d += " M" + x + " " + (y + k) + "l" + w + " " + (-w);
+    return d;
+  }
+  function ground(x1, x2, y) {
+    var d = "M" + x1 + " " + y + "H" + x2;
+    for (var x = x1 + 10; x < x2; x += 24) d += " M" + x + " " + y + "l-12 14";
+    return d;
+  }
+  function zig(x, y, w, h, n) {                          // a filter seen edge-on
+    var d = R(x, y, w, h) + " M" + x + " " + y;
+    for (var i = 1; i <= n; i++) d += "L" + (i % 2 ? x + w : x) + " " + (y + i * h / n).toFixed(1);
+    return d;
+  }
+  function wallIDU(x, y) { return R(x, y, 210, 56) + " M" + (x + 16) + " " + (y + 44) + "h178"; }
+  function cassette(x, y) { return R(x, y, 84, 84) + " M" + (x + 14) + " " + (y + 16) + "h56 M" + (x + 14) + " " + (y + 68) + "h56"; }
+  function pair(pts, o) {                                // a pipe pair (liquid and suction): a polyline and a parallel copy o to its left
+    var n = pts.length, q = [];
+    function u(i) { var dx = pts[i + 1][0] - pts[i][0], dy = pts[i + 1][1] - pts[i][1], l = Math.sqrt(dx * dx + dy * dy); return [dx / l, dy / l]; }
+    for (var i = 0; i < n; i++) {
+      var a = u(Math.max(0, i - 1)), b = u(Math.min(n - 2, i)), k = o / (1 + a[0] * b[0] + a[1] * b[1]);
+      q.push([pts[i][0] + k * (a[1] + b[1]), pts[i][1] - k * (a[0] + b[0])]);
+    }
+    function line(ps) { return "M" + ps.map(function (p) { return p[0].toFixed(1) + " " + p[1].toFixed(1); }).join("L"); }
+    return line(pts) + " " + line(q);
+  }
+
+  DRAWINGS["ac-basic"] = { aria: "Basic air-conditioning system, drawn stage by stage", top: 110, h: 640, keep: true, stages: [
+    { title: "Casing, return-air duct above it and the outside-air inlet", items: [
+      { d: "M900 170H330V330H250 M250 390H330V470H830V365 M830 327V250 M420 250H900", w: 3,
+        labels: [L("R", "Casing", 520, 830, 455, { x: 850 })] }] },
+    { title: "Outside air through the damper and return air meet in the mixing chamber", items: [
+      { d: A(150, 360, 240, 360), labels: [L("C", "Outside air", 326, 0, 0, { x: 175 })] },
+      { d: "M322 338L340 354 M322 362L340 378", w: 3, labels: [L("L", "Outside-air damper", 450, 333, 372, { x: 300 })] },
+      { d: A(880, 210, 760, 210), labels: [L("C", "Return air from the space", 150, 0, 0, { x: 650 })] },
+      { d: "M500 210C410 210 378 235 376 296" + head(376, 300, 0, 1), labels: [L("L", "Mixing chamber", 290, 365, 320, { x: 300 })] }] },
+    { title: "In the air stream: filter, heating coil, cooling coil, humidifier", items: [
+      { d: zig(440, 250, 28, 220, 8), labels: [L("R", "Filter", 660, 454, 470, { x: 462 })] },
+      { d: hfins(505, 262, 18, 196, 14), labels: [L("R", "Heating coil", 620, 514, 470, { x: 522 })] },
+      { d: hfins(560, 262, 36, 196, 10), labels: [L("R", "Cooling coil", 580, 578, 470, { x: 586 })] },
+      { d: "M650 262V458 M650 292l16 -8v16Z M650 342l16 -8v16Z M650 392l16 -8v16Z M650 442l16 -8v16Z",
+        labels: [L("R", "Humidifier", 540, 650, 470, { x: 658 })] }] },
+    { title: "Fan: it blows the conditioned supply air to the space", items: [
+      { d: blowerR(740, 385, 58, 930), labels: [L("R", "Fan", 445, 772, 420, { x: 850 })] },
+      { d: A(935, 346, 985, 346), labels: [L("C", "Supply air", 305, 0, 0, { x: 915 })] }] }
+  ] };
+
+  DRAWINGS["ac-window"] = { aria: "Window air conditioner, side view, drawn stage by stage", lx: 210, rx: 815, top: 150, h: 600, keep: true, stages: [
+    { title: "Wall, cabinet through it, partition and front panel", items: [
+      { d: hatch(330, 180, 30, 112) + " " + hatch(330, 568, 30, 132), labels: [L("C", "Wall", 172, 0, 0, { x: 345 }),
+        L("C", "Inside (room)", 250, 0, 0, { x: 190 }), L("C", "Outside", 250, 0, 0, { x: 680 })] },
+      { d: R(300, 300, 460, 260), w: 3, labels: [L("R", "Cabinet", 300, 745, 300)] },
+      { d: "M520 300V560", dash: "10 8", labels: [L("R", "Partition", 650, 520, 560)] },
+      { d: R(288, 290, 12, 280) + " M291 310h6 M291 325h6 M291 340h6 M291 355h6", labels: [L("L", "Front panel", 300, 290, 300)] }] },
+    { title: "Room side: air filter, evaporator, blower and its outlet, drain pan", items: [
+      { d: zig(304, 400, 14, 140, 10), labels: [L("L", "Air filter", 420, 311, 420)] },
+      { d: hfins(330, 390, 28, 150, 12), labels: [L("L", "Evaporator", 530, 344, 525)] },
+      { d: "M300 355H398V470A42 42 0 1 0 440 428H425.3V320H300 " + C(440, 470, 25) + " " + C(440, 470, 8),
+        labels: [L("L", "Blower wheel", 640, 440, 495)] },
+      { d: "M325 545V556H400V545", labels: [L("L", "Drain pan", 590, 362, 556)] }] },
+    { title: "Outdoor side: one motor drives both fans; propeller fan, condenser, compressor", items: [
+      { d: "M440 470H640 " + R(545, 450, 50, 40), labels: [L("R", "Fan motor", 470, 595, 462)] },
+      { d: prop(655, 470, 78), labels: [L("R", "Propeller fan", 515, 662, 505)] },
+      { d: hfins(712, 320, 30, 225, 12), labels: [L("R", "Condenser", 425, 742, 430)] },
+      { d: comp(560, 498, 55, 58), labels: [L("R", "Compressor", 560, 615, 530)] },
+      { d: "M520 330L498 352 " + C(520, 330, 3), labels: [L("R", "Damper", 345, 506, 344)] }] },
+    { title: "Air paths: room air through filter and evaporator; outdoor air through the condenser", items: [
+      { d: A(225, 470, 285, 470), labels: [L("L", "Room air in", 478, 225, 470)] },
+      { d: A(286, 337, 226, 337), labels: [L("L", "Cold air out", 345, 226, 337)] },
+      { d: A(590, 238, 590, 292), labels: [L("L", "Outdoor air in", 262, 590, 250, { x: 570 })] },
+      { d: A(764, 360, 802, 360) + " " + A(764, 395, 802, 395), labels: [L("R", "Hot air out", 385, 802, 378)] },
+      { d: "M760 540H780V556 M780 566v8 M780 584v8", labels: [L("R", "Drain outlet", 605, 780, 556)] }] }
+  ] };
+
+  DRAWINGS["ac-split"] = { aria: "Split air conditioner, drawn stage by stage", top: 80, h: 830, keep: true, stages: [
+    { title: "Wall and ground; outdoor unit outside, indoor unit high on the inside wall", items: [
+      { d: hatch(452, 120, 25, 624) + " " + ground(40, 960, 744), labels: [L("C", "Outside", 140, 0, 0, { x: 275 }), L("C", "Inside", 140, 0, 0, { x: 660 })] },
+      { d: R(155, 420, 270, 300) + " " + R(140, 720, 300, 24), w: 3, labels: [L("C", "Outdoor unit", 790, 0, 0, { x: 290 })] },
+      { d: R(520, 200, 270, 180), w: 3, labels: [L("C", "Indoor unit", 186, 0, 0, { x: 700 })] }] },
+    { title: "Outdoor unit: condenser coil, fan, compressor", items: [
+      { d: serp(235, 650, 470, -25, 3) + " M173 500h74 M173 530h74 M173 560h74 M173 590h74 M173 620h74",
+        labels: [L("L", "Condenser", 568, 173, 562, { x: 140 })] },
+      { d: prop(315, 560, 70) + " " + R(325, 548, 22, 24), labels: [L("L", "Fan", 395, 311, 522, { x: 275 })] },
+      { d: comp(335, 600, 60, 90) + " M335 650H235", labels: [L("L", "Compressor", 690, 335, 670, { x: 140 })] }] },
+    { title: "Indoor unit: fan, evaporator coil, drain pan below", items: [
+      { d: prop(580, 310, 60) + " " + R(590, 298, 22, 24), labels: [L("R", "Indoor fan", 340, 590, 320, { x: 800 })] },
+      { d: serp(660, 240, 350, 25, 3) + " M648 265h74 M648 295h74 M648 325h74", labels: [L("R", "Evaporator", 285, 722, 285, { x: 800 })] },
+      { d: "M525 382V396H785V382", labels: [L("R", "Drain pan", 395, 785, 390, { x: 800 })] }] },
+    { title: "Refrigerant lines through the wall: liquid line to the expansion device, suction line back to the compressor", items: [
+      { d: "M185 470V445H490V220H562", w: 3, labels: [L("R", "Liquid line", 570, 490, 400, { x: 560 })] },
+      { d: valve(575, 220) + " M588 220H660V240", labels: [L("R", "Expansion device", 230, 575, 222, { x: 800 })] },
+      { d: "M710 350V365H505V475H365V600", w: 3, labels: [L("R", "Suction line", 615, 505, 440, { x: 560 })] }] },
+    { title: "Air paths and the condensate drain", items: [
+      { d: A(370, 345, 337, 410), labels: [L("C", "Outdoor air", 335, 0, 0, { x: 365 })] },
+      { d: A(150, 500, 110, 500) + " " + A(150, 625, 110, 625), labels: [L("C", "Hot air", 485, 0, 0, { x: 100 })] },
+      { d: A(580, 120, 580, 188), labels: [L("C", "Room air", 112, 0, 0, { x: 580 })] },
+      { d: A(650, 402, 630, 452) + " " + A(700, 402, 700, 455) + " " + A(750, 402, 770, 452), labels: [L("R", "Cool air", 450, 770, 452, { x: 800 })] },
+      { d: "M540 396V520H438V560 M438 572v8 M438 590v8", labels: [L("R", "Drain hose", 665, 438, 550, { x: 560 })] }] }
+  ] };
+
+  DRAWINGS["ac-ducted"] = { aria: "Ducted split system, drawn stage by stage", top: 110, h: 740, keep: true, stages: [
+    { title: "Outdoor unit, refrigerant pipes, air handler (the indoor unit)", items: [
+      { d: R(50, 560, 130, 140) + " " + C(115, 630, 45) + " " + C(115, 630, 7) + " M115 623q22 -30 34 -6 M115 637q-22 30 -34 6", w: 2.2, labels: [L("C", "Outdoor unit", 545, 0, 0, { x: 115 })] },
+      { d: "M180 595H222V448H262 M180 612H236V462H262", labels: [L("L", "Refrigerant pipes", 450, 222, 485, { x: 205 })] },
+      { d: R(250, 330, 150, 370), w: 3, labels: [L("L", "Air handler (IDU)", 390, 250, 380, { x: 235 })] }] },
+    { title: "Inside the air handler: cooling coil, blower, filter at the return inlet", items: [
+      { d: vfins(262, 430, 126, 36, 12), labels: [L("R", "Cooling coil", 450, 388, 448, { x: 420 })] },
+      { d: blowerU(330, 610, 42, 500), labels: [L("R", "Blower", 565, 368, 600, { x: 420 })] },
+      { d: zig(394, 612, 12, 78, 6), labels: [L("R", "Filter", 745, 400, 690, { x: 410 })] }] },
+    { title: "Supply duct along the ceiling, a branch and a diffuser for each room", items: [
+      { d: "M290 330V190Q290 150 330 150H940V200H900 M860 200H740 M700 200H560 M520 200H375Q360 200 360 215V330 M520 200V250 M560 200V250 M700 200V250 M740 200V250 M860 200V250 M900 200V250",
+        w: 3, labels: [L("C", "Supply duct", 135, 0, 0, { x: 650 })] },
+      { d: R(510, 250, 60, 22) + " " + R(690, 250, 60, 22) + " " + R(850, 250, 60, 22) + " M520 258h40 M520 265h40 M700 258h40 M700 265h40 M860 258h40 M860 265h40",
+        labels: [L("R", "Diffusers", 335, 750, 268, { x: 770 })] },
+      { d: "M420 272H960", dash: "4 8", labels: [] }] },
+    { title: "Return: grille, return plenum back to the air handler", items: [
+      { d: "M400 612H640V700H400 M560 612V600H640 M572 600v12 M588 600v12 M604 600v12 M620 600v12", w: 2.2,
+        labels: [L("R", "Return grille", 600, 640, 606, { x: 660 }), L("R", "Return plenum", 745, 520, 700, { x: 500 })] }] },
+    { title: "Air paths; one thermostat controls all the rooms", items: [
+      { d: A(302, 495, 302, 345) + " " + A(430, 175, 520, 175) + " " + A(780, 175, 860, 175), labels: [] },
+      { d: "M530 280" + "l-20 28" + head(510, 308, -0.58, 0.81) + " M550 280l20 28" + head(570, 308, 0.58, 0.81) +
+        " M710 280l-20 28" + head(690, 308, -0.58, 0.81) + " M730 280l20 28" + head(750, 308, 0.58, 0.81) +
+        " M870 280l-20 28" + head(850, 308, -0.58, 0.81) + " M890 280l20 28" + head(910, 308, 0.58, 0.81), labels: [] },
+      { d: A(600, 540, 600, 596) + " " + A(550, 656, 425, 656), labels: [L("C", "Return air", 528, 0, 0, { x: 600 })] },
+      { d: R(760, 420, 30, 40) + " M766 432h18", labels: [L("R", "Thermostat", 448, 790, 440, { x: 805 })] },
+      { d: "M775 460V500H400", dash: "6 6", labels: [] }] }
+  ] };
+
+  DRAWINGS["ac-multi"] = { aria: "Multi-split system, drawn stage by stage", top: 110, h: 700, keep: true, stages: [
+    { title: "One outdoor unit and a branch box", items: [
+      { d: R(390, 560, 220, 130) + " " + C(450, 625, 40) + " " + C(550, 625, 40) + " M430 610q20 -12 40 0 M430 640q20 12 40 0 M530 610q20 -12 40 0 M530 640q20 12 40 0",
+        w: 2.2, labels: [L("C", "Outdoor unit (ODU)", 725, 0, 0, { x: 500 })] },
+      { d: R(440, 375, 120, 50) + " " + C(470, 390, 4) + " " + C(500, 390, 4) + " " + C(530, 390, 4) + " " + C(470, 410, 4) + " " + C(500, 410, 4) + " " + C(530, 410, 4),
+        labels: [L("L", "Branch box", 300, 450, 375, { x: 420 })] },
+      { d: pair([[496, 560], [496, 425]], 8), labels: [] }] },
+    { title: "Several indoor units of any type: wall-mounted and cassette", items: [
+      { d: wallIDU(60, 150) + " " + wallIDU(730, 150) + " " + wallIDU(730, 330), labels: [L("C", "Wall-mounted IDU", 135, 0, 0, { x: 835 })] },
+      { d: cassette(90, 300) + " " + cassette(90, 520) + " " + cassette(826, 520), labels: [L("C", "Cassette IDU", 640, 0, 0, { x: 132 })] }] },
+    { title: "Its own refrigerant pipe pair from the branch box to each indoor unit", items: [
+      { d: pair([[462, 375], [462, 175], [270, 175]], 8), labels: [] },
+      { d: pair([[538, 375], [538, 175], [730, 175]], -8), labels: [L("R", "One pipe pair to each IDU", 262, 546, 270, { x: 560 })] },
+      { d: pair([[440, 388], [300, 388], [300, 338], [174, 338]], -8), labels: [] },
+      { d: pair([[560, 388], [650, 388], [650, 354], [730, 354]], 8), labels: [] },
+      { d: pair([[440, 412], [330, 412], [330, 558], [174, 558]], 8), labels: [] },
+      { d: pair([[560, 412], [680, 412], [680, 558], [826, 558]], -8), labels: [] }] },
+    { title: "Each room has its own indoor unit and remote control", items: [
+      { d: R(205, 440, 22, 36) + " M210 448h12 M210 456h12", labels: [L("L", "Remote control", 470, 205, 458, { x: 190 })] }] }
+  ] };
+
+  DRAWINGS["ac-vrf"] = { aria: "VRF system, drawn stage by stage", top: 110, h: 720, keep: true, stages: [
+    { title: "Modular outdoor unit: several modules with inverter compressors, joined by a header", items: [
+      { d: R(560, 150, 95, 170) + " " + R(655, 150, 95, 170) + " " + R(750, 150, 95, 170) + " " + R(845, 150, 95, 170) + " " +
+          hfins(575, 170, 65, 70, 10) + " " + hfins(670, 170, 65, 70, 10) + " " + hfins(765, 170, 65, 70, 10) + " " + hfins(860, 170, 65, 70, 10),
+        w: 2.2, labels: [L("C", "Modular ODU (inverter compressors)", 136, 0, 0, { x: 750 })] },
+      { d: "M607 320V360 M702 320V360 M797 320V360 M892 320V360 M607 360H950", labels: [L("R", "Header", 400, 850, 360, { x: 820 })] }] },
+    { title: "One main refrigerant pipe pair runs past all the indoor units", items: [
+      { d: pair([[950, 360], [950, 470], [70, 470]], -10), w: 3, labels: [L("R", "One main pipe pair", 445, 580, 470, { x: 600 })] }] },
+    { title: "Many indoor units, each on a short branch from a branch joint (refnet)", items: [
+      { d: wallIDU(40, 220) + " " + cassette(320, 200) + " " + cassette(450, 200), labels: [] },
+      { d: wallIDU(40, 620) + " " + cassette(330, 600) + " " + cassette(460, 600) + " " + cassette(590, 600) + " " + wallIDU(730, 620),
+        labels: [L("C", "Indoor units (up to about 60)", 735, 0, 0, { x: 400 })] },
+      { d: pair([[140, 470], [140, 276]], 10) + " " + pair([[357, 470], [357, 284]], 10) + " " + pair([[487, 470], [487, 284]], 10) +
+          " " + pair([[180, 480], [180, 620]], -10) + " " + pair([[367, 480], [367, 600]], -10) + " " + pair([[497, 480], [497, 600]], -10) +
+          " " + pair([[627, 480], [627, 600]], -10) + " " + pair([[830, 480], [830, 620]], -10),
+        labels: [] },
+      { d: C(145, 475, 6) + " " + C(362, 475, 6) + " " + C(492, 475, 6) + " " + C(185, 475, 6) + " " + C(372, 475, 6) + " " + C(502, 475, 6) + " " + C(632, 475, 6) + " " + C(835, 475, 6),
+        labels: [L("R", "Branch joint", 540, 632, 482, { x: 660 })] }] },
+    { title: "An electronic expansion valve in each indoor unit varies its refrigerant flow", items: [
+      { d: valve(145, 330) + " " + valve(362, 340) + " " + valve(492, 340) + " " + valve(185, 580) + " " + valve(372, 560) + " " + valve(502, 560) + " " + valve(632, 560) + " " + valve(835, 580),
+        labels: [L("R", "EEV", 548, 185, 572, { x: 200 })] }] }
+  ] };
+
+  DRAWINGS["ac-inverter"] = { aria: "Inverter and non-inverter air conditioners: output power and room temperature, drawn stage by stage", top: 110, h: 600, keep: true, stages: [
+    { title: "Two panels, each: output power above, room temperature below, against time", items: [
+      { d: "M110 160V330H470 M110 380V560H470 M560 160V330H920 M560 380V560H920" + head(470, 330, 1, 0) + head(470, 560, 1, 0) + head(920, 330, 1, 0) + head(920, 560, 1, 0),
+        labels: [L("C", "Non-inverter (fixed speed)", 140, 0, 0, { x: 290 }), L("C", "Inverter (variable speed)", 140, 0, 0, { x: 740 }),
+          L("C", "Power", 262, 0, 0, { x: 55 }), L("C", "Temp", 478, 0, 0, { x: 55 }), L("C", "Power", 262, 0, 0, { x: 515 }), L("C", "Temp", 478, 0, 0, { x: 515 }), L("C", "Time", 590, 0, 0, { x: 440 }), L("C", "Time", 590, 0, 0, { x: 890 })] },
+      { d: "M110 480H470 M560 480H920", dash: "8 7", labels: [L("C", "Set temperature", 518, 0, 0, { x: 740 })] }] },
+    { title: "Non-inverter: the compressor runs at full speed, then stops: ON, OFF, ON, OFF", items: [
+      { d: "M110 200H190V320H250V200H330V320H390V200H470", labels: [L("C", "ON", 190, 0, 0, { x: 150 }), L("C", "OFF", 312, 0, 0, { x: 220 })] }] },
+    { title: "Non-inverter: the room temperature swings widely about the set value", items: [
+      { d: "M110 400L190 512L250 448L330 512L390 448L470 512", labels: [L("R", "Big swings", 590, 330, 512, { x: 250 })] }] },
+    { title: "Inverter: full speed at first, then the speed (power) falls to match the load and keeps running", items: [
+      { d: "M560 200H630L710 280C740 296 760 282 800 290S870 296 920 288", labels: [L("R", "Runs slower", 250, 760, 286, { x: 780 })] }] },
+    { title: "Inverter: the room temperature settles at the set value with little fluctuation", items: [
+      { d: "M560 400C620 440 660 478 710 482S780 476 820 483S880 476 920 481", labels: [L("L", "Small fluctuation", 430, 870, 479, { x: 850 })] }] }
+  ] };
+  // ---- (END ac block)
+
   // The scroll compressor drawn by the freehand recipe (generated by ME415/.work/scroll/recipe.py, which writes this
   // block). One tick = about 1/11 of the housing radius. Fixed scroll: half circles on a ticked line, radius 1, 5, 9 over the
   // line about tick -1 and 3, 7 under it about +1. Orbiting scroll (dotted): the same turned over, slid 2 ticks in the

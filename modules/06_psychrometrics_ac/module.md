@@ -516,6 +516,11 @@ Power plants, large air-conditioning plants and industry reject large amounts of
 
 ![Fig. 20: Basic AC system: outside air through the outside-air damper into a mixing chamber with return air from the space, then filter, heating coil, cooling coil, humidifier and fan; conditioned supply air to the space [Arif p.60b]](figures/020.png "w=0.6")
 
+::: {.liftdraw #psy-basic-draw drawing="ac-basic" label="Drawing the basic air-conditioning system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (2 minutes).** Draw a long horizontal casing with a return-air duct along its top, open at the left end into a mixing chamber. On the left wall draw a short outside-air inlet with a damper (two slanted blades). Show outside air coming in, and return air coming back along the top duct and turning down into the mixing chamber. In the casing, from left to right, draw the filter (zigzag), the heating coil, the cooling coil (a deeper finned block) and the humidifier (a spray pipe with nozzles). At the right end draw the fan (a centrifugal blower) with its outlet through the casing, and the supply air leaving to the space. Label every part.
+:::
+
+
 **Classification** [Kanak p.118; Arif pp.61–76]:
 
 - **Unitary (direct-expansion, DX) systems:** the refrigerant evaporates in a coil that cools the room air directly.
@@ -534,11 +539,21 @@ A **single package** unit fitted through a hole in an outside wall or window [Ar
 
 ![Fig. 22: Window AC side view: wall with inside and outside, cabinet, front panel with cold air outlet, damper, condenser, fan motor, air filter, drain outlet, evaporator, drain pan, propeller fan, base pan, compressor, blower wheel [Arif p.61b]](figures/022.jpg "w=0.55")
 
+::: {.liftdraw #psy-window-draw drawing="ac-window" label="Drawing the window air conditioner, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (3 minutes).** Draw the wall as a hatched strip and the cabinet through it, with the front panel on the room side and a dashed partition across the middle. Room side: the air filter behind the front panel, the evaporator behind the filter, the blower wheel in its scroll with the outlet duct leading up and out at the top of the front panel, and the drain pan under the evaporator. Outdoor side: one double-shafted fan motor on the shaft from the blower, the propeller fan on its other end, the condenser at the back, the compressor on the base, and the fresh-air damper in the partition. Finish with the air paths: room air in through the filter, cold air out at the top; outdoor air in and hot air out through the condenser; the drain outlet.
+:::
+
+
 ### Split air conditioner {#psy-split}
 
 The unit is **split** into an **outdoor unit** (compressor, condenser, condenser fan, and usually the expansion device or service valves) and an **indoor unit** (evaporator, cross-flow blower, filter, drain pan, controls), joined by two insulated copper refrigerant lines (liquid and suction), a drain hose and a control cable through a small hole in the wall [Arif pp.63–64]. Indoor units can be wall-mounted, ceiling cassette, ceiling-suspended, floor-standing or concealed (ducted). Capacity 1–5 TR. Before the pipes are disconnected, the refrigerant is **pumped down** into the outdoor unit by closing the liquid (two-way) valve and running the compressor until the suction gauge reads zero, then closing the three-way valve (Arif p.63a).
 
 ![Fig. 23: Split system schematic: outdoor unit with condenser coils, fan, compressor and outside air; high-pressure refrigerant line through the wall; indoor air handler with expansion device, fan, evaporator coils, cool air out, low-pressure refrigerant line, condensate collection pan [Arif p.64a]](figures/023.jpg "w=0.55")
+
+::: {.liftdraw #psy-split-draw drawing="ac-split" label="Drawing the split air conditioner, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (3 minutes).** Draw the ground and the wall. Outside, the outdoor unit on a base: the condenser coil (a serpentine with fins), the fan and the compressor. Inside, high on the wall, the indoor unit: the fan, the evaporator coil and the drain pan under it. Join them through the wall with two refrigerant lines: the liquid (high-pressure) line from the condenser to the expansion device and the evaporator, and the suction (low-pressure) line from the evaporator back to the compressor. Add the air paths (outdoor air through the condenser, room air through the evaporator, cool air out) and the drain hose through the wall.
+:::
+
 
 | Point | Window type | Split type |
 |---|---|---|
@@ -561,6 +576,11 @@ An **inverter air conditioner** uses a microprocessor and a variable-frequency d
 
 ![Fig. 24: Inverter vs non-inverter: output power and room temperature against time. Inverter: output power ramps down, little temperature fluctuation about the set temperature. Non-inverter: compressor ON/OFF/ON/OFF/ON, big temperature fluctuations [Arif p.62a]](figures/024.jpg "w=0.6")
 
+::: {.liftdraw #psy-inverter-draw drawing="ac-inverter" label="Drawing the inverter and non-inverter graphs, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (2 minutes).** Draw two panels side by side, non-inverter and inverter, each with output power above and room temperature below against time, and a dashed set-temperature line. Non-inverter: power as a square wave (ON, OFF, ON, OFF), and the room temperature as a zigzag with big swings about the set value. Inverter: power at full at first, then falling to a lower level that keeps running; the room temperature falling smoothly to the set value with only small fluctuation.
+:::
+
+
 ### Ducted split, multi-split and VRF ★ {#psy-vrf}
 
 **(i) Ducted split.** One outdoor unit (ODU) and one indoor unit (IDU), the IDU being an **air handler** (cooling coil, blower, filter, sometimes a heating coil) hidden in the ceiling void or a utility room. It supplies several rooms through a **supply duct** with grilles or diffusers and takes the air back through a **return duct** or plenum [Arif p.64b; Kanak p.120]. One thermostat controls all the rooms, so they cannot be held at different temperatures.
@@ -569,15 +589,30 @@ An **inverter air conditioner** uses a microprocessor and a variable-frequency d
 
 ![Fig. 26: Ducted split, Arif sir's figure: compressor outdoors, gas and electric lines, air handler with cooling coils, heating coils, fan, filter and control electronics, thermostat, supply-air duct and grilles, return-air duct [Arif p.64b]](figures/026.png "w=0.5")
 
+::: {.liftdraw #psy-ducted-draw drawing="ac-ducted" label="Drawing the ducted split system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (3 minutes).** Draw the outdoor unit at the lower left and two refrigerant pipes to a tall air handler (the indoor unit). In the air handler draw the cooling coil, the blower below it with its outlet up, and the filter at the return inlet. From the top of the air handler draw the supply duct along the ceiling, with a branch and a diffuser for each room. Draw the return grille and the return plenum back to the air handler. Finish with the air arrows (up through the coil, along the duct, out of the diffusers, back through the grille) and one thermostat wired to the air handler.
+:::
+
+
 **(ii) Multi-split.** **One ODU** feeds **several IDUs** (2–8) of any type (wall, cassette, ducted, floor), each on its own pair of refrigerant pipes through a branch box. Each room has its own IDU and remote control, so rooms can be kept at different conditions, but the compressor is usually fixed-speed or has limited modulation [Arif p.65a; Kanak p.120].
 
 ![Fig. 27: Multi-split sketch: one ODU at the bottom connected by a red refrigerant line to a branch box, from which blue refrigerant lines run to six separate indoor units (wall-mounted and cassette types), each on its own line [Kanak p.120]](figures/027.png "w=0.5")
+
+::: {.liftdraw #psy-multi-draw drawing="ac-multi" label="Drawing the multi-split system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (2 minutes).** Draw one outdoor unit (two fans) at the bottom and a branch box above it, joined by a pipe pair. Around them draw several indoor units: wall-mounted (long boxes) and cassettes (squares). Join each indoor unit to the branch box by its own pipe pair (two parallel lines). Add a remote control beside one indoor unit: each room is controlled separately.
+:::
+
 
 **(iii) VRF / VRV (variable refrigerant flow / volume).** One modular outdoor unit (or a bank of modules) with **inverter (variable-speed) compressors** serves **many IDUs** (up to 50–60) on a **single main refrigerant pipe loop** with branch joints (refnets) or headers. **Electronic expansion valves** (pulse-modulating) in each IDU vary the refrigerant flow to it, so each zone is controlled individually; heat-recovery versions (with branch selector boxes and three pipes) can cool some zones and heat others at the same time, moving heat between them. Long pipe runs (over 100 m) and large height differences are allowed. Outdoor air is supplied by a separate outdoor-air unit or energy-recovery ventilator [Arif pp.65b–66b; Kanak p.120].
 
 ![Fig. 28: VRF sketch: a modular outdoor unit of four ODU modules joined into one header and a single long double refrigerant main; many indoor units (wall units and cassettes) each tap off the common main through short branch pipes [Kanak p.120]](figures/028.png "w=0.5")
 
 ![Fig. 29: VRF system with an outdoor-air unit: an outdoor-air unit (heat exchanger, fan) supplies fresh air through a duct to each room; the VRF outdoor unit is piped to two indoor units; each unit has a wired remote controller [Arif p.66b]](figures/029.png "w=0.55")
+
+::: {.liftdraw #psy-vrf-draw drawing="ac-vrf" label="Drawing the VRF system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
+**How to draw it in the exam (3 minutes).** Draw the modular outdoor unit (three or four modules side by side) at the upper right, joined below by a header. From the header draw one main pipe pair (two parallel lines) right across the sheet. Above and below it draw many indoor units (wall-mounted and cassettes), each on a short branch pipe pair from a branch joint (refnet, a small circle on the main). Put an electronic expansion valve (bow-tie) on each branch at its indoor unit: it varies the refrigerant flow to that unit.
+:::
+
 
 | Point | Ducted split | Multi-split | VRF |
 |---|---|---|---|
