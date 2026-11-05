@@ -514,12 +514,9 @@ Power plants, large air-conditioning plants and industry reject large amounts of
 
 **The basic air-conditioning system** [Arif p.60b]: outside air through an outside-air damper and return air from the space meet in a **mixing chamber**; the mixture passes a **filter**, a **heating coil**, a **cooling coil**, a **humidifier** and a **fan**, and the conditioned supply air goes to the space. Every system type below is a way of packaging these parts and of carrying heat between the space and the refrigeration plant.
 
-![Fig. 20: Basic AC system: outside air through the outside-air damper into a mixing chamber with return air from the space, then filter, heating coil, cooling coil, humidifier and fan; conditioned supply air to the space [Arif p.60b]](figures/020.png "w=0.6")
-
 ::: {.liftdraw #psy-basic-draw drawing="ac-basic" label="Drawing the basic air-conditioning system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (2 minutes).** Draw a long horizontal casing with a return-air duct along its top, open at the left end into a mixing chamber. On the left wall draw a short outside-air inlet with a damper (two slanted blades). Show outside air coming in, and return air coming back along the top duct and turning down into the mixing chamber. In the casing, from left to right, draw the filter (zigzag), the heating coil, the cooling coil (a deeper finned block) and the humidifier (a spray pipe with nozzles). At the right end draw the fan (a centrifugal blower) with its outlet through the casing, and the supply air leaving to the space. Label every part.
+**How to draw it in the exam (2 minutes).** Draw a long horizontal casing with a return-air duct along its top, open at the left end into a mixing chamber. On the left wall draw a short outside-air inlet with a damper (two slanted blades). Show outside air coming in, and return air coming back along the top duct and turning down into the mixing chamber. In the casing, from left to right, draw the filter (zigzag), the heating coil, the cooling coil (a deeper finned block) and the humidifier (a spray pipe with nozzles). At the right end draw the fan (a centrifugal blower) with its outlet through the casing, and the supply air leaving to the space. Label every part. Redrawn from Arif sir's slide [Arif p.60b].
 :::
-
 
 **Classification** [Kanak p.118; Arif pp.61–76]:
 
@@ -531,29 +528,23 @@ Power plants, large air-conditioning plants and industry reject large amounts of
   2. All-water systems (FCUs).
   3. Air-water systems (FCUs or induction units plus ducted primary air).
 
-![Fig. 21: Kanak vai's note's classification tree: Air Conditioning System → Unitary system (1 window type, 2 split type → ducted split, multi split, VRF type) and Chiller type (1 all air system, 2 all water system, 3 air-water system) [Kanak p.118]](figures/021.jpg "w=0.5")
+![Fig. 20: Kanak vai's note's classification tree: Air Conditioning System → Unitary system (1 window type, 2 split type → ducted split, multi split, VRF type) and Chiller type (1 all air system, 2 all water system, 3 air-water system) [Kanak p.118]](figures/021.jpg "w=0.5")
 
 ### Window air conditioner
 
 A **single package** unit fitted through a hole in an outside wall or window [Arif p.61]. All four refrigeration components (compressor, condenser, expansion device (capillary), evaporator) are in one box. A partition divides it: the **room side** has the evaporator, a centrifugal blower, the air filter, the front grille and a fresh-air damper; the **outdoor side** has the compressor, the condenser and a propeller fan. One double-shafted motor drives both fans. Condensate collects in the drain pan and is thrown onto the hot condenser by the fan's slinger ring or drained outside. Capacity 0.75–2.5 TR.
 
-![Fig. 22: Window AC side view: wall with inside and outside, cabinet, front panel with cold air outlet, damper, condenser, fan motor, air filter, drain outlet, evaporator, drain pan, propeller fan, base pan, compressor, blower wheel [Arif p.61b]](figures/022.jpg "w=0.55")
-
 ::: {.liftdraw #psy-window-draw drawing="ac-window" label="Drawing the window air conditioner, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (3 minutes).** Draw the wall as a hatched strip and the cabinet through it, with the front panel on the room side and a dashed partition across the middle. Room side: the air filter behind the front panel, the evaporator behind the filter, the blower wheel in its scroll with the outlet duct leading up and out at the top of the front panel, and the drain pan under the evaporator. Outdoor side: one double-shafted fan motor on the shaft from the blower, the propeller fan on its other end, the condenser at the back, the compressor on the base, and the fresh-air damper in the partition. Finish with the air paths: room air in through the filter, cold air out at the top; outdoor air in and hot air out through the condenser; the drain outlet.
+**How to draw it in the exam (3 minutes).** Draw the wall as a hatched strip and the cabinet through it, with the front panel on the room side and a dashed partition across the middle. Room side: the air filter behind the front panel, the evaporator behind the filter, the blower wheel in its scroll with the outlet duct leading up and out at the top of the front panel, and the drain pan under the evaporator. Outdoor side: one double-shafted fan motor on the shaft from the blower, the propeller fan on its other end, the condenser at the back, the compressor on the base, and the fresh-air damper in the partition. Finish with the air paths: room air in through the filter, cold air out at the top; outdoor air in and hot air out through the condenser; the drain outlet. Redrawn from Arif sir's slide [Arif p.61b].
 :::
-
 
 ### Split air conditioner {#psy-split}
 
 The unit is **split** into an **outdoor unit** (compressor, condenser, condenser fan, and usually the expansion device or service valves) and an **indoor unit** (evaporator, cross-flow blower, filter, drain pan, controls), joined by two insulated copper refrigerant lines (liquid and suction), a drain hose and a control cable through a small hole in the wall [Arif pp.63–64]. Indoor units can be wall-mounted, ceiling cassette, ceiling-suspended, floor-standing or concealed (ducted). Capacity 1–5 TR. Before the pipes are disconnected, the refrigerant is **pumped down** into the outdoor unit by closing the liquid (two-way) valve and running the compressor until the suction gauge reads zero, then closing the three-way valve (Arif p.63a).
 
-![Fig. 23: Split system schematic: outdoor unit with condenser coils, fan, compressor and outside air; high-pressure refrigerant line through the wall; indoor air handler with expansion device, fan, evaporator coils, cool air out, low-pressure refrigerant line, condensate collection pan [Arif p.64a]](figures/023.jpg "w=0.55")
-
 ::: {.liftdraw #psy-split-draw drawing="ac-split" label="Drawing the split air conditioner, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (3 minutes).** Draw the ground and the wall. Outside, the outdoor unit on a base: the condenser coil (a serpentine with fins), the fan and the compressor. Inside, high on the wall, the indoor unit: the fan, the evaporator coil and the drain pan under it. Join them through the wall with two refrigerant lines: the liquid (high-pressure) line from the condenser to the expansion device and the evaporator, and the suction (low-pressure) line from the evaporator back to the compressor. Add the air paths (outdoor air through the condenser, room air through the evaporator, cool air out) and the drain hose through the wall.
+**How to draw it in the exam (3 minutes).** Draw the ground and the wall. Outside, the outdoor unit on a base: the condenser coil (a serpentine with fins), the fan and the compressor. Inside, high on the wall, the indoor unit: the fan, the evaporator coil and the drain pan under it. Join them through the wall with two refrigerant lines: the liquid (high-pressure) line from the condenser to the expansion device and the evaporator, and the suction (low-pressure) line from the evaporator back to the compressor. Add the air paths (outdoor air through the condenser, room air through the evaporator, cool air out) and the drain hose through the wall. Redrawn from Arif sir's slide [Arif p.64a].
 :::
-
 
 | Point | Window type | Split type |
 |---|---|---|
@@ -574,45 +565,29 @@ The unit is **split** into an **outdoor unit** (compressor, condenser, condenser
 
 An **inverter air conditioner** uses a microprocessor and a variable-frequency drive to **vary the speed of the compressor motor** to match the load [Arif p.62a; Kanak p.119]. Once the room reaches the set temperature, the compressor slows down instead of stopping. A non-inverter (fixed-speed) unit switches the compressor ON and OFF, so the room temperature swings widely and energy is wasted at every start. Inverter: little temperature fluctuation, 30–50 % energy saving, quiet, fast pull-down. Disadvantages [Arif p.62b]: high initial cost, costly repair and maintenance (electronic boards), sensitivity to voltage fluctuations, not suited to large spaces, energy benefit only with long running hours, shorter life of the electronics.
 
-![Fig. 24: Inverter vs non-inverter: output power and room temperature against time. Inverter: output power ramps down, little temperature fluctuation about the set temperature. Non-inverter: compressor ON/OFF/ON/OFF/ON, big temperature fluctuations [Arif p.62a]](figures/024.jpg "w=0.6")
-
 ::: {.liftdraw #psy-inverter-draw drawing="ac-inverter" label="Drawing the inverter and non-inverter graphs, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (2 minutes).** Draw two panels side by side, non-inverter and inverter, each with output power above and room temperature below against time, and a dashed set-temperature line. Non-inverter: power as a square wave (ON, OFF, ON, OFF), and the room temperature as a zigzag with big swings about the set value. Inverter: power at full at first, then falling to a lower level that keeps running; the room temperature falling smoothly to the set value with only small fluctuation.
+**How to draw it in the exam (2 minutes).** Draw two panels side by side, non-inverter and inverter, each with output power above and room temperature below against time, and a dashed set-temperature line. Non-inverter: power as a square wave (ON, OFF, ON, OFF), and the room temperature as a zigzag with big swings about the set value. Inverter: power at full at first, then falling to a lower level that keeps running; the room temperature falling smoothly to the set value with only small fluctuation. Redrawn from Arif sir's slide [Arif p.62a].
 :::
-
 
 ### Ducted split, multi-split and VRF ★ {#psy-vrf}
 
 **(i) Ducted split.** One outdoor unit (ODU) and one indoor unit (IDU), the IDU being an **air handler** (cooling coil, blower, filter, sometimes a heating coil) hidden in the ceiling void or a utility room. It supplies several rooms through a **supply duct** with grilles or diffusers and takes the air back through a **return duct** or plenum [Arif p.64b; Kanak p.120]. One thermostat controls all the rooms, so they cannot be held at different temperatures.
 
-![Fig. 25: Ducted split sketch: a separate compressor/outdoor box piped to a tall indoor air-handling cabinet with a fan and cooling coil; return air enters through a grille and return plenum; cooled air rises into a supply duct along the ceiling and drops to three diffusers [Kanak p.120]](figures/025.png "w=0.5")
-
-![Fig. 26: Ducted split, Arif sir's figure: compressor outdoors, gas and electric lines, air handler with cooling coils, heating coils, fan, filter and control electronics, thermostat, supply-air duct and grilles, return-air duct [Arif p.64b]](figures/026.png "w=0.5")
-
 ::: {.liftdraw #psy-ducted-draw drawing="ac-ducted" label="Drawing the ducted split system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (3 minutes).** Draw the outdoor unit at the lower left and two refrigerant pipes to a tall air handler (the indoor unit). In the air handler draw the cooling coil, the blower below it with its outlet up, and the filter at the return inlet. From the top of the air handler draw the supply duct along the ceiling, with a branch and a diffuser for each room. Draw the return grille and the return plenum back to the air handler. Finish with the air arrows (up through the coil, along the duct, out of the diffusers, back through the grille) and one thermostat wired to the air handler.
+**How to draw it in the exam (3 minutes).** Draw the outdoor unit at the lower left and two refrigerant pipes to a tall air handler (the indoor unit). In the air handler draw the cooling coil, the blower below it with its outlet up, and the filter at the return inlet. From the top of the air handler draw the supply duct along the ceiling, with a branch and a diffuser for each room. Draw the return grille and the return plenum back to the air handler. Finish with the air arrows (up through the coil, along the duct, out of the diffusers, back through the grille) and one thermostat wired to the air handler. Redrawn from Kanak vai's note [Kanak p.120] and Arif sir's slide [Arif p.64b] (which also shows a heating coil, filter, control electronics and a thermostat).
 :::
-
 
 **(ii) Multi-split.** **One ODU** feeds **several IDUs** (2–8) of any type (wall, cassette, ducted, floor), each on its own pair of refrigerant pipes through a branch box. Each room has its own IDU and remote control, so rooms can be kept at different conditions, but the compressor is usually fixed-speed or has limited modulation [Arif p.65a; Kanak p.120].
 
-![Fig. 27: Multi-split sketch: one ODU at the bottom connected by a red refrigerant line to a branch box, from which blue refrigerant lines run to six separate indoor units (wall-mounted and cassette types), each on its own line [Kanak p.120]](figures/027.png "w=0.5")
-
 ::: {.liftdraw #psy-multi-draw drawing="ac-multi" label="Drawing the multi-split system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (2 minutes).** Draw one outdoor unit (two fans) at the bottom and a branch box above it, joined by a pipe pair. Around them draw several indoor units: wall-mounted (long boxes) and cassettes (squares). Join each indoor unit to the branch box by its own pipe pair (two parallel lines). Add a remote control beside one indoor unit: each room is controlled separately.
+**How to draw it in the exam (2 minutes).** Draw one outdoor unit (two fans) at the bottom and a branch box above it, joined by a pipe pair. Around them draw several indoor units: wall-mounted (long boxes) and cassettes (squares). Join each indoor unit to the branch box by its own pipe pair (two parallel lines). Add a remote control beside one indoor unit: each room is controlled separately. Redrawn from Kanak vai's note [Kanak p.120].
 :::
-
 
 **(iii) VRF / VRV (variable refrigerant flow / volume).** One modular outdoor unit (or a bank of modules) with **inverter (variable-speed) compressors** serves **many IDUs** (up to 50–60) on a **single main refrigerant pipe loop** with branch joints (refnets) or headers. **Electronic expansion valves** (pulse-modulating) in each IDU vary the refrigerant flow to it, so each zone is controlled individually; heat-recovery versions (with branch selector boxes and three pipes) can cool some zones and heat others at the same time, moving heat between them. Long pipe runs (over 100 m) and large height differences are allowed. Outdoor air is supplied by a separate outdoor-air unit or energy-recovery ventilator [Arif pp.65b–66b; Kanak p.120].
 
-![Fig. 28: VRF sketch: a modular outdoor unit of four ODU modules joined into one header and a single long double refrigerant main; many indoor units (wall units and cassettes) each tap off the common main through short branch pipes [Kanak p.120]](figures/028.png "w=0.5")
-
-![Fig. 29: VRF system with an outdoor-air unit: an outdoor-air unit (heat exchanger, fan) supplies fresh air through a duct to each room; the VRF outdoor unit is piped to two indoor units; each unit has a wired remote controller [Arif p.66b]](figures/029.png "w=0.55")
-
 ::: {.liftdraw #psy-vrf-draw drawing="ac-vrf" label="Drawing the VRF system, stage by stage" caption="This is the finished answer; press Draw along to draw it stage by stage. Each stage stops once it is drawn; copy it on paper, then draw the next. The labels stay, so by the last stage you have the whole labelled answer."}
-**How to draw it in the exam (3 minutes).** Draw the modular outdoor unit (three or four modules side by side) at the upper right, joined below by a header. From the header draw one main pipe pair (two parallel lines) right across the sheet. Above and below it draw many indoor units (wall-mounted and cassettes), each on a short branch pipe pair from a branch joint (refnet, a small circle on the main). Put an electronic expansion valve (bow-tie) on each branch at its indoor unit: it varies the refrigerant flow to that unit.
+**How to draw it in the exam (3 minutes).** Draw the modular outdoor unit (three or four modules side by side) at the upper right, joined below by a header. From the header draw one main pipe pair (two parallel lines) right across the sheet. Above and below it draw many indoor units (wall-mounted and cassettes), each on a short branch pipe pair from a branch joint (refnet, a small circle on the main). Put an electronic expansion valve (bow-tie) on each branch at its indoor unit: it varies the refrigerant flow to that unit. Redrawn from Kanak vai's note [Kanak p.120]. Arif sir's slide [Arif p.66b] adds a separate outdoor-air unit that ducts fresh air to each room, and a wired remote controller for each indoor unit.
 :::
-
 
 | Point | Ducted split | Multi-split | VRF |
 |---|---|---|---|
@@ -640,7 +615,7 @@ An **inverter air conditioner** uses a microprocessor and a variable-frequency d
 
 ### The central chilled-water system and its components {#psy-central}
 
-A **central air-conditioning system** produces cooling in a central plant and distributes it to the whole building [Arif pp.67–76; Kanak pp.121–126]. It has four loops (Fig. 31):
+A **central air-conditioning system** produces cooling in a central plant and distributes it to the whole building [Arif pp.67–76; Kanak pp.121–126]. It has four loops (Fig. 22):
 
 1. **Condenser-water loop:** cooling tower ↔ chiller condenser, with the condenser-water pump.
 2. **Refrigerant loop**, inside the chiller: compressor → condenser → expansion device → evaporator.
@@ -656,15 +631,15 @@ A **central air-conditioning system** produces cooling in a central plant and di
 - **AHU (air handling unit):** a large central air unit in a plant room on each floor or on the roof: mixing box with outdoor-air, return-air and exhaust dampers, filters, chilled-water cooling coil, heating coil, humidifier, supply fan (and return fan), sound attenuators and controls. It **conditions (cools, dehumidifies, heats, humidifies, filters) and moves the air**, mixes in the required outdoor air, and pushes it through ducts to many rooms.
 - **FCU (fan coil unit):** a small terminal unit **in or next to each room**: a fan (blower), a chilled-water (or hot-water) coil, a filter and a drain pan, in a wall, floor-console or ceiling casing. It **recirculates and cools the room's own air**, controlled by a room thermostat (three-speed fan and a valve on the water).
 
-![Fig. 30: Central air conditioning, chilled-water system (textbook figure): a four-storey building with an AHU room on each floor (chilled-water cooling coil, fan section, air filter), supply-air duct, return-air duct, fresh-air duct with damper, SA and RA diffusers; expansion tank; plant room with compressor, condenser, chiller, thermostatic expansion valve, chilled-water pump, condenser-water pump and cooling tower [Arif p.67a]](figures/030.jpg "w=0.65")
+![Fig. 21: Central air conditioning, chilled-water system (textbook figure): a four-storey building with an AHU room on each floor (chilled-water cooling coil, fan section, air filter), supply-air duct, return-air duct, fresh-air duct with damper, SA and RA diffusers; expansion tank; plant room with compressor, condenser, chiller, thermostatic expansion valve, chilled-water pump, condenser-water pump and cooling tower [Arif p.67a]](figures/030.jpg "w=0.65")
 
-![Fig. 31: The four loops of a central chilled-water system: the cooling tower receives warm condenser water (≈35 °C) from the chiller's water-cooled condenser and returns cool water (≈30 °C) through the condenser-water pump; inside the chiller the refrigerant loop runs compressor → condenser → expansion valve → evaporator; the evaporator sends chilled water (≈7 °C) along a supply header to the AHU and to the FCUs, which return water at ≈12 °C through the chilled-water pump; the AHU takes in outdoor (fresh) air and sends supply air to the conditioned rooms, which return air to the AHU; the FCUs serve the rooms directly](figures/031.png "w=0.95")
+![Fig. 22: The four loops of a central chilled-water system: the cooling tower receives warm condenser water (≈35 °C) from the chiller's water-cooled condenser and returns cool water (≈30 °C) through the condenser-water pump; inside the chiller the refrigerant loop runs compressor → condenser → expansion valve → evaporator; the evaporator sends chilled water (≈7 °C) along a supply header to the AHU and to the FCUs, which return water at ≈12 °C through the chilled-water pump; the AHU takes in outdoor (fresh) air and sends supply air to the conditioned rooms, which return air to the AHU; the FCUs serve the rooms directly](figures/031.png "w=0.95")
 
-![Fig. 32: Hand sketch of a chiller-type central AC: cooling tower with cold water to the condenser and hot water back from it (pump); a dashed box marked Chiller containing a water-cooled condenser, compressor, expansion device and evaporator; chilled water to the AHU and warmer water back (pump); AHU with fan and coil taking fresh air through a filter; cold-air duct to the conditioned room and return-air duct back [Arif p.67b]](figures/032.jpg "w=0.55")
+![Fig. 23: Hand sketch of a chiller-type central AC: cooling tower with cold water to the condenser and hot water back from it (pump); a dashed box marked Chiller containing a water-cooled condenser, compressor, expansion device and evaporator; chilled water to the AHU and warmer water back (pump); AHU with fan and coil taking fresh air through a filter; cold-air duct to the conditioned room and return-air duct back [Arif p.67b]](figures/032.jpg "w=0.55")
 
-![Fig. 33: AHU schematic: relief air damper, return air damper, return air fan, return air from the space, inlet louver and screen, outside air damper, filter, mixed temperature sensor, heating coil, cooling coil, humidifier, supply air fan, supply temperature sensor, high-limit humidistat, space [Arif p.72b]](figures/033.png "w=0.6")
+![Fig. 24: AHU schematic: relief air damper, return air damper, return air fan, return air from the space, inlet louver and screen, outside air damper, filter, mixed temperature sensor, heating coil, cooling coil, humidifier, supply air fan, supply temperature sensor, high-limit humidistat, space [Arif p.72b]](figures/033.png "w=0.6")
 
-![Fig. 34: Fan coil units: (a) wall-mounted FCU with discharge grille, heater assembly, fan assembly, air inlet grille, replaceable filter, cooler heat exchanger and drain pan; (b) ceiling FCU above a suspended ceiling with fan, cooling coil C, filter, supply duct to a diffuser and return grille [Arif p.75b]](figures/034.png "w=0.6")
+![Fig. 25: Fan coil units: (a) wall-mounted FCU with discharge grille, heater assembly, fan assembly, air inlet grille, replaceable filter, cooler heat exchanger and drain pan; (b) ceiling FCU above a suspended ceiling with fan, cooling coil C, filter, supply duct to a diffuser and return grille [Arif p.75b]](figures/034.png "w=0.6")
 
 | Point | FCU | AHU |
 |---|---|---|
@@ -693,20 +668,20 @@ In an **all-air system** the central plant (AHU) delivers **cooled or heated air
 - **Dual-duct:** the AHU has a **hot deck** (heating coil, about 38 °C) and a **cold deck** (cooling coil, about 13 °C); two ducts run to every zone, and a **mixing box** at each zone blends hot and cold air under thermostat control. Full airflow always; like reheat it suffers the energy penalty of simultaneous heating and cooling, and the double ducts take space; but there are no reheat coils near the zones, so no leaking hot-water coils above the ceilings [Arif p.74b].
 - **Multizone:** hot and cold decks blended at the AHU, one duct per zone.
 
-![Fig. 35: Central AHU, all-air system: outdoor air through a louvre and air filter, cooling coil C, heating coil H, supply fan, supply duct with four outlets down into the room; four return grilles to the extract fan; part of the air exhausted through a louvre, part recirculated [Arif p.72a]](figures/035.png "w=0.6")
+![Fig. 26: Central AHU, all-air system: outdoor air through a louvre and air filter, cooling coil C, heating coil H, supply fan, supply duct with four outlets down into the room; four return grilles to the extract fan; part of the air exhausted through a louvre, part recirculated [Arif p.72a]](figures/035.png "w=0.6")
 
-![Fig. 36: Dual-duct system: outdoor air, relief air, return air and return fan, preheat coil, filter, supply fan, then a cooling coil feeding the cold deck (e.g. 55 °F) and a heating coil and humidifier feeding the hot deck (e.g. 100 °F); dual-duct mixing boxes for zones 1, 2 and 3 [Arif p.74b]](figures/036.png "w=0.6")
+![Fig. 27: Dual-duct system: outdoor air, relief air, return air and return fan, preheat coil, filter, supply fan, then a cooling coil feeding the cold deck (e.g. 55 °F) and a heating coil and humidifier feeding the hot deck (e.g. 100 °F); dual-duct mixing boxes for zones 1, 2 and 3 [Arif p.74b]](figures/036.png "w=0.6")
 
 **All-air system with reheat** ★ [Arif p.73a; Kanak p.123]. A central AHU cools and dehumidifies all the air to a low, constant temperature (about 13 °C, 55 °F), enough for the zone with the greatest cooling load and low enough to remove the moisture. The air flows at **constant volume** through the main duct; on each zone branch a **reheat coil** (hot water or electric), controlled by that zone's thermostat, heats the air back up just enough to match the zone's sensible load. A zone with a small load gets more reheat. On the chart each zone has its own reheat line C → S at constant ω (Fig. 16).
 
 - *Advantages:* the simplest all-air system to design and control; reliable; precise control of temperature in every zone and of humidity (the coil fixes ω); handles zones with very different and changing loads (perimeter and interior); constant airflow keeps ventilation and air distribution good at all loads; central equipment is easy to maintain; can heat in winter with the same reheat coils.
 - *Disadvantages:* **high energy waste**, because air is first cooled and then reheated (simultaneous cooling and heating), and the full airflow is cooled even at part load; high running cost; hot-water piping, valves and coils above every zone (leak risk, maintenance in the ceiling); large ducts and plant space for constant full flow; energy codes now restrict it.
 
-![Fig. 37: All-air system with reheat: outside ventilation air enters the AHU; supply air at 55 °F (typical) goes along the duct and through a reheat coil on each zone branch, controlled by a thermostat T in each room; return air goes back to the AHU [Arif p.73a]](figures/037.png "w=0.6")
+![Fig. 28: All-air system with reheat: outside ventilation air enters the AHU; supply air at 55 °F (typical) goes along the duct and through a reheat coil on each zone branch, controlled by a thermostat T in each room; return air goes back to the AHU [Arif p.73a]](figures/037.png "w=0.6")
 
-![Fig. 38: All-air VAV system: return fan, return air, supply fan, supply air; a VAV box damper on each zone branch controlled by the room thermostat T; ducts continue to and from other zones [Arif p.73b]](figures/038.png "w=0.6")
+![Fig. 29: All-air VAV system: return fan, return air, supply fan, supply air; a VAV box damper on each zone branch controlled by the room thermostat T; ducts continue to and from other zones [Arif p.73b]](figures/038.png "w=0.6")
 
-![Fig. 39: All-air system with bypass: a rooftop unit; a main by-pass damper between supply and return; VAV boxes on the branches to each zone; the ceiling void used as the return-air plenum [Arif p.74a]](figures/039.png "w=0.6")
+![Fig. 30: All-air system with bypass: a rooftop unit; a main by-pass damper between supply and return; VAV boxes on the branches to each zone; the ceiling void used as the return-air plenum [Arif p.74a]](figures/039.png "w=0.6")
 
 ### CAV vs VAV ★ {#psy-cav-vav}
 
@@ -730,11 +705,11 @@ In an **all-air system** the central plant (AHU) delivers **cooled or heated air
 
 **All-water system** [Arif p.75a; Kanak pp.125, 127]. Hot or chilled water from the central plant is piped to **FCUs** (or radiators, convectors, valance units) in each room; all the conditioning except ventilation is done locally. Ventilation comes from opening windows or other means, so no ventilation air is ducted from the plant. Pipes are small (water carries about 3500 times as much heat per unit volume as air), so the system suits buildings where ducts are a problem (low floor-to-floor height, deep beams, refurbishment).
 
-![Fig. 40: Ceiling-mounted fan-coil unit (Kanak vai's note, sketch): an FCU box with a cooling coil (cold water in, warmer water out) and a centrifugal fan, a filter on the return-air inlet; return air from the room rises into the unit, the fan pushes it over the coil and down the supply duct into the room [Kanak p.125]](figures/040.jpg "w=0.5")
+![Fig. 31: Ceiling-mounted fan-coil unit (Kanak vai's note, sketch): an FCU box with a cooling coil (cold water in, warmer water out) and a centrifugal fan, a filter on the return-air inlet; return air from the room rises into the unit, the fan pushes it over the coil and down the supply duct into the room [Kanak p.125]](figures/040.jpg "w=0.5")
 
 **Air-water system** [Arif p.76a; Kanak pp.126–127]. All the primary (ventilation) air comes from a central AHU, ducted at a small rate, while local units (FCUs or induction units) supplied with hot or chilled water provide the additional conditioning. The water carries 80–90 % of the thermal load, the air the rest. Particularly effective in perimeter spaces with high heating and cooling loads (offices, hotels, hospitals). Two main types: **fan-coil units with supplementary air** and **induction units** (high-velocity primary air from nozzles induces room air over the coil).
 
-![Fig. 41: Fan-coil unit with supplementary air (air-water system): room air enters a perimeter FCU through a lower grille, passes an air filter, fan and inclined cooling coil and is discharged upward; behind the wall a separate air handling unit takes outside air, passes it over its own cooling coil and fan and ducts this primary air into the FCU [Arif p.76a]](figures/041.png "w=0.5")
+![Fig. 32: Fan-coil unit with supplementary air (air-water system): room air enters a perimeter FCU through a lower grille, passes an air filter, fan and inclined cooling coil and is discharged upward; behind the wall a separate air handling unit takes outside air, passes it over its own cooling coil and fan and ducts this primary air into the FCU [Arif p.76a]](figures/041.png "w=0.5")
 
 | Point | All-air | All-water | Air-water |
 |---|---|---|---|
@@ -1394,7 +1369,7 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 > **TRY 6.19** `[PP 11-12 Q2(b), 15]` With schematic diagram, briefly explain the key components of a central air-conditioning system. Mention the functions of following 4 components (i) chiller (ii) cooling tower (iii) AHU (iv) FCU
 
 ::: {.answer label="Show answer"}
-**Solution 6.19** **[FROM SOURCE: Arif pp.67–76; Kanak pp.121–126]** *Schematic:* draw Fig. 31: cooling tower ↔ (condenser-water pump) ↔ chiller condenser; the chiller (compressor, condenser, expansion valve, evaporator); evaporator ↔ (chilled-water pump) ↔ AHU and FCU coils; AHU ↔ supply and return ducts ↔ rooms, with outdoor air into the AHU.
+**Solution 6.19** **[FROM SOURCE: Arif pp.67–76; Kanak pp.121–126]** *Schematic:* draw Fig. 22: cooling tower ↔ (condenser-water pump) ↔ chiller condenser; the chiller (compressor, condenser, expansion valve, evaporator); evaporator ↔ (chilled-water pump) ↔ AHU and FCU coils; AHU ↔ supply and return ducts ↔ rooms, with outdoor air into the AHU.
 
 *Key components:* chiller, cooling tower, condenser-water and chilled-water pumps and piping, expansion tank, AHUs, FCUs, ducts with dampers, diffusers and grilles, controls (thermostats, valves).
 
@@ -1592,9 +1567,9 @@ Refrigeration is a part of summer air conditioning; air conditioning is the larg
 <!-- pagebreak -->
 ## 6.T Tables for Module 6
 
-![Fig. 42: Data Book Chart 8. ASHRAE psychrometric chart No. 1 (scan). Normal temperature, sea level (101.325 kPa). Clean print of the same chart on the next page.](figures/042.jpg)
+![Fig. 33: Data Book Chart 8. ASHRAE psychrometric chart No. 1 (scan). Normal temperature, sea level (101.325 kPa). Clean print of the same chart on the next page.](figures/042.jpg)
 
-![Fig. 43: Psychrometric chart at 1 atm (Çengel Fig. A-31, ASHRAE chart, clean print)](figures/043.jpg)
+![Fig. 34: Psychrometric chart at 1 atm (Çengel Fig. A-31, ASHRAE chart, clean print)](figures/043.jpg)
 
 **Data Book Table 1 (p.2). Refrigerant 718 (water/steam): saturated liquid and saturated vapour**
 
@@ -1672,6 +1647,5 @@ Datum: $u=s=0$ for saturated liquid at the triple point. $v_f = 1/\rho_f$. For m
 | 360.00 | 18.6660 | 527.6 | 0.00695 | 1761.66 | 2481.49 | 3.9167 | 5.0536 | 15.00 | 27.36 | 6.83 | 480. | 402.4 | 60.3 | 25.72 | 425.7 | 181.51 | 1.88 |  |
 | 370.00 | 21.0436 | 451.4 | 0.00495 | 1890.69 | 2334.52 | 4.1112 | 4.8012 | 45.16 | 96.60 | 21.15 | 360. | 362.8 | 52.1 | 29.68 | 425.0 | 323.84 | 0.39 |  |
 | 373.95 | 22.0640 | 322.0 | 0.00311 | 2084.26 | 2084.26 | 4.4070 | 4.4070 | ∞ | ∞ | ∞ | 0. | 0.0 | — | — | ∞ | ∞ | 0.00 | c |
-
 
 <!-- END DATA TABLES -->
