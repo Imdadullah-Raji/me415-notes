@@ -264,6 +264,7 @@ ul.fams .yrs { color: var(--muted); font-size: .9em; }
 .liftdraw .ld-leader { fill: none; stroke: var(--muted); stroke-width: 1.3; }
 .liftdraw .ld-dot { fill: var(--muted); }
 .liftdraw .ld-stage { font-size: 26px; font-weight: bold; fill: var(--ink); }
+.liftdraw .ld-asked { font-style: italic; fill: var(--muted); }
 .ld-controls { display: flex; flex-wrap: wrap; gap: .4em 1.2em; justify-content: center; margin-top: .5em; font-size: .9em; }
 .ld-controls button { border: 0; background: none; padding: .2em .1em; font: inherit; color: var(--link); cursor: pointer; }
 .ld-controls button.ld-main { font-weight: bold; }

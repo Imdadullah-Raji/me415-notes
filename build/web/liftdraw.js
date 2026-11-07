@@ -877,6 +877,19 @@
   var gDraw = el("g", { "class": "ld-draw" }, svg);
   var gLab = el("g", { "class": "ld-labels" }, svg);
   var stageText = el("text", { x: W / 2, "class": "ld-stage", "text-anchor": "middle" }, svg);
+  // under the stage line: the drawing's name (shown when it is finished) and whether the exam has asked it
+  var TITLE = host.dataset.title || "", ASKED = host.dataset.asked || "";
+  var askedText = el("text", { x: W / 2, "class": "ld-asked", "text-anchor": "middle" }, svg);
+  function wrap(t, text, room) {                         // greedy word wrap, measured in the sheet's units
+    var words = text.split(" "), lines = [], cur = "";
+    words.forEach(function (w) {
+      t.textContent = cur ? cur + " " + w : w;
+      if (cur && t.getComputedTextLength() > room) { lines.push(cur); cur = w; } else cur = t.textContent;
+    });
+    if (cur) lines.push(cur);
+    t.textContent = "";
+    return lines;
+  }
   host.appendChild(svg);
 
   var n = 0, labels = [];
@@ -926,7 +939,14 @@
     layoutKey = key;
     // D.keep: a drawing that keeps its wide layout on a phone (only the labels grow, fitted to their room)
     var shrink = narrow && !D.keep, k = shrink ? K : 1, lx = shrink ? 330 : LX, rx = shrink ? 670 : RX, h = shrink ? HH + 70 : HH;
-    svg.setAttribute("viewBox", "0 " + TOP + " " + W + " " + h);
+    var fa = narrow ? 28 : 21, alines = [];
+    if (ASKED) { askedText.style.fontSize = fa + "px"; alines = wrap(askedText, ASKED, W - 60); }
+    var extra = alines.length ? alines.length * fa * 1.25 + 4 : 0;
+    svg.setAttribute("viewBox", "0 " + TOP + " " + W + " " + (h + extra));
+    alines.forEach(function (ln, j) {
+      var ts = el("tspan", { x: W / 2, y: (TOP + h - 22 + fa * 1.35 + j * fa * 1.25).toFixed(1) }, askedText);
+      ts.textContent = ln;
+    });
     gDraw.setAttribute("transform", narrow ? "translate(" + CX * (1 - k) + " " + CY * (1 - k) + ") scale(" + k + ")" : "");
     labels.forEach(function (lb) {
       var big = lb.stage === now || now === "all", fs = !narrow ? 25 : big ? 34 : 23, tx = lb.side === "L" ? lx : rx, ty = lb.y;
@@ -990,7 +1010,7 @@
     });
     var s = cur !== null ? cur : done - 1, whole = cur === null && done >= STAGES.length;
     stageText.dataset.s = whole ? "all" : s;
-    stageText.dataset.text = whole ? "The finished drawing: press “Draw along” to draw it stage by stage"
+    stageText.dataset.text = whole ? (TITLE || "The finished drawing: press “Draw along” to draw it stage by stage")
       : s < 0 ? "Press “Draw stage 1” and draw along" : "Stage " + (s + 1) + ": " + STAGES[s].title;
     layout(whole ? "all" : s);
     buttons();

@@ -55,7 +55,9 @@ function Div(el)
     local name = lift and (el.attributes.drawing or 'lift') or 'doors'
     local label = el.attributes.label or (lift and 'Drawing the traction lift, stage by stage' or 'Lift door arrangements, in plan')
     local out = {html('<figure class="' .. (lift and 'liftdraw' or 'doordraw') .. '" id="' .. el.identifier ..
-                      '" data-anim="' .. name .. '" aria-label="' .. escape(label) .. '">' ..
+                      '" data-anim="' .. name .. '" aria-label="' .. escape(label) .. '"' ..
+                      (el.attributes.title and (' data-title="' .. escape(el.attributes.title) .. '"') or '') ..
+                      (el.attributes.asked and (' data-asked="' .. escape(el.attributes.asked) .. '"') or '') .. '>' ..
                       (el.attributes.caption and ('<figcaption>' .. escape(el.attributes.caption) .. '</figcaption>') or '') ..
                       '</figure><noscript>')}
     for _, b in ipairs(el.content) do table.insert(out, b) end
