@@ -351,6 +351,448 @@
   ] };
   // ---- (END ac block)
 
+  // ---- Module 3 fire A (BEGIN fire_a block)
+  function faHeadC(x, y) {                               // a closed (automatic) sprinkler head, upright on a pipe at y
+    return "M" + x + " " + y + "v-6 M" + (x - 6) + " " + (y - 6) + "L" + x + " " + (y - 18) + "L" + (x + 6) + " " + (y - 6) + "Z M" + (x - 8) + " " + (y - 21) + "h16";
+  }
+  function faHeadO(x, y) {                               // an open head (deluge): frame and deflector, no bulb
+    return "M" + x + " " + y + "v-6 M" + (x - 6) + " " + (y - 6) + "L" + (x - 2) + " " + (y - 18) + " M" + (x + 6) + " " + (y - 6) + "L" + (x + 2) + " " + (y - 18) + " M" + (x - 8) + " " + (y - 21) + "h16";
+  }
+  function faGate(x, y) {                                // an OS&Y gate valve on an upright pipe, stem and wheel to the right
+    return "M" + (x - 10) + " " + (y - 13) + "H" + (x + 10) + "L" + (x - 10) + " " + (y + 13) + "H" + (x + 10) + "Z M" + x + " " + y + "H" + (x + 30) + " M" + (x + 30) + " " + (y - 9) + "v18";
+  }
+  function faDiamond(x, y) { return "M" + x + " " + (y - 12) + "L" + (x + 12) + " " + y + "L" + x + " " + (y + 12) + "L" + (x - 12) + " " + y + "Z"; }
+  function faCheckH(x, y) { return "M" + (x - 8) + " " + (y - 8) + "V" + (y + 8) + "L" + (x + 8) + " " + y + "Z"; }
+  function faPump(cx, cy) { return C(cx, cy, 16) + " M" + (cx - 16) + " " + (cy - 16) + "H" + cx + " M" + (cx - 12) + " " + (cy + 22) + "h24 M" + (cx - 9) + " " + (cy + 14) + "l-3 8 M" + (cx + 9) + " " + (cy + 14) + "l3 8"; }
+  function faDet(x, y) { return R(x - 10, y, 20, 8); }
+  function faPlus(x, y) { return "M" + (x - 6) + " " + y + "h12 M" + x + " " + (y - 6) + "v12"; }
+  function faMinus(x, y) { return "M" + (x - 6) + " " + y + "h12"; }
+  function faDots(x, y0, y1, s) {                        // heads as dots along an upright branch line
+    var d = "";
+    for (var y = y0 + s / 2; y < y1; y += s) d += " " + C(x, y, 3);
+    return d;
+  }
+  function faFloor(x0, y0) {                             // one floor: oblique cross main from the riser, four branch lines with heads
+    var d = "M" + x0 + " " + y0 + "L" + (x0 + 84) + " " + (y0 + 84), h = "";
+    for (var i = 0; i < 4; i++) {
+      var bx = x0 + 28 * i, by = y0 + 28 * i;
+      d += " M" + bx + " " + by + "H" + (bx + 340);
+      for (var k = 1; k <= 4; k++) h += " " + faHeadC(bx + 80 * k, by);
+    }
+    return [d, h];
+  }
+  var faF1 = faFloor(360, 490), faF2 = faFloor(360, 215);
+
+  DRAWINGS["fire-wet"] = { aria: "Wet-pipe sprinkler system, drawn stage by stage", lx: 245, rx: 840, top: 100, h: 790, keep: true, stages: [
+    { title: "Building section; the water supply rises through the OS&Y gate valve", items: [
+      { d: hatch(290, 170, 22, 570) + " " + hatch(800, 170, 22, 570) + " M290 170H822 M312 444H800 M312 454H800 " + ground(150, 990, 740), labels: [] },
+      { d: "M360 800V703 " + faGate(360, 690) + " M360 677V602" + head(360, 760, 0, -1), labels: [L("L", "Water supply", 790, 360, 785), L("R", "OS&Y gate valve", 700, 390, 690, { x: 420 })] }] },
+    { title: "Alarm valve: a local alarm (gong) outside, a main drain below it", items: [
+      { d: faDiamond(360, 590), w: 3, labels: [L("R", "Alarm valve", 600, 372, 590, { x: 420 })] },
+      { d: "M348 590H278 " + C(268, 590, 10) + " " + C(268, 590, 4), labels: [L("L", "Local alarm (gong)", 600, 258, 590)] },
+      { d: "M360 630H338V665H280 M280 665v12", labels: [L("L", "Main drain", 670, 280, 672)] }] },
+    { title: "Fire-department (Siamese) connection with a check valve; the riser up through the floors", items: [
+      { d: "M278 520H360 " + faCheckH(330, 520) + " M278 520l-14 -10 M278 520l-14 10 " + C(262, 508, 4) + " " + C(262, 532, 4),
+        labels: [L("L", "Siamese connection", 535, 258, 520), L("L", "Check valve", 470, 330, 512)] },
+      { d: "M360 578V215", w: 3.4, labels: [L("L", "Riser (bulk main)", 380, 360, 380)] }] },
+    { title: "On each floor: a cross main, branch lines, closed sprinkler heads", items: [
+      { d: faF1[0] + " " + faF2[0], w: 2.4, labels: [L("L", "Cross main", 245, 385, 240), L("R", "Branch lines", 270, 728, 243)] },
+      { d: faF1[1] + " " + faF2[1], labels: [L("R", "Closed heads", 480, 764, 560)] }] },
+    { title: "Inspector's test connection at the far end, for testing the alarm", items: [
+      { d: "M700 215H790V330 M777 330H803L777 356H803Z M790 356V390H822", labels: [L("L", "Inspector's test connection", 380, 777, 343, { x: 760 })] }] }
+  ] };
+
+  function faPanel(x0, kind) {                           // one panel of the three sprinkler types
+    var hd = kind === "deluge" ? faHeadO : faHeadC, heads = "";
+    for (var k = 0; k < 4; k++) heads += " " + hd(x0 + 120 + 45 * k, 270);
+    return { pipe: "M" + x0 + " 230H" + (x0 + 300) + " M" + (x0 + 70) + " 690V532 M" + (x0 + 70) + " 508V270H" + (x0 + 280) + head(x0 + 70, 660, 0, -1),
+      heads: heads, valve: faDiamond(x0 + 70, 520),
+      dets: faDet(x0 + 143, 230) + " " + faDet(x0 + 188, 230) + " " + faDet(x0 + 233, 230),
+      wire: "M" + (x0 + 233) + " 235H" + (x0 + 20) + "V500 " + R(x0 + 2, 500, 40, 40) + " M" + (x0 + 42) + " 520H52" };
+  }
+  var faP1 = faPanel(20, "dry"), faP2 = faPanel(345, "pre"), faP3 = faPanel(670, "deluge");
+  faP2.wire = faP2.wire.replace("H52", "H" + (345 + 56)); faP3.wire = faP3.wire.replace("H52", "H" + (670 + 56));
+  DRAWINGS["fire-sprtypes"] = { aria: "Dry-pipe, pre-action and deluge sprinkler systems, drawn stage by stage", top: 120, h: 690, keep: true, stages: [
+    { title: "Dry-pipe: dry-pipe valve in a heated valve house; air compressor; closed heads on air-filled pipes", items: [
+      { d: faP1.pipe, labels: [L("C", "Dry-pipe", 150, 0, 0, { x: 170 }), L("C", "Water supply", 718, 0, 0, { x: 90 })] },
+      { d: faP1.valve + " " + R(45, 490, 70, 64), w: 2.4, labels: [L("R", "Dry-pipe valve", 515, 82, 520, { x: 125 }), L("R", "Heated valve house", 575, 115, 548, { x: 125 })] },
+      { d: comp(170, 420, 44, 50) + " M170 452H90", labels: [L("R", "Compressor", 405, 192, 420, { x: 150 })] },
+      { d: faP1.heads, labels: [L("R", "Closed heads", 320, 140, 255, { x: 148 }), L("C", "Air in the pipes", 360, 0, 0, { x: 220 })] }] },
+    { title: "Pre-action: detectors and a control panel open the pre-action valve; closed heads; air in the pipes", items: [
+      { d: faP2.pipe, labels: [L("C", "Pre-action", 150, 0, 0, { x: 495 })] },
+      { d: faP2.valve, w: 2.4, labels: [L("R", "Pre-action valve", 525, 427, 520, { x: 445 })] },
+      { d: faP2.dets + " " + faP2.wire, labels: [L("R", "Detectors", 205, 488, 230, { x: 496 }), L("C", "Control panel", 612, 0, 0, { x: 420 })] },
+      { d: faP2.heads, labels: [L("R", "Closed heads", 320, 465, 255, { x: 473 }), L("C", "Air in the pipes", 360, 0, 0, { x: 545 })] }] },
+    { title: "Deluge: the detection system opens the deluge valve; open heads, so every head discharges together", items: [
+      { d: faP3.pipe, labels: [L("C", "Deluge", 150, 0, 0, { x: 820 })] },
+      { d: faP3.valve, w: 2.4, labels: [L("R", "Deluge valve", 525, 752, 520, { x: 770 })] },
+      { d: faP3.dets + " " + faP3.wire, labels: [L("R", "Detectors", 205, 813, 230, { x: 821 }), L("C", "Control panel", 612, 0, 0, { x: 745 })] },
+      { d: faP3.heads, labels: [L("R", "Open heads", 320, 790, 255, { x: 798 }), L("C", "Dry pipes (no air)", 360, 0, 0, { x: 870 })] }] }
+  ] };
+
+  function faLay(px, py, kind) {                         // a piping layout in plan: room, branch lines with heads, cross main(s), feed
+    var room = R(px, py, 280, 190), br = "", mains = "", feed;
+    for (var k = 0; k < 9; k++) {
+      var x = px + 20 + 30 * k;
+      if (kind === "grid") continue;
+      br += " M" + x + " " + (py + 15) + "V" + (py + (kind === "side" ? 160 : 175)) + faDots(x, py + 15, py + (kind === "side" ? 160 : 175), 30);
+    }
+    if (kind === "centre") { mains = "M" + (px + 20) + " " + (py + 95) + "H" + (px + 260); feed = "M" + (px + 140) + " " + (py + 95) + "v18 " + C(px + 140, py + 118, 5); }
+    if (kind === "side") { mains = "M" + (px + 20) + " " + (py + 160) + "H" + (px + 260); feed = "M" + (px + 140) + " " + (py + 160) + "v18 " + C(px + 140, py + 183, 5); }
+    if (kind === "end") { mains = "M" + (px + 20) + " " + (py + 95) + "H" + (px + 268); feed = C(px + 273, py + 95, 5); }
+    if (kind === "loop") { mains = R(px + 20, py + 60, 240, 70); feed = "M" + (px + 260) + " " + (py + 95) + "h8 " + C(px + 273, py + 95, 5); }
+    if (kind === "grid") {
+      for (var j = 0; j < 5; j++) { var y = py + 25 + 35 * j; br += " M" + (px + 15) + " " + y + "H" + (px + 265); for (var xx = px + 30; xx < px + 265; xx += 30) br += " " + C(xx, y, 3); }
+      mains = "M" + (px + 50) + " " + (py + 15) + "V" + (py + 175) + " M" + (px + 230) + " " + (py + 15) + "V" + (py + 175);
+      feed = "M" + (px + 230) + " " + (py + 175) + "v6 " + C(px + 230, py + 186, 5);
+    }
+    return { room: room, br: br, mains: mains, feed: feed };
+  }
+  var faL = { centre: faLay(30, 170, "centre"), side: faLay(360, 170, "side"), end: faLay(690, 170, "end"),
+    loop: faLay(30, 520, "loop"), grid: faLay(360, 520, "grid") };
+  var faSp = R(690, 520, 280, 190), faSpD = "";
+  for (var faK = 0; faK < 4; faK++) faSpD += " M" + (800 + 45 * faK) + " 535V695" + faDots(800 + 45 * faK, 535, 695, 32);
+  DRAWINGS["fire-layouts"] = { aria: "Sprinkler piping layouts in plan, drawn stage by stage", top: 115, h: 720, keep: true, stages: [
+    { title: "Tree, centre feed: a cross main across the middle, fed from the riser at its centre; branch lines both ways", items: [
+      { d: faL.centre.room + faL.centre.br, w: 1.4, labels: [L("C", "Tree: centre feed", 155, 0, 0, { x: 170 }), L("R", "Branch lines, heads (dots)", 445, 50, 345, { x: 40 })] },
+      { d: faL.centre.mains, w: 3.6, labels: [L("R", "Cross main", 405, 245, 265, { x: 240 })] },
+      { d: faL.centre.feed, w: 2.4, labels: [L("L", "Riser", 405, 170, 293, { x: 130 })] }] },
+    { title: "Tree, side feed (cross main along one wall) and end feed (fed at one end)", items: [
+      { d: faL.side.room + faL.side.br, w: 1.4, labels: [L("C", "Tree: side feed", 155, 0, 0, { x: 500 })] },
+      { d: faL.side.mains + " " + faL.side.feed, w: 3, labels: [] },
+      { d: faL.end.room + faL.end.br, w: 1.4, labels: [L("C", "Tree: end feed", 155, 0, 0, { x: 830 })] },
+      { d: faL.end.mains + " " + faL.end.feed, w: 3, labels: [] }] },
+    { title: "Loop: two cross mains joined at both ends into a loop; branch lines cross both", items: [
+      { d: faL.loop.room + faL.loop.br, w: 1.4, labels: [L("C", "Loop", 505, 0, 0, { x: 170 })] },
+      { d: faL.loop.mains + " " + faL.loop.feed, w: 3, labels: [] }] },
+    { title: "Grid: branch lines joined at both ends to two cross mains (water reaches a head from both sides)", items: [
+      { d: faL.grid.room + faL.grid.br, w: 1.4, labels: [L("C", "Grid", 505, 0, 0, { x: 500 })] },
+      { d: faL.grid.mains + " " + faL.grid.feed, w: 3, labels: [] }] },
+    { title: "Head spacing: about 10 ft along a branch, 12 ft between branches", items: [
+      { d: faSp + faSpD, w: 1.4, labels: [L("C", "Head spacing", 505, 0, 0, { x: 830 })] },
+      { d: "M770 551v32 M764 551h12 M764 583h12 M800 720h45 M800 714v12 M845 714v12", w: 1.4,
+        labels: [L("C", "10 ft", 575, 0, 0, { x: 728 }), L("C", "12 ft", 745, 0, 0, { x: 822 })] }] }
+  ] };
+
+  DRAWINGS["fire-upfeed"] = { aria: "Upfeed fire pumping system, drawn stage by stage", top: 105, h: 700, keep: true, stages: [
+    { title: "Underground reservoir divided by a weir: a fire part and a domestic part", items: [
+      { d: ground(0, 1000, 300), labels: [] },
+      { d: R(560, 360, 320, 180) + " M560 400q20 -8 40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0", w: 2.6,
+        labels: [L("C", "Domestic", 510, 0, 0, { x: 640 }), L("C", "Fire", 510, 0, 0, { x: 800 })] },
+      { d: "M720 540V420", w: 3.4, labels: [L("L", "Weir", 455, 718, 450, { x: 700 })] }] },
+    { title: "Deep-well pumps fill the fire part; it overflows the weir into the domestic part, so fire has priority", items: [
+      { d: "M910 720V416 M950 720V416 " + faPump(910, 400) + " " + faPump(950, 400) + " M910 384V330H850V380 M950 384V340", labels: [L("L", "Deep-well pumps", 250, 920, 384, { x: 960 })] },
+      { d: "M760 392Q725 372 700 400" + head(697, 404, -0.6, 0.8), labels: [L("R", "Overflow", 460, 745, 384, { x: 735 })] }] },
+    { title: "Fire pumps take suction from the fire part: jockey pump, main fire pump, diesel standby pump", items: [
+      { d: R(40, 320, 480, 220), w: 2.6, labels: [L("C", "Pump room", 345, 0, 0, { x: 280 })] },
+      { d: "M800 540V575H140 M140 575V516 M220 575V516 M300 575V516", labels: [] },
+      { d: faPump(140, 500), labels: [L("R", "Jockey pump (20 gpm)", 705, 140, 524, { x: 148 })] },
+      { d: faPump(220, 500), labels: [L("R", "Main fire pump (750 gpm)", 665, 220, 524, { x: 228 })] },
+      { d: faPump(300, 500), labels: [L("R", "Diesel standby pump", 625, 300, 524, { x: 308 })] }] },
+    { title: "Discharge header and the riser to the sprinkler system", items: [
+      { d: "M140 484V440 M220 484V440 M300 484V440 M80 440H300 M80 440V150" + head(80, 150, 0, -1), w: 2.6, labels: [L("C", "To sprinklers", 135, 0, 0, { x: 90 })] }] },
+    { title: "Domestic pumps from the domestic part, with a hydropneumatic tank", items: [
+      { d: "M600 540V555H480 M420 555H480 M420 555V516 M480 555V516 " + faPump(420, 500) + " " + faPump(480, 500), labels: [L("R", "Domestic pumps", 625, 480, 524, { x: 560 })] },
+      { d: "M420 484V440H480V420 M480 484V440 " + E(480, 390, 46, 22) + " M480 368V150" + head(480, 150, 0, -1),
+        labels: [L("R", "Hydropneumatic tank", 340, 520, 380, { x: 535 }), L("C", "To domestic system", 135, 0, 0, { x: 480 })] }] }
+  ] };
+
+  var faDev = [["Heat detectors", "F", 180], ["Smoke detectors 1", "SD", 250], ["Smoke detectors 2", "SD", 320], ["Duct detectors", "SD", 390], ["Water-flow detector", "WF", 460], ["Manual stations", "F", 530]];
+  var faDevD = "", faDevL = [];
+  faDev.forEach(function (v, i) {
+    faDevD += " " + (i === 5 ? R(236, v[2] - 26, 52, 52) : C(262, v[2], 26)) + " M288 " + v[2] + "H330";
+    faDevL.push(L("L", v[0], v[2] + 8, 236, v[2], { x: 225 }), L("C", v[1], v[2] + 8, 0, 0, { x: 262 }));
+  });
+  var faOut = ["Audible and visual alarms", "Police and fire department", "HVAC fan controls", "Roof vents, dampers", "Smoke doors", "Elevator controls", "Lobby fire controls"];
+  var faOutA = "", faOutB = "", faOutLA = [], faOutLB = [];
+  faOut.forEach(function (t, i) {
+    var y = 228 + 46 * i;
+    if (i < 2) { faOutA += " " + A(570, y, 648, y); faOutLA.push(L("R", t, y + 8, 648, y, { x: 660 })); }
+    else { faOutB += " " + A(570, y, 648, y); faOutLB.push(L("R", t, y + 8, 648, y, { x: 660 })); }
+  });
+  DRAWINGS["fire-alarm"] = { aria: "Building fire alarm system, drawn stage by stage", top: 95, h: 560, keep: true, stages: [
+    { title: "Signal initiation: detectors, water-flow switch and manual stations on one circuit", items: [
+      { d: faDevD, labels: faDevL },
+      { d: "M330 180V530", w: 2.6, labels: [] }] },
+    { title: "Signal processing: the control panel, with its power supply and standby battery", items: [
+      { d: A(330, 360, 398, 360) + " " + R(400, 200, 170, 330) + " " + R(420, 220, 130, 60) + " M420 240h130 M420 260h130 M452 220v60 M485 220v60 M518 220v60",
+        w: 2.4, labels: [L("C", "Control panel", 395, 0, 0, { x: 485 })] },
+      { d: R(415, 140, 44, 40) + " " + R(511, 140, 44, 40) + " M437 180V200 M533 180V200", labels: [L("C", "Power and battery", 125, 0, 0, { x: 485 })] }] },
+    { title: "Alarm indication: alarms in the building, signal to the police and fire department", items: [
+      { d: faOutA, labels: faOutLA }] },
+    { title: "Building controls: fans, vents and dampers, smoke doors, elevators, lobby controls", items: [
+      { d: faOutB, labels: faOutLB }] }
+  ] };
+
+  DRAWINGS["fire-stages"] = { aria: "Four stages of a fire and the detector for each, drawn stage by stage", top: 105, h: 600, keep: true, stages: [
+    { title: "Axes: hazard against time; no, moderate and major hazard", items: [
+      { d: "M160 160V560H950" + head(160, 160, 0, -1) + head(950, 560, 1, 0) + " M150 470h10 M150 400h10",
+        labels: [L("C", "Hazard", 330, 0, 0, { x: 80 }), L("C", "Time", 600, 0, 0, { x: 955 }), L("L", "No hazard", 560, 155, 556, { x: 140 }),
+          L("L", "Moderate", 478, 150, 470, { x: 140 }), L("L", "Major", 408, 150, 400, { x: 140 })] }] },
+    { title: "The fire curve: nearly flat for a long time, then rising very fast", items: [
+      { d: "M160 552C420 548 570 540 650 518C730 494 810 420 860 300S910 200 925 185", w: 3, labels: [] }] },
+    { title: "Four stages: incipient (invisible particles), smouldering (visible smoke), flame, heat", items: [
+      { d: "M350 175V560 M560 175V560 M760 175V560", dash: "6 8", labels: [L("C", "Incipient", 600, 0, 0, { x: 255 }), L("C", "Smouldering", 600, 0, 0, { x: 455 }),
+        L("C", "Flame", 600, 0, 0, { x: 660 }), L("C", "Heat", 600, 0, 0, { x: 855 })] },
+      { d: "", labels: [L("C", "invisible", 635, 0, 0, { x: 255 }), L("C", "visible smoke", 635, 0, 0, { x: 455 }), L("C", "flames", 635, 0, 0, { x: 660 }), L("C", "fast heat", 635, 0, 0, { x: 855 })] }] },
+    { title: "The detector that catches each stage first", items: [
+      { d: "", labels: [L("C", "Ionization, gas", 155, 0, 0, { x: 255 }), L("C", "Photoelectric", 155, 0, 0, { x: 455 }), L("C", "Flame", 155, 0, 0, { x: 660 }), L("C", "Heat", 155, 0, 0, { x: 840 })] }] }
+  ] };
+
+  var faIons = "";
+  [[90, 290, 1], [150, 330, 0], [215, 285, 1], [280, 345, 1], [120, 370, 0], [250, 355, 0], [320, 300, 0], [190, 360, 1], [95, 340, 1]].forEach(function (v) {
+    faIons += " " + (v[2] ? faPlus(v[0], v[1]) : faMinus(v[0], v[1]));
+  });
+  DRAWINGS["fire-smoke"] = { aria: "Ionization and photoelectric smoke detectors, drawn stage by stage", top: 110, h: 560, keep: true, stages: [
+    { title: "(a) Ionization: a chamber, a + plate and a − plate, a small Am-241 source", items: [
+      { d: R(30, 230, 330, 240), labels: [L("C", "(a) Ionization", 150, 0, 0, { x: 195 })] },
+      { d: R(55, 250, 280, 10) + " " + R(55, 420, 280, 10) + " M335 255L395 330 M335 425L395 365", labels: [L("R", "+ plate", 205, 70, 252, { x: 40 }), L("R", "− plate", 510, 70, 430, { x: 40 })] },
+      { d: R(165, 404, 50, 16), labels: [L("R", "Am-241 source", 398, 215, 410, { x: 225 })] }] },
+    { title: "Alpha particles ionize the air; a small current flows to the sensor", items: [
+      { d: faIons, w: 1.8, labels: [L("R", "Ions", 510, 190, 368, { x: 200 })] },
+      { d: R(395, 315, 70, 60), labels: [L("R", "Current sensor", 545, 430, 375, { x: 330 })] }] },
+    { title: "Smoke particles capture the ions: the current falls and the alarm sounds", items: [
+      { d: C(110, 320, 7) + " " + C(175, 290, 7) + " " + C(240, 335, 7) + " " + C(300, 320, 7), labels: [L("R", "Smoke particles", 205, 240, 328, { x: 200 })] },
+      { d: "", labels: [L("C", "Smoke → less current → alarm", 600, 0, 0, { x: 220 })] }] },
+    { title: "(b) Photoelectric: a housing; a light source and lens send a beam to the supervisory photocell", items: [
+      { d: C(760, 330, 130), dash: "6 8", labels: [L("C", "(b) Photoelectric", 150, 0, 0, { x: 760 }), L("L", "Housing", 230, 668, 238, { x: 640 })] },
+      { d: C(585, 330, 16) + " " + E(625, 330, 6, 18), labels: [L("L", "Light source", 272, 578, 316, { x: 590 }), L("L", "Lens", 400, 625, 348, { x: 600 })] },
+      { d: "M632 322H885 M632 338H885 " + hatch(885, 312, 30, 36), labels: [L("L", "Supervisory photocell", 562, 900, 348, { x: 990 })] }] },
+    { title: "The alarm photocell sits out of the beam, at the end of a tube", items: [
+      { d: "M748 352V470 M772 352V470 " + R(745, 470, 30, 22), labels: [L("L", "Alarm photocell", 520, 745, 482, { x: 730 })] }] },
+    { title: "Smoke in the beam scatters light onto the alarm photocell: its signal rises and the alarm sounds", items: [
+      { d: C(735, 330, 5) + " " + C(760, 326, 5) + " " + C(788, 334, 5), labels: [L("R", "Smoke particles", 182, 788, 328, { x: 800 })] },
+      { d: "M760 336L760 452" + head(760, 456, 0, 1) + " M737 338L754 452" + head(754, 456, 0.15, 0.99), dash: "6 6", labels: [L("R", "Scattered light", 488, 765, 430, { x: 790 })] },
+      { d: "", labels: [L("C", "Smoke → light on cell → alarm", 600, 0, 0, { x: 760 })] }] }
+  ] };
+  // ---- (END fire_a block)
+
+  // ---- Module 3 fire B (BEGIN fire_b block): BNBC riser and tank diagrams (Figs. 4.4.1-4.4.4, 4.4.7-4.4.10)
+  // One symbol set for every riser drawing: hose station (branch, end cap, cabinet), gate valve (circle with a cross),
+  // check valve (arrowhead and bar), Siamese connection (inlet chevron), pump (circle with a triangle), tank with level.
+  function fbHose(x, y, prv) {                           // a hose station off a riser at (x, y), to the right; prv: with a PRV
+    var d = "M" + x + " " + y + "H" + (x + 55) + " M" + (x + 55) + " " + (y - 7) + "v14 M" + (x + 18) + " " + y + "V" + (y + 32) +
+      "H" + (x + 55) + "V" + (y + 14) + "H" + (x + 18);
+    if (prv) d += " M" + (x + 9) + " " + (y - 10) + "v20";
+    return d;
+  }
+  function fbHoses(x, ys, prv) { return ys.map(function (y) { return fbHose(x, y, prv); }).join(" "); }
+  function fbValve(x, y) {                               // a gate (isolating) valve
+    return C(x, y, 9) + " M" + (x - 6.4) + " " + (y - 6.4) + "l12.8 12.8 M" + (x + 6.4) + " " + (y - 6.4) + "l-12.8 12.8";
+  }
+  function fbCheck(x, y, dir) {                          // a check valve on a horizontal pipe; flow towards +x (dir 1) or -x (-1)
+    dir = dir || 1;
+    return "M" + (x - 10 * dir) + " " + (y - 8) + "L" + x + " " + y + "L" + (x - 10 * dir) + " " + (y + 8) + " M" + x + " " + (y - 10) + "v20";
+  }
+  function fbSiam(x, y, dir) {                           // a Siamese inlet at (x, y); its two arms open towards dir (-1: left)
+    return "M" + (x + 22 * dir) + " " + (y - 12) + "Q" + (x + 8 * dir) + " " + (y - 2) + " " + x + " " + y +
+      "Q" + (x + 8 * dir) + " " + (y + 2) + " " + (x + 22 * dir) + " " + (y + 12);
+  }
+  function fbPump(x, y) { return C(x, y, 12) + " M" + (x - 5) + " " + (y - 6) + "L" + (x + 7) + " " + y + "L" + (x - 5) + " " + (y + 6) + "Z"; }
+  function fbTank(x, y, w, h, lev) {                     // a tank with its water level (and the level mark) lev below the top
+    var d = R(x, y, w, h) + " M" + x + " " + (y + lev);
+    for (var k = 0; k + 20 <= w; k += 20) d += "q5 -3 10 0q5 3 10 0";
+    return d + " M" + (x + w - 40) + " " + (y + lev - 15) + "h16l-8 12Z";
+  }
+  function fbBreak(x1, x2, y) {                          // a break line across the building: two lines with zigzags
+    var d = "";
+    [y, y + 10].forEach(function (yy) {
+      var w = x2 - x1, a = x1 + 0.22 * w, b = x1 + 0.58 * w, c = x1 + 0.86 * w;
+      d += " M" + x1 + " " + yy + "H" + a + "l6 -9l8 18l6 -9H" + b + "l6 -9l8 18l6 -9H" + c + "l6 -9l8 18l6 -9H" + x2;
+    });
+    return d;
+  }
+  function fbDim(x, y1, y2) {                            // a vertical dimension with arrowheads and end ticks
+    return "M" + x + " " + y1 + "V" + y2 + " M" + (x - 10) + " " + y1 + "h20 M" + (x - 10) + " " + y2 + "h20" + head(x, y1, 0, -1) + head(x, y2, 0, 1);
+  }
+  function fbBuilding(x1, x2, top, bot, floors) {        // walls rising a little above the roof, and the floor lines
+    var d = "M" + x1 + " " + (top - 25) + "V" + bot + "H" + x2 + "V" + (top - 25);
+    floors.forEach(function (y) { d += " M" + x1 + " " + y + "H" + x2; });
+    return d;
+  }
+
+  DRAWINGS["riser-441"] = { aria: "BNBC Fig. 4.4.1, standpipe and hose system connected directly to the water main, drawn stage by stage",
+    lx: 270, rx: 705, top: 110, h: 860, keep: true, stages: [
+    { title: "Building: six floors, the basement below ground", items: [
+      { d: fbBuilding(330, 690, 170, 820, [170, 280, 390, 500, 610, 710]) + " " + ground(250, 330, 760) + " " + ground(690, 770, 760), w: 2.4,
+        labels: [L("R", "Basement", 790, 700, 765)] }] },
+    { title: "Stand pipe through all the floors", items: [
+      { d: "M500 790V200", w: 3, labels: [L("L", "Stand pipe", 350, 500, 360)] }] },
+    { title: "A hose station on every floor; a branch to the sprinkler system (optional)", items: [
+      { d: fbHoses(500, [200, 310, 420, 530, 640, 735]), labels: [L("R", "Hose station", 470, 555, 460)] },
+      { d: "M500 290H600" + head(600, 290, 1, 0), labels: [L("R", "To sprinkler (optional)", 300, 600, 290)] }] },
+    { title: "Water supply line from the street main, with a check valve", items: [
+      { d: "M400 880V790H500 " + fbCheck(455, 790), w: 2.4, labels: [L("L", "Water supply line", 885, 400, 870), L("R", "Check valve", 845, 455, 790)] }] },
+    { title: "Siamese connection on the outside wall, with a check valve, for the fire engine", items: [
+      { d: fbSiam(298, 735, -1) + " M298 735H400V790 " + fbCheck(345, 735), w: 2.4,
+        labels: [L("L", "Siamese connection", 742, 278, 735, { x: 255 }), L("L", "Check valve", 690, 345, 726)] }] }
+  ] };
+
+  DRAWINGS["riser-447"] = { aria: "BNBC Fig. 4.4.7, storage tank with domestic and fire reserve, drawn stage by stage",
+    lx: 210, rx: 735, top: 150, h: 650, keep: true, stages: [
+    { title: "The tank in section, with its water level", items: [
+      { d: fbTank(270, 330, 350, 320, 40), w: 3, labels: [] }] },
+    { title: "A dashed line divides it: domestic reserve above, fire reserve below", items: [
+      { d: "M270 500H620", dash: "14 10", labels: [L("C", "Domestic reserve", 450, 0, 0, { x: 445 }), L("C", "Fire reserve", 575, 0, 0, { x: 445 })] }] },
+    { title: "Inlet over the top, vent pipe, manhole cover, overflow pipe", items: [
+      { d: "M60 270H340V330", w: 3, labels: [L("C", "From water main or ground tank", 252, 0, 0, { x: 210 })] },
+      { d: "M440 330V200A30 30 0 0 1 500 200V225", w: 3, labels: [L("R", "Vent pipe", 195, 500, 210, { x: 535 })] },
+      { d: R(520, 318, 70, 12), labels: [L("R", "Manhole cover", 300, 590, 318)] },
+      { d: "M620 360H670V410", w: 3, labels: [L("R", "Overflow pipe", 410, 670, 405)] }] },
+    { title: "Domestic outlet from the side at the dashed line; fire outlet from the bottom; drain", items: [
+      { d: "M620 500H720" + head(720, 500, 1, 0) + " " + fbValve(670, 500), w: 2.6, labels: [L("R", "To domestic supply", 508, 720, 500)] },
+      { d: "M380 650V700H720" + head(720, 700, 1, 0) + " M500 650V700 " + fbValve(670, 700), w: 2.6, labels: [L("R", "To fire fighting", 708, 720, 700)] },
+      { d: "M270 630H230V740 " + fbValve(230, 705), w: 2.6, labels: [L("L", "Drain valve", 712, 221, 705)] }] }
+  ] };
+
+  DRAWINGS["riser-443"] = { aria: "BNBC Fig. 4.4.3, fire protection with a ground tank and an automatic fire pump, drawn stage by stage",
+    lx: 270, rx: 720, top: 100, h: 940, keep: true, stages: [
+    { title: "Building: six floors on the ground", items: [
+      { d: fbBuilding(330, 690, 160, 890, [160, 270, 380, 490, 600, 710]) + " " + ground(230, 790, 890), w: 2.4, labels: [] }] },
+    { title: "Ground tank, filled from the water main", items: [
+      { d: fbTank(345, 770, 160, 70, 14), w: 2.6, labels: [L("C", "Ground tank", 822, 0, 0, { x: 425 })] },
+      { d: "M240 755H420V770", w: 3, labels: [L("L", "Water main", 790, 260, 755)] }] },
+    { title: "Automatic fire pump: suction from the tank bottom, delivery through a valve to the header", items: [
+      { d: "M385 840V868H534 M465 840V868", w: 3, labels: [] },
+      { d: fbPump(546, 868), labels: [L("R", "Automatic fire pump", 945, 552, 878, { x: 560 })] },
+      { d: "M546 856V800H600V735 " + fbValve(600, 770), w: 3, labels: [L("R", "Valve", 790, 609, 770)] }] },
+    { title: "Header and riser to the roof (closed at the top), a hose station on every floor", items: [
+      { d: "M380 735H600 M500 735V136 " + C(500, 130, 6), w: 3, labels: [L("R", "Riser, closed at the top", 135, 506, 130), L("R", "Header", 690, 560, 735)] },
+      { d: fbHoses(500, [190, 300, 410, 520, 630]) + " " + fbHose(600, 750), labels: [L("R", "Hose station", 430, 555, 440)] }] },
+    { title: "Siamese connection accessible to the fire engine, with a check valve", items: [
+      { d: fbSiam(298, 735, -1) + " M298 735H380 " + fbCheck(350, 735), w: 3,
+        labels: [L("L", "Siamese connection", 742, 278, 735, { x: 255 }), L("L", "Check valve", 690, 350, 727)] }] }
+  ] };
+
+  DRAWINGS["riser-448"] = { aria: "BNBC Fig. 4.4.8, automatic fire pumps in different water supply zones of a tall building, drawn stage by stage",
+    lx: 270, rx: 745, top: 70, h: 1000, keep: true, stages: [
+    { title: "Tall building: floor lines, a break line; Zone 1 (about 67 m) below, Zone 2 above", items: [
+      { d: fbBuilding(300, 660, 120, 920, [120, 190, 260, 330, 400, 470, 540, 610, 680, 750, 820]) + " " + ground(220, 700, 920), w: 2.4, labels: [] },
+      { d: fbBreak(300, 660, 450), w: 1.6, labels: [] },
+      { d: fbDim(705, 120, 400) + " " + fbDim(705, 400, 920), w: 1.6,
+        labels: [L("C", "Zone 2", 268, 0, 0, { x: 790 }), L("C", "Zone 1", 645, 0, 0, { x: 790 }), L("C", "≈ 67 m", 680, 0, 0, { x: 790 })] }] },
+    { title: "Ground tank, filled from the water main", items: [
+      { d: fbTank(310, 840, 110, 50, 12), w: 2.6, labels: [L("L", "Ground tank", 900, 310, 872)] },
+      { d: "M210 826H380V840", w: 3, labels: [L("L", "Water main", 835, 215, 826, { x: 200 })] }] },
+    { title: "Two automatic fire pumps: suction from the tank bottom, a valve on each delivery", items: [
+      { d: "M335 890V906H530 M395 890V906 M450 906V894 M530 906V894", w: 3, labels: [] },
+      { d: fbPump(450, 882) + " " + fbPump(530, 882), labels: [L("R", "Automatic fire pumps", 975, 530, 894, { x: 560 })] },
+      { d: "M450 870V848 M530 870V848 " + fbValve(450, 857) + " " + fbValve(530, 857), w: 3, labels: [L("R", "Valve", 905, 539, 857)] }] },
+    { title: "Pump 1: Zone-1 riser, a hose station on every Zone-1 floor, closed at the top of Zone 1", items: [
+      { d: "M530 848V396 " + C(530, 390, 6), w: 3, labels: [L("R", "Zone-1 riser", 470, 530, 525)] },
+      { d: fbHoses(530, [410, 490, 560, 630, 700, 770]), labels: [L("R", "Hose station", 545, 585, 566)] }] },
+    { title: "Pump 2: Zone-2 riser, up through Zone 1 with no outlets, hose stations on the Zone-2 floors", items: [
+      { d: "M450 848V106 " + C(450, 100, 6), w: 3, labels: [L("R", "Zone-2 riser", 180, 450, 180)] },
+      { d: fbHoses(450, [150, 220, 290, 360]), labels: [] }] },
+    { title: "A Siamese connection with a check valve for each riser, accessible to the fire engine", items: [
+      { d: fbSiam(278, 806, -1) + " M278 806H450 " + fbCheck(330, 806), w: 3, labels: [L("L", "Siamese connection", 772, 262, 800, { x: 266 })] },
+      { d: fbSiam(682, 812, 1) + " M682 812H530 " + fbCheck(630, 812, -1), w: 3,
+        labels: [L("R", "Siamese connection", 790, 700, 812), L("R", "Check valve", 845, 630, 812)] }] }
+  ] };
+
+  DRAWINGS["riser-444"] = { aria: "BNBC Fig. 4.4.4, ground and gravity roof tank with adequate domestic and fire reserve, drawn stage by stage",
+    lx: 290, rx: 720, top: 60, h: 990, keep: true, stages: [
+    { title: "Building: six floors on the ground", items: [
+      { d: fbBuilding(330, 690, 230, 920, [230, 340, 450, 560, 670, 780]) + " " + ground(230, 790, 920), w: 2.4, labels: [] }] },
+    { title: "Ground tank from the water main; roof tank on the roof: domestic reserve above the dashed line, fire reserve below", items: [
+      { d: fbTank(345, 835, 150, 50, 12), w: 2.6, labels: [L("L", "Ground tank", 895, 345, 870)] },
+      { d: "M240 815H380V835", w: 3, labels: [L("L", "Water main", 840, 260, 815)] },
+      { d: fbTank(380, 110, 220, 90, 10) + " M410 200V230 M570 200V230", w: 2.6, labels: [L("C", "Roof tank", 97, 0, 0, { x: 470 })] },
+      { d: "M380 150H600", dash: "12 8", labels: [L("C", "Domestic reserve", 143, 0, 0, { x: 490 }), L("C", "Fire reserve", 190, 0, 0, { x: 490 })] }] },
+    { title: "Manually controlled pump: suction from the ground tank, rising pipe with a valve to the roof tank", items: [
+      { d: "M380 885V905H608 M460 885V905", w: 3, labels: [] },
+      { d: fbPump(620, 905), labels: [L("R", "Manually controlled pump", 965, 628, 915, { x: 690 })] },
+      { d: "M620 893V90H560V110 " + fbValve(620, 860), w: 3, labels: [L("R", "Rising pipe", 470, 620, 470), L("R", "Valve", 850, 629, 860)] }] },
+    { title: "Fire header from the tank bottom; standpipe down with a hose station on every floor", items: [
+      { d: "M410 200V216H470V200 M440 216V800", w: 3, labels: [L("R", "Fire header", 245, 470, 216), L("R", "Standpipe", 340, 440, 330)] },
+      { d: fbHoses(440, [265, 375, 485, 595, 705, 795]), labels: [L("R", "Hose station", 560, 495, 590)] }] },
+    { title: "Domestic supply from the side, above the fire reserve; Siamese connection with a check valve and a valve", items: [
+      { d: "M380 150H350V300" + head(350, 300, 0, 1), w: 3, labels: [L("L", "Domestic water supply", 165, 362, 150)] },
+      { d: fbSiam(298, 790, -1) + " M298 790H440 " + fbCheck(345, 790) + " " + fbValve(400, 790), w: 3,
+        labels: [L("L", "Siamese connection", 790, 278, 790, { x: 255 }), L("L", "Check valve", 735, 345, 781)] }] }
+  ] };
+
+  DRAWINGS["riser-442"] = { aria: "BNBC Fig. 4.4.2, required static head of a gravity roof tank with domestic and fire reserve, drawn stage by stage",
+    lx: 280, rx: 740, top: 60, h: 960, keep: true, stages: [
+    { title: "Building: six floors and a basement below ground", items: [
+      { d: fbBuilding(330, 690, 230, 920, [230, 340, 450, 560, 670, 780]) + " " + ground(230, 330, 840) + " " + ground(690, 790, 840), w: 2.4,
+        labels: [L("R", "Basement", 820, 720, 845)] }] },
+    { title: "Roof tank: domestic reserve above the dashed line, fire reserve below", items: [
+      { d: fbTank(370, 110, 220, 90, 10) + " M400 200V230 M560 200V230", w: 2.6, labels: [] },
+      { d: "M370 150H590", dash: "12 8", labels: [L("C", "Domestic reserve", 143, 0, 0, { x: 480 }), L("C", "Fire reserve", 190, 0, 0, { x: 480 })] }] },
+    { title: "Water supply line from the main to the water lifting pump; rising pipe to the roof tank", items: [
+      { d: "M240 905H638 " + fbCheck(400, 905), w: 3, labels: [L("L", "Water supply line", 940, 300, 905)] },
+      { d: fbPump(650, 905), labels: [L("R", "Water lifting pump", 905, 662, 905)] },
+      { d: "M650 893V90H560V110", w: 3, labels: [] }] },
+    { title: "Stand pipe from the tank bottom, a hose station on every floor; a branch to the sprinklers (optional)", items: [
+      { d: "M450 200V870", w: 3, labels: [L("R", "Stand pipe", 540, 450, 520)] },
+      { d: fbHoses(450, [265, 375, 485, 595, 705, 815]), labels: [L("R", "Hose station", 630, 505, 615)] },
+      { d: "M450 355H540" + head(540, 355, 1, 0), labels: [L("R", "To sprinkler (optional)", 360, 540, 355)] }] },
+    { title: "Domestic water supply line from the side of the tank, above the fire reserve", items: [
+      { d: "M590 150H610V760 M610 300H640 M610 410H640 M610 520H640 M610 630H640 M610 740H640", w: 2.6,
+        labels: [L("R", "Domestic supply line", 450, 610, 450)] }] },
+    { title: "The tank bottom must be high enough above the top hose station; Siamese connection", items: [
+      { d: "M600 200H730 M510 265H730 " + fbDim(715, 200, 265), w: 1.4,
+        labels: [L("C", "This vertical distance", 150, 0, 0, { x: 870 }), L("C", "should create the", 180, 0, 0, { x: 870 }), L("C", "required pressure", 210, 0, 0, { x: 870 })] },
+      { d: fbSiam(288, 790, -1) + " M288 790H310V870H450 " + fbCheck(380, 870), w: 3, labels: [L("L", "Siamese connection", 797, 268, 790, { x: 245 })] }] }
+  ] };
+
+  DRAWINGS["riser-449"] = { aria: "BNBC Fig. 4.4.9, water supply zones with gravity tanks in a tall building, drawn stage by stage",
+    lx: 240, rx: 745, top: 0, h: 1030, keep: true, stages: [
+    { title: "Tall building: floor lines, a break line; Zone 1 (about 67 m) below, Zone 2 above", items: [
+      { d: fbBuilding(260, 660, 160, 900, [160, 230, 300, 370, 440, 500, 570, 640, 710, 780]) + " " + ground(180, 700, 900), w: 2.4, labels: [] },
+      { d: fbBreak(260, 660, 462), w: 1.6, labels: [] },
+      { d: fbDim(705, 160, 370) + " " + fbDim(705, 370, 900), w: 1.6,
+        labels: [L("C", "Zone 2", 272, 0, 0, { x: 790 }), L("C", "Zone 1", 645, 0, 0, { x: 790 }), L("C", "≈ 67 m", 680, 0, 0, { x: 790 })] }] },
+    { title: "Ground tank from the water main; manually controlled pumps with valves", items: [
+      { d: fbTank(270, 820, 90, 45, 12), w: 2.6, labels: [L("L", "Ground tank", 890, 270, 850)] },
+      { d: "M190 808H320V820", w: 3, labels: [L("L", "Water main", 835, 210, 808)] },
+      { d: "M295 865V890H420 M335 865V890 M380 890V888 M420 890V888 " + fbPump(380, 876) + " " + fbPump(420, 876), w: 2.6,
+        labels: [L("R", "Manually controlled pumps", 945, 420, 888, { x: 450 })] }] },
+    { title: "Roof tank, and an intermediate tank at the top of Zone 1, each filled by its own rising pipe", items: [
+      { d: fbTank(390, 60, 220, 70, 8) + " M420 130V160 M580 130V160", w: 2.6, labels: [] },
+      { d: "M390 95H610", dash: "12 8", labels: [L("C", "Domestic reserve", 89, 0, 0, { x: 500 }), L("C", "Fire reserve", 124, 0, 0, { x: 500 })] },
+      { d: fbTank(440, 385, 150, 45, 6), w: 2.6, labels: [L("L", "Intermediate tank", 410, 440, 410)] },
+      { d: "M440 405H590", dash: "10 7", labels: [L("R", "Domestic reserve", 395, 590, 397), L("R", "Fire reserve", 430, 590, 418)] },
+      { d: "M380 864V45H430V60 M420 864V376H470V385 " + fbValve(380, 840) + " " + fbValve(420, 840), w: 3, labels: [L("C", "Rising pipes", 30, 0, 0, { x: 320 })] }] },
+    { title: "Zone 2: fire supply from the roof-tank bottom through a check valve; a hose station on each Zone-2 floor", items: [
+      { d: "M500 130V142H600V350 " + fbCheck(550, 142), w: 3, labels: [L("R", "Fire supply", 190, 575, 142)] },
+      { d: fbHoses(600, [185, 255, 325]), labels: [L("R", "Hose station", 330, 655, 325)] }] },
+    { title: "Zone 1: fire supply from the intermediate tank through a check valve; a hose station on each Zone-1 floor", items: [
+      { d: "M520 430V450H560V856 " + C(560, 862, 5) + " " + fbCheck(540, 450), w: 3, labels: [] },
+      { d: fbHoses(560, [525, 595, 665, 735, 815]), labels: [L("R", "Hose station", 720, 615, 735)] }] },
+    { title: "Domestic supply from each tank above its fire reserve; Siamese connections for the fire engine", items: [
+      { d: "M610 95H640V175" + head(640, 178, 0, 1) + " M590 405H630V540" + head(630, 543, 0, 1), w: 2.6,
+        labels: [L("R", "Domestic water supply", 120, 640, 120)] },
+      { d: fbSiam(238, 795, -1) + " M238 795H380 " + fbCheck(300, 795), w: 3, labels: [L("L", "Siamese connection", 757, 225, 788, { x: 236 })] },
+      { d: fbSiam(682, 800, 1) + " M682 800H560 " + fbCheck(640, 800, -1), w: 3, labels: [L("R", "Siamese connection", 800, 700, 800)] }] }
+  ] };
+
+  DRAWINGS["riser-4410"] = { aria: "BNBC Fig. 4.4.10, fire protection with pressure-reducing valves in a tall building, drawn stage by stage",
+    lx: 240, rx: 730, top: 0, h: 1030, keep: true, stages: [
+    { title: "Tall building: floor lines and a break line; the top part is about 67 m", items: [
+      { d: fbBuilding(260, 660, 160, 900, [160, 230, 300, 370, 440, 500, 570, 640, 710, 780]) + " " + ground(180, 700, 900), w: 2.4, labels: [] },
+      { d: fbBreak(260, 660, 462), w: 1.6, labels: [] },
+      { d: fbDim(705, 160, 460), w: 1.6, labels: [L("C", "≈ 67 m", 318, 0, 0, { x: 790 })] }] },
+    { title: "Ground tank from the water main; a pump lifts the water up the rising pipe to the roof tank", items: [
+      { d: fbTank(270, 820, 100, 45, 12), w: 2.6, labels: [L("L", "Ground tank", 890, 270, 850)] },
+      { d: "M190 808H330V820", w: 3, labels: [L("L", "Water main", 835, 210, 808)] },
+      { d: "M295 865V890H618 M345 865V890 " + fbPump(630, 890), w: 2.6, labels: [L("R", "Pump", 935, 630, 902, { x: 650 })] },
+      { d: "M630 878V45H560V60 " + fbValve(630, 845), w: 3, labels: [L("R", "Rising pipe", 560, 630, 560)] }] },
+    { title: "Roof tank: domestic reserve over fire reserve; domestic supply from above the fire reserve", items: [
+      { d: fbTank(380, 60, 220, 70, 8) + " M410 130V160 M570 130V160", w: 2.6, labels: [] },
+      { d: "M380 95H600", dash: "12 8", labels: [L("C", "Domestic reserve", 89, 0, 0, { x: 490 }), L("C", "Fire reserve", 124, 0, 0, { x: 490 })] },
+      { d: "M600 95H612V175" + head(612, 178, 0, 1), w: 2.6, labels: [L("R", "Domestic water supply", 110, 612, 140)] }] },
+    { title: "Fire supply from the tank bottom through a check valve; one standpipe down the full height", items: [
+      { d: "M470 130V142H520V856 " + C(520, 862, 5) + " " + fbCheck(495, 142), w: 3, labels: [L("R", "Fire supply", 210, 520, 210)] }] },
+    { title: "Hose stations: direct on the upper floors; a pressure-reducing valve on each lower floor", items: [
+      { d: fbHoses(520, [185, 255, 325, 395]), labels: [L("R", "Hose station", 410, 575, 398)] },
+      { d: fbHoses(520, [525, 595, 665, 735, 815], true), labels: [L("R", "Pressure-reducing valve", 665, 529, 662)] }] },
+    { title: "Siamese connection with a check valve and a valve, accessible to the fire engine", items: [
+      { d: fbSiam(238, 795, -1) + " M238 795H520 " + fbCheck(300, 795) + " " + fbValve(370, 795), w: 3, labels: [L("L", "Siamese connection", 757, 225, 788, { x: 236 })] }] }
+  ] };
+  // ---- (END fire_b block)
+
   // The scroll compressor drawn by the freehand recipe (generated by ME415/.work/scroll/recipe.py, which writes this
   // block). One tick = about 1/11 of the housing radius. Fixed scroll: half circles on a ticked line, radius 1, 5, 9 over the
   // line about tick -1 and 3, 7 under it about +1. Orbiting scroll (dotted): the same turned over, slid 2 ticks in the
